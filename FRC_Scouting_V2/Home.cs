@@ -16,5 +16,9 @@ namespace FRC_Scouting_V2
         {
             InitializeComponent();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
