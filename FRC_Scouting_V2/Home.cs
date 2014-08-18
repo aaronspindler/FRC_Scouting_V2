@@ -54,7 +54,8 @@ namespace FRC_Scouting_V2
 
         private void changelogToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var changeLog = new Changelog();
+            changeLog.Show();
         }
     }
 }
