@@ -58,5 +58,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["minimizeHomeWentEventLoads"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool firstTimeLoad {
+            get {
+                return ((bool)(this["firstTimeLoad"]));
+            }
+            set {
+                this["firstTimeLoad"] = value;
+            }
+        }
     }
 }

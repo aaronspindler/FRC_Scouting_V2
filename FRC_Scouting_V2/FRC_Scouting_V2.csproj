@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AerialAssist_Northbay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AerialAssist_Northbay.Designer.cs">
+      <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Changelog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
     <Compile Include="UsefulSnippets.cs" />
+    <EmbeddedResource Include="AerialAssist_Northbay.resx">
+      <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Changelog.resx">
       <DependentUpon>Changelog.cs</DependentUpon>
     </EmbeddedResource>

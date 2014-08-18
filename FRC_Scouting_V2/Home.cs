@@ -17,6 +17,17 @@ namespace FRC_Scouting_V2
         private void Home_Load(object sender, EventArgs e)
         {
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
+
+            if (FRC_Scouting_V2.Properties.Settings.Default.firstTimeLoad == true)
+            {
+                if (MessageBox.Show("Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?","Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    var settingsPage = new MainSettings();
+                    settingsPage.Show();
+                }
+                FRC_Scouting_V2.Properties.Settings.Default.firstTimeLoad = false;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
         }
 
         private void programInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,7 +74,13 @@ namespace FRC_Scouting_V2
         {
             if (eventSelector.SelectedIndex == 0)
             {
-                
+                var aaNorthbay2014 = new AerialAssist_Northbay();
+                aaNorthbay2014.Show();
+
+                if (FRC_Scouting_V2.Properties.Settings.Default.minimizeHomeWentEventLoads == true)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                }
             }
         }
     }
