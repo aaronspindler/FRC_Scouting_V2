@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
 
-namespace FRC_Scouting_V2
+namespace GeneralFormTemplate
 {
     internal class UsefulSnippets
     {
