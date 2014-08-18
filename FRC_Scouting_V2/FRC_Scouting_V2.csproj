@@ -59,9 +59,6 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsTemplate.cs">
@@ -77,9 +74,6 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\FRC_Scouting_V2.GeneralFormTemplate.resources" />
-    <EmbeddedResource Include="obj\Debug\FRC_Scouting_V2.Home.resources" />
-    <EmbeddedResource Include="obj\Debug\FRC_Scouting_V2.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -94,11 +88,6 @@
       <DependentUpon>SettingsTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
-    <None Include="bin\Debug\FRC_Scouting_V2.vshost.exe.config" />
-    <None Include="bin\Debug\FRC_Scouting_V2.vshost.exe.manifest" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\FRC_Scouting_V2.csproj.GenerateResource.Cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,17 +107,10 @@
   <ItemGroup>
     <Content Include="bin\Debug\FRC_Scouting_V2.exe" />
     <Content Include="bin\Debug\FRC_Scouting_V2.pdb" />
-    <Content Include="bin\Debug\FRC_Scouting_V2.vshost.exe" />
     <Content Include="FRC_Logo_ICO.ico" />
-    <Content Include="obj\Debug\FRC_Scouting_V2.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\FRC_Scouting_V2.exe" />
-    <Content Include="obj\Debug\FRC_Scouting_V2.pdb" />
-    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
     <None Include="Resources\FRC_LOGO.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
