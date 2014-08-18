@@ -34,3 +34,6 @@ If you would like to help out with the project give me a shout at
 ```
 Aaron@xNovax.net
 ```
+
+### Contributors
+  xNovax (Aaron @ FRC3710)
