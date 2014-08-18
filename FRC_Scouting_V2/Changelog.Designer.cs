@@ -58,7 +58,7 @@
             this.tableLayoutPanel2.SetRowSpan(this.richTextBox1, 2);
             this.richTextBox1.Size = new System.Drawing.Size(394, 309);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.richTextBox1.Text = "No changelog yet since there has been no releases";
             // 
             // Changelog
             // 

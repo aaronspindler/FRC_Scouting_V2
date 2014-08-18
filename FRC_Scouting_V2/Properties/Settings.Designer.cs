@@ -46,5 +46,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["username"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool minimizeHomeWentEventLoads {
+            get {
+                return ((bool)(this["minimizeHomeWentEventLoads"]));
+            }
+            set {
+                this["minimizeHomeWentEventLoads"] = value;
+            }
+        }
     }
 }

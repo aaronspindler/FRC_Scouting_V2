@@ -16,6 +16,7 @@ namespace FRC_Scouting_V2
 
         private void Home_Load(object sender, EventArgs e)
         {
+            eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
         }
 
         private void programInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,6 +57,14 @@ namespace FRC_Scouting_V2
         {
             var changeLog = new Changelog();
             changeLog.Show();
+        }
+
+        private void eventSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (eventSelector.SelectedIndex == 0)
+            {
+                
+            }
         }
     }
 }

@@ -15,33 +15,6 @@ namespace FRC_Scouting_V2
             InitializeComponent();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void resetAllSettingsButton_Click(object sender, EventArgs e)
-        {
-            us.ClearSettings();
-        }
-
-        private void MainSettings_Load(object sender, EventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                clickEmptyTextBoxChecker.Checked = true;
-            }
-            else
-            {
-                if (Settings.Default.clickToEmptyTextBoxes == false)
-                {
-                    clickEmptyTextBoxChecker.Checked = false;
-                }
-            }
-
-            usernameTextBox.Text = Settings.Default.username;
-        }
-
         private void clickEmptyTextBoxChecker_CheckedChanged(object sender, EventArgs e)
         {
             if (clickEmptyTextBoxChecker.Checked)
@@ -59,21 +32,9 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (usernameTextBox.Text != (""))
-            {
-                Settings.Default.username = usernameTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
-        private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                usernameTextBox.Text = ("");
-            }
+            Close();
         }
 
         private void howDoISaveMySettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -83,6 +44,72 @@ namespace FRC_Scouting_V2
                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void MainSettings_Load(object sender, EventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                clickEmptyTextBoxChecker.Checked = true;
+            }
+            else
+            {
+                if (Settings.Default.clickToEmptyTextBoxes == false)
+                {
+                    clickEmptyTextBoxChecker.Checked = false;
+                }
+            }
+
+            if (Settings.Default.minimizeHomeWentEventLoads)
+            {
+                minimizeHomeCheckbox.Checked = true;
+            }
+            else
+            {
+                if (Settings.Default.minimizeHomeWentEventLoads == false)
+                {
+                    minimizeHomeCheckbox.Checked = false;
+                }
+            }
+
+            usernameTextBox.Text = Settings.Default.username;
+        }
+
+        private void minimizeHomeCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (minimizeHomeCheckbox.Checked)
+            {
+                Settings.Default.minimizeHomeWentEventLoads = true;
+                Settings.Default.Save();
+            }
+            else
+            {
+                if (minimizeHomeCheckbox.Checked == false)
+                {
+                    Settings.Default.minimizeHomeWentEventLoads = false;
+                    Settings.Default.Save();
+                }
+            }
+        }
+
+        private void resetAllSettingsButton_Click(object sender, EventArgs e)
+        {
+            us.ClearSettings();
+        }
+        private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                usernameTextBox.Text = ("");
+            }
+        }
+
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (usernameTextBox.Text != (""))
+            {
+                Settings.Default.username = usernameTextBox.Text;
+                Settings.Default.Save();
+            }
+        }
         private void whatIsTheUsernameFieldUsedForToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
