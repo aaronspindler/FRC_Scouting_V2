@@ -10,9 +10,9 @@ namespace FRC_Scouting_V2
         {
             InitializeComponent();
         }
-        
+
         //Variables
-        UsefulSnippets us = new UsefulSnippets();
+        private UsefulSnippets us = new UsefulSnippets();
 
         private void Home_Load(object sender, EventArgs e)
         {

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using FRC_Scouting_V2;
+using System;
 using System.Windows.Forms;
-using FRC_Scouting_V2;
 
 namespace GeneralFormTemplate
 {

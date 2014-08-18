@@ -1,12 +1,12 @@
-﻿using System;
+﻿using FRC_Scouting_V2.Properties;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
-    class UsefulSnippets
+    internal class UsefulSnippets
     {
         public void ErrorOccured(string error)
         {
@@ -114,7 +114,7 @@ namespace FRC_Scouting_V2
         {
             Settings.Default.Reset();
             Settings.Default.Save();
-            MessageBox.Show("You have successfully reset all settings!", "Settings have been cleared!",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("You have successfully reset all settings!", "Settings have been cleared!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
