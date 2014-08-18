@@ -119,6 +119,7 @@
             this.eventInformationToolStripMenuItem.Name = "eventInformationToolStripMenuItem";
             this.eventInformationToolStripMenuItem.Size = new System.Drawing.Size(114, 21);
             this.eventInformationToolStripMenuItem.Text = "Event Information";
+            this.eventInformationToolStripMenuItem.Click += new System.EventHandler(this.eventInformationToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 

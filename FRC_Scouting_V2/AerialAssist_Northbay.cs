@@ -288,5 +288,11 @@ namespace FRC_Scouting_V2
             teamNumberDisplay.Text = Convert.ToString(selectedTeamNumber);
             teamLocationDisplay.Text = selectedTeamLocation;
         }
+
+        private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var eventInformation = new AerialAssist_Northbay_Information();
+            eventInformation.Show();
+        }
     }
 }
