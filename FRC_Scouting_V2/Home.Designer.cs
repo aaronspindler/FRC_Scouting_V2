@@ -42,6 +42,8 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.licenseInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changelogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -125,8 +127,10 @@
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changelogToolStripMenuItem,
+            this.fRC3710TeamInformationToolStripMenuItem,
             this.programInformationToolStripMenuItem,
-            this.fRC3710TeamInformationToolStripMenuItem});
+            this.licenseInformationToolStripMenuItem});
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
             this.informationToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
             this.informationToolStripMenuItem.Text = "Information";
@@ -186,6 +190,18 @@
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Select an Event";
             // 
+            // licenseInformationToolStripMenuItem
+            // 
+            this.licenseInformationToolStripMenuItem.Name = "licenseInformationToolStripMenuItem";
+            this.licenseInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.licenseInformationToolStripMenuItem.Text = "License Information";
+            // 
+            // changelogToolStripMenuItem
+            // 
+            this.changelogToolStripMenuItem.Name = "changelogToolStripMenuItem";
+            this.changelogToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.changelogToolStripMenuItem.Text = "Changelog";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +239,8 @@
         private System.Windows.Forms.PictureBox frcLogoPictureBox;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ToolStripMenuItem resetAllSavedSettingsToDefaultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changelogToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem licenseInformationToolStripMenuItem;
     }
 }
 
