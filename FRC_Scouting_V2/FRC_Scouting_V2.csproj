@@ -64,6 +64,12 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsTemplate.Designer.cs">
+      <DependentUpon>SettingsTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsefulSnippets.cs" />
     <EmbeddedResource Include="GeneralFormTemplate.resx">
       <DependentUpon>GeneralFormTemplate.cs</DependentUpon>
@@ -84,6 +90,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SettingsTemplate.resx">
+      <DependentUpon>SettingsTemplate.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
     <None Include="bin\Debug\FRC_Scouting_V2.vshost.exe.config" />
     <None Include="bin\Debug\FRC_Scouting_V2.vshost.exe.manifest" />
