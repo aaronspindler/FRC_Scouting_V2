@@ -41,6 +41,7 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -117,7 +118,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // informationToolStripMenuItem
@@ -134,6 +135,7 @@
             this.programInformationToolStripMenuItem.Name = "programInformationToolStripMenuItem";
             this.programInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.programInformationToolStripMenuItem.Text = "Program Information";
+            this.programInformationToolStripMenuItem.Click += new System.EventHandler(this.programInformationToolStripMenuItem_Click);
             // 
             // fRC3710TeamInformationToolStripMenuItem
             // 
@@ -143,6 +145,8 @@
             // 
             // debugToolStripMenuItem
             // 
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
             this.debugToolStripMenuItem.Text = "Debug";
@@ -154,11 +158,12 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // mainSettingsToolStripMenuItem
             // 
             this.mainSettingsToolStripMenuItem.Name = "mainSettingsToolStripMenuItem";
-            this.mainSettingsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mainSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mainSettingsToolStripMenuItem.Text = "Main Settings";
             // 
             // comboBox1
@@ -171,6 +176,13 @@
             this.comboBox1.Size = new System.Drawing.Size(242, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Select an Event";
+            // 
+            // resetAllSavedSettingsToDefaultToolStripMenuItem
+            // 
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Name = "resetAllSavedSettingsToDefaultToolStripMenuItem";
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Text = "Reset All Saved Settings to Default";
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetAllSavedSettingsToDefaultToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -208,6 +220,7 @@
         private System.Windows.Forms.ToolStripMenuItem mainSettingsToolStripMenuItem;
         private System.Windows.Forms.PictureBox frcLogoPictureBox;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolStripMenuItem resetAllSavedSettingsToDefaultToolStripMenuItem;
     }
 }
 

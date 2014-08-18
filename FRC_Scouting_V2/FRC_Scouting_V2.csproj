@@ -53,6 +53,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSettings.Designer.cs">
+      <DependentUpon>MainSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgramInformation.cs">
       <SubType>Form</SubType>
@@ -64,6 +70,9 @@
     <Compile Include="UsefulSnippets.cs" />
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainSettings.resx">
+      <DependentUpon>MainSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgramInformation.resx">
       <DependentUpon>ProgramInformation.cs</DependentUpon>
