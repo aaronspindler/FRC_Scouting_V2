@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneralFormTemplate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GeneralFormTemplate.Designer.cs">
-      <DependentUpon>GeneralFormTemplate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,16 +55,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingsTemplate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SettingsTemplate.Designer.cs">
-      <DependentUpon>SettingsTemplate.cs</DependentUpon>
-    </Compile>
     <Compile Include="UsefulSnippets.cs" />
-    <EmbeddedResource Include="GeneralFormTemplate.resx">
-      <DependentUpon>GeneralFormTemplate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,9 +69,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SettingsTemplate.resx">
-      <DependentUpon>SettingsTemplate.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
