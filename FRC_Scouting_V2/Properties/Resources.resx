@@ -118,10 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="astowing_inkind_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\astowing_inkind_northbay_2014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atlascopco_gold_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atlascopco_gold_northbay_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canadore_silver_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\canadore_silver_northbay_2014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CyberFalconsLogo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CyberFalconsLogo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CyberFalconsLogo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CyberFalconsLogo_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fednor_platinum_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fednor_platinum_northbay_2014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forbetteorforworse_silver_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forbetteorforworse_silver_northbay_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FRC_LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FRC_LOGO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FRC_Logo_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FRC_Logo_ICO.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="metso_inkind_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\metso_inkind_northbay_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nearnorth_strategicpartner_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nearnorth_strategicpartner_northbay_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nipu_platinum_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nipu_platinum_northbay_2014.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="northbay_event_picture_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\northbay_event_picture_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="north_bay_strategicpartner_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\north_bay_strategicpartner_northbay_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ontario_silver_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ontario_silver_northbay_2014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redpath_platinum_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redpath_platinum_northbay_2014.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sms_inkind_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sms_inkind_northbay_2014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stantec_bronze_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stantec_bronze_northbay_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twg_gold_northbay_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twg_gold_northbay_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

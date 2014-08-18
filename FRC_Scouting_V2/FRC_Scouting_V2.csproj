@@ -54,10 +54,19 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramInformation.Designer.cs">
+      <DependentUpon>ProgramInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsefulSnippets.cs" />
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramInformation.resx">
+      <DependentUpon>ProgramInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +99,23 @@
     <Content Include="bin\Debug\FRC_Scouting_V2.exe" />
     <Content Include="bin\Debug\FRC_Scouting_V2.pdb" />
     <Content Include="FRC_Logo_ICO.ico" />
+    <None Include="Resources\twg_gold_northbay_2014.png" />
+    <None Include="Resources\stantec_bronze_northbay_2014.png" />
+    <None Include="Resources\sms_inkind_northbay_2014.jpg" />
+    <None Include="Resources\redpath_platinum_northbay_2014.gif" />
+    <None Include="Resources\ontario_silver_northbay_2014.jpg" />
+    <None Include="Resources\northbay_event_picture_2014.png" />
+    <None Include="Resources\north_bay_strategicpartner_northbay_2014.png" />
+    <None Include="Resources\nipu_platinum_northbay_2014.gif" />
+    <None Include="Resources\nearnorth_strategicpartner_northbay_2014.png" />
+    <None Include="Resources\metso_inkind_northbay_2014.png" />
+    <None Include="Resources\forbetteorforworse_silver_northbay_2014.png" />
+    <None Include="Resources\fednor_platinum_northbay_2014.jpg" />
+    <None Include="Resources\canadore_silver_northbay_2014.jpg" />
+    <None Include="Resources\atlascopco_gold_northbay_2014.png" />
+    <None Include="Resources\astowing_inkind_northbay_2014.jpg" />
+    <None Include="Resources\CyberFalconsLogo_1.png" />
+    <None Include="Resources\CyberFalconsLogo_2.png" />
     <None Include="Resources\FRC_LOGO.jpg" />
   </ItemGroup>
   <ItemGroup />
