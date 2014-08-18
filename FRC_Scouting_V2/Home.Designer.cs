@@ -38,10 +38,10 @@
             this.programInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fRC3710TeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -118,8 +118,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // informationToolStripMenuItem
             // 
@@ -142,6 +143,7 @@
             this.fRC3710TeamInformationToolStripMenuItem.Name = "fRC3710TeamInformationToolStripMenuItem";
             this.fRC3710TeamInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.fRC3710TeamInformationToolStripMenuItem.Text = "FRC 3710 Team Information";
+            this.fRC3710TeamInformationToolStripMenuItem.Click += new System.EventHandler(this.fRC3710TeamInformationToolStripMenuItem_Click);
             // 
             // debugToolStripMenuItem
             // 
@@ -151,6 +153,13 @@
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
+            // resetAllSavedSettingsToDefaultToolStripMenuItem
+            // 
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Name = "resetAllSavedSettingsToDefaultToolStripMenuItem";
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Text = "Reset All Saved Settings to Default";
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetAllSavedSettingsToDefaultToolStripMenuItem_Click);
+            // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -158,13 +167,13 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // mainSettingsToolStripMenuItem
             // 
             this.mainSettingsToolStripMenuItem.Name = "mainSettingsToolStripMenuItem";
             this.mainSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mainSettingsToolStripMenuItem.Text = "Main Settings";
+            this.mainSettingsToolStripMenuItem.Click += new System.EventHandler(this.mainSettingsToolStripMenuItem_Click);
             // 
             // comboBox1
             // 
@@ -176,13 +185,6 @@
             this.comboBox1.Size = new System.Drawing.Size(242, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Select an Event";
-            // 
-            // resetAllSavedSettingsToDefaultToolStripMenuItem
-            // 
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Name = "resetAllSavedSettingsToDefaultToolStripMenuItem";
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Text = "Reset All Saved Settings to Default";
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetAllSavedSettingsToDefaultToolStripMenuItem_Click);
             // 
             // Home
             // 
