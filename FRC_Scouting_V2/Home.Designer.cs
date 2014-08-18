@@ -195,12 +195,14 @@
             this.licenseInformationToolStripMenuItem.Name = "licenseInformationToolStripMenuItem";
             this.licenseInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.licenseInformationToolStripMenuItem.Text = "License Information";
+            this.licenseInformationToolStripMenuItem.Click += new System.EventHandler(this.licenseInformationToolStripMenuItem_Click);
             // 
             // changelogToolStripMenuItem
             // 
             this.changelogToolStripMenuItem.Name = "changelogToolStripMenuItem";
             this.changelogToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.changelogToolStripMenuItem.Text = "Changelog";
+            this.changelogToolStripMenuItem.Click += new System.EventHandler(this.changelogToolStripMenuItem_Click);
             // 
             // Home
             // 

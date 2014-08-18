@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Changelog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changelog.Designer.cs">
+      <DependentUpon>Changelog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
     <Compile Include="UsefulSnippets.cs" />
+    <EmbeddedResource Include="Changelog.resx">
+      <DependentUpon>Changelog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

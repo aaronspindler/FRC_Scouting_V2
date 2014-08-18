@@ -45,5 +45,16 @@ namespace FRC_Scouting_V2
         {
             Application.Exit();
         }
+
+        private void licenseInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var li = new License();
+            li.Show();
+        }
+
+        private void changelogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
