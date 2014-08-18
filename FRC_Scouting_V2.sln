@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Scouting_V2", "FRC_Scouting_V2\FRC_Scouting_V2.csproj", "{EE59E6C2-0471-4B4C-A72C-A4CB4640180F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92FB0185-6785-47E4-9A2D-73CF9BFD2F7D} = {92FB0185-6785-47E4-9A2D-73CF9BFD2F7D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralFormTemplate", "GeneralFormTemplate\GeneralFormTemplate.csproj", "{92FB0185-6785-47E4-9A2D-73CF9BFD2F7D}"
 EndProject
