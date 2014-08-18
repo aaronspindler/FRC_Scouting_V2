@@ -39,6 +39,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalSettingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.minimizeHomeCheckbox = new System.Windows.Forms.CheckBox();
             this.clickEmptyTextBoxChecker = new System.Windows.Forms.CheckBox();
             this.clickEmptyTextBoxLabel = new System.Windows.Forms.Label();
             this.resetAllSettingsButton = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.minimizeHomeLabel = new System.Windows.Forms.Label();
-            this.minimizeHomeCheckbox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -191,6 +191,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(398, 226);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
+            // minimizeHomeCheckbox
+            // 
+            this.minimizeHomeCheckbox.AutoSize = true;
+            this.minimizeHomeCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.SetColumnSpan(this.minimizeHomeCheckbox, 4);
+            this.minimizeHomeCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minimizeHomeCheckbox.Location = new System.Drawing.Point(199, 59);
+            this.minimizeHomeCheckbox.Name = "minimizeHomeCheckbox";
+            this.minimizeHomeCheckbox.Size = new System.Drawing.Size(196, 22);
+            this.minimizeHomeCheckbox.TabIndex = 1;
+            this.minimizeHomeCheckbox.UseVisualStyleBackColor = true;
+            this.minimizeHomeCheckbox.CheckedChanged += new System.EventHandler(this.minimizeHomeCheckbox_CheckedChanged);
+            // 
             // clickEmptyTextBoxChecker
             // 
             this.clickEmptyTextBoxChecker.AutoSize = true;
@@ -276,19 +289,6 @@
             this.minimizeHomeLabel.TabIndex = 4;
             this.minimizeHomeLabel.Text = "Minimize Home When an Event Loads";
             this.minimizeHomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // minimizeHomeCheckbox
-            // 
-            this.minimizeHomeCheckbox.AutoSize = true;
-            this.minimizeHomeCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tableLayoutPanel2.SetColumnSpan(this.minimizeHomeCheckbox, 4);
-            this.minimizeHomeCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minimizeHomeCheckbox.Location = new System.Drawing.Point(199, 59);
-            this.minimizeHomeCheckbox.Name = "minimizeHomeCheckbox";
-            this.minimizeHomeCheckbox.Size = new System.Drawing.Size(196, 22);
-            this.minimizeHomeCheckbox.TabIndex = 1;
-            this.minimizeHomeCheckbox.UseVisualStyleBackColor = true;
-            this.minimizeHomeCheckbox.CheckedChanged += new System.EventHandler(this.minimizeHomeCheckbox_CheckedChanged);
             // 
             // MainSettings
             // 

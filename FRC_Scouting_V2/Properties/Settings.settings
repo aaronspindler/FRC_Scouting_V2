@@ -9,7 +9,7 @@
       <Value Profile="(Default)">Anonymous</Value>
     </Setting>
     <Setting Name="minimizeHomeWentEventLoads" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="firstTimeLoad" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
