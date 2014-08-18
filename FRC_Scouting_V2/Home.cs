@@ -6,13 +6,13 @@ namespace FRC_Scouting_V2
     //@author xNovax
     public partial class Home : Form
     {
+        //Variables
+        private readonly UsefulSnippets us = new UsefulSnippets();
+
         public Home()
         {
             InitializeComponent();
         }
-
-        //Variables
-        private UsefulSnippets us = new UsefulSnippets();
 
         private void Home_Load(object sender, EventArgs e)
         {
