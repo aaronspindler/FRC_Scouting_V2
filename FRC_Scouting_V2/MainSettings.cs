@@ -1,6 +1,6 @@
-﻿using System;
+﻿using FRC_Scouting_V2.Properties;
+using System;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -94,6 +94,7 @@ namespace FRC_Scouting_V2
         {
             us.ClearSettings();
         }
+
         private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             if (Settings.Default.clickToEmptyTextBoxes)
@@ -110,6 +111,7 @@ namespace FRC_Scouting_V2
                 Settings.Default.Save();
             }
         }
+
         private void whatIsTheUsernameFieldUsedForToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(

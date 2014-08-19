@@ -13,6 +13,7 @@ namespace FRC_Scouting_V2
 
         //Variables
         private string selectedTeamLocation;
+
         private string selectedTeamName;
         private int selectedTeamNumber;
 
