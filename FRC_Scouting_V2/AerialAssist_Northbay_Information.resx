@@ -117,4 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="eventDescriptionLabel.Text" xml:space="preserve">
+    <value>The 1st annual North Bay FIRST Robotics Competition Regional will be held at Nipissing University, Thursday through Saturday, March 27th - 29th, 2014.
+The competition is an intense three-day competitive event showcasing robots developed and operated by dozens of high school teams from all over Ontario.</value>
+  </data>
 </root>

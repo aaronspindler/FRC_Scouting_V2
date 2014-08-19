@@ -150,32 +150,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FRC_Logo_ICO.ico" />
+    <Resource Include="Resources\FRC_Logo_ICO.ico" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\FRC_Scouting_V2.exe" />
     <Content Include="bin\Debug\FRC_Scouting_V2.pdb" />
     <Content Include="FRC_Logo_ICO.ico" />
-    <None Include="Resources\twg_gold_northbay_2014.png" />
-    <None Include="Resources\stantec_bronze_northbay_2014.png" />
-    <None Include="Resources\sms_inkind_northbay_2014.jpg" />
-    <None Include="Resources\redpath_platinum_northbay_2014.gif" />
-    <None Include="Resources\ontario_silver_northbay_2014.jpg" />
-    <None Include="Resources\northbay_event_picture_2014.png" />
-    <None Include="Resources\north_bay_strategicpartner_northbay_2014.png" />
-    <None Include="Resources\nipu_platinum_northbay_2014.gif" />
-    <None Include="Resources\nearnorth_strategicpartner_northbay_2014.png" />
-    <None Include="Resources\metso_inkind_northbay_2014.png" />
-    <None Include="Resources\forbetteorforworse_silver_northbay_2014.png" />
-    <None Include="Resources\fednor_platinum_northbay_2014.jpg" />
-    <None Include="Resources\canadore_silver_northbay_2014.jpg" />
-    <None Include="Resources\atlascopco_gold_northbay_2014.png" />
-    <None Include="Resources\astowing_inkind_northbay_2014.jpg" />
-    <None Include="Resources\CyberFalconsLogo_1.png" />
-    <None Include="Resources\CyberFalconsLogo_2.png" />
-    <None Include="Resources\FRC_LOGO.jpg" />
+    <Resource Include="Resources\twg_gold_northbay_2014.png" />
+    <Resource Include="Resources\stantec_bronze_northbay_2014.png" />
+    <Resource Include="Resources\sms_inkind_northbay_2014.jpg" />
+    <Resource Include="Resources\redpath_platinum_northbay_2014.gif" />
+    <Resource Include="Resources\ontario_silver_northbay_2014.jpg" />
+    <Resource Include="Resources\northbay_event_picture_2014.png" />
+    <Resource Include="Resources\north_bay_strategicpartner_northbay_2014.png" />
+    <Resource Include="Resources\nipu_platinum_northbay_2014.gif" />
+    <Resource Include="Resources\nearnorth_strategicpartner_northbay_2014.png" />
+    <Resource Include="Resources\metso_inkind_northbay_2014.png" />
+    <Resource Include="Resources\forbetteorforworse_silver_northbay_2014.png" />
+    <Resource Include="Resources\fednor_platinum_northbay_2014.jpg" />
+    <Resource Include="Resources\canadore_silver_northbay_2014.jpg" />
+    <Resource Include="Resources\atlascopco_gold_northbay_2014.png" />
+    <Resource Include="Resources\astowing_inkind_northbay_2014.jpg" />
+    <Resource Include="Resources\CyberFalconsLogo_1.png" />
+    <Resource Include="Resources\CyberFalconsLogo_2.png" />
+    <Resource Include="Resources\FRC_LOGO.jpg" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
