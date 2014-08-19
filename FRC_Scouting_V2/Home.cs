@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -18,15 +19,18 @@ namespace FRC_Scouting_V2
         {
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
 
-            if (FRC_Scouting_V2.Properties.Settings.Default.firstTimeLoad == true)
+            if (Settings.Default.firstTimeLoad)
             {
-                if (MessageBox.Show("Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (
+                    MessageBox.Show(
+                        "Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?",
+                        "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     var settingsPage = new MainSettings();
                     settingsPage.Show();
                 }
-                FRC_Scouting_V2.Properties.Settings.Default.firstTimeLoad = false;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.firstTimeLoad = false;
+                Settings.Default.Save();
             }
         }
 
@@ -77,9 +81,9 @@ namespace FRC_Scouting_V2
                 var aaNorthbay2014 = new AerialAssist_Northbay();
                 aaNorthbay2014.Show();
 
-                if (FRC_Scouting_V2.Properties.Settings.Default.minimizeHomeWentEventLoads == true)
+                if (Settings.Default.minimizeHomeWentEventLoads)
                 {
-                    this.WindowState = FormWindowState.Minimized;
+                    WindowState = FormWindowState.Minimized;
                 }
             }
         }

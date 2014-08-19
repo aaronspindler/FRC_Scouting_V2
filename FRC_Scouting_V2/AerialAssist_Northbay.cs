@@ -6,16 +6,16 @@ namespace FRC_Scouting_V2
     //@author xNovax
     public partial class AerialAssist_Northbay : Form
     {
-        public AerialAssist_Northbay()
-        {
-            InitializeComponent();
-        }
-
         //Variables
         private string selectedTeamLocation;
 
         private string selectedTeamName;
         private int selectedTeamNumber;
+
+        public AerialAssist_Northbay()
+        {
+            InitializeComponent();
+        }
 
         private void AerialAssist_Northbay_Load(object sender, EventArgs e)
         {
@@ -61,7 +61,7 @@ namespace FRC_Scouting_V2
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
