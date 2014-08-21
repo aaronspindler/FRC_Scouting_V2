@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AerialAssist_Northbay_Information));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -37,12 +38,18 @@
             this.eventPictureBox = new System.Windows.Forms.PictureBox();
             this.eventSponsorsTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.sponsorLevelDisplayLabel = new System.Windows.Forms.Label();
+            this.sponsorNameDisplayLabel = new System.Windows.Forms.Label();
+            this.sponsorPictureBox = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.eventDescriptionTabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).BeginInit();
             this.eventSponsorsTabPage.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sponsorPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -173,6 +180,9 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.Controls.Add(this.sponsorLevelDisplayLabel, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.sponsorNameDisplayLabel, 0, 6);
+            this.tableLayoutPanel4.Controls.Add(this.sponsorPictureBox, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -187,6 +197,50 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(436, 277);
             this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // sponsorLevelDisplayLabel
+            // 
+            this.sponsorLevelDisplayLabel.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.sponsorLevelDisplayLabel, 8);
+            this.sponsorLevelDisplayLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sponsorLevelDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sponsorLevelDisplayLabel.Location = new System.Drawing.Point(3, 0);
+            this.sponsorLevelDisplayLabel.Name = "sponsorLevelDisplayLabel";
+            this.sponsorLevelDisplayLabel.Size = new System.Drawing.Size(430, 34);
+            this.sponsorLevelDisplayLabel.TabIndex = 2;
+            this.sponsorLevelDisplayLabel.Text = "Something has gone wrong!";
+            this.sponsorLevelDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sponsorNameDisplayLabel
+            // 
+            this.sponsorNameDisplayLabel.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.sponsorNameDisplayLabel, 8);
+            this.sponsorNameDisplayLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sponsorNameDisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sponsorNameDisplayLabel.Location = new System.Drawing.Point(3, 204);
+            this.sponsorNameDisplayLabel.Name = "sponsorNameDisplayLabel";
+            this.tableLayoutPanel4.SetRowSpan(this.sponsorNameDisplayLabel, 2);
+            this.sponsorNameDisplayLabel.Size = new System.Drawing.Size(430, 73);
+            this.sponsorNameDisplayLabel.TabIndex = 3;
+            this.sponsorNameDisplayLabel.Text = "Something has gone wrong!";
+            this.sponsorNameDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sponsorPictureBox
+            // 
+            this.tableLayoutPanel4.SetColumnSpan(this.sponsorPictureBox, 8);
+            this.sponsorPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sponsorPictureBox.Location = new System.Drawing.Point(3, 37);
+            this.sponsorPictureBox.Name = "sponsorPictureBox";
+            this.tableLayoutPanel4.SetRowSpan(this.sponsorPictureBox, 5);
+            this.sponsorPictureBox.Size = new System.Drawing.Size(430, 164);
+            this.sponsorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.sponsorPictureBox.TabIndex = 4;
+            this.sponsorPictureBox.TabStop = false;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 2000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // AerialAssist_Northbay_Information
             // 
@@ -204,6 +258,9 @@
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPictureBox)).EndInit();
             this.eventSponsorsTabPage.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sponsorPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,5 +275,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.PictureBox eventPictureBox;
         private System.Windows.Forms.Label eventDescriptionLabel;
+        private System.Windows.Forms.Label sponsorLevelDisplayLabel;
+        private System.Windows.Forms.Label sponsorNameDisplayLabel;
+        private System.Windows.Forms.PictureBox sponsorPictureBox;
+        private System.Windows.Forms.Timer timer;
     }
 }
