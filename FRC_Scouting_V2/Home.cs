@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using FRC_Scouting_V2.Test_Items;
+using FRC_Scouting_V2.Test_Objects;
 
 namespace FRC_Scouting_V2
 {
@@ -89,11 +90,13 @@ namespace FRC_Scouting_V2
             }
         }
 
+        //Opens up the test form page
         private void eventSelector_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Up)
             {
-                
+                var testForm = new TestForm();
+                testForm.Show();
             }
         }
     }
