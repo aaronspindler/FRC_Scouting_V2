@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
+using FRC_Scouting_V2.Test_Items;
 
 namespace FRC_Scouting_V2
 {
@@ -85,6 +86,14 @@ namespace FRC_Scouting_V2
                 {
                     WindowState = FormWindowState.Minimized;
                 }
+            }
+        }
+
+        private void eventSelector_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                
             }
         }
     }

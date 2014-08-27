@@ -197,13 +197,15 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.eventSelector, 4);
             this.eventSelector.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eventSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.eventSelector.FormattingEnabled = true;
+            this.eventSelector.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.eventSelector.Location = new System.Drawing.Point(251, 3);
             this.eventSelector.Name = "eventSelector";
             this.eventSelector.Size = new System.Drawing.Size(242, 21);
             this.eventSelector.TabIndex = 2;
-            this.eventSelector.Text = "Select an Event";
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged);
+            this.eventSelector.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eventSelector_KeyDown);
             // 
             // Home
             // 
