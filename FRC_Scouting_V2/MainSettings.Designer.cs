@@ -301,7 +301,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainSettings";
-            this.Text = "MainSettings";
+            this.Text = "Main Settings";
             this.Load += new System.EventHandler(this.MainSettings_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
