@@ -19,3 +19,4 @@ C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scout
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.pdb
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\Local_Database.mdf
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\Local_Database_log.ldf
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.Test_Items.Aerial_Assist_UI_Layout_Test.resources
