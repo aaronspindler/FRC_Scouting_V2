@@ -136,6 +136,7 @@
             0,
             0,
             0});
+            this.matchNumberNumericUpDown.ValueChanged += new System.EventHandler(this.matchNumberNumericUpDown_ValueChanged);
             // 
             // Aerial_Assist_UI_Layout_Test
             // 

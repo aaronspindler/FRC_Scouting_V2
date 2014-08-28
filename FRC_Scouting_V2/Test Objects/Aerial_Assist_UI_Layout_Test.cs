@@ -12,6 +12,7 @@ namespace FRC_Scouting_V2.Test_Items
         }
         //Variables
         private int teamColour;
+        private int matchNumber = 1;
 
         private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -32,6 +33,11 @@ namespace FRC_Scouting_V2.Test_Items
         {
             teamColourComboBox.Items.Add("Blue");
             teamColourComboBox.Items.Add("Red");
+        }
+
+        private void matchNumberNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            matchNumber = Convert.ToInt32(matchNumberNumericUpDown.Value);
         }
     }
 }
