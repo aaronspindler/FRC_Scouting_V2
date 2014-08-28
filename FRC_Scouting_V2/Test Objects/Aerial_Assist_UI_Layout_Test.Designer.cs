@@ -31,7 +31,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.teamColourLabel = new System.Windows.Forms.Label();
             this.teamColourComboBox = new System.Windows.Forms.ComboBox();
+            this.matchNumberLabel = new System.Windows.Forms.Label();
+            this.matchNumberNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -55,6 +58,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.Controls.Add(this.teamColourLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.teamColourComboBox, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.matchNumberLabel, 8, 0);
+            this.tableLayoutPanel1.Controls.Add(this.matchNumberNumericUpDown, 11, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -101,6 +106,37 @@
             this.teamColourComboBox.TabIndex = 1;
             this.teamColourComboBox.SelectedIndexChanged += new System.EventHandler(this.teamColourComboBox_SelectedIndexChanged);
             // 
+            // matchNumberLabel
+            // 
+            this.matchNumberLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.matchNumberLabel, 3);
+            this.matchNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchNumberLabel.Location = new System.Drawing.Point(275, 0);
+            this.matchNumberLabel.Name = "matchNumberLabel";
+            this.matchNumberLabel.Size = new System.Drawing.Size(96, 23);
+            this.matchNumberLabel.TabIndex = 2;
+            this.matchNumberLabel.Text = "Match Number:";
+            this.matchNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchNumberNumericUpDown
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.matchNumberNumericUpDown, 5);
+            this.matchNumberNumericUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchNumberNumericUpDown.Location = new System.Drawing.Point(377, 3);
+            this.matchNumberNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.matchNumberNumericUpDown.Name = "matchNumberNumericUpDown";
+            this.matchNumberNumericUpDown.Size = new System.Drawing.Size(164, 20);
+            this.matchNumberNumericUpDown.TabIndex = 3;
+            this.matchNumberNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Aerial_Assist_UI_Layout_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,6 +147,7 @@
             this.Load += new System.EventHandler(this.Aerial_Assist_UI_Layout_Test_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -120,5 +157,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label teamColourLabel;
         private System.Windows.Forms.ComboBox teamColourComboBox;
+        private System.Windows.Forms.Label matchNumberLabel;
+        private System.Windows.Forms.NumericUpDown matchNumberNumericUpDown;
     }
 }
