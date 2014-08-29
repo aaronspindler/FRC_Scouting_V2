@@ -40,19 +40,25 @@
             this.controledLowLabel = new System.Windows.Forms.Label();
             this.scoringLabel = new System.Windows.Forms.Label();
             this.ballControlHeaderLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.autoBallPickupLabel = new System.Windows.Forms.Label();
+            this.controlledBallPickupLabel = new System.Windows.Forms.Label();
+            this.missedPickupsLabel = new System.Windows.Forms.Label();
             this.autoHighNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.autoLowNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.controlHighNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.controlLowNumUpDown = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoHighNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoLowNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlHighNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlLowNumUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -85,13 +91,16 @@
             this.tableLayoutPanel1.Controls.Add(this.controledLowLabel, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.scoringLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.ballControlHeaderLabel, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.autoBallPickupLabel, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.controlledBallPickupLabel, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.missedPickupsLabel, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.autoHighNumUpDown, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.autoLowNumUpDown, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.controlHighNumUpDown, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.controlLowNumUpDown, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 5, 9);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -320,41 +329,41 @@
             this.ballControlHeaderLabel.Text = "Ball Control";
             this.ballControlHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // autoBallPickupLabel
             // 
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 5);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 27);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.autoBallPickupLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.autoBallPickupLabel, 5);
+            this.autoBallPickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autoBallPickupLabel.Location = new System.Drawing.Point(3, 189);
+            this.autoBallPickupLabel.Name = "autoBallPickupLabel";
+            this.autoBallPickupLabel.Size = new System.Drawing.Size(164, 27);
+            this.autoBallPickupLabel.TabIndex = 19;
+            this.autoBallPickupLabel.Text = "Autonymous Ball Pickups: ";
+            this.autoBallPickupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // controlledBallPickupLabel
             // 
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 5);
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 216);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 27);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.controlledBallPickupLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.controlledBallPickupLabel, 5);
+            this.controlledBallPickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlledBallPickupLabel.Location = new System.Drawing.Point(3, 216);
+            this.controlledBallPickupLabel.Name = "controlledBallPickupLabel";
+            this.controlledBallPickupLabel.Size = new System.Drawing.Size(164, 27);
+            this.controlledBallPickupLabel.TabIndex = 20;
+            this.controlledBallPickupLabel.Text = "Controlled Ball Pickups: ";
+            this.controlledBallPickupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // missedPickupsLabel
             // 
-            this.label3.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label3, 5);
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 243);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 27);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "label3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.missedPickupsLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.missedPickupsLabel, 5);
+            this.missedPickupsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.missedPickupsLabel.Location = new System.Drawing.Point(3, 243);
+            this.missedPickupsLabel.Name = "missedPickupsLabel";
+            this.missedPickupsLabel.Size = new System.Drawing.Size(164, 27);
+            this.missedPickupsLabel.TabIndex = 21;
+            this.missedPickupsLabel.Text = "Missed Pickups: ";
+            this.missedPickupsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // autoHighNumUpDown
             // 
@@ -400,6 +409,36 @@
             this.controlLowNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.controlLowNumUpDown.ValueChanged += new System.EventHandler(this.controlLowNumUpDown_ValueChanged);
             // 
+            // numericUpDown1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown1, 6);
+            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown1.Location = new System.Drawing.Point(173, 192);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(198, 20);
+            this.numericUpDown1.TabIndex = 100;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numericUpDown2
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown2, 6);
+            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown2.Location = new System.Drawing.Point(173, 219);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(198, 20);
+            this.numericUpDown2.TabIndex = 101;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numericUpDown3
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown3, 6);
+            this.numericUpDown3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown3.Location = new System.Drawing.Point(173, 246);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(198, 20);
+            this.numericUpDown3.TabIndex = 102;
+            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Aerial_Assist_UI_Layout_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +454,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.autoLowNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlHighNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlLowNumUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,12 +475,15 @@
         private System.Windows.Forms.Label controledLowLabel;
         private System.Windows.Forms.Label scoringLabel;
         private System.Windows.Forms.Label ballControlHeaderLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label autoBallPickupLabel;
+        private System.Windows.Forms.Label controlledBallPickupLabel;
+        private System.Windows.Forms.Label missedPickupsLabel;
         private System.Windows.Forms.NumericUpDown autoHighNumUpDown;
         private System.Windows.Forms.NumericUpDown autoLowNumUpDown;
         private System.Windows.Forms.NumericUpDown controlHighNumUpDown;
         private System.Windows.Forms.NumericUpDown controlLowNumUpDown;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
     }
 }
