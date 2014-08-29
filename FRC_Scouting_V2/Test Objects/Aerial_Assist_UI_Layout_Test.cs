@@ -33,16 +33,9 @@ namespace FRC_Scouting_V2.Test_Items
             }
         }
 
-        public void UpdateLabels()
-        {
-            autoHighValueDisplay.Text = Convert.ToString(autoHighTally);
-            autoLowValueDisplay.Text = Convert.ToString(autoLowTally);
-            controlledHighValueDisplay.Text = Convert.ToString(controlledHighTally);
-            controlledLowValueDisplay.Text = Convert.ToString(controlledLowTally);
-        }
-
         private void Aerial_Assist_UI_Layout_Test_Load(object sender, EventArgs e)
         {
+            //Set team colour items
             teamColourComboBox.Items.Add("Blue");
             teamColourComboBox.Items.Add("Red");
         }
@@ -52,28 +45,24 @@ namespace FRC_Scouting_V2.Test_Items
             matchNumber = Convert.ToInt32(matchNumberNumericUpDown.Value);
         }
 
-        private void autoHighButton_Click(object sender, EventArgs e)
+        private void autoHighNumUpDown_ValueChanged(object sender, EventArgs e)
         {
-            autoHighTally = autoHighTally + 1;
-            UpdateLabels();
+            autoHighTally = Convert.ToInt32(autoHighNumUpDown.Value);
         }
 
-        private void autoLowButton_Click(object sender, EventArgs e)
+        private void autoLowNumUpDown_ValueChanged(object sender, EventArgs e)
         {
-            autoLowTally = autoLowTally + 1;
-            UpdateLabels();
+            autoLowTally = Convert.ToInt32(autoLowNumUpDown.Value);
         }
 
-        private void controlledHighButton_Click(object sender, EventArgs e)
+        private void controlHighNumUpDown_ValueChanged(object sender, EventArgs e)
         {
-            controlledHighTally = controlledHighTally + 1;
-            UpdateLabels();
+            controlledHighTally = Convert.ToInt32(controlHighNumUpDown.Value);
         }
 
-        private void controlledLowButton_Click(object sender, EventArgs e)
+        private void controlLowNumUpDown_ValueChanged(object sender, EventArgs e)
         {
-            controlledLowTally = controlledLowTally + 1;
-            UpdateLabels();
+            controlledLowTally = Convert.ToInt32(controlLowNumUpDown.Value);
         }
     }
 }

@@ -34,21 +34,25 @@
             this.matchNumberLabel = new System.Windows.Forms.Label();
             this.matchNumberNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.submitDataButton = new System.Windows.Forms.Button();
-            this.controlledHighButton = new System.Windows.Forms.Button();
-            this.controlledLowButton = new System.Windows.Forms.Button();
-            this.autoLowButton = new System.Windows.Forms.Button();
-            this.autoHighButton = new System.Windows.Forms.Button();
             this.autonymousHighLabel = new System.Windows.Forms.Label();
             this.autonymousLowLabel = new System.Windows.Forms.Label();
             this.controlledHighLabel = new System.Windows.Forms.Label();
             this.controledLowLabel = new System.Windows.Forms.Label();
-            this.autoHighValueDisplay = new System.Windows.Forms.Label();
-            this.autoLowValueDisplay = new System.Windows.Forms.Label();
-            this.controlledHighValueDisplay = new System.Windows.Forms.Label();
-            this.controlledLowValueDisplay = new System.Windows.Forms.Label();
             this.scoringLabel = new System.Windows.Forms.Label();
+            this.ballControlHeaderLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.autoHighNumUpDown = new System.Windows.Forms.NumericUpDown();
+            this.autoLowNumUpDown = new System.Windows.Forms.NumericUpDown();
+            this.controlHighNumUpDown = new System.Windows.Forms.NumericUpDown();
+            this.controlLowNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoHighNumUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoLowNumUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlHighNumUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlLowNumUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -75,19 +79,19 @@
             this.tableLayoutPanel1.Controls.Add(this.matchNumberLabel, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.matchNumberNumericUpDown, 11, 0);
             this.tableLayoutPanel1.Controls.Add(this.submitDataButton, 5, 15);
-            this.tableLayoutPanel1.Controls.Add(this.controlledHighButton, 5, 4);
-            this.tableLayoutPanel1.Controls.Add(this.controlledLowButton, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.autoLowButton, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.autoHighButton, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.autonymousHighLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.autonymousLowLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.controlledHighLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.controledLowLabel, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.autoHighValueDisplay, 8, 2);
-            this.tableLayoutPanel1.Controls.Add(this.autoLowValueDisplay, 8, 3);
-            this.tableLayoutPanel1.Controls.Add(this.controlledHighValueDisplay, 8, 4);
-            this.tableLayoutPanel1.Controls.Add(this.controlledLowValueDisplay, 8, 5);
             this.tableLayoutPanel1.Controls.Add(this.scoringLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ballControlHeaderLabel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.autoHighNumUpDown, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.autoLowNumUpDown, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.controlHighNumUpDown, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.controlLowNumUpDown, 5, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -108,6 +112,69 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(544, 437);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -160,6 +227,7 @@
             this.matchNumberNumericUpDown.Name = "matchNumberNumericUpDown";
             this.matchNumberNumericUpDown.Size = new System.Drawing.Size(164, 20);
             this.matchNumberNumericUpDown.TabIndex = 2;
+            this.matchNumberNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.matchNumberNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
@@ -174,57 +242,9 @@
             this.submitDataButton.Location = new System.Drawing.Point(173, 408);
             this.submitDataButton.Name = "submitDataButton";
             this.submitDataButton.Size = new System.Drawing.Size(198, 26);
-            this.submitDataButton.TabIndex = 4;
+            this.submitDataButton.TabIndex = 99;
             this.submitDataButton.Text = "Submit Data";
             this.submitDataButton.UseVisualStyleBackColor = true;
-            // 
-            // controlledHighButton
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.controlledHighButton, 3);
-            this.controlledHighButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighButton.Location = new System.Drawing.Point(173, 111);
-            this.controlledHighButton.Name = "controlledHighButton";
-            this.controlledHighButton.Size = new System.Drawing.Size(96, 21);
-            this.controlledHighButton.TabIndex = 5;
-            this.controlledHighButton.Text = "Point Scored";
-            this.controlledHighButton.UseVisualStyleBackColor = true;
-            this.controlledHighButton.Click += new System.EventHandler(this.controlledHighButton_Click);
-            // 
-            // controlledLowButton
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.controlledLowButton, 3);
-            this.controlledLowButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledLowButton.Location = new System.Drawing.Point(173, 138);
-            this.controlledLowButton.Name = "controlledLowButton";
-            this.controlledLowButton.Size = new System.Drawing.Size(96, 21);
-            this.controlledLowButton.TabIndex = 6;
-            this.controlledLowButton.Text = "Point Scored";
-            this.controlledLowButton.UseVisualStyleBackColor = true;
-            this.controlledLowButton.Click += new System.EventHandler(this.controlledLowButton_Click);
-            // 
-            // autoLowButton
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.autoLowButton, 3);
-            this.autoLowButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoLowButton.Location = new System.Drawing.Point(173, 84);
-            this.autoLowButton.Name = "autoLowButton";
-            this.autoLowButton.Size = new System.Drawing.Size(96, 21);
-            this.autoLowButton.TabIndex = 4;
-            this.autoLowButton.Text = "Point Scored";
-            this.autoLowButton.UseVisualStyleBackColor = true;
-            this.autoLowButton.Click += new System.EventHandler(this.autoLowButton_Click);
-            // 
-            // autoHighButton
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.autoHighButton, 3);
-            this.autoHighButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoHighButton.Location = new System.Drawing.Point(173, 57);
-            this.autoHighButton.Name = "autoHighButton";
-            this.autoHighButton.Size = new System.Drawing.Size(96, 21);
-            this.autoHighButton.TabIndex = 3;
-            this.autoHighButton.Text = "Point Scored";
-            this.autoHighButton.UseVisualStyleBackColor = true;
-            this.autoHighButton.Click += new System.EventHandler(this.autoHighButton_Click);
             // 
             // autonymousHighLabel
             // 
@@ -274,54 +294,6 @@
             this.controledLowLabel.Text = "Controlled Low Points: ";
             this.controledLowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // autoHighValueDisplay
-            // 
-            this.autoHighValueDisplay.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.autoHighValueDisplay, 3);
-            this.autoHighValueDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoHighValueDisplay.Location = new System.Drawing.Point(275, 54);
-            this.autoHighValueDisplay.Name = "autoHighValueDisplay";
-            this.autoHighValueDisplay.Size = new System.Drawing.Size(96, 27);
-            this.autoHighValueDisplay.TabIndex = 13;
-            this.autoHighValueDisplay.Text = "0";
-            this.autoHighValueDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // autoLowValueDisplay
-            // 
-            this.autoLowValueDisplay.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.autoLowValueDisplay, 3);
-            this.autoLowValueDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoLowValueDisplay.Location = new System.Drawing.Point(275, 81);
-            this.autoLowValueDisplay.Name = "autoLowValueDisplay";
-            this.autoLowValueDisplay.Size = new System.Drawing.Size(96, 27);
-            this.autoLowValueDisplay.TabIndex = 14;
-            this.autoLowValueDisplay.Text = "0";
-            this.autoLowValueDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // controlledHighValueDisplay
-            // 
-            this.controlledHighValueDisplay.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.controlledHighValueDisplay, 3);
-            this.controlledHighValueDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighValueDisplay.Location = new System.Drawing.Point(275, 108);
-            this.controlledHighValueDisplay.Name = "controlledHighValueDisplay";
-            this.controlledHighValueDisplay.Size = new System.Drawing.Size(96, 27);
-            this.controlledHighValueDisplay.TabIndex = 15;
-            this.controlledHighValueDisplay.Text = "0";
-            this.controlledHighValueDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // controlledLowValueDisplay
-            // 
-            this.controlledLowValueDisplay.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.controlledLowValueDisplay, 3);
-            this.controlledLowValueDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledLowValueDisplay.Location = new System.Drawing.Point(275, 135);
-            this.controlledLowValueDisplay.Name = "controlledLowValueDisplay";
-            this.controlledLowValueDisplay.Size = new System.Drawing.Size(96, 27);
-            this.controlledLowValueDisplay.TabIndex = 16;
-            this.controlledLowValueDisplay.Text = "0";
-            this.controlledLowValueDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // scoringLabel
             // 
             this.scoringLabel.AutoSize = true;
@@ -335,6 +307,99 @@
             this.scoringLabel.Text = "Points Scored";
             this.scoringLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ballControlHeaderLabel
+            // 
+            this.ballControlHeaderLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.ballControlHeaderLabel, 11);
+            this.ballControlHeaderLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ballControlHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.ballControlHeaderLabel.Location = new System.Drawing.Point(3, 162);
+            this.ballControlHeaderLabel.Name = "ballControlHeaderLabel";
+            this.ballControlHeaderLabel.Size = new System.Drawing.Size(368, 27);
+            this.ballControlHeaderLabel.TabIndex = 18;
+            this.ballControlHeaderLabel.Text = "Ball Control";
+            this.ballControlHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label1, 5);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 27);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 5);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(3, 216);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 27);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label3, 5);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(3, 243);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 27);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "label3";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // autoHighNumUpDown
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.autoHighNumUpDown, 6);
+            this.autoHighNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autoHighNumUpDown.Location = new System.Drawing.Point(173, 57);
+            this.autoHighNumUpDown.Name = "autoHighNumUpDown";
+            this.autoHighNumUpDown.Size = new System.Drawing.Size(198, 20);
+            this.autoHighNumUpDown.TabIndex = 3;
+            this.autoHighNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.autoHighNumUpDown.ValueChanged += new System.EventHandler(this.autoHighNumUpDown_ValueChanged);
+            // 
+            // autoLowNumUpDown
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.autoLowNumUpDown, 6);
+            this.autoLowNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autoLowNumUpDown.Location = new System.Drawing.Point(173, 84);
+            this.autoLowNumUpDown.Name = "autoLowNumUpDown";
+            this.autoLowNumUpDown.Size = new System.Drawing.Size(198, 20);
+            this.autoLowNumUpDown.TabIndex = 4;
+            this.autoLowNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.autoLowNumUpDown.ValueChanged += new System.EventHandler(this.autoLowNumUpDown_ValueChanged);
+            // 
+            // controlHighNumUpDown
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.controlHighNumUpDown, 6);
+            this.controlHighNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlHighNumUpDown.Location = new System.Drawing.Point(173, 111);
+            this.controlHighNumUpDown.Name = "controlHighNumUpDown";
+            this.controlHighNumUpDown.Size = new System.Drawing.Size(198, 20);
+            this.controlHighNumUpDown.TabIndex = 5;
+            this.controlHighNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.controlHighNumUpDown.ValueChanged += new System.EventHandler(this.controlHighNumUpDown_ValueChanged);
+            // 
+            // controlLowNumUpDown
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.controlLowNumUpDown, 6);
+            this.controlLowNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlLowNumUpDown.Location = new System.Drawing.Point(173, 138);
+            this.controlLowNumUpDown.Name = "controlLowNumUpDown";
+            this.controlLowNumUpDown.Size = new System.Drawing.Size(198, 20);
+            this.controlLowNumUpDown.TabIndex = 6;
+            this.controlLowNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.controlLowNumUpDown.ValueChanged += new System.EventHandler(this.controlLowNumUpDown_ValueChanged);
+            // 
             // Aerial_Assist_UI_Layout_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +411,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoHighNumUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoLowNumUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlHighNumUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlLowNumUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,18 +427,18 @@
         private System.Windows.Forms.Label matchNumberLabel;
         private System.Windows.Forms.NumericUpDown matchNumberNumericUpDown;
         private System.Windows.Forms.Button submitDataButton;
-        private System.Windows.Forms.Button controlledHighButton;
-        private System.Windows.Forms.Button controlledLowButton;
-        private System.Windows.Forms.Button autoLowButton;
-        private System.Windows.Forms.Button autoHighButton;
         private System.Windows.Forms.Label autonymousHighLabel;
         private System.Windows.Forms.Label autonymousLowLabel;
         private System.Windows.Forms.Label controlledHighLabel;
         private System.Windows.Forms.Label controledLowLabel;
-        private System.Windows.Forms.Label autoHighValueDisplay;
-        private System.Windows.Forms.Label autoLowValueDisplay;
-        private System.Windows.Forms.Label controlledHighValueDisplay;
-        private System.Windows.Forms.Label controlledLowValueDisplay;
         private System.Windows.Forms.Label scoringLabel;
+        private System.Windows.Forms.Label ballControlHeaderLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown autoHighNumUpDown;
+        private System.Windows.Forms.NumericUpDown autoLowNumUpDown;
+        private System.Windows.Forms.NumericUpDown controlHighNumUpDown;
+        private System.Windows.Forms.NumericUpDown controlLowNumUpDown;
     }
 }
