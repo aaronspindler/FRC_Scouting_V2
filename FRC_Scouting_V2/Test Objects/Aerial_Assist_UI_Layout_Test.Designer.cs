@@ -50,6 +50,8 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.hotPointsLabel = new System.Windows.Forms.Label();
+            this.hotGoalsNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoHighNumUpDown)).BeginInit();
@@ -59,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotGoalsNumUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -90,17 +93,19 @@
             this.tableLayoutPanel1.Controls.Add(this.controlledHighLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.controledLowLabel, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.scoringLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ballControlHeaderLabel, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.autoBallPickupLabel, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.controlledBallPickupLabel, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.missedPickupsLabel, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.ballControlHeaderLabel, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.autoBallPickupLabel, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.controlledBallPickupLabel, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.missedPickupsLabel, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.autoHighNumUpDown, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.autoLowNumUpDown, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.controlHighNumUpDown, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.controlLowNumUpDown, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 5, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 5, 8);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 5, 10);
+            this.tableLayoutPanel1.Controls.Add(this.hotPointsLabel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.hotGoalsNumUpDown, 5, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -322,7 +327,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.ballControlHeaderLabel, 11);
             this.ballControlHeaderLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ballControlHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.ballControlHeaderLabel.Location = new System.Drawing.Point(3, 162);
+            this.ballControlHeaderLabel.Location = new System.Drawing.Point(3, 189);
             this.ballControlHeaderLabel.Name = "ballControlHeaderLabel";
             this.ballControlHeaderLabel.Size = new System.Drawing.Size(368, 27);
             this.ballControlHeaderLabel.TabIndex = 18;
@@ -334,7 +339,7 @@
             this.autoBallPickupLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.autoBallPickupLabel, 5);
             this.autoBallPickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoBallPickupLabel.Location = new System.Drawing.Point(3, 189);
+            this.autoBallPickupLabel.Location = new System.Drawing.Point(3, 216);
             this.autoBallPickupLabel.Name = "autoBallPickupLabel";
             this.autoBallPickupLabel.Size = new System.Drawing.Size(164, 27);
             this.autoBallPickupLabel.TabIndex = 19;
@@ -346,7 +351,7 @@
             this.controlledBallPickupLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.controlledBallPickupLabel, 5);
             this.controlledBallPickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledBallPickupLabel.Location = new System.Drawing.Point(3, 216);
+            this.controlledBallPickupLabel.Location = new System.Drawing.Point(3, 243);
             this.controlledBallPickupLabel.Name = "controlledBallPickupLabel";
             this.controlledBallPickupLabel.Size = new System.Drawing.Size(164, 27);
             this.controlledBallPickupLabel.TabIndex = 20;
@@ -358,7 +363,7 @@
             this.missedPickupsLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.missedPickupsLabel, 5);
             this.missedPickupsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.missedPickupsLabel.Location = new System.Drawing.Point(3, 243);
+            this.missedPickupsLabel.Location = new System.Drawing.Point(3, 270);
             this.missedPickupsLabel.Name = "missedPickupsLabel";
             this.missedPickupsLabel.Size = new System.Drawing.Size(164, 27);
             this.missedPickupsLabel.TabIndex = 21;
@@ -413,7 +418,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown1, 6);
             this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown1.Location = new System.Drawing.Point(173, 192);
+            this.numericUpDown1.Location = new System.Drawing.Point(173, 219);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(198, 20);
             this.numericUpDown1.TabIndex = 100;
@@ -423,7 +428,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown2, 6);
             this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown2.Location = new System.Drawing.Point(173, 219);
+            this.numericUpDown2.Location = new System.Drawing.Point(173, 246);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(198, 20);
             this.numericUpDown2.TabIndex = 101;
@@ -433,11 +438,33 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown3, 6);
             this.numericUpDown3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown3.Location = new System.Drawing.Point(173, 246);
+            this.numericUpDown3.Location = new System.Drawing.Point(173, 273);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(198, 20);
             this.numericUpDown3.TabIndex = 102;
             this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // hotPointsLabel
+            // 
+            this.hotPointsLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.hotPointsLabel, 5);
+            this.hotPointsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hotPointsLabel.Location = new System.Drawing.Point(3, 162);
+            this.hotPointsLabel.Name = "hotPointsLabel";
+            this.hotPointsLabel.Size = new System.Drawing.Size(164, 27);
+            this.hotPointsLabel.TabIndex = 103;
+            this.hotPointsLabel.Text = "Hot Goals: ";
+            this.hotPointsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hotGoalsNumUpDown
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.hotGoalsNumUpDown, 6);
+            this.hotGoalsNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hotGoalsNumUpDown.Location = new System.Drawing.Point(173, 165);
+            this.hotGoalsNumUpDown.Name = "hotGoalsNumUpDown";
+            this.hotGoalsNumUpDown.Size = new System.Drawing.Size(198, 20);
+            this.hotGoalsNumUpDown.TabIndex = 104;
+            this.hotGoalsNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Aerial_Assist_UI_Layout_Test
             // 
@@ -457,6 +484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotGoalsNumUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,5 +513,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label hotPointsLabel;
+        private System.Windows.Forms.NumericUpDown hotGoalsNumUpDown;
     }
 }
