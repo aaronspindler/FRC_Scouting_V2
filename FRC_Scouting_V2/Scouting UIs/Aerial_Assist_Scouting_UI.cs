@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace FRC_Scouting_V2.Test_Items
 {
     //@author xNovax
-    public partial class Aerial_Assist_UI_Layout_Test : UserControl
+    public partial class Aerial_Assist_Scouting_UI : UserControl
     {
         private int autoHighTally;
         private int autoLowTally;
@@ -17,7 +17,7 @@ namespace FRC_Scouting_V2.Test_Items
         private int missedPickupsTally;
         private int teamColour;
 
-        public Aerial_Assist_UI_Layout_Test()
+        public Aerial_Assist_Scouting_UI()
         {
             InitializeComponent();
         }

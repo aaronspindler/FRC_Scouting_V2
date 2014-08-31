@@ -1,6 +1,6 @@
 ﻿namespace FRC_Scouting_V2.Test_Items
 {
-    partial class Aerial_Assist_UI_Layout_Test
+    partial class Aerial_Assist_Scouting_UI
     {
         /// <summary> 
         /// Required designer variable.
