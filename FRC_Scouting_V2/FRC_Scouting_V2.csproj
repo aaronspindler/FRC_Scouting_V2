@@ -126,10 +126,10 @@
     <Compile Include="Scouting UIs\Aerial_Assist_Scouting_UI.Designer.cs">
       <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test Objects\TestForm.cs">
+    <Compile Include="Test Items\TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test Objects\TestForm.Designer.cs">
+    <Compile Include="Test Items\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UsefulSnippets.cs" />
@@ -170,7 +170,7 @@
     <EmbeddedResource Include="Scouting UIs\Aerial_Assist_Scouting_UI.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test Objects\TestForm.resx">
+    <EmbeddedResource Include="Test Items\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
