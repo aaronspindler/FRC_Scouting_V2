@@ -695,12 +695,12 @@
             this.missedPickupsTallyDisplay.Text = "0";
             this.missedPickupsTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Aerial_Assist_UI_Layout_Test
+            // Aerial_Assist_Scouting_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Aerial_Assist_UI_Layout_Test";
+            this.Name = "Aerial_Assist_Scouting_UI";
             this.Size = new System.Drawing.Size(544, 437);
             this.Load += new System.EventHandler(this.Aerial_Assist_UI_Layout_Test_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
