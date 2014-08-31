@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
-using FRC_Scouting_V2.Test_Items;
 using FRC_Scouting_V2.Test_Objects;
 
 namespace FRC_Scouting_V2
