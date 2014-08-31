@@ -120,11 +120,11 @@
     <Compile Include="Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test Objects\Aerial_Assist_UI_Layout_Test.cs">
+    <Compile Include="Scouting UIs\Aerial_Assist_Scouting_UI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Test Objects\Aerial_Assist_UI_Layout_Test.Designer.cs">
-      <DependentUpon>Aerial_Assist_UI_Layout_Test.cs</DependentUpon>
+    <Compile Include="Scouting UIs\Aerial_Assist_Scouting_UI.Designer.cs">
+      <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="Test Objects\TestForm.cs">
       <SubType>Form</SubType>
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="Team3710Information.resx">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test Objects\Aerial_Assist_UI_Layout_Test.resx">
-      <DependentUpon>Aerial_Assist_UI_Layout_Test.cs</DependentUpon>
+    <EmbeddedResource Include="Scouting UIs\Aerial_Assist_Scouting_UI.resx">
+      <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test Objects\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>

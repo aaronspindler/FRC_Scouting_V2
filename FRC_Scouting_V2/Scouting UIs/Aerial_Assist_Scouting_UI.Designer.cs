@@ -283,6 +283,7 @@
             this.submitDataButton.TabIndex = 99;
             this.submitDataButton.Text = "Submit Data";
             this.submitDataButton.UseVisualStyleBackColor = true;
+            this.submitDataButton.Click += new System.EventHandler(this.submitDataButton_Click);
             // 
             // autonymousHighLabel
             // 

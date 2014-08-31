@@ -154,5 +154,10 @@ namespace FRC_Scouting_V2.Test_Items
                     break;
             }
         }
+
+        private void submitDataButton_Click(object sender, EventArgs e)
+        {
+            UpdateLabels();
+        }
     }
 }
