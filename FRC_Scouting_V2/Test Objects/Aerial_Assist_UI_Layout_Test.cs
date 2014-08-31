@@ -6,16 +6,32 @@ namespace FRC_Scouting_V2.Test_Items
     //@author xNovax
     public partial class Aerial_Assist_UI_Layout_Test : UserControl
     {
-        private int autoHighTally;
-        private int autoLowTally;
-        private int controlledHighTally;
-        private int controlledLowTally;
         private int matchNumber = 1;
         private int teamColour;
+        private int autoHighTally = 0;
+        private int autoLowTally = 0;
+        private int controlledHighTally = 0;
+        private int controlledLowTally = 0;
+        private int hotGoalTally = 0;
+        private int autoPickupTally = 0;
+        private int controlledPickupTally = 0;
+        private int missedPickupsTally = 0;
 
         public Aerial_Assist_UI_Layout_Test()
         {
             InitializeComponent();
+        }
+
+        public void UpdateLabels()
+        {
+            autoHighTallyDisplay.Text = Convert.ToString(autoHighTally);
+            autoLowTallyDisplay.Text = Convert.ToString(autoLowTally);
+            controlledHighTallyDisplay.Text = Convert.ToString(controlledHighTally);
+            controlledLowTallyDisplay.Text = Convert.ToString(controlledLowTally);
+            hotGoalTallyDisplay.Text = Convert.ToString(hotGoalTally);
+            autoPickupTallyDisplay.Text = Convert.ToString(autoPickupTally);
+            controlledPickupTallyDisplay.Text = Convert.ToString(controlledPickupTally);
+            missedPickupsTallyDisplay.Text = Convert.ToString(missedPickupsTally);
         }
 
         private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,24 +61,100 @@ namespace FRC_Scouting_V2.Test_Items
             matchNumber = Convert.ToInt32(matchNumberNumericUpDown.Value);
         }
 
-        private void autoHighNumUpDown_ValueChanged(object sender, EventArgs e)
+        private void autoHighMinusButton_Click(object sender, EventArgs e)
         {
-            autoHighTally = Convert.ToInt32(autoHighNumUpDown.Value);
+            autoHighTally = autoHighTally - 1;
+            UpdateLabels();
         }
 
-        private void autoLowNumUpDown_ValueChanged(object sender, EventArgs e)
+        private void autoHighPlusButton_Click(object sender, EventArgs e)
         {
-            autoLowTally = Convert.ToInt32(autoLowNumUpDown.Value);
+            autoHighTally = autoHighTally + 1;
+            UpdateLabels();
         }
 
-        private void controlHighNumUpDown_ValueChanged(object sender, EventArgs e)
+        private void autoLowMinusButton_Click(object sender, EventArgs e)
         {
-            controlledHighTally = Convert.ToInt32(controlHighNumUpDown.Value);
+            autoLowTally = autoLowTally - 1;
+            UpdateLabels();
         }
 
-        private void controlLowNumUpDown_ValueChanged(object sender, EventArgs e)
+        private void autoLowPlusButton_Click(object sender, EventArgs e)
         {
-            controlledLowTally = Convert.ToInt32(controlLowNumUpDown.Value);
+            autoLowTally = autoLowTally + 1;
+            UpdateLabels();
+        }
+
+        private void controlledHighMinusButton_Click(object sender, EventArgs e)
+        {
+            controlledHighTally = controlledHighTally - 1;
+            UpdateLabels();
+        }
+
+        private void controlledHighPlusButton_Click(object sender, EventArgs e)
+        {
+            controlledHighTally = controlledHighTally + 1;
+            UpdateLabels();
+        }
+
+        private void controlledLowMinusButton_Click(object sender, EventArgs e)
+        {
+            controlledLowTally = controlledLowTally - 1;
+            UpdateLabels();
+        }
+
+        private void controlledLowPlusButton_Click(object sender, EventArgs e)
+        {
+            controlledLowTally = controlledLowTally + 1;
+            UpdateLabels();
+        }
+
+        private void hotGoalMinusButton_Click(object sender, EventArgs e)
+        {
+            hotGoalTally = hotGoalTally - 1;
+            UpdateLabels();
+        }
+
+        private void hotGoalPlusButton_Click(object sender, EventArgs e)
+        {
+            hotGoalTally = hotGoalTally + 1;
+            UpdateLabels();
+        }
+
+        private void autoPickupMinusButton_Click(object sender, EventArgs e)
+        {
+            autoPickupTally = autoPickupTally - 1;
+            UpdateLabels();
+        }
+
+        private void autoPickupPlusButton_Click(object sender, EventArgs e)
+        {
+            autoPickupTally = autoPickupTally + 1;
+            UpdateLabels();
+        }
+
+        private void controllPickupMinusButton_Click(object sender, EventArgs e)
+        {
+            controlledPickupTally = controlledPickupTally - 1;
+            UpdateLabels();
+        }
+
+        private void controllPickupPlusButton_Click(object sender, EventArgs e)
+        {
+            controlledPickupTally = controlledPickupTally + 1;
+            UpdateLabels();
+        }
+
+        private void missedPickupsMinusButton_Click(object sender, EventArgs e)
+        {
+            missedPickupsTally = missedPickupsTally - 1;
+            UpdateLabels();
+        }
+
+        private void missedPickupsPlusButton_Click(object sender, EventArgs e)
+        {
+            missedPickupsTally = missedPickupsTally + 1;
+            UpdateLabels();
         }
     }
 }
