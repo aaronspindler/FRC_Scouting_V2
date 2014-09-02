@@ -68,6 +68,8 @@
             this.autoPickupTallyDisplay = new System.Windows.Forms.Label();
             this.controlledPickupTallyDisplay = new System.Windows.Forms.Label();
             this.missedPickupsTallyDisplay = new System.Windows.Forms.Label();
+            this.startingLocationPanel = new System.Windows.Forms.Panel();
+            this.startingLocationLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -130,8 +132,11 @@
             this.tableLayoutPanel1.Controls.Add(this.autoPickupTallyDisplay, 6, 8);
             this.tableLayoutPanel1.Controls.Add(this.controlledPickupTallyDisplay, 6, 9);
             this.tableLayoutPanel1.Controls.Add(this.missedPickupsTallyDisplay, 6, 10);
+            this.tableLayoutPanel1.Controls.Add(this.startingLocationPanel, 9, 2);
+            this.tableLayoutPanel1.Controls.Add(this.startingLocationLabel, 9, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 16;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
@@ -150,70 +155,70 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(544, 437);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1088, 840);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // teamColourLabel
@@ -221,9 +226,10 @@
             this.teamColourLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.teamColourLabel, 3);
             this.teamColourLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamColourLabel.Location = new System.Drawing.Point(3, 0);
+            this.teamColourLabel.Location = new System.Drawing.Point(6, 0);
+            this.teamColourLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.teamColourLabel.Name = "teamColourLabel";
-            this.teamColourLabel.Size = new System.Drawing.Size(96, 27);
+            this.teamColourLabel.Size = new System.Drawing.Size(192, 52);
             this.teamColourLabel.TabIndex = 0;
             this.teamColourLabel.Text = "Team Colour: ";
             this.teamColourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,9 +240,10 @@
             this.teamColourComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamColourComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.teamColourComboBox.FormattingEnabled = true;
-            this.teamColourComboBox.Location = new System.Drawing.Point(105, 3);
+            this.teamColourComboBox.Location = new System.Drawing.Point(210, 6);
+            this.teamColourComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.teamColourComboBox.Name = "teamColourComboBox";
-            this.teamColourComboBox.Size = new System.Drawing.Size(164, 21);
+            this.teamColourComboBox.Size = new System.Drawing.Size(328, 33);
             this.teamColourComboBox.TabIndex = 1;
             this.teamColourComboBox.SelectedIndexChanged += new System.EventHandler(this.teamColourComboBox_SelectedIndexChanged);
             // 
@@ -245,9 +252,10 @@
             this.matchNumberLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.matchNumberLabel, 3);
             this.matchNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchNumberLabel.Location = new System.Drawing.Point(275, 0);
+            this.matchNumberLabel.Location = new System.Drawing.Point(550, 0);
+            this.matchNumberLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.matchNumberLabel.Name = "matchNumberLabel";
-            this.matchNumberLabel.Size = new System.Drawing.Size(96, 27);
+            this.matchNumberLabel.Size = new System.Drawing.Size(192, 52);
             this.matchNumberLabel.TabIndex = 2;
             this.matchNumberLabel.Text = "Match Number:";
             this.matchNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,14 +264,15 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.matchNumberNumericUpDown, 5);
             this.matchNumberNumericUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchNumberNumericUpDown.Location = new System.Drawing.Point(377, 3);
+            this.matchNumberNumericUpDown.Location = new System.Drawing.Point(754, 6);
+            this.matchNumberNumericUpDown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.matchNumberNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.matchNumberNumericUpDown.Name = "matchNumberNumericUpDown";
-            this.matchNumberNumericUpDown.Size = new System.Drawing.Size(164, 20);
+            this.matchNumberNumericUpDown.Size = new System.Drawing.Size(328, 31);
             this.matchNumberNumericUpDown.TabIndex = 2;
             this.matchNumberNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.matchNumberNumericUpDown.Value = new decimal(new int[] {
@@ -277,9 +286,10 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.submitDataButton, 6);
             this.submitDataButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.submitDataButton.Location = new System.Drawing.Point(173, 408);
+            this.submitDataButton.Location = new System.Drawing.Point(346, 786);
+            this.submitDataButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.submitDataButton.Name = "submitDataButton";
-            this.submitDataButton.Size = new System.Drawing.Size(198, 26);
+            this.submitDataButton.Size = new System.Drawing.Size(396, 48);
             this.submitDataButton.TabIndex = 99;
             this.submitDataButton.Text = "Submit Data";
             this.submitDataButton.UseVisualStyleBackColor = true;
@@ -290,9 +300,10 @@
             this.autonymousHighLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.autonymousHighLabel, 5);
             this.autonymousHighLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autonymousHighLabel.Location = new System.Drawing.Point(3, 54);
+            this.autonymousHighLabel.Location = new System.Drawing.Point(6, 104);
+            this.autonymousHighLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.autonymousHighLabel.Name = "autonymousHighLabel";
-            this.autonymousHighLabel.Size = new System.Drawing.Size(164, 27);
+            this.autonymousHighLabel.Size = new System.Drawing.Size(328, 52);
             this.autonymousHighLabel.TabIndex = 9;
             this.autonymousHighLabel.Text = "Autonymous High Points: ";
             this.autonymousHighLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,9 +313,10 @@
             this.autonymousLowLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.autonymousLowLabel, 5);
             this.autonymousLowLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autonymousLowLabel.Location = new System.Drawing.Point(3, 81);
+            this.autonymousLowLabel.Location = new System.Drawing.Point(6, 156);
+            this.autonymousLowLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.autonymousLowLabel.Name = "autonymousLowLabel";
-            this.autonymousLowLabel.Size = new System.Drawing.Size(164, 27);
+            this.autonymousLowLabel.Size = new System.Drawing.Size(328, 52);
             this.autonymousLowLabel.TabIndex = 10;
             this.autonymousLowLabel.Text = "Autonymous Low Points: ";
             this.autonymousLowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -314,9 +326,10 @@
             this.controlledHighLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.controlledHighLabel, 5);
             this.controlledHighLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighLabel.Location = new System.Drawing.Point(3, 108);
+            this.controlledHighLabel.Location = new System.Drawing.Point(6, 208);
+            this.controlledHighLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.controlledHighLabel.Name = "controlledHighLabel";
-            this.controlledHighLabel.Size = new System.Drawing.Size(164, 27);
+            this.controlledHighLabel.Size = new System.Drawing.Size(328, 52);
             this.controlledHighLabel.TabIndex = 11;
             this.controlledHighLabel.Text = "Controlled High Points: ";
             this.controlledHighLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -326,9 +339,10 @@
             this.controledLowLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.controledLowLabel, 5);
             this.controledLowLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controledLowLabel.Location = new System.Drawing.Point(3, 135);
+            this.controledLowLabel.Location = new System.Drawing.Point(6, 260);
+            this.controledLowLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.controledLowLabel.Name = "controledLowLabel";
-            this.controledLowLabel.Size = new System.Drawing.Size(164, 27);
+            this.controledLowLabel.Size = new System.Drawing.Size(328, 52);
             this.controledLowLabel.TabIndex = 12;
             this.controledLowLabel.Text = "Controlled Low Points: ";
             this.controledLowLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -339,9 +353,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.scoringLabel, 9);
             this.scoringLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoringLabel.Location = new System.Drawing.Point(3, 27);
+            this.scoringLabel.Location = new System.Drawing.Point(6, 52);
+            this.scoringLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.scoringLabel.Name = "scoringLabel";
-            this.scoringLabel.Size = new System.Drawing.Size(300, 27);
+            this.scoringLabel.Size = new System.Drawing.Size(600, 52);
             this.scoringLabel.TabIndex = 17;
             this.scoringLabel.Text = "Points Scored";
             this.scoringLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -352,9 +367,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.ballControlHeaderLabel, 9);
             this.ballControlHeaderLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ballControlHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.ballControlHeaderLabel.Location = new System.Drawing.Point(3, 189);
+            this.ballControlHeaderLabel.Location = new System.Drawing.Point(6, 364);
+            this.ballControlHeaderLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ballControlHeaderLabel.Name = "ballControlHeaderLabel";
-            this.ballControlHeaderLabel.Size = new System.Drawing.Size(300, 27);
+            this.ballControlHeaderLabel.Size = new System.Drawing.Size(600, 52);
             this.ballControlHeaderLabel.TabIndex = 18;
             this.ballControlHeaderLabel.Text = "Ball Control";
             this.ballControlHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -364,9 +380,10 @@
             this.autoBallPickupLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.autoBallPickupLabel, 5);
             this.autoBallPickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoBallPickupLabel.Location = new System.Drawing.Point(3, 216);
+            this.autoBallPickupLabel.Location = new System.Drawing.Point(6, 416);
+            this.autoBallPickupLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.autoBallPickupLabel.Name = "autoBallPickupLabel";
-            this.autoBallPickupLabel.Size = new System.Drawing.Size(164, 27);
+            this.autoBallPickupLabel.Size = new System.Drawing.Size(328, 52);
             this.autoBallPickupLabel.TabIndex = 19;
             this.autoBallPickupLabel.Text = "Autonymous Ball Pickups: ";
             this.autoBallPickupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -376,9 +393,10 @@
             this.controlledBallPickupLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.controlledBallPickupLabel, 5);
             this.controlledBallPickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledBallPickupLabel.Location = new System.Drawing.Point(3, 243);
+            this.controlledBallPickupLabel.Location = new System.Drawing.Point(6, 468);
+            this.controlledBallPickupLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.controlledBallPickupLabel.Name = "controlledBallPickupLabel";
-            this.controlledBallPickupLabel.Size = new System.Drawing.Size(164, 27);
+            this.controlledBallPickupLabel.Size = new System.Drawing.Size(328, 52);
             this.controlledBallPickupLabel.TabIndex = 20;
             this.controlledBallPickupLabel.Text = "Controlled Ball Pickups: ";
             this.controlledBallPickupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -388,9 +406,10 @@
             this.missedPickupsLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.missedPickupsLabel, 5);
             this.missedPickupsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.missedPickupsLabel.Location = new System.Drawing.Point(3, 270);
+            this.missedPickupsLabel.Location = new System.Drawing.Point(6, 520);
+            this.missedPickupsLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.missedPickupsLabel.Name = "missedPickupsLabel";
-            this.missedPickupsLabel.Size = new System.Drawing.Size(164, 27);
+            this.missedPickupsLabel.Size = new System.Drawing.Size(328, 52);
             this.missedPickupsLabel.TabIndex = 21;
             this.missedPickupsLabel.Text = "Missed Pickups: ";
             this.missedPickupsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -400,9 +419,10 @@
             this.hotPointsLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.hotPointsLabel, 5);
             this.hotPointsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hotPointsLabel.Location = new System.Drawing.Point(3, 162);
+            this.hotPointsLabel.Location = new System.Drawing.Point(6, 312);
+            this.hotPointsLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.hotPointsLabel.Name = "hotPointsLabel";
-            this.hotPointsLabel.Size = new System.Drawing.Size(164, 27);
+            this.hotPointsLabel.Size = new System.Drawing.Size(328, 52);
             this.hotPointsLabel.TabIndex = 103;
             this.hotPointsLabel.Text = "Hot Goals: ";
             this.hotPointsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -411,9 +431,10 @@
             // 
             this.autoHighMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.autoHighMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoHighMinusButton.Location = new System.Drawing.Point(173, 57);
+            this.autoHighMinusButton.Location = new System.Drawing.Point(346, 110);
+            this.autoHighMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.autoHighMinusButton.Name = "autoHighMinusButton";
-            this.autoHighMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.autoHighMinusButton.Size = new System.Drawing.Size(56, 40);
             this.autoHighMinusButton.TabIndex = 105;
             this.autoHighMinusButton.Text = "-";
             this.autoHighMinusButton.UseVisualStyleBackColor = true;
@@ -423,9 +444,10 @@
             // 
             this.autoLowMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.autoLowMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoLowMinusButton.Location = new System.Drawing.Point(173, 84);
+            this.autoLowMinusButton.Location = new System.Drawing.Point(346, 162);
+            this.autoLowMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.autoLowMinusButton.Name = "autoLowMinusButton";
-            this.autoLowMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.autoLowMinusButton.Size = new System.Drawing.Size(56, 40);
             this.autoLowMinusButton.TabIndex = 106;
             this.autoLowMinusButton.Text = "-";
             this.autoLowMinusButton.UseVisualStyleBackColor = true;
@@ -435,9 +457,10 @@
             // 
             this.controlledHighMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlledHighMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlledHighMinusButton.Location = new System.Drawing.Point(173, 111);
+            this.controlledHighMinusButton.Location = new System.Drawing.Point(346, 214);
+            this.controlledHighMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.controlledHighMinusButton.Name = "controlledHighMinusButton";
-            this.controlledHighMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.controlledHighMinusButton.Size = new System.Drawing.Size(56, 40);
             this.controlledHighMinusButton.TabIndex = 107;
             this.controlledHighMinusButton.Text = "-";
             this.controlledHighMinusButton.UseVisualStyleBackColor = true;
@@ -447,9 +470,10 @@
             // 
             this.controlledLowMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlledLowMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlledLowMinusButton.Location = new System.Drawing.Point(173, 138);
+            this.controlledLowMinusButton.Location = new System.Drawing.Point(346, 266);
+            this.controlledLowMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.controlledLowMinusButton.Name = "controlledLowMinusButton";
-            this.controlledLowMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.controlledLowMinusButton.Size = new System.Drawing.Size(56, 40);
             this.controlledLowMinusButton.TabIndex = 108;
             this.controlledLowMinusButton.Text = "-";
             this.controlledLowMinusButton.UseVisualStyleBackColor = true;
@@ -459,9 +483,10 @@
             // 
             this.hotGoalMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hotGoalMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotGoalMinusButton.Location = new System.Drawing.Point(173, 165);
+            this.hotGoalMinusButton.Location = new System.Drawing.Point(346, 318);
+            this.hotGoalMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.hotGoalMinusButton.Name = "hotGoalMinusButton";
-            this.hotGoalMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.hotGoalMinusButton.Size = new System.Drawing.Size(56, 40);
             this.hotGoalMinusButton.TabIndex = 109;
             this.hotGoalMinusButton.Text = "-";
             this.hotGoalMinusButton.UseVisualStyleBackColor = true;
@@ -471,9 +496,10 @@
             // 
             this.autoPickupMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.autoPickupMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoPickupMinusButton.Location = new System.Drawing.Point(173, 219);
+            this.autoPickupMinusButton.Location = new System.Drawing.Point(346, 422);
+            this.autoPickupMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.autoPickupMinusButton.Name = "autoPickupMinusButton";
-            this.autoPickupMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.autoPickupMinusButton.Size = new System.Drawing.Size(56, 40);
             this.autoPickupMinusButton.TabIndex = 110;
             this.autoPickupMinusButton.Text = "-";
             this.autoPickupMinusButton.UseVisualStyleBackColor = true;
@@ -483,9 +509,10 @@
             // 
             this.controllPickupMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controllPickupMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controllPickupMinusButton.Location = new System.Drawing.Point(173, 246);
+            this.controllPickupMinusButton.Location = new System.Drawing.Point(346, 474);
+            this.controllPickupMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.controllPickupMinusButton.Name = "controllPickupMinusButton";
-            this.controllPickupMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.controllPickupMinusButton.Size = new System.Drawing.Size(56, 40);
             this.controllPickupMinusButton.TabIndex = 111;
             this.controllPickupMinusButton.Text = "-";
             this.controllPickupMinusButton.UseVisualStyleBackColor = true;
@@ -495,9 +522,10 @@
             // 
             this.missedPickupsMinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.missedPickupsMinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missedPickupsMinusButton.Location = new System.Drawing.Point(173, 273);
+            this.missedPickupsMinusButton.Location = new System.Drawing.Point(346, 526);
+            this.missedPickupsMinusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.missedPickupsMinusButton.Name = "missedPickupsMinusButton";
-            this.missedPickupsMinusButton.Size = new System.Drawing.Size(28, 21);
+            this.missedPickupsMinusButton.Size = new System.Drawing.Size(56, 40);
             this.missedPickupsMinusButton.TabIndex = 112;
             this.missedPickupsMinusButton.Text = "-";
             this.missedPickupsMinusButton.UseVisualStyleBackColor = true;
@@ -507,9 +535,10 @@
             // 
             this.autoHighPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.autoHighPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoHighPlusButton.Location = new System.Drawing.Point(275, 57);
+            this.autoHighPlusButton.Location = new System.Drawing.Point(550, 110);
+            this.autoHighPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.autoHighPlusButton.Name = "autoHighPlusButton";
-            this.autoHighPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.autoHighPlusButton.Size = new System.Drawing.Size(56, 40);
             this.autoHighPlusButton.TabIndex = 113;
             this.autoHighPlusButton.Text = "+";
             this.autoHighPlusButton.UseVisualStyleBackColor = true;
@@ -519,9 +548,10 @@
             // 
             this.autoLowPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.autoLowPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoLowPlusButton.Location = new System.Drawing.Point(275, 84);
+            this.autoLowPlusButton.Location = new System.Drawing.Point(550, 162);
+            this.autoLowPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.autoLowPlusButton.Name = "autoLowPlusButton";
-            this.autoLowPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.autoLowPlusButton.Size = new System.Drawing.Size(56, 40);
             this.autoLowPlusButton.TabIndex = 114;
             this.autoLowPlusButton.Text = "+";
             this.autoLowPlusButton.UseVisualStyleBackColor = true;
@@ -531,9 +561,10 @@
             // 
             this.controlledHighPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlledHighPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlledHighPlusButton.Location = new System.Drawing.Point(275, 111);
+            this.controlledHighPlusButton.Location = new System.Drawing.Point(550, 214);
+            this.controlledHighPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.controlledHighPlusButton.Name = "controlledHighPlusButton";
-            this.controlledHighPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.controlledHighPlusButton.Size = new System.Drawing.Size(56, 40);
             this.controlledHighPlusButton.TabIndex = 115;
             this.controlledHighPlusButton.Text = "+";
             this.controlledHighPlusButton.UseVisualStyleBackColor = true;
@@ -543,9 +574,10 @@
             // 
             this.controlledLowPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlledLowPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlledLowPlusButton.Location = new System.Drawing.Point(275, 138);
+            this.controlledLowPlusButton.Location = new System.Drawing.Point(550, 266);
+            this.controlledLowPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.controlledLowPlusButton.Name = "controlledLowPlusButton";
-            this.controlledLowPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.controlledLowPlusButton.Size = new System.Drawing.Size(56, 40);
             this.controlledLowPlusButton.TabIndex = 116;
             this.controlledLowPlusButton.Text = "+";
             this.controlledLowPlusButton.UseVisualStyleBackColor = true;
@@ -555,9 +587,10 @@
             // 
             this.hotGoalPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hotGoalPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotGoalPlusButton.Location = new System.Drawing.Point(275, 165);
+            this.hotGoalPlusButton.Location = new System.Drawing.Point(550, 318);
+            this.hotGoalPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.hotGoalPlusButton.Name = "hotGoalPlusButton";
-            this.hotGoalPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.hotGoalPlusButton.Size = new System.Drawing.Size(56, 40);
             this.hotGoalPlusButton.TabIndex = 117;
             this.hotGoalPlusButton.Text = "+";
             this.hotGoalPlusButton.UseVisualStyleBackColor = true;
@@ -567,9 +600,10 @@
             // 
             this.autoPickupPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.autoPickupPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoPickupPlusButton.Location = new System.Drawing.Point(275, 219);
+            this.autoPickupPlusButton.Location = new System.Drawing.Point(550, 422);
+            this.autoPickupPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.autoPickupPlusButton.Name = "autoPickupPlusButton";
-            this.autoPickupPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.autoPickupPlusButton.Size = new System.Drawing.Size(56, 40);
             this.autoPickupPlusButton.TabIndex = 118;
             this.autoPickupPlusButton.Text = "+";
             this.autoPickupPlusButton.UseVisualStyleBackColor = true;
@@ -579,9 +613,10 @@
             // 
             this.controllPickupPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controllPickupPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controllPickupPlusButton.Location = new System.Drawing.Point(275, 246);
+            this.controllPickupPlusButton.Location = new System.Drawing.Point(550, 474);
+            this.controllPickupPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.controllPickupPlusButton.Name = "controllPickupPlusButton";
-            this.controllPickupPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.controllPickupPlusButton.Size = new System.Drawing.Size(56, 40);
             this.controllPickupPlusButton.TabIndex = 119;
             this.controllPickupPlusButton.Text = "+";
             this.controllPickupPlusButton.UseVisualStyleBackColor = true;
@@ -591,9 +626,10 @@
             // 
             this.missedPickupsPlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.missedPickupsPlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missedPickupsPlusButton.Location = new System.Drawing.Point(275, 273);
+            this.missedPickupsPlusButton.Location = new System.Drawing.Point(550, 526);
+            this.missedPickupsPlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.missedPickupsPlusButton.Name = "missedPickupsPlusButton";
-            this.missedPickupsPlusButton.Size = new System.Drawing.Size(28, 21);
+            this.missedPickupsPlusButton.Size = new System.Drawing.Size(56, 40);
             this.missedPickupsPlusButton.TabIndex = 120;
             this.missedPickupsPlusButton.Text = "+";
             this.missedPickupsPlusButton.UseVisualStyleBackColor = true;
@@ -604,9 +640,10 @@
             this.autoHighTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.autoHighTallyDisplay, 2);
             this.autoHighTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoHighTallyDisplay.Location = new System.Drawing.Point(207, 54);
+            this.autoHighTallyDisplay.Location = new System.Drawing.Point(414, 104);
+            this.autoHighTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.autoHighTallyDisplay.Name = "autoHighTallyDisplay";
-            this.autoHighTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.autoHighTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.autoHighTallyDisplay.TabIndex = 121;
             this.autoHighTallyDisplay.Text = "0";
             this.autoHighTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -616,9 +653,10 @@
             this.autoLowTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.autoLowTallyDisplay, 2);
             this.autoLowTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoLowTallyDisplay.Location = new System.Drawing.Point(207, 81);
+            this.autoLowTallyDisplay.Location = new System.Drawing.Point(414, 156);
+            this.autoLowTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.autoLowTallyDisplay.Name = "autoLowTallyDisplay";
-            this.autoLowTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.autoLowTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.autoLowTallyDisplay.TabIndex = 122;
             this.autoLowTallyDisplay.Text = "0";
             this.autoLowTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -628,9 +666,10 @@
             this.controlledHighTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.controlledHighTallyDisplay, 2);
             this.controlledHighTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighTallyDisplay.Location = new System.Drawing.Point(207, 108);
+            this.controlledHighTallyDisplay.Location = new System.Drawing.Point(414, 208);
+            this.controlledHighTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.controlledHighTallyDisplay.Name = "controlledHighTallyDisplay";
-            this.controlledHighTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.controlledHighTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.controlledHighTallyDisplay.TabIndex = 123;
             this.controlledHighTallyDisplay.Text = "0";
             this.controlledHighTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,9 +679,10 @@
             this.controlledLowTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.controlledLowTallyDisplay, 2);
             this.controlledLowTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledLowTallyDisplay.Location = new System.Drawing.Point(207, 135);
+            this.controlledLowTallyDisplay.Location = new System.Drawing.Point(414, 260);
+            this.controlledLowTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.controlledLowTallyDisplay.Name = "controlledLowTallyDisplay";
-            this.controlledLowTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.controlledLowTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.controlledLowTallyDisplay.TabIndex = 124;
             this.controlledLowTallyDisplay.Text = "0";
             this.controlledLowTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -652,9 +692,10 @@
             this.hotGoalTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.hotGoalTallyDisplay, 2);
             this.hotGoalTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hotGoalTallyDisplay.Location = new System.Drawing.Point(207, 162);
+            this.hotGoalTallyDisplay.Location = new System.Drawing.Point(414, 312);
+            this.hotGoalTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.hotGoalTallyDisplay.Name = "hotGoalTallyDisplay";
-            this.hotGoalTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.hotGoalTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.hotGoalTallyDisplay.TabIndex = 125;
             this.hotGoalTallyDisplay.Text = "0";
             this.hotGoalTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -664,9 +705,10 @@
             this.autoPickupTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.autoPickupTallyDisplay, 2);
             this.autoPickupTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoPickupTallyDisplay.Location = new System.Drawing.Point(207, 216);
+            this.autoPickupTallyDisplay.Location = new System.Drawing.Point(414, 416);
+            this.autoPickupTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.autoPickupTallyDisplay.Name = "autoPickupTallyDisplay";
-            this.autoPickupTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.autoPickupTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.autoPickupTallyDisplay.TabIndex = 126;
             this.autoPickupTallyDisplay.Text = "0";
             this.autoPickupTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -676,9 +718,10 @@
             this.controlledPickupTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.controlledPickupTallyDisplay, 2);
             this.controlledPickupTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledPickupTallyDisplay.Location = new System.Drawing.Point(207, 243);
+            this.controlledPickupTallyDisplay.Location = new System.Drawing.Point(414, 468);
+            this.controlledPickupTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.controlledPickupTallyDisplay.Name = "controlledPickupTallyDisplay";
-            this.controlledPickupTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.controlledPickupTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.controlledPickupTallyDisplay.TabIndex = 127;
             this.controlledPickupTallyDisplay.Text = "0";
             this.controlledPickupTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -688,20 +731,47 @@
             this.missedPickupsTallyDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.missedPickupsTallyDisplay, 2);
             this.missedPickupsTallyDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.missedPickupsTallyDisplay.Location = new System.Drawing.Point(207, 270);
+            this.missedPickupsTallyDisplay.Location = new System.Drawing.Point(414, 520);
+            this.missedPickupsTallyDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.missedPickupsTallyDisplay.Name = "missedPickupsTallyDisplay";
-            this.missedPickupsTallyDisplay.Size = new System.Drawing.Size(62, 27);
+            this.missedPickupsTallyDisplay.Size = new System.Drawing.Size(124, 52);
             this.missedPickupsTallyDisplay.TabIndex = 128;
             this.missedPickupsTallyDisplay.Text = "0";
             this.missedPickupsTallyDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // startingLocationPanel
+            // 
+            this.startingLocationPanel.BackColor = System.Drawing.Color.DarkRed;
+            this.tableLayoutPanel1.SetColumnSpan(this.startingLocationPanel, 7);
+            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startingLocationPanel.Location = new System.Drawing.Point(615, 107);
+            this.startingLocationPanel.Name = "startingLocationPanel";
+            this.tableLayoutPanel1.SetRowSpan(this.startingLocationPanel, 7);
+            this.startingLocationPanel.Size = new System.Drawing.Size(470, 358);
+            this.startingLocationPanel.TabIndex = 129;
+            this.startingLocationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startingLocationPanel_Paint);
+            // 
+            // startingLocationLabel
+            // 
+            this.startingLocationLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.startingLocationLabel, 7);
+            this.startingLocationLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startingLocationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.startingLocationLabel.Location = new System.Drawing.Point(615, 52);
+            this.startingLocationLabel.Name = "startingLocationLabel";
+            this.startingLocationLabel.Size = new System.Drawing.Size(470, 52);
+            this.startingLocationLabel.TabIndex = 130;
+            this.startingLocationLabel.Text = "Starting Location";
+            this.startingLocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Aerial_Assist_Scouting_UI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Aerial_Assist_Scouting_UI";
-            this.Size = new System.Drawing.Size(544, 437);
+            this.Size = new System.Drawing.Size(1088, 840);
             this.Load += new System.EventHandler(this.Aerial_Assist_UI_Layout_Test_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -752,5 +822,7 @@
         private System.Windows.Forms.Label autoPickupTallyDisplay;
         private System.Windows.Forms.Label controlledPickupTallyDisplay;
         private System.Windows.Forms.Label missedPickupsTallyDisplay;
+        private System.Windows.Forms.Panel startingLocationPanel;
+        private System.Windows.Forms.Label startingLocationLabel;
     }
 }

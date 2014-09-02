@@ -159,5 +159,10 @@ namespace FRC_Scouting_V2.Test_Items
         {
             UpdateLabels();
         }
+
+        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
