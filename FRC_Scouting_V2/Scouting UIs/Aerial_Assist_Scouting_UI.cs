@@ -38,20 +38,12 @@ namespace FRC_Scouting_V2.Test_Items
             missedPickupsTallyDisplay.Text = Convert.ToString(missedPickupsTally);
         }
 
-        //public void LoadDrawings()
-        //{
-        //    Pen blackpen = new Pen(Color.Black, 3);
-        //    Graphics g = startingLocationPanel.CreateGraphics();
-        //    g.DrawRectangle(blackpen, 0, 0, 258, 191);
-        //    g.Dispose();
-        //}
-
-        public void PlotStartingLocation()
+        public void PlotInitialLines()
         {
-            Pen blackpen = new Pen(Color.Black, 3);
-            Graphics g = startingLocationPanel.CreateGraphics();
-            g.DrawRectangle(blackpen, xStarting, yStarting, 150, 150);
-            g.Dispose();
+            Pen blackpen = new Pen(Color.Black, 4);
+            var initGraphics = startingLocationPanel.CreateGraphics();
+            initGraphics.DrawRectangle(blackpen, 0, 0, 258, 191);
+            initGraphics.Dispose();
         }
 
         private void Aerial_Assist_UI_Layout_Test_Load(object sender, EventArgs e)
@@ -182,13 +174,15 @@ namespace FRC_Scouting_V2.Test_Items
 
         private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            var point = startingLocationPanel.PointToClient(Cursor.Position);
-            //MessageBox.Show(Convert.ToString(point));
+            var g = startingLocationPanel.CreateGraphics();
+            xStarting = Convert.ToInt32(e.X) - 3;
+            yStarting = Convert.ToInt32(e.Y) - 3;
+            g.DrawRectangle(new Pen(Brushes.Black, 3),new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
         }
 
         private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
         {
-            
+            PlotInitialLines();
         }
     }
 }
