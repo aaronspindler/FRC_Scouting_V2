@@ -46,11 +46,12 @@ namespace FRC_Scouting_V2.Test_Items
             initGraphics.Dispose();
         }
 
-        private void Aerial_Assist_UI_Layout_Test_Load(object sender, EventArgs e)
+        public void BlankPanel()
         {
-            //Set team colour items
-            teamColourComboBox.Items.Add("Blue");
-            teamColourComboBox.Items.Add("Red");
+            var initGraphics = startingLocationPanel.CreateGraphics();
+            initGraphics.FillRectangle(Brushes.White, 0, 0, 258, 191);
+            initGraphics.Dispose();
+            PlotInitialLines();
         }
 
         private void autoHighMinusButton_Click(object sender, EventArgs e)
@@ -174,6 +175,8 @@ namespace FRC_Scouting_V2.Test_Items
 
         private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
         {
+            startingLocationPanel.Refresh();
+            BlankPanel();
             var g = startingLocationPanel.CreateGraphics();
             xStarting = Convert.ToInt32(e.X) - 3;
             yStarting = Convert.ToInt32(e.Y) - 3;
@@ -183,6 +186,13 @@ namespace FRC_Scouting_V2.Test_Items
         private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
         {
             PlotInitialLines();
+        }
+
+        private void Aerial_Assist_UI_Layout_Load(object sender, EventArgs e)
+        {
+            //Set team colour items
+            teamColourComboBox.Items.Add("Blue");
+            teamColourComboBox.Items.Add("Red");
         }
     }
 }

@@ -741,7 +741,7 @@
             // 
             // startingLocationPanel
             // 
-            this.startingLocationPanel.BackColor = System.Drawing.Color.Firebrick;
+            this.startingLocationPanel.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.SetColumnSpan(this.startingLocationPanel, 7);
             this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startingLocationPanel.Location = new System.Drawing.Point(616, 108);
@@ -775,7 +775,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Aerial_Assist_Scouting_UI";
             this.Size = new System.Drawing.Size(1088, 840);
-            this.Load += new System.EventHandler(this.Aerial_Assist_UI_Layout_Test_Load);
+            this.Load += new System.EventHandler(this.Aerial_Assist_UI_Layout_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).EndInit();
