@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace FRC_Scouting_V2.Test_Items
+namespace FRC_Scouting_V2
 {
     //@author xNovax
     public partial class Aerial_Assist_Scouting_UI : UserControl

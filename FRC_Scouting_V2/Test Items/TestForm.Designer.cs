@@ -31,7 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.aerialAssist_TestPage = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Test_Items.Aerial_Assist_Scouting_UI();
+            this.aerial_Assist_Scouting_UI1 = new Aerial_Assist_Scouting_UI();
             this.tabControl1.SuspendLayout();
             this.aerialAssist_TestPage.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage aerialAssist_TestPage;
         private System.Windows.Forms.TabPage tabPage2;
-        private Test_Items.Aerial_Assist_Scouting_UI aerial_Assist_Scouting_UI1;
+        private Aerial_Assist_Scouting_UI aerial_Assist_Scouting_UI1;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace FRC_Scouting_V2.Test_Items
+﻿namespace FRC_Scouting_V2
 {
     partial class Aerial_Assist_Scouting_UI
     {
