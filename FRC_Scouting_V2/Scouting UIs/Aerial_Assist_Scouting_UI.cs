@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FRC_Scouting_V2.Test_Items
@@ -17,6 +18,9 @@ namespace FRC_Scouting_V2.Test_Items
         private int missedPickupsTally;
         private int teamColour;
 
+        private int xStarting = 0;
+        private int yStarting = 0;
+
         public Aerial_Assist_Scouting_UI()
         {
             InitializeComponent();
@@ -32,6 +36,22 @@ namespace FRC_Scouting_V2.Test_Items
             autoPickupTallyDisplay.Text = Convert.ToString(autoPickupTally);
             controlledPickupTallyDisplay.Text = Convert.ToString(controlledPickupTally);
             missedPickupsTallyDisplay.Text = Convert.ToString(missedPickupsTally);
+        }
+
+        //public void LoadDrawings()
+        //{
+        //    Pen blackpen = new Pen(Color.Black, 3);
+        //    Graphics g = startingLocationPanel.CreateGraphics();
+        //    g.DrawRectangle(blackpen, 0, 0, 258, 191);
+        //    g.Dispose();
+        //}
+
+        public void PlotStartingLocation()
+        {
+            Pen blackpen = new Pen(Color.Black, 3);
+            Graphics g = startingLocationPanel.CreateGraphics();
+            g.DrawRectangle(blackpen, xStarting, yStarting, 150, 150);
+            g.Dispose();
         }
 
         private void Aerial_Assist_UI_Layout_Test_Load(object sender, EventArgs e)
@@ -160,9 +180,15 @@ namespace FRC_Scouting_V2.Test_Items
             UpdateLabels();
         }
 
+        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            var point = startingLocationPanel.PointToClient(Cursor.Position);
+            //MessageBox.Show(Convert.ToString(point));
+        }
+
         private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
     }
 }
