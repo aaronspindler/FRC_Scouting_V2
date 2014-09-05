@@ -190,6 +190,8 @@ namespace FRC_Scouting_V2
             {
                 var writer = new StreamWriter(saveFileDialog.FileName);
                 writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
+                writer.WriteLine("Team Name: " + Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName));
+                writer.WriteLine("Team Number: " + Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber));
                 writer.WriteLine("=====================================");
                 writer.WriteLine("Points Scored");
                 writer.WriteLine("=====================================");

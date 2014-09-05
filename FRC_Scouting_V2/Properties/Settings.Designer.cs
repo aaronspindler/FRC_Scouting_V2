@@ -81,5 +81,29 @@ namespace FRC_Scouting_V2.Properties {
                 return ((string)(this["Local_Database_ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("None - Selected")]
+        public string selectedTeamName {
+            get {
+                return ((string)(this["selectedTeamName"]));
+            }
+            set {
+                this["selectedTeamName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int selectedTeamNumber {
+            get {
+                return ((int)(this["selectedTeamNumber"]));
+            }
+            set {
+                this["selectedTeamNumber"] = value;
+            }
+        }
     }
 }

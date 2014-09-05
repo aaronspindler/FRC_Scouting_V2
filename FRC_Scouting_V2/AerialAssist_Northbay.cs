@@ -288,6 +288,10 @@ namespace FRC_Scouting_V2
             teamNameDisplay.Text = selectedTeamName;
             teamNumberDisplay.Text = Convert.ToString(selectedTeamNumber);
             teamLocationDisplay.Text = selectedTeamLocation;
+
+            FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName = selectedTeamName;
+            FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber = selectedTeamNumber;
+            FRC_Scouting_V2.Properties.Settings.Default.Save();
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
