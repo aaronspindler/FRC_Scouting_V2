@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
@@ -183,6 +184,32 @@ namespace FRC_Scouting_V2
         private void submitDataButton_Click(object sender, EventArgs e)
         {
             UpdateLabels();
+
+            //Write to TextFile
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var writer = new StreamWriter(saveFileDialog.FileName);
+                writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
+                writer.WriteLine("=====================================");
+                writer.WriteLine("Points Scored");
+                writer.WriteLine("=====================================");
+                writer.WriteLine("Auto High Tally: " + Convert.ToString(autoHighTally));
+                writer.WriteLine("Auto Low Tally: " + Convert.ToString(autoLowTally));
+                writer.WriteLine("Manually Controlled High Tally: " + Convert.ToString(controlledHighTally));
+                writer.WriteLine("Manually Controlled Low Tally: " + Convert.ToString(controlledLowTally));
+                writer.WriteLine("Hot Goals Scored: " + Convert.ToString(hotGoalTally));
+                writer.WriteLine("=====================================");
+                writer.WriteLine("Ball Control");
+                writer.WriteLine("=====================================");
+                writer.WriteLine("Autonymous Ball Pickups: " + Convert.ToString(autoPickupTally));
+                writer.WriteLine("Controlled Ball Pickups: " + Convert.ToString(controlledPickupTally));
+                writer.WriteLine("Missed Pickups/Loads: " + Convert.ToString(missedPickupsTally));
+                writer.Close();
+            }
+            else
+            {
+                MessageBox.Show("File not Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
