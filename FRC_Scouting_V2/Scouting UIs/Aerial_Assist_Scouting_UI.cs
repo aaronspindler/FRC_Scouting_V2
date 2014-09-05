@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
@@ -191,8 +192,8 @@ namespace FRC_Scouting_V2
             {
                 var writer = new StreamWriter(saveFileDialog.FileName);
                 writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
-                writer.WriteLine("Team Name: " + Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName));
-                writer.WriteLine("Team Number: " + Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber));
+                writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
+                writer.WriteLine("Team Number: " + Convert.ToString(Settings.Default.selectedTeamNumber));
                 writer.WriteLine("Team Color During Match: " + teamColour);
                 writer.WriteLine("=====================================");
                 writer.WriteLine("Points Scored");
@@ -216,18 +217,18 @@ namespace FRC_Scouting_V2
             }
 
             //MySQL Database
-            MySql.Data.MySqlClient.MySqlConnection conn;
+            MySqlConnection conn;
             string mySqlConnectionString;
 
             mySqlConnectionString = ("server=127.0.0.1;uid=" + " " + "pwd=12345;database=test;");
 
             try
             {
-                conn = new MySql.Data.MySqlClient.MySqlConnection();
+                conn = new MySqlConnection();
                 conn.ConnectionString = mySqlConnectionString;
                 conn.Open();
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -237,7 +238,7 @@ namespace FRC_Scouting_V2
         {
             startingLocationPanel.Refresh();
             BlankPanel();
-            var g = startingLocationPanel.CreateGraphics();
+            Graphics g = startingLocationPanel.CreateGraphics();
             xStarting = Convert.ToInt32(e.X) - 3;
             yStarting = Convert.ToInt32(e.Y) - 3;
             g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));

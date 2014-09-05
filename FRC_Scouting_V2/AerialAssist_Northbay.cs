@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -289,9 +290,9 @@ namespace FRC_Scouting_V2
             teamNumberDisplay.Text = Convert.ToString(selectedTeamNumber);
             teamLocationDisplay.Text = selectedTeamLocation;
 
-            FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName = selectedTeamName;
-            FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber = selectedTeamNumber;
-            FRC_Scouting_V2.Properties.Settings.Default.Save();
+            Settings.Default.selectedTeamName = selectedTeamName;
+            Settings.Default.selectedTeamNumber = selectedTeamNumber;
+            Settings.Default.Save();
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)

@@ -53,10 +53,10 @@
             this.databasePortLabel = new System.Windows.Forms.Label();
             this.databaseUsernameLabel = new System.Windows.Forms.Label();
             this.databasePasswordLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.databaseIPTextBox = new System.Windows.Forms.TextBox();
+            this.databasePortTextBox = new System.Windows.Forms.TextBox();
+            this.databaseUsernameTextBox = new System.Windows.Forms.TextBox();
+            this.databasePasswordTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -323,10 +323,10 @@
             this.tableLayoutPanel3.Controls.Add(this.databaseUsernameLabel, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.databasePortLabel, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.databasePasswordLabel, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.databaseIPTextBox, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.databasePortTextBox, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.databaseUsernameTextBox, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.databasePasswordTextBox, 1, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -386,46 +386,50 @@
             this.databasePasswordLabel.Text = "Database Password:";
             this.databasePasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // databaseIPTextBox
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(202, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Example: 192.168.1.1";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databaseIPTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.databaseIPTextBox.Location = new System.Drawing.Point(202, 3);
+            this.databaseIPTextBox.Name = "databaseIPTextBox";
+            this.databaseIPTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databaseIPTextBox.TabIndex = 5;
+            this.databaseIPTextBox.Text = "Example: 192.168.1.1";
+            this.databaseIPTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databaseIPTextBox.TextChanged += new System.EventHandler(this.databaseIPTextBox_TextChanged);
             // 
-            // textBox2
+            // databasePortTextBox
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(202, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 20);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "Example: 3306";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databasePortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.databasePortTextBox.Location = new System.Drawing.Point(202, 31);
+            this.databasePortTextBox.Name = "databasePortTextBox";
+            this.databasePortTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databasePortTextBox.TabIndex = 6;
+            this.databasePortTextBox.Text = "Example: 3306";
+            this.databasePortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databasePortTextBox.TextChanged += new System.EventHandler(this.databasePortTextBox_TextChanged);
             // 
-            // textBox3
+            // databaseUsernameTextBox
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(202, 59);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 20);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "Example: xNovax";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databaseUsernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.databaseUsernameTextBox.Location = new System.Drawing.Point(202, 59);
+            this.databaseUsernameTextBox.Name = "databaseUsernameTextBox";
+            this.databaseUsernameTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databaseUsernameTextBox.TabIndex = 7;
+            this.databaseUsernameTextBox.Text = "Example: xNovax";
+            this.databaseUsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databaseUsernameTextBox.TextChanged += new System.EventHandler(this.databaseUsernameTextBox_TextChanged);
             // 
-            // textBox4
+            // databasePasswordTextBox
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(202, 87);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(193, 20);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "Example: donotusepasswordasyourpassword";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databasePasswordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.databasePasswordTextBox.Location = new System.Drawing.Point(202, 87);
+            this.databasePasswordTextBox.Name = "databasePasswordTextBox";
+            this.databasePasswordTextBox.PasswordChar = '*';
+            this.databasePasswordTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databasePasswordTextBox.TabIndex = 8;
+            this.databasePasswordTextBox.Text = "Example: donotusepasswordasyourpassword";
+            this.databasePasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databasePasswordTextBox.TextChanged += new System.EventHandler(this.databasePasswordTextBox_TextChanged);
             // 
             // MainSettings
             // 
@@ -481,9 +485,9 @@
         private System.Windows.Forms.Label databaseUsernameLabel;
         private System.Windows.Forms.Label databasePortLabel;
         private System.Windows.Forms.Label databasePasswordLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox databaseIPTextBox;
+        private System.Windows.Forms.TextBox databasePortTextBox;
+        private System.Windows.Forms.TextBox databaseUsernameTextBox;
+        private System.Windows.Forms.TextBox databasePasswordTextBox;
     }
 }

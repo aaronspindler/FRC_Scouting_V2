@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 
 //@author xNovax
+
 namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
@@ -115,7 +116,8 @@ namespace FRC_Scouting_V2
         {
             Settings.Default.Reset();
             Settings.Default.Save();
-            MessageBox.Show("You have successfully reset all settings to default!", "Settings have been reset to default!",
+            MessageBox.Show("You have successfully reset all settings to default!",
+                "Settings have been reset to default!",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

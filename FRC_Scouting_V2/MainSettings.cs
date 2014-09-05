@@ -118,5 +118,21 @@ namespace FRC_Scouting_V2
                 "The Username field is used to keep track of who makes changes to any data. This prevents any mischievous changes to data.",
                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void databaseIPTextBox_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void databasePortTextBox_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void databaseUsernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void databasePasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }
