@@ -105,5 +105,53 @@ namespace FRC_Scouting_V2.Properties {
                 this["selectedTeamNumber"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.1")]
+        public string databaseIP {
+            get {
+                return ((string)(this["databaseIP"]));
+            }
+            set {
+                this["databaseIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3306")]
+        public string databasePort {
+            get {
+                return ((string)(this["databasePort"]));
+            }
+            set {
+                this["databasePort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("xNovax")]
+        public string databaseUsername {
+            get {
+                return ((string)(this["databaseUsername"]));
+            }
+            set {
+                this["databaseUsername"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("donotusepasswordasyourpassword")]
+        public string databasePassword {
+            get {
+                return ((string)(this["databasePassword"]));
+            }
+            set {
+                this["databasePassword"] = value;
+            }
+        }
     }
 }

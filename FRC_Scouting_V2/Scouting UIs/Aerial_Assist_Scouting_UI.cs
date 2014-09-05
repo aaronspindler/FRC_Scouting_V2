@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -18,7 +19,7 @@ namespace FRC_Scouting_V2
         private int hotGoalTally;
         private int matchNumber = 1;
         private int missedPickupsTally;
-        private int teamColour;
+        private string teamColour;
         private int xStarting;
         private int yStarting;
 
@@ -173,10 +174,10 @@ namespace FRC_Scouting_V2
             switch (teamColourComboBox.SelectedIndex)
             {
                 case 0:
-                    teamColour = 0;
+                    teamColour = ("Blue");
                     break;
                 case 1:
-                    teamColour = 1;
+                    teamColour = ("Red");
                     break;
             }
         }
@@ -192,6 +193,7 @@ namespace FRC_Scouting_V2
                 writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
                 writer.WriteLine("Team Name: " + Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName));
                 writer.WriteLine("Team Number: " + Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber));
+                writer.WriteLine("Team Color During Match: " + teamColour);
                 writer.WriteLine("=====================================");
                 writer.WriteLine("Points Scored");
                 writer.WriteLine("=====================================");
@@ -211,6 +213,23 @@ namespace FRC_Scouting_V2
             else
             {
                 MessageBox.Show("File not Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            //MySQL Database
+            MySql.Data.MySqlClient.MySqlConnection conn;
+            string mySqlConnectionString;
+
+            mySqlConnectionString = ("server=127.0.0.1;uid=" + " " + "pwd=12345;database=test;");
+
+            try
+            {
+                conn = new MySql.Data.MySqlClient.MySqlConnection();
+                conn.ConnectionString = mySqlConnectionString;
+                conn.Open();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

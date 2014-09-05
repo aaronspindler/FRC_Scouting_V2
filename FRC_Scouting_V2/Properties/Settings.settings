@@ -28,5 +28,17 @@
     <Setting Name="selectedTeamNumber" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="databaseIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.1</Value>
+    </Setting>
+    <Setting Name="databasePort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    <Setting Name="databaseUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xNovax</Value>
+    </Setting>
+    <Setting Name="databasePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">donotusepasswordasyourpassword</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

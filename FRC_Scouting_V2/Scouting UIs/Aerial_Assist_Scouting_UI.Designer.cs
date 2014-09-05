@@ -706,7 +706,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.startingLocationPanel, 7);
             this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startingLocationPanel.Location = new System.Drawing.Point(308, 56);
-            this.startingLocationPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startingLocationPanel.Margin = new System.Windows.Forms.Padding(2);
             this.startingLocationPanel.Name = "startingLocationPanel";
             this.tableLayoutPanel1.SetRowSpan(this.startingLocationPanel, 7);
             this.startingLocationPanel.Size = new System.Drawing.Size(234, 185);
