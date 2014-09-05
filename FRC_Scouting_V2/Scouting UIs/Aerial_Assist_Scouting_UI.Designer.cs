@@ -701,7 +701,7 @@
             // 
             // startingLocationPanel
             // 
-            this.startingLocationPanel.BackColor = System.Drawing.Color.White;
+            this.startingLocationPanel.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel1.SetColumnSpan(this.startingLocationPanel, 7);
             this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startingLocationPanel.Location = new System.Drawing.Point(308, 56);

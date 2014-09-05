@@ -7,6 +7,7 @@ namespace FRC_Scouting_V2
     //@author xNovax
     public partial class Aerial_Assist_Scouting_UI : UserControl
     {
+        //Variables
         private int autoHighTally;
         private int autoLowTally;
         private int autoPickupTally;
@@ -17,15 +18,15 @@ namespace FRC_Scouting_V2
         private int matchNumber = 1;
         private int missedPickupsTally;
         private int teamColour;
-
-        private int xStarting = 0;
-        private int yStarting = 0;
+        private int xStarting;
+        private int yStarting;
 
         public Aerial_Assist_Scouting_UI()
         {
             InitializeComponent();
         }
 
+        //Updates all of the labels when you click a plus or minus button
         public void UpdateLabels()
         {
             autoHighTallyDisplay.Text = Convert.ToString(autoHighTally);
@@ -40,24 +41,28 @@ namespace FRC_Scouting_V2
 
         public void PlotInitialLines()
         {
-            Pen blackpen = new Pen(Color.Black, 4);
-            Pen fineBlackPen = new Pen(Color.Black, 2);
-            var initGraphics = startingLocationPanel.CreateGraphics();
+            var blackpen = new Pen(Color.Black, 4);
+            var fineBluePen = new Pen(Color.Blue, 2);
+            var fineWhitePen = new Pen(Color.White, 2);
+            var fineRedPen = new Pen(Color.Red, 2);
+            Graphics initGraphics = startingLocationPanel.CreateGraphics();
 
             //Drawing square around the outside edge
             initGraphics.DrawRectangle(blackpen, 0, 0, 258, 191);
 
             //Drawing field lines
-            initGraphics.DrawLine(fineBlackPen, 86, 0, 86, 191);
-            initGraphics.DrawLine(fineBlackPen, 172, 0, 172, 191);
+            initGraphics.DrawRectangle(fineBluePen, 4, 4, 76, 183);
+            initGraphics.DrawRectangle(fineWhitePen, 84, 4, 92, 183);
+            initGraphics.DrawRectangle(fineRedPen, 180, 4, 76, 183);
+            initGraphics.DrawLine(blackpen, 129, 0, 129, 191);
             initGraphics.Dispose();
         }
 
         public void BlankPanel()
         {
-            var initGraphics = startingLocationPanel.CreateGraphics();
-            initGraphics.FillRectangle(Brushes.White, 0, 0, 258, 191);
-            initGraphics.Dispose();
+            Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();
+            clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 258, 191);
+            clearPanelGraphics.Dispose();
             PlotInitialLines();
         }
 
@@ -187,7 +192,7 @@ namespace FRC_Scouting_V2
             var g = startingLocationPanel.CreateGraphics();
             xStarting = Convert.ToInt32(e.X) - 3;
             yStarting = Convert.ToInt32(e.Y) - 3;
-            g.DrawRectangle(new Pen(Brushes.Black, 3),new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
+            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
         }
 
         private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
