@@ -41,8 +41,15 @@ namespace FRC_Scouting_V2
         public void PlotInitialLines()
         {
             Pen blackpen = new Pen(Color.Black, 4);
+            Pen fineBlackPen = new Pen(Color.Black, 2);
             var initGraphics = startingLocationPanel.CreateGraphics();
+
+            //Drawing square around the outside edge
             initGraphics.DrawRectangle(blackpen, 0, 0, 258, 191);
+
+            //Drawing field lines
+            initGraphics.DrawLine(fineBlackPen, 86, 0, 86, 191);
+            initGraphics.DrawLine(fineBlackPen, 172, 0, 172, 191);
             initGraphics.Dispose();
         }
 
