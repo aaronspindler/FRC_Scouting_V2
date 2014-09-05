@@ -47,10 +47,12 @@
             this.teamNameDisplay = new System.Windows.Forms.Label();
             this.teamLocationLabel = new System.Windows.Forms.Label();
             this.teamLocationDisplay = new System.Windows.Forms.Label();
+            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.teamInformationTabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -71,10 +73,9 @@
             this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -83,7 +84,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1224, 1179);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(612, 532);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -96,8 +97,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(612, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(304, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -106,27 +106,27 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 40);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // eventInformationToolStripMenuItem
             // 
             this.eventInformationToolStripMenuItem.Name = "eventInformationToolStripMenuItem";
-            this.eventInformationToolStripMenuItem.Size = new System.Drawing.Size(218, 40);
+            this.eventInformationToolStripMenuItem.Size = new System.Drawing.Size(114, 21);
             this.eventInformationToolStripMenuItem.Text = "Event Information";
             this.eventInformationToolStripMenuItem.Click += new System.EventHandler(this.eventInformationToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(77, 40);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // teamSelector
@@ -134,10 +134,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.teamSelector, 4);
             this.teamSelector.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamSelector.FormattingEnabled = true;
-            this.teamSelector.Location = new System.Drawing.Point(618, 6);
-            this.teamSelector.Margin = new System.Windows.Forms.Padding(6);
+            this.teamSelector.Location = new System.Drawing.Point(307, 3);
             this.teamSelector.Name = "teamSelector";
-            this.teamSelector.Size = new System.Drawing.Size(600, 33);
+            this.teamSelector.Size = new System.Drawing.Size(302, 21);
             this.teamSelector.TabIndex = 1;
             this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
             // 
@@ -147,22 +146,20 @@
             this.tabControl1.Controls.Add(this.scoutingTabPage);
             this.tabControl1.Controls.Add(this.teamInformationTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(6, 54);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.tabControl1.Location = new System.Drawing.Point(3, 28);
             this.tabControl1.Name = "tabControl1";
             this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 8);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1212, 1119);
+            this.tabControl1.Size = new System.Drawing.Size(606, 501);
             this.tabControl1.TabIndex = 2;
             // 
             // scoutingTabPage
             // 
             this.scoutingTabPage.Controls.Add(this.tableLayoutPanel2);
-            this.scoutingTabPage.Location = new System.Drawing.Point(4, 34);
-            this.scoutingTabPage.Margin = new System.Windows.Forms.Padding(6);
+            this.scoutingTabPage.Location = new System.Drawing.Point(4, 22);
             this.scoutingTabPage.Name = "scoutingTabPage";
-            this.scoutingTabPage.Padding = new System.Windows.Forms.Padding(6);
-            this.scoutingTabPage.Size = new System.Drawing.Size(1204, 1081);
+            this.scoutingTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.scoutingTabPage.Size = new System.Drawing.Size(598, 475);
             this.scoutingTabPage.TabIndex = 0;
             this.scoutingTabPage.Text = "Scouting";
             this.scoutingTabPage.UseVisualStyleBackColor = true;
@@ -178,9 +175,9 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.Controls.Add(this.aerial_Assist_Scouting_UI1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -191,17 +188,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1192, 1069);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(592, 469);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // teamInformationTabPage
             // 
             this.teamInformationTabPage.Controls.Add(this.tableLayoutPanel3);
-            this.teamInformationTabPage.Location = new System.Drawing.Point(4, 34);
-            this.teamInformationTabPage.Margin = new System.Windows.Forms.Padding(6);
+            this.teamInformationTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamInformationTabPage.Name = "teamInformationTabPage";
-            this.teamInformationTabPage.Padding = new System.Windows.Forms.Padding(6);
-            this.teamInformationTabPage.Size = new System.Drawing.Size(1204, 1081);
+            this.teamInformationTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.teamInformationTabPage.Size = new System.Drawing.Size(598, 556);
             this.teamInformationTabPage.TabIndex = 1;
             this.teamInformationTabPage.Text = "Team Information";
             this.teamInformationTabPage.UseVisualStyleBackColor = true;
@@ -224,8 +220,7 @@
             this.tableLayoutPanel3.Controls.Add(this.teamLocationLabel, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.teamLocationDisplay, 2, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 8;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -236,7 +231,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1192, 1069);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(592, 550);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // teamNameLabel
@@ -244,10 +239,9 @@
             this.teamNameLabel.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.teamNameLabel, 2);
             this.teamNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNameLabel.Location = new System.Drawing.Point(6, 0);
-            this.teamNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.teamNameLabel.Location = new System.Drawing.Point(3, 0);
             this.teamNameLabel.Name = "teamNameLabel";
-            this.teamNameLabel.Size = new System.Drawing.Size(286, 133);
+            this.teamNameLabel.Size = new System.Drawing.Size(142, 68);
             this.teamNameLabel.TabIndex = 2;
             this.teamNameLabel.Text = "Team Name: ";
             this.teamNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,10 +251,9 @@
             this.teamNumberLabel.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.teamNumberLabel, 2);
             this.teamNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNumberLabel.Location = new System.Drawing.Point(6, 133);
-            this.teamNumberLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.teamNumberLabel.Location = new System.Drawing.Point(3, 68);
             this.teamNumberLabel.Name = "teamNumberLabel";
-            this.teamNumberLabel.Size = new System.Drawing.Size(286, 133);
+            this.teamNumberLabel.Size = new System.Drawing.Size(142, 68);
             this.teamNumberLabel.TabIndex = 4;
             this.teamNumberLabel.Text = "Team Number: ";
             this.teamNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,10 +263,9 @@
             this.teamNumberDisplay.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.teamNumberDisplay, 6);
             this.teamNumberDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNumberDisplay.Location = new System.Drawing.Point(304, 133);
-            this.teamNumberDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.teamNumberDisplay.Location = new System.Drawing.Point(151, 68);
             this.teamNumberDisplay.Name = "teamNumberDisplay";
-            this.teamNumberDisplay.Size = new System.Drawing.Size(882, 133);
+            this.teamNumberDisplay.Size = new System.Drawing.Size(438, 68);
             this.teamNumberDisplay.TabIndex = 5;
             this.teamNumberDisplay.Text = "No Team Selected!";
             this.teamNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,10 +275,9 @@
             this.teamNameDisplay.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.teamNameDisplay, 6);
             this.teamNameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNameDisplay.Location = new System.Drawing.Point(304, 0);
-            this.teamNameDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.teamNameDisplay.Location = new System.Drawing.Point(151, 0);
             this.teamNameDisplay.Name = "teamNameDisplay";
-            this.teamNameDisplay.Size = new System.Drawing.Size(882, 133);
+            this.teamNameDisplay.Size = new System.Drawing.Size(438, 68);
             this.teamNameDisplay.TabIndex = 3;
             this.teamNameDisplay.Text = "No Team Selected!";
             this.teamNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,10 +287,9 @@
             this.teamLocationLabel.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.teamLocationLabel, 2);
             this.teamLocationLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamLocationLabel.Location = new System.Drawing.Point(6, 266);
-            this.teamLocationLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.teamLocationLabel.Location = new System.Drawing.Point(3, 136);
             this.teamLocationLabel.Name = "teamLocationLabel";
-            this.teamLocationLabel.Size = new System.Drawing.Size(286, 133);
+            this.teamLocationLabel.Size = new System.Drawing.Size(142, 68);
             this.teamLocationLabel.TabIndex = 6;
             this.teamLocationLabel.Text = "Team Location: ";
             this.teamLocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,24 +299,32 @@
             this.teamLocationDisplay.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.teamLocationDisplay, 6);
             this.teamLocationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamLocationDisplay.Location = new System.Drawing.Point(304, 266);
-            this.teamLocationDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.teamLocationDisplay.Location = new System.Drawing.Point(151, 136);
             this.teamLocationDisplay.Name = "teamLocationDisplay";
-            this.teamLocationDisplay.Size = new System.Drawing.Size(882, 133);
+            this.teamLocationDisplay.Size = new System.Drawing.Size(438, 68);
             this.teamLocationDisplay.TabIndex = 7;
             this.teamLocationDisplay.Text = "No Team Selected!";
             this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // aerial_Assist_Scouting_UI1
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.aerial_Assist_Scouting_UI1, 8);
+            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(3, 3);
+            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
+            this.tableLayoutPanel2.SetRowSpan(this.aerial_Assist_Scouting_UI1, 8);
+            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(586, 463);
+            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
+            // 
             // AerialAssist_Northbay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 1179);
+            this.ClientSize = new System.Drawing.Size(612, 532);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "AerialAssist_Northbay";
             this.Text = "Aerial Assist | Northbay | 2014";
@@ -337,6 +335,7 @@
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.scoutingTabPage.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.teamInformationTabPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -364,5 +363,6 @@
         private System.Windows.Forms.Label teamNameDisplay;
         private System.Windows.Forms.Label teamLocationLabel;
         private System.Windows.Forms.Label teamLocationDisplay;
+        private Aerial_Assist_Scouting_UI aerial_Assist_Scouting_UI1;
     }
 }

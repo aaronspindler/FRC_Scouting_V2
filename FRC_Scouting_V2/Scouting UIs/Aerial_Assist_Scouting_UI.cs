@@ -203,7 +203,7 @@ namespace FRC_Scouting_V2
                 writer.WriteLine("=====================================");
                 writer.WriteLine("Ball Control");
                 writer.WriteLine("=====================================");
-                writer.WriteLine("Autonymous Ball Pickups: " + Convert.ToString(autoPickupTally));
+                writer.WriteLine("Autonomous Ball Pickups: " + Convert.ToString(autoPickupTally));
                 writer.WriteLine("Controlled Ball Pickups: " + Convert.ToString(controlledPickupTally));
                 writer.WriteLine("Missed Pickups/Loads: " + Convert.ToString(missedPickupsTally));
                 writer.Close();
