@@ -227,14 +227,10 @@ namespace FRC_Scouting_V2
 
             //MySQL Database
             MySqlConnection conn;
-            string mySqlConnectionString;
-
-            mySqlConnectionString = ("server=127.0.0.1;uid=" + " " + "pwd=12345;database=test;");
-
+            var mySqlConnectionString = ("");
             try
             {
-                conn = new MySqlConnection();
-                conn.ConnectionString = mySqlConnectionString;
+                conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
             }
             catch (MySqlException ex)
