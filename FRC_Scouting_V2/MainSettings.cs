@@ -71,6 +71,10 @@ namespace FRC_Scouting_V2
             }
 
             usernameTextBox.Text = Settings.Default.username;
+            databaseIPTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databaseIP;
+            databasePortTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databasePort;
+            databaseUsernameTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databaseUsername;
+            databasePasswordTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databasePassword;
         }
 
         private void minimizeHomeCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -121,18 +125,38 @@ namespace FRC_Scouting_V2
 
         private void databaseIPTextBox_TextChanged(object sender, EventArgs e)
         {
+            if (databaseIPTextBox.Text != (""))
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.databaseIP = databaseIPTextBox.Text;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
         }
 
         private void databasePortTextBox_TextChanged(object sender, EventArgs e)
         {
+            if (databasePortTextBox.Text != (""))
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.databasePort = databasePortTextBox.Text;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
         }
 
         private void databaseUsernameTextBox_TextChanged(object sender, EventArgs e)
         {
+            if (databaseUsernameTextBox.Text != (""))
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
         }
 
         private void databasePasswordTextBox_TextChanged(object sender, EventArgs e)
         {
+            if (databasePasswordTextBox.Text != (""))
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.databasePassword = databasePasswordTextBox.Text;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
         }
     }
 }
