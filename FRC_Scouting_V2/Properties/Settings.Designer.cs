@@ -153,5 +153,17 @@ namespace FRC_Scouting_V2.Properties {
                 return ((string)(this["Local_Database_ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Default")]
+        public string currentEventName {
+            get {
+                return ((string)(this["currentEventName"]));
+            }
+            set {
+                this["currentEventName"] = value;
+            }
+        }
     }
 }

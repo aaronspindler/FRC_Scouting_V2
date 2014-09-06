@@ -21,3 +21,5 @@ C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scout
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.csproj.GenerateResource.Cache
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.exe
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.pdb
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.AerialAssist_RahChaCha.resources
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.AerialAssist_RahChaCha_Information.resources

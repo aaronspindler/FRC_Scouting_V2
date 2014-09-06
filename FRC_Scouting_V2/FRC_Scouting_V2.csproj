@@ -81,6 +81,18 @@
     <Compile Include="AerialAssist_Northbay_Information.Designer.cs">
       <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="AerialAssist_RahChaCha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AerialAssist_RahChaCha.Designer.cs">
+      <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AerialAssist_RahChaCha_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AerialAssist_RahChaCha_Information.Designer.cs">
+      <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Changelog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AerialAssist_Northbay_Information.resx">
       <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AerialAssist_RahChaCha.resx">
+      <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AerialAssist_RahChaCha_Information.resx">
+      <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Changelog.resx">
       <DependentUpon>Changelog.cs</DependentUpon>
