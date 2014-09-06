@@ -233,11 +233,13 @@ namespace FRC_Scouting_V2
             var databaseName = FRC_Scouting_V2.Properties.Settings.Default.databaseName;
             var databaseUsername = FRC_Scouting_V2.Properties.Settings.Default.databaseUsername;
             var databasePassword = FRC_Scouting_V2.Properties.Settings.Default.databasePassword;
-            var mySqlConnectionString = String.Format("Server={0};Port={1}Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {
                 conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
+
+                conn.Close();
             }
             catch (MySqlException ex)
             {
