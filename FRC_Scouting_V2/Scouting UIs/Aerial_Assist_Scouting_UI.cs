@@ -29,17 +29,12 @@ namespace FRC_Scouting_V2
             InitializeComponent();
         }
 
-        //Updates all of the labels when you click a plus or minus button
-        public void UpdateLabels()
+        public void BlankPanel()
         {
-            autoHighTallyDisplay.Text = Convert.ToString(autoHighTally);
-            autoLowTallyDisplay.Text = Convert.ToString(autoLowTally);
-            controlledHighTallyDisplay.Text = Convert.ToString(controlledHighTally);
-            controlledLowTallyDisplay.Text = Convert.ToString(controlledLowTally);
-            hotGoalTallyDisplay.Text = Convert.ToString(hotGoalTally);
-            autoPickupTallyDisplay.Text = Convert.ToString(autoPickupTally);
-            controlledPickupTallyDisplay.Text = Convert.ToString(controlledPickupTally);
-            missedPickupsTallyDisplay.Text = Convert.ToString(missedPickupsTally);
+            Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();
+            clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 258, 191);
+            clearPanelGraphics.Dispose();
+            PlotInitialLines();
         }
 
         public void PlotInitialLines()
@@ -61,12 +56,24 @@ namespace FRC_Scouting_V2
             initGraphics.Dispose();
         }
 
-        public void BlankPanel()
+        //Updates all of the labels when you click a plus or minus button
+        public void UpdateLabels()
         {
-            Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();
-            clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 258, 191);
-            clearPanelGraphics.Dispose();
-            PlotInitialLines();
+            autoHighTallyDisplay.Text = Convert.ToString(autoHighTally);
+            autoLowTallyDisplay.Text = Convert.ToString(autoLowTally);
+            controlledHighTallyDisplay.Text = Convert.ToString(controlledHighTally);
+            controlledLowTallyDisplay.Text = Convert.ToString(controlledLowTally);
+            hotGoalTallyDisplay.Text = Convert.ToString(hotGoalTally);
+            autoPickupTallyDisplay.Text = Convert.ToString(autoPickupTally);
+            controlledPickupTallyDisplay.Text = Convert.ToString(controlledPickupTally);
+            missedPickupsTallyDisplay.Text = Convert.ToString(missedPickupsTally);
+        }
+
+        private void Aerial_Assist_UI_Layout_Load(object sender, EventArgs e)
+        {
+            //Set team colour items
+            teamColourComboBox.Items.Add("Blue");
+            teamColourComboBox.Items.Add("Red");
         }
 
         private void autoHighMinusButton_Click(object sender, EventArgs e)
@@ -170,17 +177,19 @@ namespace FRC_Scouting_V2
             UpdateLabels();
         }
 
-        private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            switch (teamColourComboBox.SelectedIndex)
-            {
-                case 0:
-                    teamColour = ("Blue");
-                    break;
-                case 1:
-                    teamColour = ("Red");
-                    break;
-            }
+            startingLocationPanel.Refresh();
+            BlankPanel();
+            Graphics g = startingLocationPanel.CreateGraphics();
+            xStarting = Convert.ToInt32(e.X) - 3;
+            yStarting = Convert.ToInt32(e.Y) - 3;
+            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
+        }
+
+        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
+        {
+            PlotInitialLines();
         }
 
         private void submitDataButton_Click(object sender, EventArgs e)
@@ -234,26 +243,17 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
+        private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            startingLocationPanel.Refresh();
-            BlankPanel();
-            Graphics g = startingLocationPanel.CreateGraphics();
-            xStarting = Convert.ToInt32(e.X) - 3;
-            yStarting = Convert.ToInt32(e.Y) - 3;
-            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
-        }
-
-        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
-        {
-            PlotInitialLines();
-        }
-
-        private void Aerial_Assist_UI_Layout_Load(object sender, EventArgs e)
-        {
-            //Set team colour items
-            teamColourComboBox.Items.Add("Blue");
-            teamColourComboBox.Items.Add("Red");
+            switch (teamColourComboBox.SelectedIndex)
+            {
+                case 0:
+                    teamColour = ("Blue");
+                    break;
+                case 1:
+                    teamColour = ("Red");
+                    break;
+            }
         }
     }
 }
