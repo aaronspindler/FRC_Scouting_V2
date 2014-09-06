@@ -19,6 +19,7 @@ namespace FRC_Scouting_V2
         private void Home_Load(object sender, EventArgs e)
         {
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
+            eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
 
             if (Settings.Default.firstTimeLoad)
             {
@@ -79,6 +80,19 @@ namespace FRC_Scouting_V2
                 if (Settings.Default.minimizeHomeWentEventLoads)
                 {
                     WindowState = FormWindowState.Minimized;
+                }
+            }
+            else
+            {
+                if (eventSelector.SelectedIndex == 1)
+                {
+                    var aaRahChaCha = new AerialAssist_RahChaCha();
+                    aaRahChaCha.Show();
+
+                    if (Settings.Default.minimizeHomeWentEventLoads)
+                    {
+                        WindowState = FormWindowState.Minimized;
+                    }
                 }
             }
         }

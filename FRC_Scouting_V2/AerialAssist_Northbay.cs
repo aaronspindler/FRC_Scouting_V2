@@ -300,5 +300,10 @@ namespace FRC_Scouting_V2
             var eventInformation = new AerialAssist_Northbay_Information();
             eventInformation.Show();
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
