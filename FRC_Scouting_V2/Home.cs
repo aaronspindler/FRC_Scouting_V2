@@ -52,12 +52,6 @@ namespace FRC_Scouting_V2
             team3710Info.Show();
         }
 
-        private void mainSettingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var mainSettings = new MainSettings();
-            mainSettings.Show();
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -97,6 +91,12 @@ namespace FRC_Scouting_V2
                 var testForm = new TestForm();
                 testForm.Show();
             }
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var mainSettings = new MainSettings();
+            mainSettings.Show();
         }
     }
 }
