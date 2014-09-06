@@ -59,7 +59,7 @@
             // 
             this.currentTimeDisplay.AutoSize = true;
             this.currentTimeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.currentTimeDisplay.ForeColor = System.Drawing.Color.DarkRed;
+            this.currentTimeDisplay.ForeColor = System.Drawing.Color.Black;
             this.currentTimeDisplay.Location = new System.Drawing.Point(203, 0);
             this.currentTimeDisplay.Name = "currentTimeDisplay";
             this.currentTimeDisplay.Size = new System.Drawing.Size(194, 28);

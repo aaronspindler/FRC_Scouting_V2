@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="team3710InfoLabel.Text" xml:space="preserve">
+    <value>The Cyber Falcons are a High School FIRST robotics team from Frontenac Secondary School in Kingston, Ontario. The team has over twenty student members, two staff members and ten mentors from both industry (Bombardier Canada) and institutions of higher learning (Queens University). Our main focus is to compete in the FIRST Robotics Competition: an international competition for the recognition of science and technology. The FIRST Robotics Competition is held annually involving over 135,000 students in North America and many more globally.</value>
+  </data>
 </root>
