@@ -71,11 +71,11 @@ namespace FRC_Scouting_V2
             }
 
             usernameTextBox.Text = Settings.Default.username;
-            databaseIPTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databaseIP;
-            databasePortTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databasePort;
-            databaseUsernameTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databaseUsername;
-            databasePasswordTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databasePassword;
-            databaseNameTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databaseName;
+            databaseIPTextBox.Text = Settings.Default.databaseIP;
+            databasePortTextBox.Text = Settings.Default.databasePort;
+            databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
+            databasePasswordTextBox.Text = Settings.Default.databasePassword;
+            databaseNameTextBox.Text = Settings.Default.databaseName;
         }
 
         private void minimizeHomeCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -128,8 +128,8 @@ namespace FRC_Scouting_V2
         {
             if (databaseIPTextBox.Text != (""))
             {
-                FRC_Scouting_V2.Properties.Settings.Default.databaseIP = databaseIPTextBox.Text;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.databaseIP = databaseIPTextBox.Text;
+                Settings.Default.Save();
             }
         }
 
@@ -137,8 +137,8 @@ namespace FRC_Scouting_V2
         {
             if (databasePortTextBox.Text != (""))
             {
-                FRC_Scouting_V2.Properties.Settings.Default.databasePort = databasePortTextBox.Text;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.databasePort = databasePortTextBox.Text;
+                Settings.Default.Save();
             }
         }
 
@@ -146,8 +146,8 @@ namespace FRC_Scouting_V2
         {
             if (databaseUsernameTextBox.Text != (""))
             {
-                FRC_Scouting_V2.Properties.Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
+                Settings.Default.Save();
             }
         }
 
@@ -155,8 +155,8 @@ namespace FRC_Scouting_V2
         {
             if (databasePasswordTextBox.Text != (""))
             {
-                FRC_Scouting_V2.Properties.Settings.Default.databasePassword = databasePasswordTextBox.Text;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.databasePassword = databasePasswordTextBox.Text;
+                Settings.Default.Save();
             }
         }
 
@@ -164,8 +164,8 @@ namespace FRC_Scouting_V2
         {
             if (databaseNameTextBox.Text != (""))
             {
-                FRC_Scouting_V2.Properties.Settings.Default.databaseName = databaseNameTextBox.Text;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.databaseName = databaseNameTextBox.Text;
+                Settings.Default.Save();
             }
         }
     }

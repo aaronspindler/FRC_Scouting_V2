@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -228,12 +227,13 @@ namespace FRC_Scouting_V2
 
             //MySQL Database
             MySqlConnection conn;
-            var databaseIP = FRC_Scouting_V2.Properties.Settings.Default.databaseIP;
-            var databasePort = FRC_Scouting_V2.Properties.Settings.Default.databasePort;
-            var databaseName = FRC_Scouting_V2.Properties.Settings.Default.databaseName;
-            var databaseUsername = FRC_Scouting_V2.Properties.Settings.Default.databaseUsername;
-            var databasePassword = FRC_Scouting_V2.Properties.Settings.Default.databasePassword;
-            var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            string databaseIP = Settings.Default.databaseIP;
+            string databasePort = Settings.Default.databasePort;
+            string databaseName = Settings.Default.databaseName;
+            string databaseUsername = Settings.Default.databaseUsername;
+            string databasePassword = Settings.Default.databasePassword;
+            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {
                 conn = new MySqlConnection {ConnectionString = mySqlConnectionString};

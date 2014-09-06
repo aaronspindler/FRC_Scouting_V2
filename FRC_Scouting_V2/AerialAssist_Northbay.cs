@@ -303,7 +303,6 @@ namespace FRC_Scouting_V2
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
