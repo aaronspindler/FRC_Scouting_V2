@@ -165,5 +165,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["currentEventName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("FRC_Scouting_Test")]
+        public string databaseName {
+            get {
+                return ((string)(this["databaseName"]));
+            }
+            set {
+                this["databaseName"] = value;
+            }
+        }
     }
 }

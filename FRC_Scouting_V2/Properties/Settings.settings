@@ -43,5 +43,8 @@
     <Setting Name="currentEventName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>
     </Setting>
+    <Setting Name="databaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FRC_Scouting_Test</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

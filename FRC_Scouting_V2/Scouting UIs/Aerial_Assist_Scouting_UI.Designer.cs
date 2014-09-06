@@ -70,8 +70,8 @@
             this.missedPickupsTallyDisplay = new System.Windows.Forms.Label();
             this.startingLocationPanel = new System.Windows.Forms.Panel();
             this.startingLocationLabel = new System.Windows.Forms.Label();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.clearAndAdvanceButton = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();

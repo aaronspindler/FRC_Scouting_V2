@@ -75,6 +75,7 @@ namespace FRC_Scouting_V2
             databasePortTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databasePort;
             databaseUsernameTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databaseUsername;
             databasePasswordTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databasePassword;
+            databaseNameTextBox.Text = FRC_Scouting_V2.Properties.Settings.Default.databaseName;
         }
 
         private void minimizeHomeCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -155,6 +156,15 @@ namespace FRC_Scouting_V2
             if (databasePasswordTextBox.Text != (""))
             {
                 FRC_Scouting_V2.Properties.Settings.Default.databasePassword = databasePasswordTextBox.Text;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
+        }
+
+        private void databaseNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (databaseNameTextBox.Text != (""))
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.databaseName = databaseNameTextBox.Text;
                 FRC_Scouting_V2.Properties.Settings.Default.Save();
             }
         }
