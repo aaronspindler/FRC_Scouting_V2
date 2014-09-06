@@ -71,6 +71,7 @@
             this.startingLocationPanel = new System.Windows.Forms.Panel();
             this.startingLocationLabel = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.clearAndAdvanceButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +99,7 @@
             this.tableLayoutPanel1.Controls.Add(this.teamColourComboBox, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.matchNumberLabel, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.matchNumberNumericUpDown, 11, 0);
-            this.tableLayoutPanel1.Controls.Add(this.submitDataButton, 5, 15);
+            this.tableLayoutPanel1.Controls.Add(this.submitDataButton, 0, 15);
             this.tableLayoutPanel1.Controls.Add(this.autonomousHighLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.autonomousLowLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.controlledHighLabel, 0, 4);
@@ -135,6 +136,7 @@
             this.tableLayoutPanel1.Controls.Add(this.missedPickupsTallyDisplay, 6, 10);
             this.tableLayoutPanel1.Controls.Add(this.startingLocationPanel, 9, 2);
             this.tableLayoutPanel1.Controls.Add(this.startingLocationLabel, 9, 1);
+            this.tableLayoutPanel1.Controls.Add(this.clearAndAdvanceButton, 8, 15);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -280,11 +282,11 @@
             // 
             // submitDataButton
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.submitDataButton, 6);
+            this.tableLayoutPanel1.SetColumnSpan(this.submitDataButton, 8);
             this.submitDataButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.submitDataButton.Location = new System.Drawing.Point(173, 408);
+            this.submitDataButton.Location = new System.Drawing.Point(3, 408);
             this.submitDataButton.Name = "submitDataButton";
-            this.submitDataButton.Size = new System.Drawing.Size(198, 26);
+            this.submitDataButton.Size = new System.Drawing.Size(266, 26);
             this.submitDataButton.TabIndex = 99;
             this.submitDataButton.Text = "Submit Data";
             this.submitDataButton.UseVisualStyleBackColor = true;
@@ -728,6 +730,18 @@
             this.startingLocationLabel.Text = "Starting Location";
             this.startingLocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // clearAndAdvanceButton
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.clearAndAdvanceButton, 8);
+            this.clearAndAdvanceButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearAndAdvanceButton.Location = new System.Drawing.Point(275, 408);
+            this.clearAndAdvanceButton.Name = "clearAndAdvanceButton";
+            this.clearAndAdvanceButton.Size = new System.Drawing.Size(266, 26);
+            this.clearAndAdvanceButton.TabIndex = 131;
+            this.clearAndAdvanceButton.Text = "Clear Data and Go To Next Match";
+            this.clearAndAdvanceButton.UseVisualStyleBackColor = true;
+            this.clearAndAdvanceButton.Click += new System.EventHandler(this.clearAndAdvanceButton_Click);
+            // 
             // Aerial_Assist_Scouting_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -788,5 +802,6 @@
         private System.Windows.Forms.Panel startingLocationPanel;
         private System.Windows.Forms.Label startingLocationLabel;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.Button clearAndAdvanceButton;
     }
 }

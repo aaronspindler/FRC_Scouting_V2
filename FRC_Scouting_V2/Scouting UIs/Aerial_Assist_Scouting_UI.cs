@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -250,6 +251,24 @@ namespace FRC_Scouting_V2
                     teamColour = ("Red");
                     break;
             }
+        }
+
+        private void clearAndAdvanceButton_Click(object sender, EventArgs e)
+        {
+            autoHighTally = 0;
+            autoLowTally = 0;
+            autoPickupTally = 0;
+            controlledHighTally = 0;
+            controlledLowTally = 0;
+            controlledPickupTally = 0;
+            hotGoalTally = 0;
+            matchNumber = matchNumber + 1;
+            matchNumberNumericUpDown.Value = matchNumber;
+            missedPickupsTally = 0;
+            xStarting = 0;
+            yStarting = 0;
+            UpdateLabels();
+            BlankPanel();
         }
     }
 }
