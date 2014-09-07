@@ -1,5 +1,3 @@
-C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\Local_Database.mdf
-C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\Local_Database_log.ldf
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\FRC_Scouting_V2.exe.config
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\FRC_Scouting_V2.exe
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\FRC_Scouting_V2.pdb

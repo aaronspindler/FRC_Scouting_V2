@@ -111,11 +111,6 @@
     <Compile Include="License.Designer.cs">
       <DependentUpon>License.cs</DependentUpon>
     </Compile>
-    <Compile Include="Local_Database_DataSet.Designer.cs">
-      <DependentUpon>Local_Database_DataSet.xsd</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="MainSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,17 +191,6 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
-    <None Include="Local_Database_DataSet.xsc">
-      <DependentUpon>Local_Database_DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Local_Database_DataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Local_Database_DataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Local_Database_DataSet.xss">
-      <DependentUpon>Local_Database_DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -227,13 +211,6 @@
     <Content Include="bin\Debug\FRC_Scouting_V2.exe" />
     <Content Include="bin\Debug\FRC_Scouting_V2.pdb" />
     <Content Include="FRC_Logo_ICO.ico" />
-    <Content Include="Local_Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Local_Database_log.ldf">
-      <DependentUpon>Local_Database.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Resource Include="Resources\twg_gold_northbay_2014.png" />
     <Resource Include="Resources\stantec_bronze_northbay_2014.png" />
     <Resource Include="Resources\sms_inkind_northbay_2014.jpg" />
