@@ -21,5 +21,45 @@ namespace FRC_Scouting_V2
             var aaRahChaChaEventInfo = new AerialAssist_RahChaCha_Information();
             aaRahChaChaEventInfo.Show();
         }
+
+        private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
+        {
+            //Adding teams to TeamSelector Control
+            teamSelector.Items.Add("20 | The Rocketeers");
+            teamSelector.Items.Add("48 | Delphi E.L.I.T.E.");
+            teamSelector.Items.Add("174 | Arctic Warriors");
+            teamSelector.Items.Add("188 | Woburn Robotics");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add(""); 
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+            teamSelector.Items.Add("");
+        }
     }
 }
