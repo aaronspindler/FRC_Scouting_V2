@@ -213,6 +213,16 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RahChaCha_2014_Logo {
+            get {
+                object obj = ResourceManager.GetObject("RahChaCha_2014_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap redpath_platinum_northbay_2014 {
             get {
                 object obj = ResourceManager.GetObject("redpath_platinum_northbay_2014", resourceCulture);

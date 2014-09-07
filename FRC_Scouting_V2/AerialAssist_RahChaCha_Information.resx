@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="eventDescriptionLabel.Text" xml:space="preserve">
+    <value>The Rah Cha Cha Ruckus (The Ruckus) is an off-season FIRST Robotics Competition event, loosely based on a Halloween theme.  It is a community effort, put together and sponsored by members of several Rochester and Western New York-area FIRST teams. The event is an annual success due to the dedicated efforts of our many volunteers!</value>
+  </data>
 </root>

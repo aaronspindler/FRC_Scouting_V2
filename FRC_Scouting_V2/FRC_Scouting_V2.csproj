@@ -211,6 +211,7 @@
     <Content Include="bin\Debug\FRC_Scouting_V2.exe" />
     <Content Include="bin\Debug\FRC_Scouting_V2.pdb" />
     <Content Include="FRC_Logo_ICO.ico" />
+    <None Include="Resources\RahChaCha_2014_Logo.png" />
     <Resource Include="Resources\twg_gold_northbay_2014.png" />
     <Resource Include="Resources\stantec_bronze_northbay_2014.png" />
     <Resource Include="Resources\sms_inkind_northbay_2014.jpg" />
