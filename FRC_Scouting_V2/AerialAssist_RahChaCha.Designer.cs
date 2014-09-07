@@ -201,6 +201,7 @@
             this.teamSelector.Name = "teamSelector";
             this.teamSelector.Size = new System.Drawing.Size(302, 21);
             this.teamSelector.TabIndex = 1;
+            this.teamSelector.Text = "                                       Team Selector";
             this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
             // 
             // menuStrip1
