@@ -67,5 +67,220 @@ namespace FRC_Scouting_V2
             teamSelector.Items.Add("4930 | Electric Mayhem");
             teamSelector.Items.Add("5254 | Robot Raiders");
         }
+
+        private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (teamSelector.SelectedIndex == 0)
+            {
+                
+            }
+            else
+            {
+                if (teamSelector.SelectedIndex == 1)
+                {
+
+                }
+                else
+                {
+                    if (teamSelector.SelectedIndex == 2)
+                    {
+
+                    }
+                    else
+                    {
+                        if (teamSelector.SelectedIndex == 3)
+                        {
+
+                        }
+                        else
+                        {
+                            if (teamSelector.SelectedIndex == 4)
+                            {
+
+                            }
+                            else
+                            {
+                                if (teamSelector.SelectedIndex == 5)
+                                {
+
+                                }
+                                else
+                                {
+                                    if (teamSelector.SelectedIndex == 6)
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        if (teamSelector.SelectedIndex == 7)
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            if (teamSelector.SelectedIndex == 8)
+                                            {
+
+                                            }
+                                            else
+                                            {
+                                                if (teamSelector.SelectedIndex == 9)
+                                                {
+
+                                                }
+                                                else
+                                                {
+                                                    if (teamSelector.SelectedIndex == 10)
+                                                    {
+
+                                                    }
+                                                    else
+                                                    {
+                                                        if (teamSelector.SelectedIndex == 11)
+                                                        {
+
+                                                        }
+                                                        else
+                                                        {
+                                                            if (teamSelector.SelectedIndex == 12)
+                                                            {
+
+                                                            }
+                                                            else
+                                                            {
+                                                                if (teamSelector.SelectedIndex == 13)
+                                                                {
+
+                                                                }
+                                                                else
+                                                                {
+                                                                    if (teamSelector.SelectedIndex == 14)
+                                                                    {
+
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        if (teamSelector.SelectedIndex == 15)
+                                                                        {
+
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            if (teamSelector.SelectedIndex == 16)
+                                                                            {
+
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                if (teamSelector.SelectedIndex == 17)
+                                                                                {
+
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    if (teamSelector.SelectedIndex == 18)
+                                                                                    {
+
+                                                                                    }
+                                                                                    else
+                                                                                    {
+                                                                                        if (teamSelector.SelectedIndex == 19)
+                                                                                        {
+
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                            if (teamSelector.SelectedIndex == 20)
+                                                                                            {
+
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                if (teamSelector.SelectedIndex == 21)
+                                                                                                {
+
+                                                                                                }
+                                                                                                else
+                                                                                                {
+                                                                                                    if (teamSelector.SelectedIndex == 22)
+                                                                                                    {
+
+                                                                                                    }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        if (teamSelector.SelectedIndex == 23)
+                                                                                                        {
+
+                                                                                                        }
+                                                                                                        else
+                                                                                                        {
+                                                                                                            if (teamSelector.SelectedIndex == 24)
+                                                                                                            {
+
+                                                                                                            }
+                                                                                                            else
+                                                                                                            {
+                                                                                                                if (teamSelector.SelectedIndex == 25)
+                                                                                                                {
+
+                                                                                                                }
+                                                                                                                else
+                                                                                                                {
+                                                                                                                    if (teamSelector.SelectedIndex == 26)
+                                                                                                                    {
+
+                                                                                                                    }
+                                                                                                                    else
+                                                                                                                    {
+                                                                                                                        if (teamSelector.SelectedIndex == 27)
+                                                                                                                        {
+
+                                                                                                                        }
+                                                                                                                        else
+                                                                                                                        {
+                                                                                                                            if (teamSelector.SelectedIndex == 28)
+                                                                                                                            {
+
+                                                                                                                            }
+                                                                                                                            else
+                                                                                                                            {
+                                                                                                                                if (teamSelector.SelectedIndex == 29)
+                                                                                                                                {
+
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                        }
+                                                                                                                        
+                                                                                                                    }
+                                                                                                                    
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

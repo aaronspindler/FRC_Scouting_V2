@@ -21,6 +21,7 @@ namespace FRC_Scouting_V2
             return time;
         }
 
+        //This is here because I may need it at some point. No point in removing it.
         public string MakeRandomPassword(int passwordType, int passwordLength)
         {
             //Password Types
