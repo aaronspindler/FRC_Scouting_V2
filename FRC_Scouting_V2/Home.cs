@@ -23,10 +23,10 @@
 //SOFTWARE.
 //===============================================================================
 
-using System;
-using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using FRC_Scouting_V2.Test_Objects;
+using System;
+using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
 {

@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -37,6 +37,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private int autoHighTally;
+
         private int autoLowTally;
         private int autoPickupTally;
         private int controlledHighTally;
@@ -261,7 +262,7 @@ namespace FRC_Scouting_V2
                 databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {
-                conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
                 conn.Open();
 
                 conn.Close();
@@ -279,6 +280,7 @@ namespace FRC_Scouting_V2
                 case 0:
                     teamColour = ("Blue");
                     break;
+
                 case 1:
                     teamColour = ("Red");
                     break;

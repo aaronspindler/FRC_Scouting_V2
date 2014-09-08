@@ -38,6 +38,7 @@ namespace FRC_Scouting_V2
 
         //Variables
         private string teamName = ("");
+
         private int teamNumber = 0;
         private string teamLocation = ("");
         private int rookieYear = 0;
@@ -99,7 +100,6 @@ namespace FRC_Scouting_V2
             teamSelector.Items.Add("5254 | Robot Raiders");
         }
 
-
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (teamSelector.SelectedIndex)
@@ -110,170 +110,199 @@ namespace FRC_Scouting_V2
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 1:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 2:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 3:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 4:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 5:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 6:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 7:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 8:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 9:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 10:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 11:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 12:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 13:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 14:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 15:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 16:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 17:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 18:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 19:
                     break;
+
                 case 20:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 21:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 22:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 23:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 24:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 25:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 26:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 27:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 28:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
                     break;
+
                 case 29:
                     teamName = ("");
                     teamNumber = 0;
