@@ -36,6 +36,8 @@ namespace FRC_Scouting_V2
             InitializeComponent();
         }
 
+        //Variables
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
