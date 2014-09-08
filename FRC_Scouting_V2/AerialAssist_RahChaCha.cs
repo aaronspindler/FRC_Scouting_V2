@@ -102,330 +102,184 @@ namespace FRC_Scouting_V2
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (teamSelector.SelectedIndex == 0)
+            switch (teamSelector.SelectedIndex)
             {
-                teamName = ("");
-                teamNumber = 0;
-                teamLocation = ("");
-                rookieYear = 0;
-            }
-            else
-            {
-                if (teamSelector.SelectedIndex == 1)
-                {
+                case 0:
                     teamName = ("");
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                }
-                else
-                {
-                    if (teamSelector.SelectedIndex == 2)
-                    {
-                        teamName = ("");
-                        teamNumber = 0;
-                        teamLocation = ("");
-                        rookieYear = 0;
-                    }
-                    else
-                    {
-                        if (teamSelector.SelectedIndex == 3)
-                        {
-                            teamName = ("");
-                            teamNumber = 0;
-                            teamLocation = ("");
-                            rookieYear = 0;
-                        }
-                        else
-                        {
-                            if (teamSelector.SelectedIndex == 4)
-                            {
-                                teamName = ("");
-                                teamNumber = 0;
-                                teamLocation = ("");
-                                rookieYear = 0;
-                            }
-                            else
-                            {
-                                if (teamSelector.SelectedIndex == 5)
-                                {
-                                    teamName = ("");
-                                    teamNumber = 0;
-                                    teamLocation = ("");
-                                    rookieYear = 0;
-                                }
-                                else
-                                {
-                                    if (teamSelector.SelectedIndex == 6)
-                                    {
-                                        teamName = ("");
-                                        teamNumber = 0;
-                                        teamLocation = ("");
-                                        rookieYear = 0;
-                                    }
-                                    else
-                                    {
-                                        if (teamSelector.SelectedIndex == 7)
-                                        {
-                                            teamName = ("");
-                                            teamNumber = 0;
-                                            teamLocation = ("");
-                                            rookieYear = 0;
-                                        }
-                                        else
-                                        {
-                                            if (teamSelector.SelectedIndex == 8)
-                                            {
-                                                teamName = ("");
-                                                teamNumber = 0;
-                                                teamLocation = ("");
-                                                rookieYear = 0;
-                                            }
-                                            else
-                                            {
-                                                if (teamSelector.SelectedIndex == 9)
-                                                {
-                                                    teamName = ("");
-                                                    teamNumber = 0;
-                                                    teamLocation = ("");
-                                                    rookieYear = 0;
-                                                }
-                                                else
-                                                {
-                                                    if (teamSelector.SelectedIndex == 10)
-                                                    {
-                                                        teamName = ("");
-                                                        teamNumber = 0;
-                                                        teamLocation = ("");
-                                                        rookieYear = 0;
-                                                    }
-                                                    else
-                                                    {
-                                                        if (teamSelector.SelectedIndex == 11)
-                                                        {
-                                                            teamName = ("");
-                                                            teamNumber = 0;
-                                                            teamLocation = ("");
-                                                            rookieYear = 0;
-                                                        }
-                                                        else
-                                                        {
-                                                            if (teamSelector.SelectedIndex == 12)
-                                                            {
-                                                                teamName = ("");
-                                                                teamNumber = 0;
-                                                                teamLocation = ("");
-                                                                rookieYear = 0;
-                                                            }
-                                                            else
-                                                            {
-                                                                if (teamSelector.SelectedIndex == 13)
-                                                                {
-                                                                    teamName = ("");
-                                                                    teamNumber = 0;
-                                                                    teamLocation = ("");
-                                                                    rookieYear = 0;
-                                                                }
-                                                                else
-                                                                {
-                                                                    if (teamSelector.SelectedIndex == 14)
-                                                                    {
-                                                                        teamName = ("");
-                                                                        teamNumber = 0;
-                                                                        teamLocation = ("");
-                                                                        rookieYear = 0;
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        if (teamSelector.SelectedIndex == 15)
-                                                                        {
-                                                                            teamName = ("");
-                                                                            teamNumber = 0;
-                                                                            teamLocation = ("");
-                                                                            rookieYear = 0;
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                            if (teamSelector.SelectedIndex == 16)
-                                                                            {
-                                                                                teamName = ("");
-                                                                                teamNumber = 0;
-                                                                                teamLocation = ("");
-                                                                                rookieYear = 0;
-                                                                            }
-                                                                            else
-                                                                            {
-                                                                                if (teamSelector.SelectedIndex == 17)
-                                                                                {
-                                                                                    teamName = ("");
-                                                                                    teamNumber = 0;
-                                                                                    teamLocation = ("");
-                                                                                    rookieYear = 0;
-                                                                                }
-                                                                                else
-                                                                                {
-                                                                                    if (teamSelector.SelectedIndex == 18)
-                                                                                    {
-                                                                                        teamName = ("");
-                                                                                        teamNumber = 0;
-                                                                                        teamLocation = ("");
-                                                                                        rookieYear = 0;
-                                                                                    }
-                                                                                    else
-                                                                                    {
-                                                                                        if (teamSelector.SelectedIndex == 19)
-                                                                                        {
-                                                                                        }
-                                                                                        else
-                                                                                        {
-                                                                                            if (
-                                                                                                teamSelector
-                                                                                                    .SelectedIndex == 20)
-                                                                                            {
-                                                                                                teamName = ("");
-                                                                                                teamNumber = 0;
-                                                                                                teamLocation = ("");
-                                                                                                rookieYear = 0;
-                                                                                            }
-                                                                                            else
-                                                                                            {
-                                                                                                if (
-                                                                                                    teamSelector
-                                                                                                        .SelectedIndex ==
-                                                                                                    21)
-                                                                                                {
-                                                                                                    teamName = ("");
-                                                                                                    teamNumber = 0;
-                                                                                                    teamLocation = ("");
-                                                                                                    rookieYear = 0;
-                                                                                                }
-                                                                                                else
-                                                                                                {
-                                                                                                    if (
-                                                                                                        teamSelector
-                                                                                                            .SelectedIndex ==
-                                                                                                        22)
-                                                                                                    {
-                                                                                                        teamName = ("");
-                                                                                                        teamNumber = 0;
-                                                                                                        teamLocation = ("");
-                                                                                                        rookieYear = 0;
-                                                                                                    }
-                                                                                                    else
-                                                                                                    {
-                                                                                                        if (
-                                                                                                            teamSelector
-                                                                                                                .SelectedIndex ==
-                                                                                                            23)
-                                                                                                        {
-                                                                                                            teamName = ("");
-                                                                                                            teamNumber = 0;
-                                                                                                            teamLocation = ("");
-                                                                                                            rookieYear = 0;
-                                                                                                        }
-                                                                                                        else
-                                                                                                        {
-                                                                                                            if (
-                                                                                                                teamSelector
-                                                                                                                    .SelectedIndex ==
-                                                                                                                24)
-                                                                                                            {
-                                                                                                                teamName = ("");
-                                                                                                                teamNumber = 0;
-                                                                                                                teamLocation = ("");
-                                                                                                                rookieYear = 0;
-                                                                                                            }
-                                                                                                            else
-                                                                                                            {
-                                                                                                                if (
-                                                                                                                    teamSelector
-                                                                                                                        .SelectedIndex ==
-                                                                                                                    25)
-                                                                                                                {
-                                                                                                                    teamName = ("");
-                                                                                                                    teamNumber = 0;
-                                                                                                                    teamLocation = ("");
-                                                                                                                    rookieYear = 0;
-                                                                                                                }
-                                                                                                                else
-                                                                                                                {
-                                                                                                                    if (
-                                                                                                                        teamSelector
-                                                                                                                            .SelectedIndex ==
-                                                                                                                        26)
-                                                                                                                    {
-                                                                                                                        teamName = ("");
-                                                                                                                        teamNumber = 0;
-                                                                                                                        teamLocation = ("");
-                                                                                                                        rookieYear = 0;
-                                                                                                                    }
-                                                                                                                    else
-                                                                                                                    {
-                                                                                                                        if
-                                                                                                                            (
-                                                                                                                            teamSelector
-                                                                                                                                .SelectedIndex ==
-                                                                                                                            27)
-                                                                                                                        {
-                                                                                                                            teamName = ("");
-                                                                                                                            teamNumber = 0;
-                                                                                                                            teamLocation = ("");
-                                                                                                                            rookieYear = 0;
-                                                                                                                        }
-                                                                                                                        else
-                                                                                                                        {
-                                                                                                                            if
-                                                                                                                                (
-                                                                                                                                teamSelector
-                                                                                                                                    .SelectedIndex ==
-                                                                                                                                28)
-                                                                                                                            {
-                                                                                                                                teamName = ("");
-                                                                                                                                teamNumber = 0;
-                                                                                                                                teamLocation = ("");
-                                                                                                                                rookieYear = 0;
-                                                                                                                            }
-                                                                                                                            else
-                                                                                                                            {
-                                                                                                                                if
-                                                                                                                                    (
-                                                                                                                                    teamSelector
-                                                                                                                                        .SelectedIndex ==
-                                                                                                                                    29)
-                                                                                                                                {
-                                                                                                                                    teamName = ("");
-                                                                                                                                    teamNumber = 0;
-                                                                                                                                    teamLocation = ("");
-                                                                                                                                    rookieYear = 0;
-                                                                                                                                }
-                                                                                                                            }
-                                                                                                                        }
-                                                                                                                    }
-                                                                                                                }
-                                                                                                            }
-                                                                                                        }
-                                                                                                    }
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+                    break;
+                case 1:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 2:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 3:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 4:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 5:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 6:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 7:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 8:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 9:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 10:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 11:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 12:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 13:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 14:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 15:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 16:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 17:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 18:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 19:
+                    break;
+                case 20:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 21:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 22:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 23:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 24:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 25:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 26:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 27:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 28:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
+                case 29:
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
+                    break;
             }
         }
     }
