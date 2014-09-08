@@ -104,102 +104,176 @@ namespace FRC_Scouting_V2
         {
             if (teamSelector.SelectedIndex == 0)
             {
+                teamName = ("");
+                teamNumber = 0;
+                teamLocation = ("");
+                rookieYear = 0;
             }
             else
             {
                 if (teamSelector.SelectedIndex == 1)
                 {
+                    teamName = ("");
+                    teamNumber = 0;
+                    teamLocation = ("");
+                    rookieYear = 0;
                 }
                 else
                 {
                     if (teamSelector.SelectedIndex == 2)
                     {
+                        teamName = ("");
+                        teamNumber = 0;
+                        teamLocation = ("");
+                        rookieYear = 0;
                     }
                     else
                     {
                         if (teamSelector.SelectedIndex == 3)
                         {
+                            teamName = ("");
+                            teamNumber = 0;
+                            teamLocation = ("");
+                            rookieYear = 0;
                         }
                         else
                         {
                             if (teamSelector.SelectedIndex == 4)
                             {
+                                teamName = ("");
+                                teamNumber = 0;
+                                teamLocation = ("");
+                                rookieYear = 0;
                             }
                             else
                             {
                                 if (teamSelector.SelectedIndex == 5)
                                 {
+                                    teamName = ("");
+                                    teamNumber = 0;
+                                    teamLocation = ("");
+                                    rookieYear = 0;
                                 }
                                 else
                                 {
                                     if (teamSelector.SelectedIndex == 6)
                                     {
+                                        teamName = ("");
+                                        teamNumber = 0;
+                                        teamLocation = ("");
+                                        rookieYear = 0;
                                     }
                                     else
                                     {
                                         if (teamSelector.SelectedIndex == 7)
                                         {
+                                            teamName = ("");
+                                            teamNumber = 0;
+                                            teamLocation = ("");
+                                            rookieYear = 0;
                                         }
                                         else
                                         {
                                             if (teamSelector.SelectedIndex == 8)
                                             {
+                                                teamName = ("");
+                                                teamNumber = 0;
+                                                teamLocation = ("");
+                                                rookieYear = 0;
                                             }
                                             else
                                             {
                                                 if (teamSelector.SelectedIndex == 9)
                                                 {
+                                                    teamName = ("");
+                                                    teamNumber = 0;
+                                                    teamLocation = ("");
+                                                    rookieYear = 0;
                                                 }
                                                 else
                                                 {
                                                     if (teamSelector.SelectedIndex == 10)
                                                     {
+                                                        teamName = ("");
+                                                        teamNumber = 0;
+                                                        teamLocation = ("");
+                                                        rookieYear = 0;
                                                     }
                                                     else
                                                     {
                                                         if (teamSelector.SelectedIndex == 11)
                                                         {
+                                                            teamName = ("");
+                                                            teamNumber = 0;
+                                                            teamLocation = ("");
+                                                            rookieYear = 0;
                                                         }
                                                         else
                                                         {
                                                             if (teamSelector.SelectedIndex == 12)
                                                             {
+                                                                teamName = ("");
+                                                                teamNumber = 0;
+                                                                teamLocation = ("");
+                                                                rookieYear = 0;
                                                             }
                                                             else
                                                             {
                                                                 if (teamSelector.SelectedIndex == 13)
                                                                 {
+                                                                    teamName = ("");
+                                                                    teamNumber = 0;
+                                                                    teamLocation = ("");
+                                                                    rookieYear = 0;
                                                                 }
                                                                 else
                                                                 {
                                                                     if (teamSelector.SelectedIndex == 14)
                                                                     {
+                                                                        teamName = ("");
+                                                                        teamNumber = 0;
+                                                                        teamLocation = ("");
+                                                                        rookieYear = 0;
                                                                     }
                                                                     else
                                                                     {
                                                                         if (teamSelector.SelectedIndex == 15)
                                                                         {
+                                                                            teamName = ("");
+                                                                            teamNumber = 0;
+                                                                            teamLocation = ("");
+                                                                            rookieYear = 0;
                                                                         }
                                                                         else
                                                                         {
                                                                             if (teamSelector.SelectedIndex == 16)
                                                                             {
+                                                                                teamName = ("");
+                                                                                teamNumber = 0;
+                                                                                teamLocation = ("");
+                                                                                rookieYear = 0;
                                                                             }
                                                                             else
                                                                             {
                                                                                 if (teamSelector.SelectedIndex == 17)
                                                                                 {
+                                                                                    teamName = ("");
+                                                                                    teamNumber = 0;
+                                                                                    teamLocation = ("");
+                                                                                    rookieYear = 0;
                                                                                 }
                                                                                 else
                                                                                 {
                                                                                     if (teamSelector.SelectedIndex == 18)
                                                                                     {
+                                                                                        teamName = ("");
+                                                                                        teamNumber = 0;
+                                                                                        teamLocation = ("");
+                                                                                        rookieYear = 0;
                                                                                     }
                                                                                     else
                                                                                     {
-                                                                                        if (
-                                                                                            teamSelector.SelectedIndex ==
-                                                                                            19)
+                                                                                        if (teamSelector.SelectedIndex == 19)
                                                                                         {
                                                                                         }
                                                                                         else
@@ -208,6 +282,10 @@ namespace FRC_Scouting_V2
                                                                                                 teamSelector
                                                                                                     .SelectedIndex == 20)
                                                                                             {
+                                                                                                teamName = ("");
+                                                                                                teamNumber = 0;
+                                                                                                teamLocation = ("");
+                                                                                                rookieYear = 0;
                                                                                             }
                                                                                             else
                                                                                             {
@@ -216,6 +294,10 @@ namespace FRC_Scouting_V2
                                                                                                         .SelectedIndex ==
                                                                                                     21)
                                                                                                 {
+                                                                                                    teamName = ("");
+                                                                                                    teamNumber = 0;
+                                                                                                    teamLocation = ("");
+                                                                                                    rookieYear = 0;
                                                                                                 }
                                                                                                 else
                                                                                                 {
@@ -224,6 +306,10 @@ namespace FRC_Scouting_V2
                                                                                                             .SelectedIndex ==
                                                                                                         22)
                                                                                                     {
+                                                                                                        teamName = ("");
+                                                                                                        teamNumber = 0;
+                                                                                                        teamLocation = ("");
+                                                                                                        rookieYear = 0;
                                                                                                     }
                                                                                                     else
                                                                                                     {
@@ -232,6 +318,10 @@ namespace FRC_Scouting_V2
                                                                                                                 .SelectedIndex ==
                                                                                                             23)
                                                                                                         {
+                                                                                                            teamName = ("");
+                                                                                                            teamNumber = 0;
+                                                                                                            teamLocation = ("");
+                                                                                                            rookieYear = 0;
                                                                                                         }
                                                                                                         else
                                                                                                         {
@@ -240,6 +330,10 @@ namespace FRC_Scouting_V2
                                                                                                                     .SelectedIndex ==
                                                                                                                 24)
                                                                                                             {
+                                                                                                                teamName = ("");
+                                                                                                                teamNumber = 0;
+                                                                                                                teamLocation = ("");
+                                                                                                                rookieYear = 0;
                                                                                                             }
                                                                                                             else
                                                                                                             {
@@ -248,6 +342,10 @@ namespace FRC_Scouting_V2
                                                                                                                         .SelectedIndex ==
                                                                                                                     25)
                                                                                                                 {
+                                                                                                                    teamName = ("");
+                                                                                                                    teamNumber = 0;
+                                                                                                                    teamLocation = ("");
+                                                                                                                    rookieYear = 0;
                                                                                                                 }
                                                                                                                 else
                                                                                                                 {
@@ -256,6 +354,10 @@ namespace FRC_Scouting_V2
                                                                                                                             .SelectedIndex ==
                                                                                                                         26)
                                                                                                                     {
+                                                                                                                        teamName = ("");
+                                                                                                                        teamNumber = 0;
+                                                                                                                        teamLocation = ("");
+                                                                                                                        rookieYear = 0;
                                                                                                                     }
                                                                                                                     else
                                                                                                                     {
@@ -265,6 +367,10 @@ namespace FRC_Scouting_V2
                                                                                                                                 .SelectedIndex ==
                                                                                                                             27)
                                                                                                                         {
+                                                                                                                            teamName = ("");
+                                                                                                                            teamNumber = 0;
+                                                                                                                            teamLocation = ("");
+                                                                                                                            rookieYear = 0;
                                                                                                                         }
                                                                                                                         else
                                                                                                                         {
@@ -274,6 +380,10 @@ namespace FRC_Scouting_V2
                                                                                                                                     .SelectedIndex ==
                                                                                                                                 28)
                                                                                                                             {
+                                                                                                                                teamName = ("");
+                                                                                                                                teamNumber = 0;
+                                                                                                                                teamLocation = ("");
+                                                                                                                                rookieYear = 0;
                                                                                                                             }
                                                                                                                             else
                                                                                                                             {
@@ -283,6 +393,10 @@ namespace FRC_Scouting_V2
                                                                                                                                         .SelectedIndex ==
                                                                                                                                     29)
                                                                                                                                 {
+                                                                                                                                    teamName = ("");
+                                                                                                                                    teamNumber = 0;
+                                                                                                                                    teamLocation = ("");
+                                                                                                                                    rookieYear = 0;
                                                                                                                                 }
                                                                                                                             }
                                                                                                                         }
