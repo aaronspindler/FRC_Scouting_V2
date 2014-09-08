@@ -55,7 +55,7 @@
     </Reference>
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.8.3\Assemblies\v4.5\MySql.Data.dll</HintPath>
+      <HintPath>.\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -211,6 +211,9 @@
     <Content Include="bin\Debug\FRC_Scouting_V2.exe" />
     <Content Include="bin\Debug\FRC_Scouting_V2.pdb" />
     <Content Include="FRC_Logo_ICO.ico" />
+    <Content Include="MySql.Data.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\RahChaCha_2014_Logo.png" />
     <Resource Include="Resources\twg_gold_northbay_2014.png" />
     <Resource Include="Resources\stantec_bronze_northbay_2014.png" />
