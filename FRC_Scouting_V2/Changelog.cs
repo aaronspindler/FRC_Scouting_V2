@@ -22,6 +22,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 namespace FRC_Scouting_V2
 {
     public partial class Changelog : GeneralFormTemplate.GeneralFormTemplate

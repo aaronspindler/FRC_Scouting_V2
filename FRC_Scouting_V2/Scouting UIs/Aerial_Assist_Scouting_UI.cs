@@ -1,5 +1,4 @@
-﻿
-//*********************************License***************************************
+﻿//*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
 
@@ -23,6 +22,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Drawing;
 using System.IO;
@@ -252,12 +252,12 @@ namespace FRC_Scouting_V2
 
             //MySQL Database
             MySqlConnection conn;
-            var databaseIP = Settings.Default.databaseIP;
-            var databasePort = Settings.Default.databasePort;
-            var databaseName = Settings.Default.databaseName;
-            var databaseUsername = Settings.Default.databaseUsername;
-            var databasePassword = Settings.Default.databasePassword;
-            var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+            string databaseIP = Settings.Default.databaseIP;
+            string databasePort = Settings.Default.databasePort;
+            string databaseName = Settings.Default.databaseName;
+            string databaseUsername = Settings.Default.databaseUsername;
+            string databasePassword = Settings.Default.databasePassword;
+            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
                 databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {

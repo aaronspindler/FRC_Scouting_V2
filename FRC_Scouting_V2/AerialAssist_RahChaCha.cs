@@ -22,6 +22,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Windows.Forms;
 
@@ -58,7 +59,7 @@ namespace FRC_Scouting_V2
             teamSelector.Items.Add("340 | G.R.R (Greater Rochester Robotics)");
             teamSelector.Items.Add("378 | The Circuit Stompers");
             teamSelector.Items.Add("578 | Red Raider Robotics");
-            teamSelector.Items.Add("610 | The Coyotes"); 
+            teamSelector.Items.Add("610 | The Coyotes");
             teamSelector.Items.Add("639 | Code Red Robotics");
             teamSelector.Items.Add("865 | Warp7");
             teamSelector.Items.Add("1114 | Simbotics");
@@ -97,189 +98,189 @@ namespace FRC_Scouting_V2
         {
             if (teamSelector.SelectedIndex == 0)
             {
-                
             }
             else
             {
                 if (teamSelector.SelectedIndex == 1)
                 {
-
                 }
                 else
                 {
                     if (teamSelector.SelectedIndex == 2)
                     {
-
                     }
                     else
                     {
                         if (teamSelector.SelectedIndex == 3)
                         {
-
                         }
                         else
                         {
                             if (teamSelector.SelectedIndex == 4)
                             {
-
                             }
                             else
                             {
                                 if (teamSelector.SelectedIndex == 5)
                                 {
-
                                 }
                                 else
                                 {
                                     if (teamSelector.SelectedIndex == 6)
                                     {
-
                                     }
                                     else
                                     {
                                         if (teamSelector.SelectedIndex == 7)
                                         {
-
                                         }
                                         else
                                         {
                                             if (teamSelector.SelectedIndex == 8)
                                             {
-
                                             }
                                             else
                                             {
                                                 if (teamSelector.SelectedIndex == 9)
                                                 {
-
                                                 }
                                                 else
                                                 {
                                                     if (teamSelector.SelectedIndex == 10)
                                                     {
-
                                                     }
                                                     else
                                                     {
                                                         if (teamSelector.SelectedIndex == 11)
                                                         {
-
                                                         }
                                                         else
                                                         {
                                                             if (teamSelector.SelectedIndex == 12)
                                                             {
-
                                                             }
                                                             else
                                                             {
                                                                 if (teamSelector.SelectedIndex == 13)
                                                                 {
-
                                                                 }
                                                                 else
                                                                 {
                                                                     if (teamSelector.SelectedIndex == 14)
                                                                     {
-
                                                                     }
                                                                     else
                                                                     {
                                                                         if (teamSelector.SelectedIndex == 15)
                                                                         {
-
                                                                         }
                                                                         else
                                                                         {
                                                                             if (teamSelector.SelectedIndex == 16)
                                                                             {
-
                                                                             }
                                                                             else
                                                                             {
                                                                                 if (teamSelector.SelectedIndex == 17)
                                                                                 {
-
                                                                                 }
                                                                                 else
                                                                                 {
                                                                                     if (teamSelector.SelectedIndex == 18)
                                                                                     {
-
                                                                                     }
                                                                                     else
                                                                                     {
-                                                                                        if (teamSelector.SelectedIndex == 19)
+                                                                                        if (
+                                                                                            teamSelector.SelectedIndex ==
+                                                                                            19)
                                                                                         {
-
                                                                                         }
                                                                                         else
                                                                                         {
-                                                                                            if (teamSelector.SelectedIndex == 20)
+                                                                                            if (
+                                                                                                teamSelector
+                                                                                                    .SelectedIndex == 20)
                                                                                             {
-
                                                                                             }
                                                                                             else
                                                                                             {
-                                                                                                if (teamSelector.SelectedIndex == 21)
+                                                                                                if (
+                                                                                                    teamSelector
+                                                                                                        .SelectedIndex ==
+                                                                                                    21)
                                                                                                 {
-
                                                                                                 }
                                                                                                 else
                                                                                                 {
-                                                                                                    if (teamSelector.SelectedIndex == 22)
+                                                                                                    if (
+                                                                                                        teamSelector
+                                                                                                            .SelectedIndex ==
+                                                                                                        22)
                                                                                                     {
-
                                                                                                     }
                                                                                                     else
                                                                                                     {
-                                                                                                        if (teamSelector.SelectedIndex == 23)
+                                                                                                        if (
+                                                                                                            teamSelector
+                                                                                                                .SelectedIndex ==
+                                                                                                            23)
                                                                                                         {
-
                                                                                                         }
                                                                                                         else
                                                                                                         {
-                                                                                                            if (teamSelector.SelectedIndex == 24)
+                                                                                                            if (
+                                                                                                                teamSelector
+                                                                                                                    .SelectedIndex ==
+                                                                                                                24)
                                                                                                             {
-
                                                                                                             }
                                                                                                             else
                                                                                                             {
-                                                                                                                if (teamSelector.SelectedIndex == 25)
+                                                                                                                if (
+                                                                                                                    teamSelector
+                                                                                                                        .SelectedIndex ==
+                                                                                                                    25)
                                                                                                                 {
-
                                                                                                                 }
                                                                                                                 else
                                                                                                                 {
-                                                                                                                    if (teamSelector.SelectedIndex == 26)
+                                                                                                                    if (
+                                                                                                                        teamSelector
+                                                                                                                            .SelectedIndex ==
+                                                                                                                        26)
                                                                                                                     {
-
                                                                                                                     }
                                                                                                                     else
                                                                                                                     {
-                                                                                                                        if (teamSelector.SelectedIndex == 27)
+                                                                                                                        if
+                                                                                                                            (
+                                                                                                                            teamSelector
+                                                                                                                                .SelectedIndex ==
+                                                                                                                            27)
                                                                                                                         {
-
                                                                                                                         }
                                                                                                                         else
                                                                                                                         {
-                                                                                                                            if (teamSelector.SelectedIndex == 28)
+                                                                                                                            if
+                                                                                                                                (
+                                                                                                                                teamSelector
+                                                                                                                                    .SelectedIndex ==
+                                                                                                                                28)
                                                                                                                             {
-
                                                                                                                             }
                                                                                                                             else
                                                                                                                             {
-                                                                                                                                if (teamSelector.SelectedIndex == 29)
+                                                                                                                                if
+                                                                                                                                    (
+                                                                                                                                    teamSelector
+                                                                                                                                        .SelectedIndex ==
+                                                                                                                                    29)
                                                                                                                                 {
-
                                                                                                                                 }
-                                                                                                                                
                                                                                                                             }
-                                                                                                                            
                                                                                                                         }
-                                                                                                                        
                                                                                                                     }
-                                                                                                                    
                                                                                                                 }
                                                                                                             }
                                                                                                         }
