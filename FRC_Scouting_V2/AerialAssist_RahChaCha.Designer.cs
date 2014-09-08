@@ -105,7 +105,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(612, 466);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(631, 538);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -118,7 +118,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 16);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(606, 435);
+            this.tabControl1.Size = new System.Drawing.Size(625, 507);
             this.tabControl1.TabIndex = 1;
             // 
             // scoutingTabPage
@@ -127,7 +127,7 @@
             this.scoutingTabPage.Location = new System.Drawing.Point(4, 22);
             this.scoutingTabPage.Name = "scoutingTabPage";
             this.scoutingTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.scoutingTabPage.Size = new System.Drawing.Size(598, 409);
+            this.scoutingTabPage.Size = new System.Drawing.Size(617, 481);
             this.scoutingTabPage.TabIndex = 0;
             this.scoutingTabPage.Text = "Scouting";
             this.scoutingTabPage.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(592, 403);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(611, 475);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // teamInformationTabPage
@@ -337,9 +337,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.teamSelector, 8);
             this.teamSelector.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamSelector.FormattingEnabled = true;
-            this.teamSelector.Location = new System.Drawing.Point(307, 3);
+            this.teamSelector.Location = new System.Drawing.Point(315, 3);
             this.teamSelector.Name = "teamSelector";
-            this.teamSelector.Size = new System.Drawing.Size(302, 21);
+            this.teamSelector.Size = new System.Drawing.Size(313, 21);
             this.teamSelector.TabIndex = 1;
             this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
             // 
@@ -354,7 +354,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(304, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(312, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -394,14 +394,14 @@
             this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
             this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
             this.tableLayoutPanel2.SetRowSpan(this.aerial_Assist_Scouting_UI1, 8);
-            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(580, 391);
+            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(599, 463);
             this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 466);
+            this.ClientSize = new System.Drawing.Size(631, 538);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
