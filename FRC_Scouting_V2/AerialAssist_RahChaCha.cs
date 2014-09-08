@@ -37,6 +37,10 @@ namespace FRC_Scouting_V2
         }
 
         //Variables
+        private string teamName = ("");
+        private int teamNumber = 0;
+        private string teamLocation = ("");
+        private int rookieYear = 0;
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
