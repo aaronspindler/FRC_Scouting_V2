@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -36,10 +36,12 @@ namespace FRC_Scouting_V2
     public partial class Aerial_Assist_Scouting_UI : UserControl
     {
         //Variables
+        private readonly UsefulSnippets us = new UsefulSnippets();
         private int autoHighTally;
 
         private int autoLowTally;
         private int autoPickupTally;
+        private string comments = ("");
         private int controlledHighTally;
         private int controlledLowTally;
         private int controlledPickupTally;
@@ -49,8 +51,6 @@ namespace FRC_Scouting_V2
         private string teamColour;
         private int xStarting;
         private int yStarting;
-        private string comments = ("");
-        UsefulSnippets us = new UsefulSnippets();
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -267,16 +267,17 @@ namespace FRC_Scouting_V2
             try
             {
                 //Creating the connection to the database and opening the connection
-                conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
-                if (conn.Ping() == true)
+                if (conn.Ping())
                 {
                     Console.WriteLine("The connection to your database has been made successfully.");
                 }
 
                 //Creating the table
-                const string query = ("CREATE TABLE `FRC_Scouting_Test` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8");
+                const string query =
+                    ("CREATE TABLE `FRC_Scouting_Test` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8");
                 var cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 //end of creating the table

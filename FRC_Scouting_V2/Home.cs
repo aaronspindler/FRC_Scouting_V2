@@ -24,7 +24,6 @@
 //===============================================================================
 
 using System;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
@@ -39,7 +38,7 @@ namespace FRC_Scouting_V2
         private const int SW_HIDE = 0;
         private const int SW_SHOW = 5;
         private readonly UsefulSnippets us = new UsefulSnippets();
-        private Boolean isConsoleVisible = false;
+        private Boolean isConsoleVisible;
 
         public Home()
         {
@@ -187,7 +186,7 @@ namespace FRC_Scouting_V2
             }
             else
             {
-                if (isConsoleVisible == true)
+                if (isConsoleVisible)
                 {
                     HideConsoleWindow();
                     isConsoleVisible = false;

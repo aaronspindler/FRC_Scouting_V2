@@ -23,11 +23,9 @@
 //SOFTWARE.
 //===============================================================================
 
-using System.IO;
-using System.Net.Mail;
-using FRC_Scouting_V2.Properties;
 using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {

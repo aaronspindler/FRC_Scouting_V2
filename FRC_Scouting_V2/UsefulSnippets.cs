@@ -23,11 +23,11 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 //@author xNovax
 
@@ -59,7 +59,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',

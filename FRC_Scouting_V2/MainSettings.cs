@@ -23,9 +23,9 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
 using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -196,7 +196,7 @@ namespace FRC_Scouting_V2
 
         private void databaseIPTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            if (Settings.Default.clickToEmptyTextBoxes)
             {
                 databaseIPTextBox.Text = ("");
             }
@@ -204,7 +204,7 @@ namespace FRC_Scouting_V2
 
         private void databasePortTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            if (Settings.Default.clickToEmptyTextBoxes)
             {
                 databasePortTextBox.Text = ("");
             }
@@ -212,7 +212,7 @@ namespace FRC_Scouting_V2
 
         private void databaseNameTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            if (Settings.Default.clickToEmptyTextBoxes)
             {
                 databaseNameTextBox.Text = ("");
             }
@@ -220,7 +220,7 @@ namespace FRC_Scouting_V2
 
         private void databaseUsernameTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            if (Settings.Default.clickToEmptyTextBoxes)
             {
                 databaseUsernameTextBox.Text = ("");
             }
@@ -228,7 +228,7 @@ namespace FRC_Scouting_V2
 
         private void databasePasswordTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            if (Settings.Default.clickToEmptyTextBoxes)
             {
                 databasePasswordTextBox.Text = ("");
             }

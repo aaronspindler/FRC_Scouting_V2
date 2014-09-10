@@ -25,22 +25,23 @@
 
 using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
     //@author xNovax
     public partial class AerialAssist_RahChaCha : Form
     {
+        //Variables
+        private int rookieYear;
+        private string teamLocation = ("");
+        private string teamName = ("");
+        private int teamNumber;
+
         public AerialAssist_RahChaCha()
         {
             InitializeComponent();
         }
-
-        //Variables
-        private string teamName = ("");
-        private int teamNumber = 0;
-        private string teamLocation = ("");
-        private int rookieYear = 0;
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -108,7 +109,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 80;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 1:
@@ -116,7 +117,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 48;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC48_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC48_Logo;
                     break;
 
                 case 2:
@@ -124,7 +125,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC174_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC174_Logo;
                     break;
 
                 case 3:
@@ -132,7 +133,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 4:
@@ -140,7 +141,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 5:
@@ -148,7 +149,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 6:
@@ -156,7 +157,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 7:
@@ -164,7 +165,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 8:
@@ -172,7 +173,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 9:
@@ -180,7 +181,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 10:
@@ -188,7 +189,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 11:
@@ -196,7 +197,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 12:
@@ -204,7 +205,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 13:
@@ -212,7 +213,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 14:
@@ -220,7 +221,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 15:
@@ -228,7 +229,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 16:
@@ -236,7 +237,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 17:
@@ -244,7 +245,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 18:
@@ -252,7 +253,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 19:
@@ -260,7 +261,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 20:
@@ -268,7 +269,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 21:
@@ -276,7 +277,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 22:
@@ -284,7 +285,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 23:
@@ -292,7 +293,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 24:
@@ -300,7 +301,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 25:
@@ -308,7 +309,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 26:
@@ -316,7 +317,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 27:
@@ -324,7 +325,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 28:
@@ -332,7 +333,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
 
                 case 29:
@@ -340,7 +341,7 @@ namespace FRC_Scouting_V2
                     teamNumber = 0;
                     teamLocation = ("");
                     rookieYear = 0;
-                    teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20_Logo;
                     break;
             }
         }
