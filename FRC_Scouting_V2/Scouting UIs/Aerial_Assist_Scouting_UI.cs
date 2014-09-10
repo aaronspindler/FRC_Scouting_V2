@@ -49,6 +49,7 @@ namespace FRC_Scouting_V2
         private string teamColour;
         private int xStarting;
         private int yStarting;
+        UsefulSnippets us = new UsefulSnippets();
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -248,7 +249,7 @@ namespace FRC_Scouting_V2
             }
             else
             {
-                MessageBox.Show("File not Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                us.ErrorOccured("You did not select a file");
             }
 
             //MySQL Database

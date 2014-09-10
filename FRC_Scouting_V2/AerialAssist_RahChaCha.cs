@@ -104,8 +104,8 @@ namespace FRC_Scouting_V2
             switch (teamSelector.SelectedIndex)
             {
                 case 0:
-                    teamName = ("");
-                    teamNumber = 0;
+                    teamName = ("The Rocketeers");
+                    teamNumber = 80;
                     teamLocation = ("");
                     rookieYear = 0;
                     teamLogoPictureBox.Image = Properties.Resources.FRC20_Logo;
@@ -113,7 +113,7 @@ namespace FRC_Scouting_V2
 
                 case 1:
                     teamName = ("");
-                    teamNumber = 0;
+                    teamNumber = 48;
                     teamLocation = ("");
                     rookieYear = 0;
                     teamLogoPictureBox.Image = Properties.Resources.FRC48_Logo;
