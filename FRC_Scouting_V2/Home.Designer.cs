@@ -41,9 +41,9 @@
             this.licenseInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toggleConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ComboBox();
-            this.toggleConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -179,6 +179,13 @@
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Text = "Reset All Saved Settings to Default";
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetAllSavedSettingsToDefaultToolStripMenuItem_Click);
             // 
+            // toggleConsoleWindowToolStripMenuItem
+            // 
+            this.toggleConsoleWindowToolStripMenuItem.Name = "toggleConsoleWindowToolStripMenuItem";
+            this.toggleConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.toggleConsoleWindowToolStripMenuItem.Text = "Toggle Console Window";
+            this.toggleConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.toggleConsoleWindowToolStripMenuItem_Click);
+            // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
@@ -199,13 +206,6 @@
             this.eventSelector.TabIndex = 2;
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged);
             this.eventSelector.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eventSelector_KeyDown);
-            // 
-            // toggleConsoleWindowToolStripMenuItem
-            // 
-            this.toggleConsoleWindowToolStripMenuItem.Name = "toggleConsoleWindowToolStripMenuItem";
-            this.toggleConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.toggleConsoleWindowToolStripMenuItem.Text = "Toggle Console Window";
-            this.toggleConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.toggleConsoleWindowToolStripMenuItem_Click);
             // 
             // Home
             // 

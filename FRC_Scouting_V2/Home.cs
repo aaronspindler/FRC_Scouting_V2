@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
@@ -179,8 +180,10 @@ namespace FRC_Scouting_V2
             {
                 ShowConsoleWindow();
                 isConsoleVisible = true;
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Closing this window results in closure of the program!");
-                Console.WriteLine("If you want this program to go away toggle it in the home menu!");
+                Console.WriteLine("To hide console go to Home -> Debug -> Toggle Console Window!");
+                Console.ForegroundColor = ConsoleColor.White;
             }
             else
             {
