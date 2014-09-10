@@ -43,6 +43,7 @@
             this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ComboBox();
+            this.toggleConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -165,7 +166,8 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem});
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem,
+            this.toggleConsoleWindowToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
             this.debugToolStripMenuItem.Text = "Debug";
@@ -197,6 +199,13 @@
             this.eventSelector.TabIndex = 2;
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged);
             this.eventSelector.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eventSelector_KeyDown);
+            // 
+            // toggleConsoleWindowToolStripMenuItem
+            // 
+            this.toggleConsoleWindowToolStripMenuItem.Name = "toggleConsoleWindowToolStripMenuItem";
+            this.toggleConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.toggleConsoleWindowToolStripMenuItem.Text = "Toggle Console Window";
+            this.toggleConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.toggleConsoleWindowToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -236,6 +245,7 @@
         private System.Windows.Forms.ToolStripMenuItem resetAllSavedSettingsToDefaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changelogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem licenseInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toggleConsoleWindowToolStripMenuItem;
     }
 }
 

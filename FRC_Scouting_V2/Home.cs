@@ -23,10 +23,11 @@
 //SOFTWARE.
 //===============================================================================
 
+using System;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using FRC_Scouting_V2.Test_Objects;
-using System;
-using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
 {
@@ -34,15 +35,49 @@ namespace FRC_Scouting_V2
     public partial class Home : Form
     {
         //Variables
+        private const int SW_HIDE = 0;
+        private const int SW_SHOW = 5;
         private readonly UsefulSnippets us = new UsefulSnippets();
+        private Boolean isConsoleVisible = false;
 
         public Home()
         {
             InitializeComponent();
         }
 
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool AllocConsole();
+
+        [DllImport("kernel32.dll")]
+        private static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        public static void ShowConsoleWindow()
+        {
+            IntPtr handle = GetConsoleWindow();
+
+            if (handle == IntPtr.Zero)
+            {
+                AllocConsole();
+            }
+            else
+            {
+                ShowWindow(handle, SW_SHOW);
+            }
+        }
+
+        public static void HideConsoleWindow()
+        {
+            IntPtr handle = GetConsoleWindow();
+
+            ShowWindow(handle, SW_HIDE);
+        }
+
         private void Home_Load(object sender, EventArgs e)
         {
+            HideConsoleWindow();
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
 
@@ -136,6 +171,25 @@ namespace FRC_Scouting_V2
         {
             var mainSettings = new MainSettings();
             mainSettings.Show();
+        }
+
+        private void toggleConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (isConsoleVisible == false)
+            {
+                ShowConsoleWindow();
+                isConsoleVisible = true;
+                Console.WriteLine("Closing this window results in closure of the program!");
+                Console.WriteLine("If you want this program to go away toggle it in the home menu!");
+            }
+            else
+            {
+                if (isConsoleVisible == true)
+                {
+                    HideConsoleWindow();
+                    isConsoleVisible = false;
+                }
+            }
         }
     }
 }
