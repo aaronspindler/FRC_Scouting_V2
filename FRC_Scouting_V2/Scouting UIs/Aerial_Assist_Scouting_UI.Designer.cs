@@ -744,6 +744,10 @@
             this.clearAndAdvanceButton.UseVisualStyleBackColor = true;
             this.clearAndAdvanceButton.Click += new System.EventHandler(this.clearAndAdvanceButton_Click);
             // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            // 
             // commentsRichTextBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.commentsRichTextBox, 16);
