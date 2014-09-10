@@ -49,6 +49,7 @@ namespace FRC_Scouting_V2
         private string teamColour;
         private int xStarting;
         private int yStarting;
+        private string comments = ("");
         UsefulSnippets us = new UsefulSnippets();
 
         public Aerial_Assist_Scouting_UI()
@@ -317,8 +318,18 @@ namespace FRC_Scouting_V2
             missedPickupsTally = 0;
             xStarting = 0;
             yStarting = 0;
+            comments = ("");
+            commentsRichTextBox.Text = ("");
             UpdateLabels();
             BlankPanel();
+        }
+
+        private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (commentsRichTextBox.Text != (""))
+            {
+                comments = commentsRichTextBox.Text;
+            }
         }
     }
 }

@@ -401,6 +401,7 @@
             this.databaseIPTextBox.TabIndex = 5;
             this.databaseIPTextBox.Text = "Example: 192.168.1.1";
             this.databaseIPTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databaseIPTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseIPTextBox_MouseClick);
             this.databaseIPTextBox.TextChanged += new System.EventHandler(this.databaseIPTextBox_TextChanged);
             // 
             // databasePortTextBox
@@ -412,6 +413,7 @@
             this.databasePortTextBox.TabIndex = 6;
             this.databasePortTextBox.Text = "Example: 3306";
             this.databasePortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databasePortTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databasePortTextBox_MouseClick);
             this.databasePortTextBox.TextChanged += new System.EventHandler(this.databasePortTextBox_TextChanged);
             // 
             // databaseUsernameTextBox
@@ -423,6 +425,7 @@
             this.databaseUsernameTextBox.TabIndex = 7;
             this.databaseUsernameTextBox.Text = "Example: xNovax";
             this.databaseUsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databaseUsernameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseUsernameTextBox_MouseClick);
             this.databaseUsernameTextBox.TextChanged += new System.EventHandler(this.databaseUsernameTextBox_TextChanged);
             // 
             // databasePasswordTextBox
@@ -435,6 +438,7 @@
             this.databasePasswordTextBox.TabIndex = 8;
             this.databasePasswordTextBox.Text = "Example: donotusepasswordasyourpassword";
             this.databasePasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.databasePasswordTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databasePasswordTextBox_MouseClick);
             this.databasePasswordTextBox.TextChanged += new System.EventHandler(this.databasePasswordTextBox_TextChanged);
             // 
             // databaseSettingsCautionLabel
@@ -471,6 +475,7 @@
             this.databaseNameTextBox.Size = new System.Drawing.Size(193, 20);
             this.databaseNameTextBox.TabIndex = 11;
             this.databaseNameTextBox.Text = "Example: FRC_Scouting_Database";
+            this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
             // MainSettings

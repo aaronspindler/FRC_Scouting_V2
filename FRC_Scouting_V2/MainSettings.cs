@@ -193,5 +193,45 @@ namespace FRC_Scouting_V2
                 Settings.Default.Save();
             }
         }
+
+        private void databaseIPTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            {
+                databaseIPTextBox.Text = ("");
+            }
+        }
+
+        private void databasePortTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            {
+                databasePortTextBox.Text = ("");
+            }
+        }
+
+        private void databaseNameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            {
+                databaseNameTextBox.Text = ("");
+            }
+        }
+
+        private void databaseUsernameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            {
+                databaseUsernameTextBox.Text = ("");
+            }
+        }
+
+        private void databasePasswordTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
+            {
+                databasePasswordTextBox.Text = ("");
+            }
+        }
     }
 }
