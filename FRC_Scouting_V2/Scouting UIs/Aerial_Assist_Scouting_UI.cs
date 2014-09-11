@@ -309,7 +309,8 @@ namespace FRC_Scouting_V2
                 cmd.CommandText = createTable;
                 cmd.ExecuteNonQuery();
                 //end of creating the table
-                cmd.CommandText = ("Insert into FRC_Scouting_Test (EntryID,TeamName) values('1','Fred')");
+                string insertDataString = ("Insert into FRC_Scouting_Test (EntryID,TeamName) values('1','Fred')");
+                cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
 
                 //Closing the connection
