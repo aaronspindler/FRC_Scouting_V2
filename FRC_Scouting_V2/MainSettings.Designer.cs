@@ -475,6 +475,7 @@
             this.databaseNameTextBox.Size = new System.Drawing.Size(193, 20);
             this.databaseNameTextBox.TabIndex = 11;
             this.databaseNameTextBox.Text = "Example: FRC_Scouting_Database";
+            this.databaseNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 

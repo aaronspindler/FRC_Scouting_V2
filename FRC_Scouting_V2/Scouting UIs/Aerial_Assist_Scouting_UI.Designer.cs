@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.commentsRichTextBox = new System.Windows.Forms.RichTextBox();
             this.teamColourLabel = new System.Windows.Forms.Label();
             this.teamColourComboBox = new System.Windows.Forms.ComboBox();
             this.matchNumberLabel = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.startingLocationLabel = new System.Windows.Forms.Label();
             this.clearAndAdvanceButton = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.commentsRichTextBox = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -224,6 +224,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(544, 437);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // commentsRichTextBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.commentsRichTextBox, 16);
+            this.commentsRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.commentsRichTextBox.Location = new System.Drawing.Point(3, 300);
+            this.commentsRichTextBox.Name = "commentsRichTextBox";
+            this.tableLayoutPanel1.SetRowSpan(this.commentsRichTextBox, 4);
+            this.commentsRichTextBox.Size = new System.Drawing.Size(538, 102);
+            this.commentsRichTextBox.TabIndex = 1;
+            this.commentsRichTextBox.Text = "Comments";
+            this.commentsRichTextBox.TextChanged += new System.EventHandler(this.commentsRichTextBox_TextChanged);
             // 
             // teamColourLabel
             // 
@@ -747,18 +759,6 @@
             // saveFileDialog
             // 
             this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            // 
-            // commentsRichTextBox
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.commentsRichTextBox, 16);
-            this.commentsRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.commentsRichTextBox.Location = new System.Drawing.Point(3, 300);
-            this.commentsRichTextBox.Name = "commentsRichTextBox";
-            this.tableLayoutPanel1.SetRowSpan(this.commentsRichTextBox, 4);
-            this.commentsRichTextBox.Size = new System.Drawing.Size(538, 102);
-            this.commentsRichTextBox.TabIndex = 1;
-            this.commentsRichTextBox.Text = "Comments";
-            this.commentsRichTextBox.TextChanged += new System.EventHandler(this.commentsRichTextBox_TextChanged);
             // 
             // Aerial_Assist_Scouting_UI
             // 
