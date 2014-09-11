@@ -51,7 +51,6 @@ namespace FRC_Scouting_V2
         private string teamColour;
         private int xStarting;
         private int yStarting;
-        private string mySQLCommand = ("");
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -320,6 +319,19 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        public void CreateDatabaseTable()
+        {
+            try
+            {
+
+            }
+            catch (MySqlException createDatabaseException)
+            {
+                Console.WriteLine("Error Code: " + createDatabaseException.ErrorCode);
+                Console.WriteLine(createDatabaseException.Message);
             }
         }
 
