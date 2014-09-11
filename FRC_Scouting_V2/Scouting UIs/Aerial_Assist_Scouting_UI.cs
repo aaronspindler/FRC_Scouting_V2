@@ -39,7 +39,6 @@ namespace FRC_Scouting_V2
         private readonly UsefulSnippets us = new UsefulSnippets();
 
         private int autoHighTally;
-
         private int autoLowTally;
         private int autoPickupTally;
         private string comments = ("");
@@ -52,6 +51,7 @@ namespace FRC_Scouting_V2
         private string teamColour;
         private int xStarting;
         private int yStarting;
+        private string mySQLCommand = ("");
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -283,15 +283,13 @@ namespace FRC_Scouting_V2
             }
 
             //MySQL Database
-
             //MySQL Database Connection Info
             string databaseIP = Settings.Default.databaseIP;
             string databasePort = Settings.Default.databasePort;
             string databaseName = Settings.Default.databaseName;
             string databaseUsername = Settings.Default.databaseUsername;
             string databasePassword = Settings.Default.databasePassword;
-            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {
                 //Creating the connection to the database and opening the connection
@@ -304,13 +302,13 @@ namespace FRC_Scouting_V2
                 }
 
                 //Creating the table
-                const string createTable =
-                    ("CREATE TABLE `FRC_Scouting_Test` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;");
+                const string createTable = ("CREATE TABLE `FRC_Scouting_Test` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8");
                 MySqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = createTable;
                 cmd.ExecuteNonQuery();
                 //end of creating the table
 
+                //Trying to submit some test values to the database
                 string insertDataString = ("Insert into FRC_Scouting_Test (EntryID,TeamName) values('1','Fred');");
                 cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
