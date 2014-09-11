@@ -286,7 +286,7 @@ namespace FRC_Scouting_V2
                 writer.WriteLine("Y Starting Location: " + Convert.ToString(yStarting));
                 writer.WriteLine("=====================================");
                 writer.WriteLine("END OF FILE");
-                
+
                 writer.Close();
             }
             else
@@ -324,7 +324,7 @@ namespace FRC_Scouting_V2
                             Settings.Default.currentTableName);
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
-                    Console.WriteLine("The table: " + FRC_Scouting_V2.Properties.Settings.Default.currentTableName + " has been created.");
+                    Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
                     //end of creating the table
                 }
                 catch (MySqlException createException)
