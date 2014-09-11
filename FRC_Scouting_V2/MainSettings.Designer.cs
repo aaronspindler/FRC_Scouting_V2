@@ -60,6 +60,7 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -130,7 +131,8 @@
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.howDoISaveMySettingsToolStripMenuItem,
-            this.whatIsTheUsernameFieldUsedForToolStripMenuItem});
+            this.whatIsTheUsernameFieldUsedForToolStripMenuItem,
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -138,14 +140,14 @@
             // howDoISaveMySettingsToolStripMenuItem
             // 
             this.howDoISaveMySettingsToolStripMenuItem.Name = "howDoISaveMySettingsToolStripMenuItem";
-            this.howDoISaveMySettingsToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.howDoISaveMySettingsToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.howDoISaveMySettingsToolStripMenuItem.Text = "How do I save my settings?";
             this.howDoISaveMySettingsToolStripMenuItem.Click += new System.EventHandler(this.howDoISaveMySettingsToolStripMenuItem_Click);
             // 
             // whatIsTheUsernameFieldUsedForToolStripMenuItem
             // 
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Name = "whatIsTheUsernameFieldUsedForToolStripMenuItem";
-            this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Text = "What is the Username field used for?";
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Click += new System.EventHandler(this.whatIsTheUsernameFieldUsedForToolStripMenuItem_Click);
             // 
@@ -479,6 +481,13 @@
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
+            // howComeMyDatabasePasswordDoesntWorkToolStripMenuItem
+            // 
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Name = "howComeMyDatabasePasswordDoesntWorkToolStripMenuItem";
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Text = "How come my database password doesn\'t work?";
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Click += new System.EventHandler(this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click);
+            // 
             // MainSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,5 +549,6 @@
         private System.Windows.Forms.Label databaseSettingsCautionLabel;
         private System.Windows.Forms.Label databaseNameLabel;
         private System.Windows.Forms.TextBox databaseNameTextBox;
+        private System.Windows.Forms.ToolStripMenuItem howComeMyDatabasePasswordDoesntWorkToolStripMenuItem;
     }
 }

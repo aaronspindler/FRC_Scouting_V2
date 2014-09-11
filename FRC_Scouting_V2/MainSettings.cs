@@ -233,5 +233,11 @@ namespace FRC_Scouting_V2
                 databasePasswordTextBox.Text = ("");
             }
         }
+
+        private void howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your database password cannot contain any semicolons in it. ( ; )",
+                "How come my database password doesn't work?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
