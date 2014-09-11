@@ -257,6 +257,7 @@ namespace FRC_Scouting_V2
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 var writer = new StreamWriter(saveFileDialog.FileName);
+                writer.WriteLine("Time Created: " + us.GetCurrentTime());
                 writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
                 writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
                 writer.WriteLine("Team Number: " + Convert.ToString(Settings.Default.selectedTeamNumber));
@@ -275,6 +276,17 @@ namespace FRC_Scouting_V2
                 writer.WriteLine("Autonomous Ball Pickups: " + Convert.ToString(autoPickupTally));
                 writer.WriteLine("Controlled Ball Pickups: " + Convert.ToString(controlledPickupTally));
                 writer.WriteLine("Missed Pickups/Loads: " + Convert.ToString(missedPickupsTally));
+                writer.WriteLine("=====================================");
+                writer.WriteLine("Comments");
+                writer.WriteLine("=====================================");
+                writer.WriteLine(Convert.ToString(comments));
+                writer.WriteLine("=====================================");
+                writer.WriteLine("Starting Location");
+                writer.WriteLine("X Starting Location: " + Convert.ToString(xStarting));
+                writer.WriteLine("Y Starting Location: " + Convert.ToString(yStarting));
+                writer.WriteLine("=====================================");
+                writer.WriteLine("END OF FILE");
+                
                 writer.Close();
             }
             else
@@ -312,6 +324,7 @@ namespace FRC_Scouting_V2
                             Settings.Default.currentTableName);
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
+                    Console.WriteLine("The table: " + FRC_Scouting_V2.Properties.Settings.Default.currentTableName + " has been created.");
                     //end of creating the table
                 }
                 catch (MySqlException createException)
