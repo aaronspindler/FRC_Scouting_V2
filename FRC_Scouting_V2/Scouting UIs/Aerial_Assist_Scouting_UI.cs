@@ -303,6 +303,7 @@ namespace FRC_Scouting_V2
             string databasePassword = Settings.Default.databasePassword;
             string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
                 databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            int entryID = 0;
             try
             {
                 //Creating the connection to the database and opening the connection
