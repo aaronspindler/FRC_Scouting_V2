@@ -45,6 +45,7 @@ namespace FRC_Scouting_V2
         private int controlledHighTally;
         private int controlledLowTally;
         private int controlledPickupTally;
+        private int entryID = 0;
         private int hotGoalTally;
         private int matchNumber = 1;
         private int missedPickupsTally;
@@ -322,8 +323,11 @@ namespace FRC_Scouting_V2
                 //Submit data into the database
                 string insertDataString =
                     String.Format(
-                        "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}');",
-                        Settings.Default.currentTableName);
+                        "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');",
+                        Settings.Default.currentTableName, entryID, Settings.Default.selectedTeamName,
+                        Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
+                        controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,
+                        missedPickupsTally, xStarting, yStarting, comments);
 
                 cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
