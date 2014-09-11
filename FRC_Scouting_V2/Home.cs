@@ -36,6 +36,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private const int SW_HIDE = 0;
+
         private const int SW_SHOW = 5;
         private readonly UsefulSnippets us = new UsefulSnippets();
         private Boolean isConsoleVisible;

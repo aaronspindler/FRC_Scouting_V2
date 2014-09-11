@@ -37,6 +37,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
+
         private int autoHighTally;
 
         private int autoLowTally;
@@ -138,6 +139,34 @@ namespace FRC_Scouting_V2
         {
             autoPickupTally = autoPickupTally + 1;
             UpdateLabels();
+        }
+
+        private void clearAndAdvanceButton_Click(object sender, EventArgs e)
+        {
+            autoHighTally = 0;
+            autoLowTally = 0;
+            autoPickupTally = 0;
+            controlledHighTally = 0;
+            controlledLowTally = 0;
+            controlledPickupTally = 0;
+            hotGoalTally = 0;
+            matchNumber = matchNumber + 1;
+            matchNumberNumericUpDown.Value = matchNumber;
+            missedPickupsTally = 0;
+            xStarting = 0;
+            yStarting = 0;
+            comments = ("");
+            commentsRichTextBox.Text = ("");
+            UpdateLabels();
+            BlankPanel();
+        }
+
+        private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (commentsRichTextBox.Text != (""))
+            {
+                comments = commentsRichTextBox.Text;
+            }
         }
 
         private void controlledHighMinusButton_Click(object sender, EventArgs e)
@@ -305,34 +334,6 @@ namespace FRC_Scouting_V2
                 case 1:
                     teamColour = ("Red");
                     break;
-            }
-        }
-
-        private void clearAndAdvanceButton_Click(object sender, EventArgs e)
-        {
-            autoHighTally = 0;
-            autoLowTally = 0;
-            autoPickupTally = 0;
-            controlledHighTally = 0;
-            controlledLowTally = 0;
-            controlledPickupTally = 0;
-            hotGoalTally = 0;
-            matchNumber = matchNumber + 1;
-            matchNumberNumericUpDown.Value = matchNumber;
-            missedPickupsTally = 0;
-            xStarting = 0;
-            yStarting = 0;
-            comments = ("");
-            commentsRichTextBox.Text = ("");
-            UpdateLabels();
-            BlankPanel();
-        }
-
-        private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (commentsRichTextBox.Text != (""))
-            {
-                comments = commentsRichTextBox.Text;
             }
         }
     }
