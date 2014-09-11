@@ -178,5 +178,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["currentTableName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool clearConsoleOnToggle {
+            get {
+                return ((bool)(this["clearConsoleOnToggle"]));
+            }
+            set {
+                this["clearConsoleOnToggle"] = value;
+            }
+        }
     }
 }

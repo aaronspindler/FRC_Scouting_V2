@@ -95,6 +95,18 @@ namespace FRC_Scouting_V2
                 }
             }
 
+            if (FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle == true)
+            {
+                clearConsoleOnToggleCheckBox.Checked = true;
+            }
+            else
+            {
+                if (FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle == false)
+                {
+                    clearConsoleOnToggleCheckBox.Checked = false;
+                }
+            }
+
             usernameTextBox.Text = Settings.Default.username;
             databaseIPTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
@@ -238,6 +250,23 @@ namespace FRC_Scouting_V2
         {
             MessageBox.Show("Your database password cannot contain any semicolons in it. ( ; )",
                 "How come my database password doesn't work?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void clearConsoleOnToggleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (clearConsoleOnToggleCheckBox.Checked == true)
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle = true; 
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
+            else
+            {
+                if (clearConsoleOnToggleCheckBox.Checked == false)
+                {
+                    FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle = false;
+                    FRC_Scouting_V2.Properties.Settings.Default.Save();
+                }
+            }
         }
     }
 }

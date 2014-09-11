@@ -179,6 +179,11 @@ namespace FRC_Scouting_V2
             if (isConsoleVisible == false)
             {
                 ShowConsoleWindow();
+                if (Settings.Default.clearConsoleOnToggle)
+                {
+                    Console.Clear();
+                }
+
                 isConsoleVisible = true;
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Closing this window results in closure of the program!");

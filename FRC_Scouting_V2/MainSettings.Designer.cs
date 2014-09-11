@@ -36,6 +36,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howDoISaveMySettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalSettingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,7 +61,8 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
-            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearConsoleOnToggleLabel = new System.Windows.Forms.Label();
+            this.clearConsoleOnToggleCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -151,6 +153,13 @@
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Text = "What is the Username field used for?";
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Click += new System.EventHandler(this.whatIsTheUsernameFieldUsedForToolStripMenuItem_Click);
             // 
+            // howComeMyDatabasePasswordDoesntWorkToolStripMenuItem
+            // 
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Name = "howComeMyDatabasePasswordDoesntWorkToolStripMenuItem";
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Text = "How come my database password doesn\'t work?";
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Click += new System.EventHandler(this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click);
+            // 
             // tabControl1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 8);
@@ -186,6 +195,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.Controls.Add(this.clearConsoleOnToggleLabel, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.minimizeHomeCheckbox, 4, 2);
             this.tableLayoutPanel2.Controls.Add(this.clickEmptyTextBoxChecker, 4, 1);
             this.tableLayoutPanel2.Controls.Add(this.clickEmptyTextBoxLabel, 0, 1);
@@ -194,6 +204,7 @@
             this.tableLayoutPanel2.Controls.Add(this.usernameLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.usernameTextBox, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.minimizeHomeLabel, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.clearConsoleOnToggleCheckBox, 4, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -481,12 +492,30 @@
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
-            // howComeMyDatabasePasswordDoesntWorkToolStripMenuItem
+            // clearConsoleOnToggleLabel
             // 
-            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Name = "howComeMyDatabasePasswordDoesntWorkToolStripMenuItem";
-            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
-            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Text = "How come my database password doesn\'t work?";
-            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Click += new System.EventHandler(this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click);
+            this.clearConsoleOnToggleLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleLabel, 4);
+            this.clearConsoleOnToggleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearConsoleOnToggleLabel.Location = new System.Drawing.Point(3, 112);
+            this.clearConsoleOnToggleLabel.Name = "clearConsoleOnToggleLabel";
+            this.clearConsoleOnToggleLabel.Size = new System.Drawing.Size(190, 28);
+            this.clearConsoleOnToggleLabel.TabIndex = 1;
+            this.clearConsoleOnToggleLabel.Text = "Clear Console on Toggle";
+            this.clearConsoleOnToggleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // clearConsoleOnToggleCheckBox
+            // 
+            this.clearConsoleOnToggleCheckBox.AutoSize = true;
+            this.clearConsoleOnToggleCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleCheckBox, 4);
+            this.clearConsoleOnToggleCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearConsoleOnToggleCheckBox.Location = new System.Drawing.Point(199, 115);
+            this.clearConsoleOnToggleCheckBox.Name = "clearConsoleOnToggleCheckBox";
+            this.clearConsoleOnToggleCheckBox.Size = new System.Drawing.Size(196, 22);
+            this.clearConsoleOnToggleCheckBox.TabIndex = 5;
+            this.clearConsoleOnToggleCheckBox.UseVisualStyleBackColor = true;
+            this.clearConsoleOnToggleCheckBox.CheckedChanged += new System.EventHandler(this.clearConsoleOnToggleCheckBox_CheckedChanged);
             // 
             // MainSettings
             // 
@@ -550,5 +579,7 @@
         private System.Windows.Forms.Label databaseNameLabel;
         private System.Windows.Forms.TextBox databaseNameTextBox;
         private System.Windows.Forms.ToolStripMenuItem howComeMyDatabasePasswordDoesntWorkToolStripMenuItem;
+        private System.Windows.Forms.Label clearConsoleOnToggleLabel;
+        private System.Windows.Forms.CheckBox clearConsoleOnToggleCheckBox;
     }
 }
