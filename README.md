@@ -1,5 +1,8 @@
 FRC_Scouting_V2
 ===============
+
+![](https://scontent-b-ord.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10660246_10202222370275279_2806827165376848958_n.jpg?oh=ae852efb83e12d2ad798e6c2234f93d1&oe=549CA7C4)
+
   This is the second iteration of the FRC_Scouting program. The original version can be found at
   
   ```
