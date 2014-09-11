@@ -166,5 +166,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["databaseName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("FRC_Scouting")]
+        public string currentTableName {
+            get {
+                return ((string)(this["currentTableName"]));
+            }
+            set {
+                this["currentTableName"] = value;
+            }
+        }
     }
 }

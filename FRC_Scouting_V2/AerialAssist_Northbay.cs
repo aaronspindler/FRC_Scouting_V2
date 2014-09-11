@@ -45,6 +45,8 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_Northbay_Load(object sender, EventArgs e)
         {
+            FRC_Scouting_V2.Properties.Settings.Default.currentTableName = ("AerialAssist_Northbay");
+            FRC_Scouting_V2.Properties.Settings.Default.Save();
             //Loading Team Names
             //36 Teams
             teamSelector.Items.Add("188 | Blizzard");

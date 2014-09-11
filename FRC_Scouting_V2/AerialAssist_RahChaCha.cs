@@ -57,6 +57,8 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
         {
+            FRC_Scouting_V2.Properties.Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
+            FRC_Scouting_V2.Properties.Settings.Default.Save();
             //Adding teams to TeamSelector Control
             teamSelector.Items.Add("20 | The Rocketeers");
             teamSelector.Items.Add("48 | Delphi E.L.I.T.E.");

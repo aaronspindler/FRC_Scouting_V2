@@ -1,7 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
-              GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="clickToEmptyTextBoxes" Type="System.Boolean" Scope="User">
@@ -39,6 +37,9 @@
     </Setting>
     <Setting Name="databaseName" Type="System.String" Scope="User">
       <Value Profile="(Default)">FRC_Scouting_Test</Value>
+    </Setting>
+    <Setting Name="currentTableName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FRC_Scouting</Value>
     </Setting>
   </Settings>
 </SettingsFile>

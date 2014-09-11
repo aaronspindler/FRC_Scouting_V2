@@ -288,7 +288,8 @@ namespace FRC_Scouting_V2
             string databaseName = Settings.Default.databaseName;
             string databaseUsername = Settings.Default.databaseUsername;
             string databasePassword = Settings.Default.databasePassword;
-            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {
                 //Creating the connection to the database and opening the connection
@@ -299,18 +300,29 @@ namespace FRC_Scouting_V2
                 {
                     Console.WriteLine("The connection to your database has been made successfully.");
                 }
-
-                //Creating the table
-                const string createTable = ("CREATE TABLE `FRC_Scouting_Test` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8");
                 MySqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = createTable;
-                cmd.ExecuteNonQuery();
-                //end of creating the table
 
-                //Trying to submit some test values to the database
-                string insertDataString = ("Insert into FRC_Scouting_Test (EntryID,TeamName) values('1','Fred');");
+                try
+                {
+                    //Creating the table
+                    string createTable = String.Format("CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8",Settings.Default.currentTableName);
+                    cmd.CommandText = createTable;
+                    cmd.ExecuteNonQuery();
+                    //end of creating the table
+                }
+                catch (MySqlException createException)
+                {
+                    Console.WriteLine("Errorcode: " + createException.ErrorCode);
+                    Console.WriteLine(createException.Message);
+                }
+
+                //Submit data into the database
+                string insertDataString = String.Format("Insert into {0} (EntryID,TeamName) values('1','Fred');",
+                    Settings.Default.currentTableName);
                 cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
+
+                Console.WriteLine("Data has been inserted into the database!");
 
                 //Closing the connection
                 conn.Close();
@@ -319,19 +331,6 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
-            }
-        }
-
-        public void CreateDatabaseTable()
-        {
-            try
-            {
-
-            }
-            catch (MySqlException createDatabaseException)
-            {
-                Console.WriteLine("Error Code: " + createDatabaseException.ErrorCode);
-                Console.WriteLine(createDatabaseException.Message);
             }
         }
 
