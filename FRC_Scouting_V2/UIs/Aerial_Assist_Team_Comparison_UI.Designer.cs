@@ -105,6 +105,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Aerial_Assist_Team_Comparison_UI";
             this.Size = new System.Drawing.Size(544, 437);
+            this.Load += new System.EventHandler(this.Aerial_Assist_Team_Comparison_UI_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
