@@ -40,6 +40,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalSettingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.clearConsoleOnToggleLabel = new System.Windows.Forms.Label();
             this.minimizeHomeCheckbox = new System.Windows.Forms.CheckBox();
             this.clickEmptyTextBoxChecker = new System.Windows.Forms.CheckBox();
             this.clickEmptyTextBoxLabel = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.minimizeHomeLabel = new System.Windows.Forms.Label();
+            this.clearConsoleOnToggleCheckBox = new System.Windows.Forms.CheckBox();
             this.databaseSettingsTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.databaseIPLabel = new System.Windows.Forms.Label();
@@ -61,8 +63,8 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
-            this.clearConsoleOnToggleLabel = new System.Windows.Forms.Label();
-            this.clearConsoleOnToggleCheckBox = new System.Windows.Forms.CheckBox();
+            this.exportToTextFileLabel = new System.Windows.Forms.Label();
+            this.allowExportToTextFileCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -98,7 +100,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 289);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 289);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -110,7 +112,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(418, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(458, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -170,7 +172,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 8);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(412, 258);
+            this.tabControl1.Size = new System.Drawing.Size(452, 258);
             this.tabControl1.TabIndex = 1;
             // 
             // generalSettingsPage
@@ -179,7 +181,7 @@
             this.generalSettingsPage.Location = new System.Drawing.Point(4, 22);
             this.generalSettingsPage.Name = "generalSettingsPage";
             this.generalSettingsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.generalSettingsPage.Size = new System.Drawing.Size(404, 232);
+            this.generalSettingsPage.Size = new System.Drawing.Size(444, 232);
             this.generalSettingsPage.TabIndex = 0;
             this.generalSettingsPage.Text = "General Settings";
             this.generalSettingsPage.UseVisualStyleBackColor = true;
@@ -195,6 +197,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.Controls.Add(this.allowExportToTextFileCheckBox, 4, 5);
+            this.tableLayoutPanel2.Controls.Add(this.exportToTextFileLabel, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.clearConsoleOnToggleLabel, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.minimizeHomeCheckbox, 4, 2);
             this.tableLayoutPanel2.Controls.Add(this.clickEmptyTextBoxChecker, 4, 1);
@@ -217,8 +221,20 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(398, 226);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(438, 226);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // clearConsoleOnToggleLabel
+            // 
+            this.clearConsoleOnToggleLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleLabel, 4);
+            this.clearConsoleOnToggleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearConsoleOnToggleLabel.Location = new System.Drawing.Point(3, 112);
+            this.clearConsoleOnToggleLabel.Name = "clearConsoleOnToggleLabel";
+            this.clearConsoleOnToggleLabel.Size = new System.Drawing.Size(210, 28);
+            this.clearConsoleOnToggleLabel.TabIndex = 1;
+            this.clearConsoleOnToggleLabel.Text = "Clear Console on Toggle";
+            this.clearConsoleOnToggleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // minimizeHomeCheckbox
             // 
@@ -226,9 +242,9 @@
             this.minimizeHomeCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tableLayoutPanel2.SetColumnSpan(this.minimizeHomeCheckbox, 4);
             this.minimizeHomeCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minimizeHomeCheckbox.Location = new System.Drawing.Point(199, 59);
+            this.minimizeHomeCheckbox.Location = new System.Drawing.Point(219, 59);
             this.minimizeHomeCheckbox.Name = "minimizeHomeCheckbox";
-            this.minimizeHomeCheckbox.Size = new System.Drawing.Size(196, 22);
+            this.minimizeHomeCheckbox.Size = new System.Drawing.Size(216, 22);
             this.minimizeHomeCheckbox.TabIndex = 1;
             this.minimizeHomeCheckbox.UseVisualStyleBackColor = true;
             this.minimizeHomeCheckbox.CheckedChanged += new System.EventHandler(this.minimizeHomeCheckbox_CheckedChanged);
@@ -239,9 +255,9 @@
             this.clickEmptyTextBoxChecker.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tableLayoutPanel2.SetColumnSpan(this.clickEmptyTextBoxChecker, 4);
             this.clickEmptyTextBoxChecker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clickEmptyTextBoxChecker.Location = new System.Drawing.Point(199, 31);
+            this.clickEmptyTextBoxChecker.Location = new System.Drawing.Point(219, 31);
             this.clickEmptyTextBoxChecker.Name = "clickEmptyTextBoxChecker";
-            this.clickEmptyTextBoxChecker.Size = new System.Drawing.Size(196, 22);
+            this.clickEmptyTextBoxChecker.Size = new System.Drawing.Size(216, 22);
             this.clickEmptyTextBoxChecker.TabIndex = 1;
             this.clickEmptyTextBoxChecker.UseVisualStyleBackColor = true;
             this.clickEmptyTextBoxChecker.CheckedChanged += new System.EventHandler(this.clickEmptyTextBoxChecker_CheckedChanged);
@@ -253,7 +269,7 @@
             this.clickEmptyTextBoxLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clickEmptyTextBoxLabel.Location = new System.Drawing.Point(3, 28);
             this.clickEmptyTextBoxLabel.Name = "clickEmptyTextBoxLabel";
-            this.clickEmptyTextBoxLabel.Size = new System.Drawing.Size(190, 28);
+            this.clickEmptyTextBoxLabel.Size = new System.Drawing.Size(210, 28);
             this.clickEmptyTextBoxLabel.TabIndex = 1;
             this.clickEmptyTextBoxLabel.Text = "Click to Empty Text Boxes";
             this.clickEmptyTextBoxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,9 +278,9 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.resetAllSettingsButton, 4);
             this.resetAllSettingsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resetAllSettingsButton.Location = new System.Drawing.Point(199, 87);
+            this.resetAllSettingsButton.Location = new System.Drawing.Point(219, 87);
             this.resetAllSettingsButton.Name = "resetAllSettingsButton";
-            this.resetAllSettingsButton.Size = new System.Drawing.Size(196, 22);
+            this.resetAllSettingsButton.Size = new System.Drawing.Size(216, 22);
             this.resetAllSettingsButton.TabIndex = 1;
             this.resetAllSettingsButton.Text = "Reset Settings";
             this.resetAllSettingsButton.UseVisualStyleBackColor = true;
@@ -277,7 +293,7 @@
             this.resetSettingsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.resetSettingsLabel.Location = new System.Drawing.Point(3, 84);
             this.resetSettingsLabel.Name = "resetSettingsLabel";
-            this.resetSettingsLabel.Size = new System.Drawing.Size(190, 28);
+            this.resetSettingsLabel.Size = new System.Drawing.Size(210, 28);
             this.resetSettingsLabel.TabIndex = 1;
             this.resetSettingsLabel.Text = "Reset all Settings to Default";
             this.resetSettingsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,7 +305,7 @@
             this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameLabel.Location = new System.Drawing.Point(3, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(190, 28);
+            this.usernameLabel.Size = new System.Drawing.Size(210, 28);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "Username: ";
             this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,9 +314,9 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.usernameTextBox, 4);
             this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameTextBox.Location = new System.Drawing.Point(199, 3);
+            this.usernameTextBox.Location = new System.Drawing.Point(219, 3);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(196, 20);
+            this.usernameTextBox.Size = new System.Drawing.Size(216, 20);
             this.usernameTextBox.TabIndex = 3;
             this.usernameTextBox.Text = "Example : Anonymous";
             this.usernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -314,10 +330,23 @@
             this.minimizeHomeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.minimizeHomeLabel.Location = new System.Drawing.Point(3, 56);
             this.minimizeHomeLabel.Name = "minimizeHomeLabel";
-            this.minimizeHomeLabel.Size = new System.Drawing.Size(190, 28);
+            this.minimizeHomeLabel.Size = new System.Drawing.Size(210, 28);
             this.minimizeHomeLabel.TabIndex = 4;
             this.minimizeHomeLabel.Text = "Minimize Home When an Event Loads";
             this.minimizeHomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // clearConsoleOnToggleCheckBox
+            // 
+            this.clearConsoleOnToggleCheckBox.AutoSize = true;
+            this.clearConsoleOnToggleCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleCheckBox, 4);
+            this.clearConsoleOnToggleCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearConsoleOnToggleCheckBox.Location = new System.Drawing.Point(219, 115);
+            this.clearConsoleOnToggleCheckBox.Name = "clearConsoleOnToggleCheckBox";
+            this.clearConsoleOnToggleCheckBox.Size = new System.Drawing.Size(216, 22);
+            this.clearConsoleOnToggleCheckBox.TabIndex = 5;
+            this.clearConsoleOnToggleCheckBox.UseVisualStyleBackColor = true;
+            this.clearConsoleOnToggleCheckBox.CheckedChanged += new System.EventHandler(this.clearConsoleOnToggleCheckBox_CheckedChanged);
             // 
             // databaseSettingsTab
             // 
@@ -492,36 +521,36 @@
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
-            // clearConsoleOnToggleLabel
+            // exportToTextFileLabel
             // 
-            this.clearConsoleOnToggleLabel.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleLabel, 4);
-            this.clearConsoleOnToggleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clearConsoleOnToggleLabel.Location = new System.Drawing.Point(3, 112);
-            this.clearConsoleOnToggleLabel.Name = "clearConsoleOnToggleLabel";
-            this.clearConsoleOnToggleLabel.Size = new System.Drawing.Size(190, 28);
-            this.clearConsoleOnToggleLabel.TabIndex = 1;
-            this.clearConsoleOnToggleLabel.Text = "Clear Console on Toggle";
-            this.clearConsoleOnToggleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.exportToTextFileLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.exportToTextFileLabel, 4);
+            this.exportToTextFileLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.exportToTextFileLabel.Location = new System.Drawing.Point(3, 140);
+            this.exportToTextFileLabel.Name = "exportToTextFileLabel";
+            this.exportToTextFileLabel.Size = new System.Drawing.Size(210, 28);
+            this.exportToTextFileLabel.TabIndex = 1;
+            this.exportToTextFileLabel.Text = "Allow Export of Scouting Data to TextFile";
+            this.exportToTextFileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // clearConsoleOnToggleCheckBox
+            // allowExportToTextFileCheckBox
             // 
-            this.clearConsoleOnToggleCheckBox.AutoSize = true;
-            this.clearConsoleOnToggleCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleCheckBox, 4);
-            this.clearConsoleOnToggleCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clearConsoleOnToggleCheckBox.Location = new System.Drawing.Point(199, 115);
-            this.clearConsoleOnToggleCheckBox.Name = "clearConsoleOnToggleCheckBox";
-            this.clearConsoleOnToggleCheckBox.Size = new System.Drawing.Size(196, 22);
-            this.clearConsoleOnToggleCheckBox.TabIndex = 5;
-            this.clearConsoleOnToggleCheckBox.UseVisualStyleBackColor = true;
-            this.clearConsoleOnToggleCheckBox.CheckedChanged += new System.EventHandler(this.clearConsoleOnToggleCheckBox_CheckedChanged);
+            this.allowExportToTextFileCheckBox.AutoSize = true;
+            this.allowExportToTextFileCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.SetColumnSpan(this.allowExportToTextFileCheckBox, 4);
+            this.allowExportToTextFileCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allowExportToTextFileCheckBox.Location = new System.Drawing.Point(219, 143);
+            this.allowExportToTextFileCheckBox.Name = "allowExportToTextFileCheckBox";
+            this.allowExportToTextFileCheckBox.Size = new System.Drawing.Size(216, 22);
+            this.allowExportToTextFileCheckBox.TabIndex = 1;
+            this.allowExportToTextFileCheckBox.UseVisualStyleBackColor = true;
+            this.allowExportToTextFileCheckBox.CheckedChanged += new System.EventHandler(this.allowExportToTextFileCheckBox_CheckedChanged);
             // 
             // MainSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 289);
+            this.ClientSize = new System.Drawing.Size(458, 289);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -581,5 +610,7 @@
         private System.Windows.Forms.ToolStripMenuItem howComeMyDatabasePasswordDoesntWorkToolStripMenuItem;
         private System.Windows.Forms.Label clearConsoleOnToggleLabel;
         private System.Windows.Forms.CheckBox clearConsoleOnToggleCheckBox;
+        private System.Windows.Forms.CheckBox allowExportToTextFileCheckBox;
+        private System.Windows.Forms.Label exportToTextFileLabel;
     }
 }

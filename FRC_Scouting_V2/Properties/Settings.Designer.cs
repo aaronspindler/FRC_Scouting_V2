@@ -190,5 +190,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["clearConsoleOnToggle"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool allowExportToTextFile {
+            get {
+                return ((bool)(this["allowExportToTextFile"]));
+            }
+            set {
+                this["allowExportToTextFile"] = value;
+            }
+        }
     }
 }

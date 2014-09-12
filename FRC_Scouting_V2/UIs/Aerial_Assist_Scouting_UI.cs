@@ -284,43 +284,46 @@ namespace FRC_Scouting_V2
         {
             UpdateLabels();
 
-            //Write to TextFile
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (FRC_Scouting_V2.Properties.Settings.Default.allowExportToTextFile == true)
             {
-                var writer = new StreamWriter(saveFileDialog.FileName);
-                writer.WriteLine("Time Created: " + us.GetCurrentTime());
-                writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
-                writer.WriteLine("===============================================");
-                writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
-                writer.WriteLine("Team Number: " + Convert.ToString(Settings.Default.selectedTeamNumber));
-                writer.WriteLine("Team Color During Match: " + teamColour);
-                writer.WriteLine("===============================================");
-                writer.WriteLine();
-                writer.WriteLine("Points Scored");
-                writer.WriteLine("Auto High Tally: " + Convert.ToString(autoHighTally));
-                writer.WriteLine("Auto Low Tally: " + Convert.ToString(autoLowTally));
-                writer.WriteLine("Manually Controlled High Tally: " + Convert.ToString(controlledHighTally));
-                writer.WriteLine("Manually Controlled Low Tally: " + Convert.ToString(controlledLowTally));
-                writer.WriteLine("Hot Goals Scored: " + Convert.ToString(hotGoalTally));
-                writer.WriteLine("===============================================");
-                writer.WriteLine("Ball Control");
-                writer.WriteLine("Autonomous Ball Pickups: " + Convert.ToString(autoPickupTally));
-                writer.WriteLine("Controlled Ball Pickups: " + Convert.ToString(controlledPickupTally));
-                writer.WriteLine("Missed Pickups/Loads: " + Convert.ToString(missedPickupsTally));
-                writer.WriteLine("===============================================");
-                writer.WriteLine("Comments");
-                writer.WriteLine(Convert.ToString(comments));
-                writer.WriteLine("===============================================");
-                writer.WriteLine("Starting Location");
-                writer.WriteLine("X Starting Location: " + Convert.ToString(xStarting));
-                writer.WriteLine("Y Starting Location: " + Convert.ToString(yStarting));
-                writer.WriteLine("===============================================");
-                writer.WriteLine("END OF FILE");
-                writer.Close();
-            }
-            else
-            {
-                us.ErrorOccured("You did not select a file");
+                //Write to TextFile
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var writer = new StreamWriter(saveFileDialog.FileName);
+                    writer.WriteLine("Time Created: " + us.GetCurrentTime());
+                    writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
+                    writer.WriteLine("===============================================");
+                    writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
+                    writer.WriteLine("Team Number: " + Convert.ToString(Settings.Default.selectedTeamNumber));
+                    writer.WriteLine("Team Color During Match: " + teamColour);
+                    writer.WriteLine("===============================================");
+                    writer.WriteLine();
+                    writer.WriteLine("Points Scored");
+                    writer.WriteLine("Auto High Tally: " + Convert.ToString(autoHighTally));
+                    writer.WriteLine("Auto Low Tally: " + Convert.ToString(autoLowTally));
+                    writer.WriteLine("Manually Controlled High Tally: " + Convert.ToString(controlledHighTally));
+                    writer.WriteLine("Manually Controlled Low Tally: " + Convert.ToString(controlledLowTally));
+                    writer.WriteLine("Hot Goals Scored: " + Convert.ToString(hotGoalTally));
+                    writer.WriteLine("===============================================");
+                    writer.WriteLine("Ball Control");
+                    writer.WriteLine("Autonomous Ball Pickups: " + Convert.ToString(autoPickupTally));
+                    writer.WriteLine("Controlled Ball Pickups: " + Convert.ToString(controlledPickupTally));
+                    writer.WriteLine("Missed Pickups/Loads: " + Convert.ToString(missedPickupsTally));
+                    writer.WriteLine("===============================================");
+                    writer.WriteLine("Comments");
+                    writer.WriteLine(Convert.ToString(comments));
+                    writer.WriteLine("===============================================");
+                    writer.WriteLine("Starting Location");
+                    writer.WriteLine("X Starting Location: " + Convert.ToString(xStarting));
+                    writer.WriteLine("Y Starting Location: " + Convert.ToString(yStarting));
+                    writer.WriteLine("===============================================");
+                    writer.WriteLine("END OF FILE");
+                    writer.Close();
+                }
+                else
+                {
+                    us.ErrorOccured("You did not select a file");
+                }
             }
 
             //MySQL Database

@@ -107,6 +107,18 @@ namespace FRC_Scouting_V2
                 }
             }
 
+            if (Settings.Default.allowExportToTextFile == true)
+            {
+                allowExportToTextFileCheckBox.Checked = true;
+            }
+            else
+            {
+                if (Settings.Default.allowExportToTextFile == false)
+                {
+                    allowExportToTextFileCheckBox.Checked = false;
+                }
+            }
+
             usernameTextBox.Text = Settings.Default.username;
             databaseIPTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
@@ -264,6 +276,23 @@ namespace FRC_Scouting_V2
                 if (clearConsoleOnToggleCheckBox.Checked == false)
                 {
                     Settings.Default.clearConsoleOnToggle = false;
+                    Settings.Default.Save();
+                }
+            }
+        }
+
+        private void allowExportToTextFileCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (allowExportToTextFileCheckBox.Checked == true)
+            {
+                Settings.Default.allowExportToTextFile = true;
+                Settings.Default.Save();
+            }
+            else
+            {
+                if (allowExportToTextFileCheckBox.Checked == false)
+                {
+                    Settings.Default.allowExportToTextFile = false;
                     Settings.Default.Save();
                 }
             }
