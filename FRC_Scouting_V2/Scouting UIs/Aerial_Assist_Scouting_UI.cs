@@ -37,7 +37,6 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
-
         private int autoHighTally;
         private int autoLowTally;
         private int autoPickupTally;
@@ -247,6 +246,38 @@ namespace FRC_Scouting_V2
         private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
         {
             PlotInitialLines();
+        }
+
+        //Getting the number of rows in the table
+        public int CountRowsInDatabase()
+        {
+            var numberOfRows = 0;
+
+            try
+            {
+                var databaseIP = Settings.Default.databaseIP;
+                var databasePort = Settings.Default.databasePort;
+                var databaseName = Settings.Default.databaseName;
+                var databaseUsername = Settings.Default.databaseUsername;
+                var databasePassword = Settings.Default.databasePassword;
+                var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = String.Format("SELECT COUNT(*) FROM '{0}';", FRC_Scouting_V2.Properties.Settings.Default.currentTableName);
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+
+            return numberOfRows;
         }
 
         private void submitDataButton_Click(object sender, EventArgs e)
