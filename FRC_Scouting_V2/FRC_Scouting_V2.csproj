@@ -151,6 +151,12 @@
     <Compile Include="Test Items\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\Aerial_Assist_Stats_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Aerial_Assist_Stats_UI.Designer.cs">
+      <DependentUpon>Aerial_Assist_Stats_UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsefulSnippets.cs" />
     <EmbeddedResource Include="Events\AerialAssist_Northbay.resx">
       <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test Items\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Aerial_Assist_Stats_UI.resx">
+      <DependentUpon>Aerial_Assist_Stats_UI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
     <None Include="Properties\Settings.settings">
