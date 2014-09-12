@@ -48,6 +48,8 @@
             this.teamNameDisplay = new System.Windows.Forms.Label();
             this.teamLocationLabel = new System.Windows.Forms.Label();
             this.teamLocationDisplay = new System.Windows.Forms.Label();
+            this.statsTabPage = new System.Windows.Forms.TabPage();
+            this.aerial_Assist_Stats_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -55,6 +57,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.teamInformationTabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.statsTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -147,6 +150,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 8);
             this.tabControl1.Controls.Add(this.scoutingTabPage);
             this.tabControl1.Controls.Add(this.teamInformationTabPage);
+            this.tabControl1.Controls.Add(this.statsTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(3, 28);
             this.tabControl1.Name = "tabControl1";
@@ -318,6 +322,25 @@
             this.teamLocationDisplay.Text = "No Team Selected!";
             this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // statsTabPage
+            // 
+            this.statsTabPage.Controls.Add(this.aerial_Assist_Stats_UI1);
+            this.statsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.statsTabPage.Name = "statsTabPage";
+            this.statsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.statsTabPage.Size = new System.Drawing.Size(598, 475);
+            this.statsTabPage.TabIndex = 2;
+            this.statsTabPage.Text = "Statistics";
+            this.statsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // aerial_Assist_Stats_UI1
+            // 
+            this.aerial_Assist_Stats_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Stats_UI1.Location = new System.Drawing.Point(3, 3);
+            this.aerial_Assist_Stats_UI1.Name = "aerial_Assist_Stats_UI1";
+            this.aerial_Assist_Stats_UI1.Size = new System.Drawing.Size(592, 469);
+            this.aerial_Assist_Stats_UI1.TabIndex = 0;
+            // 
             // AerialAssist_Northbay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,6 +364,7 @@
             this.teamInformationTabPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.statsTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -366,5 +390,7 @@
         private System.Windows.Forms.Label teamLocationLabel;
         private System.Windows.Forms.Label teamLocationDisplay;
         private Aerial_Assist_Scouting_UI aerial_Assist_Scouting_UI1;
+        private System.Windows.Forms.TabPage statsTabPage;
+        private UIs.Aerial_Assist_Stats_UI aerial_Assist_Stats_UI1;
     }
 }

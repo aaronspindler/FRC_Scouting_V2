@@ -51,6 +51,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statsTabPage = new System.Windows.Forms.TabPage();
+            this.aerial_Assist_Stats_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -59,6 +61,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.statsTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -113,6 +116,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 16);
             this.tabControl1.Controls.Add(this.scoutingTabPage);
             this.tabControl1.Controls.Add(this.teamInformationTabPage);
+            this.tabControl1.Controls.Add(this.statsTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(3, 28);
             this.tabControl1.Name = "tabControl1";
@@ -392,6 +396,25 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // statsTabPage
+            // 
+            this.statsTabPage.Controls.Add(this.aerial_Assist_Stats_UI1);
+            this.statsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.statsTabPage.Name = "statsTabPage";
+            this.statsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.statsTabPage.Size = new System.Drawing.Size(617, 481);
+            this.statsTabPage.TabIndex = 2;
+            this.statsTabPage.Text = "Statistics";
+            this.statsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // aerial_Assist_Stats_UI1
+            // 
+            this.aerial_Assist_Stats_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Stats_UI1.Location = new System.Drawing.Point(3, 3);
+            this.aerial_Assist_Stats_UI1.Name = "aerial_Assist_Stats_UI1";
+            this.aerial_Assist_Stats_UI1.Size = new System.Drawing.Size(611, 475);
+            this.aerial_Assist_Stats_UI1.TabIndex = 0;
+            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +439,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statsTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -444,5 +468,7 @@
         private System.Windows.Forms.Label rookieYearDisplay;
         private System.Windows.Forms.Label teamLocationDisplay;
         private System.Windows.Forms.Label teamNameDisplay;
+        private System.Windows.Forms.TabPage statsTabPage;
+        private UIs.Aerial_Assist_Stats_UI aerial_Assist_Stats_UI1;
     }
 }
