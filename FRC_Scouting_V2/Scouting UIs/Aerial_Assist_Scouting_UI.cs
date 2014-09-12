@@ -267,7 +267,8 @@ namespace FRC_Scouting_V2
                 conn.Open();
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = String.Format("SELECT COUNT(*) FROM '{0}';", FRC_Scouting_V2.Properties.Settings.Default.currentTableName);
-                cmd.ExecuteNonQuery();
+                numberOfRows = Convert.ToInt32(cmd.ExecuteScalar());
+                numberOfRows = numberOfRows + 1;
 
                 conn.Close();
             }
@@ -333,7 +334,6 @@ namespace FRC_Scouting_V2
             string databasePassword = Settings.Default.databasePassword;
             string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
                 databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-            int entryID = 0;
             try
             {
                 //Creating the connection to the database and opening the connection
@@ -368,7 +368,7 @@ namespace FRC_Scouting_V2
                 string insertDataString =
                     String.Format(
                         "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');",
-                        Settings.Default.currentTableName, entryID, Settings.Default.selectedTeamName,
+                        Settings.Default.currentTableName, CountRowsInDatabase(), Settings.Default.selectedTeamName,
                         Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
                         controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,
                         missedPickupsTally, xStarting, yStarting, comments);
