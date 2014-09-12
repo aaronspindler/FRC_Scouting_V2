@@ -95,13 +95,13 @@ namespace FRC_Scouting_V2
                 }
             }
 
-            if (FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle == true)
+            if (Settings.Default.clearConsoleOnToggle)
             {
                 clearConsoleOnToggleCheckBox.Checked = true;
             }
             else
             {
-                if (FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle == false)
+                if (Settings.Default.clearConsoleOnToggle == false)
                 {
                     clearConsoleOnToggleCheckBox.Checked = false;
                 }
@@ -254,17 +254,17 @@ namespace FRC_Scouting_V2
 
         private void clearConsoleOnToggleCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (clearConsoleOnToggleCheckBox.Checked == true)
+            if (clearConsoleOnToggleCheckBox.Checked)
             {
-                FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle = true; 
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.clearConsoleOnToggle = true;
+                Settings.Default.Save();
             }
             else
             {
                 if (clearConsoleOnToggleCheckBox.Checked == false)
                 {
-                    FRC_Scouting_V2.Properties.Settings.Default.clearConsoleOnToggle = false;
-                    FRC_Scouting_V2.Properties.Settings.Default.Save();
+                    Settings.Default.clearConsoleOnToggle = false;
+                    Settings.Default.Save();
                 }
             }
         }

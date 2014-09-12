@@ -251,22 +251,23 @@ namespace FRC_Scouting_V2
         //Getting the number of rows in the table
         public int CountRowsInDatabase()
         {
-            var numberOfRows = 0;
+            int numberOfRows = 0;
 
             try
             {
-                var databaseIP = Settings.Default.databaseIP;
-                var databasePort = Settings.Default.databasePort;
-                var databaseName = Settings.Default.databaseName;
-                var databaseUsername = Settings.Default.databaseUsername;
-                var databasePassword = Settings.Default.databasePassword;
-                var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                string databaseIP = Settings.Default.databaseIP;
+                string databasePort = Settings.Default.databasePort;
+                string databaseName = Settings.Default.databaseName;
+                string databaseUsername = Settings.Default.databaseUsername;
+                string databasePassword = Settings.Default.databasePassword;
+                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
-                using (MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM " + FRC_Scouting_V2.Properties.Settings.Default.currentTableName, conn))
+                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
                     conn.Open();
-                    return  numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    return numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
                 }
             }
             catch (MySqlException ex)
@@ -314,7 +315,6 @@ namespace FRC_Scouting_V2
                 writer.WriteLine("Y Starting Location: " + Convert.ToString(yStarting));
                 writer.WriteLine("===============================================");
                 writer.WriteLine("END OF FILE");
-
                 writer.Close();
             }
             else
@@ -329,7 +329,8 @@ namespace FRC_Scouting_V2
             string databaseName = Settings.Default.databaseName;
             string databaseUsername = Settings.Default.databaseUsername;
             string databasePassword = Settings.Default.databasePassword;
-            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {
                 //Creating the connection to the database and opening the connection
@@ -368,7 +369,8 @@ namespace FRC_Scouting_V2
                 string insertDataString =
                     String.Format(
                         "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');",
-                        Settings.Default.currentTableName, (CountRowsInDatabase() + 1), Settings.Default.selectedTeamName,
+                        Settings.Default.currentTableName, (CountRowsInDatabase() + 1),
+                        Settings.Default.selectedTeamName,
                         Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
                         controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,
                         missedPickupsTally, xStarting, yStarting, comments);

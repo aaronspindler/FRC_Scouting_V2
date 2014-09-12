@@ -354,9 +354,9 @@ namespace FRC_Scouting_V2
             teamLocationDisplay.Text = teamLocation;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
 
-            FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName = teamName;
-            FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber = teamNumber;
-            FRC_Scouting_V2.Properties.Settings.Default.Save();
+            Settings.Default.selectedTeamName = teamName;
+            Settings.Default.selectedTeamNumber = teamNumber;
+            Settings.Default.Save();
         }
     }
 }
