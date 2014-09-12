@@ -260,17 +260,14 @@ namespace FRC_Scouting_V2
                 var databaseName = Settings.Default.databaseName;
                 var databaseUsername = Settings.Default.databaseUsername;
                 var databasePassword = Settings.Default.databasePassword;
-                var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-
+                var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
-                conn.Open();
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = String.Format("SELECT COUNT(*) FROM '{0}';", FRC_Scouting_V2.Properties.Settings.Default.currentTableName);
-                numberOfRows = Convert.ToInt32(cmd.ExecuteScalar());
-                numberOfRows = numberOfRows + 1;
 
-                conn.Close();
+                using (MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM " + FRC_Scouting_V2.Properties.Settings.Default.currentTableName, conn))
+                {
+                    conn.Open();
+                    return  numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                }
             }
             catch (MySqlException ex)
             {
@@ -332,23 +329,25 @@ namespace FRC_Scouting_V2
             string databaseName = Settings.Default.databaseName;
             string databaseUsername = Settings.Default.databaseUsername;
             string databasePassword = Settings.Default.databasePassword;
-            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
             try
             {
                 //Creating the connection to the database and opening the connection
                 var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
+                //Checking if the connection is successful
                 if (conn.Ping())
                 {
                     Console.WriteLine("The connection to your database has been made successfully.");
                 }
+
+                //Creating the MySQLCommand object
                 MySqlCommand cmd = conn.CreateCommand();
 
+                //Trying to create the table
                 try
                 {
-                    //Creating the table
                     string createTable =
                         String.Format(
                             "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8",
@@ -360,6 +359,7 @@ namespace FRC_Scouting_V2
                 }
                 catch (MySqlException createException)
                 {
+                    Console.WriteLine("If there is an error it is most likely because the table is already made.");
                     Console.WriteLine("Errorcode: " + createException.ErrorCode);
                     Console.WriteLine(createException.Message);
                 }
@@ -368,7 +368,7 @@ namespace FRC_Scouting_V2
                 string insertDataString =
                     String.Format(
                         "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');",
-                        Settings.Default.currentTableName, CountRowsInDatabase(), Settings.Default.selectedTeamName,
+                        Settings.Default.currentTableName, (CountRowsInDatabase() + 1), Settings.Default.selectedTeamName,
                         Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
                         controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,
                         missedPickupsTally, xStarting, yStarting, comments);
