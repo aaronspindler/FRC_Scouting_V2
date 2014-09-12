@@ -22,10 +22,12 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Windows.Forms;
 
 //@author xNovax
+
 namespace FRC_Scouting_V2.UIs
 {
     public partial class Aerial_Assist_Team_Comparison_UI : UserControl
@@ -37,7 +39,6 @@ namespace FRC_Scouting_V2.UIs
 
         private void Aerial_Assist_Team_Comparison_UI_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

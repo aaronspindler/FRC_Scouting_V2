@@ -22,9 +22,11 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System.Windows.Forms;
 
 //@author xNovax
+
 namespace FRC_Scouting_V2.UIs
 {
     public partial class Aerial_Assist_Stats_UI : UserControl

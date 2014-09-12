@@ -23,9 +23,9 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
 using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -107,7 +107,7 @@ namespace FRC_Scouting_V2
                 }
             }
 
-            if (Settings.Default.allowExportToTextFile == true)
+            if (Settings.Default.allowExportToTextFile)
             {
                 allowExportToTextFileCheckBox.Checked = true;
             }
@@ -283,7 +283,7 @@ namespace FRC_Scouting_V2
 
         private void allowExportToTextFileCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (allowExportToTextFileCheckBox.Checked == true)
+            if (allowExportToTextFileCheckBox.Checked)
             {
                 Settings.Default.allowExportToTextFile = true;
                 Settings.Default.Save();
