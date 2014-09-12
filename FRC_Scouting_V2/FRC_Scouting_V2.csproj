@@ -72,34 +72,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AerialAssist_Northbay.cs">
+    <Compile Include="Events\AerialAssist_Northbay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AerialAssist_Northbay.Designer.cs">
+    <Compile Include="Events\AerialAssist_Northbay.Designer.cs">
       <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
     </Compile>
-    <Compile Include="AerialAssist_Northbay_Information.cs">
+    <Compile Include="Events\AerialAssist_Northbay_Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AerialAssist_Northbay_Information.Designer.cs">
+    <Compile Include="Events\AerialAssist_Northbay_Information.Designer.cs">
       <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="AerialAssist_RahChaCha.cs">
+    <Compile Include="Events\AerialAssist_RahChaCha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AerialAssist_RahChaCha.Designer.cs">
+    <Compile Include="Events\AerialAssist_RahChaCha.Designer.cs">
       <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
     </Compile>
-    <Compile Include="AerialAssist_RahChaCha_Information.cs">
+    <Compile Include="Events\AerialAssist_RahChaCha_Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AerialAssist_RahChaCha_Information.Designer.cs">
+    <Compile Include="Events\AerialAssist_RahChaCha_Information.Designer.cs">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Changelog.cs">
+    <Compile Include="Information Forms\Changelog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Changelog.Designer.cs">
+    <Compile Include="Information Forms\Changelog.Designer.cs">
       <DependentUpon>Changelog.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
@@ -108,10 +108,10 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="License.cs">
+    <Compile Include="Information Forms\License.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="License.Designer.cs">
+    <Compile Include="Information Forms\License.Designer.cs">
       <DependentUpon>License.cs</DependentUpon>
     </Compile>
     <Compile Include="MainSettings.cs">
@@ -121,10 +121,10 @@
       <DependentUpon>MainSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramInformation.cs">
+    <Compile Include="Information Forms\ProgramInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgramInformation.Designer.cs">
+    <Compile Include="Information Forms\ProgramInformation.Designer.cs">
       <DependentUpon>ProgramInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,16 +133,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Team3710Information.cs">
+    <Compile Include="Information Forms\Team3710Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Team3710Information.Designer.cs">
+    <Compile Include="Information Forms\Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scouting UIs\Aerial_Assist_Scouting_UI.cs">
+    <Compile Include="UIs\Aerial_Assist_Scouting_UI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Scouting UIs\Aerial_Assist_Scouting_UI.Designer.cs">
+    <Compile Include="UIs\Aerial_Assist_Scouting_UI.Designer.cs">
       <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="Test Items\TestForm.cs">
@@ -152,31 +152,31 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UsefulSnippets.cs" />
-    <EmbeddedResource Include="AerialAssist_Northbay.resx">
+    <EmbeddedResource Include="Events\AerialAssist_Northbay.resx">
       <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AerialAssist_Northbay_Information.resx">
+    <EmbeddedResource Include="Events\AerialAssist_Northbay_Information.resx">
       <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AerialAssist_RahChaCha.resx">
+    <EmbeddedResource Include="Events\AerialAssist_RahChaCha.resx">
       <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AerialAssist_RahChaCha_Information.resx">
+    <EmbeddedResource Include="Events\AerialAssist_RahChaCha_Information.resx">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Changelog.resx">
+    <EmbeddedResource Include="Information Forms\Changelog.resx">
       <DependentUpon>Changelog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="License.resx">
+    <EmbeddedResource Include="Information Forms\License.resx">
       <DependentUpon>License.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainSettings.resx">
       <DependentUpon>MainSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgramInformation.resx">
+    <EmbeddedResource Include="Information Forms\ProgramInformation.resx">
       <DependentUpon>ProgramInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -184,10 +184,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Team3710Information.resx">
+    <EmbeddedResource Include="Information Forms\Team3710Information.resx">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Scouting UIs\Aerial_Assist_Scouting_UI.resx">
+    <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test Items\TestForm.resx">
