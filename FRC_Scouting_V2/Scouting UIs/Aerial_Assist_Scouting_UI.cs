@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -37,6 +37,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
+
         private int autoHighTally;
         private int autoLowTally;
         private int autoPickupTally;
@@ -63,6 +64,37 @@ namespace FRC_Scouting_V2
             clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 258, 191);
             clearPanelGraphics.Dispose();
             PlotInitialLines();
+        }
+
+        //Getting the number of rows in the table
+        public int CountRowsInDatabase()
+        {
+            int numberOfRows = 0;
+
+            try
+            {
+                string databaseIP = Settings.Default.databaseIP;
+                string databasePort = Settings.Default.databasePort;
+                string databaseName = Settings.Default.databaseName;
+                string databaseUsername = Settings.Default.databaseUsername;
+                string databasePassword = Settings.Default.databasePassword;
+                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
+                {
+                    conn.Open();
+                    return numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+
+            return numberOfRows;
         }
 
         public void PlotInitialLines()
@@ -248,37 +280,6 @@ namespace FRC_Scouting_V2
             PlotInitialLines();
         }
 
-        //Getting the number of rows in the table
-        public int CountRowsInDatabase()
-        {
-            int numberOfRows = 0;
-
-            try
-            {
-                string databaseIP = Settings.Default.databaseIP;
-                string databasePort = Settings.Default.databasePort;
-                string databaseName = Settings.Default.databaseName;
-                string databaseUsername = Settings.Default.databaseUsername;
-                string databasePassword = Settings.Default.databasePassword;
-                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
-
-                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
-                {
-                    conn.Open();
-                    return numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-            }
-
-            return numberOfRows;
-        }
-
         private void submitDataButton_Click(object sender, EventArgs e)
         {
             UpdateLabels();
@@ -334,7 +335,7 @@ namespace FRC_Scouting_V2
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
                 conn.Open();
 
                 //Checking if the connection is successful
