@@ -102,6 +102,93 @@ namespace FRC_Scouting_V2
             teamSelector.Items.Add("4917 | Sir Lancer Bots");
             teamSelector.Items.Add("4930 | Electric Mayhem");
             teamSelector.Items.Add("5254 | Robot Raiders");
+
+
+            //Adding teams to teamCompSelector1 Control
+            teamCompSelector1.Items.Add("20 | The Rocketeers");
+            teamCompSelector1.Items.Add("48 | Delphi E.L.I.T.E.");
+            teamCompSelector1.Items.Add("174 | Arctic Warriors");
+            teamCompSelector1.Items.Add("188 | Woburn Robotics");
+            teamCompSelector1.Items.Add("191 | X-Cats");
+            teamCompSelector1.Items.Add("229 | Division by Zero");
+            teamCompSelector1.Items.Add("340 | G.R.R (Greater Rochester Robotics)");
+            teamCompSelector1.Items.Add("378 | The Circuit Stompers");
+            teamCompSelector1.Items.Add("578 | Red Raider Robotics");
+            teamCompSelector1.Items.Add("610 | The Coyotes");
+            teamCompSelector1.Items.Add("639 | Code Red Robotics");
+            teamCompSelector1.Items.Add("865 | Warp7");
+            teamCompSelector1.Items.Add("1114 | Simbotics");
+            teamCompSelector1.Items.Add("1126 | SPARX");
+            teamCompSelector1.Items.Add("1241 | THEORY6");
+            teamCompSelector1.Items.Add("1285 | The Big Bang");
+            teamCompSelector1.Items.Add("1334 | Red Devils");
+            teamCompSelector1.Items.Add("1405 | Finney Robotics");
+            teamCompSelector1.Items.Add("1507 | Warlocks");
+            teamCompSelector1.Items.Add("1511 | Rolling Thunder");
+            teamCompSelector1.Items.Add("1518 | Raiders Robotics");
+            teamCompSelector1.Items.Add("1551 | The Grapes of Wrath");
+            teamCompSelector1.Items.Add("1559 | Devil-Tech");
+            teamCompSelector1.Items.Add("1585 | Scitobor Robotics");
+            teamCompSelector1.Items.Add("1660 | Harlem Knights");
+            teamCompSelector1.Items.Add("2228 | Cougar Tech");
+            teamCompSelector1.Items.Add("2852 | DM High Voltage");
+            teamCompSelector1.Items.Add("2791 | Shaker Robotics");
+            teamCompSelector1.Items.Add("3003 | TAN(X)");
+            teamCompSelector1.Items.Add("3015 | Ranger Robotics");
+            teamCompSelector1.Items.Add("3683 | Team Dave");
+            teamCompSelector1.Items.Add("3710 | CyberFalcons");
+            teamCompSelector1.Items.Add("3951 | SUITS");
+            teamCompSelector1.Items.Add("4001 | Retro Rams");
+            teamCompSelector1.Items.Add("4039 | MakeShift Robotics");
+            teamCompSelector1.Items.Add("4343 | MaxTech");
+            teamCompSelector1.Items.Add("4476 | W.A.F.F.L.E.S");
+            teamCompSelector1.Items.Add("4914 | Panthers");
+            teamCompSelector1.Items.Add("4917 | Sir Lancer Bots");
+            teamCompSelector1.Items.Add("4930 | Electric Mayhem");
+            teamCompSelector1.Items.Add("5254 | Robot Raiders");
+
+            //Adding teams to teamCompSelector2 Control
+            teamCompSelector2.Items.Add("20 | The Rocketeers");
+            teamCompSelector2.Items.Add("48 | Delphi E.L.I.T.E.");
+            teamCompSelector2.Items.Add("174 | Arctic Warriors");
+            teamCompSelector2.Items.Add("188 | Woburn Robotics");
+            teamCompSelector2.Items.Add("191 | X-Cats");
+            teamCompSelector2.Items.Add("229 | Division by Zero");
+            teamCompSelector2.Items.Add("340 | G.R.R (Greater Rochester Robotics)");
+            teamCompSelector2.Items.Add("378 | The Circuit Stompers");
+            teamCompSelector2.Items.Add("578 | Red Raider Robotics");
+            teamCompSelector2.Items.Add("610 | The Coyotes");
+            teamCompSelector2.Items.Add("639 | Code Red Robotics");
+            teamCompSelector2.Items.Add("865 | Warp7");
+            teamCompSelector2.Items.Add("1114 | Simbotics");
+            teamCompSelector2.Items.Add("1126 | SPARX");
+            teamCompSelector2.Items.Add("1241 | THEORY6");
+            teamCompSelector2.Items.Add("1285 | The Big Bang");
+            teamCompSelector2.Items.Add("1334 | Red Devils");
+            teamCompSelector2.Items.Add("1405 | Finney Robotics");
+            teamCompSelector2.Items.Add("1507 | Warlocks");
+            teamCompSelector2.Items.Add("1511 | Rolling Thunder");
+            teamCompSelector2.Items.Add("1518 | Raiders Robotics");
+            teamCompSelector2.Items.Add("1551 | The Grapes of Wrath");
+            teamCompSelector2.Items.Add("1559 | Devil-Tech");
+            teamCompSelector2.Items.Add("1585 | Scitobor Robotics");
+            teamCompSelector2.Items.Add("1660 | Harlem Knights");
+            teamCompSelector2.Items.Add("2228 | Cougar Tech");
+            teamCompSelector2.Items.Add("2852 | DM High Voltage");
+            teamCompSelector2.Items.Add("2791 | Shaker Robotics");
+            teamCompSelector2.Items.Add("3003 | TAN(X)");
+            teamCompSelector2.Items.Add("3015 | Ranger Robotics");
+            teamCompSelector2.Items.Add("3683 | Team Dave");
+            teamCompSelector2.Items.Add("3710 | CyberFalcons");
+            teamCompSelector2.Items.Add("3951 | SUITS");
+            teamCompSelector2.Items.Add("4001 | Retro Rams");
+            teamCompSelector2.Items.Add("4039 | MakeShift Robotics");
+            teamCompSelector2.Items.Add("4343 | MaxTech");
+            teamCompSelector2.Items.Add("4476 | W.A.F.F.L.E.S");
+            teamCompSelector2.Items.Add("4914 | Panthers");
+            teamCompSelector2.Items.Add("4917 | Sir Lancer Bots");
+            teamCompSelector2.Items.Add("4930 | Electric Mayhem");
+            teamCompSelector2.Items.Add("5254 | Robot Raiders");
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
