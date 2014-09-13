@@ -51,7 +51,6 @@
             this.statsTabPage = new System.Windows.Forms.TabPage();
             this.aerial_Assist_Stats_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
-            this.aerial_Assist_Team_Comparison_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Team_Comparison_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -60,7 +59,6 @@
             this.teamInformationTabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.statsTabPage.SuspendLayout();
-            this.teamComparisonTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -347,7 +345,6 @@
             // 
             // teamComparisonTabPage
             // 
-            this.teamComparisonTabPage.Controls.Add(this.aerial_Assist_Team_Comparison_UI1);
             this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamComparisonTabPage.Name = "teamComparisonTabPage";
             this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -355,14 +352,6 @@
             this.teamComparisonTabPage.TabIndex = 3;
             this.teamComparisonTabPage.Text = "Team Comparison";
             this.teamComparisonTabPage.UseVisualStyleBackColor = true;
-            // 
-            // aerial_Assist_Team_Comparison_UI1
-            // 
-            this.aerial_Assist_Team_Comparison_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Team_Comparison_UI1.Location = new System.Drawing.Point(3, 3);
-            this.aerial_Assist_Team_Comparison_UI1.Name = "aerial_Assist_Team_Comparison_UI1";
-            this.aerial_Assist_Team_Comparison_UI1.Size = new System.Drawing.Size(592, 469);
-            this.aerial_Assist_Team_Comparison_UI1.TabIndex = 0;
             // 
             // AerialAssist_Northbay
             // 
@@ -388,7 +377,6 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.statsTabPage.ResumeLayout(false);
-            this.teamComparisonTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -417,6 +405,5 @@
         private System.Windows.Forms.TabPage statsTabPage;
         private UIs.Aerial_Assist_Stats_UI aerial_Assist_Stats_UI1;
         private System.Windows.Forms.TabPage teamComparisonTabPage;
-        private UIs.Aerial_Assist_Team_Comparison_UI aerial_Assist_Team_Comparison_UI1;
     }
 }

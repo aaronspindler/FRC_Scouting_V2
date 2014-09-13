@@ -47,14 +47,13 @@
             this.teamNameDisplay = new System.Windows.Forms.Label();
             this.statsTabPage = new System.Windows.Forms.TabPage();
             this.aerial_Assist_Stats_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI();
+            this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
-            this.aerial_Assist_Team_Comparison_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Team_Comparison_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -64,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPictureBox)).BeginInit();
             this.statsTabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.teamComparisonTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -365,6 +363,16 @@
             this.aerial_Assist_Stats_UI1.Size = new System.Drawing.Size(611, 475);
             this.aerial_Assist_Stats_UI1.TabIndex = 0;
             // 
+            // teamComparisonTabPage
+            // 
+            this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
+            this.teamComparisonTabPage.Name = "teamComparisonTabPage";
+            this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.teamComparisonTabPage.Size = new System.Drawing.Size(617, 481);
+            this.teamComparisonTabPage.TabIndex = 3;
+            this.teamComparisonTabPage.Text = "Team Comparison";
+            this.teamComparisonTabPage.UseVisualStyleBackColor = true;
+            // 
             // teamSelector
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.teamSelector, 8);
@@ -419,25 +427,6 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // teamComparisonTabPage
-            // 
-            this.teamComparisonTabPage.Controls.Add(this.aerial_Assist_Team_Comparison_UI1);
-            this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
-            this.teamComparisonTabPage.Name = "teamComparisonTabPage";
-            this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.teamComparisonTabPage.Size = new System.Drawing.Size(617, 481);
-            this.teamComparisonTabPage.TabIndex = 3;
-            this.teamComparisonTabPage.Text = "Team Comparison";
-            this.teamComparisonTabPage.UseVisualStyleBackColor = true;
-            // 
-            // aerial_Assist_Team_Comparison_UI1
-            // 
-            this.aerial_Assist_Team_Comparison_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Team_Comparison_UI1.Location = new System.Drawing.Point(3, 3);
-            this.aerial_Assist_Team_Comparison_UI1.Name = "aerial_Assist_Team_Comparison_UI1";
-            this.aerial_Assist_Team_Comparison_UI1.Size = new System.Drawing.Size(611, 475);
-            this.aerial_Assist_Team_Comparison_UI1.TabIndex = 0;
-            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,7 +452,6 @@
             this.statsTabPage.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.teamComparisonTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -495,6 +483,5 @@
         private System.Windows.Forms.TabPage statsTabPage;
         private UIs.Aerial_Assist_Stats_UI aerial_Assist_Stats_UI1;
         private System.Windows.Forms.TabPage teamComparisonTabPage;
-        private UIs.Aerial_Assist_Team_Comparison_UI aerial_Assist_Team_Comparison_UI1;
     }
 }
