@@ -33,11 +33,11 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         //Variables
+        private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear = 0;
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber = 0;
-        UsefulSnippets us = new UsefulSnippets();
 
         public AerialAssist_RahChaCha()
         {
@@ -59,19 +59,25 @@ namespace FRC_Scouting_V2
         {
             Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
             Settings.Default.Save();
+
+            //Starting the clock so that the current time will be displayed and updated every second
             timer.Start();
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
 
-            //Adding teams to TeamSelector Control
+            //Setting toolTips
+            var ToolTip1 = new ToolTip();
+            ToolTip1.SetToolTip(teamSelector,
+                "Use this to select the team that you want to enter data / look at data for!");
+            ToolTip1.SetToolTip(currentTimeDisplay,
+                "Displays the current time so that you don't get too focused on scouting and lose track of time.");
 
+            //Adding teams to TeamSelector Control
 
 
             //Adding teams to teamCompSelector1 Control
 
 
-
             //Adding teams to teamCompSelector2 Control
-
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,7 +90,6 @@ namespace FRC_Scouting_V2
 
             if (teamSelector.SelectedIndex == 0)
             {
-
             }
 
             teamNameDisplay.Text = teamName;

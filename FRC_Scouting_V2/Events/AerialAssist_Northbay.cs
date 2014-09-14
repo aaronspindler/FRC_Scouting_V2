@@ -33,11 +33,11 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_Northbay : Form
     {
         //Variables
+        private readonly UsefulSnippets us = new UsefulSnippets();
         private string selectedTeamLocation;
 
         private string selectedTeamName;
         private int selectedTeamNumber;
-        UsefulSnippets us = new UsefulSnippets();
 
         public AerialAssist_Northbay()
         {
@@ -331,7 +331,8 @@ namespace FRC_Scouting_V2
 
         private void doesThisHaveAnyDataViewingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("This event was built as a tester event so there is no way in the program to view the data. You can use a SQL Workbench program to look at your data for this event if you want.");
+            us.ShowInformationMessage(
+                "This event was built as a tester event so there is no way in the program to view the data. You can use a SQL Workbench program to look at your data for this event if you want.");
         }
     }
 }

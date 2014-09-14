@@ -133,6 +133,17 @@ namespace FRC_Scouting_V2
             //Set team colour items
             teamColourComboBox.Items.Add("Blue");
             teamColourComboBox.Items.Add("Red");
+
+
+            //Setting toolTips
+            var ToolTip1 = new ToolTip();
+            ToolTip1.SetToolTip(commentsRichTextBox,
+                "Enter any comments you have about that match that may not fit into any other boxes.");
+            ToolTip1.SetToolTip(startingLocationPanel,
+                "Just click on this panel to set where the robot's starting location is");
+            ToolTip1.SetToolTip(clearAndAdvanceButton,
+                "Click this button once you have submitted your data so that it will clear all of the boxes and advance you to the next match.");
+            ToolTip1.SetToolTip(submitDataButton, "Click once you have finished scouting a match");
         }
 
         private void autoHighMinusButton_Click(object sender, EventArgs e)
