@@ -1,3 +1,5 @@
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\DLLs\Newtonsoft.Json.dll
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\DLLs\MySql.Data.dll
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\FRC_Scouting_V2.exe.config
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\FRC_Scouting_V2.exe
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\FRC_Scouting_V2.pdb
@@ -18,9 +20,7 @@ C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scout
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.Team3710Information.resources
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.Aerial_Assist_Scouting_UI.resources
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.Test_Objects.TestForm.resources
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI.resources
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.csproj.GenerateResource.Cache
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.exe
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.pdb
-C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI.resources
-C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\DLLs\MySql.Data.dll
-C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\DLLs\Newtonsoft.Json.dll

@@ -34,10 +34,10 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private int rookieYear;
-
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber;
+        UsefulSnippets us = new UsefulSnippets();
 
         public AerialAssist_RahChaCha()
         {

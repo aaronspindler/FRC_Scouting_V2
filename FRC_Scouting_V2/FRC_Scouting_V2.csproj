@@ -139,7 +139,6 @@
     <Compile Include="Information Forms\Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeamInformation.cs" />
     <Compile Include="UIs\Aerial_Assist_Scouting_UI.cs">
       <SubType>UserControl</SubType>
     </Compile>

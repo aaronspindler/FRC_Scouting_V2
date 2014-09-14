@@ -35,6 +35,11 @@ namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
     {
+        public void ShowInformationMessage(string informationText)
+        {
+            MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public void ErrorOccured(string error)
         {
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

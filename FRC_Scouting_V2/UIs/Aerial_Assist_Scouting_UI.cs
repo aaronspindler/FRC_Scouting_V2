@@ -320,10 +320,6 @@ namespace FRC_Scouting_V2
                     writer.WriteLine("END OF FILE");
                     writer.Close();
                 }
-                else
-                {
-                    us.ErrorOccured("You did not select a file");
-                }
             }
 
             //MySQL Database

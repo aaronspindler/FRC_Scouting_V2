@@ -37,6 +37,7 @@ namespace FRC_Scouting_V2
 
         private string selectedTeamName;
         private int selectedTeamNumber;
+        UsefulSnippets us = new UsefulSnippets();
 
         public AerialAssist_Northbay()
         {
@@ -328,8 +329,9 @@ namespace FRC_Scouting_V2
             eventInformation.Show();
         }
 
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        private void doesThisHaveAnyDataViewingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            us.ShowInformationMessage("This event was built as a tester event so there is no way in the program to view the data. You can use a SQL Workbench program to look at your data for this event if you want.");
         }
     }
 }
