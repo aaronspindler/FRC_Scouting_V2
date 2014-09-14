@@ -48,17 +48,12 @@
             this.statsTabPage = new System.Windows.Forms.TabPage();
             this.aerial_Assist_Stats_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
-            this.teamSelector = new System.Windows.Forms.ComboBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.informationAboutTopTeamSelectorLabel = new System.Windows.Forms.Label();
-            this.teamCompSelector1 = new System.Windows.Forms.ComboBox();
-            this.teamCompSelector2 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.teamCompSelector1 = new System.Windows.Forms.ComboBox();
+            this.informationAboutTopTeamSelectorLabel = new System.Windows.Forms.Label();
+            this.teamCompSelector2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,7 +61,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -74,14 +68,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -90,6 +84,12 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.teamSelector = new System.Windows.Forms.ComboBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -99,8 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPictureBox)).BeginInit();
             this.statsTabPage.SuspendLayout();
             this.teamComparisonTabPage.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -412,60 +412,6 @@
             this.teamComparisonTabPage.Text = "Team Comparison";
             this.teamComparisonTabPage.UseVisualStyleBackColor = true;
             // 
-            // teamSelector
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.teamSelector, 8);
-            this.teamSelector.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamSelector.FormattingEnabled = true;
-            this.teamSelector.Location = new System.Drawing.Point(315, 3);
-            this.teamSelector.Name = "teamSelector";
-            this.teamSelector.Size = new System.Drawing.Size(313, 21);
-            this.teamSelector.TabIndex = 1;
-            this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
-            // 
-            // menuStrip1
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.menuStrip1, 8);
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.eventInformationToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(312, 25);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 21);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // eventInformationToolStripMenuItem
-            // 
-            this.eventInformationToolStripMenuItem.Name = "eventInformationToolStripMenuItem";
-            this.eventInformationToolStripMenuItem.Size = new System.Drawing.Size(114, 21);
-            this.eventInformationToolStripMenuItem.Text = "Event Information";
-            this.eventInformationToolStripMenuItem.Click += new System.EventHandler(this.eventInformationToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 16;
@@ -543,6 +489,38 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(611, 475);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label9, 4);
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Location = new System.Drawing.Point(307, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(146, 29);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Figure Out What To Put In These";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label1, 4);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Figure Out What To Put In These";
+            // 
+            // teamCompSelector1
+            // 
+            this.tableLayoutPanel4.SetColumnSpan(this.teamCompSelector1, 8);
+            this.teamCompSelector1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamCompSelector1.FormattingEnabled = true;
+            this.teamCompSelector1.Location = new System.Drawing.Point(3, 32);
+            this.teamCompSelector1.Name = "teamCompSelector1";
+            this.teamCompSelector1.Size = new System.Drawing.Size(298, 21);
+            this.teamCompSelector1.TabIndex = 1;
+            // 
             // informationAboutTopTeamSelectorLabel
             // 
             this.informationAboutTopTeamSelectorLabel.AutoSize = true;
@@ -557,16 +535,6 @@
     "b";
             this.informationAboutTopTeamSelectorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // teamCompSelector1
-            // 
-            this.tableLayoutPanel4.SetColumnSpan(this.teamCompSelector1, 8);
-            this.teamCompSelector1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamCompSelector1.FormattingEnabled = true;
-            this.teamCompSelector1.Location = new System.Drawing.Point(3, 32);
-            this.teamCompSelector1.Name = "teamCompSelector1";
-            this.teamCompSelector1.Size = new System.Drawing.Size(298, 21);
-            this.teamCompSelector1.TabIndex = 1;
-            // 
             // teamCompSelector2
             // 
             this.tableLayoutPanel4.SetColumnSpan(this.teamCompSelector2, 8);
@@ -576,17 +544,6 @@
             this.teamCompSelector2.Name = "teamCompSelector2";
             this.teamCompSelector2.Size = new System.Drawing.Size(301, 21);
             this.teamCompSelector2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label1, 4);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Figure Out What To Put In These";
             // 
             // label2
             // 
@@ -665,17 +622,6 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Figure Out What To Put In These";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label9, 4);
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(307, 58);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 29);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Figure Out What To Put In These";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -753,49 +699,16 @@
             this.label16.TabIndex = 17;
             this.label16.Text = "Figure Out What To Put In These";
             // 
-            // label17
+            // label22
             // 
-            this.label17.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label17, 4);
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(155, 116);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(146, 29);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Figure Out What To Put In These";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label18, 4);
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(155, 145);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(146, 29);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Figure Out What To Put In These";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label19, 4);
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(155, 174);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(146, 29);
-            this.label19.TabIndex = 20;
-            this.label19.Text = "Figure Out What To Put In These";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label20, 4);
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(155, 203);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(146, 29);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "Figure Out What To Put In These";
+            this.label22.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label22, 4);
+            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label22.Location = new System.Drawing.Point(155, 261);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(146, 29);
+            this.label22.TabIndex = 23;
+            this.label22.Text = "Figure Out What To Put In These";
             // 
             // label21
             // 
@@ -808,27 +721,49 @@
             this.label21.TabIndex = 22;
             this.label21.Text = "Figure Out What To Put In These";
             // 
-            // label22
+            // label20
             // 
-            this.label22.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label22, 4);
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(155, 261);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(146, 29);
-            this.label22.TabIndex = 23;
-            this.label22.Text = "Figure Out What To Put In These";
+            this.label20.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label20, 4);
+            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label20.Location = new System.Drawing.Point(155, 203);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(146, 29);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Figure Out What To Put In These";
             // 
-            // label23
+            // label19
             // 
-            this.label23.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label23, 4);
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(155, 58);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(146, 29);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "Figure Out What To Put In These";
+            this.label19.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label19, 4);
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.Location = new System.Drawing.Point(155, 174);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(146, 29);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Figure Out What To Put In These";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label18, 4);
+            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label18.Location = new System.Drawing.Point(155, 145);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(146, 29);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Figure Out What To Put In These";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label17, 4);
+            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label17.Location = new System.Drawing.Point(155, 116);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(146, 29);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Figure Out What To Put In These";
             // 
             // label24
             // 
@@ -840,6 +775,17 @@
             this.label24.Size = new System.Drawing.Size(146, 29);
             this.label24.TabIndex = 25;
             this.label24.Text = "Figure Out What To Put In These";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label23, 4);
+            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label23.Location = new System.Drawing.Point(155, 58);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(146, 29);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Figure Out What To Put In These";
             // 
             // label25
             // 
@@ -929,6 +875,60 @@
             this.label32.TabIndex = 33;
             this.label32.Text = "Figure Out What To Put In These";
             // 
+            // teamSelector
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.teamSelector, 8);
+            this.teamSelector.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamSelector.FormattingEnabled = true;
+            this.teamSelector.Location = new System.Drawing.Point(315, 3);
+            this.teamSelector.Name = "teamSelector";
+            this.teamSelector.Size = new System.Drawing.Size(313, 21);
+            this.teamSelector.TabIndex = 1;
+            this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
+            // 
+            // menuStrip1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.menuStrip1, 8);
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.eventInformationToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(312, 25);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 21);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // eventInformationToolStripMenuItem
+            // 
+            this.eventInformationToolStripMenuItem.Name = "eventInformationToolStripMenuItem";
+            this.eventInformationToolStripMenuItem.Size = new System.Drawing.Size(114, 21);
+            this.eventInformationToolStripMenuItem.Text = "Event Information";
+            this.eventInformationToolStripMenuItem.Click += new System.EventHandler(this.eventInformationToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,10 +953,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPictureBox)).EndInit();
             this.statsTabPage.ResumeLayout(false);
             this.teamComparisonTabPage.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
