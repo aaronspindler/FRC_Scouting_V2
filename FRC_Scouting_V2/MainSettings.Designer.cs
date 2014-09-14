@@ -40,6 +40,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalSettingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.allowExportToTextFileCheckBox = new System.Windows.Forms.CheckBox();
+            this.exportToTextFileLabel = new System.Windows.Forms.Label();
             this.clearConsoleOnToggleLabel = new System.Windows.Forms.Label();
             this.minimizeHomeCheckbox = new System.Windows.Forms.CheckBox();
             this.clickEmptyTextBoxChecker = new System.Windows.Forms.CheckBox();
@@ -63,8 +65,7 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
-            this.exportToTextFileLabel = new System.Windows.Forms.Label();
-            this.allowExportToTextFileCheckBox = new System.Windows.Forms.CheckBox();
+            this.testConnectionToDatabaseButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -224,6 +225,31 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(438, 226);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
+            // allowExportToTextFileCheckBox
+            // 
+            this.allowExportToTextFileCheckBox.AutoSize = true;
+            this.allowExportToTextFileCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.SetColumnSpan(this.allowExportToTextFileCheckBox, 4);
+            this.allowExportToTextFileCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allowExportToTextFileCheckBox.Location = new System.Drawing.Point(219, 143);
+            this.allowExportToTextFileCheckBox.Name = "allowExportToTextFileCheckBox";
+            this.allowExportToTextFileCheckBox.Size = new System.Drawing.Size(216, 22);
+            this.allowExportToTextFileCheckBox.TabIndex = 1;
+            this.allowExportToTextFileCheckBox.UseVisualStyleBackColor = true;
+            this.allowExportToTextFileCheckBox.CheckedChanged += new System.EventHandler(this.allowExportToTextFileCheckBox_CheckedChanged);
+            // 
+            // exportToTextFileLabel
+            // 
+            this.exportToTextFileLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.exportToTextFileLabel, 4);
+            this.exportToTextFileLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.exportToTextFileLabel.Location = new System.Drawing.Point(3, 140);
+            this.exportToTextFileLabel.Name = "exportToTextFileLabel";
+            this.exportToTextFileLabel.Size = new System.Drawing.Size(210, 28);
+            this.exportToTextFileLabel.TabIndex = 1;
+            this.exportToTextFileLabel.Text = "Allow Export of Scouting Data to TextFile";
+            this.exportToTextFileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // clearConsoleOnToggleLabel
             // 
             this.clearConsoleOnToggleLabel.AutoSize = true;
@@ -354,7 +380,7 @@
             this.databaseSettingsTab.Location = new System.Drawing.Point(4, 22);
             this.databaseSettingsTab.Name = "databaseSettingsTab";
             this.databaseSettingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.databaseSettingsTab.Size = new System.Drawing.Size(404, 232);
+            this.databaseSettingsTab.Size = new System.Drawing.Size(444, 232);
             this.databaseSettingsTab.TabIndex = 1;
             this.databaseSettingsTab.Text = "Database Settings";
             this.databaseSettingsTab.UseVisualStyleBackColor = true;
@@ -364,6 +390,7 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.testConnectionToDatabaseButton, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.databaseIPLabel, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.databaseUsernameLabel, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.databasePortLabel, 0, 3);
@@ -387,7 +414,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(398, 226);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(438, 226);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // databaseIPLabel
@@ -396,7 +423,7 @@
             this.databaseIPLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.databaseIPLabel.Location = new System.Drawing.Point(3, 56);
             this.databaseIPLabel.Name = "databaseIPLabel";
-            this.databaseIPLabel.Size = new System.Drawing.Size(193, 28);
+            this.databaseIPLabel.Size = new System.Drawing.Size(213, 28);
             this.databaseIPLabel.TabIndex = 1;
             this.databaseIPLabel.Text = "Database IP:";
             this.databaseIPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -407,7 +434,7 @@
             this.databaseUsernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.databaseUsernameLabel.Location = new System.Drawing.Point(3, 140);
             this.databaseUsernameLabel.Name = "databaseUsernameLabel";
-            this.databaseUsernameLabel.Size = new System.Drawing.Size(193, 28);
+            this.databaseUsernameLabel.Size = new System.Drawing.Size(213, 28);
             this.databaseUsernameLabel.TabIndex = 3;
             this.databaseUsernameLabel.Text = "Database Username:";
             this.databaseUsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -418,7 +445,7 @@
             this.databasePortLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.databasePortLabel.Location = new System.Drawing.Point(3, 84);
             this.databasePortLabel.Name = "databasePortLabel";
-            this.databasePortLabel.Size = new System.Drawing.Size(193, 28);
+            this.databasePortLabel.Size = new System.Drawing.Size(213, 28);
             this.databasePortLabel.TabIndex = 2;
             this.databasePortLabel.Text = "Database Port:";
             this.databasePortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -429,7 +456,7 @@
             this.databasePasswordLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.databasePasswordLabel.Location = new System.Drawing.Point(3, 168);
             this.databasePasswordLabel.Name = "databasePasswordLabel";
-            this.databasePasswordLabel.Size = new System.Drawing.Size(193, 28);
+            this.databasePasswordLabel.Size = new System.Drawing.Size(213, 28);
             this.databasePasswordLabel.TabIndex = 4;
             this.databasePasswordLabel.Text = "Database Password:";
             this.databasePasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -437,9 +464,9 @@
             // databaseIPTextBox
             // 
             this.databaseIPTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseIPTextBox.Location = new System.Drawing.Point(202, 59);
+            this.databaseIPTextBox.Location = new System.Drawing.Point(222, 59);
             this.databaseIPTextBox.Name = "databaseIPTextBox";
-            this.databaseIPTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databaseIPTextBox.Size = new System.Drawing.Size(213, 20);
             this.databaseIPTextBox.TabIndex = 5;
             this.databaseIPTextBox.Text = "Example: 192.168.1.1";
             this.databaseIPTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -449,9 +476,9 @@
             // databasePortTextBox
             // 
             this.databasePortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePortTextBox.Location = new System.Drawing.Point(202, 87);
+            this.databasePortTextBox.Location = new System.Drawing.Point(222, 87);
             this.databasePortTextBox.Name = "databasePortTextBox";
-            this.databasePortTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databasePortTextBox.Size = new System.Drawing.Size(213, 20);
             this.databasePortTextBox.TabIndex = 6;
             this.databasePortTextBox.Text = "Example: 3306";
             this.databasePortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -461,9 +488,9 @@
             // databaseUsernameTextBox
             // 
             this.databaseUsernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseUsernameTextBox.Location = new System.Drawing.Point(202, 143);
+            this.databaseUsernameTextBox.Location = new System.Drawing.Point(222, 143);
             this.databaseUsernameTextBox.Name = "databaseUsernameTextBox";
-            this.databaseUsernameTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databaseUsernameTextBox.Size = new System.Drawing.Size(213, 20);
             this.databaseUsernameTextBox.TabIndex = 7;
             this.databaseUsernameTextBox.Text = "Example: xNovax";
             this.databaseUsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -473,10 +500,10 @@
             // databasePasswordTextBox
             // 
             this.databasePasswordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePasswordTextBox.Location = new System.Drawing.Point(202, 171);
+            this.databasePasswordTextBox.Location = new System.Drawing.Point(222, 171);
             this.databasePasswordTextBox.Name = "databasePasswordTextBox";
             this.databasePasswordTextBox.PasswordChar = '*';
-            this.databasePasswordTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databasePasswordTextBox.Size = new System.Drawing.Size(213, 20);
             this.databasePasswordTextBox.TabIndex = 8;
             this.databasePasswordTextBox.Text = "Example: donotusepasswordasyourpassword";
             this.databasePasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -492,7 +519,7 @@
             this.databaseSettingsCautionLabel.Location = new System.Drawing.Point(3, 0);
             this.databaseSettingsCautionLabel.Name = "databaseSettingsCautionLabel";
             this.tableLayoutPanel3.SetRowSpan(this.databaseSettingsCautionLabel, 2);
-            this.databaseSettingsCautionLabel.Size = new System.Drawing.Size(392, 56);
+            this.databaseSettingsCautionLabel.Size = new System.Drawing.Size(432, 56);
             this.databaseSettingsCautionLabel.TabIndex = 9;
             this.databaseSettingsCautionLabel.Text = "Currently all settings are stored in plain text so be cautious what computer you " +
     "put your password into";
@@ -504,7 +531,7 @@
             this.databaseNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.databaseNameLabel.Location = new System.Drawing.Point(3, 112);
             this.databaseNameLabel.Name = "databaseNameLabel";
-            this.databaseNameLabel.Size = new System.Drawing.Size(193, 28);
+            this.databaseNameLabel.Size = new System.Drawing.Size(213, 28);
             this.databaseNameLabel.TabIndex = 10;
             this.databaseNameLabel.Text = "Database Name: ";
             this.databaseNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -512,39 +539,26 @@
             // databaseNameTextBox
             // 
             this.databaseNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseNameTextBox.Location = new System.Drawing.Point(202, 115);
+            this.databaseNameTextBox.Location = new System.Drawing.Point(222, 115);
             this.databaseNameTextBox.Name = "databaseNameTextBox";
-            this.databaseNameTextBox.Size = new System.Drawing.Size(193, 20);
+            this.databaseNameTextBox.Size = new System.Drawing.Size(213, 20);
             this.databaseNameTextBox.TabIndex = 11;
             this.databaseNameTextBox.Text = "Example: FRC_Scouting_Database";
             this.databaseNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
-            // exportToTextFileLabel
+            // testConnectionToDatabaseButton
             // 
-            this.exportToTextFileLabel.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.exportToTextFileLabel, 4);
-            this.exportToTextFileLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.exportToTextFileLabel.Location = new System.Drawing.Point(3, 140);
-            this.exportToTextFileLabel.Name = "exportToTextFileLabel";
-            this.exportToTextFileLabel.Size = new System.Drawing.Size(210, 28);
-            this.exportToTextFileLabel.TabIndex = 1;
-            this.exportToTextFileLabel.Text = "Allow Export of Scouting Data to TextFile";
-            this.exportToTextFileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // allowExportToTextFileCheckBox
-            // 
-            this.allowExportToTextFileCheckBox.AutoSize = true;
-            this.allowExportToTextFileCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tableLayoutPanel2.SetColumnSpan(this.allowExportToTextFileCheckBox, 4);
-            this.allowExportToTextFileCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allowExportToTextFileCheckBox.Location = new System.Drawing.Point(219, 143);
-            this.allowExportToTextFileCheckBox.Name = "allowExportToTextFileCheckBox";
-            this.allowExportToTextFileCheckBox.Size = new System.Drawing.Size(216, 22);
-            this.allowExportToTextFileCheckBox.TabIndex = 1;
-            this.allowExportToTextFileCheckBox.UseVisualStyleBackColor = true;
-            this.allowExportToTextFileCheckBox.CheckedChanged += new System.EventHandler(this.allowExportToTextFileCheckBox_CheckedChanged);
+            this.tableLayoutPanel3.SetColumnSpan(this.testConnectionToDatabaseButton, 2);
+            this.testConnectionToDatabaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(3, 199);
+            this.testConnectionToDatabaseButton.Name = "testConnectionToDatabaseButton";
+            this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(432, 24);
+            this.testConnectionToDatabaseButton.TabIndex = 1;
+            this.testConnectionToDatabaseButton.Text = "Test Connection To Database";
+            this.testConnectionToDatabaseButton.UseVisualStyleBackColor = true;
+            this.testConnectionToDatabaseButton.Click += new System.EventHandler(this.testConnectionToDatabaseButton_Click);
             // 
             // MainSettings
             // 
@@ -612,5 +626,6 @@
         private System.Windows.Forms.CheckBox clearConsoleOnToggleCheckBox;
         private System.Windows.Forms.CheckBox allowExportToTextFileCheckBox;
         private System.Windows.Forms.Label exportToTextFileLabel;
+        private System.Windows.Forms.Button testConnectionToDatabaseButton;
     }
 }

@@ -26,6 +26,7 @@
 using System;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -295,6 +296,42 @@ namespace FRC_Scouting_V2
                     Settings.Default.allowExportToTextFile = false;
                     Settings.Default.Save();
                 }
+            }
+        }
+
+        private void testConnectionToDatabaseButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var databaseIP = Settings.Default.databaseIP;
+                var databasePort = Settings.Default.databasePort;
+                var databaseName = Settings.Default.databaseName;
+                var databaseUsername = Settings.Default.databaseUsername;
+                var databasePassword = Settings.Default.databasePassword;
+                var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                conn.Open();
+
+                if (conn.Ping() == true)
+                {
+                    Console.WriteLine("You have successfully connected to your database!");
+                    us.ShowInformationMessage("You have successfully connected to your database!");
+                }
+                else
+                {
+                    Console.WriteLine("You have unsuccessfully connected to your database!");
+                    us.ShowInformationMessage("You have unsuccessfully connected to your database!");
+                }
+
+                conn.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+                us.ErrorOccured("Something went wrong with your database! Make sure that your connection info is correct.");
             }
         }
     }
