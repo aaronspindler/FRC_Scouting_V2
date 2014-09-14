@@ -24,12 +24,13 @@
 //===============================================================================
 
 //@author xNovax
+
 namespace FRC_Scouting_V2
 {
-    class TeamInformation
+    internal class TeamInformation
     {
         public string website { get; set; }
-        public string name { get; set;}
+        public string name { get; set; }
         public string locality { get; set; }
         public int rookieYear { get; set; }
         public string region { get; set; }
