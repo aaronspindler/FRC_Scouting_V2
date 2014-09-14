@@ -45,7 +45,6 @@ namespace FRC_Scouting_V2
         private int controlledHighTally;
         private int controlledLowTally;
         private int controlledPickupTally;
-        private int entryID = 0;
         private int hotGoalTally;
         private int matchNumber = 1;
         private int missedPickupsTally;

@@ -33,10 +33,10 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         //Variables
-        private int rookieYear;
+        private int rookieYear = 0;
         private string teamLocation = ("");
         private string teamName = ("");
-        private int teamNumber;
+        private int teamNumber = 0;
         UsefulSnippets us = new UsefulSnippets();
 
         public AerialAssist_RahChaCha()
@@ -59,39 +59,32 @@ namespace FRC_Scouting_V2
         {
             Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
             Settings.Default.Save();
+            timer.Start();
+            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
 
             //Adding teams to TeamSelector Control
-            
+
 
 
             //Adding teams to teamCompSelector1 Control
-            
+
 
 
             //Adding teams to teamCompSelector2 Control
-            
+
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //teamName = ("");
+            //teamNumber = 0;
+            //teamLocation = ("");
+            //rookieYear = 0;
+            //teamLogoPictureBox.Image = Resources.;
+
             if (teamSelector.SelectedIndex == 0)
             {
-                teamName = ("The Rocketeers");
-                teamNumber = 20;
-                teamLocation = ("Clifton Park, NY, USA");
-                rookieYear = 1992;
-                teamLogoPictureBox.Image = Resources.FRC20_Logo;
-            }
-            else
-            {
-                if (teamSelector.SelectedIndex == 1)
-                {
-                    teamName = ("Delphi E.L.I.T.E");
-                    teamNumber = 48;
-                    teamLocation = ("Warren, OH, USA");
-                    rookieYear = 1998;
-                    teamLogoPictureBox.Image = Resources.FRC48_Logo;
-                }
+
             }
 
             teamNameDisplay.Text = teamName;
@@ -102,6 +95,11 @@ namespace FRC_Scouting_V2
             Settings.Default.selectedTeamName = teamName;
             Settings.Default.selectedTeamNumber = teamNumber;
             Settings.Default.Save();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
         }
     }
 }
