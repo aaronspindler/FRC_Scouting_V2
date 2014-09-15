@@ -27,6 +27,7 @@ using System;
 using System.Net;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
+using System.Reflection;
 
 namespace FRC_Scouting_V2
 {
@@ -94,7 +95,7 @@ namespace FRC_Scouting_V2
             string url = ("http://www.thebluealliance.com/api/v2/team/frc3710");
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:1.0.0.0");
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
             try
             {
