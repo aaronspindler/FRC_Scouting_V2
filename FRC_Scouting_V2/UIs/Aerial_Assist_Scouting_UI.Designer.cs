@@ -720,12 +720,12 @@
             // 
             this.startingLocationPanel.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel1.SetColumnSpan(this.startingLocationPanel, 7);
-            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.startingLocationPanel.Location = new System.Drawing.Point(308, 56);
             this.startingLocationPanel.Margin = new System.Windows.Forms.Padding(2);
             this.startingLocationPanel.Name = "startingLocationPanel";
-            this.tableLayoutPanel1.SetRowSpan(this.startingLocationPanel, 7);
-            this.startingLocationPanel.Size = new System.Drawing.Size(234, 185);
+            this.tableLayoutPanel1.SetRowSpan(this.startingLocationPanel, 8);
+            this.startingLocationPanel.Size = new System.Drawing.Size(234, 192);
             this.startingLocationPanel.TabIndex = 129;
             this.startingLocationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startingLocationPanel_Paint);
             this.startingLocationPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.startingLocationPanel_MouseClick);

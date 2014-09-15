@@ -41,6 +41,7 @@ namespace FRC_Scouting_V2
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber = 0;
+        string url = ("http://www.thebluealliance.com/api/v2/team/frc3710");
 
         public AerialAssist_RahChaCha()
         {
@@ -93,7 +94,6 @@ namespace FRC_Scouting_V2
             //rookieYear = 0;
             //teamLogoPictureBox.Image = Resources.;
 
-            string url = ("http://www.thebluealliance.com/api/v2/team/frc3710");
             string downloadedData;
             var wc = new WebClient();
             wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version.ToString());
@@ -101,10 +101,10 @@ namespace FRC_Scouting_V2
             try
             {
                 downloadedData = (wc.DownloadString(url));
-                JsonSerializer serializer = new JsonSerializer();
+                JsonSerializer serialize = new JsonSerializer();
                 TeamInformationJSONData deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
-                MessageBox.Show(Convert.ToString(deserializedData.nickname));
+                MessageBox.Show(Convert.ToString("\n" + deserializedData.nickname));
 
             }
             catch (Exception webError)
