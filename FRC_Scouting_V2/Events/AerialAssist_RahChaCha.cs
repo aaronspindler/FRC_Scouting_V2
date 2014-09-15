@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -37,6 +37,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
+
         private int rookieYear;
         private string teamLocation = ("");
         private string teamName = ("");
@@ -78,13 +79,10 @@ namespace FRC_Scouting_V2
             //Adding teams to TeamSelector Control
             teamSelector.Items.Add("Test");
 
-
             //Adding teams to teamCompSelector1 Control
-
 
             //Adding teams to teamCompSelector2 Control
         }
-
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -107,7 +105,6 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Message: " + webError.Message);
             }
-
 
             teamNameDisplay.Text = teamName;
             teamNumberDisplay.Text = Convert.ToString(teamNumber);
@@ -133,14 +130,23 @@ namespace FRC_Scouting_V2
         public class TeamInformationJSONData
         {
             public string website { get; set; }
+
             public string name { get; set; }
+
             public string locality { get; set; }
+
             public int rookie_year { get; set; }
+
             public string region { get; set; }
+
             public int team_number { get; set; }
+
             public string location { get; set; }
+
             public string key { get; set; }
+
             public string country_name { get; set; }
+
             public string nickname { get; set; }
         }
     }

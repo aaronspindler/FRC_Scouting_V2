@@ -23,9 +23,9 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
 using System;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -34,6 +34,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
+
         private string selectedTeamLocation;
 
         private string selectedTeamName;
