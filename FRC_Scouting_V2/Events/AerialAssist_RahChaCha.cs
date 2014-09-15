@@ -25,9 +25,9 @@
 
 using System;
 using System.Net;
+using System.Reflection;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
-using System.Reflection;
 using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
@@ -37,11 +37,11 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
-        private int rookieYear = 0;
+        private int rookieYear;
         private string teamLocation = ("");
         private string teamName = ("");
-        private int teamNumber = 0;
-        string url = ("http://www.thebluealliance.com/api/v2/team/frc3710");
+        private int teamNumber;
+        private string url = ("http://www.thebluealliance.com/api/v2/team/frc610");
 
         public AerialAssist_RahChaCha()
         {
@@ -90,12 +90,13 @@ namespace FRC_Scouting_V2
         {
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version.ToString());
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 downloadedData = (wc.DownloadString(url));
-                JsonSerializer serialize = new JsonSerializer();
-                TeamInformationJSONData deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
+                var serialize = new JsonSerializer();
+                var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
                 teamName = Convert.ToString(deserializedData.nickname);
                 teamNumber = Convert.ToInt16(deserializedData.team_number);
@@ -121,6 +122,12 @@ namespace FRC_Scouting_V2
         private void timer_Tick(object sender, EventArgs e)
         {
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
+        }
+
+        private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
         }
 
         public class TeamInformationJSONData

@@ -93,6 +93,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.aerial_Assist_Stats_UI1 = new FRC_Scouting_V2.UIs.Aerial_Assist_Stats_UI();
+            this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -910,6 +911,8 @@
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.howComeICannotSeeAnyTeamInformationToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.helpToolStripMenuItem.Text = "Help";
@@ -951,6 +954,13 @@
             this.aerial_Assist_Stats_UI1.Name = "aerial_Assist_Stats_UI1";
             this.aerial_Assist_Stats_UI1.Size = new System.Drawing.Size(611, 458);
             this.aerial_Assist_Stats_UI1.TabIndex = 0;
+            // 
+            // howComeICannotSeeAnyTeamInformationToolStripMenuItem
+            // 
+            this.howComeICannotSeeAnyTeamInformationToolStripMenuItem.Name = "howComeICannotSeeAnyTeamInformationToolStripMenuItem";
+            this.howComeICannotSeeAnyTeamInformationToolStripMenuItem.Size = new System.Drawing.Size(321, 22);
+            this.howComeICannotSeeAnyTeamInformationToolStripMenuItem.Text = "How come I cannot see any team information?";
+            this.howComeICannotSeeAnyTeamInformationToolStripMenuItem.Click += new System.EventHandler(this.howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click);
             // 
             // AerialAssist_RahChaCha
             // 
@@ -1048,5 +1058,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label currentTimeDisplay;
+        private System.Windows.Forms.ToolStripMenuItem howComeICannotSeeAnyTeamInformationToolStripMenuItem;
     }
 }
