@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.Net;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 
@@ -72,6 +73,7 @@ namespace FRC_Scouting_V2
                 "Displays the current time so that you don't get too focused on scouting and lose track of time.");
 
             //Adding teams to TeamSelector Control
+            teamSelector.Items.Add("Hello");
 
 
             //Adding teams to teamCompSelector1 Control
@@ -87,6 +89,22 @@ namespace FRC_Scouting_V2
             //teamLocation = ("");
             //rookieYear = 0;
             //teamLogoPictureBox.Image = Resources.;
+
+            string url = ("http://www.thebluealliance.com/api/v2/team/frc3710");
+            string downloadedData;
+            WebClient wc = new WebClient();
+            wc.Headers["User-Agent"] = "3710-xNovax:FRC_Scouting_V2:1.0.0.0";
+
+            try
+            {
+                downloadedData = Convert.ToString(wc.DownloadString(url));
+                MessageBox.Show(downloadedData);
+            }
+            catch (Exception webError)
+            {
+                Console.WriteLine("Error Message: " +  webError.Message);
+                MessageBox.Show("Error Message: " + webError.Message);
+            }
 
             if (teamSelector.SelectedIndex == 0)
             {
