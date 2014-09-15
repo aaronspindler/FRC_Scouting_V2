@@ -92,7 +92,6 @@ namespace FRC_Scouting_V2
             try
             {
                 downloadedData = (wc.DownloadString(url));
-                var serialize = new JsonSerializer();
                 var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
                 teamName = Convert.ToString(deserializedData.nickname);
