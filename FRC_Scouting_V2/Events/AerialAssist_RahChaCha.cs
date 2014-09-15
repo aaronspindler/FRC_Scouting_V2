@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -88,7 +88,8 @@ namespace FRC_Scouting_V2
         {
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 downloadedData = (wc.DownloadString(url));

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.rookieYearLabel = new System.Windows.Forms.Label();
             this.enterTeamNumberLabel = new System.Windows.Forms.Label();
             this.teamNameLabel = new System.Windows.Forms.Label();
             this.teamNumberLabel = new System.Windows.Forms.Label();
             this.teamLocationLabel = new System.Windows.Forms.Label();
             this.teamWebsiteLabel = new System.Windows.Forms.Label();
-            this.teamNameDisplay = new System.Windows.Forms.Label();
-            this.teamNumberDisplay = new System.Windows.Forms.Label();
             this.teamLocationDisplay = new System.Windows.Forms.Label();
+            this.teamNumberDisplay = new System.Windows.Forms.Label();
+            this.teamNameDisplay = new System.Windows.Forms.Label();
             this.teamWebsiteDisplay = new System.Windows.Forms.Label();
             this.teamNumberTextBox = new System.Windows.Forms.TextBox();
             this.findTeamButton = new System.Windows.Forms.Button();
-            this.rookieYearLabel = new System.Windows.Forms.Label();
             this.rookieYearDisplay = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(989, 354);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // rookieYearLabel
+            // 
+            this.rookieYearLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.rookieYearLabel, 3);
+            this.rookieYearLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rookieYearLabel.Location = new System.Drawing.Point(3, 300);
+            this.rookieYearLabel.Name = "rookieYearLabel";
+            this.rookieYearLabel.Size = new System.Drawing.Size(363, 50);
+            this.rookieYearLabel.TabIndex = 2;
+            this.rookieYearLabel.Text = "Rookie Year: ";
+            this.rookieYearLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // enterTeamNumberLabel
             // 
@@ -144,16 +156,16 @@
             this.teamWebsiteLabel.Text = "Team Website: ";
             this.teamWebsiteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // teamNameDisplay
+            // teamLocationDisplay
             // 
-            this.teamNameDisplay.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.teamNameDisplay, 5);
-            this.teamNameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNameDisplay.Location = new System.Drawing.Point(372, 100);
-            this.teamNameDisplay.Name = "teamNameDisplay";
-            this.teamNameDisplay.Size = new System.Drawing.Size(614, 50);
-            this.teamNameDisplay.TabIndex = 9;
-            this.teamNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.teamLocationDisplay.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.teamLocationDisplay, 5);
+            this.teamLocationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamLocationDisplay.Location = new System.Drawing.Point(372, 200);
+            this.teamLocationDisplay.Name = "teamLocationDisplay";
+            this.teamLocationDisplay.Size = new System.Drawing.Size(614, 50);
+            this.teamLocationDisplay.TabIndex = 11;
+            this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamNumberDisplay
             // 
@@ -166,16 +178,16 @@
             this.teamNumberDisplay.TabIndex = 10;
             this.teamNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // teamLocationDisplay
+            // teamNameDisplay
             // 
-            this.teamLocationDisplay.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.teamLocationDisplay, 5);
-            this.teamLocationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamLocationDisplay.Location = new System.Drawing.Point(372, 200);
-            this.teamLocationDisplay.Name = "teamLocationDisplay";
-            this.teamLocationDisplay.Size = new System.Drawing.Size(614, 50);
-            this.teamLocationDisplay.TabIndex = 11;
-            this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.teamNameDisplay.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.teamNameDisplay, 5);
+            this.teamNameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamNameDisplay.Location = new System.Drawing.Point(372, 100);
+            this.teamNameDisplay.Name = "teamNameDisplay";
+            this.teamNameDisplay.Size = new System.Drawing.Size(614, 50);
+            this.teamNameDisplay.TabIndex = 9;
+            this.teamNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamWebsiteDisplay
             // 
@@ -211,18 +223,6 @@
             this.findTeamButton.Text = "Find Team";
             this.findTeamButton.UseVisualStyleBackColor = true;
             this.findTeamButton.Click += new System.EventHandler(this.findTeamButton_Click);
-            // 
-            // rookieYearLabel
-            // 
-            this.rookieYearLabel.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.rookieYearLabel, 3);
-            this.rookieYearLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rookieYearLabel.Location = new System.Drawing.Point(3, 300);
-            this.rookieYearLabel.Name = "rookieYearLabel";
-            this.rookieYearLabel.Size = new System.Drawing.Size(363, 50);
-            this.rookieYearLabel.TabIndex = 2;
-            this.rookieYearLabel.Text = "Rookie Year: ";
-            this.rookieYearLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rookieYearDisplay
             // 

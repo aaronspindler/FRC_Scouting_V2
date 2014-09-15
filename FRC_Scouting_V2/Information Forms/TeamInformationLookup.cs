@@ -26,24 +26,27 @@
 using System;
 using System.Net;
 using System.Reflection;
+using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 using Newtonsoft.Json;
 
 //@author xNovax
+
 namespace FRC_Scouting_V2.Information_Forms
 {
     public partial class TeamInformationLookup : GeneralFormTemplate.GeneralFormTemplate
     {
+        private int rookieYear;
+        private string teamLocation;
+        private string teamName;
+        private int teamNumber;
+        private string teamWebsite;
+        private string url;
+
         public TeamInformationLookup()
         {
             InitializeComponent();
         }
-
-        string url;
-        int teamNumber;
-        private string teamName;
-        private string teamLocation;
-        private string teamWebsite;
-        private int rookieYear;
 
         private void teamNumberTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -57,7 +60,8 @@ namespace FRC_Scouting_V2.Information_Forms
         {
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 url = ("http://www.thebluealliance.com/api/v2/team/frc" + Convert.ToString(teamNumber));
@@ -82,6 +86,14 @@ namespace FRC_Scouting_V2.Information_Forms
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
         }
 
+        private void teamNumberTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                teamNumberTextBox.Text = ("");
+            }
+        }
+
         public class TeamInformationJSONData
         {
             public string website { get; set; }
@@ -94,14 +106,6 @@ namespace FRC_Scouting_V2.Information_Forms
             public string key { get; set; }
             public string country_name { get; set; }
             public string nickname { get; set; }
-        }
-
-        private void teamNumberTextBox_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-            if (FRC_Scouting_V2.Properties.Settings.Default.clickToEmptyTextBoxes == true)
-            {
-                teamNumberTextBox.Text = ("");
-            }
         }
     }
 }
