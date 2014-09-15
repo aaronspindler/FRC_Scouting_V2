@@ -76,7 +76,7 @@ namespace FRC_Scouting_V2
                 "Displays the current time so that you don't get too focused on scouting and lose track of time.");
 
             //Adding teams to TeamSelector Control
-            teamSelector.Items.Add("Hello");
+            teamSelector.Items.Add("Test");
 
 
             //Adding teams to teamCompSelector1 Control
@@ -88,24 +88,19 @@ namespace FRC_Scouting_V2
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //teamName = ("");
-            //teamNumber = 0;
-            //teamLocation = ("");
-            //rookieYear = 0;
-            //teamLogoPictureBox.Image = Resources.;
-
             string downloadedData;
             var wc = new WebClient();
             wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-
             try
             {
                 downloadedData = (wc.DownloadString(url));
                 JsonSerializer serialize = new JsonSerializer();
                 TeamInformationJSONData deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
-                MessageBox.Show(Convert.ToString("\n" + deserializedData.nickname));
-
+                teamName = Convert.ToString(deserializedData.nickname);
+                teamNumber = Convert.ToInt16(deserializedData.team_number);
+                teamLocation = Convert.ToString(deserializedData.location);
+                rookieYear = Convert.ToInt32(deserializedData.rookie_year);
             }
             catch (Exception webError)
             {
