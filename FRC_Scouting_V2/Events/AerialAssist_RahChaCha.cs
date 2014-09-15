@@ -82,6 +82,7 @@ namespace FRC_Scouting_V2
             //Adding teams to teamCompSelector2 Control
         }
 
+
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             //teamName = ("");
@@ -92,8 +93,8 @@ namespace FRC_Scouting_V2
 
             string url = ("http://www.thebluealliance.com/api/v2/team/frc3710");
             string downloadedData;
-            WebClient wc = new WebClient();
-            wc.Headers["User-Agent"] = "3710-xNovax:FRC_Scouting_V2:1.0.0.0";
+            var wc = new WebClient();
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:1.0.0.0");
 
             try
             {
@@ -102,24 +103,37 @@ namespace FRC_Scouting_V2
             }
             catch (Exception webError)
             {
-                Console.WriteLine("Error Message: " +  webError.Message);
-                MessageBox.Show("Error Message: " + webError.Message);
+                Console.WriteLine("Error Message: " + webError.Message);
             }
 
 
-            //teamNameDisplay.Text = teamName;
-            //teamNumberDisplay.Text = Convert.ToString(teamNumber);
-            //teamLocationDisplay.Text = teamLocation;
-            //rookieYearDisplay.Text = Convert.ToString(rookieYear);
+            teamNameDisplay.Text = teamName;
+            teamNumberDisplay.Text = Convert.ToString(teamNumber);
+            teamLocationDisplay.Text = teamLocation;
+            rookieYearDisplay.Text = Convert.ToString(rookieYear);
 
-            //Settings.Default.selectedTeamName = teamName;
-            //Settings.Default.selectedTeamNumber = teamNumber;
-            //Settings.Default.Save();
+            Settings.Default.selectedTeamName = teamName;
+            Settings.Default.selectedTeamNumber = teamNumber;
+            Settings.Default.Save();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
+        }
+
+        public class TeamInformationJSONData
+        {
+            public string website { get; set; }
+            public string name { get; set; }
+            public string locality { get; set; }
+            public int rookie_year { get; set; }
+            public string region { get; set; }
+            public int team_number { get; set; }
+            public string location { get; set; }
+            public string key { get; set; }
+            public string country_name { get; set; }
+            public string nickname { get; set; }
         }
     }
 }

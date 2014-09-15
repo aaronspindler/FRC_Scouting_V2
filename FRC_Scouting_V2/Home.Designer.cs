@@ -65,7 +65,7 @@
             this.tableLayoutPanel1.Controls.Add(this.eventSelector, 4, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
@@ -87,7 +87,7 @@
             this.frcLogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.frcLogoPictureBox.Image = global::FRC_Scouting_V2.Properties.Resources.FRC_LOGO;
             this.frcLogoPictureBox.Location = new System.Drawing.Point(6, 54);
-            this.frcLogoPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.frcLogoPictureBox.Margin = new System.Windows.Forms.Padding(6);
             this.frcLogoPictureBox.Name = "frcLogoPictureBox";
             this.tableLayoutPanel1.SetRowSpan(this.frcLogoPictureBox, 8);
             this.frcLogoPictureBox.Size = new System.Drawing.Size(980, 669);
@@ -123,7 +123,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -204,7 +204,7 @@
             this.eventSelector.FormattingEnabled = true;
             this.eventSelector.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.eventSelector.Location = new System.Drawing.Point(502, 6);
-            this.eventSelector.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.eventSelector.Margin = new System.Windows.Forms.Padding(6);
             this.eventSelector.Name = "eventSelector";
             this.eventSelector.Size = new System.Drawing.Size(484, 33);
             this.eventSelector.TabIndex = 2;
@@ -220,7 +220,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "FRC_Scouting_V2";
