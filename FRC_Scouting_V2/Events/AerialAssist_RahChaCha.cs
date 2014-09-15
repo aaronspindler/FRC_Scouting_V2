@@ -28,6 +28,7 @@ using System.Net;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -100,7 +101,11 @@ namespace FRC_Scouting_V2
             try
             {
                 downloadedData = (wc.DownloadString(url));
-                MessageBox.Show(downloadedData);
+                JsonSerializer serializer = new JsonSerializer();
+                TeamInformationJSONData deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
+
+                MessageBox.Show(Convert.ToString(deserializedData.nickname));
+
             }
             catch (Exception webError)
             {
