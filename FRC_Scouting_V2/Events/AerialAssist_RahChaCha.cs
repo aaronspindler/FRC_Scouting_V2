@@ -97,7 +97,7 @@ namespace FRC_Scouting_V2
 
             try
             {
-                downloadedData = Convert.ToString(wc.DownloadString(url));
+                downloadedData = (wc.DownloadString(url));
                 MessageBox.Show(downloadedData);
             }
             catch (Exception webError)
@@ -106,18 +106,15 @@ namespace FRC_Scouting_V2
                 MessageBox.Show("Error Message: " + webError.Message);
             }
 
-            if (teamSelector.SelectedIndex == 0)
-            {
-            }
 
-            teamNameDisplay.Text = teamName;
-            teamNumberDisplay.Text = Convert.ToString(teamNumber);
-            teamLocationDisplay.Text = teamLocation;
-            rookieYearDisplay.Text = Convert.ToString(rookieYear);
+            //teamNameDisplay.Text = teamName;
+            //teamNumberDisplay.Text = Convert.ToString(teamNumber);
+            //teamLocationDisplay.Text = teamLocation;
+            //rookieYearDisplay.Text = Convert.ToString(rookieYear);
 
-            Settings.Default.selectedTeamName = teamName;
-            Settings.Default.selectedTeamNumber = teamNumber;
-            Settings.Default.Save();
+            //Settings.Default.selectedTeamName = teamName;
+            //Settings.Default.selectedTeamNumber = teamNumber;
+            //Settings.Default.Save();
         }
 
         private void timer_Tick(object sender, EventArgs e)
