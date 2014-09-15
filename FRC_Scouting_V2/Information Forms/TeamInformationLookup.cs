@@ -60,7 +60,7 @@ namespace FRC_Scouting_V2.Information_Forms
             wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                url = ("http://www.thebluealliance.com/api/v2/team/frc3710");
+                url = ("http://www.thebluealliance.com/api/v2/team/frc" + Convert.ToString(teamNumber));
                 downloadedData = (wc.DownloadString(url));
                 var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
