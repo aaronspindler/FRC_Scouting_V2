@@ -44,6 +44,7 @@
             this.toggleConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ComboBox();
+            this.teamInformationLookupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -133,7 +134,8 @@
             this.changelogToolStripMenuItem,
             this.fRC3710TeamInformationToolStripMenuItem,
             this.programInformationToolStripMenuItem,
-            this.licenseInformationToolStripMenuItem});
+            this.licenseInformationToolStripMenuItem,
+            this.teamInformationLookupToolStripMenuItem});
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
             this.informationToolStripMenuItem.Size = new System.Drawing.Size(152, 40);
             this.informationToolStripMenuItem.Text = "Information";
@@ -211,6 +213,13 @@
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged);
             this.eventSelector.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eventSelector_KeyDown);
             // 
+            // teamInformationLookupToolStripMenuItem
+            // 
+            this.teamInformationLookupToolStripMenuItem.Name = "teamInformationLookupToolStripMenuItem";
+            this.teamInformationLookupToolStripMenuItem.Size = new System.Drawing.Size(388, 36);
+            this.teamInformationLookupToolStripMenuItem.Text = "Team Information Lookup";
+            this.teamInformationLookupToolStripMenuItem.Click += new System.EventHandler(this.teamInformationLookupToolStripMenuItem_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -251,6 +260,7 @@
         private System.Windows.Forms.ToolStripMenuItem changelogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem licenseInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toggleConsoleWindowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teamInformationLookupToolStripMenuItem;
     }
 }
 

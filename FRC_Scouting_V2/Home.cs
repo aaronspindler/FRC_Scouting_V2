@@ -23,6 +23,7 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
 using FRC_Scouting_V2.Test_Objects;
 using System;
@@ -198,6 +199,12 @@ namespace FRC_Scouting_V2
                     isConsoleVisible = false;
                 }
             }
+        }
+
+        private void teamInformationLookupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var teamInformationLookup = new TeamInformationLookup();
+            teamInformationLookup.Show();
         }
     }
 }
