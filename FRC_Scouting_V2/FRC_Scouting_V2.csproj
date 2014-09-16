@@ -167,6 +167,12 @@
     <Compile Include="UIs\Aerial_Assist_Stats_UI.Designer.cs">
       <DependentUpon>Aerial_Assist_Stats_UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\Event_Standings_and_Information_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\Event_Standings_and_Information_UI.Designer.cs">
+      <DependentUpon>Event_Standings_and_Information_UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsefulSnippets.cs" />
     <EmbeddedResource Include="Events\AerialAssist_Northbay.resx">
       <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Aerial_Assist_Stats_UI.resx">
       <DependentUpon>Aerial_Assist_Stats_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\Event_Standings_and_Information_UI.resx">
+      <DependentUpon>Event_Standings_and_Information_UI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
     <None Include="Properties\Settings.settings">
