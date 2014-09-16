@@ -42,7 +42,7 @@ namespace FRC_Scouting_V2
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber;
-        private string url = ("http://www.thebluealliance.com/api/v2/team/frc5500");
+        private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
         public AerialAssist_RahChaCha()
         {
@@ -90,6 +90,7 @@ namespace FRC_Scouting_V2
             var wc = new WebClient();
             wc.Headers.Add("X-TBA-App-Id",
                 "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            url = (url + teamNumber);
             try
             {
                 downloadedData = (wc.DownloadString(url));
