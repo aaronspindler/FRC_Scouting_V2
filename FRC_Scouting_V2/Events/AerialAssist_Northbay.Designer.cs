@@ -35,10 +35,12 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doesThisHaveAnyDataViewingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.teamInformationTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.teamNameLabel = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.teamNameDisplay = new System.Windows.Forms.Label();
             this.teamLocationLabel = new System.Windows.Forms.Label();
             this.teamLocationDisplay = new System.Windows.Forms.Label();
-            this.doesThisHaveAnyDataViewingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -133,6 +133,13 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // doesThisHaveAnyDataViewingToolStripMenuItem
+            // 
+            this.doesThisHaveAnyDataViewingToolStripMenuItem.Name = "doesThisHaveAnyDataViewingToolStripMenuItem";
+            this.doesThisHaveAnyDataViewingToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.doesThisHaveAnyDataViewingToolStripMenuItem.Text = "Does this have any data viewing?";
+            this.doesThisHaveAnyDataViewingToolStripMenuItem.Click += new System.EventHandler(this.doesThisHaveAnyDataViewingToolStripMenuItem_Click);
+            // 
             // teamSelector
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.teamSelector, 4);
@@ -194,6 +201,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(592, 469);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // aerial_Assist_Scouting_UI1
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.aerial_Assist_Scouting_UI1, 8);
+            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(3, 3);
+            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
+            this.tableLayoutPanel2.SetRowSpan(this.aerial_Assist_Scouting_UI1, 8);
+            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(586, 463);
+            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // teamInformationTabPage
             // 
@@ -309,23 +326,6 @@
             this.teamLocationDisplay.TabIndex = 7;
             this.teamLocationDisplay.Text = "No Team Selected!";
             this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // doesThisHaveAnyDataViewingToolStripMenuItem
-            // 
-            this.doesThisHaveAnyDataViewingToolStripMenuItem.Name = "doesThisHaveAnyDataViewingToolStripMenuItem";
-            this.doesThisHaveAnyDataViewingToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.doesThisHaveAnyDataViewingToolStripMenuItem.Text = "Does this have any data viewing?";
-            this.doesThisHaveAnyDataViewingToolStripMenuItem.Click += new System.EventHandler(this.doesThisHaveAnyDataViewingToolStripMenuItem_Click);
-            // 
-            // aerial_Assist_Scouting_UI1
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.aerial_Assist_Scouting_UI1, 8);
-            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(3, 3);
-            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
-            this.tableLayoutPanel2.SetRowSpan(this.aerial_Assist_Scouting_UI1, 8);
-            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(586, 463);
-            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // AerialAssist_Northbay
             // 
