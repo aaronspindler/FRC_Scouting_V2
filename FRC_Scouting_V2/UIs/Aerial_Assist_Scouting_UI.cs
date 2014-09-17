@@ -200,6 +200,8 @@ namespace FRC_Scouting_V2
             commentsRichTextBox.Text = ("");
             UpdateLabels();
             BlankPanel();
+            didRobotDie = false;
+            didRobotDieCheckBox.Checked = false;
         }
 
         private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
