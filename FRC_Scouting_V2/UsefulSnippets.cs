@@ -23,26 +23,54 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+
 //@author xNovax
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
     {
-        public void ShowInformationMessage(string informationText)
+        public void ClearSettings()
         {
-            MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Settings.Default.Reset();
+            Settings.Default.Save();
+            MessageBox.Show("You have successfully reset all settings to default!",
+                "Settings have been reset to default!",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void ErrorOccured(string error)
         {
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void ExportTableToCSV(string tableName)
+        {
+            try
+            {
+                string databaseIP = Settings.Default.databaseIP;
+                string databasePort = Settings.Default.databasePort;
+                string databaseName = Settings.Default.databaseName;
+                string databaseUsername = Settings.Default.databaseUsername;
+                string databasePassword = Settings.Default.databasePassword;
+                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                var cmd = new MySqlCommand(("SELECT COUNT(*) FROM " + tableName), conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public string GetCurrentTime()
@@ -64,7 +92,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
@@ -143,36 +171,9 @@ namespace FRC_Scouting_V2
             return passwordToString;
         }
 
-        public void ClearSettings()
+        public void ShowInformationMessage(string informationText)
         {
-            Settings.Default.Reset();
-            Settings.Default.Save();
-            MessageBox.Show("You have successfully reset all settings to default!",
-                "Settings have been reset to default!",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        public void ExportTableToCSV(string tableName)
-        {
-            try
-            {
-                string databaseIP = Settings.Default.databaseIP;
-                string databasePort = Settings.Default.databasePort;
-                string databaseName = Settings.Default.databaseName;
-                string databaseUsername = Settings.Default.databaseUsername;
-                string databasePassword = Settings.Default.databasePassword;
-                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
-
-                var cmd = new MySqlCommand(("SELECT COUNT(*) FROM " + tableName), conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-            }
+            MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

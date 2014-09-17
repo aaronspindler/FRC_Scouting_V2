@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -49,17 +49,6 @@ namespace FRC_Scouting_V2
             InitializeComponent();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var aaRahChaChaEventInfo = new AerialAssist_RahChaCha_Information();
-            aaRahChaChaEventInfo.Show();
-        }
-
         private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
         {
             Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
@@ -78,6 +67,23 @@ namespace FRC_Scouting_V2
 
             //Adding teams to TeamSelector Control
             teamSelector.Items.Add("Test");
+        }
+
+        private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var aaRahChaChaEventInfo = new AerialAssist_RahChaCha_Information();
+            aaRahChaChaEventInfo.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,33 +123,27 @@ namespace FRC_Scouting_V2
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
         }
 
-        private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
-        }
-
         public class TeamInformationJSONData
         {
-            public string website { get; set; }
-
-            public string name { get; set; }
-
-            public string locality { get; set; }
-
-            public int rookie_year { get; set; }
-
-            public string region { get; set; }
-
-            public int team_number { get; set; }
-
-            public string location { get; set; }
+            public string country_name { get; set; }
 
             public string key { get; set; }
 
-            public string country_name { get; set; }
+            public string locality { get; set; }
+
+            public string location { get; set; }
+
+            public string name { get; set; }
 
             public string nickname { get; set; }
+
+            public string region { get; set; }
+
+            public int rookie_year { get; set; }
+
+            public int team_number { get; set; }
+
+            public string website { get; set; }
         }
     }
 }

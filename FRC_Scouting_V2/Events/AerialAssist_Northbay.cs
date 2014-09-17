@@ -23,9 +23,9 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
 using System;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -87,6 +87,18 @@ namespace FRC_Scouting_V2
             teamSelector.Items.Add("5164 | Gators");
             teamSelector.Items.Add("5191 | LANCERobotics");
             teamSelector.Items.Add("5324 | Hawks");
+        }
+
+        private void doesThisHaveAnyDataViewingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "This event was built as a tester event so there is no way in the program to view the data. You can use a SQL Workbench program to look at your data for this event if you want.");
+        }
+
+        private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var eventInformation = new AerialAssist_Northbay_Information();
+            eventInformation.Show();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -322,18 +334,6 @@ namespace FRC_Scouting_V2
             Settings.Default.selectedTeamName = selectedTeamName;
             Settings.Default.selectedTeamNumber = selectedTeamNumber;
             Settings.Default.Save();
-        }
-
-        private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var eventInformation = new AerialAssist_Northbay_Information();
-            eventInformation.Show();
-        }
-
-        private void doesThisHaveAnyDataViewingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "This event was built as a tester event so there is no way in the program to view the data. You can use a SQL Workbench program to look at your data for this event if you want.");
         }
     }
 }

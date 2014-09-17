@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 
 //@author xNovax
 
@@ -46,14 +46,6 @@ namespace FRC_Scouting_V2.Information_Forms
         public TeamInformationLookup()
         {
             InitializeComponent();
-        }
-
-        private void teamNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (teamNumberTextBox.Text != (""))
-            {
-                teamNumber = Convert.ToInt32(teamNumberTextBox.Text);
-            }
         }
 
         private void findTeamButton_Click(object sender, EventArgs e)
@@ -102,27 +94,35 @@ namespace FRC_Scouting_V2.Information_Forms
             }
         }
 
+        private void teamNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (teamNumberTextBox.Text != (""))
+            {
+                teamNumber = Convert.ToInt32(teamNumberTextBox.Text);
+            }
+        }
+
         public class TeamInformationJSONData
         {
-            public string website { get; set; }
-
-            public string name { get; set; }
-
-            public string locality { get; set; }
-
-            public int rookie_year { get; set; }
-
-            public string region { get; set; }
-
-            public int team_number { get; set; }
-
-            public string location { get; set; }
+            public string country_name { get; set; }
 
             public string key { get; set; }
 
-            public string country_name { get; set; }
+            public string locality { get; set; }
+
+            public string location { get; set; }
+
+            public string name { get; set; }
 
             public string nickname { get; set; }
+
+            public string region { get; set; }
+
+            public int rookie_year { get; set; }
+
+            public int team_number { get; set; }
+
+            public string website { get; set; }
         }
     }
 }

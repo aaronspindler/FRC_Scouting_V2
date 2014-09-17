@@ -23,10 +23,10 @@
 //SOFTWARE.
 //===============================================================================
 
-using System;
-using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
+using System;
+using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
 {
@@ -39,6 +39,40 @@ namespace FRC_Scouting_V2
         public MainSettings()
         {
             InitializeComponent();
+        }
+
+        private void allowExportToTextFileCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (allowExportToTextFileCheckBox.Checked)
+            {
+                Settings.Default.allowExportToTextFile = true;
+                Settings.Default.Save();
+            }
+            else
+            {
+                if (allowExportToTextFileCheckBox.Checked == false)
+                {
+                    Settings.Default.allowExportToTextFile = false;
+                    Settings.Default.Save();
+                }
+            }
+        }
+
+        private void clearConsoleOnToggleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (clearConsoleOnToggleCheckBox.Checked)
+            {
+                Settings.Default.clearConsoleOnToggle = true;
+                Settings.Default.Save();
+            }
+            else
+            {
+                if (clearConsoleOnToggleCheckBox.Checked == false)
+                {
+                    Settings.Default.clearConsoleOnToggle = false;
+                    Settings.Default.Save();
+                }
+            }
         }
 
         private void clickEmptyTextBoxChecker_CheckedChanged(object sender, EventArgs e)
@@ -58,9 +92,100 @@ namespace FRC_Scouting_V2
             }
         }
 
+        private void databaseIPTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                databaseIPTextBox.Text = ("");
+            }
+        }
+
+        private void databaseIPTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (databaseIPTextBox.Text != (""))
+            {
+                Settings.Default.databaseIP = databaseIPTextBox.Text;
+                Settings.Default.Save();
+            }
+        }
+
+        private void databaseNameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                databaseNameTextBox.Text = ("");
+            }
+        }
+
+        private void databaseNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (databaseNameTextBox.Text != (""))
+            {
+                Settings.Default.databaseName = databaseNameTextBox.Text;
+                Settings.Default.Save();
+            }
+        }
+
+        private void databasePasswordTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                databasePasswordTextBox.Text = ("");
+            }
+        }
+
+        private void databasePasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (databasePasswordTextBox.Text != (""))
+            {
+                Settings.Default.databasePassword = databasePasswordTextBox.Text;
+                Settings.Default.Save();
+            }
+        }
+
+        private void databasePortTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                databasePortTextBox.Text = ("");
+            }
+        }
+
+        private void databasePortTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (databasePortTextBox.Text != (""))
+            {
+                Settings.Default.databasePort = databasePortTextBox.Text;
+                Settings.Default.Save();
+            }
+        }
+
+        private void databaseUsernameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                databaseUsernameTextBox.Text = ("");
+            }
+        }
+
+        private void databaseUsernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (databaseUsernameTextBox.Text != (""))
+            {
+                Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
+                Settings.Default.Save();
+            }
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your database password cannot contain any semicolons in it. ( ; )",
+                "How come my database password doesn't work?", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void howDoISaveMySettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,155 +275,6 @@ namespace FRC_Scouting_V2
             us.ClearSettings();
         }
 
-        private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                usernameTextBox.Text = ("");
-            }
-        }
-
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (usernameTextBox.Text != (""))
-            {
-                Settings.Default.username = usernameTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
-        private void whatIsTheUsernameFieldUsedForToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(
-                "The Username field is used to keep track of who makes changes to any data. This prevents any mischievous changes to data.",
-                "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void databaseIPTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databaseIPTextBox.Text != (""))
-            {
-                Settings.Default.databaseIP = databaseIPTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
-        private void databasePortTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databasePortTextBox.Text != (""))
-            {
-                Settings.Default.databasePort = databasePortTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
-        private void databaseUsernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databaseUsernameTextBox.Text != (""))
-            {
-                Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
-        private void databasePasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databasePasswordTextBox.Text != (""))
-            {
-                Settings.Default.databasePassword = databasePasswordTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
-        private void databaseNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databaseNameTextBox.Text != (""))
-            {
-                Settings.Default.databaseName = databaseNameTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
-        private void databaseIPTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                databaseIPTextBox.Text = ("");
-            }
-        }
-
-        private void databasePortTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                databasePortTextBox.Text = ("");
-            }
-        }
-
-        private void databaseNameTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                databaseNameTextBox.Text = ("");
-            }
-        }
-
-        private void databaseUsernameTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                databaseUsernameTextBox.Text = ("");
-            }
-        }
-
-        private void databasePasswordTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (Settings.Default.clickToEmptyTextBoxes)
-            {
-                databasePasswordTextBox.Text = ("");
-            }
-        }
-
-        private void howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Your database password cannot contain any semicolons in it. ( ; )",
-                "How come my database password doesn't work?", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void clearConsoleOnToggleCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (clearConsoleOnToggleCheckBox.Checked)
-            {
-                Settings.Default.clearConsoleOnToggle = true;
-                Settings.Default.Save();
-            }
-            else
-            {
-                if (clearConsoleOnToggleCheckBox.Checked == false)
-                {
-                    Settings.Default.clearConsoleOnToggle = false;
-                    Settings.Default.Save();
-                }
-            }
-        }
-
-        private void allowExportToTextFileCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (allowExportToTextFileCheckBox.Checked)
-            {
-                Settings.Default.allowExportToTextFile = true;
-                Settings.Default.Save();
-            }
-            else
-            {
-                if (allowExportToTextFileCheckBox.Checked == false)
-                {
-                    Settings.Default.allowExportToTextFile = false;
-                    Settings.Default.Save();
-                }
-            }
-        }
-
         private void testConnectionToDatabaseButton_Click(object sender, EventArgs e)
         {
             try
@@ -310,7 +286,7 @@ namespace FRC_Scouting_V2
                 string databasePassword = Settings.Default.databasePassword;
                 string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
                     databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 conn.Open();
 
@@ -334,6 +310,30 @@ namespace FRC_Scouting_V2
                 us.ErrorOccured(
                     "Something went wrong with your database! Make sure that your connection info is correct.");
             }
+        }
+
+        private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Settings.Default.clickToEmptyTextBoxes)
+            {
+                usernameTextBox.Text = ("");
+            }
+        }
+
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (usernameTextBox.Text != (""))
+            {
+                Settings.Default.username = usernameTextBox.Text;
+                Settings.Default.Save();
+            }
+        }
+
+        private void whatIsTheUsernameFieldUsedForToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "The Username field is used to keep track of who makes changes to any data. This prevents any mischievous changes to data.",
+                "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

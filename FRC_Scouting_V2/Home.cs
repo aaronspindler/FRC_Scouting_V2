@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using System;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
 using FRC_Scouting_V2.Test_Objects;
+using System;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
 {
@@ -47,14 +47,12 @@ namespace FRC_Scouting_V2
             InitializeComponent();
         }
 
-        [DllImport("kernel32.dll", SetLastError = true)]
-        private static extern bool AllocConsole();
+        public static void HideConsoleWindow()
+        {
+            IntPtr handle = GetConsoleWindow();
 
-        [DllImport("kernel32.dll")]
-        private static extern IntPtr GetConsoleWindow();
-
-        [DllImport("user32.dll")]
-        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+            ShowWindow(handle, SW_HIDE);
+        }
 
         public static void ShowConsoleWindow()
         {
@@ -70,67 +68,29 @@ namespace FRC_Scouting_V2
             }
         }
 
-        public static void HideConsoleWindow()
-        {
-            IntPtr handle = GetConsoleWindow();
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool AllocConsole();
 
-            ShowWindow(handle, SW_HIDE);
-        }
+        [DllImport("kernel32.dll")]
+        private static extern IntPtr GetConsoleWindow();
 
-        private void Home_Load(object sender, EventArgs e)
-        {
-            HideConsoleWindow();
-            eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
-            eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
-
-            if (Settings.Default.firstTimeLoad)
-            {
-                if (
-                    MessageBox.Show(
-                        "Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?",
-                        "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    var settingsPage = new MainSettings();
-                    settingsPage.Show();
-                    WindowState = FormWindowState.Minimized;
-                }
-                Settings.Default.firstTimeLoad = false;
-                Settings.Default.Save();
-            }
-        }
-
-        private void programInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var programInfo = new ProgramInformation();
-            programInfo.Show();
-        }
-
-        private void resetAllSavedSettingsToDefaultToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ClearSettings();
-        }
-
-        private void fRC3710TeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var team3710Info = new Team3710Information();
-            team3710Info.Show();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void licenseInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var li = new License();
-            li.Show();
-        }
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         private void changelogToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var changeLog = new Changelog();
             changeLog.Show();
+        }
+
+        //Opens up the test form page
+        private void eventSelector_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                var testForm = new TestForm();
+                testForm.Show();
+            }
         }
 
         private void eventSelector_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,20 +120,66 @@ namespace FRC_Scouting_V2
             }
         }
 
-        //Opens up the test form page
-        private void eventSelector_KeyDown(object sender, KeyEventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            Application.Exit();
+        }
+
+        private void fRC3710TeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var team3710Info = new Team3710Information();
+            team3710Info.Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            HideConsoleWindow();
+            eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
+            eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
+
+            if (Settings.Default.firstTimeLoad)
             {
-                var testForm = new TestForm();
-                testForm.Show();
+                if (
+                    MessageBox.Show(
+                        "Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?",
+                        "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    var settingsPage = new MainSettings();
+                    settingsPage.Show();
+                    WindowState = FormWindowState.Minimized;
+                }
+                Settings.Default.firstTimeLoad = false;
+                Settings.Default.Save();
             }
+        }
+
+        private void licenseInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var li = new License();
+            li.Show();
+        }
+
+        private void programInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var programInfo = new ProgramInformation();
+            programInfo.Show();
+        }
+
+        private void resetAllSavedSettingsToDefaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ClearSettings();
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var mainSettings = new MainSettings();
             mainSettings.Show();
+        }
+
+        private void teamInformationLookupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var teamInformationLookup = new TeamInformationLookup();
+            teamInformationLookup.Show();
         }
 
         private void toggleConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
@@ -200,12 +206,6 @@ namespace FRC_Scouting_V2
                     isConsoleVisible = false;
                 }
             }
-        }
-
-        private void teamInformationLookupToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var teamInformationLookup = new TeamInformationLookup();
-            teamInformationLookup.Show();
         }
     }
 }

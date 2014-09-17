@@ -23,8 +23,8 @@
 //SOFTWARE.
 //===============================================================================
 
-using System;
 using FRC_Scouting_V2.Properties;
+using System;
 
 namespace FRC_Scouting_V2
 {
@@ -43,32 +43,6 @@ namespace FRC_Scouting_V2
         public AerialAssist_Northbay_Information()
         {
             InitializeComponent();
-        }
-
-        private void AerialAssist_Northbay_Information_Load(object sender, EventArgs e)
-        {
-            randomNum = gen.Next(13);
-            previousNum = randomNum;
-            UpdateSponsor();
-
-            timer.Tick += timer_Tick;
-            timer.Start();
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            randomNum = gen.Next(13);
-
-            if (randomNum != previousNum)
-            {
-                UpdateSponsor();
-            }
-            else
-            {
-                randomNum = gen.Next(13);
-                UpdateSponsor();
-            }
-            previousNum = randomNum;
         }
 
         public void UpdateSponsor()
@@ -161,6 +135,32 @@ namespace FRC_Scouting_V2
             }
             sponsorLevelDisplayLabel.Text = ("Sponsor Level: " + sponsorLevel);
             sponsorNameDisplayLabel.Text = ("Sponsor Name: " + sponsorName);
+        }
+
+        private void AerialAssist_Northbay_Information_Load(object sender, EventArgs e)
+        {
+            randomNum = gen.Next(13);
+            previousNum = randomNum;
+            UpdateSponsor();
+
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            randomNum = gen.Next(13);
+
+            if (randomNum != previousNum)
+            {
+                UpdateSponsor();
+            }
+            else
+            {
+                randomNum = gen.Next(13);
+                UpdateSponsor();
+            }
+            previousNum = randomNum;
         }
     }
 }
