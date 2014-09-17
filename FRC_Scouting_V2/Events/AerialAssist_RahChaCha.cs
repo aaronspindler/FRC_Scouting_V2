@@ -90,8 +90,7 @@ namespace FRC_Scouting_V2
         {
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             url = (url + teamNumber);
             try
             {
@@ -99,7 +98,7 @@ namespace FRC_Scouting_V2
                 var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
                 teamName = Convert.ToString(deserializedData.nickname);
-                teamNumber = Convert.ToInt16(deserializedData.team_number);
+                teamNumber = Convert.ToInt32(deserializedData.team_number);
                 teamLocation = Convert.ToString(deserializedData.location);
                 rookieYear = Convert.ToInt32(deserializedData.rookie_year);
             }
@@ -126,23 +125,14 @@ namespace FRC_Scouting_V2
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
-
             public string key { get; set; }
-
             public string locality { get; set; }
-
             public string location { get; set; }
-
             public string name { get; set; }
-
             public string nickname { get; set; }
-
             public string region { get; set; }
-
             public int rookie_year { get; set; }
-
             public int team_number { get; set; }
-
             public string website { get; set; }
         }
     }
