@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -46,13 +46,13 @@ namespace FRC_Scouting_V2
         private int controlledLowTally;
         private int controlledPickupTally;
         private Boolean didRobotDie;
+        private int didRobotDieINT;
         private int hotGoalTally;
         private int matchNumber = 1;
         private int missedPickupsTally;
         private string teamColour;
         private int xStarting;
         private int yStarting;
-        private int didRobotDieINT = 0;
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -81,7 +81,7 @@ namespace FRC_Scouting_V2
                 string databasePassword = Settings.Default.databasePassword;
                 string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
                     databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
@@ -349,7 +349,7 @@ namespace FRC_Scouting_V2
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
                 //Checking if the connection is successful
@@ -364,7 +364,10 @@ namespace FRC_Scouting_V2
                 //Trying to create the table
                 try
                 {
-                    string createTable = String.Format("CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default', `TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8", Settings.Default.currentTableName);
+                    string createTable =
+                        String.Format(
+                            "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default', `TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8",
+                            Settings.Default.currentTableName);
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");

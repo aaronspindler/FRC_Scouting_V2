@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 
 //@author xNovax
 
@@ -74,7 +74,8 @@ namespace FRC_Scouting_V2.Information_Forms
                 rookieYear = Convert.ToInt32(deserializedData.rookie_year);
                 teamWebsite = Convert.ToString(deserializedData.website);
 
-                Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) + " has been found successfully.");
+                Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
+                                  " has been found successfully.");
             }
             catch (Exception webError)
             {
