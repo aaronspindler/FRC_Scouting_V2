@@ -75,6 +75,7 @@
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.didRobotDieLabel = new System.Windows.Forms.Label();
             this.didRobotDieCheckBox = new System.Windows.Forms.CheckBox();
+            this.showMatchScoreButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +104,7 @@
             this.tableLayoutPanel1.Controls.Add(this.teamColourComboBox, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.matchNumberLabel, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.matchNumberNumericUpDown, 11, 0);
-            this.tableLayoutPanel1.Controls.Add(this.submitDataButton, 0, 15);
+            this.tableLayoutPanel1.Controls.Add(this.submitDataButton, 5, 15);
             this.tableLayoutPanel1.Controls.Add(this.autonomousHighLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.autonomousLowLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.controlledHighLabel, 0, 4);
@@ -140,9 +141,10 @@
             this.tableLayoutPanel1.Controls.Add(this.missedPickupsTallyDisplay, 6, 10);
             this.tableLayoutPanel1.Controls.Add(this.startingLocationPanel, 9, 2);
             this.tableLayoutPanel1.Controls.Add(this.startingLocationLabel, 9, 1);
-            this.tableLayoutPanel1.Controls.Add(this.clearAndAdvanceButton, 8, 15);
+            this.tableLayoutPanel1.Controls.Add(this.clearAndAdvanceButton, 0, 15);
             this.tableLayoutPanel1.Controls.Add(this.didRobotDieLabel, 9, 10);
             this.tableLayoutPanel1.Controls.Add(this.didRobotDieCheckBox, 14, 10);
+            this.tableLayoutPanel1.Controls.Add(this.showMatchScoreButton, 10, 15);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -300,11 +302,11 @@
             // 
             // submitDataButton
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.submitDataButton, 8);
+            this.tableLayoutPanel1.SetColumnSpan(this.submitDataButton, 4);
             this.submitDataButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.submitDataButton.Location = new System.Drawing.Point(3, 408);
+            this.submitDataButton.Location = new System.Drawing.Point(207, 408);
             this.submitDataButton.Name = "submitDataButton";
-            this.submitDataButton.Size = new System.Drawing.Size(266, 26);
+            this.submitDataButton.Size = new System.Drawing.Size(130, 26);
             this.submitDataButton.TabIndex = 99;
             this.submitDataButton.Text = "Submit Data";
             this.submitDataButton.UseVisualStyleBackColor = true;
@@ -750,11 +752,11 @@
             // 
             // clearAndAdvanceButton
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.clearAndAdvanceButton, 8);
+            this.tableLayoutPanel1.SetColumnSpan(this.clearAndAdvanceButton, 6);
             this.clearAndAdvanceButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clearAndAdvanceButton.Location = new System.Drawing.Point(275, 408);
+            this.clearAndAdvanceButton.Location = new System.Drawing.Point(3, 408);
             this.clearAndAdvanceButton.Name = "clearAndAdvanceButton";
-            this.clearAndAdvanceButton.Size = new System.Drawing.Size(266, 26);
+            this.clearAndAdvanceButton.Size = new System.Drawing.Size(198, 26);
             this.clearAndAdvanceButton.TabIndex = 131;
             this.clearAndAdvanceButton.Text = "Clear Data and Go To Next Match";
             this.clearAndAdvanceButton.UseVisualStyleBackColor = true;
@@ -788,6 +790,18 @@
             this.didRobotDieCheckBox.TabIndex = 133;
             this.didRobotDieCheckBox.UseVisualStyleBackColor = true;
             this.didRobotDieCheckBox.CheckedChanged += new System.EventHandler(this.didRobotDieCheckBox_CheckedChanged);
+            // 
+            // showMatchScoreButton
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.showMatchScoreButton, 6);
+            this.showMatchScoreButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showMatchScoreButton.Location = new System.Drawing.Point(343, 408);
+            this.showMatchScoreButton.Name = "showMatchScoreButton";
+            this.showMatchScoreButton.Size = new System.Drawing.Size(198, 26);
+            this.showMatchScoreButton.TabIndex = 134;
+            this.showMatchScoreButton.Text = "Show Match Results";
+            this.showMatchScoreButton.UseVisualStyleBackColor = true;
+            this.showMatchScoreButton.Click += new System.EventHandler(this.showMatchScoreButton_Click);
             // 
             // Aerial_Assist_Scouting_UI
             // 
@@ -853,5 +867,6 @@
         private System.Windows.Forms.RichTextBox commentsRichTextBox;
         private System.Windows.Forms.Label didRobotDieLabel;
         private System.Windows.Forms.CheckBox didRobotDieCheckBox;
+        private System.Windows.Forms.Button showMatchScoreButton;
     }
 }

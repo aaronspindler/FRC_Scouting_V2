@@ -429,5 +429,10 @@ namespace FRC_Scouting_V2
                 }
             }
         }
+
+        private void showMatchScoreButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
