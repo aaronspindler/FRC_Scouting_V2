@@ -51,6 +51,7 @@ namespace FRC_Scouting_V2
         private string teamColour;
         private int xStarting;
         private int yStarting;
+        private Boolean didRobotDie = false;
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -301,6 +302,7 @@ namespace FRC_Scouting_V2
                     var writer = new StreamWriter(saveFileDialog.FileName);
                     writer.WriteLine("Time Created: " + us.GetCurrentTime());
                     writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
+                    writer.WriteLine("Did the robot die?: " + didRobotDie);
                     writer.WriteLine("===============================================");
                     writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
                     writer.WriteLine("Team Number: " + Convert.ToString(Settings.Default.selectedTeamNumber));
@@ -410,6 +412,21 @@ namespace FRC_Scouting_V2
                 case 1:
                     teamColour = ("Red");
                     break;
+            }
+        }
+
+        private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (didRobotDieCheckBox.Checked == true)
+            {
+                didRobotDie = true;
+            }
+            else
+            {
+                if (didRobotDieCheckBox.Checked == false)
+                {
+                    didRobotDie = false;
+                }
             }
         }
     }

@@ -73,6 +73,8 @@
             this.startingLocationLabel = new System.Windows.Forms.Label();
             this.clearAndAdvanceButton = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.didRobotDieLabel = new System.Windows.Forms.Label();
+            this.didRobotDieCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -139,6 +141,8 @@
             this.tableLayoutPanel1.Controls.Add(this.startingLocationPanel, 9, 2);
             this.tableLayoutPanel1.Controls.Add(this.startingLocationLabel, 9, 1);
             this.tableLayoutPanel1.Controls.Add(this.clearAndAdvanceButton, 8, 15);
+            this.tableLayoutPanel1.Controls.Add(this.didRobotDieLabel, 9, 10);
+            this.tableLayoutPanel1.Controls.Add(this.didRobotDieCheckBox, 14, 10);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -760,6 +764,31 @@
             // 
             this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             // 
+            // didRobotDieLabel
+            // 
+            this.didRobotDieLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.didRobotDieLabel, 5);
+            this.didRobotDieLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.didRobotDieLabel.Location = new System.Drawing.Point(309, 270);
+            this.didRobotDieLabel.Name = "didRobotDieLabel";
+            this.didRobotDieLabel.Size = new System.Drawing.Size(164, 27);
+            this.didRobotDieLabel.TabIndex = 132;
+            this.didRobotDieLabel.Text = "Did the robot die?";
+            this.didRobotDieLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // didRobotDieCheckBox
+            // 
+            this.didRobotDieCheckBox.AutoSize = true;
+            this.didRobotDieCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel1.SetColumnSpan(this.didRobotDieCheckBox, 2);
+            this.didRobotDieCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.didRobotDieCheckBox.Location = new System.Drawing.Point(479, 273);
+            this.didRobotDieCheckBox.Name = "didRobotDieCheckBox";
+            this.didRobotDieCheckBox.Size = new System.Drawing.Size(62, 21);
+            this.didRobotDieCheckBox.TabIndex = 133;
+            this.didRobotDieCheckBox.UseVisualStyleBackColor = true;
+            this.didRobotDieCheckBox.CheckedChanged += new System.EventHandler(this.didRobotDieCheckBox_CheckedChanged);
+            // 
             // Aerial_Assist_Scouting_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,5 +851,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Button clearAndAdvanceButton;
         private System.Windows.Forms.RichTextBox commentsRichTextBox;
+        private System.Windows.Forms.Label didRobotDieLabel;
+        private System.Windows.Forms.CheckBox didRobotDieCheckBox;
     }
 }
