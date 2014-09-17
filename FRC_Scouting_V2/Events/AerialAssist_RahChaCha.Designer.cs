@@ -225,7 +225,7 @@
             this.teamInformationTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamInformationTabPage.Name = "teamInformationTabPage";
             this.teamInformationTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.teamInformationTabPage.Size = new System.Drawing.Size(617, 368);
+            this.teamInformationTabPage.Size = new System.Drawing.Size(617, 464);
             this.teamInformationTabPage.TabIndex = 1;
             this.teamInformationTabPage.Text = "Team Information";
             this.teamInformationTabPage.UseVisualStyleBackColor = true;
@@ -276,7 +276,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(611, 362);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(611, 458);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // teamLogoPictureBox
@@ -393,7 +393,7 @@
             this.statsTabPage.Location = new System.Drawing.Point(4, 22);
             this.statsTabPage.Name = "statsTabPage";
             this.statsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.statsTabPage.Size = new System.Drawing.Size(617, 368);
+            this.statsTabPage.Size = new System.Drawing.Size(617, 464);
             this.statsTabPage.TabIndex = 2;
             this.statsTabPage.Text = "Statistics";
             this.statsTabPage.UseVisualStyleBackColor = true;
@@ -404,7 +404,7 @@
             this.aerial_Assist_Stats_UI1.Location = new System.Drawing.Point(3, 3);
             this.aerial_Assist_Stats_UI1.Margin = new System.Windows.Forms.Padding(6);
             this.aerial_Assist_Stats_UI1.Name = "aerial_Assist_Stats_UI1";
-            this.aerial_Assist_Stats_UI1.Size = new System.Drawing.Size(611, 362);
+            this.aerial_Assist_Stats_UI1.Size = new System.Drawing.Size(611, 458);
             this.aerial_Assist_Stats_UI1.TabIndex = 0;
             // 
             // teamComparisonTabPage
@@ -413,7 +413,7 @@
             this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamComparisonTabPage.Name = "teamComparisonTabPage";
             this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.teamComparisonTabPage.Size = new System.Drawing.Size(617, 368);
+            this.teamComparisonTabPage.Size = new System.Drawing.Size(617, 464);
             this.teamComparisonTabPage.TabIndex = 3;
             this.teamComparisonTabPage.Text = "Team Comparison";
             this.teamComparisonTabPage.UseVisualStyleBackColor = true;
@@ -492,7 +492,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(611, 362);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(611, 458);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label9
@@ -500,9 +500,9 @@
             this.label9.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label9, 4);
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(307, 44);
+            this.label9.Location = new System.Drawing.Point(307, 56);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 22);
+            this.label9.Size = new System.Drawing.Size(146, 28);
             this.label9.TabIndex = 10;
             this.label9.Text = "Figure Out What To Put In These";
             // 
@@ -511,9 +511,9 @@
             this.label1.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label1, 4);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 44);
+            this.label1.Location = new System.Drawing.Point(3, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 22);
+            this.label1.Size = new System.Drawing.Size(146, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Figure Out What To Put In These";
             // 
@@ -522,7 +522,7 @@
             this.tableLayoutPanel4.SetColumnSpan(this.teamCompSelector1, 8);
             this.teamCompSelector1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamCompSelector1.FormattingEnabled = true;
-            this.teamCompSelector1.Location = new System.Drawing.Point(3, 25);
+            this.teamCompSelector1.Location = new System.Drawing.Point(3, 31);
             this.teamCompSelector1.Name = "teamCompSelector1";
             this.teamCompSelector1.Size = new System.Drawing.Size(298, 21);
             this.teamCompSelector1.TabIndex = 1;
@@ -535,7 +535,7 @@
             this.informationAboutTopTeamSelectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.informationAboutTopTeamSelectorLabel.Location = new System.Drawing.Point(3, 0);
             this.informationAboutTopTeamSelectorLabel.Name = "informationAboutTopTeamSelectorLabel";
-            this.informationAboutTopTeamSelectorLabel.Size = new System.Drawing.Size(605, 22);
+            this.informationAboutTopTeamSelectorLabel.Size = new System.Drawing.Size(605, 28);
             this.informationAboutTopTeamSelectorLabel.TabIndex = 0;
             this.informationAboutTopTeamSelectorLabel.Text = "The team selector at the top of the window does not affect the team comparison ta" +
     "b";
@@ -546,7 +546,7 @@
             this.tableLayoutPanel4.SetColumnSpan(this.teamCompSelector2, 8);
             this.teamCompSelector2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamCompSelector2.FormattingEnabled = true;
-            this.teamCompSelector2.Location = new System.Drawing.Point(307, 25);
+            this.teamCompSelector2.Location = new System.Drawing.Point(307, 31);
             this.teamCompSelector2.Name = "teamCompSelector2";
             this.teamCompSelector2.Size = new System.Drawing.Size(301, 21);
             this.teamCompSelector2.TabIndex = 2;
@@ -556,9 +556,9 @@
             this.label2.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label2, 4);
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 66);
+            this.label2.Location = new System.Drawing.Point(3, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 22);
+            this.label2.Size = new System.Drawing.Size(146, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "Figure Out What To Put In These";
             // 
@@ -567,9 +567,9 @@
             this.label3.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label3, 4);
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 88);
+            this.label3.Location = new System.Drawing.Point(3, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 22);
+            this.label3.Size = new System.Drawing.Size(146, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Figure Out What To Put In These";
             // 
@@ -578,9 +578,9 @@
             this.label4.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label4, 4);
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 110);
+            this.label4.Location = new System.Drawing.Point(3, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 22);
+            this.label4.Size = new System.Drawing.Size(146, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "Figure Out What To Put In These";
             // 
@@ -589,9 +589,9 @@
             this.label5.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label5, 4);
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(3, 132);
+            this.label5.Location = new System.Drawing.Point(3, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 22);
+            this.label5.Size = new System.Drawing.Size(146, 28);
             this.label5.TabIndex = 6;
             this.label5.Text = "Figure Out What To Put In These";
             // 
@@ -600,9 +600,9 @@
             this.label6.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label6, 4);
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 154);
+            this.label6.Location = new System.Drawing.Point(3, 196);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 22);
+            this.label6.Size = new System.Drawing.Size(146, 28);
             this.label6.TabIndex = 7;
             this.label6.Text = "Figure Out What To Put In These";
             // 
@@ -611,9 +611,9 @@
             this.label7.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label7, 4);
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 176);
+            this.label7.Location = new System.Drawing.Point(3, 224);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 22);
+            this.label7.Size = new System.Drawing.Size(146, 28);
             this.label7.TabIndex = 8;
             this.label7.Text = "Figure Out What To Put In These";
             // 
@@ -622,9 +622,9 @@
             this.label8.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label8, 4);
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(3, 198);
+            this.label8.Location = new System.Drawing.Point(3, 252);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 22);
+            this.label8.Size = new System.Drawing.Size(146, 28);
             this.label8.TabIndex = 9;
             this.label8.Text = "Figure Out What To Put In These";
             // 
@@ -633,9 +633,9 @@
             this.label10.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label10, 4);
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(307, 66);
+            this.label10.Location = new System.Drawing.Point(307, 84);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 22);
+            this.label10.Size = new System.Drawing.Size(146, 28);
             this.label10.TabIndex = 11;
             this.label10.Text = "Figure Out What To Put In These";
             // 
@@ -644,9 +644,9 @@
             this.label11.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label11, 4);
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(307, 88);
+            this.label11.Location = new System.Drawing.Point(307, 112);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 22);
+            this.label11.Size = new System.Drawing.Size(146, 28);
             this.label11.TabIndex = 12;
             this.label11.Text = "Figure Out What To Put In These";
             // 
@@ -655,9 +655,9 @@
             this.label12.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label12, 4);
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(307, 110);
+            this.label12.Location = new System.Drawing.Point(307, 140);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 22);
+            this.label12.Size = new System.Drawing.Size(146, 28);
             this.label12.TabIndex = 13;
             this.label12.Text = "Figure Out What To Put In These";
             // 
@@ -666,9 +666,9 @@
             this.label13.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label13, 4);
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(307, 132);
+            this.label13.Location = new System.Drawing.Point(307, 168);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(146, 22);
+            this.label13.Size = new System.Drawing.Size(146, 28);
             this.label13.TabIndex = 14;
             this.label13.Text = "Figure Out What To Put In These";
             // 
@@ -677,9 +677,9 @@
             this.label14.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label14, 4);
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(307, 154);
+            this.label14.Location = new System.Drawing.Point(307, 196);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(146, 22);
+            this.label14.Size = new System.Drawing.Size(146, 28);
             this.label14.TabIndex = 15;
             this.label14.Text = "Figure Out What To Put In These";
             // 
@@ -688,9 +688,9 @@
             this.label15.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label15, 4);
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(307, 176);
+            this.label15.Location = new System.Drawing.Point(307, 224);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(146, 22);
+            this.label15.Size = new System.Drawing.Size(146, 28);
             this.label15.TabIndex = 16;
             this.label15.Text = "Figure Out What To Put In These";
             // 
@@ -699,9 +699,9 @@
             this.label16.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label16, 4);
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(307, 198);
+            this.label16.Location = new System.Drawing.Point(307, 252);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(146, 22);
+            this.label16.Size = new System.Drawing.Size(146, 28);
             this.label16.TabIndex = 17;
             this.label16.Text = "Figure Out What To Put In These";
             // 
@@ -710,9 +710,9 @@
             this.label22.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label22, 4);
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(155, 198);
+            this.label22.Location = new System.Drawing.Point(155, 252);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(146, 22);
+            this.label22.Size = new System.Drawing.Size(146, 28);
             this.label22.TabIndex = 23;
             this.label22.Text = "Figure Out What To Put In These";
             // 
@@ -721,9 +721,9 @@
             this.label21.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label21, 4);
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(155, 176);
+            this.label21.Location = new System.Drawing.Point(155, 224);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(146, 22);
+            this.label21.Size = new System.Drawing.Size(146, 28);
             this.label21.TabIndex = 22;
             this.label21.Text = "Figure Out What To Put In These";
             // 
@@ -732,9 +732,9 @@
             this.label20.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label20, 4);
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(155, 154);
+            this.label20.Location = new System.Drawing.Point(155, 196);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(146, 22);
+            this.label20.Size = new System.Drawing.Size(146, 28);
             this.label20.TabIndex = 21;
             this.label20.Text = "Figure Out What To Put In These";
             // 
@@ -743,9 +743,9 @@
             this.label19.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label19, 4);
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(155, 132);
+            this.label19.Location = new System.Drawing.Point(155, 168);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(146, 22);
+            this.label19.Size = new System.Drawing.Size(146, 28);
             this.label19.TabIndex = 20;
             this.label19.Text = "Figure Out What To Put In These";
             // 
@@ -754,9 +754,9 @@
             this.label18.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label18, 4);
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(155, 110);
+            this.label18.Location = new System.Drawing.Point(155, 140);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(146, 22);
+            this.label18.Size = new System.Drawing.Size(146, 28);
             this.label18.TabIndex = 19;
             this.label18.Text = "Figure Out What To Put In These";
             // 
@@ -765,9 +765,9 @@
             this.label17.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label17, 4);
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(155, 88);
+            this.label17.Location = new System.Drawing.Point(155, 112);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(146, 22);
+            this.label17.Size = new System.Drawing.Size(146, 28);
             this.label17.TabIndex = 18;
             this.label17.Text = "Figure Out What To Put In These";
             // 
@@ -776,9 +776,9 @@
             this.label24.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label24, 4);
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(155, 66);
+            this.label24.Location = new System.Drawing.Point(155, 84);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(146, 22);
+            this.label24.Size = new System.Drawing.Size(146, 28);
             this.label24.TabIndex = 25;
             this.label24.Text = "Figure Out What To Put In These";
             // 
@@ -787,9 +787,9 @@
             this.label23.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label23, 4);
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(155, 44);
+            this.label23.Location = new System.Drawing.Point(155, 56);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(146, 22);
+            this.label23.Size = new System.Drawing.Size(146, 28);
             this.label23.TabIndex = 24;
             this.label23.Text = "Figure Out What To Put In These";
             // 
@@ -798,9 +798,9 @@
             this.label25.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label25, 4);
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(459, 44);
+            this.label25.Location = new System.Drawing.Point(459, 56);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(149, 22);
+            this.label25.Size = new System.Drawing.Size(149, 28);
             this.label25.TabIndex = 26;
             this.label25.Text = "Figure Out What To Put In These";
             // 
@@ -809,9 +809,9 @@
             this.label26.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label26, 4);
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(459, 66);
+            this.label26.Location = new System.Drawing.Point(459, 84);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(149, 22);
+            this.label26.Size = new System.Drawing.Size(149, 28);
             this.label26.TabIndex = 27;
             this.label26.Text = "Figure Out What To Put In These";
             // 
@@ -820,9 +820,9 @@
             this.label27.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label27, 4);
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(459, 88);
+            this.label27.Location = new System.Drawing.Point(459, 112);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(149, 22);
+            this.label27.Size = new System.Drawing.Size(149, 28);
             this.label27.TabIndex = 28;
             this.label27.Text = "Figure Out What To Put In These";
             // 
@@ -831,9 +831,9 @@
             this.label28.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label28, 4);
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(459, 110);
+            this.label28.Location = new System.Drawing.Point(459, 140);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(149, 22);
+            this.label28.Size = new System.Drawing.Size(149, 28);
             this.label28.TabIndex = 29;
             this.label28.Text = "Figure Out What To Put In These";
             // 
@@ -842,9 +842,9 @@
             this.label29.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label29, 4);
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(459, 132);
+            this.label29.Location = new System.Drawing.Point(459, 168);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(149, 22);
+            this.label29.Size = new System.Drawing.Size(149, 28);
             this.label29.TabIndex = 30;
             this.label29.Text = "Figure Out What To Put In These";
             // 
@@ -853,9 +853,9 @@
             this.label30.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label30, 4);
             this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(459, 154);
+            this.label30.Location = new System.Drawing.Point(459, 196);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(149, 22);
+            this.label30.Size = new System.Drawing.Size(149, 28);
             this.label30.TabIndex = 31;
             this.label30.Text = "Figure Out What To Put In These";
             // 
@@ -864,9 +864,9 @@
             this.label31.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label31, 4);
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(459, 176);
+            this.label31.Location = new System.Drawing.Point(459, 224);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(149, 22);
+            this.label31.Size = new System.Drawing.Size(149, 28);
             this.label31.TabIndex = 32;
             this.label31.Text = "Figure Out What To Put In These";
             // 
@@ -875,9 +875,9 @@
             this.label32.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.label32, 4);
             this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Location = new System.Drawing.Point(459, 198);
+            this.label32.Location = new System.Drawing.Point(459, 252);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(149, 22);
+            this.label32.Size = new System.Drawing.Size(149, 28);
             this.label32.TabIndex = 33;
             this.label32.Text = "Figure Out What To Put In These";
             // 
