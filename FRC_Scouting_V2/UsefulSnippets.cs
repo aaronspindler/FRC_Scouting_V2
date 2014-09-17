@@ -157,12 +157,12 @@ namespace FRC_Scouting_V2
         {
             try
             {
-                string databaseIP = Settings.Default.databaseIP;
-                string databasePort = Settings.Default.databasePort;
-                string databaseName = Settings.Default.databaseName;
-                string databaseUsername = Settings.Default.databaseUsername;
-                string databasePassword = Settings.Default.databasePassword;
-                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                var databaseIP = Settings.Default.databaseIP;
+                var databasePort = Settings.Default.databasePort;
+                var databaseName = Settings.Default.databaseName;
+                var databaseUsername = Settings.Default.databaseUsername;
+                var databasePassword = Settings.Default.databasePassword;
+                var mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
                     databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
