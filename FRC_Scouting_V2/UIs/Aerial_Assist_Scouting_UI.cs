@@ -45,13 +45,13 @@ namespace FRC_Scouting_V2
         private int controlledHighTally;
         private int controlledLowTally;
         private int controlledPickupTally;
+        private Boolean didRobotDie;
         private int hotGoalTally;
         private int matchNumber = 1;
         private int missedPickupsTally;
         private string teamColour;
         private int xStarting;
         private int yStarting;
-        private Boolean didRobotDie = false;
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -419,7 +419,7 @@ namespace FRC_Scouting_V2
 
         private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (didRobotDieCheckBox.Checked == true)
+            if (didRobotDieCheckBox.Checked)
             {
                 didRobotDie = true;
             }
@@ -434,7 +434,6 @@ namespace FRC_Scouting_V2
 
         private void showMatchScoreButton_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

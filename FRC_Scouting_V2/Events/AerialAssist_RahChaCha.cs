@@ -71,8 +71,10 @@ namespace FRC_Scouting_V2
 
             //Setting toolTips
             var ToolTip1 = new ToolTip();
-            ToolTip1.SetToolTip(teamSelector,"Use this to select the team that you want to enter data / look at data for!");
-            ToolTip1.SetToolTip(currentTimeDisplay,"Displays the current time so that you don't get too focused on scouting and lose track of time.");
+            ToolTip1.SetToolTip(teamSelector,
+                "Use this to select the team that you want to enter data / look at data for!");
+            ToolTip1.SetToolTip(currentTimeDisplay,
+                "Displays the current time so that you don't get too focused on scouting and lose track of time.");
 
             //Adding teams to TeamSelector Control
             teamSelector.Items.Add("Test");
@@ -82,7 +84,8 @@ namespace FRC_Scouting_V2
         {
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             url = (url + teamNumber);
             try
             {
