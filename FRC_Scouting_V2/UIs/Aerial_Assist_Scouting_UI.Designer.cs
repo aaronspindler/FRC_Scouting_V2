@@ -72,10 +72,10 @@
             this.startingLocationPanel = new System.Windows.Forms.Panel();
             this.startingLocationLabel = new System.Windows.Forms.Label();
             this.clearAndAdvanceButton = new System.Windows.Forms.Button();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.didRobotDieLabel = new System.Windows.Forms.Label();
             this.didRobotDieCheckBox = new System.Windows.Forms.CheckBox();
             this.showMatchScoreButton = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -762,10 +762,6 @@
             this.clearAndAdvanceButton.UseVisualStyleBackColor = true;
             this.clearAndAdvanceButton.Click += new System.EventHandler(this.clearAndAdvanceButton_Click);
             // 
-            // saveFileDialog
-            // 
-            this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            // 
             // didRobotDieLabel
             // 
             this.didRobotDieLabel.AutoSize = true;
@@ -802,6 +798,10 @@
             this.showMatchScoreButton.Text = "Show Match Results";
             this.showMatchScoreButton.UseVisualStyleBackColor = true;
             this.showMatchScoreButton.Click += new System.EventHandler(this.showMatchScoreButton_Click);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             // 
             // Aerial_Assist_Scouting_UI
             // 
