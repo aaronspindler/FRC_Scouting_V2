@@ -71,7 +71,7 @@
             this.tableLayoutPanel2.Controls.Add(this.rookieYearDisplay, 3, 6);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 28);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
@@ -216,7 +216,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.teamNumberTextBox, 3);
             this.teamNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamNumberTextBox.Location = new System.Drawing.Point(185, 2);
-            this.teamNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.teamNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.teamNumberTextBox.Name = "teamNumberTextBox";
             this.teamNumberTextBox.Size = new System.Drawing.Size(179, 20);
             this.teamNumberTextBox.TabIndex = 15;
@@ -229,7 +229,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.findTeamButton, 2);
             this.findTeamButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.findTeamButton.Location = new System.Drawing.Point(368, 2);
-            this.findTeamButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.findTeamButton.Margin = new System.Windows.Forms.Padding(2);
             this.findTeamButton.Name = "findTeamButton";
             this.findTeamButton.Size = new System.Drawing.Size(124, 22);
             this.findTeamButton.TabIndex = 16;
@@ -254,7 +254,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(494, 212);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TeamInformationLookup";
             this.Text = "Team Information Lookup";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);

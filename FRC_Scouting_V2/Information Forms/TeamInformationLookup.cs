@@ -73,6 +73,8 @@ namespace FRC_Scouting_V2.Information_Forms
                 teamLocation = Convert.ToString(deserializedData.location);
                 rookieYear = Convert.ToInt32(deserializedData.rookie_year);
                 teamWebsite = Convert.ToString(deserializedData.website);
+
+                Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) + " has been found successfully.");
             }
             catch (Exception webError)
             {
