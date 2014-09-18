@@ -50,29 +50,6 @@ namespace FRC_Scouting_V2
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public void ExportTableToCSV(string tableName)
-        {
-            try
-            {
-                string databaseIP = Settings.Default.databaseIP;
-                string databasePort = Settings.Default.databasePort;
-                string databaseName = Settings.Default.databaseName;
-                string databaseUsername = Settings.Default.databaseUsername;
-                string databasePassword = Settings.Default.databasePassword;
-                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
-
-                var cmd = new MySqlCommand(("SELECT COUNT(*) FROM " + tableName), conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-            }
-        }
-
         public string GetCurrentTime()
         {
             string time = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
@@ -174,6 +151,34 @@ namespace FRC_Scouting_V2
         public void ShowInformationMessage(string informationText)
         {
             MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void ExportTableToCSV(string tableName)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string databaseIP = Settings.Default.databaseIP;
+                    string databasePort = Settings.Default.databasePort;
+                    string databaseName = Settings.Default.databaseName;
+                    string databaseUsername = Settings.Default.databaseUsername;
+                    string databasePassword = Settings.Default.databasePassword;
+                    string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                        databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+                    var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                    var cmd = new MySqlCommand(("SELECT COUNT(*) FROM " + tableName), conn);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Error Code: " + ex.ErrorCode);
+                    Console.WriteLine(ex.Message);
+                }
+            }
         }
     }
 }

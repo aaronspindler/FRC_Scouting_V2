@@ -54,6 +54,7 @@
             this.clearConsoleOnToggleCheckBox = new System.Windows.Forms.CheckBox();
             this.databaseSettingsTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.testConnectionToDatabaseButton = new System.Windows.Forms.Button();
             this.databaseIPLabel = new System.Windows.Forms.Label();
             this.databaseUsernameLabel = new System.Windows.Forms.Label();
             this.databasePortLabel = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
-            this.testConnectionToDatabaseButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -90,9 +90,10 @@
             this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -101,7 +102,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 289);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(916, 556);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -113,7 +114,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(458, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(916, 44);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,13 +124,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -139,27 +141,27 @@
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem,
             this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(77, 36);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // howDoISaveMySettingsToolStripMenuItem
             // 
             this.howDoISaveMySettingsToolStripMenuItem.Name = "howDoISaveMySettingsToolStripMenuItem";
-            this.howDoISaveMySettingsToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
+            this.howDoISaveMySettingsToolStripMenuItem.Size = new System.Drawing.Size(607, 36);
             this.howDoISaveMySettingsToolStripMenuItem.Text = "How do I save my settings?";
             this.howDoISaveMySettingsToolStripMenuItem.Click += new System.EventHandler(this.howDoISaveMySettingsToolStripMenuItem_Click);
             // 
             // whatIsTheUsernameFieldUsedForToolStripMenuItem
             // 
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Name = "whatIsTheUsernameFieldUsedForToolStripMenuItem";
-            this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
+            this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Size = new System.Drawing.Size(607, 36);
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Text = "What is the Username field used for?";
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Click += new System.EventHandler(this.whatIsTheUsernameFieldUsedForToolStripMenuItem_Click);
             // 
             // howComeMyDatabasePasswordDoesntWorkToolStripMenuItem
             // 
             this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Name = "howComeMyDatabasePasswordDoesntWorkToolStripMenuItem";
-            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
+            this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Size = new System.Drawing.Size(607, 36);
             this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Text = "How come my database password doesn\'t work?";
             this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem.Click += new System.EventHandler(this.howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click);
             // 
@@ -169,20 +171,22 @@
             this.tabControl1.Controls.Add(this.generalSettingsPage);
             this.tabControl1.Controls.Add(this.databaseSettingsTab);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 28);
+            this.tabControl1.Location = new System.Drawing.Point(6, 54);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabControl1.Name = "tabControl1";
             this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 8);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(452, 258);
+            this.tabControl1.Size = new System.Drawing.Size(904, 496);
             this.tabControl1.TabIndex = 1;
             // 
             // generalSettingsPage
             // 
             this.generalSettingsPage.Controls.Add(this.tableLayoutPanel2);
-            this.generalSettingsPage.Location = new System.Drawing.Point(4, 22);
+            this.generalSettingsPage.Location = new System.Drawing.Point(4, 34);
+            this.generalSettingsPage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.generalSettingsPage.Name = "generalSettingsPage";
-            this.generalSettingsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.generalSettingsPage.Size = new System.Drawing.Size(444, 232);
+            this.generalSettingsPage.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.generalSettingsPage.Size = new System.Drawing.Size(896, 458);
             this.generalSettingsPage.TabIndex = 0;
             this.generalSettingsPage.Text = "General Settings";
             this.generalSettingsPage.UseVisualStyleBackColor = true;
@@ -211,7 +215,8 @@
             this.tableLayoutPanel2.Controls.Add(this.minimizeHomeLabel, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.clearConsoleOnToggleCheckBox, 4, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -222,7 +227,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(438, 226);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(884, 446);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // allowExportToTextFileCheckBox
@@ -231,9 +236,10 @@
             this.allowExportToTextFileCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tableLayoutPanel2.SetColumnSpan(this.allowExportToTextFileCheckBox, 4);
             this.allowExportToTextFileCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allowExportToTextFileCheckBox.Location = new System.Drawing.Point(219, 143);
+            this.allowExportToTextFileCheckBox.Location = new System.Drawing.Point(446, 281);
+            this.allowExportToTextFileCheckBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.allowExportToTextFileCheckBox.Name = "allowExportToTextFileCheckBox";
-            this.allowExportToTextFileCheckBox.Size = new System.Drawing.Size(216, 22);
+            this.allowExportToTextFileCheckBox.Size = new System.Drawing.Size(432, 43);
             this.allowExportToTextFileCheckBox.TabIndex = 1;
             this.allowExportToTextFileCheckBox.UseVisualStyleBackColor = true;
             this.allowExportToTextFileCheckBox.CheckedChanged += new System.EventHandler(this.allowExportToTextFileCheckBox_CheckedChanged);
@@ -243,9 +249,10 @@
             this.exportToTextFileLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.exportToTextFileLabel, 4);
             this.exportToTextFileLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.exportToTextFileLabel.Location = new System.Drawing.Point(3, 140);
+            this.exportToTextFileLabel.Location = new System.Drawing.Point(6, 275);
+            this.exportToTextFileLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.exportToTextFileLabel.Name = "exportToTextFileLabel";
-            this.exportToTextFileLabel.Size = new System.Drawing.Size(210, 28);
+            this.exportToTextFileLabel.Size = new System.Drawing.Size(428, 55);
             this.exportToTextFileLabel.TabIndex = 1;
             this.exportToTextFileLabel.Text = "Allow Export of Scouting Data to TextFile";
             this.exportToTextFileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,9 +262,10 @@
             this.clearConsoleOnToggleLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleLabel, 4);
             this.clearConsoleOnToggleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clearConsoleOnToggleLabel.Location = new System.Drawing.Point(3, 112);
+            this.clearConsoleOnToggleLabel.Location = new System.Drawing.Point(6, 220);
+            this.clearConsoleOnToggleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.clearConsoleOnToggleLabel.Name = "clearConsoleOnToggleLabel";
-            this.clearConsoleOnToggleLabel.Size = new System.Drawing.Size(210, 28);
+            this.clearConsoleOnToggleLabel.Size = new System.Drawing.Size(428, 55);
             this.clearConsoleOnToggleLabel.TabIndex = 1;
             this.clearConsoleOnToggleLabel.Text = "Clear Console on Toggle";
             this.clearConsoleOnToggleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,9 +276,10 @@
             this.minimizeHomeCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tableLayoutPanel2.SetColumnSpan(this.minimizeHomeCheckbox, 4);
             this.minimizeHomeCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minimizeHomeCheckbox.Location = new System.Drawing.Point(219, 59);
+            this.minimizeHomeCheckbox.Location = new System.Drawing.Point(446, 116);
+            this.minimizeHomeCheckbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.minimizeHomeCheckbox.Name = "minimizeHomeCheckbox";
-            this.minimizeHomeCheckbox.Size = new System.Drawing.Size(216, 22);
+            this.minimizeHomeCheckbox.Size = new System.Drawing.Size(432, 43);
             this.minimizeHomeCheckbox.TabIndex = 1;
             this.minimizeHomeCheckbox.UseVisualStyleBackColor = true;
             this.minimizeHomeCheckbox.CheckedChanged += new System.EventHandler(this.minimizeHomeCheckbox_CheckedChanged);
@@ -281,9 +290,10 @@
             this.clickEmptyTextBoxChecker.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tableLayoutPanel2.SetColumnSpan(this.clickEmptyTextBoxChecker, 4);
             this.clickEmptyTextBoxChecker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clickEmptyTextBoxChecker.Location = new System.Drawing.Point(219, 31);
+            this.clickEmptyTextBoxChecker.Location = new System.Drawing.Point(446, 61);
+            this.clickEmptyTextBoxChecker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.clickEmptyTextBoxChecker.Name = "clickEmptyTextBoxChecker";
-            this.clickEmptyTextBoxChecker.Size = new System.Drawing.Size(216, 22);
+            this.clickEmptyTextBoxChecker.Size = new System.Drawing.Size(432, 43);
             this.clickEmptyTextBoxChecker.TabIndex = 1;
             this.clickEmptyTextBoxChecker.UseVisualStyleBackColor = true;
             this.clickEmptyTextBoxChecker.CheckedChanged += new System.EventHandler(this.clickEmptyTextBoxChecker_CheckedChanged);
@@ -293,9 +303,10 @@
             this.clickEmptyTextBoxLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.clickEmptyTextBoxLabel, 4);
             this.clickEmptyTextBoxLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clickEmptyTextBoxLabel.Location = new System.Drawing.Point(3, 28);
+            this.clickEmptyTextBoxLabel.Location = new System.Drawing.Point(6, 55);
+            this.clickEmptyTextBoxLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.clickEmptyTextBoxLabel.Name = "clickEmptyTextBoxLabel";
-            this.clickEmptyTextBoxLabel.Size = new System.Drawing.Size(210, 28);
+            this.clickEmptyTextBoxLabel.Size = new System.Drawing.Size(428, 55);
             this.clickEmptyTextBoxLabel.TabIndex = 1;
             this.clickEmptyTextBoxLabel.Text = "Click to Empty Text Boxes";
             this.clickEmptyTextBoxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,9 +315,10 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.resetAllSettingsButton, 4);
             this.resetAllSettingsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resetAllSettingsButton.Location = new System.Drawing.Point(219, 87);
+            this.resetAllSettingsButton.Location = new System.Drawing.Point(446, 171);
+            this.resetAllSettingsButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.resetAllSettingsButton.Name = "resetAllSettingsButton";
-            this.resetAllSettingsButton.Size = new System.Drawing.Size(216, 22);
+            this.resetAllSettingsButton.Size = new System.Drawing.Size(432, 43);
             this.resetAllSettingsButton.TabIndex = 1;
             this.resetAllSettingsButton.Text = "Reset Settings";
             this.resetAllSettingsButton.UseVisualStyleBackColor = true;
@@ -317,9 +329,10 @@
             this.resetSettingsLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.resetSettingsLabel, 4);
             this.resetSettingsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resetSettingsLabel.Location = new System.Drawing.Point(3, 84);
+            this.resetSettingsLabel.Location = new System.Drawing.Point(6, 165);
+            this.resetSettingsLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.resetSettingsLabel.Name = "resetSettingsLabel";
-            this.resetSettingsLabel.Size = new System.Drawing.Size(210, 28);
+            this.resetSettingsLabel.Size = new System.Drawing.Size(428, 55);
             this.resetSettingsLabel.TabIndex = 1;
             this.resetSettingsLabel.Text = "Reset all Settings to Default";
             this.resetSettingsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -329,9 +342,10 @@
             this.usernameLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.usernameLabel, 4);
             this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameLabel.Location = new System.Drawing.Point(3, 0);
+            this.usernameLabel.Location = new System.Drawing.Point(6, 0);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(210, 28);
+            this.usernameLabel.Size = new System.Drawing.Size(428, 55);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "Username: ";
             this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -340,9 +354,10 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.usernameTextBox, 4);
             this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameTextBox.Location = new System.Drawing.Point(219, 3);
+            this.usernameTextBox.Location = new System.Drawing.Point(446, 6);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(216, 20);
+            this.usernameTextBox.Size = new System.Drawing.Size(432, 31);
             this.usernameTextBox.TabIndex = 3;
             this.usernameTextBox.Text = "Example : Anonymous";
             this.usernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -354,9 +369,10 @@
             this.minimizeHomeLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.minimizeHomeLabel, 4);
             this.minimizeHomeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minimizeHomeLabel.Location = new System.Drawing.Point(3, 56);
+            this.minimizeHomeLabel.Location = new System.Drawing.Point(6, 110);
+            this.minimizeHomeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.minimizeHomeLabel.Name = "minimizeHomeLabel";
-            this.minimizeHomeLabel.Size = new System.Drawing.Size(210, 28);
+            this.minimizeHomeLabel.Size = new System.Drawing.Size(428, 55);
             this.minimizeHomeLabel.TabIndex = 4;
             this.minimizeHomeLabel.Text = "Minimize Home When an Event Loads";
             this.minimizeHomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -367,9 +383,10 @@
             this.clearConsoleOnToggleCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tableLayoutPanel2.SetColumnSpan(this.clearConsoleOnToggleCheckBox, 4);
             this.clearConsoleOnToggleCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clearConsoleOnToggleCheckBox.Location = new System.Drawing.Point(219, 115);
+            this.clearConsoleOnToggleCheckBox.Location = new System.Drawing.Point(446, 226);
+            this.clearConsoleOnToggleCheckBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.clearConsoleOnToggleCheckBox.Name = "clearConsoleOnToggleCheckBox";
-            this.clearConsoleOnToggleCheckBox.Size = new System.Drawing.Size(216, 22);
+            this.clearConsoleOnToggleCheckBox.Size = new System.Drawing.Size(432, 43);
             this.clearConsoleOnToggleCheckBox.TabIndex = 5;
             this.clearConsoleOnToggleCheckBox.UseVisualStyleBackColor = true;
             this.clearConsoleOnToggleCheckBox.CheckedChanged += new System.EventHandler(this.clearConsoleOnToggleCheckBox_CheckedChanged);
@@ -377,10 +394,11 @@
             // databaseSettingsTab
             // 
             this.databaseSettingsTab.Controls.Add(this.tableLayoutPanel3);
-            this.databaseSettingsTab.Location = new System.Drawing.Point(4, 22);
+            this.databaseSettingsTab.Location = new System.Drawing.Point(4, 34);
+            this.databaseSettingsTab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.databaseSettingsTab.Name = "databaseSettingsTab";
-            this.databaseSettingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.databaseSettingsTab.Size = new System.Drawing.Size(444, 232);
+            this.databaseSettingsTab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.databaseSettingsTab.Size = new System.Drawing.Size(896, 458);
             this.databaseSettingsTab.TabIndex = 1;
             this.databaseSettingsTab.Text = "Database Settings";
             this.databaseSettingsTab.UseVisualStyleBackColor = true;
@@ -403,7 +421,8 @@
             this.tableLayoutPanel3.Controls.Add(this.databaseNameLabel, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.databaseNameTextBox, 1, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 8;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -414,16 +433,30 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(438, 226);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(884, 446);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // testConnectionToDatabaseButton
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.testConnectionToDatabaseButton, 2);
+            this.testConnectionToDatabaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(6, 391);
+            this.testConnectionToDatabaseButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.testConnectionToDatabaseButton.Name = "testConnectionToDatabaseButton";
+            this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(872, 49);
+            this.testConnectionToDatabaseButton.TabIndex = 1;
+            this.testConnectionToDatabaseButton.Text = "Test Connection To Database";
+            this.testConnectionToDatabaseButton.UseVisualStyleBackColor = true;
+            this.testConnectionToDatabaseButton.Click += new System.EventHandler(this.testConnectionToDatabaseButton_Click);
             // 
             // databaseIPLabel
             // 
             this.databaseIPLabel.AutoSize = true;
             this.databaseIPLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseIPLabel.Location = new System.Drawing.Point(3, 56);
+            this.databaseIPLabel.Location = new System.Drawing.Point(6, 110);
+            this.databaseIPLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.databaseIPLabel.Name = "databaseIPLabel";
-            this.databaseIPLabel.Size = new System.Drawing.Size(213, 28);
+            this.databaseIPLabel.Size = new System.Drawing.Size(430, 55);
             this.databaseIPLabel.TabIndex = 1;
             this.databaseIPLabel.Text = "Database IP:";
             this.databaseIPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -432,9 +465,10 @@
             // 
             this.databaseUsernameLabel.AutoSize = true;
             this.databaseUsernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseUsernameLabel.Location = new System.Drawing.Point(3, 140);
+            this.databaseUsernameLabel.Location = new System.Drawing.Point(6, 275);
+            this.databaseUsernameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.databaseUsernameLabel.Name = "databaseUsernameLabel";
-            this.databaseUsernameLabel.Size = new System.Drawing.Size(213, 28);
+            this.databaseUsernameLabel.Size = new System.Drawing.Size(430, 55);
             this.databaseUsernameLabel.TabIndex = 3;
             this.databaseUsernameLabel.Text = "Database Username:";
             this.databaseUsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -443,9 +477,10 @@
             // 
             this.databasePortLabel.AutoSize = true;
             this.databasePortLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePortLabel.Location = new System.Drawing.Point(3, 84);
+            this.databasePortLabel.Location = new System.Drawing.Point(6, 165);
+            this.databasePortLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.databasePortLabel.Name = "databasePortLabel";
-            this.databasePortLabel.Size = new System.Drawing.Size(213, 28);
+            this.databasePortLabel.Size = new System.Drawing.Size(430, 55);
             this.databasePortLabel.TabIndex = 2;
             this.databasePortLabel.Text = "Database Port:";
             this.databasePortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -454,9 +489,10 @@
             // 
             this.databasePasswordLabel.AutoSize = true;
             this.databasePasswordLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePasswordLabel.Location = new System.Drawing.Point(3, 168);
+            this.databasePasswordLabel.Location = new System.Drawing.Point(6, 330);
+            this.databasePasswordLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.databasePasswordLabel.Name = "databasePasswordLabel";
-            this.databasePasswordLabel.Size = new System.Drawing.Size(213, 28);
+            this.databasePasswordLabel.Size = new System.Drawing.Size(430, 55);
             this.databasePasswordLabel.TabIndex = 4;
             this.databasePasswordLabel.Text = "Database Password:";
             this.databasePasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -464,9 +500,10 @@
             // databaseIPTextBox
             // 
             this.databaseIPTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseIPTextBox.Location = new System.Drawing.Point(222, 59);
+            this.databaseIPTextBox.Location = new System.Drawing.Point(448, 116);
+            this.databaseIPTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.databaseIPTextBox.Name = "databaseIPTextBox";
-            this.databaseIPTextBox.Size = new System.Drawing.Size(213, 20);
+            this.databaseIPTextBox.Size = new System.Drawing.Size(430, 31);
             this.databaseIPTextBox.TabIndex = 5;
             this.databaseIPTextBox.Text = "Example: 192.168.1.1";
             this.databaseIPTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -476,9 +513,10 @@
             // databasePortTextBox
             // 
             this.databasePortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePortTextBox.Location = new System.Drawing.Point(222, 87);
+            this.databasePortTextBox.Location = new System.Drawing.Point(448, 171);
+            this.databasePortTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.databasePortTextBox.Name = "databasePortTextBox";
-            this.databasePortTextBox.Size = new System.Drawing.Size(213, 20);
+            this.databasePortTextBox.Size = new System.Drawing.Size(430, 31);
             this.databasePortTextBox.TabIndex = 6;
             this.databasePortTextBox.Text = "Example: 3306";
             this.databasePortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -488,9 +526,10 @@
             // databaseUsernameTextBox
             // 
             this.databaseUsernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseUsernameTextBox.Location = new System.Drawing.Point(222, 143);
+            this.databaseUsernameTextBox.Location = new System.Drawing.Point(448, 281);
+            this.databaseUsernameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.databaseUsernameTextBox.Name = "databaseUsernameTextBox";
-            this.databaseUsernameTextBox.Size = new System.Drawing.Size(213, 20);
+            this.databaseUsernameTextBox.Size = new System.Drawing.Size(430, 31);
             this.databaseUsernameTextBox.TabIndex = 7;
             this.databaseUsernameTextBox.Text = "Example: xNovax";
             this.databaseUsernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -500,10 +539,11 @@
             // databasePasswordTextBox
             // 
             this.databasePasswordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePasswordTextBox.Location = new System.Drawing.Point(222, 171);
+            this.databasePasswordTextBox.Location = new System.Drawing.Point(448, 336);
+            this.databasePasswordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.databasePasswordTextBox.Name = "databasePasswordTextBox";
             this.databasePasswordTextBox.PasswordChar = '*';
-            this.databasePasswordTextBox.Size = new System.Drawing.Size(213, 20);
+            this.databasePasswordTextBox.Size = new System.Drawing.Size(430, 31);
             this.databasePasswordTextBox.TabIndex = 8;
             this.databasePasswordTextBox.Text = "Example: donotusepasswordasyourpassword";
             this.databasePasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -516,10 +556,11 @@
             this.tableLayoutPanel3.SetColumnSpan(this.databaseSettingsCautionLabel, 8);
             this.databaseSettingsCautionLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.databaseSettingsCautionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.databaseSettingsCautionLabel.Location = new System.Drawing.Point(3, 0);
+            this.databaseSettingsCautionLabel.Location = new System.Drawing.Point(6, 0);
+            this.databaseSettingsCautionLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.databaseSettingsCautionLabel.Name = "databaseSettingsCautionLabel";
             this.tableLayoutPanel3.SetRowSpan(this.databaseSettingsCautionLabel, 2);
-            this.databaseSettingsCautionLabel.Size = new System.Drawing.Size(432, 56);
+            this.databaseSettingsCautionLabel.Size = new System.Drawing.Size(872, 110);
             this.databaseSettingsCautionLabel.TabIndex = 9;
             this.databaseSettingsCautionLabel.Text = "Currently all settings are stored in plain text so be cautious what computer you " +
     "put your password into";
@@ -529,9 +570,10 @@
             // 
             this.databaseNameLabel.AutoSize = true;
             this.databaseNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseNameLabel.Location = new System.Drawing.Point(3, 112);
+            this.databaseNameLabel.Location = new System.Drawing.Point(6, 220);
+            this.databaseNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.databaseNameLabel.Name = "databaseNameLabel";
-            this.databaseNameLabel.Size = new System.Drawing.Size(213, 28);
+            this.databaseNameLabel.Size = new System.Drawing.Size(430, 55);
             this.databaseNameLabel.TabIndex = 10;
             this.databaseNameLabel.Text = "Database Name: ";
             this.databaseNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -539,36 +581,26 @@
             // databaseNameTextBox
             // 
             this.databaseNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseNameTextBox.Location = new System.Drawing.Point(222, 115);
+            this.databaseNameTextBox.Location = new System.Drawing.Point(448, 226);
+            this.databaseNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.databaseNameTextBox.Name = "databaseNameTextBox";
-            this.databaseNameTextBox.Size = new System.Drawing.Size(213, 20);
+            this.databaseNameTextBox.Size = new System.Drawing.Size(430, 31);
             this.databaseNameTextBox.TabIndex = 11;
             this.databaseNameTextBox.Text = "Example: FRC_Scouting_Database";
             this.databaseNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
-            // testConnectionToDatabaseButton
-            // 
-            this.tableLayoutPanel3.SetColumnSpan(this.testConnectionToDatabaseButton, 2);
-            this.testConnectionToDatabaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(3, 199);
-            this.testConnectionToDatabaseButton.Name = "testConnectionToDatabaseButton";
-            this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(432, 24);
-            this.testConnectionToDatabaseButton.TabIndex = 1;
-            this.testConnectionToDatabaseButton.Text = "Test Connection To Database";
-            this.testConnectionToDatabaseButton.UseVisualStyleBackColor = true;
-            this.testConnectionToDatabaseButton.Click += new System.EventHandler(this.testConnectionToDatabaseButton_Click);
-            // 
             // MainSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 289);
+            this.ClientSize = new System.Drawing.Size(916, 556);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "MainSettings";
             this.Text = "Main Settings";

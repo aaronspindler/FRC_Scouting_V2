@@ -24,6 +24,7 @@
 //===============================================================================
 
 using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System;
 using System.Net;
@@ -134,6 +135,11 @@ namespace FRC_Scouting_V2
             public int rookie_year { get; set; }
             public int team_number { get; set; }
             public string website { get; set; }
+        }
+
+        private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ExportTableToCSV("AerialAssist_RahChaCha");
         }
     }
 }
