@@ -84,12 +84,12 @@ namespace FRC_Scouting_V2
 
         public int GetSecureRandomNum(int startingNum, int endingNum)
         {
-            int difference = endingNum - startingNum;
+            var difference = endingNum - startingNum;
             var bytes = new byte[16];
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
+            var number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
 
             return number;
         }
