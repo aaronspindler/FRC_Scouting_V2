@@ -25,11 +25,11 @@
 
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
-
 //@author xNovax
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
@@ -162,16 +162,10 @@ namespace FRC_Scouting_V2
             {
                 try
                 {
-                    string databaseIP = Settings.Default.databaseIP;
-                    string databasePort = Settings.Default.databasePort;
-                    string databaseName = Settings.Default.databaseName;
-                    string databaseUsername = Settings.Default.databaseUsername;
-                    string databasePassword = Settings.Default.databasePassword;
-                    string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                        databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+                    string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName, Settings.Default.databaseUsername, Settings.Default.databasePassword);
                     var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
-                    var cmd = new MySqlCommand(("SELECT COUNT(*) FROM " + tableName), conn);
-                    cmd.ExecuteNonQuery();
+                    var cmd = new MySqlCommand(("SELECT * FROM " + tableName), conn);
+                    MySqlDataReader dr = cmd.ExecuteReader();
                 }
                 catch (MySqlException ex)
                 {
