@@ -24,7 +24,6 @@
 //===============================================================================
 
 using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System;
 using System.Net;
@@ -81,6 +80,11 @@ namespace FRC_Scouting_V2
             Close();
         }
 
+        private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ExportTableToCSV("AerialAssist_RahChaCha");
+        }
+
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             us.ShowInformationMessage(
@@ -91,7 +95,7 @@ namespace FRC_Scouting_V2
         {
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             url = (url + teamNumber);
             try
             {
@@ -126,20 +130,24 @@ namespace FRC_Scouting_V2
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
-            public string key { get; set; }
-            public string locality { get; set; }
-            public string location { get; set; }
-            public string name { get; set; }
-            public string nickname { get; set; }
-            public string region { get; set; }
-            public int rookie_year { get; set; }
-            public int team_number { get; set; }
-            public string website { get; set; }
-        }
 
-        private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ExportTableToCSV("AerialAssist_RahChaCha");
+            public string key { get; set; }
+
+            public string locality { get; set; }
+
+            public string location { get; set; }
+
+            public string name { get; set; }
+
+            public string nickname { get; set; }
+
+            public string region { get; set; }
+
+            public int rookie_year { get; set; }
+
+            public int team_number { get; set; }
+
+            public string website { get; set; }
         }
     }
 }
