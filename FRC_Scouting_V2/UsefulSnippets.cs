@@ -23,14 +23,14 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 //@author xNovax
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Reflection;
+using System.Security.Cryptography;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -69,7 +69,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
@@ -153,17 +153,32 @@ namespace FRC_Scouting_V2
             MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public int GetSecureRandomNum(int startingNum, int endingNum)
+        {
+            int difference = endingNum - startingNum;
+            var bytes = new byte[16];
+            var r = new RNGCryptoServiceProvider();
+
+            r.GetBytes(bytes);
+            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
+
+            return number;
+        }
+
         public void ExportTableToCSV(string tableName)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
+            var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName, Settings.Default.databaseUsername, Settings.Default.databasePassword);
-                    var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                    string mySqlConnectionString =
+                        String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                            Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName,
+                            Settings.Default.databaseUsername, Settings.Default.databasePassword);
+                    var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                     var cmd = new MySqlCommand(("SELECT * FROM " + tableName), conn);
                     MySqlDataReader dr = cmd.ExecuteReader();
                 }
