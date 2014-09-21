@@ -35,9 +35,11 @@ namespace FRC_Scouting_V2
     //@author xNovax
     public partial class AerialAssist_RahChaCha : Form
     {
+        private const string TABLE_NAME = ("AerialAssist_RahChaCha");
+
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
-        private const string TABLE_NAME = ("AerialAssist_RahChaCha");
+
         private int rookieYear;
         private string teamLocation = ("");
         private string teamName = ("");
