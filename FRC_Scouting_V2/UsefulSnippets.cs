@@ -23,15 +23,16 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 //@author xNovax
+
 namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
@@ -59,8 +60,11 @@ namespace FRC_Scouting_V2
             {
                 try
                 {
-                    string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};", Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName, Settings.Default.databaseUsername, Settings.Default.databasePassword);
-                    var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                    string mySqlConnectionString =
+                        String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                            Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName,
+                            Settings.Default.databaseUsername, Settings.Default.databasePassword);
+                    var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                     var cmd = new MySqlCommand();
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -82,12 +86,12 @@ namespace FRC_Scouting_V2
 
         public int GetSecureRandomNum(int startingNum, int endingNum)
         {
-            var difference = endingNum - startingNum;
+            int difference = endingNum - startingNum;
             var bytes = new byte[16];
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            var number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
+            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
 
             return number;
         }
@@ -105,7 +109,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
