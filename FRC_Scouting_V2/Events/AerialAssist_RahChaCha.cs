@@ -37,7 +37,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
-
+        private const string TABLE_NAME = ("AerialAssist_RahChaCha");
         private int rookieYear;
         private string teamLocation = ("");
         private string teamName = ("");
@@ -51,7 +51,7 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
         {
-            Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
+            Settings.Default.currentTableName = (TABLE_NAME);
             Settings.Default.Save();
 
             //Starting the clock so that the current time will be displayed and updated every second
@@ -82,7 +82,7 @@ namespace FRC_Scouting_V2
 
         private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ExportTableToCSV("AerialAssist_RahChaCha");
+            us.ExportTableToCSV(TABLE_NAME);
         }
 
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)

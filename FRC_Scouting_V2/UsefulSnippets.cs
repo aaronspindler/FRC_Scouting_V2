@@ -25,14 +25,13 @@
 
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
-
-//@author xNovax
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
+//@author xNovax
 namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
