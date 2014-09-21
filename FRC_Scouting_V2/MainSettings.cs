@@ -308,7 +308,7 @@ namespace FRC_Scouting_V2
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
                 us.ErrorOccured(
-                    "Something went wrong with your database! Make sure that your connection info is correct.");
+                    "Something went wrong with the connection to your database! Make sure that your connection info is correct.");
             }
         }
 

@@ -86,7 +86,10 @@ namespace FRC_Scouting_V2
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
                     conn.Open();
-                    return numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    conn.Close();
+                    cmd.Dispose();
+                    return numberOfRows;
                 }
             }
             catch (MySqlException ex)
@@ -418,6 +421,7 @@ namespace FRC_Scouting_V2
 
                 //Closing the connection
                 conn.Close();
+                cmd.Dispose();
             }
             catch (MySqlException ex)
             {
