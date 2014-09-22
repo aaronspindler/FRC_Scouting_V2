@@ -46,6 +46,17 @@ namespace FRC_Scouting_V2
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public string MakeMySQLConnectionString(string serverIP, string serverPort, string databaseName, string username, string password)
+        {
+            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
+            builder["Server"] = serverIP;
+            builder["Database"] = databaseName;
+            builder["Port"] = serverPort;
+            builder["Uid"] = username;
+            builder["Password"] = password;
+            return builder.ConnectionString;
+        }
+
         public void ErrorOccured(string error)
         {
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
