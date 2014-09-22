@@ -65,7 +65,7 @@ namespace FRC_Scouting_V2
                             Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName,
                             Settings.Default.databaseUsername, Settings.Default.databasePassword);
                     var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
-                    var cmd = new MySqlCommand();
+                    var cmd = new MySqlCommand("");
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
