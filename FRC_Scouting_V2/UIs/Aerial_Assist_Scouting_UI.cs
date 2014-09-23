@@ -207,6 +207,7 @@ namespace FRC_Scouting_V2
             didRobotDie = false;
             didRobotDieCheckBox.Checked = false;
             didRobotDieINT = 0;
+            progressBar.Value = 0;
         }
 
         private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
@@ -297,10 +298,6 @@ namespace FRC_Scouting_V2
         {
             missedPickupsTally = missedPickupsTally + 1;
             UpdateLabels();
-        }
-
-        private void showMatchScoreButton_Click(object sender, EventArgs e)
-        {
         }
 
         private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
@@ -427,6 +424,11 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
+            }
+
+            for (int i = 0; i < 101; i++)
+            {
+                progressBar.Value = i;
             }
         }
 
