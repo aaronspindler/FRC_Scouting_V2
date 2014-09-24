@@ -1,7 +1,7 @@
 FRC_Scouting_V2
 ===============
 
-![](http://i.gyazo.com/5f464b0296420689181ca688a7cb5b61.png)
+![](http://i.imgur.com/N194Clf.png)
 
   This is the second iteration of the FRC_Scouting program. The original version can be found at
   
