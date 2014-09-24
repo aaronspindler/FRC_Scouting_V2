@@ -3,10 +3,11 @@ To-Do List
 ====================================================
 	Pages to Add: 
 		Rename Statistics to Summary Stats
-	UI Changes
+	UI Changes:
 		Add miss rates to all performance metrics
-	Summary Page
+		Made database columns to store the new miss rate variables
+	Summary Page:
 		Add all of the labels to display the performance metrics for all of the matches that a team has participated
-	Team Comparison Page
+	Team Comparison Page:
 		Use the summary metrics to compare teams
 	
