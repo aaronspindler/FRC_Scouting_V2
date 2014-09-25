@@ -665,7 +665,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.startingLocationPanel, 7);
             this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.startingLocationPanel.Location = new System.Drawing.Point(308, 56);
-            this.startingLocationPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startingLocationPanel.Margin = new System.Windows.Forms.Padding(2);
             this.startingLocationPanel.Name = "startingLocationPanel";
             this.tableLayoutPanel1.SetRowSpan(this.startingLocationPanel, 8);
             this.startingLocationPanel.Size = new System.Drawing.Size(234, 192);
@@ -729,7 +729,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.progressBar, 6);
             this.progressBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressBar.Location = new System.Drawing.Point(342, 407);
-            this.progressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(200, 28);
             this.progressBar.TabIndex = 134;
