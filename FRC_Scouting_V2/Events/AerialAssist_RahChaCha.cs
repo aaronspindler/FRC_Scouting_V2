@@ -36,17 +36,17 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
+        private readonly string[] teamNameArray = {"Team1", "Team2"};
+        private readonly int[] teamNumberArray = {3710, 2};
 
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
 
-        private int rookieYear = 0;
+        private int rookieYear;
         private string teamLocation = ("");
         private string teamName = ("");
-        private int teamNumber = 0;
+        private int teamNumber;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
-        int[] teamNumberArray = {3710,2};
-        string[] teamNameArray = {"Team1", "Team2"};
 
         public AerialAssist_RahChaCha()
         {
@@ -88,20 +88,15 @@ namespace FRC_Scouting_V2
             Close();
         }
 
+        private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            us.ExportTableToCSV(TABLE_NAME);
+        }
+
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             us.ShowInformationMessage(
                 "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
-        }
-
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,8 +104,9 @@ namespace FRC_Scouting_V2
             url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
             string downloadedData;
             var wc = new MyWebClient();
-            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+
             try
             {
                 downloadedData = (wc.DownloadString(url));
@@ -142,6 +138,16 @@ namespace FRC_Scouting_V2
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
         }
 
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+        }
+
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -163,11 +169,6 @@ namespace FRC_Scouting_V2
             public int team_number { get; set; }
 
             public string website { get; set; }
-        }
-
-        private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            us.ExportTableToCSV(TABLE_NAME);
         }
     }
 }

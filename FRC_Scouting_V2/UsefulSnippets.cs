@@ -60,10 +60,13 @@ namespace FRC_Scouting_V2
             {
                 try
                 {
-                    string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName,Settings.Default.databaseUsername, Settings.Default.databasePassword);
+                    string mySqlConnectionString =
+                        String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
+                            Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName,
+                            Settings.Default.databaseUsername, Settings.Default.databasePassword);
                     var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                     string commandText = String.Format("SELECT * from {0}", tableName);
-                    var cmd = new MySqlCommand (commandText);
+                    var cmd = new MySqlCommand(commandText);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
