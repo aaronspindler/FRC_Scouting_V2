@@ -34,7 +34,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
@@ -103,6 +102,7 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentTimeDisplay = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -207,15 +207,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 921F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1206, 921);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // aerial_Assist_Scouting_UI1
-            // 
-            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(12, 12);
-            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(12);
-            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
-            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(1182, 897);
-            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -1143,6 +1134,15 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // aerial_Assist_Scouting_UI1
+            // 
+            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(12, 12);
+            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(12);
+            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
+            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(1182, 897);
+            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
+            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1154,7 +1154,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "AerialAssist_RahChaCha";
-            this.Text = "Aerial Assist | Rah Cha Cha | 2014";
+            this.Text = "Aerial Assist | RahChaCha | 2014";
             this.Load += new System.EventHandler(this.AerialAssist_RahChaCha_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
