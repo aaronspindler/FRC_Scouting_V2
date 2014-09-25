@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -36,8 +36,8 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
-        private readonly string[] teamNameArray = {"Team1", "Team2"};
-        private readonly int[] teamNumberArray = {3710, 2};
+        private readonly string[] teamNameArray = { "Team1", "Team2" };
+        private readonly int[] teamNumberArray = { 3710, 2 };
 
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
@@ -59,7 +59,6 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
 
             //Starting the clock so that the current time will be displayed and updated every second
-            
 
             //Setting toolTips
             var ToolTip1 = new ToolTip();
@@ -129,6 +128,11 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
         }
 
+        private void whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
+        }
+
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -160,11 +164,6 @@ namespace FRC_Scouting_V2
                 w.Timeout = 3000;
                 return w;
             }
-        }
-
-        private void whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
         }
     }
 }

@@ -36,22 +36,23 @@ namespace FRC_Scouting_V2
     public partial class Aerial_Assist_Scouting_UI : UserControl
     {
         //Variables
-         private readonly UsefulSnippets us = new UsefulSnippets();
-         int autoHighTally;
-         int autoLowTally;
-         int autoPickupTally;
-         string comments = ("");
-         int controlledHighTally;
-         int controlledLowTally;
-         int controlledPickupTally;
-         Boolean didRobotDie;
-         int didRobotDieINT;
-         int hotGoalTally;
-         int matchNumber = 1;
-         int missedPickupsTally;
-         string teamColour;
-         int xStarting;
-         int yStarting;
+        private readonly UsefulSnippets us = new UsefulSnippets();
+
+        private int autoHighTally;
+        private int autoLowTally;
+        private int autoPickupTally;
+        private string comments = ("");
+        private int controlledHighTally;
+        private int controlledLowTally;
+        private int controlledPickupTally;
+        private Boolean didRobotDie;
+        private int didRobotDieINT;
+        private int hotGoalTally;
+        private int matchNumber = 1;
+        private int missedPickupsTally;
+        private string teamColour;
+        private int xStarting;
+        private int yStarting;
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -64,180 +65,6 @@ namespace FRC_Scouting_V2
             clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 258, 191);
             clearPanelGraphics.Dispose();
             PlotInitialLines();
-        }
-
-        public void PlotInitialLines()
-        {
-            var blackpen = new Pen(Color.Black, 4);
-            var fineBluePen = new Pen(Color.Blue, 2);
-            var fineWhitePen = new Pen(Color.White, 2);
-            var fineRedPen = new Pen(Color.Red, 2);
-            Graphics initGraphics = startingLocationPanel.CreateGraphics();
-
-            //Drawing square around the outside edge
-            initGraphics.DrawRectangle(blackpen, 0, 0, 258, 191);
-
-            //Drawing field lines
-            initGraphics.DrawRectangle(fineBluePen, 4, 4, 76, 183);
-            initGraphics.DrawRectangle(fineWhitePen, 84, 4, 92, 183);
-            initGraphics.DrawRectangle(fineRedPen, 180, 4, 76, 183);
-            initGraphics.DrawLine(blackpen, 129, 0, 129, 191);
-            initGraphics.Dispose();
-        }
-
-        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            startingLocationPanel.Refresh();
-            BlankPanel();
-            Graphics g = startingLocationPanel.CreateGraphics();
-            xStarting = Convert.ToInt32(e.X) - 3;
-            yStarting = Convert.ToInt32(e.Y) - 3;
-            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
-        }
-
-        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
-        {
-            PlotInitialLines();
-        }
-
-        private void autoHighMinusButton_Click(object sender, EventArgs e)
-        {
-            autoHighTally = autoHighTally - 1;
-            UpdateLabels();
-        }
-
-        private void autoHighPlusButton_Click(object sender, EventArgs e)
-        {
-            autoHighTally = autoHighTally + 1;
-            UpdateLabels();
-        }
-
-        private void autoLowMinusButton_Click(object sender, EventArgs e)
-        {
-            autoLowTally = autoLowTally - 1;
-            UpdateLabels();
-        }
-
-        private void autoLowPlusButton_Click(object sender, EventArgs e)
-        {
-            autoLowTally = autoLowTally + 1;
-            UpdateLabels();
-        }
-
-        private void autoPickupMinusButton_Click(object sender, EventArgs e)
-        {
-            autoPickupTally = autoPickupTally - 1;
-            UpdateLabels();
-        }
-
-        private void autoPickupPlusButton_Click(object sender, EventArgs e)
-        {
-            autoPickupTally = autoPickupTally + 1;
-            UpdateLabels();
-        }
-
-        private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (commentsRichTextBox.Text != (""))
-            {
-                comments = commentsRichTextBox.Text;
-            }
-        }
-
-        private void controlledHighMinusButton_Click(object sender, EventArgs e)
-        {
-            controlledHighTally = controlledHighTally - 1;
-            UpdateLabels();
-        }
-
-        private void controlledHighPlusButton_Click(object sender, EventArgs e)
-        {
-            controlledHighTally = controlledHighTally + 1;
-            UpdateLabels();
-        }
-
-        private void controlledLowMinusButton_Click(object sender, EventArgs e)
-        {
-            controlledLowTally = controlledLowTally - 1;
-            UpdateLabels();
-        }
-
-        private void controlledLowPlusButton_Click(object sender, EventArgs e)
-        {
-            controlledLowTally = controlledLowTally + 1;
-            UpdateLabels();
-        }
-
-        private void controllPickupMinusButton_Click(object sender, EventArgs e)
-        {
-            controlledPickupTally = controlledPickupTally - 1;
-            UpdateLabels();
-        }
-
-        private void controllPickupPlusButton_Click(object sender, EventArgs e)
-        {
-            controlledPickupTally = controlledPickupTally + 1;
-            UpdateLabels();
-        }
-
-        private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (didRobotDieCheckBox.Checked)
-            {
-                didRobotDie = true;
-                didRobotDieINT = 1;
-            }
-            else
-            {
-                if (didRobotDieCheckBox.Checked == false)
-                {
-                    didRobotDie = false;
-                    didRobotDieINT = 0;
-                }
-            }
-        }
-
-        private void hotGoalMinusButton_Click(object sender, EventArgs e)
-        {
-            hotGoalTally = hotGoalTally - 1;
-            UpdateLabels();
-        }
-
-        private void hotGoalPlusButton_Click(object sender, EventArgs e)
-        {
-            hotGoalTally = hotGoalTally + 1;
-            UpdateLabels();
-        }
-
-        private void matchNumberNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            matchNumber = Convert.ToInt32(matchNumberNumericUpDown.Value);
-        }
-
-        private void missedPickupsMinusButton_Click(object sender, EventArgs e)
-        {
-            missedPickupsTally = missedPickupsTally - 1;
-            UpdateLabels();
-        }
-
-        private void missedPickupsPlusButton_Click(object sender, EventArgs e)
-        {
-            missedPickupsTally = missedPickupsTally + 1;
-            UpdateLabels();
-        }
-
-        private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (teamColourComboBox.SelectedIndex)
-            {
-                case 0:
-                    teamColour = ("Blue");
-                    break;
-
-                case 1:
-                    teamColour = ("Red");
-                    break;
-            }
         }
 
         //Getting the number of rows in the table
@@ -265,6 +92,25 @@ namespace FRC_Scouting_V2
             }
 
             return numberOfRows;
+        }
+
+        public void PlotInitialLines()
+        {
+            var blackpen = new Pen(Color.Black, 4);
+            var fineBluePen = new Pen(Color.Blue, 2);
+            var fineWhitePen = new Pen(Color.White, 2);
+            var fineRedPen = new Pen(Color.Red, 2);
+            Graphics initGraphics = startingLocationPanel.CreateGraphics();
+
+            //Drawing square around the outside edge
+            initGraphics.DrawRectangle(blackpen, 0, 0, 258, 191);
+
+            //Drawing field lines
+            initGraphics.DrawRectangle(fineBluePen, 4, 4, 76, 183);
+            initGraphics.DrawRectangle(fineWhitePen, 84, 4, 92, 183);
+            initGraphics.DrawRectangle(fineRedPen, 180, 4, 76, 183);
+            initGraphics.DrawLine(blackpen, 129, 0, 129, 191);
+            initGraphics.Dispose();
         }
 
         //Updates all of the labels when you click a plus or minus button
@@ -330,7 +176,61 @@ namespace FRC_Scouting_V2
             }
         }
 
-        
+        private void autoBallPickupHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous ball pickups that the robot can do!");
+        }
+
+        private void autoHighMinusButton_Click(object sender, EventArgs e)
+        {
+            autoHighTally = autoHighTally - 1;
+            UpdateLabels();
+        }
+
+        private void autoHighPlusButton_Click(object sender, EventArgs e)
+        {
+            autoHighTally = autoHighTally + 1;
+            UpdateLabels();
+        }
+
+        private void autoHighPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous High goals that the robot has scored! ");
+        }
+
+        private void autoLowMinusButton_Click(object sender, EventArgs e)
+        {
+            autoLowTally = autoLowTally - 1;
+            UpdateLabels();
+        }
+
+        private void autoLowPlusButton_Click(object sender, EventArgs e)
+        {
+            autoLowTally = autoLowTally + 1;
+            UpdateLabels();
+        }
+
+        private void autoLowPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous Low goals that the robot has scored!");
+        }
+
+        private void autoPickupMinusButton_Click(object sender, EventArgs e)
+        {
+            autoPickupTally = autoPickupTally - 1;
+            UpdateLabels();
+        }
+
+        private void autoPickupPlusButton_Click(object sender, EventArgs e)
+        {
+            autoPickupTally = autoPickupTally + 1;
+            UpdateLabels();
+        }
+
+        private void ballReceivedFromHumanHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of balls the robot received from human players.");
+        }
 
         private void clearAndAdvanceButton_Click(object sender, EventArgs e)
         {
@@ -356,7 +256,145 @@ namespace FRC_Scouting_V2
             contextDisplayLabel.Text = ("");
         }
 
-        
+        private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (commentsRichTextBox.Text != (""))
+            {
+                comments = commentsRichTextBox.Text;
+            }
+        }
+
+        private void controlledBallPickupHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled ball pickups that the robot can do!");
+        }
+
+        private void controlledHighMinusButton_Click(object sender, EventArgs e)
+        {
+            controlledHighTally = controlledHighTally - 1;
+            UpdateLabels();
+        }
+
+        private void controlledHighPlusButton_Click(object sender, EventArgs e)
+        {
+            controlledHighTally = controlledHighTally + 1;
+            UpdateLabels();
+        }
+
+        private void controlledHighPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled High goals that the robot has scored!");
+        }
+
+        private void controlledLowMinusButton_Click(object sender, EventArgs e)
+        {
+            controlledLowTally = controlledLowTally - 1;
+            UpdateLabels();
+        }
+
+        private void controlledLowPlusButton_Click(object sender, EventArgs e)
+        {
+            controlledLowTally = controlledLowTally + 1;
+            UpdateLabels();
+        }
+
+        private void controlledLowPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled low goals that the robot has scored!");
+        }
+
+        private void controllPickupMinusButton_Click(object sender, EventArgs e)
+        {
+            controlledPickupTally = controlledPickupTally - 1;
+            UpdateLabels();
+        }
+
+        private void controllPickupPlusButton_Click(object sender, EventArgs e)
+        {
+            controlledPickupTally = controlledPickupTally + 1;
+            UpdateLabels();
+        }
+
+        private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (didRobotDieCheckBox.Checked)
+            {
+                didRobotDie = true;
+                didRobotDieINT = 1;
+            }
+            else
+            {
+                if (didRobotDieCheckBox.Checked == false)
+                {
+                    didRobotDie = false;
+                    didRobotDieINT = 0;
+                }
+            }
+        }
+
+        private void didRobotDieHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use this to record if the robot stopped working / died during a match. This is to record full loss of control.");
+        }
+
+        private void hotGoalMinusButton_Click(object sender, EventArgs e)
+        {
+            hotGoalTally = hotGoalTally - 1;
+            UpdateLabels();
+        }
+
+        private void hotGoalPlusButton_Click(object sender, EventArgs e)
+        {
+            hotGoalTally = hotGoalTally + 1;
+            UpdateLabels();
+        }
+
+        private void hotGoalsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Hot goals that the robot has scored!");
+        }
+
+        private void matchNumberHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the up down box to enter the match number that you are on so that you can piece together data in the future and figure out the teams that played together.");
+        }
+
+        private void matchNumberNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            matchNumber = Convert.ToInt32(matchNumberNumericUpDown.Value);
+        }
+
+        private void missedPickupHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of missed ball pickups that the has done!");
+        }
+
+        private void missedPickupsMinusButton_Click(object sender, EventArgs e)
+        {
+            missedPickupsTally = missedPickupsTally - 1;
+            UpdateLabels();
+        }
+
+        private void missedPickupsPlusButton_Click(object sender, EventArgs e)
+        {
+            missedPickupsTally = missedPickupsTally + 1;
+            UpdateLabels();
+        }
+
+        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            startingLocationPanel.Refresh();
+            BlankPanel();
+            Graphics g = startingLocationPanel.CreateGraphics();
+            xStarting = Convert.ToInt32(e.X) - 3;
+            yStarting = Convert.ToInt32(e.Y) - 3;
+            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
+        }
+
+        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
+        {
+            PlotInitialLines();
+        }
 
         private void submitDataButton_Click(object sender, EventArgs e)
         {
@@ -466,9 +504,18 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
+            switch (teamColourComboBox.SelectedIndex)
+            {
+                case 0:
+                    teamColour = ("Blue");
+                    break;
+
+                case 1:
+                    teamColour = ("Red");
+                    break;
+            }
         }
 
         private void teamColourHelpButton_Click(object sender, EventArgs e)
@@ -476,59 +523,9 @@ namespace FRC_Scouting_V2
             us.ShowInformationMessage("Use this drop down menu to select the colour of the team you are currently scouting.");
         }
 
-        private void autoHighPointsHelpButton_Click(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous High goals that the robot has scored! ");
-        }
-
-        private void autoLowPointsHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous Low goals that the robot has scored!");
-        }
-
-        private void controlledHighPointsHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled High goals that the robot has scored!");
-        }
-
-        private void controlledLowPointsHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled low goals that the robot has scored!");
-        }
-
-        private void hotGoalsHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Hot goals that the robot has scored!");
-        }
-
-        private void autoBallPickupHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous ball pickups that the robot can do!");
-        }
-
-        private void controlledBallPickupHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled ball pickups that the robot can do!");
-        }
-
-        private void missedPickupHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of missed ball pickups that the has done!");
-        }
-
-        private void matchNumberHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the up down box to enter the match number that you are on so that you can piece together data in the future and figure out the teams that played together.");
-        }
-
-        private void didRobotDieHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use this to record if the robot stopped working / died during a match. This is to record full loss of control.");
-        }
-
-        private void ballReceivedFromHumanHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of balls the robot received from human players.");
+            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
         }
     }
 }

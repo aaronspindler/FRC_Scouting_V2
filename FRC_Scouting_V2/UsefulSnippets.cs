@@ -37,31 +37,6 @@ namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
     {
-        public int GetNumberOfRowsInATable()
-        {
-            var numberOfRows = 0;
-            try
-            {
-                var mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
-
-                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
-                {
-                    conn.Open();
-                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
-                    conn.Close();
-                    cmd.Dispose();
-                    return numberOfRows;
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-            }
-            return numberOfRows;
-        }
-
         public void ClearSettings()
         {
             Settings.Default.Reset();
@@ -108,6 +83,31 @@ namespace FRC_Scouting_V2
         {
             string time = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
             return time;
+        }
+
+        public int GetNumberOfRowsInATable()
+        {
+            var numberOfRows = 0;
+            try
+            {
+                var mySqlConnectionString = MakeMySqlConnectionString();
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
+                {
+                    conn.Open();
+                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    conn.Close();
+                    cmd.Dispose();
+                    return numberOfRows;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+            return numberOfRows;
         }
 
         public int GetSecureRandomNum(int startingNum, int endingNum)
