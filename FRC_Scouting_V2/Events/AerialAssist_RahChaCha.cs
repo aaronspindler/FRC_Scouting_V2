@@ -138,16 +138,6 @@ namespace FRC_Scouting_V2
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
         }
 
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
-        }
-
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -169,6 +159,16 @@ namespace FRC_Scouting_V2
             public int team_number { get; set; }
 
             public string website { get; set; }
+        }
+
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
         }
     }
 }
