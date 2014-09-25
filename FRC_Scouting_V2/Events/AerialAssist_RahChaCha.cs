@@ -59,21 +59,17 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
 
             //Starting the clock so that the current time will be displayed and updated every second
-            timer.Start();
-            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
+            
 
             //Setting toolTips
             var ToolTip1 = new ToolTip();
             ToolTip1.SetToolTip(teamSelector,
                 "Use this to select the team that you want to enter data / look at data for!");
-            ToolTip1.SetToolTip(currentTimeDisplay,
-                "Displays the current time so that you don't get too focused on scouting and lose track of time.");
 
             //Adding teams to team selector and teamListBox
             for (int i = 0; i < teamNumberArray.Length; i++)
             {
                 teamSelector.Items.Add(teamNumberArray[i] + " : " + teamNameArray[i]);
-                teamListBox.Items.Add(teamNumberArray[i] + " : " + teamNameArray[i]);
             }
         }
 
@@ -133,11 +129,6 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
         }
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
-        }
-
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -169,6 +160,11 @@ namespace FRC_Scouting_V2
                 w.Timeout = 3000;
                 return w;
             }
+        }
+
+        private void whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
         }
     }
 }

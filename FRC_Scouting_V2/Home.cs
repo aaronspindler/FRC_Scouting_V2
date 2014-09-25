@@ -93,32 +93,6 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void eventSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (eventSelector.SelectedIndex == 0)
-            {
-                var aaNorthbay2014 = new AerialAssist_Northbay();
-                aaNorthbay2014.Show();
-
-                if (Settings.Default.minimizeHomeWentEventLoads)
-                {
-                    WindowState = FormWindowState.Minimized;
-                }
-            }
-            else
-            {
-                if (eventSelector.SelectedIndex == 1)
-                {
-                    var aaRahChaCha = new AerialAssist_RahChaCha();
-                    aaRahChaCha.Show();
-
-                    if (Settings.Default.minimizeHomeWentEventLoads)
-                    {
-                        WindowState = FormWindowState.Minimized;
-                    }
-                }
-            }
-        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -204,6 +178,33 @@ namespace FRC_Scouting_V2
                 {
                     HideConsoleWindow();
                     isConsoleVisible = false;
+                }
+            }
+        }
+
+        private void eventSelector_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (eventSelector.SelectedIndex == 0)
+            {
+                var aaNorthbay2014 = new AerialAssist_Northbay();
+                aaNorthbay2014.Show();
+
+                if (Settings.Default.minimizeHomeWentEventLoads)
+                {
+                    WindowState = FormWindowState.Minimized;
+                }
+            }
+            else
+            {
+                if (eventSelector.SelectedIndex == 1)
+                {
+                    var aaRahChaCha = new AerialAssist_RahChaCha();
+                    aaRahChaCha.Show();
+
+                    if (Settings.Default.minimizeHomeWentEventLoads)
+                    {
+                        WindowState = FormWindowState.Minimized;
+                    }
                 }
             }
         }

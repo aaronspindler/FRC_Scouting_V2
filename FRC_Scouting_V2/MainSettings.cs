@@ -182,12 +182,6 @@ namespace FRC_Scouting_V2
             Close();
         }
 
-        private void howComeMyDatabasePasswordDoesntWorkToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Your database password cannot contain any semicolons in it. ( ; )",
-                "How come my database password doesn't work?", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void howDoISaveMySettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
@@ -242,6 +236,18 @@ namespace FRC_Scouting_V2
                 if (Settings.Default.allowExportToTextFile == false)
                 {
                     allowExportToTextFileCheckBox.Checked = false;
+                }
+            }
+
+            if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == true)
+            {
+                showQuestionButtonsCheckBox.Checked = true;
+            }
+            else
+            {
+                if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == false)
+                {
+                    showQuestionButtonsCheckBox.Checked = false;
                 }
             }
 
@@ -334,6 +340,28 @@ namespace FRC_Scouting_V2
             MessageBox.Show(
                 "The Username field is used to keep track of who makes changes to any data. This prevents any mischievous changes to data.",
                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void showQuestionButtonsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showQuestionButtonsCheckBox.Checked == true)
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons = true;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
+            else
+            {
+                if (showQuestionButtonsCheckBox.Checked == false)
+                {
+                    FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons = false;
+                    FRC_Scouting_V2.Properties.Settings.Default.Save();
+                }
+            }
+        }
+
+        private void howComeICannotConnectToMyDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("The issue is probably because your computer's IP is not whitelisted in your database.");
         }
     }
 }

@@ -36,23 +36,22 @@ namespace FRC_Scouting_V2
     public partial class Aerial_Assist_Scouting_UI : UserControl
     {
         //Variables
-        private readonly UsefulSnippets us = new UsefulSnippets();
-
-        private int autoHighTally;
-        private int autoLowTally;
-        private int autoPickupTally;
-        private string comments = ("");
-        private int controlledHighTally;
-        private int controlledLowTally;
-        private int controlledPickupTally;
-        private Boolean didRobotDie;
-        private int didRobotDieINT;
-        private int hotGoalTally;
-        private int matchNumber = 1;
-        private int missedPickupsTally;
-        private string teamColour;
-        private int xStarting;
-        private int yStarting;
+         private readonly UsefulSnippets us = new UsefulSnippets();
+         int autoHighTally;
+         int autoLowTally;
+         int autoPickupTally;
+         string comments = ("");
+         int controlledHighTally;
+         int controlledLowTally;
+         int controlledPickupTally;
+         Boolean didRobotDie;
+         int didRobotDieINT;
+         int hotGoalTally;
+         int matchNumber = 1;
+         int missedPickupsTally;
+         string teamColour;
+         int xStarting;
+         int yStarting;
 
         public Aerial_Assist_Scouting_UI()
         {
@@ -65,40 +64,6 @@ namespace FRC_Scouting_V2
             clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 258, 191);
             clearPanelGraphics.Dispose();
             PlotInitialLines();
-        }
-
-        //Getting the number of rows in the table
-        public int CountRowsInDatabase()
-        {
-            int numberOfRows = 0;
-
-            try
-            {
-                string databaseIP = Settings.Default.databaseIP;
-                string databasePort = Settings.Default.databasePort;
-                string databaseName = Settings.Default.databaseName;
-                string databaseUsername = Settings.Default.databaseUsername;
-                string databasePassword = Settings.Default.databasePassword;
-                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
-
-                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
-                {
-                    conn.Open();
-                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
-                    conn.Close();
-                    cmd.Dispose();
-                    return numberOfRows;
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-            }
-
-            return numberOfRows;
         }
 
         public void PlotInitialLines()
@@ -120,34 +85,19 @@ namespace FRC_Scouting_V2
             initGraphics.Dispose();
         }
 
-        //Updates all of the labels when you click a plus or minus button
-        public void UpdateLabels()
+        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            autoHighTallyDisplay.Text = Convert.ToString(autoHighTally);
-            autoLowTallyDisplay.Text = Convert.ToString(autoLowTally);
-            controlledHighTallyDisplay.Text = Convert.ToString(controlledHighTally);
-            controlledLowTallyDisplay.Text = Convert.ToString(controlledLowTally);
-            hotGoalTallyDisplay.Text = Convert.ToString(hotGoalTally);
-            autoPickupTallyDisplay.Text = Convert.ToString(autoPickupTally);
-            controlledPickupTallyDisplay.Text = Convert.ToString(controlledPickupTally);
-            missedPickupsTallyDisplay.Text = Convert.ToString(missedPickupsTally);
+            startingLocationPanel.Refresh();
+            BlankPanel();
+            Graphics g = startingLocationPanel.CreateGraphics();
+            xStarting = Convert.ToInt32(e.X) - 3;
+            yStarting = Convert.ToInt32(e.Y) - 3;
+            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
         }
 
-        private void Aerial_Assist_UI_Layout_Load(object sender, EventArgs e)
+        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
         {
-            //Set team colour items
-            teamColourComboBox.Items.Add("Blue");
-            teamColourComboBox.Items.Add("Red");
-
-            //Setting toolTips
-            var ToolTip1 = new ToolTip();
-            ToolTip1.SetToolTip(commentsRichTextBox,
-                "Enter any comments you have about that match that may not fit into any other boxes.");
-            ToolTip1.SetToolTip(startingLocationPanel,
-                "Just click on this panel to set where the robot's starting location is");
-            ToolTip1.SetToolTip(clearAndAdvanceButton,
-                "Click this button once you have submitted your data so that it will clear all of the boxes and advance you to the next match.");
-            ToolTip1.SetToolTip(submitDataButton, "Click once you have finished scouting a match");
+            PlotInitialLines();
         }
 
         private void autoHighMinusButton_Click(object sender, EventArgs e)
@@ -184,30 +134,6 @@ namespace FRC_Scouting_V2
         {
             autoPickupTally = autoPickupTally + 1;
             UpdateLabels();
-        }
-
-        private void clearAndAdvanceButton_Click(object sender, EventArgs e)
-        {
-            autoHighTally = 0;
-            autoLowTally = 0;
-            autoPickupTally = 0;
-            controlledHighTally = 0;
-            controlledLowTally = 0;
-            controlledPickupTally = 0;
-            hotGoalTally = 0;
-            matchNumber = matchNumber + 1;
-            matchNumberNumericUpDown.Value = matchNumber;
-            missedPickupsTally = 0;
-            xStarting = 0;
-            yStarting = 0;
-            comments = ("");
-            commentsRichTextBox.Text = ("");
-            UpdateLabels();
-            BlankPanel();
-            didRobotDie = false;
-            didRobotDieCheckBox.Checked = false;
-            didRobotDieINT = 0;
-            progressBar.Value = 0;
         }
 
         private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
@@ -300,20 +226,137 @@ namespace FRC_Scouting_V2
             UpdateLabels();
         }
 
-        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
+        private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            startingLocationPanel.Refresh();
-            BlankPanel();
-            Graphics g = startingLocationPanel.CreateGraphics();
-            xStarting = Convert.ToInt32(e.X) - 3;
-            yStarting = Convert.ToInt32(e.Y) - 3;
-            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
+            switch (teamColourComboBox.SelectedIndex)
+            {
+                case 0:
+                    teamColour = ("Blue");
+                    break;
+
+                case 1:
+                    teamColour = ("Red");
+                    break;
+            }
         }
 
-        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
+        //Getting the number of rows in the table
+        public int CountRowsInDatabase()
         {
-            PlotInitialLines();
+            var numberOfRows = 0;
+            try
+            {
+                var mySqlConnectionString = us.MakeMySqlConnectionString();
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
+                {
+                    conn.Open();
+                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    conn.Close();
+                    cmd.Dispose();
+                    return numberOfRows;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+
+            return numberOfRows;
         }
+
+        //Updates all of the labels when you click a plus or minus button
+        public void UpdateLabels()
+        {
+            autoHighTallyDisplay.Text = Convert.ToString(autoHighTally);
+            autoLowTallyDisplay.Text = Convert.ToString(autoLowTally);
+            controlledHighTallyDisplay.Text = Convert.ToString(controlledHighTally);
+            controlledLowTallyDisplay.Text = Convert.ToString(controlledLowTally);
+            hotGoalTallyDisplay.Text = Convert.ToString(hotGoalTally);
+            autoPickupTallyDisplay.Text = Convert.ToString(autoPickupTally);
+            controlledPickupTallyDisplay.Text = Convert.ToString(controlledPickupTally);
+            missedPickupsTallyDisplay.Text = Convert.ToString(missedPickupsTally);
+        }
+
+        private void Aerial_Assist_UI_Layout_Load(object sender, EventArgs e)
+        {
+            //Setting toolTips
+            var ToolTip1 = new ToolTip();
+            ToolTip1.SetToolTip(commentsRichTextBox,
+                "Enter any comments you have about that match that may not fit into any other boxes.");
+            ToolTip1.SetToolTip(startingLocationPanel,
+                "Just click on this panel to set where the robot's starting location is");
+            ToolTip1.SetToolTip(clearAndAdvanceButton,
+                "Click this button once you have submitted your data so that it will clear all of the boxes and advance you to the next match.");
+            ToolTip1.SetToolTip(submitDataButton, "Click once you have finished scouting a match");
+
+            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
+            timer.Start();
+
+            if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == true)
+            {
+                teamColourHelpButton.Visible = true;
+                matchNumberHelpButton.Visible = true;
+                autoHighPointsHelpButton.Visible = true;
+                autoLowPointsHelpButton.Visible = true;
+                controlledHighPointsHelpButton.Visible = true;
+                controlledLowPointsHelpButton.Visible = true;
+                hotGoalsHelpButton.Visible = true;
+                autoBallPickupHelpButton.Visible = true;
+                controlledBallPickupHelpButton.Visible = true;
+                missedPickupHelpButton.Visible = true;
+                ballReceivedFromHumanHelpButton.Visible = true;
+                didRobotDieHelpButton.Visible = true;
+            }
+            else
+            {
+                if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == false)
+                {
+                    teamColourHelpButton.Visible = false;
+                    matchNumberHelpButton.Visible = false;
+                    autoHighPointsHelpButton.Visible = false;
+                    autoLowPointsHelpButton.Visible = false;
+                    controlledHighPointsHelpButton.Visible = false;
+                    controlledLowPointsHelpButton.Visible = false;
+                    hotGoalsHelpButton.Visible = false;
+                    autoBallPickupHelpButton.Visible = false;
+                    controlledBallPickupHelpButton.Visible = false;
+                    missedPickupHelpButton.Visible = false;
+                    ballReceivedFromHumanHelpButton.Visible = false;
+                    didRobotDieHelpButton.Visible = false;
+                }
+            }
+        }
+
+        
+
+        private void clearAndAdvanceButton_Click(object sender, EventArgs e)
+        {
+            autoHighTally = 0;
+            autoLowTally = 0;
+            autoPickupTally = 0;
+            controlledHighTally = 0;
+            controlledLowTally = 0;
+            controlledPickupTally = 0;
+            hotGoalTally = 0;
+            matchNumber = matchNumber + 1;
+            matchNumberNumericUpDown.Value = matchNumber;
+            missedPickupsTally = 0;
+            xStarting = 0;
+            yStarting = 0;
+            comments = ("");
+            commentsRichTextBox.Text = ("");
+            UpdateLabels();
+            BlankPanel();
+            didRobotDie = false;
+            didRobotDieCheckBox.Checked = false;
+            didRobotDieINT = 0;
+            contextDisplayLabel.Text = ("");
+        }
+
+        
 
         private void submitDataButton_Click(object sender, EventArgs e)
         {
@@ -360,13 +403,7 @@ namespace FRC_Scouting_V2
 
             //MySQL Database
             //MySQL Database Connection Info
-            string databaseIP = Settings.Default.databaseIP;
-            string databasePort = Settings.Default.databasePort;
-            string databaseName = Settings.Default.databaseName;
-            string databaseUsername = Settings.Default.databaseUsername;
-            string databasePassword = Settings.Default.databasePassword;
-            string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+            string mySqlConnectionString = us.MakeMySqlConnectionString();
             try
             {
                 //Creating the connection to the database and opening the connection
@@ -415,6 +452,7 @@ namespace FRC_Scouting_V2
                 cmd.ExecuteNonQuery();
 
                 Console.WriteLine("Data has been inserted into the database!");
+                contextDisplayLabel.Text = ("Your data has been inserted into the database!");
 
                 //Closing the connection
                 conn.Close();
@@ -422,28 +460,75 @@ namespace FRC_Scouting_V2
             }
             catch (MySqlException ex)
             {
+                contextDisplayLabel.Text = ("An error has occured!");
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
             }
-
-            for (int i = 0; i < 101; i++)
-            {
-                progressBar.Value = i;
-            }
         }
 
-        private void teamColourComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-            switch (teamColourComboBox.SelectedIndex)
-            {
-                case 0:
-                    teamColour = ("Blue");
-                    break;
+            currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
+        }
 
-                case 1:
-                    teamColour = ("Red");
-                    break;
-            }
+        private void teamColourHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use this drop down menu to select the colour of the team you are currently scouting.");
+        }
+
+        private void autoHighPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous High goals that the robot has scored! ");
+        }
+
+        private void autoLowPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous Low goals that the robot has scored!");
+        }
+
+        private void controlledHighPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled High goals that the robot has scored!");
+        }
+
+        private void controlledLowPointsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled low goals that the robot has scored!");
+        }
+
+        private void hotGoalsHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Hot goals that the robot has scored!");
+        }
+
+        private void autoBallPickupHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous ball pickups that the robot can do!");
+        }
+
+        private void controlledBallPickupHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled ball pickups that the robot can do!");
+        }
+
+        private void missedPickupHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of missed ball pickups that the has done!");
+        }
+
+        private void matchNumberHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the up down box to enter the match number that you are on so that you can piece together data in the future and figure out the teams that played together.");
+        }
+
+        private void didRobotDieHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use this to record if the robot stopped working / died during a match. This is to record full loss of control.");
+        }
+
+        private void ballReceivedFromHumanHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of balls the robot received from human players.");
         }
     }
 }

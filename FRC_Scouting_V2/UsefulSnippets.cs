@@ -37,6 +37,31 @@ namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
     {
+        public int GetNumberOfRowsInATable()
+        {
+            var numberOfRows = 0;
+            try
+            {
+                var mySqlConnectionString = MakeMySqlConnectionString();
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
+                {
+                    conn.Open();
+                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    conn.Close();
+                    cmd.Dispose();
+                    return numberOfRows;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+            return numberOfRows;
+        }
+
         public void ClearSettings()
         {
             Settings.Default.Reset();
@@ -97,15 +122,14 @@ namespace FRC_Scouting_V2
             return number;
         }
 
-        public string MakeMySQLConnectionString(string serverIP, string serverPort, string databaseName, string username,
-            string password)
+        public string MakeMySqlConnectionString()
         {
             var builder = new MySqlConnectionStringBuilder();
-            builder["Server"] = serverIP;
-            builder["Database"] = databaseName;
-            builder["Port"] = serverPort;
-            builder["Uid"] = username;
-            builder["Password"] = password;
+            builder["Server"] = FRC_Scouting_V2.Properties.Settings.Default.databaseIP;
+            builder["Database"] = FRC_Scouting_V2.Properties.Settings.Default.databaseName;
+            builder["Port"] = FRC_Scouting_V2.Properties.Settings.Default.databasePort;
+            builder["Uid"] = FRC_Scouting_V2.Properties.Settings.Default.databaseUsername;
+            builder["Password"] = FRC_Scouting_V2.Properties.Settings.Default.databasePassword;
             return builder.ConnectionString;
         }
 

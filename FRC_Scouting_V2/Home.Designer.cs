@@ -46,7 +46,7 @@
             this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toggleConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventSelector = new System.Windows.Forms.ComboBox();
+            this.eventSelector = new System.Windows.Forms.ToolStripComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -65,13 +65,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Controls.Add(this.frcLogoPictureBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.eventSelector, 4, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -80,8 +78,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(992, 729);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(496, 379);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // frcLogoPictureBox
@@ -89,29 +87,28 @@
             this.tableLayoutPanel1.SetColumnSpan(this.frcLogoPictureBox, 8);
             this.frcLogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.frcLogoPictureBox.Image = global::FRC_Scouting_V2.Properties.Resources.FRC_LOGO;
-            this.frcLogoPictureBox.Location = new System.Drawing.Point(6, 54);
-            this.frcLogoPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.frcLogoPictureBox.Location = new System.Drawing.Point(3, 28);
             this.frcLogoPictureBox.Name = "frcLogoPictureBox";
             this.tableLayoutPanel1.SetRowSpan(this.frcLogoPictureBox, 8);
-            this.frcLogoPictureBox.Size = new System.Drawing.Size(980, 669);
+            this.frcLogoPictureBox.Size = new System.Drawing.Size(490, 348);
             this.frcLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.frcLogoPictureBox.TabIndex = 1;
             this.frcLogoPictureBox.TabStop = false;
             // 
             // menuStrip1
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.menuStrip1, 4);
+            this.tableLayoutPanel1.SetColumnSpan(this.menuStrip1, 8);
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.informationToolStripMenuItem,
             this.debugToolStripMenuItem,
-            this.settingsToolStripMenuItem});
+            this.settingsToolStripMenuItem,
+            this.eventSelector});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(496, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(496, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,13 +117,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 40);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -141,51 +138,51 @@
             this.toolStripSeparator2,
             this.teamInformationLookupToolStripMenuItem});
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(152, 40);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
             this.informationToolStripMenuItem.Text = "Information";
             // 
             // changelogToolStripMenuItem
             // 
             this.changelogToolStripMenuItem.Name = "changelogToolStripMenuItem";
-            this.changelogToolStripMenuItem.Size = new System.Drawing.Size(388, 36);
+            this.changelogToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.changelogToolStripMenuItem.Text = "Changelog";
             this.changelogToolStripMenuItem.Click += new System.EventHandler(this.changelogToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(385, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(218, 6);
             // 
             // fRC3710TeamInformationToolStripMenuItem
             // 
             this.fRC3710TeamInformationToolStripMenuItem.Name = "fRC3710TeamInformationToolStripMenuItem";
-            this.fRC3710TeamInformationToolStripMenuItem.Size = new System.Drawing.Size(388, 36);
+            this.fRC3710TeamInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.fRC3710TeamInformationToolStripMenuItem.Text = "FRC 3710 Team Information";
             this.fRC3710TeamInformationToolStripMenuItem.Click += new System.EventHandler(this.fRC3710TeamInformationToolStripMenuItem_Click);
             // 
             // programInformationToolStripMenuItem
             // 
             this.programInformationToolStripMenuItem.Name = "programInformationToolStripMenuItem";
-            this.programInformationToolStripMenuItem.Size = new System.Drawing.Size(388, 36);
+            this.programInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.programInformationToolStripMenuItem.Text = "Program Information";
             this.programInformationToolStripMenuItem.Click += new System.EventHandler(this.programInformationToolStripMenuItem_Click);
             // 
             // licenseInformationToolStripMenuItem
             // 
             this.licenseInformationToolStripMenuItem.Name = "licenseInformationToolStripMenuItem";
-            this.licenseInformationToolStripMenuItem.Size = new System.Drawing.Size(388, 36);
+            this.licenseInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.licenseInformationToolStripMenuItem.Text = "License Information";
             this.licenseInformationToolStripMenuItem.Click += new System.EventHandler(this.licenseInformationToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(385, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(218, 6);
             // 
             // teamInformationLookupToolStripMenuItem
             // 
             this.teamInformationLookupToolStripMenuItem.Name = "teamInformationLookupToolStripMenuItem";
-            this.teamInformationLookupToolStripMenuItem.Size = new System.Drawing.Size(388, 36);
+            this.teamInformationLookupToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.teamInformationLookupToolStripMenuItem.Text = "Team Information Lookup";
             this.teamInformationLookupToolStripMenuItem.Click += new System.EventHandler(this.teamInformationLookupToolStripMenuItem_Click);
             // 
@@ -195,55 +192,48 @@
             this.resetAllSavedSettingsToDefaultToolStripMenuItem,
             this.toggleConsoleWindowToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(99, 40);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // resetAllSavedSettingsToDefaultToolStripMenuItem
             // 
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Name = "resetAllSavedSettingsToDefaultToolStripMenuItem";
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Size = new System.Drawing.Size(460, 36);
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Text = "Reset All Saved Settings to Default";
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetAllSavedSettingsToDefaultToolStripMenuItem_Click);
             // 
             // toggleConsoleWindowToolStripMenuItem
             // 
             this.toggleConsoleWindowToolStripMenuItem.Name = "toggleConsoleWindowToolStripMenuItem";
-            this.toggleConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(460, 36);
+            this.toggleConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.toggleConsoleWindowToolStripMenuItem.Text = "Toggle Console Window";
             this.toggleConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.toggleConsoleWindowToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(113, 40);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // eventSelector
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.eventSelector, 4);
-            this.eventSelector.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eventSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.eventSelector.FormattingEnabled = true;
-            this.eventSelector.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.eventSelector.Location = new System.Drawing.Point(502, 6);
-            this.eventSelector.Margin = new System.Windows.Forms.Padding(6);
+            this.eventSelector.DropDownWidth = 245;
+            this.eventSelector.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.eventSelector.Name = "eventSelector";
-            this.eventSelector.Size = new System.Drawing.Size(484, 33);
-            this.eventSelector.TabIndex = 2;
-            this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged);
-            this.eventSelector.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eventSelector_KeyDown);
+            this.eventSelector.Size = new System.Drawing.Size(248, 21);
+            this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged_1);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 729);
+            this.ClientSize = new System.Drawing.Size(496, 379);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "FRC_Scouting_V2";
@@ -269,7 +259,6 @@
         private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.PictureBox frcLogoPictureBox;
-        private System.Windows.Forms.ComboBox eventSelector;
         private System.Windows.Forms.ToolStripMenuItem resetAllSavedSettingsToDefaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changelogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem licenseInformationToolStripMenuItem;
@@ -277,6 +266,7 @@
         private System.Windows.Forms.ToolStripMenuItem teamInformationLookupToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripComboBox eventSelector;
     }
 }
 
