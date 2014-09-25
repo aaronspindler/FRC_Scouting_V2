@@ -1,8 +1,6 @@
 ﻿====================================================
 To-Do List
 ====================================================
-	Pages to Add: 
-		Rename Statistics to Summary Stats
 	UI Changes:
 		Add miss rates to all performance metrics
 		Made database columns to store the new miss rate variables

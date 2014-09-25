@@ -40,11 +40,13 @@ namespace FRC_Scouting_V2
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
 
-        private int rookieYear;
+        private int rookieYear = 0;
         private string teamLocation = ("");
         private string teamName = ("");
-        private int teamNumber;
+        private int teamNumber = 0;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
+        int[] teamNumberArray = {3710,2};
+        string[] teamNameArray = {"Team1", "Team2"};
 
         public AerialAssist_RahChaCha()
         {
@@ -67,8 +69,12 @@ namespace FRC_Scouting_V2
             ToolTip1.SetToolTip(currentTimeDisplay,
                 "Displays the current time so that you don't get too focused on scouting and lose track of time.");
 
-            //Adding teams to TeamSelector Control
-            teamSelector.Items.Add("Test");
+            //Adding teams to team selector and teamListBox
+            for (int i = 0; i < teamNumberArray.Length; i++)
+            {
+                teamSelector.Items.Add(teamNumberArray[i] + " : " + teamNameArray[i]);
+                teamListBox.Items.Add(teamNumberArray[i] + " : " + teamNameArray[i]);
+            }
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,14 +96,14 @@ namespace FRC_Scouting_V2
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
             string downloadedData;
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            url = (url + teamNumber);
+            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 downloadedData = (wc.DownloadString(url));
+                MessageBox.Show(downloadedData);
                 var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
                 teamName = Convert.ToString(deserializedData.nickname);

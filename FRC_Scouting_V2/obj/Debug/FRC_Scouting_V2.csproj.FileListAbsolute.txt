@@ -6,6 +6,7 @@ C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scout
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\GeneralFormTemplate.dll
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\Newtonsoft.Json.dll
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\GeneralFormTemplate.pdb
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.csprojResolveAssemblyReference.cache
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.g.resources
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.AerialAssist_Northbay.resources
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.AerialAssist_Northbay_Information.resources
@@ -24,4 +25,3 @@ C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scout
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.csproj.GenerateResource.Cache
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.exe
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.pdb
-C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.csprojResolveAssemblyReference.cache
