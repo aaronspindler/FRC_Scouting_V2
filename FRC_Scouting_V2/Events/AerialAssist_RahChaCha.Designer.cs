@@ -34,7 +34,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
@@ -92,12 +91,17 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToCSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentTimeDisplay = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.importFromTextFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToCSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -157,7 +161,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(619, 661);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(619, 611);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -173,7 +177,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 16);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(613, 602);
+            this.tabControl1.Size = new System.Drawing.Size(613, 554);
             this.tabControl1.TabIndex = 1;
             // 
             // scoutingTabPage
@@ -182,7 +186,7 @@
             this.scoutingTabPage.Location = new System.Drawing.Point(4, 22);
             this.scoutingTabPage.Name = "scoutingTabPage";
             this.scoutingTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.scoutingTabPage.Size = new System.Drawing.Size(605, 576);
+            this.scoutingTabPage.Size = new System.Drawing.Size(605, 528);
             this.scoutingTabPage.TabIndex = 0;
             this.scoutingTabPage.Text = "Scouting";
             this.scoutingTabPage.UseVisualStyleBackColor = true;
@@ -211,19 +215,8 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(599, 570);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(599, 522);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // aerial_Assist_Scouting_UI1
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.aerial_Assist_Scouting_UI1, 8);
-            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
-            this.tableLayoutPanel2.SetRowSpan(this.aerial_Assist_Scouting_UI1, 8);
-            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(587, 558);
-            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -976,7 +969,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.eventInformationToolStripMenuItem,
-            this.exportToolStripMenuItem,
+            this.importExportToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -1006,21 +999,6 @@
             this.eventInformationToolStripMenuItem.Text = "Event Information";
             this.eventInformationToolStripMenuItem.Click += new System.EventHandler(this.eventInformationToolStripMenuItem_Click);
             // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportToCSVToolStripMenuItem});
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
-            this.exportToolStripMenuItem.Text = "Export";
-            // 
-            // exportToCSVToolStripMenuItem
-            // 
-            this.exportToCSVToolStripMenuItem.Name = "exportToCSVToolStripMenuItem";
-            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.exportToCSVToolStripMenuItem.Text = "Export to CSV";
-            this.exportToCSVToolStripMenuItem.Click += new System.EventHandler(this.exportToCSVToolStripMenuItem_Click);
-            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1042,9 +1020,9 @@
             this.currentTimeDisplay.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.SetColumnSpan(this.currentTimeDisplay, 16);
             this.currentTimeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.currentTimeDisplay.Location = new System.Drawing.Point(3, 633);
+            this.currentTimeDisplay.Location = new System.Drawing.Point(3, 585);
             this.currentTimeDisplay.Name = "currentTimeDisplay";
-            this.currentTimeDisplay.Size = new System.Drawing.Size(613, 28);
+            this.currentTimeDisplay.Size = new System.Drawing.Size(613, 26);
             this.currentTimeDisplay.TabIndex = 3;
             this.currentTimeDisplay.Text = "Current Time: Whoops Something Went Wrong";
             this.currentTimeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1054,11 +1032,66 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // importExportToolStripMenuItem
+            // 
+            this.importExportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.exportToolStripMenuItem});
+            this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(99, 21);
+            this.importExportToolStripMenuItem.Text = "Import / Export";
+            // 
+            // aerial_Assist_Scouting_UI1
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.aerial_Assist_Scouting_UI1, 8);
+            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
+            this.tableLayoutPanel2.SetRowSpan(this.aerial_Assist_Scouting_UI1, 8);
+            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(587, 510);
+            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
+            // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importFromTextFileToolStripMenuItem});
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Text = "Import";
+            // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportToCSVToolStripMenuItem});
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // importFromTextFileToolStripMenuItem
+            // 
+            this.importFromTextFileToolStripMenuItem.Name = "importFromTextFileToolStripMenuItem";
+            this.importFromTextFileToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.importFromTextFileToolStripMenuItem.Text = "Import from Text File";
+            // 
+            // exportToCSVToolStripMenuItem
+            // 
+            this.exportToCSVToolStripMenuItem.Name = "exportToCSVToolStripMenuItem";
+            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToCSVToolStripMenuItem.Text = "Export to CSV";
+            this.exportToCSVToolStripMenuItem.Click += new System.EventHandler(this.exportToCSVToolStripMenuItem_Click_1);
+            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 661);
+            this.ClientSize = new System.Drawing.Size(619, 611);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -1150,11 +1183,15 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label currentTimeDisplay;
         private System.Windows.Forms.ToolStripMenuItem howComeICannotSeeAnyTeamInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToCSVToolStripMenuItem;
         private System.Windows.Forms.TabPage teamSummaryTabPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TabPage teamMatchSummaryTabPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.ToolStripMenuItem importExportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importFromTextFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportToCSVToolStripMenuItem;
     }
 }

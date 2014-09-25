@@ -82,11 +82,6 @@ namespace FRC_Scouting_V2
             Close();
         }
 
-        private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ExportTableToCSV(TABLE_NAME);
-        }
-
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             us.ShowInformationMessage(
@@ -151,6 +146,11 @@ namespace FRC_Scouting_V2
             public int team_number { get; set; }
 
             public string website { get; set; }
+        }
+
+        private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            us.ExportTableToCSV(TABLE_NAME);
         }
     }
 }
