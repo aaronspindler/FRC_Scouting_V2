@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -36,8 +36,8 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
-        private readonly string[] teamNameArray = { "Team1", "Team2" };
-        private readonly int[] teamNumberArray = { 3710, 2 };
+        private readonly string[] teamNameArray = {"Team1", "Team2"};
+        private readonly int[] teamNumberArray = {3710, 2};
 
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
@@ -133,6 +133,16 @@ namespace FRC_Scouting_V2
             us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
         }
 
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+        }
+
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -154,16 +164,6 @@ namespace FRC_Scouting_V2
             public int team_number { get; set; }
 
             public string website { get; set; }
-        }
-
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
         }
     }
 }

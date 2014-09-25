@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -70,11 +70,11 @@ namespace FRC_Scouting_V2
         //Getting the number of rows in the table
         public int CountRowsInDatabase()
         {
-            var numberOfRows = 0;
+            int numberOfRows = 0;
             try
             {
-                var mySqlConnectionString = us.MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
@@ -141,7 +141,7 @@ namespace FRC_Scouting_V2
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
             timer.Start();
 
-            if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == true)
+            if (Settings.Default.showQuestionButtons)
             {
                 teamColourHelpButton.Visible = true;
                 matchNumberHelpButton.Visible = true;
@@ -158,7 +158,7 @@ namespace FRC_Scouting_V2
             }
             else
             {
-                if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == false)
+                if (Settings.Default.showQuestionButtons == false)
                 {
                     teamColourHelpButton.Visible = false;
                     matchNumberHelpButton.Visible = false;
@@ -178,7 +178,8 @@ namespace FRC_Scouting_V2
 
         private void autoBallPickupHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous ball pickups that the robot can do!");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of Autonomous ball pickups that the robot can do!");
         }
 
         private void autoHighMinusButton_Click(object sender, EventArgs e)
@@ -195,7 +196,8 @@ namespace FRC_Scouting_V2
 
         private void autoHighPointsHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous High goals that the robot has scored! ");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of Autonomous High goals that the robot has scored! ");
         }
 
         private void autoLowMinusButton_Click(object sender, EventArgs e)
@@ -212,7 +214,8 @@ namespace FRC_Scouting_V2
 
         private void autoLowPointsHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Autonomous Low goals that the robot has scored!");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of Autonomous Low goals that the robot has scored!");
         }
 
         private void autoPickupMinusButton_Click(object sender, EventArgs e)
@@ -229,7 +232,8 @@ namespace FRC_Scouting_V2
 
         private void ballReceivedFromHumanHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of balls the robot received from human players.");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of balls the robot received from human players.");
         }
 
         private void clearAndAdvanceButton_Click(object sender, EventArgs e)
@@ -266,7 +270,8 @@ namespace FRC_Scouting_V2
 
         private void controlledBallPickupHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled ball pickups that the robot can do!");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of Controlled ball pickups that the robot can do!");
         }
 
         private void controlledHighMinusButton_Click(object sender, EventArgs e)
@@ -283,7 +288,8 @@ namespace FRC_Scouting_V2
 
         private void controlledHighPointsHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled High goals that the robot has scored!");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of Controlled High goals that the robot has scored!");
         }
 
         private void controlledLowMinusButton_Click(object sender, EventArgs e)
@@ -300,7 +306,8 @@ namespace FRC_Scouting_V2
 
         private void controlledLowPointsHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Controlled low goals that the robot has scored!");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of Controlled low goals that the robot has scored!");
         }
 
         private void controllPickupMinusButton_Click(object sender, EventArgs e)
@@ -334,7 +341,8 @@ namespace FRC_Scouting_V2
 
         private void didRobotDieHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use this to record if the robot stopped working / died during a match. This is to record full loss of control.");
+            us.ShowInformationMessage(
+                "Use this to record if the robot stopped working / died during a match. This is to record full loss of control.");
         }
 
         private void hotGoalMinusButton_Click(object sender, EventArgs e)
@@ -351,12 +359,14 @@ namespace FRC_Scouting_V2
 
         private void hotGoalsHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of Hot goals that the robot has scored!");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of Hot goals that the robot has scored!");
         }
 
         private void matchNumberHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the up down box to enter the match number that you are on so that you can piece together data in the future and figure out the teams that played together.");
+            us.ShowInformationMessage(
+                "Use the up down box to enter the match number that you are on so that you can piece together data in the future and figure out the teams that played together.");
         }
 
         private void matchNumberNumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -366,7 +376,8 @@ namespace FRC_Scouting_V2
 
         private void missedPickupHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use the buttons to the left to increase / decrease the number of missed ball pickups that the has done!");
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed ball pickups that the has done!");
         }
 
         private void missedPickupsMinusButton_Click(object sender, EventArgs e)
@@ -445,7 +456,7 @@ namespace FRC_Scouting_V2
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
                 //Checking if the connection is successful
@@ -520,7 +531,8 @@ namespace FRC_Scouting_V2
 
         private void teamColourHelpButton_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Use this drop down menu to select the colour of the team you are currently scouting.");
+            us.ShowInformationMessage(
+                "Use this drop down menu to select the colour of the team you are currently scouting.");
         }
 
         private void timer_Tick(object sender, EventArgs e)

@@ -23,10 +23,10 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -184,7 +184,8 @@ namespace FRC_Scouting_V2
 
         private void howComeICannotConnectToMyDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("The issue is probably because your computer's IP is not whitelisted in your database.");
+            us.ShowInformationMessage(
+                "The issue is probably because your computer's IP is not whitelisted in your database.");
         }
 
         private void howDoISaveMySettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,13 +245,13 @@ namespace FRC_Scouting_V2
                 }
             }
 
-            if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == true)
+            if (Settings.Default.showQuestionButtons)
             {
                 showQuestionButtonsCheckBox.Checked = true;
             }
             else
             {
-                if (FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons == false)
+                if (Settings.Default.showQuestionButtons == false)
                 {
                     showQuestionButtonsCheckBox.Checked = false;
                 }
@@ -288,17 +289,17 @@ namespace FRC_Scouting_V2
 
         private void showQuestionButtonsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (showQuestionButtonsCheckBox.Checked == true)
+            if (showQuestionButtonsCheckBox.Checked)
             {
-                FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons = true;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.showQuestionButtons = true;
+                Settings.Default.Save();
             }
             else
             {
                 if (showQuestionButtonsCheckBox.Checked == false)
                 {
-                    FRC_Scouting_V2.Properties.Settings.Default.showQuestionButtons = false;
-                    FRC_Scouting_V2.Properties.Settings.Default.Save();
+                    Settings.Default.showQuestionButtons = false;
+                    Settings.Default.Save();
                 }
             }
         }
@@ -314,7 +315,7 @@ namespace FRC_Scouting_V2
                 string databasePassword = Settings.Default.databasePassword;
                 string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
                     databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 conn.Open();
 
