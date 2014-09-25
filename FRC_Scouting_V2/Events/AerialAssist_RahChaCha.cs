@@ -94,12 +94,23 @@ namespace FRC_Scouting_V2
                 "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
         }
 
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+        }
+
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
             string downloadedData;
-            var wc = new WebClient();
+            var wc = new MyWebClient();
             wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            
             try
             {
                 downloadedData = (wc.DownloadString(url));

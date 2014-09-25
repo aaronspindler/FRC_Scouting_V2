@@ -1131,6 +1131,7 @@
             // 
             // teamListBox
             // 
+            this.tableLayoutPanel6.SetColumnSpan(this.teamListBox, 2);
             this.teamListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamListBox.FormattingEnabled = true;
             this.teamListBox.ItemHeight = 25;
@@ -1139,7 +1140,7 @@
             this.teamListBox.Location = new System.Drawing.Point(3, 3);
             this.teamListBox.Name = "teamListBox";
             this.tableLayoutPanel6.SetRowSpan(this.teamListBox, 16);
-            this.teamListBox.Size = new System.Drawing.Size(144, 915);
+            this.teamListBox.Size = new System.Drawing.Size(294, 915);
             this.teamListBox.TabIndex = 0;
             // 
             // AerialAssist_RahChaCha

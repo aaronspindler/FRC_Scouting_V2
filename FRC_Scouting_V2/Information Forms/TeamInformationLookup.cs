@@ -48,10 +48,20 @@ namespace FRC_Scouting_V2.Information_Forms
             InitializeComponent();
         }
 
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+        }
+
         private void findTeamButton_Click(object sender, EventArgs e)
         {
             string downloadedData;
-            var wc = new WebClient();
+            var wc = new MyWebClient();
             wc.Headers.Add("X-TBA-App-Id",
                 "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
