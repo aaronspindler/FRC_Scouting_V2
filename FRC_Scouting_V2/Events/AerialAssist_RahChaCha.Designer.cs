@@ -100,8 +100,8 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.generalTeamInformationTabPage.SuspendLayout();
@@ -1033,24 +1033,15 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(599, 473);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // aerial_Assist_Scouting_UI1
-            // 
-            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
-            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(587, 461);
-            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -1066,6 +1057,15 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(613, 505);
             this.tabControl1.TabIndex = 1;
+            // 
+            // aerial_Assist_Scouting_UI1
+            // 
+            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
+            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(587, 461);
+            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // AerialAssist_RahChaCha
             // 
