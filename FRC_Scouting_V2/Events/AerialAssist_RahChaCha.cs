@@ -36,7 +36,7 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
-        private readonly string[] teamNameArray = {"Team1", "Team2"};
+        private readonly string[] teamNameArray = {"CyberFalcons", "Team2"};
         private readonly int[] teamNumberArray = {3710, 2};
 
         //Variables
@@ -68,7 +68,7 @@ namespace FRC_Scouting_V2
             //Adding teams to team selector and teamListBox
             for (int i = 0; i < teamNumberArray.Length; i++)
             {
-                teamSelector.Items.Add(teamNumberArray[i] + " : " + teamNameArray[i]);
+                teamSelector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
             }
         }
 

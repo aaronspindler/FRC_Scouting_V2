@@ -33,6 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
@@ -100,7 +101,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -186,6 +186,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 599F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1000, 599);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // aerial_Assist_Scouting_UI1
+            // 
+            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
+            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(988, 587);
+            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -1046,15 +1055,6 @@
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem.Size = new System.Drawing.Size(321, 22);
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem.Text = "What do the question mark buttons do?";
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem.Click += new System.EventHandler(this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click);
-            // 
-            // aerial_Assist_Scouting_UI1
-            // 
-            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
-            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(988, 587);
-            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // AerialAssist_RahChaCha
             // 

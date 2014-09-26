@@ -160,6 +160,7 @@ namespace FRC_Scouting_V2
                 missedPickupHelpButton.Visible = true;
                 ballReceivedFromHumanHelpButton.Visible = true;
                 didRobotDieHelpButton.Visible = true;
+                startingLocationHelpButton.Visible = true;
             }
             else
             {
@@ -182,6 +183,7 @@ namespace FRC_Scouting_V2
                     missedPickupHelpButton.Visible = false;
                     ballReceivedFromHumanHelpButton.Visible = false;
                     didRobotDieHelpButton.Visible = false;
+                    startingLocationHelpButton.Visible = false;
                 }
             }
         }
@@ -548,6 +550,42 @@ namespace FRC_Scouting_V2
         private void timer_Tick(object sender, EventArgs e)
         {
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
+        }
+
+        private void missedAutoHighHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed autonomous high shots!");
+        }
+
+        private void missedAutoLowHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed autonomous low shots!");
+        }
+
+        private void missedControlledHighHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed controlled high shots!");
+        }
+
+        private void missedControlledLowHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed controlled low shots!");
+        }
+
+        private void missedHotGoalHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed hot goal shots!");
+        }
+
+        private void startingLocationHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Click on the field below where the robot you are scouting was located at the beginning of the match.");
         }
     }
 }
