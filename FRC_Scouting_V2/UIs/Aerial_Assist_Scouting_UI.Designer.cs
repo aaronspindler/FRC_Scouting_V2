@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.commentsRichTextBox = new System.Windows.Forms.RichTextBox();
             this.teamColourLabel = new System.Windows.Forms.Label();
             this.teamColourComboBox = new System.Windows.Forms.ComboBox();
@@ -91,8 +93,6 @@
             this.didRobotDieHelpButton = new System.Windows.Forms.Button();
             this.teamColourHelpButton = new System.Windows.Forms.Button();
             this.matchNumberHelpButton = new System.Windows.Forms.Button();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.missedAutoHighLabel = new System.Windows.Forms.Label();
             this.missedAutoLowLabel = new System.Windows.Forms.Label();
             this.missedControlledHighLabel = new System.Windows.Forms.Label();
@@ -108,16 +108,16 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.missedAutoHighHelpButton = new System.Windows.Forms.Button();
+            this.missedAutoLowHelpButton = new System.Windows.Forms.Button();
+            this.missedControlledHighHelpButton = new System.Windows.Forms.Button();
+            this.missedControlledLowHelpButton = new System.Windows.Forms.Button();
+            this.missedHotGoalHelpButton = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -232,11 +232,11 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 5, 7);
             this.tableLayoutPanel1.Controls.Add(this.label4, 5, 9);
             this.tableLayoutPanel1.Controls.Add(this.label5, 5, 11);
-            this.tableLayoutPanel1.Controls.Add(this.button11, 8, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button12, 8, 5);
-            this.tableLayoutPanel1.Controls.Add(this.button13, 8, 7);
-            this.tableLayoutPanel1.Controls.Add(this.button14, 8, 9);
-            this.tableLayoutPanel1.Controls.Add(this.button15, 8, 11);
+            this.tableLayoutPanel1.Controls.Add(this.missedAutoHighHelpButton, 8, 3);
+            this.tableLayoutPanel1.Controls.Add(this.missedAutoLowHelpButton, 8, 5);
+            this.tableLayoutPanel1.Controls.Add(this.missedControlledHighHelpButton, 8, 7);
+            this.tableLayoutPanel1.Controls.Add(this.missedControlledLowHelpButton, 8, 9);
+            this.tableLayoutPanel1.Controls.Add(this.missedHotGoalHelpButton, 8, 11);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -261,6 +261,30 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(966, 589);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(188, 165);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 33);
+            this.label2.TabIndex = 166;
+            this.label2.Text = "0";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(188, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 33);
+            this.label1.TabIndex = 165;
+            this.label1.Text = "0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // commentsRichTextBox
             // 
@@ -1010,14 +1034,6 @@
             this.matchNumberHelpButton.UseVisualStyleBackColor = true;
             this.matchNumberHelpButton.Click += new System.EventHandler(this.matchNumberHelpButton_Click);
             // 
-            // saveFileDialog
-            // 
-            this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            // 
-            // timer
-            // 
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
             // missedAutoHighLabel
             // 
             this.missedAutoHighLabel.AutoSize = true;
@@ -1188,30 +1204,6 @@
             this.button10.Text = "+";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(188, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 33);
-            this.label1.TabIndex = 165;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(188, 165);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 33);
-            this.label2.TabIndex = 166;
-            this.label2.Text = "0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1248,60 +1240,68 @@
             this.label5.Text = "0";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button11
+            // missedAutoHighHelpButton
             // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(299, 102);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(31, 27);
-            this.button11.TabIndex = 170;
-            this.button11.Text = "?";
-            this.button11.UseVisualStyleBackColor = true;
+            this.missedAutoHighHelpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.missedAutoHighHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.missedAutoHighHelpButton.Location = new System.Drawing.Point(299, 102);
+            this.missedAutoHighHelpButton.Name = "missedAutoHighHelpButton";
+            this.missedAutoHighHelpButton.Size = new System.Drawing.Size(31, 27);
+            this.missedAutoHighHelpButton.TabIndex = 170;
+            this.missedAutoHighHelpButton.Text = "?";
+            this.missedAutoHighHelpButton.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // missedAutoLowHelpButton
             // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(299, 168);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(31, 27);
-            this.button12.TabIndex = 171;
-            this.button12.Text = "?";
-            this.button12.UseVisualStyleBackColor = true;
+            this.missedAutoLowHelpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.missedAutoLowHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.missedAutoLowHelpButton.Location = new System.Drawing.Point(299, 168);
+            this.missedAutoLowHelpButton.Name = "missedAutoLowHelpButton";
+            this.missedAutoLowHelpButton.Size = new System.Drawing.Size(31, 27);
+            this.missedAutoLowHelpButton.TabIndex = 171;
+            this.missedAutoLowHelpButton.Text = "?";
+            this.missedAutoLowHelpButton.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // missedControlledHighHelpButton
             // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(299, 234);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(31, 27);
-            this.button13.TabIndex = 172;
-            this.button13.Text = "?";
-            this.button13.UseVisualStyleBackColor = true;
+            this.missedControlledHighHelpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.missedControlledHighHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.missedControlledHighHelpButton.Location = new System.Drawing.Point(299, 234);
+            this.missedControlledHighHelpButton.Name = "missedControlledHighHelpButton";
+            this.missedControlledHighHelpButton.Size = new System.Drawing.Size(31, 27);
+            this.missedControlledHighHelpButton.TabIndex = 172;
+            this.missedControlledHighHelpButton.Text = "?";
+            this.missedControlledHighHelpButton.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // missedControlledLowHelpButton
             // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(299, 300);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(31, 27);
-            this.button14.TabIndex = 173;
-            this.button14.Text = "?";
-            this.button14.UseVisualStyleBackColor = true;
+            this.missedControlledLowHelpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.missedControlledLowHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.missedControlledLowHelpButton.Location = new System.Drawing.Point(299, 300);
+            this.missedControlledLowHelpButton.Name = "missedControlledLowHelpButton";
+            this.missedControlledLowHelpButton.Size = new System.Drawing.Size(31, 27);
+            this.missedControlledLowHelpButton.TabIndex = 173;
+            this.missedControlledLowHelpButton.Text = "?";
+            this.missedControlledLowHelpButton.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // missedHotGoalHelpButton
             // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(299, 366);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(31, 27);
-            this.button15.TabIndex = 174;
-            this.button15.Text = "?";
-            this.button15.UseVisualStyleBackColor = true;
+            this.missedHotGoalHelpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.missedHotGoalHelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.missedHotGoalHelpButton.Location = new System.Drawing.Point(299, 366);
+            this.missedHotGoalHelpButton.Name = "missedHotGoalHelpButton";
+            this.missedHotGoalHelpButton.Size = new System.Drawing.Size(31, 27);
+            this.missedHotGoalHelpButton.TabIndex = 174;
+            this.missedHotGoalHelpButton.Text = "?";
+            this.missedHotGoalHelpButton.UseVisualStyleBackColor = true;
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Aerial_Assist_Scouting_UI
             // 
@@ -1404,10 +1404,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button missedAutoHighHelpButton;
+        private System.Windows.Forms.Button missedAutoLowHelpButton;
+        private System.Windows.Forms.Button missedControlledHighHelpButton;
+        private System.Windows.Forms.Button missedControlledLowHelpButton;
+        private System.Windows.Forms.Button missedHotGoalHelpButton;
     }
 }
