@@ -28,7 +28,6 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
-using FRC_Scouting_V2.Test_Objects;
 
 namespace FRC_Scouting_V2
 {
@@ -81,16 +80,6 @@ namespace FRC_Scouting_V2
         {
             var changeLog = new Changelog();
             changeLog.Show();
-        }
-
-        //Opens up the test form page
-        private void eventSelector_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Up)
-            {
-                var testForm = new TestForm();
-                testForm.Show();
-            }
         }
 
         private void eventSelector_SelectedIndexChanged_1(object sender, EventArgs e)

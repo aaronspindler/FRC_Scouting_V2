@@ -119,6 +119,15 @@
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.startingLocationHelpButton = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -239,6 +248,15 @@
             this.tableLayoutPanel1.Controls.Add(this.missedControlledLowHelpButton, 8, 9);
             this.tableLayoutPanel1.Controls.Add(this.missedHotGoalHelpButton, 8, 11);
             this.tableLayoutPanel1.Controls.Add(this.startingLocationHelpButton, 25, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button11, 14, 5);
+            this.tableLayoutPanel1.Controls.Add(this.button12, 17, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 15, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 15, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 15, 7);
+            this.tableLayoutPanel1.Controls.Add(this.button13, 14, 6);
+            this.tableLayoutPanel1.Controls.Add(this.button14, 14, 7);
+            this.tableLayoutPanel1.Controls.Add(this.button15, 17, 6);
+            this.tableLayoutPanel1.Controls.Add(this.button16, 17, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1323,6 +1341,102 @@
             this.startingLocationHelpButton.UseVisualStyleBackColor = true;
             this.startingLocationHelpButton.Click += new System.EventHandler(this.startingLocationHelpButton_Click);
             // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button11.Location = new System.Drawing.Point(521, 168);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(31, 27);
+            this.button11.TabIndex = 176;
+            this.button11.Text = "-";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button12.Location = new System.Drawing.Point(632, 168);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(31, 27);
+            this.button12.TabIndex = 177;
+            this.button12.Text = "+";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label6, 2);
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(558, 165);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 33);
+            this.label6.TabIndex = 178;
+            this.label6.Text = "0";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label7, 2);
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Location = new System.Drawing.Point(558, 198);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 33);
+            this.label7.TabIndex = 179;
+            this.label7.Text = "0";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label8, 2);
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(558, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 33);
+            this.label8.TabIndex = 180;
+            this.label8.Text = "0";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button13
+            // 
+            this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button13.Location = new System.Drawing.Point(521, 201);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(31, 27);
+            this.button13.TabIndex = 181;
+            this.button13.Text = "-";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button14.Location = new System.Drawing.Point(521, 234);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(31, 27);
+            this.button14.TabIndex = 182;
+            this.button14.Text = "-";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button15.Location = new System.Drawing.Point(632, 201);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(31, 27);
+            this.button15.TabIndex = 183;
+            this.button15.Text = "+";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button16.Location = new System.Drawing.Point(632, 234);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(31, 27);
+            this.button16.TabIndex = 184;
+            this.button16.Text = "+";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // Aerial_Assist_Scouting_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1430,5 +1544,14 @@
         private System.Windows.Forms.Button missedControlledLowHelpButton;
         private System.Windows.Forms.Button missedHotGoalHelpButton;
         private System.Windows.Forms.Button startingLocationHelpButton;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
     }
 }
