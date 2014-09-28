@@ -33,7 +33,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.aerial_Assist_Scouting_UI1 = new FRC_Scouting_V2.Aerial_Assist_Scouting_UI();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
@@ -101,6 +100,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -171,7 +171,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.aerial_Assist_Scouting_UI1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.aerial_Assist_Scouting_UI_21, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -186,15 +186,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 599F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1000, 599);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // aerial_Assist_Scouting_UI1
-            // 
-            this.aerial_Assist_Scouting_UI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI1.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI1.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI1.Name = "aerial_Assist_Scouting_UI1";
-            this.aerial_Assist_Scouting_UI1.Size = new System.Drawing.Size(988, 587);
-            this.aerial_Assist_Scouting_UI1.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -1056,6 +1047,13 @@
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem.Text = "What do the question mark buttons do?";
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem.Click += new System.EventHandler(this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click);
             // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(3, 3);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(994, 593);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
+            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1095,7 +1093,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage scoutingTabPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private Aerial_Assist_Scouting_UI aerial_Assist_Scouting_UI1;
         private System.Windows.Forms.TabPage teamSummaryTabPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TabPage teamMatchSummaryTabPage;
@@ -1163,5 +1160,6 @@
         private System.Windows.Forms.ToolStripMenuItem howComeICannotSeeAnyTeamInformationToolStripMenuItem;
         private System.Windows.Forms.ListBox teamMatchBox;
         private System.Windows.Forms.ToolStripMenuItem whatDoTheQuestionMarkButtonsDoToolStripMenuItem;
+        private UIs.Aerial_Assist_Scouting_UI_New aerial_Assist_Scouting_UI_21;
     }
 }

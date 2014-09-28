@@ -154,17 +154,17 @@
     <Compile Include="Information Forms\Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI.cs">
+    <Compile Include="UIs\Aerial_Assist_Scouting_UI _Old.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI.Designer.cs">
-      <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
+    <Compile Include="UIs\Aerial_Assist_Scouting_UI _Old.Designer.cs">
+      <DependentUpon>Aerial_Assist_Scouting_UI _Old.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI_2.cs">
+    <Compile Include="UIs\Aerial_Assist_Scouting_UI_New.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI_2.Designer.cs">
-      <DependentUpon>Aerial_Assist_Scouting_UI_2.cs</DependentUpon>
+    <Compile Include="UIs\Aerial_Assist_Scouting_UI_New.Designer.cs">
+      <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </Compile>
     <Compile Include="UsefulSnippets.cs" />
     <EmbeddedResource Include="Events\AerialAssist_Northbay.resx">
@@ -205,11 +205,11 @@
     <EmbeddedResource Include="Information Forms\Team3710Information.resx">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI.resx">
-      <DependentUpon>Aerial_Assist_Scouting_UI.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI _Old.resx">
+      <DependentUpon>Aerial_Assist_Scouting_UI _Old.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI_2.resx">
-      <DependentUpon>Aerial_Assist_Scouting_UI_2.cs</DependentUpon>
+    <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI_New.resx">
+      <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
     <None Include="Properties\Settings.settings">
