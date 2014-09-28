@@ -408,7 +408,7 @@
             this.hotMissButton.Name = "hotMissButton";
             this.hotMissButton.Size = new System.Drawing.Size(129, 37);
             this.hotMissButton.TabIndex = 20;
-            this.hotMissButton.Text = "Hot Miss";
+            this.hotMissButton.Text = "Hot Goal Miss";
             this.hotMissButton.UseVisualStyleBackColor = true;
             this.hotMissButton.Click += new System.EventHandler(this.hotMissButton_Click);
             // 
@@ -942,6 +942,7 @@
             0,
             0,
             0});
+            this.matchNumberUpDown.ValueChanged += new System.EventHandler(this.matchNumberUpDown_ValueChanged);
             // 
             // tripleAssistGoals
             // 

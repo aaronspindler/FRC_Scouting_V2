@@ -64,6 +64,7 @@ namespace FRC_Scouting_V2.UIs
         private int unsuccessfulTruss;
         private int totalGoodControl;
         private int totalMissControl;
+        private int matchNumber;
 
         UsefulSnippets snippets = new UsefulSnippets();
 
@@ -316,33 +317,9 @@ namespace FRC_Scouting_V2.UIs
                 {
                     var writer = new StreamWriter(saveFileDialog.FileName);
                     writer.WriteLine("Time Created: " + snippets.GetCurrentTime());
+                    writer.WriteLine("Scouted By: " + Settings.Default.username);
                     writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
-                    writer.WriteLine("Did the robot die?: " + didRobotDie);
-                    writer.WriteLine("===============================================");
-                    writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
-                    writer.WriteLine("Team Number: " + Convert.ToString(Settings.Default.selectedTeamNumber));
-                    writer.WriteLine("Team Color During Match: " + teamColour);
-                    writer.WriteLine("===============================================");
-                    writer.WriteLine();
-                    writer.WriteLine("Points Scored");
-                    writer.WriteLine("Auto High Tally: " + Convert.ToString(autoHighTally));
-                    writer.WriteLine("Auto Low Tally: " + Convert.ToString(autoLowTally));
-                    writer.WriteLine("Manually Controlled High Tally: " + Convert.ToString(controlledHighTally));
-                    writer.WriteLine("Manually Controlled Low Tally: " + Convert.ToString(controlledLowTally));
-                    writer.WriteLine("Hot Goals Scored: " + Convert.ToString(hotGoalTally));
-                    writer.WriteLine("===============================================");
-                    writer.WriteLine("Ball Control");
-                    writer.WriteLine("Autonomous Ball Pickups: " + Convert.ToString(autoPickupTally));
-                    writer.WriteLine("Controlled Ball Pickups: " + Convert.ToString(controlledPickupTally));
-                    writer.WriteLine("Missed Pickups/Loads: " + Convert.ToString(missedPickupsTally));
-                    writer.WriteLine("===============================================");
-                    writer.WriteLine("Comments");
-                    writer.WriteLine(Convert.ToString(comments));
-                    writer.WriteLine("===============================================");
-                    writer.WriteLine("Starting Location");
-                    writer.WriteLine("X Starting Location: " + Convert.ToString(xStarting));
-                    writer.WriteLine("Y Starting Location: " + Convert.ToString(yStarting));
-                    writer.WriteLine("===============================================");
+                    //writer.WriteLine("Did the robot die?: " + didRobotDie);
                     writer.WriteLine("END OF FILE");
                     writer.Close();
                 }
@@ -369,7 +346,7 @@ namespace FRC_Scouting_V2.UIs
                 //Trying to create the table
                 try
                 {
-                    string createTable =String.Format("CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default', `TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8",Settings.Default.currentTableName);
+                    string createTable =String.Format("CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",Settings.Default.currentTableName);
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
@@ -383,9 +360,9 @@ namespace FRC_Scouting_V2.UIs
                 }
 
                 //Submit data into the database
-                string insertDataString =String.Format("Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1),Settings.Default.selectedTeamName,Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,missedPickupsTally, xStarting, yStarting, comments, didRobotDieINT);
-                cmd.CommandText = insertDataString;
-                cmd.ExecuteNonQuery();
+                //string insertDataString = String.Format("Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1),Settings.Default.selectedTeamName,Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,missedPickupsTally, xStarting, yStarting, comments, didRobotDieINT);
+                //cmd.CommandText = insertDataString;
+                //cmd.ExecuteNonQuery();
 
                 Console.WriteLine("Data has been inserted into the database!");
 
@@ -398,6 +375,11 @@ namespace FRC_Scouting_V2.UIs
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private void matchNumberUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            matchNumber = Convert.ToInt32(matchNumberUpDown.Value);
         }
     }
 }

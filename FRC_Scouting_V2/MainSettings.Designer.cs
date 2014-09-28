@@ -36,6 +36,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howDoISaveMySettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howComeICannotConnectToMyDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalSettingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -67,7 +68,6 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
-            this.howComeICannotConnectToMyDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -157,6 +157,13 @@
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Text = "What is the Username field used for?";
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem.Click += new System.EventHandler(this.whatIsTheUsernameFieldUsedForToolStripMenuItem_Click);
+            // 
+            // howComeICannotConnectToMyDatabaseToolStripMenuItem
+            // 
+            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Name = "howComeICannotConnectToMyDatabaseToolStripMenuItem";
+            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Text = "How come I cannot connect to my database?";
+            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Click += new System.EventHandler(this.howComeICannotConnectToMyDatabaseToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -581,13 +588,6 @@
             this.databaseNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
-            // 
-            // howComeICannotConnectToMyDatabaseToolStripMenuItem
-            // 
-            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Name = "howComeICannotConnectToMyDatabaseToolStripMenuItem";
-            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
-            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Text = "How come I cannot connect to my database?";
-            this.howComeICannotConnectToMyDatabaseToolStripMenuItem.Click += new System.EventHandler(this.howComeICannotConnectToMyDatabaseToolStripMenuItem_Click);
             // 
             // MainSettings
             // 

@@ -37,7 +37,7 @@ namespace FRC_Scouting_V2
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
         private readonly string[] teamNameArray = {"CyberFalcons", "Team2"};
-        private readonly int[] teamNumberArray = {3710, 2};
+        private readonly int[] teamNumberArray = {3710, 610};
 
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
@@ -96,6 +96,7 @@ namespace FRC_Scouting_V2
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            url = ("http://www.thebluealliance.com/api/v2/team/frc");
             url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
             string downloadedData;
             var wc = new MyWebClient();
