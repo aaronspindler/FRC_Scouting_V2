@@ -94,6 +94,8 @@
             this.tripleAssistMisses = new System.Windows.Forms.Button();
             this.tripleAssistGoalDisplay = new System.Windows.Forms.Label();
             this.tripleAssistMissDisplay = new System.Windows.Forms.Label();
+            this.submitDataButton = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberUpDown)).BeginInit();
             this.SuspendLayout();
@@ -190,6 +192,7 @@
             this.tableLayoutPanel.Controls.Add(this.tripleAssistMisses, 4, 6);
             this.tableLayoutPanel.Controls.Add(this.tripleAssistGoalDisplay, 3, 6);
             this.tableLayoutPanel.Controls.Add(this.tripleAssistMissDisplay, 7, 6);
+            this.tableLayoutPanel.Controls.Add(this.submitDataButton, 10, 15);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -210,7 +213,7 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(1099, 646);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1099, 635);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // controlledBallPickupMissButton
@@ -304,7 +307,7 @@
             // 
             this.startingLocationPanel.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel.SetColumnSpan(this.startingLocationPanel, 8);
-            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.startingLocationPanel.Location = new System.Drawing.Point(363, 46);
             this.startingLocationPanel.Name = "startingLocationPanel";
             this.tableLayoutPanel.SetRowSpan(this.startingLocationPanel, 6);
@@ -986,13 +989,25 @@
             this.tripleAssistMissDisplay.Text = "0";
             this.tripleAssistMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // submitDataButton
+            // 
+            this.tableLayoutPanel.SetColumnSpan(this.submitDataButton, 4);
+            this.submitDataButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.submitDataButton.Location = new System.Drawing.Point(453, 594);
+            this.submitDataButton.Name = "submitDataButton";
+            this.submitDataButton.Size = new System.Drawing.Size(174, 38);
+            this.submitDataButton.TabIndex = 0;
+            this.submitDataButton.Text = "Submit Data";
+            this.submitDataButton.UseVisualStyleBackColor = true;
+            this.submitDataButton.Click += new System.EventHandler(this.submitDataButton_Click);
+            // 
             // Aerial_Assist_Scouting_UI_New
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "Aerial_Assist_Scouting_UI_New";
-            this.Size = new System.Drawing.Size(1099, 646);
+            this.Size = new System.Drawing.Size(1099, 635);
             this.Load += new System.EventHandler(this.Aerial_Assist_Scouting_UI_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
@@ -1069,5 +1084,7 @@
         private System.Windows.Forms.Button tripleAssistMisses;
         private System.Windows.Forms.Label tripleAssistGoalDisplay;
         private System.Windows.Forms.Label tripleAssistMissDisplay;
+        private System.Windows.Forms.Button submitDataButton;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
