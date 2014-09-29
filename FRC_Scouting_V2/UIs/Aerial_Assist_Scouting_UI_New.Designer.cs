@@ -311,7 +311,7 @@
             this.startingLocationPanel.Location = new System.Drawing.Point(363, 46);
             this.startingLocationPanel.Name = "startingLocationPanel";
             this.tableLayoutPanel.SetRowSpan(this.startingLocationPanel, 6);
-            this.startingLocationPanel.Size = new System.Drawing.Size(354, 252);
+            this.startingLocationPanel.Size = new System.Drawing.Size(354, 250);
             this.startingLocationPanel.TabIndex = 4;
             this.startingLocationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startingLocationPanel_Paint);
             this.startingLocationPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.startingLocationPanel_MouseClick);

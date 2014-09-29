@@ -124,6 +124,49 @@ namespace FRC_Scouting_V2
             teamLocationDisplay.Text = teamLocation;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
 
+            switch (teamSelector.SelectedIndex)
+            {
+                case 0:
+                    teamLogoPictureBox.Image = Resources.FRC1114_Logo;
+                    break;
+                case 1:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 2:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 3:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 4:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 5:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 6:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 7:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 8:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 9:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 10:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 11:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+                case 12:
+                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    break;
+            }
+
             Settings.Default.selectedTeamName = teamName;
             Settings.Default.selectedTeamNumber = teamNumber;
             Settings.Default.Save();
