@@ -26,6 +26,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Resources;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -364,9 +365,9 @@ namespace FRC_Scouting_V2.UIs
                 }
 
                 //Submit data into the database
-                //string insertDataString = String.Format("Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1),Settings.Default.selectedTeamName,Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,missedPickupsTally, xStarting, yStarting, comments, didRobotDieINT);
-                //cmd.CommandText = insertDataString;
-                //cmd.ExecuteNonQuery();
+                string insertDataString = String.Format("Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1),Settings.Default.selectedTeamName,Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,missedPickupsTally, xStarting, yStarting, comments, didRobotDieINT);
+                cmd.CommandText = insertDataString;
+                cmd.ExecuteNonQuery();
 
                 Console.WriteLine("Data has been inserted into the database!");
 

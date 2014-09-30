@@ -95,10 +95,10 @@
             this.tripleAssistGoalDisplay = new System.Windows.Forms.Label();
             this.tripleAssistMissDisplay = new System.Windows.Forms.Label();
             this.submitDataButton = new System.Windows.Forms.Button();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.didTheRobotDieLabel = new System.Windows.Forms.Label();
             this.didRobotDieCheckBox = new System.Windows.Forms.CheckBox();
             this.commentsTextBox = new System.Windows.Forms.RichTextBox();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberUpDown)).BeginInit();
             this.SuspendLayout();
