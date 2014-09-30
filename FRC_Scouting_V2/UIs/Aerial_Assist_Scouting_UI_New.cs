@@ -66,6 +66,8 @@ namespace FRC_Scouting_V2.UIs
         private int unsuccessfulTruss;
         private int xStarting;
         private int yStarting;
+        private int didRobotDie;
+        private string comments;
 
         public Aerial_Assist_Scouting_UI_New()
         {
@@ -382,6 +384,29 @@ namespace FRC_Scouting_V2.UIs
         private void matchNumberUpDown_ValueChanged(object sender, EventArgs e)
         {
             matchNumber = Convert.ToInt32(matchNumberUpDown.Value);
+        }
+
+        private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (didRobotDieCheckBox.Checked == true)
+            {
+                didRobotDie = 1;
+            }
+            else
+            {
+                if (didRobotDieCheckBox.Checked == false)
+                {
+                    didRobotDie = 0;
+                }
+            }
+        }
+
+        private void commentsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (commentsTextBox.Text != (""))
+            {
+                comments = commentsTextBox.Text;
+            }
         }
     }
 }
