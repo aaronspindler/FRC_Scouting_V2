@@ -139,6 +139,7 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_Northbay_Information_Load(object sender, EventArgs e)
         {
+            //Choosing a random sponsor image
             randomNum = gen.Next(13);
             previousNum = randomNum;
             UpdateSponsor();
