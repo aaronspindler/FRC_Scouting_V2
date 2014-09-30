@@ -36,8 +36,8 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
-        private readonly string[] teamNameArray = { "The Rocketeers", "Arctic Warriors", "X-CATS", "Greater Rochester Robotics" };
-        private readonly int[] teamNumberArray = {20, 174, 191, 340};
+        private readonly string[] teamNameArray = { "The Rocketeers", "Arctic Warriors", "X-CATS", "Greater Rochester Robotics", "Circuit Stompers", "Red Raider Robotics", "Cresent Robotics", "Code Red Robotics", "Warp7", "Simbotics", "SparX", "Theory6", "TheBigBang", "Red Devil Robotics", "Finney Robotics", "Warlocks", "Rolling Thunder", "Raider Robotics", "Grapes of Wrath", "DevilTech", "Scitobor Robotics", "CougarTech", "XcentricsRobotics", "DM High Voltage", "The Astechz", "Tan[x]", "Ranger Robotics", "Eastridge Robotics", "IgKnighters", "Pittsford Panthers", "CyberFalcons", "S.U.I.T.S.", "Retro Rams", "MakeShift", "MaxTech", "W.A.F.F.L.E.S.", "VP Robotics", "Electric Mayhem", "Robot Raiders"};
+        private readonly int[] teamNumberArray = {20, 174, 191, 340, 378, 578, 610, 639, 865, 1114, 1126, 1241, 1285, 1334, 1405, 1507, 1511, 1518, 1551, 1559, 1585, 2228, 2340, 2852, 2994, 3003, 3015, 3157, 3173, 3181, 3710, 3951, 4001, 4039, 4343, 4476, 4914, 4930, 5254};
         private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
         private string teamLocation = ("");
