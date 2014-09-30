@@ -119,49 +119,127 @@ namespace FRC_Scouting_V2
             teamNumberDisplay.Text = Convert.ToString(teamNumber);
             teamLocationDisplay.Text = teamLocation;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
-
-            //switch (teamSelector.SelectedIndex)
-            //{
-            //    case 0:
-            //        teamLogoPictureBox.Image = Resources.FRC1114_Logo;
-            //        break;
-            //    case 1:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 2:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 3:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 4:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 5:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 6:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 7:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 8:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 9:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 10:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 11:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //    case 12:
-            //        teamLogoPictureBox.Image = Resources.FRC3710_Logo;
-            //        break;
-            //}
+           
+            switch (teamSelector.SelectedIndex)
+            {
+                case 0:
+                    teamLogoPictureBox.Image = Resources.FRC20;
+                    break;
+                case 1:
+                    teamLogoPictureBox.Image = Resources.FRC174;
+                    break;
+                case 2:
+                    teamLogoPictureBox.Image = Resources.FRC191;
+                    break;
+                case 3:
+                    teamLogoPictureBox.Image = Resources.FRC340;
+                    break;
+                case 4:
+                    teamLogoPictureBox.Image = Resources.FRC378;
+                    break;
+                case 5:
+                    teamLogoPictureBox.Image = Resources.FRC578;
+                    break;
+                case 6:
+                    teamLogoPictureBox.Image = Resources.FRC610;
+                    break;
+                case 7:
+                    teamLogoPictureBox.Image = Resources.FRC639;
+                    break;
+                case 8:
+                    teamLogoPictureBox.Image = Resources.FRC865;
+                    break;
+                case 9:
+                    teamLogoPictureBox.Image = Resources.FRC1114;
+                    break;
+                case 10:
+                    teamLogoPictureBox.Image = Resources.FRC1126;
+                    break;
+                case 11:
+                    teamLogoPictureBox.Image = Resources.FRC1241;
+                    break;
+                case 12:
+                    teamLogoPictureBox.Image = Resources.FRC1285;
+                    break;
+                case 13:
+                    teamLogoPictureBox.Image = Resources.FRC1334;
+                    break;
+                case 14:
+                    teamLogoPictureBox.Image = Resources.FRC1405;
+                    break;
+                case 15:
+                    teamLogoPictureBox.Image = Resources.FRC1507;
+                    break;
+                case 16:
+                    teamLogoPictureBox.Image = Resources.FRC1511;
+                    break;
+                case 17:
+                    teamLogoPictureBox.Image = Resources.FRC1518;
+                    break;
+                case 18:
+                    teamLogoPictureBox.Image = Resources.FRC1551;
+                    break;
+                case 19:
+                    teamLogoPictureBox.Image = Resources.FRC1559;
+                    break;
+                case 20:
+                    teamLogoPictureBox.Image = null;
+                    break;
+                case 21:
+                    teamLogoPictureBox.Image = Resources.FRC2228;
+                    break;
+                case 22:
+                    teamLogoPictureBox.Image = Resources.FRC2340;
+                    break;
+                case 23:
+                    teamLogoPictureBox.Image = Resources.FRC2852;
+                    break;
+                case 24:
+                    teamLogoPictureBox.Image = Resources.FRC2994;
+                    break;
+                case 25:
+                    teamLogoPictureBox.Image = Resources.FRC3003;
+                    break;
+                case 26:
+                    teamLogoPictureBox.Image = Resources.FRC3015;
+                    break;
+                case 27:
+                    teamLogoPictureBox.Image = Resources.FRC3157;
+                    break;
+                case 28:
+                    teamLogoPictureBox.Image = Resources.FRC3173;
+                    break;
+                case 29:
+                    teamLogoPictureBox.Image = Resources.FRC3181;
+                    break;
+                case 30:
+                    teamLogoPictureBox.Image = Resources.FRC3710;
+                    break;
+                case 31:
+                    teamLogoPictureBox.Image = Resources.FRC3951;
+                    break;
+                case 32:
+                    teamLogoPictureBox.Image = Resources.FRC4001;
+                    break;
+                case 33:
+                    teamLogoPictureBox.Image = Resources.FRC4039;
+                    break;
+                case 34:
+                    teamLogoPictureBox.Image = Resources.FRC4343;
+                    break;
+                case 35:
+                    teamLogoPictureBox.Image = Resources.FRC4476;
+                    break;
+                case 36:
+                    teamLogoPictureBox.Image = Resources.FRC4914;
+                    break;
+                case 37:
+                    teamLogoPictureBox.Image = Resources.FRC4930;
+                    break;
+                case 38:
+                    teamLogoPictureBox.Image = Resources.FRC5254;
+                    break;
+            }
 
             Settings.Default.selectedTeamName = teamName;
             Settings.Default.selectedTeamNumber = teamNumber;
