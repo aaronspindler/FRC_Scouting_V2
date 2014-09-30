@@ -211,7 +211,6 @@
     <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI_New.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\FRC_Scouting_V2.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -229,8 +228,6 @@
     <Resource Include="Resources\FRC_Logo_ICO.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\FRC_Scouting_V2.exe" />
-    <Content Include="bin\Debug\FRC_Scouting_V2.pdb" />
     <Content Include="DLLs\Newtonsoft.Json.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
