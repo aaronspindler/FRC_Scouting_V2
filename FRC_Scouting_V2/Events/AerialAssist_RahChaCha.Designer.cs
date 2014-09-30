@@ -33,7 +33,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
@@ -79,14 +78,6 @@
             this.generalTeamInformationTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.teamLogoPictureBox = new System.Windows.Forms.PictureBox();
-            this.teamNameLabel = new System.Windows.Forms.Label();
-            this.teamNumberLabel = new System.Windows.Forms.Label();
-            this.teamLocationLabel = new System.Windows.Forms.Label();
-            this.rookieYearLabel = new System.Windows.Forms.Label();
-            this.teamNumberDisplay = new System.Windows.Forms.Label();
-            this.rookieYearDisplay = new System.Windows.Forms.Label();
-            this.teamLocationDisplay = new System.Windows.Forms.Label();
-            this.teamNameDisplay = new System.Windows.Forms.Label();
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,6 +92,17 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teamNameDisplay = new System.Windows.Forms.Label();
+            this.teamNameLabel = new System.Windows.Forms.Label();
+            this.teamNumberDisplay = new System.Windows.Forms.Label();
+            this.teamNumberLabel = new System.Windows.Forms.Label();
+            this.teamLocationDisplay = new System.Windows.Forms.Label();
+            this.teamLocationLabel = new System.Windows.Forms.Label();
+            this.rookieYearDisplay = new System.Windows.Forms.Label();
+            this.rookieYearLabel = new System.Windows.Forms.Label();
+            this.teamURLLabel = new System.Windows.Forms.Label();
+            this.teamURLDisplay = new System.Windows.Forms.RichTextBox();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -186,14 +188,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 593F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1015, 593);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(3, 3);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1009, 587);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -804,10 +798,13 @@
             this.tableLayoutPanel3.Controls.Add(this.rookieYearDisplay, 4, 15);
             this.tableLayoutPanel3.Controls.Add(this.teamLocationDisplay, 4, 14);
             this.tableLayoutPanel3.Controls.Add(this.teamNameDisplay, 4, 12);
+            this.tableLayoutPanel3.Controls.Add(this.teamURLLabel, 0, 16);
+            this.tableLayoutPanel3.Controls.Add(this.teamURLDisplay, 4, 16);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 17;
+            this.tableLayoutPanel3.RowCount = 18;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -825,11 +822,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1015, 593);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -844,102 +836,6 @@
             this.teamLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.teamLogoPictureBox.TabIndex = 2;
             this.teamLogoPictureBox.TabStop = false;
-            // 
-            // teamNameLabel
-            // 
-            this.teamNameLabel.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.teamNameLabel, 4);
-            this.teamNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNameLabel.Location = new System.Drawing.Point(3, 300);
-            this.teamNameLabel.Name = "teamNameLabel";
-            this.teamNameLabel.Size = new System.Drawing.Size(498, 25);
-            this.teamNameLabel.TabIndex = 3;
-            this.teamNameLabel.Text = "Team Name: ";
-            this.teamNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // teamNumberLabel
-            // 
-            this.teamNumberLabel.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.teamNumberLabel, 4);
-            this.teamNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNumberLabel.Location = new System.Drawing.Point(3, 325);
-            this.teamNumberLabel.Name = "teamNumberLabel";
-            this.teamNumberLabel.Size = new System.Drawing.Size(498, 25);
-            this.teamNumberLabel.TabIndex = 4;
-            this.teamNumberLabel.Text = "Team Number: ";
-            this.teamNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // teamLocationLabel
-            // 
-            this.teamLocationLabel.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.teamLocationLabel, 4);
-            this.teamLocationLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamLocationLabel.Location = new System.Drawing.Point(3, 350);
-            this.teamLocationLabel.Name = "teamLocationLabel";
-            this.teamLocationLabel.Size = new System.Drawing.Size(498, 25);
-            this.teamLocationLabel.TabIndex = 5;
-            this.teamLocationLabel.Text = "Team Location: ";
-            this.teamLocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rookieYearLabel
-            // 
-            this.rookieYearLabel.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.rookieYearLabel, 4);
-            this.rookieYearLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rookieYearLabel.Location = new System.Drawing.Point(3, 375);
-            this.rookieYearLabel.Name = "rookieYearLabel";
-            this.rookieYearLabel.Size = new System.Drawing.Size(498, 25);
-            this.rookieYearLabel.TabIndex = 6;
-            this.rookieYearLabel.Text = "Rookie Year:";
-            this.rookieYearLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // teamNumberDisplay
-            // 
-            this.teamNumberDisplay.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.teamNumberDisplay, 4);
-            this.teamNumberDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNumberDisplay.Location = new System.Drawing.Point(507, 325);
-            this.teamNumberDisplay.Name = "teamNumberDisplay";
-            this.teamNumberDisplay.Size = new System.Drawing.Size(505, 25);
-            this.teamNumberDisplay.TabIndex = 8;
-            this.teamNumberDisplay.Text = "No Team Selected";
-            this.teamNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rookieYearDisplay
-            // 
-            this.rookieYearDisplay.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.rookieYearDisplay, 4);
-            this.rookieYearDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rookieYearDisplay.Location = new System.Drawing.Point(507, 375);
-            this.rookieYearDisplay.Name = "rookieYearDisplay";
-            this.rookieYearDisplay.Size = new System.Drawing.Size(505, 25);
-            this.rookieYearDisplay.TabIndex = 10;
-            this.rookieYearDisplay.Text = "No Team Selected";
-            this.rookieYearDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // teamLocationDisplay
-            // 
-            this.teamLocationDisplay.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.teamLocationDisplay, 4);
-            this.teamLocationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamLocationDisplay.Location = new System.Drawing.Point(507, 350);
-            this.teamLocationDisplay.Name = "teamLocationDisplay";
-            this.teamLocationDisplay.Size = new System.Drawing.Size(505, 25);
-            this.teamLocationDisplay.TabIndex = 9;
-            this.teamLocationDisplay.Text = "No Team Selected";
-            this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // teamNameDisplay
-            // 
-            this.teamNameDisplay.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.teamNameDisplay, 4);
-            this.teamNameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNameDisplay.Location = new System.Drawing.Point(507, 300);
-            this.teamNameDisplay.Name = "teamNameDisplay";
-            this.teamNameDisplay.Size = new System.Drawing.Size(505, 25);
-            this.teamNameDisplay.TabIndex = 7;
-            this.teamNameDisplay.Text = "No Team Selected";
-            this.teamNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamSelector
             // 
@@ -1055,6 +951,136 @@
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem.Text = "What do the question mark buttons do?";
             this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem.Click += new System.EventHandler(this.whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click);
             // 
+            // teamNameDisplay
+            // 
+            this.teamNameDisplay.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamNameDisplay, 4);
+            this.teamNameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamNameDisplay.Location = new System.Drawing.Point(507, 300);
+            this.teamNameDisplay.Name = "teamNameDisplay";
+            this.teamNameDisplay.Size = new System.Drawing.Size(505, 25);
+            this.teamNameDisplay.TabIndex = 7;
+            this.teamNameDisplay.Text = "No Team Selected";
+            this.teamNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // teamNameLabel
+            // 
+            this.teamNameLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamNameLabel, 4);
+            this.teamNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamNameLabel.Location = new System.Drawing.Point(3, 300);
+            this.teamNameLabel.Name = "teamNameLabel";
+            this.teamNameLabel.Size = new System.Drawing.Size(498, 25);
+            this.teamNameLabel.TabIndex = 3;
+            this.teamNameLabel.Text = "Team Name: ";
+            this.teamNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamNumberDisplay
+            // 
+            this.teamNumberDisplay.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamNumberDisplay, 4);
+            this.teamNumberDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamNumberDisplay.Location = new System.Drawing.Point(507, 325);
+            this.teamNumberDisplay.Name = "teamNumberDisplay";
+            this.teamNumberDisplay.Size = new System.Drawing.Size(505, 25);
+            this.teamNumberDisplay.TabIndex = 8;
+            this.teamNumberDisplay.Text = "No Team Selected";
+            this.teamNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // teamNumberLabel
+            // 
+            this.teamNumberLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamNumberLabel, 4);
+            this.teamNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamNumberLabel.Location = new System.Drawing.Point(3, 325);
+            this.teamNumberLabel.Name = "teamNumberLabel";
+            this.teamNumberLabel.Size = new System.Drawing.Size(498, 25);
+            this.teamNumberLabel.TabIndex = 4;
+            this.teamNumberLabel.Text = "Team Number: ";
+            this.teamNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamLocationDisplay
+            // 
+            this.teamLocationDisplay.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamLocationDisplay, 4);
+            this.teamLocationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamLocationDisplay.Location = new System.Drawing.Point(507, 350);
+            this.teamLocationDisplay.Name = "teamLocationDisplay";
+            this.teamLocationDisplay.Size = new System.Drawing.Size(505, 25);
+            this.teamLocationDisplay.TabIndex = 9;
+            this.teamLocationDisplay.Text = "No Team Selected";
+            this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // teamLocationLabel
+            // 
+            this.teamLocationLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamLocationLabel, 4);
+            this.teamLocationLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamLocationLabel.Location = new System.Drawing.Point(3, 350);
+            this.teamLocationLabel.Name = "teamLocationLabel";
+            this.teamLocationLabel.Size = new System.Drawing.Size(498, 25);
+            this.teamLocationLabel.TabIndex = 5;
+            this.teamLocationLabel.Text = "Team Location: ";
+            this.teamLocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rookieYearDisplay
+            // 
+            this.rookieYearDisplay.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.rookieYearDisplay, 4);
+            this.rookieYearDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rookieYearDisplay.Location = new System.Drawing.Point(507, 375);
+            this.rookieYearDisplay.Name = "rookieYearDisplay";
+            this.rookieYearDisplay.Size = new System.Drawing.Size(505, 25);
+            this.rookieYearDisplay.TabIndex = 10;
+            this.rookieYearDisplay.Text = "No Team Selected";
+            this.rookieYearDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // rookieYearLabel
+            // 
+            this.rookieYearLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.rookieYearLabel, 4);
+            this.rookieYearLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rookieYearLabel.Location = new System.Drawing.Point(3, 375);
+            this.rookieYearLabel.Name = "rookieYearLabel";
+            this.rookieYearLabel.Size = new System.Drawing.Size(498, 25);
+            this.rookieYearLabel.TabIndex = 6;
+            this.rookieYearLabel.Text = "Rookie Year:";
+            this.rookieYearLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamURLLabel
+            // 
+            this.teamURLLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamURLLabel, 4);
+            this.teamURLLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamURLLabel.Location = new System.Drawing.Point(3, 400);
+            this.teamURLLabel.Name = "teamURLLabel";
+            this.teamURLLabel.Size = new System.Drawing.Size(498, 25);
+            this.teamURLLabel.TabIndex = 11;
+            this.teamURLLabel.Text = "Team URL:";
+            this.teamURLLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamURLDisplay
+            // 
+            this.teamURLDisplay.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.teamURLDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableLayoutPanel3.SetColumnSpan(this.teamURLDisplay, 4);
+            this.teamURLDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamURLDisplay.Location = new System.Drawing.Point(507, 403);
+            this.teamURLDisplay.Name = "teamURLDisplay";
+            this.teamURLDisplay.ReadOnly = true;
+            this.teamURLDisplay.Size = new System.Drawing.Size(505, 19);
+            this.teamURLDisplay.TabIndex = 12;
+            this.teamURLDisplay.Text = "";
+            this.teamURLDisplay.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.teamURLDisplay_LinkClicked);
+            // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(3, 3);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1009, 587);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
+            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1138,14 +1164,6 @@
         private System.Windows.Forms.TabPage generalTeamInformationTabPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox teamLogoPictureBox;
-        private System.Windows.Forms.Label teamNameLabel;
-        private System.Windows.Forms.Label teamNumberLabel;
-        private System.Windows.Forms.Label teamLocationLabel;
-        private System.Windows.Forms.Label rookieYearLabel;
-        private System.Windows.Forms.Label teamNumberDisplay;
-        private System.Windows.Forms.Label rookieYearDisplay;
-        private System.Windows.Forms.Label teamLocationDisplay;
-        private System.Windows.Forms.Label teamNameDisplay;
         private System.Windows.Forms.ComboBox teamSelector;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -1162,5 +1180,15 @@
         private System.Windows.Forms.ListBox teamMatchBox;
         private System.Windows.Forms.ToolStripMenuItem whatDoTheQuestionMarkButtonsDoToolStripMenuItem;
         private UIs.Aerial_Assist_Scouting_UI_New aerial_Assist_Scouting_UI_21;
+        private System.Windows.Forms.Label teamNameLabel;
+        private System.Windows.Forms.Label teamNumberLabel;
+        private System.Windows.Forms.Label teamLocationLabel;
+        private System.Windows.Forms.Label rookieYearLabel;
+        private System.Windows.Forms.Label teamNumberDisplay;
+        private System.Windows.Forms.Label rookieYearDisplay;
+        private System.Windows.Forms.Label teamLocationDisplay;
+        private System.Windows.Forms.Label teamNameDisplay;
+        private System.Windows.Forms.Label teamURLLabel;
+        private System.Windows.Forms.RichTextBox teamURLDisplay;
     }
 }
