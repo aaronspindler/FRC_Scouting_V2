@@ -36,12 +36,9 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
-        private readonly string[] teamNameArray = {"CyberFalcons", "Team2"};
-        private readonly int[] teamNumberArray = {3710, 610};
-
-        //Variables
+        private readonly string[] teamNameArray = { "The Rocketeers", "Arctic Warriors", "X-CATS", "Greater Rochester Robotics" };
+        private readonly int[] teamNumberArray = {20, 174, 191, 340};
         private readonly UsefulSnippets us = new UsefulSnippets();
-
         private int rookieYear;
         private string teamLocation = ("");
         private string teamName = ("");
