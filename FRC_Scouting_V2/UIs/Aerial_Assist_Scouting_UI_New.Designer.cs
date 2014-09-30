@@ -916,6 +916,7 @@
             this.teamColourSelector.Name = "teamColourSelector";
             this.teamColourSelector.Size = new System.Drawing.Size(174, 21);
             this.teamColourSelector.TabIndex = 77;
+            this.teamColourSelector.SelectedIndexChanged += new System.EventHandler(this.teamColourSelector_SelectedIndexChanged);
             // 
             // matchNumberLabel
             // 

@@ -69,6 +69,7 @@ namespace FRC_Scouting_V2.UIs
         private int yStarting;
         private int didRobotDie;
         private string comments;
+        private string teamColour;
 
         public Aerial_Assist_Scouting_UI_New()
         {
@@ -365,7 +366,7 @@ namespace FRC_Scouting_V2.UIs
                 }
 
                 //Submit data into the database
-                string insertDataString = String.Format("Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1),Settings.Default.selectedTeamName,Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,missedPickupsTally, xStarting, yStarting, comments, didRobotDieINT);
+                string insertDataString = String.Format("Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}');", Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1), Settings.Default.selectedTeamNumber, Settings.Default.selectedTeamName, teamColour, matchNumber, autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal, controlledHighMiss, controlledLowGoal, controlledLowMiss, hotGoal, hotMiss, tripleAssistGoal, tripleAssistMiss, autoBallPickup, autoBallPickupMiss, controlledBallPickup, controlledBallPickupMiss, pickupFromHuman, pickupFromHumanMiss, passToOtherRobot, passToOtherRobotMiss, successfulTruss, unsuccessfulTruss, xStarting, yStarting, didRobotDie, comments);
                 cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
 
@@ -407,6 +408,21 @@ namespace FRC_Scouting_V2.UIs
             if (commentsTextBox.Text != (""))
             {
                 comments = commentsTextBox.Text;
+            }
+        }
+
+        private void teamColourSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (teamColourSelector.SelectedIndex == 0)
+            {
+                teamColour = ("Red");
+            }
+            else
+            {
+                if (teamColourSelector.SelectedIndex == 1)
+                {
+                    teamColour = ("Blue");
+                }
             }
         }
     }
