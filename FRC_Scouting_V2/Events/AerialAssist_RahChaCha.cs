@@ -36,8 +36,25 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
-        private readonly string[] teamNameArray = { "The Rocketeers", "Arctic Warriors", "X-CATS", "Greater Rochester Robotics", "Circuit Stompers", "Red Raider Robotics", "Cresent Robotics", "Code Red Robotics", "Warp7", "Simbotics", "SparX", "Theory6", "TheBigBang", "Red Devil Robotics", "Finney Robotics", "Warlocks", "Rolling Thunder", "Raider Robotics", "Grapes of Wrath", "DevilTech", "Scitobor Robotics", "CougarTech", "XcentricsRobotics", "DM High Voltage", "The Astechz", "Tan[x]", "Ranger Robotics", "Eastridge Robotics", "IgKnighters", "Pittsford Panthers", "CyberFalcons", "S.U.I.T.S.", "Retro Rams", "MakeShift", "MaxTech", "W.A.F.F.L.E.S.", "VP Robotics", "Electric Mayhem", "Robot Raiders"};
-        private readonly int[] teamNumberArray = {20, 174, 191, 340, 378, 578, 610, 639, 865, 1114, 1126, 1241, 1285, 1334, 1405, 1507, 1511, 1518, 1551, 1559, 1585, 2228, 2340, 2852, 2994, 3003, 3015, 3157, 3173, 3181, 3710, 3951, 4001, 4039, 4343, 4476, 4914, 4930, 5254};
+
+        private readonly string[] teamNameArray =
+        {
+            "The Rocketeers", "Arctic Warriors", "X-CATS",
+            "Greater Rochester Robotics", "Circuit Stompers", "Red Raider Robotics", "Cresent Robotics",
+            "Code Red Robotics", "Warp7", "Simbotics", "SparX", "Theory6", "TheBigBang", "Red Devil Robotics",
+            "Finney Robotics", "Warlocks", "Rolling Thunder", "Raider Robotics", "Grapes of Wrath", "DevilTech",
+            "Scitobor Robotics", "CougarTech", "XcentricsRobotics", "DM High Voltage", "The Astechz", "Tan[x]",
+            "Ranger Robotics", "Eastridge Robotics", "IgKnighters", "Pittsford Panthers", "CyberFalcons", "S.U.I.T.S.",
+            "Retro Rams", "MakeShift", "MaxTech", "W.A.F.F.L.E.S.", "VP Robotics", "Electric Mayhem", "Robot Raiders"
+        };
+
+        private readonly int[] teamNumberArray =
+        {
+            20, 174, 191, 340, 378, 578, 610, 639, 865, 1114, 1126, 1241, 1285,
+            1334, 1405, 1507, 1511, 1518, 1551, 1559, 1585, 2228, 2340, 2852, 2994, 3003, 3015, 3157, 3173, 3181, 3710,
+            3951, 4001, 4039, 4343, 4476, 4914, 4930, 5254
+        };
+
         private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
         private string teamLocation = ("");
@@ -123,43 +140,121 @@ namespace FRC_Scouting_V2
             switch (teamSelector.SelectedIndex)
             {
                 case 0:
-                    teamLogoPictureBox.Image = Resources.FRC1114_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC20;
                     break;
                 case 1:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC174;
                     break;
                 case 2:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC191;
                     break;
                 case 3:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC340;
                     break;
                 case 4:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC378;
                     break;
                 case 5:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC578;
                     break;
                 case 6:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC610;
                     break;
                 case 7:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC639;
                     break;
                 case 8:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC865;
                     break;
                 case 9:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC1114;
                     break;
                 case 10:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC1126;
                     break;
                 case 11:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC1241;
                     break;
                 case 12:
-                    teamLogoPictureBox.Image = Resources.FRC3710_Logo;
+                    teamLogoPictureBox.Image = Resources.FRC1285;
+                    break;
+                case 13:
+                    teamLogoPictureBox.Image = Resources.FRC1334;
+                    break;
+                case 14:
+                    teamLogoPictureBox.Image = Resources.FRC1405;
+                    break;
+                case 15:
+                    teamLogoPictureBox.Image = Resources.FRC1507;
+                    break;
+                case 16:
+                    teamLogoPictureBox.Image = Resources.FRC1511;
+                    break;
+                case 17:
+                    teamLogoPictureBox.Image = Resources.FRC1518;
+                    break;
+                case 18:
+                    teamLogoPictureBox.Image = Resources.FRC1551;
+                    break;
+                case 19:
+                    teamLogoPictureBox.Image = Resources.FRC1559;
+                    break;
+                case 20:
+                    teamLogoPictureBox.Image = null;
+                    break;
+                case 21:
+                    teamLogoPictureBox.Image = Resources.FRC2228;
+                    break;
+                case 22:
+                    teamLogoPictureBox.Image = Resources.FRC2340;
+                    break;
+                case 23:
+                    teamLogoPictureBox.Image = Resources.FRC2852;
+                    break;
+                case 24:
+                    teamLogoPictureBox.Image = Resources.FRC2994;
+                    break;
+                case 25:
+                    teamLogoPictureBox.Image = Resources.FRC3003;
+                    break;
+                case 26:
+                    teamLogoPictureBox.Image = Resources.FRC3015;
+                    break;
+                case 27:
+                    teamLogoPictureBox.Image = Resources.FRC3157;
+                    break;
+                case 28:
+                    teamLogoPictureBox.Image = Resources.FRC3173;
+                    break;
+                case 29:
+                    teamLogoPictureBox.Image = Resources.FRC3181;
+                    break;
+                case 30:
+                    teamLogoPictureBox.Image = Resources.FRC3710;
+                    break;
+                case 31:
+                    teamLogoPictureBox.Image = Resources.FRC3951;
+                    break;
+                case 32:
+                    teamLogoPictureBox.Image = Resources.FRC4001;
+                    break;
+                case 33:
+                    teamLogoPictureBox.Image = Resources.FRC4039;
+                    break;
+                case 34:
+                    teamLogoPictureBox.Image = Resources.FRC4343;
+                    break;
+                case 35:
+                    teamLogoPictureBox.Image = Resources.FRC4476;
+                    break;
+                case 36:
+                    teamLogoPictureBox.Image = Resources.FRC4914;
+                    break;
+                case 37:
+                    teamLogoPictureBox.Image = Resources.FRC4930;
+                    break;
+                case 38:
+                    teamLogoPictureBox.Image = Resources.FRC5254;
                     break;
             }
 

@@ -36,37 +36,38 @@ namespace FRC_Scouting_V2.UIs
     public partial class Aerial_Assist_Scouting_UI_New : UserControl
     {
         //Variables
-        private int xStarting;
-        private int yStarting;
+        private readonly UsefulSnippets snippets = new UsefulSnippets();
+        private int autoBallPickup;
+        private int autoBallPickupMiss;
         private int autoHighGoal;
         private int autoHighMiss;
         private int autoLowGoal;
         private int autoLowMiss;
+        private int controlledBallPickup;
+        private int controlledBallPickupMiss;
         private int controlledHighGoal;
         private int controlledHighMiss;
         private int controlledLowGoal;
         private int controlledLowMiss;
         private int hotGoal;
         private int hotMiss;
+        private int matchNumber;
+        private int passToOtherRobot;
+        private int passToOtherRobotMiss;
+        private int pickupFromHuman;
+        private int pickupFromHumanMiss;
+        private int successfulTruss;
         private int totalGoal;
+        private int totalGoodControl;
         private int totalMiss;
+        private int totalMissControl;
         private int tripleAssistGoal;
         private int tripleAssistMiss;
-        private int autoBallPickup;
-        private int controlledBallPickup;
-        private int pickupFromHuman;
-        private int passToOtherRobot;
-        private int successfulTruss;
-        private int autoBallPickupMiss;
-        private int controlledBallPickupMiss;
-        private int pickupFromHumanMiss;
-        private int passToOtherRobotMiss;
         private int unsuccessfulTruss;
-        private int totalGoodControl;
-        private int totalMissControl;
-        private int matchNumber;
-
-        UsefulSnippets snippets = new UsefulSnippets();
+        private int xStarting;
+        private int yStarting;
+        private int didRobotDie;
+        private string comments;
 
         public Aerial_Assist_Scouting_UI_New()
         {
@@ -118,8 +119,8 @@ namespace FRC_Scouting_V2.UIs
 
         private void Aerial_Assist_Scouting_UI_Load(object sender, EventArgs e)
         {
-            FRC_Scouting_V2.Properties.Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
-            FRC_Scouting_V2.Properties.Settings.Default.Save();
+            Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
+            Settings.Default.Save();
         }
 
         private void autoHighGoalButton_Click(object sender, EventArgs e)
@@ -139,7 +140,7 @@ namespace FRC_Scouting_V2.UIs
         private void controlledHighGoalButton_Click(object sender, EventArgs e)
         {
             controlledHighGoal++;
-            totalGoal++; 
+            totalGoal++;
             UpdateLabels();
         }
 
@@ -167,7 +168,7 @@ namespace FRC_Scouting_V2.UIs
 
         private void autoLowMissButton_Click(object sender, EventArgs e)
         {
-            autoLowMiss++; 
+            autoLowMiss++;
             totalMiss++;
             UpdateLabels();
         }
@@ -182,7 +183,7 @@ namespace FRC_Scouting_V2.UIs
         private void controlledLowMissButton_Click(object sender, EventArgs e)
         {
             controlledLowMiss++;
-            totalMiss++; 
+            totalMiss++;
             UpdateLabels();
         }
 
@@ -331,7 +332,7 @@ namespace FRC_Scouting_V2.UIs
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
                 //Checking if the connection is successful
@@ -346,7 +347,10 @@ namespace FRC_Scouting_V2.UIs
                 //Trying to create the table
                 try
                 {
-                    string createTable =String.Format("CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",Settings.Default.currentTableName);
+                    string createTable =
+                        String.Format(
+                            "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+                            Settings.Default.currentTableName);
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
@@ -382,5 +386,27 @@ namespace FRC_Scouting_V2.UIs
             matchNumber = Convert.ToInt32(matchNumberUpDown.Value);
         }
 
+        private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (didRobotDieCheckBox.Checked == true)
+            {
+                didRobotDie = 1;
+            }
+            else
+            {
+                if (didRobotDieCheckBox.Checked == false)
+                {
+                    didRobotDie = 0;
+                }
+            }
+        }
+
+        private void commentsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (commentsTextBox.Text != (""))
+            {
+                comments = commentsTextBox.Text;
+            }
+        }
     }
 }

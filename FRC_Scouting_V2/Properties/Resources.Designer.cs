@@ -153,9 +153,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1114_Logo {
+        internal static System.Drawing.Bitmap FRC1114 {
             get {
-                object obj = ResourceManager.GetObject("FRC1114_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1114", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1126_Logo {
+        internal static System.Drawing.Bitmap FRC1126 {
             get {
-                object obj = ResourceManager.GetObject("FRC1126_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1126", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1241_Logo {
+        internal static System.Drawing.Bitmap FRC1241 {
             get {
-                object obj = ResourceManager.GetObject("FRC1241_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1241", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1285_Logo {
+        internal static System.Drawing.Bitmap FRC1285 {
             get {
-                object obj = ResourceManager.GetObject("FRC1285_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1285", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1334_Logo {
+        internal static System.Drawing.Bitmap FRC1334 {
             get {
-                object obj = ResourceManager.GetObject("FRC1334_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1334", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1405_Logo {
+        internal static System.Drawing.Bitmap FRC1405 {
             get {
-                object obj = ResourceManager.GetObject("FRC1405_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1405", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1507_Logo {
+        internal static System.Drawing.Bitmap FRC1507 {
             get {
-                object obj = ResourceManager.GetObject("FRC1507_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1507", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1511_Logo {
+        internal static System.Drawing.Bitmap FRC1511 {
             get {
-                object obj = ResourceManager.GetObject("FRC1511_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1511", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1518_Logo {
+        internal static System.Drawing.Bitmap FRC1518 {
             get {
-                object obj = ResourceManager.GetObject("FRC1518_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1518", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1551_Logo {
+        internal static System.Drawing.Bitmap FRC1551 {
             get {
-                object obj = ResourceManager.GetObject("FRC1551_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1551", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1559_Logo {
+        internal static System.Drawing.Bitmap FRC1559 {
             get {
-                object obj = ResourceManager.GetObject("FRC1559_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC1559", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC1660_Logo {
+        internal static System.Drawing.Bitmap FRC174 {
             get {
-                object obj = ResourceManager.GetObject("FRC1660_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC174", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC174_Logo {
+        internal static System.Drawing.Bitmap FRC191 {
             get {
-                object obj = ResourceManager.GetObject("FRC174_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC191", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +283,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC188_Logo {
+        internal static System.Drawing.Bitmap FRC20 {
             get {
-                object obj = ResourceManager.GetObject("FRC188_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC191_Logo {
+        internal static System.Drawing.Bitmap FRC2228 {
             get {
-                object obj = ResourceManager.GetObject("FRC191_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC2228", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +303,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC20_Logo {
+        internal static System.Drawing.Bitmap FRC2340 {
             get {
-                object obj = ResourceManager.GetObject("FRC20_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC2340", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +313,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC2228_Logo {
+        internal static System.Drawing.Bitmap FRC2852 {
             get {
-                object obj = ResourceManager.GetObject("FRC2228_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC2852", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +323,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC229_Logo {
+        internal static System.Drawing.Bitmap FRC2994 {
             get {
-                object obj = ResourceManager.GetObject("FRC229_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC2994", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +333,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC2791_Logo {
+        internal static System.Drawing.Bitmap FRC3003 {
             get {
-                object obj = ResourceManager.GetObject("FRC2791_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC3003", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +343,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC2852_Logo {
+        internal static System.Drawing.Bitmap FRC3015 {
             get {
-                object obj = ResourceManager.GetObject("FRC2852_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC3015", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +353,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC3003_Logo {
+        internal static System.Drawing.Bitmap FRC3157 {
             get {
-                object obj = ResourceManager.GetObject("FRC3003_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC3157", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,9 +363,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC3015_Logo {
+        internal static System.Drawing.Bitmap FRC3173 {
             get {
-                object obj = ResourceManager.GetObject("FRC3015_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC3173", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,9 +373,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC340_Logo {
+        internal static System.Drawing.Bitmap FRC3181 {
             get {
-                object obj = ResourceManager.GetObject("FRC340_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC3181", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,9 +383,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC3683_Logo {
+        internal static System.Drawing.Bitmap FRC340 {
             get {
-                object obj = ResourceManager.GetObject("FRC3683_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC340", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +393,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC3710_Logo {
+        internal static System.Drawing.Bitmap FRC3710 {
             get {
-                object obj = ResourceManager.GetObject("FRC3710_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC3710", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +403,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC378_Logo {
+        internal static System.Drawing.Bitmap FRC378 {
             get {
-                object obj = ResourceManager.GetObject("FRC378_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC378", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,9 +413,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC3951_Logo {
+        internal static System.Drawing.Bitmap FRC3951 {
             get {
-                object obj = ResourceManager.GetObject("FRC3951_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC3951", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +423,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4001_Logo {
+        internal static System.Drawing.Bitmap FRC4001 {
             get {
-                object obj = ResourceManager.GetObject("FRC4001_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC4001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +433,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4039_Logo {
+        internal static System.Drawing.Bitmap FRC4039 {
             get {
-                object obj = ResourceManager.GetObject("FRC4039_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC4039", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,9 +443,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4093_Logo {
+        internal static System.Drawing.Bitmap FRC4343 {
             get {
-                object obj = ResourceManager.GetObject("FRC4093_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC4343", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,9 +453,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4343_Logo {
+        internal static System.Drawing.Bitmap FRC4476 {
             get {
-                object obj = ResourceManager.GetObject("FRC4343_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC4476", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,9 +463,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4476_Logo {
+        internal static System.Drawing.Bitmap FRC4914 {
             get {
-                object obj = ResourceManager.GetObject("FRC4476_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC4914", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,9 +473,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC48_Logo {
+        internal static System.Drawing.Bitmap FRC4930 {
             get {
-                object obj = ResourceManager.GetObject("FRC48_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC4930", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,9 +483,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4914_Logo {
+        internal static System.Drawing.Bitmap FRC5254 {
             get {
-                object obj = ResourceManager.GetObject("FRC4914_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC5254", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,9 +493,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4917_Logo {
+        internal static System.Drawing.Bitmap FRC578 {
             get {
-                object obj = ResourceManager.GetObject("FRC4917_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC578", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,9 +503,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC4930_Logo {
+        internal static System.Drawing.Bitmap FRC610 {
             get {
-                object obj = ResourceManager.GetObject("FRC4930_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC610", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,9 +513,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC5254_Logo {
+        internal static System.Drawing.Bitmap FRC639 {
             get {
-                object obj = ResourceManager.GetObject("FRC5254_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC639", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,39 +523,9 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FRC578_Logo {
+        internal static System.Drawing.Bitmap FRC865 {
             get {
-                object obj = ResourceManager.GetObject("FRC578_Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FRC610_Logo {
-            get {
-                object obj = ResourceManager.GetObject("FRC610_Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FRC639_Logo {
-            get {
-                object obj = ResourceManager.GetObject("FRC639_Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FRC865_Logo {
-            get {
-                object obj = ResourceManager.GetObject("FRC865_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("FRC865", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
