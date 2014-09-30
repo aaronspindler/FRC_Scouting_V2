@@ -178,4 +178,118 @@
   <data name="RahChaCha_2014_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RahChaCha_2014_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FRC1114" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1114.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1126" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1126.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1285" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1285.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1334" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1334.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1405" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1405.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1507" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1507.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1511" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1511.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1518" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1518.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1551" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1551.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC1559" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC1559.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC174" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC174.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC191" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC191.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC20.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC2228" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC2228.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC2340" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC2340.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC2852" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC2852.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC2994" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC2994.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC3003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC3003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC3015" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC3015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC3157" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC3157.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC3173" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC3173.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC3181" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC3181.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC340" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC340.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC3710" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC3710.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC378" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC3951" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC3951.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC4001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC4001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC4039" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC4039.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC4343" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC4343.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC4476" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC4476.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC4914" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC4914.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC4930" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC4930.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC5254" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC5254.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC578" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC578.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC610" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC610.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC639" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC639.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRC865" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRC865.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
