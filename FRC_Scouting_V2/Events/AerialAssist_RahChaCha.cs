@@ -138,6 +138,7 @@ namespace FRC_Scouting_V2
             teamNumberDisplay.Text = Convert.ToString(teamNumber);
             teamLocationDisplay.Text = teamLocation;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
+            teamURLDisplay.Text = teamURL;
            
             object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
             teamLogoPictureBox.Image = (System.Drawing.Image)teamImage;
@@ -183,6 +184,11 @@ namespace FRC_Scouting_V2
             public int team_number { get; set; }
 
             public string website { get; set; }
+        }
+
+        private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.LinkText);
         }
     }
 }
