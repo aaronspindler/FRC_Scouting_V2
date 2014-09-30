@@ -34,9 +34,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         private readonly UsefulSnippets us = new UsefulSnippets();
-
         private string selectedTeamLocation;
-
         private string selectedTeamName;
         private int selectedTeamNumber;
 
