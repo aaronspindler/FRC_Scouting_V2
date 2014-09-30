@@ -236,6 +236,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Information Files\To-Do.txt" />
+    <None Include="Resources\FRC340.png" />
+    <None Include="Resources\FRC191.png" />
+    <None Include="Resources\FRC378.png" />
     <None Include="Resources\FRC174.png" />
     <None Include="Resources\FRC20.png" />
     <None Include="Resources\FRC4343.png" />
@@ -253,9 +256,6 @@
     <None Include="Resources\FRC639.png" />
     <None Include="Resources\FRC610.png" />
     <None Include="Resources\FRC578.png" />
-    <None Include="Resources\FRC378.png" />
-    <None Include="Resources\FRC340.png" />
-    <None Include="Resources\FRC191.png" />
     <None Include="Resources\FRC5254.png" />
     <None Include="Resources\FRC4930.png" />
     <None Include="Resources\FRC4914.png" />
