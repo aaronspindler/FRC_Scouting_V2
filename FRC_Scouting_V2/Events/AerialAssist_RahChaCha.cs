@@ -60,6 +60,7 @@ namespace FRC_Scouting_V2
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber;
+        private string teamURL;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
         public AerialAssist_RahChaCha()
@@ -126,6 +127,7 @@ namespace FRC_Scouting_V2
                 teamNumber = Convert.ToInt32(deserializedData.team_number);
                 teamLocation = Convert.ToString(deserializedData.location);
                 rookieYear = Convert.ToInt32(deserializedData.rookie_year);
+                teamURL = Convert.ToString(deserializedData.website);
             }
             catch (Exception webError)
             {
