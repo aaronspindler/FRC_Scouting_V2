@@ -646,7 +646,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(129, 38);
             this.button11.TabIndex = 52;
-            this.button11.Text = "button11";
+            this.button11.Text = "Extra Button 1";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // autoBallPickupMissButton
@@ -706,7 +706,7 @@
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(129, 38);
             this.button22.TabIndex = 58;
-            this.button22.Text = "button22";
+            this.button22.Text = "Extra Button 2";
             this.button22.UseVisualStyleBackColor = true;
             // 
             // autoBallPickupDisplay

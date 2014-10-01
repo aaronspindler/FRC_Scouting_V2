@@ -53,3 +53,4 @@ C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scout
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.Aerial_Assist_Scouting_UI.resources
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New.resources
 C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\obj\Debug\FRC_Scouting_V2.csproj.GenerateResource.Cache
+C:\Users\xNovax\Dropbox\Programming Files\Github Files\FRC_Scouting_V2\FRC_Scouting_V2\FRC_Scouting_V2\bin\Debug\MySql.Data.dll

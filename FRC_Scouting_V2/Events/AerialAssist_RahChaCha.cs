@@ -148,11 +148,6 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
         }
 
-        private void whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
-        }
-
         private class MyWebClient : WebClient
         {
             protected override WebRequest GetWebRequest(Uri uri)
