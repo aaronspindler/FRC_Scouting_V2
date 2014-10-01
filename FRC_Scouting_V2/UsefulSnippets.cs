@@ -23,14 +23,14 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 //@author xNovax
 
@@ -96,7 +96,7 @@ namespace FRC_Scouting_V2
                 {
                     //Making the connection string and then creating the connection
                     string mySqlConnectionString = MakeMySqlConnectionString();
-                    var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                    var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
                     conn.Open();
                     var cmd = new MySqlCommand();
 
@@ -107,7 +107,9 @@ namespace FRC_Scouting_V2
                         string commandText = String.Format("SELECT * from {0}", tableName);
                         cmd.CommandText = commandText;
                         cmd.ExecuteNonQuery();
+                        Console.WriteLine("Row: " + i + " has been exported.");
                     }
+                    Console.WriteLine("Your data has been successfully exported!");
                     writer.Close();
                     conn.Close();
                 }
@@ -131,7 +133,7 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
@@ -157,7 +159,7 @@ namespace FRC_Scouting_V2
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
+            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
 
             return number;
         }
@@ -186,7 +188,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
