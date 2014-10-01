@@ -101,7 +101,8 @@ namespace FRC_Scouting_V2
                     var cmd = new MySqlCommand();
 
                     var writer = new StreamWriter(sfd.FileName);
-                    writer.WriteLine();
+                    //Writing the column names
+                    writer.WriteLine("EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
                     for (int i = 0; i < GetNumberOfRowsInATable(); i++)
                     {
                         string commandText = String.Format("SELECT * from {0}", tableName);
