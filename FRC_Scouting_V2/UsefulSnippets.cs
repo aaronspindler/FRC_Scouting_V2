@@ -26,6 +26,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
@@ -53,6 +54,39 @@ namespace FRC_Scouting_V2
 
         public void ExportTableToCSV(string tableName)
         {
+            int autoBallPickup;
+            int autoBallPickupMiss;
+            int autoHighGoal;
+            int autoHighMiss;
+            int autoLowGoal;
+            int autoLowMiss;
+            int controlledBallPickup;
+            int controlledBallPickupMiss;
+            int controlledHighGoal;
+            int controlledHighMiss;
+            int controlledLowGoal;
+            int controlledLowMiss;
+            int hotGoal;
+            int hotMiss;
+            int matchNumber;
+            int passToOtherRobot;
+            int passToOtherRobotMiss;
+            int pickupFromHuman;
+            int pickupFromHumanMiss;
+            int successfulTruss;
+            int totalGoal;
+            int totalGoodControl;
+            int totalMiss;
+            int totalMissControl;
+            int tripleAssistGoal;
+            int tripleAssistMiss;
+            int unsuccessfulTruss;
+            int xStarting;
+            int yStarting;
+            int didRobotDie;
+            string comments;
+            string teamColour;
+
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
 
@@ -60,15 +94,21 @@ namespace FRC_Scouting_V2
             {
                 try
                 {
-                    string mySqlConnectionString =
-                        String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                            Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName,
-                            Settings.Default.databaseUsername, Settings.Default.databasePassword);
+                    //Making the connection string and then creating the connection
+                    string mySqlConnectionString = MakeMySqlConnectionString();
                     var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
-                    string commandText = String.Format("SELECT * from {0}", tableName);
-                    var cmd = new MySqlCommand(commandText);
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+                    var cmd = new MySqlCommand();
+
+                    var writer = new StreamWriter(sfd.FileName);
+                    writer.WriteLine();
+                    for (int i = 0; i < GetNumberOfRowsInATable(); i++)
+                    {
+                        string commandText = String.Format("SELECT * from {0}", tableName);
+                        cmd.CommandText = commandText;
+                        cmd.ExecuteNonQuery();
+                    }
+                    writer.Close();
                     conn.Close();
                 }
                 catch (MySqlException ex)
