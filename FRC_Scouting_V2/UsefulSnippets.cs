@@ -95,11 +95,10 @@ namespace FRC_Scouting_V2
                 try
                 {
                     //Making the connection string and then creating the connection
-                    string mySqlConnectionString = MakeMySqlConnectionString();
-                    var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                    var mySqlConnectionString = MakeMySqlConnectionString();
+                    var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                     conn.Open();
                     var cmd = new MySqlCommand();
-
                     var writer = new StreamWriter(sfd.FileName);
                     //Writing the column names
                     writer.WriteLine("EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
