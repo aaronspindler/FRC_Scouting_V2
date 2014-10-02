@@ -23,13 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
-using System.Resources;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2.UIs
 {
@@ -38,18 +37,21 @@ namespace FRC_Scouting_V2.UIs
     {
         //Variables
         private readonly UsefulSnippets snippets = new UsefulSnippets();
+
         private int autoBallPickup;
         private int autoBallPickupMiss;
         private int autoHighGoal;
         private int autoHighMiss;
         private int autoLowGoal;
         private int autoLowMiss;
+        private string comments;
         private int controlledBallPickup;
         private int controlledBallPickupMiss;
         private int controlledHighGoal;
         private int controlledHighMiss;
         private int controlledLowGoal;
         private int controlledLowMiss;
+        private int didRobotDie;
         private int hotGoal;
         private int hotMiss;
         private int matchNumber;
@@ -58,6 +60,7 @@ namespace FRC_Scouting_V2.UIs
         private int pickupFromHuman;
         private int pickupFromHumanMiss;
         private int successfulTruss;
+        private string teamColour;
         private int totalGoal;
         private int totalGoodControl;
         private int totalMiss;
@@ -67,9 +70,6 @@ namespace FRC_Scouting_V2.UIs
         private int unsuccessfulTruss;
         private int xStarting;
         private int yStarting;
-        private int didRobotDie;
-        private string comments;
-        private string teamColour;
 
         public Aerial_Assist_Scouting_UI_New()
         {
@@ -103,100 +103,6 @@ namespace FRC_Scouting_V2.UIs
             initGraphics.Dispose();
         }
 
-        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            BlankPanel();
-            PlotInitialLines();
-            Graphics g = startingLocationPanel.CreateGraphics();
-            xStarting = Convert.ToInt32(e.X) - 3;
-            yStarting = Convert.ToInt32(e.Y) - 3;
-            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
-            startingLocationXYDisplay.Text = ("X: " + xStarting + " Y: " + yStarting);
-        }
-
-        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
-        {
-            PlotInitialLines();
-        }
-
-        private void Aerial_Assist_Scouting_UI_Load(object sender, EventArgs e)
-        {
-            Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
-            Settings.Default.Save();
-        }
-
-        private void autoHighGoalButton_Click(object sender, EventArgs e)
-        {
-            autoHighGoal++;
-            totalGoal++;
-            UpdateLabels();
-        }
-
-        private void autoLowGoalButton_Click(object sender, EventArgs e)
-        {
-            autoLowGoal++;
-            totalGoal++;
-            UpdateLabels();
-        }
-
-        private void controlledHighGoalButton_Click(object sender, EventArgs e)
-        {
-            controlledHighGoal++;
-            totalGoal++;
-            UpdateLabels();
-        }
-
-        private void controlledLowGoalButton_Click(object sender, EventArgs e)
-        {
-            controlledLowGoal++;
-            totalGoal++;
-            UpdateLabels();
-        }
-
-        private void hotGoalButton_Click(object sender, EventArgs e)
-        {
-            hotGoal++;
-            totalGoal++;
-            UpdateLabels();
-        }
-
-
-        private void autoHighMissButton_Click(object sender, EventArgs e)
-        {
-            autoHighMiss++;
-            totalMiss++;
-            UpdateLabels();
-        }
-
-        private void autoLowMissButton_Click(object sender, EventArgs e)
-        {
-            autoLowMiss++;
-            totalMiss++;
-            UpdateLabels();
-        }
-
-        private void controlledHighMissButton_Click(object sender, EventArgs e)
-        {
-            controlledHighMiss++;
-            totalMiss++;
-            UpdateLabels();
-        }
-
-        private void controlledLowMissButton_Click(object sender, EventArgs e)
-        {
-            controlledLowMiss++;
-            totalMiss++;
-            UpdateLabels();
-        }
-
-        private void hotMissButton_Click(object sender, EventArgs e)
-        {
-            hotMiss++;
-            totalMiss++;
-            UpdateLabels();
-        }
-
-
         public void UpdateLabels()
         {
             autoHighGoalDisplay.Text = Convert.ToString(autoHighGoal);
@@ -227,51 +133,15 @@ namespace FRC_Scouting_V2.UIs
             totalBallMissesDisplay.Text = Convert.ToString(totalMissControl);
         }
 
-        private void tripleAssistGoals_Click(object sender, EventArgs e)
+        private void Aerial_Assist_Scouting_UI_Load(object sender, EventArgs e)
         {
-            tripleAssistGoal++;
-            totalGoal++;
-            UpdateLabels();
-        }
-
-        private void tripleAssistMisses_Click(object sender, EventArgs e)
-        {
-            tripleAssistMiss++;
-            totalMiss++;
-            UpdateLabels();
+            Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
+            Settings.Default.Save();
         }
 
         private void autoBallPickupButton_Click(object sender, EventArgs e)
         {
             autoBallPickup++;
-            totalGoodControl++;
-            UpdateLabels();
-        }
-
-        private void controlledBallPickupButton_Click(object sender, EventArgs e)
-        {
-            controlledBallPickup++;
-            totalGoodControl++;
-            UpdateLabels();
-        }
-
-        private void pickupFromHumanButton_Click(object sender, EventArgs e)
-        {
-            pickupFromHuman++;
-            totalGoodControl++;
-            UpdateLabels();
-        }
-
-        private void passToOtherBotButton_Click(object sender, EventArgs e)
-        {
-            passToOtherRobot++;
-            totalGoodControl++;
-            UpdateLabels();
-        }
-
-        private void successfulTrussButton_Click(object sender, EventArgs e)
-        {
-            successfulTruss++;
             totalGoodControl++;
             UpdateLabels();
         }
@@ -283,6 +153,49 @@ namespace FRC_Scouting_V2.UIs
             UpdateLabels();
         }
 
+        private void autoHighGoalButton_Click(object sender, EventArgs e)
+        {
+            autoHighGoal++;
+            totalGoal++;
+            UpdateLabels();
+        }
+
+        private void autoHighMissButton_Click(object sender, EventArgs e)
+        {
+            autoHighMiss++;
+            totalMiss++;
+            UpdateLabels();
+        }
+
+        private void autoLowGoalButton_Click(object sender, EventArgs e)
+        {
+            autoLowGoal++;
+            totalGoal++;
+            UpdateLabels();
+        }
+
+        private void autoLowMissButton_Click(object sender, EventArgs e)
+        {
+            autoLowMiss++;
+            totalMiss++;
+            UpdateLabels();
+        }
+
+        private void commentsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (commentsTextBox.Text != (""))
+            {
+                comments = commentsTextBox.Text;
+            }
+        }
+
+        private void controlledBallPickupButton_Click(object sender, EventArgs e)
+        {
+            controlledBallPickup++;
+            totalGoodControl++;
+            UpdateLabels();
+        }
+
         private void controlledBallPickupMissButton_Click(object sender, EventArgs e)
         {
             controlledBallPickupMiss++;
@@ -290,10 +203,72 @@ namespace FRC_Scouting_V2.UIs
             UpdateLabels();
         }
 
-        private void pickupFromHumanMissButton_Click(object sender, EventArgs e)
+        private void controlledHighGoalButton_Click(object sender, EventArgs e)
         {
-            pickupFromHumanMiss++;
-            totalMissControl++;
+            controlledHighGoal++;
+            totalGoal++;
+            UpdateLabels();
+        }
+
+        private void controlledHighMissButton_Click(object sender, EventArgs e)
+        {
+            controlledHighMiss++;
+            totalMiss++;
+            UpdateLabels();
+        }
+
+        private void controlledLowGoalButton_Click(object sender, EventArgs e)
+        {
+            controlledLowGoal++;
+            totalGoal++;
+            UpdateLabels();
+        }
+
+        private void controlledLowMissButton_Click(object sender, EventArgs e)
+        {
+            controlledLowMiss++;
+            totalMiss++;
+            UpdateLabels();
+        }
+
+        private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (didRobotDieCheckBox.Checked == true)
+            {
+                didRobotDie = 1;
+            }
+            else
+            {
+                if (didRobotDieCheckBox.Checked == false)
+                {
+                    didRobotDie = 0;
+                }
+            }
+        }
+
+        private void hotGoalButton_Click(object sender, EventArgs e)
+        {
+            hotGoal++;
+            totalGoal++;
+            UpdateLabels();
+        }
+
+        private void hotMissButton_Click(object sender, EventArgs e)
+        {
+            hotMiss++;
+            totalMiss++;
+            UpdateLabels();
+        }
+
+        private void matchNumberUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            matchNumber = Convert.ToInt32(matchNumberUpDown.Value);
+        }
+
+        private void passToOtherBotButton_Click(object sender, EventArgs e)
+        {
+            passToOtherRobot++;
+            totalGoodControl++;
             UpdateLabels();
         }
 
@@ -304,11 +279,34 @@ namespace FRC_Scouting_V2.UIs
             UpdateLabels();
         }
 
-        private void unsuccessfulTrussButton_Click(object sender, EventArgs e)
+        private void pickupFromHumanButton_Click(object sender, EventArgs e)
         {
-            unsuccessfulTruss++;
+            pickupFromHuman++;
+            totalGoodControl++;
+            UpdateLabels();
+        }
+
+        private void pickupFromHumanMissButton_Click(object sender, EventArgs e)
+        {
+            pickupFromHumanMiss++;
             totalMissControl++;
             UpdateLabels();
+        }
+
+        private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            BlankPanel();
+            PlotInitialLines();
+            Graphics g = startingLocationPanel.CreateGraphics();
+            xStarting = Convert.ToInt32(e.X) - 3;
+            yStarting = Convert.ToInt32(e.Y) - 3;
+            g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
+            startingLocationXYDisplay.Text = ("X: " + xStarting + " Y: " + yStarting);
+        }
+
+        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
+        {
+            PlotInitialLines();
         }
 
         private void submitDataButton_Click(object sender, EventArgs e)
@@ -334,7 +332,7 @@ namespace FRC_Scouting_V2.UIs
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
                 conn.Open();
 
                 //Checking if the connection is successful
@@ -349,7 +347,7 @@ namespace FRC_Scouting_V2.UIs
                 //Trying to create the table
                 try
                 {
-                    string createTable = String.Format("CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",Settings.Default.currentTableName);
+                    string createTable = String.Format("CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", Settings.Default.currentTableName);
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
@@ -380,32 +378,11 @@ namespace FRC_Scouting_V2.UIs
             }
         }
 
-        private void matchNumberUpDown_ValueChanged(object sender, EventArgs e)
+        private void successfulTrussButton_Click(object sender, EventArgs e)
         {
-            matchNumber = Convert.ToInt32(matchNumberUpDown.Value);
-        }
-
-        private void didRobotDieCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (didRobotDieCheckBox.Checked == true)
-            {
-                didRobotDie = 1;
-            }
-            else
-            {
-                if (didRobotDieCheckBox.Checked == false)
-                {
-                    didRobotDie = 0;
-                }
-            }
-        }
-
-        private void commentsTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (commentsTextBox.Text != (""))
-            {
-                comments = commentsTextBox.Text;
-            }
+            successfulTruss++;
+            totalGoodControl++;
+            UpdateLabels();
         }
 
         private void teamColourSelector_SelectedIndexChanged(object sender, EventArgs e)
@@ -421,6 +398,27 @@ namespace FRC_Scouting_V2.UIs
                     teamColour = ("Blue");
                 }
             }
+        }
+
+        private void tripleAssistGoals_Click(object sender, EventArgs e)
+        {
+            tripleAssistGoal++;
+            totalGoal++;
+            UpdateLabels();
+        }
+
+        private void tripleAssistMisses_Click(object sender, EventArgs e)
+        {
+            tripleAssistMiss++;
+            totalMiss++;
+            UpdateLabels();
+        }
+
+        private void unsuccessfulTrussButton_Click(object sender, EventArgs e)
+        {
+            unsuccessfulTruss++;
+            totalMissControl++;
+            UpdateLabels();
         }
     }
 }

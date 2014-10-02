@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -139,7 +139,7 @@ namespace FRC_Scouting_V2
             teamLocationDisplay.Text = teamLocation;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
             teamURLDisplay.Text = teamURL;
-           
+
             object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
             teamLogoPictureBox.Image = (System.Drawing.Image)teamImage;
 
@@ -148,14 +148,14 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
         }
 
-        private class MyWebClient : WebClient
+        private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
+            System.Diagnostics.Process.Start(e.LinkText);
+        }
+
+        private void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("For some reason it works sometimes and other times it doesn't. This is a current bug.");
         }
 
         public class TeamInformationJSONData
@@ -181,9 +181,14 @@ namespace FRC_Scouting_V2
             public string website { get; set; }
         }
 
-        private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
+        private class MyWebClient : WebClient
         {
-            System.Diagnostics.Process.Start(e.LinkText);
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
         }
     }
 }
