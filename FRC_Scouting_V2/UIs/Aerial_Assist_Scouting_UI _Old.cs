@@ -386,6 +386,36 @@ namespace FRC_Scouting_V2
             matchNumber = Convert.ToInt32(matchNumberNumericUpDown.Value);
         }
 
+        private void missedAutoHighHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed autonomous high shots!");
+        }
+
+        private void missedAutoLowHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed autonomous low shots!");
+        }
+
+        private void missedControlledHighHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed controlled high shots!");
+        }
+
+        private void missedControlledLowHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed controlled low shots!");
+        }
+
+        private void missedHotGoalHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Use the buttons to the left to increase / decrease the number of missed hot goal shots!");
+        }
+
         private void missedPickupHelpButton_Click(object sender, EventArgs e)
         {
             us.ShowInformationMessage(
@@ -402,6 +432,12 @@ namespace FRC_Scouting_V2
         {
             missedPickupsTally = missedPickupsTally + 1;
             UpdateLabels();
+        }
+
+        private void startingLocationHelpButton_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "Click on the field below where the robot you are scouting was located at the beginning of the match.");
         }
 
         private void startingLocationPanel_MouseClick(object sender, MouseEventArgs e)
@@ -550,42 +586,6 @@ namespace FRC_Scouting_V2
         private void timer_Tick(object sender, EventArgs e)
         {
             currentTimeDisplay.Text = ("Current Time: " + us.GetCurrentTime());
-        }
-
-        private void missedAutoHighHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "Use the buttons to the left to increase / decrease the number of missed autonomous high shots!");
-        }
-
-        private void missedAutoLowHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "Use the buttons to the left to increase / decrease the number of missed autonomous low shots!");
-        }
-
-        private void missedControlledHighHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "Use the buttons to the left to increase / decrease the number of missed controlled high shots!");
-        }
-
-        private void missedControlledLowHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "Use the buttons to the left to increase / decrease the number of missed controlled low shots!");
-        }
-
-        private void missedHotGoalHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "Use the buttons to the left to increase / decrease the number of missed hot goal shots!");
-        }
-
-        private void startingLocationHelpButton_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "Click on the field below where the robot you are scouting was located at the beginning of the match.");
         }
     }
 }

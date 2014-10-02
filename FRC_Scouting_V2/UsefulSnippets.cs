@@ -26,6 +26,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
@@ -53,6 +54,7 @@ namespace FRC_Scouting_V2
 
         public void ExportTableToCSV(string tableName)
         {
+            ShowInformationMessage("This can take a long time!");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
 
@@ -60,15 +62,42 @@ namespace FRC_Scouting_V2
             {
                 try
                 {
-                    string mySqlConnectionString =
-                        String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                            Settings.Default.databaseIP, Settings.Default.databasePort, Settings.Default.databaseName,
-                            Settings.Default.databaseUsername, Settings.Default.databasePassword);
-                    var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
-                    string commandText = String.Format("SELECT * from {0}", tableName);
-                    var cmd = new MySqlCommand(commandText);
+                    string mySqlConnectionString = MakeMySqlConnectionString();
+                    var conn = new MySqlConnection(mySqlConnectionString);
+                    MySqlCommand cmd = conn.CreateCommand();
+                    var writer = new StreamWriter(sfd.FileName);
+                    MySqlDataReader reader;
+                    writer.WriteLine(
+                        "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+                    for (int i = 0; i < GetNumberOfRowsInATable(); i++)
+                    {
+                        cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", tableName, i);
+                        reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            writer.WriteLine(reader["EntryID"] + "," + reader["TeamNumber"] + "," + reader["TeamName"] +
+                                             "," + reader["TeamColour"] + "," + reader["MatchNumber"] + "," +
+                                             reader["AutoHighGoal"] + "," + reader["AutoHighMiss"] + "," +
+                                             reader["AutoLowGoal"] + "," + reader["AutoLowMiss"] + "," +
+                                             reader["ControlledHighGoal"] + "," + reader["ControlledHighMiss"] + "," +
+                                             reader["ControlledLowGoal"] + "," + reader["ControlledLowMiss"] + "," +
+                                             reader["HotGoals"] + "," + reader["HotGoalMiss"] + "," +
+                                             reader["3AssistGoal"] + "," + reader["3AssistMiss"] + "," +
+                                             reader["AutoBallPickup"] + "," + reader["AutoBallPickupMiss"] + "," +
+                                             reader["ControlledBallPickup"] + "," + reader["ControlledBallPickupMiss"] +
+                                             "," + reader["PickupFromHuman"] + "," + reader["MissedPickupFromHuman"] +
+                                             "," + reader["PassToAnotherRobot"] + "," +
+                                             reader["MissedPassToAnotherRobot"] + "," + reader["SuccessfulTruss"] + "," +
+                                             reader["UnsuccessfulTruss"] + "," + reader["StartingX"] + "," +
+                                             reader["StartingY"] + "," + reader["DidRobotDie"] + "," +
+                                             reader["Comments"]);
+                        }
+                        reader.Close();
+                        Console.WriteLine("Row: " + i + " has been exported.");
+                    }
+                    Console.WriteLine("Your data has been successfully exported!");
+                    writer.Close();
                     conn.Close();
                 }
                 catch (MySqlException ex)
@@ -76,6 +105,7 @@ namespace FRC_Scouting_V2
                     Console.WriteLine("Error Code: " + ex.ErrorCode);
                     Console.WriteLine(ex.Message);
                 }
+                ShowInformationMessage("Data export has finished!");
             }
         }
 
