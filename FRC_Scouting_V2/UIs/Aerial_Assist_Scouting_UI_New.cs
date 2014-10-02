@@ -317,12 +317,14 @@ namespace FRC_Scouting_V2.UIs
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     var writer = new StreamWriter(saveFileDialog.FileName);
-                    writer.WriteLine("-=============+ Human Readable Portion +=============-");
+                    writer.WriteLine("==========================================================");
+                    writer.WriteLine("-===============+ Human Readable Portion +===============-");
+                    writer.WriteLine("==========================================================");
                     writer.WriteLine("Time Created: " + snippets.GetCurrentTime());
                     writer.WriteLine("Scouted By: " + Settings.Default.username);
                     writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
-                    writer.WriteLine("######################################################");
+                    writer.WriteLine("#########################################################");
                     writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " + Convert.ToString(autoHighMiss));
                     writer.WriteLine("Auto Low: Goal: " + Convert.ToString(autoLowGoal) + " Miss: " + Convert.ToString(autoLowMiss));
                     writer.WriteLine("Controlled High: Goal: " + Convert.ToString(controlledHighGoal) + " Miss: " + Convert.ToString(controlledHighMiss));
@@ -336,10 +338,11 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("Truss Shot: Successful: " + Convert.ToString(successfulTruss) + " Unsuccessful: " + Convert.ToString(unsuccessfulTruss));
                     writer.WriteLine("Starting Location: X: " + Convert.ToString(xStarting) + " Y: " + Convert.ToString(yStarting));
                     writer.WriteLine("Comments: " + Convert.ToString(comments));
-                    writer.WriteLine("======================================================");
+                    writer.WriteLine("#########################################################");
+                    writer.WriteLine("=========================================================");
                     writer.WriteLine("-=============+ Computer Readable Portion +=============-");
-
-                    writer.WriteLine("======================================================");
+                    writer.WriteLine("=========================================================");
+                    writer.WriteLine();
                     writer.WriteLine("END OF FILE");
                     writer.Close();
                 }
