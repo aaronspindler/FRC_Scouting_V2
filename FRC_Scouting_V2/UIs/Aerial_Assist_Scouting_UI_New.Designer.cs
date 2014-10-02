@@ -648,6 +648,7 @@
             this.button11.TabIndex = 52;
             this.button11.Text = "Extra Button 1";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Visible = false;
             // 
             // autoBallPickupMissButton
             // 
@@ -682,7 +683,7 @@
             this.passToOtherBotMissButton.Size = new System.Drawing.Size(129, 38);
             this.passToOtherBotMissButton.TabIndex = 55;
             this.passToOtherBotMissButton.Tag = "";
-            this.passToOtherBotMissButton.Text = "Missed Pass to Other Robot";
+            this.passToOtherBotMissButton.Text = "Missed Pass to Bot";
             this.passToOtherBotMissButton.UseVisualStyleBackColor = true;
             this.passToOtherBotMissButton.Click += new System.EventHandler(this.passToOtherBotMissButton_Click);
             // 
@@ -708,6 +709,7 @@
             this.button22.TabIndex = 58;
             this.button22.Text = "Extra Button 2";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Visible = false;
             // 
             // autoBallPickupDisplay
             // 
@@ -829,6 +831,7 @@
             this.label28.TabIndex = 70;
             this.label28.Text = "0";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label28.Visible = false;
             // 
             // label29
             // 
@@ -840,6 +843,7 @@
             this.label29.TabIndex = 71;
             this.label29.Text = "0";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label29.Visible = false;
             // 
             // totalGoodLabel
             // 

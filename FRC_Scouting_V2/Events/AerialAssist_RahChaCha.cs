@@ -193,5 +193,10 @@ namespace FRC_Scouting_V2
 
             public string website { get; set; }
         }
+
+        private void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
