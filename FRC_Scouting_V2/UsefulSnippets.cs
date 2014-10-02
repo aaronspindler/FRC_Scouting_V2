@@ -54,6 +54,7 @@ namespace FRC_Scouting_V2
 
         public void ExportTableToCSV(string tableName)
         {
+            ShowInformationMessage("This can take a long time!");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
 
@@ -88,6 +89,7 @@ namespace FRC_Scouting_V2
                     Console.WriteLine("Error Code: " + ex.ErrorCode);
                     Console.WriteLine(ex.Message);
                 }
+                ShowInformationMessage("Data export has finished!");
             }
         }
 
