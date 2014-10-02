@@ -23,14 +23,14 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 //@author xNovax
 
@@ -62,20 +62,36 @@ namespace FRC_Scouting_V2
             {
                 try
                 {
-                    var mySqlConnectionString = MakeMySqlConnectionString();
+                    string mySqlConnectionString = MakeMySqlConnectionString();
                     var conn = new MySqlConnection(mySqlConnectionString);
-                    var cmd = conn.CreateCommand();
+                    MySqlCommand cmd = conn.CreateCommand();
                     var writer = new StreamWriter(sfd.FileName);
                     MySqlDataReader reader;
-                    writer.WriteLine("EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
+                    writer.WriteLine(
+                        "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
                     conn.Open();
-                    for (var i = 0; i < GetNumberOfRowsInATable(); i++)
+                    for (int i = 0; i < GetNumberOfRowsInATable(); i++)
                     {
                         cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", tableName, i);
                         reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
-                            writer.WriteLine(reader["EntryID"] + "," + reader["TeamNumber"] + "," + reader["TeamName"] + "," + reader["TeamColour"] + "," + reader["MatchNumber"] + "," + reader["AutoHighGoal"] + "," + reader["AutoHighMiss"] + "," + reader["AutoLowGoal"] + "," + reader["AutoLowMiss"] + "," + reader["ControlledHighGoal"] + "," + reader["ControlledHighMiss"] + "," + reader["ControlledLowGoal"] + "," + reader["ControlledLowMiss"] + "," + reader["HotGoals"] + "," + reader["HotGoalMiss"] + "," + reader["3AssistGoal"] + "," + reader["3AssistMiss"] + "," + reader["AutoBallPickup"] + "," + reader["AutoBallPickupMiss"] + "," + reader["ControlledBallPickup"] + "," + reader["ControlledBallPickupMiss"] + "," + reader["PickupFromHuman"] + "," + reader["MissedPickupFromHuman"] + "," + reader["PassToAnotherRobot"] + "," + reader["MissedPassToAnotherRobot"] + "," + reader["SuccessfulTruss"] + "," + reader["UnsuccessfulTruss"] + "," + reader["StartingX"] + "," + reader["StartingY"] + "," + reader["DidRobotDie"] + "," + reader["Comments"]);
+                            writer.WriteLine(reader["EntryID"] + "," + reader["TeamNumber"] + "," + reader["TeamName"] +
+                                             "," + reader["TeamColour"] + "," + reader["MatchNumber"] + "," +
+                                             reader["AutoHighGoal"] + "," + reader["AutoHighMiss"] + "," +
+                                             reader["AutoLowGoal"] + "," + reader["AutoLowMiss"] + "," +
+                                             reader["ControlledHighGoal"] + "," + reader["ControlledHighMiss"] + "," +
+                                             reader["ControlledLowGoal"] + "," + reader["ControlledLowMiss"] + "," +
+                                             reader["HotGoals"] + "," + reader["HotGoalMiss"] + "," +
+                                             reader["3AssistGoal"] + "," + reader["3AssistMiss"] + "," +
+                                             reader["AutoBallPickup"] + "," + reader["AutoBallPickupMiss"] + "," +
+                                             reader["ControlledBallPickup"] + "," + reader["ControlledBallPickupMiss"] +
+                                             "," + reader["PickupFromHuman"] + "," + reader["MissedPickupFromHuman"] +
+                                             "," + reader["PassToAnotherRobot"] + "," +
+                                             reader["MissedPassToAnotherRobot"] + "," + reader["SuccessfulTruss"] + "," +
+                                             reader["UnsuccessfulTruss"] + "," + reader["StartingX"] + "," +
+                                             reader["StartingY"] + "," + reader["DidRobotDie"] + "," +
+                                             reader["Comments"]);
                         }
                         reader.Close();
                         Console.WriteLine("Row: " + i + " has been exported.");
@@ -105,7 +121,7 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
@@ -131,7 +147,7 @@ namespace FRC_Scouting_V2
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
+            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
 
             return number;
         }
@@ -160,7 +176,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',

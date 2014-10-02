@@ -23,12 +23,14 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
+using System.Drawing;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
 {
@@ -141,7 +143,7 @@ namespace FRC_Scouting_V2
             teamURLDisplay.Text = teamURL;
 
             object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
-            teamLogoPictureBox.Image = (System.Drawing.Image)teamImage;
+            teamLogoPictureBox.Image = (Image) teamImage;
 
             Settings.Default.selectedTeamName = teamName;
             Settings.Default.selectedTeamNumber = teamNumber;
@@ -150,12 +152,23 @@ namespace FRC_Scouting_V2
 
         private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(e.LinkText);
+            Process.Start(e.LinkText);
         }
 
         private void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("For some reason it works sometimes and other times it doesn't. This is a current bug.");
+            us.ShowInformationMessage(
+                "For some reason it works sometimes and other times it doesn't. This is a current bug.");
+        }
+
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
         }
 
         public class TeamInformationJSONData
@@ -179,16 +192,6 @@ namespace FRC_Scouting_V2
             public int team_number { get; set; }
 
             public string website { get; set; }
-        }
-
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
         }
     }
 }
