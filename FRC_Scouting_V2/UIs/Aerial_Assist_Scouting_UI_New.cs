@@ -320,7 +320,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("-=============+ Human Readable Portion +=============-");
                     writer.WriteLine("Time Created: " + snippets.GetCurrentTime());
                     writer.WriteLine("Scouted By: " + Settings.Default.username);
-                    writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
+                    writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
                     writer.WriteLine("######################################################");
                     writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " + Convert.ToString(autoHighMiss));
@@ -338,6 +338,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("Comments: " + Convert.ToString(comments));
                     writer.WriteLine("======================================================");
                     writer.WriteLine("-=============+ Computer Readable Portion +=============-");
+
                     writer.WriteLine("======================================================");
                     writer.WriteLine("END OF FILE");
                     writer.Close();
