@@ -189,6 +189,6 @@ namespace FRC_Scouting_V2
         private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(e.LinkText);
-        }
+        }          
     }
 }
