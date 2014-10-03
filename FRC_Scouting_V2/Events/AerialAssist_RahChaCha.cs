@@ -199,6 +199,11 @@ namespace FRC_Scouting_V2
                 foreach (string t in openFileDialog.FileNames)
                 {
                     var reader = new StreamReader(t);
+                    //Bypassing the human readable variables to get to the computer readable portion of the text file
+                    for (int i = 0; i < 28; i++)
+                    {
+                        reader.ReadLine();
+                    }
 
                 }
             }
