@@ -52,7 +52,7 @@ namespace FRC_Scouting_V2
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public void ExportTableToCSV()
+        public void AerialAssistExportTableToCSV()
         {
             ShowInformationMessage("This can take a long time! Progress will be shown in the console.");
             var sfd = new SaveFileDialog();
