@@ -148,11 +148,6 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
         }
 
-        private void whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
-        }
-
         private class MyWebClient : WebClient
         {
             protected override WebRequest GetWebRequest(Uri uri)
@@ -189,6 +184,16 @@ namespace FRC_Scouting_V2
         private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(e.LinkText);
-        }          
+        }
+
+        public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
+        }
+
+        public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
