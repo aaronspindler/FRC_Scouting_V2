@@ -232,7 +232,7 @@ namespace FRC_Scouting_V2
                         MySqlConnection conn = new MySqlConnection(us.MakeMySqlConnectionString());
                         MySqlCommand cmd = new MySqlCommand();
                         cmd.Connection = conn;
-                        cmd.CommandText = ("Insert ");
+                        cmd.CommandText = String.Format("Insert into {0} ()", Settings.Default.currentTableName);
                     }
                     else
                     {
