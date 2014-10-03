@@ -204,7 +204,6 @@ namespace FRC_Scouting_V2
                     {
                         reader.ReadLine();
                     }
-
                 }
             }
         }
