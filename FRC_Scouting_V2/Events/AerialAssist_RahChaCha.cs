@@ -24,8 +24,6 @@
 //===============================================================================
 
 using System;
-using System.Diagnostics;
-using System.Drawing;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
@@ -141,24 +139,18 @@ namespace FRC_Scouting_V2
             teamLocationDisplay.Text = teamLocation;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
             teamURLDisplay.Text = teamURL;
-
+           
             object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
-            teamLogoPictureBox.Image = (Image) teamImage;
+            teamLogoPictureBox.Image = (System.Drawing.Image)teamImage;
 
             Settings.Default.selectedTeamName = teamName;
             Settings.Default.selectedTeamNumber = teamNumber;
             Settings.Default.Save();
         }
 
-        private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
+        private void whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(e.LinkText);
-        }
-
-        private void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "For some reason it works sometimes and other times it doesn't. This is a current bug.");
+            us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
         }
 
         private class MyWebClient : WebClient
@@ -194,9 +186,9 @@ namespace FRC_Scouting_V2
             public string website { get; set; }
         }
 
-        private void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
-
-        }
+            System.Diagnostics.Process.Start(e.LinkText);
+        }          
     }
 }
