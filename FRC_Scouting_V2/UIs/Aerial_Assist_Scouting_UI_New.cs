@@ -93,13 +93,13 @@ namespace FRC_Scouting_V2.UIs
             Graphics initGraphics = startingLocationPanel.CreateGraphics();
 
             //Drawing square around the outside edge
-            initGraphics.DrawRectangle(blackpen, 0, 0, 330, 228);
+            initGraphics.DrawRectangle(blackpen, 0, 0, 330, 231);
 
             //Drawing field lines
-            initGraphics.DrawRectangle(fineBluePen, 4, 4, 108, 220);
-            initGraphics.DrawRectangle(fineWhitePen, 116, 4, 98, 220);
-            initGraphics.DrawRectangle(fineRedPen, 218, 4, 108, 220);
-            initGraphics.DrawLine(blackpen, 165, 0, 165, 228);
+            initGraphics.DrawRectangle(fineBluePen, 4, 4, 108, 223);
+            initGraphics.DrawRectangle(fineWhitePen, 116, 4, 98, 223);
+            initGraphics.DrawRectangle(fineRedPen, 218, 4, 108, 223);
+            initGraphics.DrawLine(blackpen, 165, 0, 165, 231);
             initGraphics.Dispose();
         }
 
