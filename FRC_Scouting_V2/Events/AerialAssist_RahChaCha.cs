@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Reflection;
@@ -162,23 +163,13 @@ namespace FRC_Scouting_V2
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
-
-            public string key { get; set; }
-
             public string locality { get; set; }
-
             public string location { get; set; }
-
             public string name { get; set; }
-
             public string nickname { get; set; }
-
             public string region { get; set; }
-
             public int rookie_year { get; set; }
-
             public int team_number { get; set; }
-
             public string website { get; set; }
         }
 
@@ -204,6 +195,49 @@ namespace FRC_Scouting_V2
                     {
                         reader.ReadLine();
                     }
+                    int teamNumber = Convert.ToInt32(reader.ReadLine());
+                    string teamName = reader.ReadLine();
+                    string teamColour = reader.ReadLine();
+                    int matchNumber = Convert.ToInt32(reader.ReadLine());
+                    int autoHighGoal = Convert.ToInt32(reader.ReadLine());
+                    int autoHighMiss = Convert.ToInt32(reader.ReadLine());
+                    int autoLowGoal = Convert.ToInt32(reader.ReadLine());
+                    int autoLowMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledHighGoal = Convert.ToInt32(reader.ReadLine());
+                    int controlledHighMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledLowGoal = Convert.ToInt32(reader.ReadLine());
+                    int controlledLowMiss = Convert.ToInt32(reader.ReadLine());
+                    int hotGoal = Convert.ToInt32(reader.ReadLine());
+                    int missedHotGoal = Convert.ToInt32(reader.ReadLine());
+                    int tripleGoal = Convert.ToInt32(reader.ReadLine());
+                    int tripleMiss = Convert.ToInt32(reader.ReadLine());
+                    int autoBallPickup = Convert.ToInt32(reader.ReadLine());
+                    int autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledPickup = Convert.ToInt32(reader.ReadLine());
+                    int controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    int pickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    int missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    int passToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    int missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    int successfulTruss = Convert.ToInt32(reader.ReadLine());
+                    int unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
+                    int startingX = Convert.ToInt32(reader.ReadLine());
+                    int startingY = Convert.ToInt32(reader.ReadLine());
+                    Boolean didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
+                    string comments = Convert.ToString(reader.ReadLine());
+                    string testIfFileIsGood = reader.ReadLine();
+                    if (testIfFileIsGood.Equals("END OF FILE"))
+                    {
+
+                    }
+                    else
+                    {
+                        if (!testIfFileIsGood.Equals("END OF FILE"))
+                        {
+                            us.ErrorOccured("The file does not seem to be in the correct format.");
+                        }
+                    }
+
                 }
             }
         }

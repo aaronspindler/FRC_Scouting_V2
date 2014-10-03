@@ -345,11 +345,10 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("=========================================================");
                     writer.WriteLine("-=============+ Computer Readable Portion +=============-");
                     writer.WriteLine("=========================================================");
-                    writer.WriteLine(Convert.ToString(matchNumber));
-                    writer.WriteLine(Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName));
                     writer.WriteLine(Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber));
-                    writer.WriteLine(Convert.ToBoolean(didRobotDie));
+                    writer.WriteLine(Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName));
                     writer.WriteLine(Convert.ToString(teamColour));
+                    writer.WriteLine(Convert.ToString(matchNumber));
                     writer.WriteLine(Convert.ToString(autoHighGoal));
                     writer.WriteLine(Convert.ToString(autoHighMiss));
                     writer.WriteLine(Convert.ToString(autoLowGoal));
@@ -374,6 +373,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine(Convert.ToString(unsuccessfulTruss));
                     writer.WriteLine(Convert.ToString(xStarting));
                     writer.WriteLine(Convert.ToString(yStarting));
+                    writer.WriteLine(Convert.ToBoolean(didRobotDie));
                     writer.WriteLine(Convert.ToString(comments));
                     writer.WriteLine("END OF FILE");
                     writer.Close();
