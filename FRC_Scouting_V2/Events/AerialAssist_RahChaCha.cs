@@ -30,6 +30,7 @@ using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
@@ -228,7 +229,10 @@ namespace FRC_Scouting_V2
                     string testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
                     {
-
+                        MySqlConnection conn = new MySqlConnection(us.MakeMySqlConnectionString());
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.Connection = conn;
+                        cmd.CommandText = ("Insert ");
                     }
                     else
                     {
