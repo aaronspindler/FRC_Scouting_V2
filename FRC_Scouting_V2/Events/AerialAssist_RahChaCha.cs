@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
@@ -193,7 +194,14 @@ namespace FRC_Scouting_V2
 
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                foreach (string t in openFileDialog.FileNames)
+                {
+                    var reader = new StreamReader(t);
+
+                }
+            }
         }
     }
 }
