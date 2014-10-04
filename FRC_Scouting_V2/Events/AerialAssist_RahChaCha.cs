@@ -24,10 +24,13 @@
 //===============================================================================
 
 using System;
+using System.ComponentModel;
+using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2
@@ -100,7 +103,7 @@ namespace FRC_Scouting_V2
 
         private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            us.ExportTableToCSV(TABLE_NAME);
+            us.AerialAssistExportTableToCSV();
         }
 
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -148,11 +151,6 @@ namespace FRC_Scouting_V2
             Settings.Default.Save();
         }
 
-        private void whatDoTheQuestionMarkButtonsDoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("They provide information about what the controls to the left of them do.");
-        }
-
         private class MyWebClient : WebClient
         {
             protected override WebRequest GetWebRequest(Uri uri)
@@ -166,29 +164,86 @@ namespace FRC_Scouting_V2
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
-
-            public string key { get; set; }
-
             public string locality { get; set; }
-
             public string location { get; set; }
-
             public string name { get; set; }
-
             public string nickname { get; set; }
-
             public string region { get; set; }
-
             public int rookie_year { get; set; }
-
             public int team_number { get; set; }
-
             public string website { get; set; }
         }
 
         private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(e.LinkText);
-        }          
+        }
+
+        public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
+        }
+
+        public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                foreach (string t in openFileDialog.FileNames)
+                {
+                    var reader = new StreamReader(t);
+                    //Bypassing the human readable variables to get to the computer readable portion of the text file
+                    for (int i = 0; i < 28; i++)
+                    {
+                        reader.ReadLine();
+                    }
+                    int teamNumber = Convert.ToInt32(reader.ReadLine());
+                    string teamName = reader.ReadLine();
+                    string teamColour = reader.ReadLine();
+                    int matchNumber = Convert.ToInt32(reader.ReadLine());
+                    int autoHighGoal = Convert.ToInt32(reader.ReadLine());
+                    int autoHighMiss = Convert.ToInt32(reader.ReadLine());
+                    int autoLowGoal = Convert.ToInt32(reader.ReadLine());
+                    int autoLowMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledHighGoal = Convert.ToInt32(reader.ReadLine());
+                    int controlledHighMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledLowGoal = Convert.ToInt32(reader.ReadLine());
+                    int controlledLowMiss = Convert.ToInt32(reader.ReadLine());
+                    int hotGoal = Convert.ToInt32(reader.ReadLine());
+                    int missedHotGoal = Convert.ToInt32(reader.ReadLine());
+                    int tripleGoal = Convert.ToInt32(reader.ReadLine());
+                    int tripleMiss = Convert.ToInt32(reader.ReadLine());
+                    int autoBallPickup = Convert.ToInt32(reader.ReadLine());
+                    int autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledPickup = Convert.ToInt32(reader.ReadLine());
+                    int controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    int pickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    int missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    int passToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    int missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    int successfulTruss = Convert.ToInt32(reader.ReadLine());
+                    int unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
+                    int startingX = Convert.ToInt32(reader.ReadLine());
+                    int startingY = Convert.ToInt32(reader.ReadLine());
+                    Boolean didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
+                    string comments = Convert.ToString(reader.ReadLine());
+                    string testIfFileIsGood = reader.ReadLine();
+                    if (testIfFileIsGood.Equals("END OF FILE"))
+                    {
+                        MySqlConnection conn = new MySqlConnection(us.MakeMySqlConnectionString());
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.Connection = conn;
+                        cmd.CommandText = String.Format("Insert into {0} ()", Settings.Default.currentTableName);
+                    }
+                    else
+                    {
+                        if (!testIfFileIsGood.Equals("END OF FILE"))
+                        {
+                            us.ErrorOccured("The file does not seem to be in the correct format.");
+                        }
+                    }
+
+                }
+            }
+        }
     }
 }

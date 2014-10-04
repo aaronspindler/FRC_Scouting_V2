@@ -1052,6 +1052,10 @@
             this.commentsTextBox.Text = "Comments";
             this.commentsTextBox.TextChanged += new System.EventHandler(this.commentsTextBox_TextChanged);
             // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            // 
             // Aerial_Assist_Scouting_UI_New
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -93,13 +93,13 @@ namespace FRC_Scouting_V2.UIs
             Graphics initGraphics = startingLocationPanel.CreateGraphics();
 
             //Drawing square around the outside edge
-            initGraphics.DrawRectangle(blackpen, 0, 0, 330, 228);
+            initGraphics.DrawRectangle(blackpen, 0, 0, 330, 231);
 
             //Drawing field lines
-            initGraphics.DrawRectangle(fineBluePen, 4, 4, 108, 220);
-            initGraphics.DrawRectangle(fineWhitePen, 116, 4, 98, 220);
-            initGraphics.DrawRectangle(fineRedPen, 218, 4, 108, 220);
-            initGraphics.DrawLine(blackpen, 165, 0, 165, 228);
+            initGraphics.DrawRectangle(fineBluePen, 4, 4, 108, 223);
+            initGraphics.DrawRectangle(fineWhitePen, 116, 4, 98, 223);
+            initGraphics.DrawRectangle(fineRedPen, 218, 4, 108, 223);
+            initGraphics.DrawLine(blackpen, 165, 0, 165, 231);
             initGraphics.Dispose();
         }
 
@@ -324,6 +324,9 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("Scouted By: " + Settings.Default.username);
                     writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
+                    writer.WriteLine("Team Colour: " + teamColour);
+                    writer.WriteLine("Team Name: " +  FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName);
+                    writer.WriteLine("Team Number: " + FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber);
                     writer.WriteLine("#########################################################");
                     writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " + Convert.ToString(autoHighMiss));
                     writer.WriteLine("Auto Low: Goal: " + Convert.ToString(autoLowGoal) + " Miss: " + Convert.ToString(autoLowMiss));
@@ -342,7 +345,36 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("=========================================================");
                     writer.WriteLine("-=============+ Computer Readable Portion +=============-");
                     writer.WriteLine("=========================================================");
-                    writer.WriteLine();
+                    writer.WriteLine(Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber));
+                    writer.WriteLine(Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName));
+                    writer.WriteLine(Convert.ToString(teamColour));
+                    writer.WriteLine(Convert.ToString(matchNumber));
+                    writer.WriteLine(Convert.ToString(autoHighGoal));
+                    writer.WriteLine(Convert.ToString(autoHighMiss));
+                    writer.WriteLine(Convert.ToString(autoLowGoal));
+                    writer.WriteLine(Convert.ToString(autoLowMiss));
+                    writer.WriteLine(Convert.ToString(controlledHighGoal));
+                    writer.WriteLine(Convert.ToString(controlledHighMiss));
+                    writer.WriteLine(Convert.ToString(controlledLowGoal));
+                    writer.WriteLine(Convert.ToString(controlledLowMiss));
+                    writer.WriteLine(Convert.ToString(hotGoal));
+                    writer.WriteLine(Convert.ToString(hotMiss));
+                    writer.WriteLine(Convert.ToString(tripleAssistGoal));
+                    writer.WriteLine(Convert.ToString(tripleAssistMiss));
+                    writer.WriteLine(Convert.ToString(autoBallPickup));
+                    writer.WriteLine(Convert.ToString(autoBallPickupMiss));
+                    writer.WriteLine(Convert.ToString(controlledBallPickup));
+                    writer.WriteLine(Convert.ToString(controlledBallPickupMiss));
+                    writer.WriteLine(Convert.ToString(pickupFromHuman));
+                    writer.WriteLine(Convert.ToString(pickupFromHumanMiss));
+                    writer.WriteLine(Convert.ToString(passToOtherRobot));
+                    writer.WriteLine(Convert.ToString(passToOtherRobotMiss));
+                    writer.WriteLine(Convert.ToString(successfulTruss));
+                    writer.WriteLine(Convert.ToString(unsuccessfulTruss));
+                    writer.WriteLine(Convert.ToString(xStarting));
+                    writer.WriteLine(Convert.ToString(yStarting));
+                    writer.WriteLine(Convert.ToBoolean(didRobotDie));
+                    writer.WriteLine(Convert.ToString(comments));
                     writer.WriteLine("END OF FILE");
                     writer.Close();
                 }

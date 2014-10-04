@@ -52,11 +52,12 @@ namespace FRC_Scouting_V2
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public void ExportTableToCSV(string tableName)
+        public void AerialAssistExportTableToCSV()
         {
-            ShowInformationMessage("This can take a long time!");
+            ShowInformationMessage("This can take a long time! Progress will be shown in the console.");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
+            int numberOfRows = GetNumberOfRowsInATable();
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
@@ -72,7 +73,7 @@ namespace FRC_Scouting_V2
                     conn.Open();
                     for (int i = 0; i < GetNumberOfRowsInATable(); i++)
                     {
-                        cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", tableName, i);
+                        cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName, i);
                         reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
@@ -94,7 +95,7 @@ namespace FRC_Scouting_V2
                                              reader["Comments"]);
                         }
                         reader.Close();
-                        Console.WriteLine("Row: " + i + " has been exported.");
+                        Console.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
                     }
                     Console.WriteLine("Your data has been successfully exported!");
                     writer.Close();
@@ -105,7 +106,7 @@ namespace FRC_Scouting_V2
                     Console.WriteLine("Error Code: " + ex.ErrorCode);
                     Console.WriteLine(ex.Message);
                 }
-                ShowInformationMessage("Data export has finished!");
+                ShowInformationMessage("Export of " +  numberOfRows + " rows has successfully finished.");
             }
         }
 
