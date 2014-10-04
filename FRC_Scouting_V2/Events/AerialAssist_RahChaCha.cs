@@ -266,22 +266,22 @@ namespace FRC_Scouting_V2
             conn.Open();
             for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
             {
-                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName,
-                    i);
+                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName,i);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     if (reader["TeamName"].ToString() == selectedTeam1)
                     {
-                        teamComparison1TotalCHG = teamComparison1TotalCHG +
-                                                  Convert.ToInt32(reader["ControlledHighGoal"]);
-                        teamComparison1TotalCHGM = teamComparison1TotalCHGM +
-                                                   Convert.ToInt32(reader["ControlledHighMiss"]);
+                        teamComparison1TotalCHG = teamComparison1TotalCHG + Convert.ToInt32(reader["ControlledHighGoal"].ToString());
+                        teamComparison1TotalCHGM = teamComparison1TotalCHGM +Convert.ToInt32(reader["ControlledHighMiss"].ToString());
                     }
-                    if (reader["TeamName"].ToString() == selectedTeam2)
+                    else
                     {
-                        teamComparison2TotalCHG += Convert.ToInt32(reader["ControlledHighGoal"]);
-                        teamComparison2TotalCHGM += Convert.ToInt32(reader["ControlledHighMiss"]);
+                        if (reader["TeamName"].ToString() == selectedTeam2)
+                        {
+                            teamComparison2TotalCHG += Convert.ToInt32(reader["ControlledHighGoal"].ToString());
+                            teamComparison2TotalCHGM += Convert.ToInt32(reader["ControlledHighMiss"].ToString());
+                        }
                     }
                 }
                 reader.Close();
