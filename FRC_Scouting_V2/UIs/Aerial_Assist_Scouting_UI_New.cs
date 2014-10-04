@@ -442,6 +442,42 @@ namespace FRC_Scouting_V2.UIs
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
             }
+
+            //Clearing the values after you submit the data
+            autoHighGoal = 0;
+            autoHighMiss = 0;
+            autoLowGoal = 0;
+            autoLowMiss = 0;
+            controlledHighGoal = 0;
+            controlledHighMiss = 0;
+            controlledLowGoal = 0;
+            controlledLowMiss = 0;
+            hotGoal = 0;
+            hotMiss = 0;
+            tripleAssistGoal = 0;
+            tripleAssistMiss = 0;
+            autoBallPickup = 0;
+            autoBallPickupMiss = 0;
+            controlledBallPickup = 0;
+            controlledBallPickupMiss = 0;
+            pickupFromHuman = 0;
+            pickupFromHumanMiss = 0;
+            passToOtherRobot = 0;
+            passToOtherRobotMiss = 0;
+            successfulTruss = 0;
+            unsuccessfulTruss = 0;
+            BlankPanel();
+            didRobotDie = 0;
+            didRobotDieCheckBox.Checked = false;
+            matchNumberUpDown.Value++;
+            matchNumber++;
+            totalGoal = 0;
+            totalMiss = 0;
+            totalGoodControl = 0;
+            totalMissControl = 0;
+            comments = ("");
+            commentsTextBox.Text = ("Comments: Any other information that may be needed");
+            UpdateLabels();
         }
 
         private void successfulTrussButton_Click(object sender, EventArgs e)
