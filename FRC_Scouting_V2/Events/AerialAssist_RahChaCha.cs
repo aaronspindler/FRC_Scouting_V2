@@ -66,6 +66,9 @@ namespace FRC_Scouting_V2
         private string teamURL;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
+        public int teamComparison1 = -1;
+        public int teamComparison2 = -1;
+
         public AerialAssist_RahChaCha()
         {
             InitializeComponent();
@@ -87,7 +90,12 @@ namespace FRC_Scouting_V2
             for (int i = 0; i < teamNumberArray.Length; i++)
             {
                 teamSelector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
+                teamCompSelector1.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
+                teamCompSelector2.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
             }
+
+            this.label1.Text = "Controlled High Goals";
+            this.label2.Text = "Controlled Low Goals";
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,6 +252,23 @@ namespace FRC_Scouting_V2
 
                 }
             }
+        }
+
+        private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            teamComparison1 = teamCompSelector1.SelectedIndex;
+            updateTeamComparison();
+            
+        }
+
+        private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            teamComparison2 = teamCompSelector2.SelectedIndex;
+            updateTeamComparison();
+        }
+
+        public void updateTeamComparison() { 
+            
         }
     }
 }
