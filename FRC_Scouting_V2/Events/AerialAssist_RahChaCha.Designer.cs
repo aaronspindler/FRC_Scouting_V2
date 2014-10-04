@@ -68,7 +68,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.ControlledHighGoalRatio = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -377,7 +377,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label18, 4, 5);
             this.tableLayoutPanel4.Controls.Add(this.label17, 4, 4);
             this.tableLayoutPanel4.Controls.Add(this.label24, 4, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label23, 4, 2);
+            this.tableLayoutPanel4.Controls.Add(this.ControlledHighGoalRatio, 4, 2);
             this.tableLayoutPanel4.Controls.Add(this.label25, 12, 2);
             this.tableLayoutPanel4.Controls.Add(this.label26, 12, 3);
             this.tableLayoutPanel4.Controls.Add(this.label27, 12, 4);
@@ -723,15 +723,15 @@
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label23, 4);
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(263, 74);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(254, 37);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "0";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ControlledHighGoalRatio.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.ControlledHighGoalRatio, 4);
+            this.ControlledHighGoalRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ControlledHighGoalRatio.Location = new System.Drawing.Point(263, 74);
+            this.ControlledHighGoalRatio.Name = "label23";
+            this.ControlledHighGoalRatio.Size = new System.Drawing.Size(254, 37);
+            this.ControlledHighGoalRatio.TabIndex = 24;
+            this.ControlledHighGoalRatio.Text = "0";
+            this.ControlledHighGoalRatio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label25
             // 
@@ -1215,7 +1215,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label ControlledHighGoalRatio;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;

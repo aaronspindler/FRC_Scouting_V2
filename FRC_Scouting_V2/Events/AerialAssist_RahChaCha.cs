@@ -69,6 +69,17 @@ namespace FRC_Scouting_V2
         private string selectedTeam1 = ("");
         private string selectedTeam2 = ("");
 
+        public int teamComparison1TotalCHG = 0;
+        public int teamComparison1TotalCHGM = 0;
+        public int teamComparison1TotalCLG = 0;
+        public int teamComparison1TotalCLGM = 0;
+
+        public int teamComparison2TotalCHG = 0;
+        public int teamComparison2TotalCHGM = 0;
+        public int teamComparison2TotalCLG = 0;
+        public int teamComparison2TotalCLGM = 0;
+
+
         public AerialAssist_RahChaCha()
         {
             InitializeComponent();
@@ -279,12 +290,30 @@ namespace FRC_Scouting_V2
                 reader = cmd.ExecuteReader();
                 while (reader.Read()) 
                 {
-                    if (reader["TeamName"].ToString() == selectedTeam1) 
-                    { 
-                        
+                    if (selectedTeam1 != "")
+                    {
+                        if (reader["TeamName"].ToString() == selectedTeam1)
+                        {
+                            teamComparison1TotalCHG = teamComparison1TotalCHG + Convert.ToInt32(reader["ControlledHighGoal"]);
+                            teamComparison1TotalCHGM = teamComparison1TotalCHGM + Convert.ToInt32(reader["ControlledHighMiss"]);
+                        }
+                    }
+                    if (selectedTeam2 != "")
+                    {
+                        if (reader["TeamName"].ToString() == selectedTeam2)
+                        {
+                            teamComparison2TotalCHG += Convert.ToInt32(reader["ControlledHighGoal"]);
+                            teamComparison2TotalCHGM += Convert.ToInt32(reader["ControlledHighMiss"]);
+                        }
                     }
                 }
                 reader.Close();
+            }
+            Console.WriteLine(Convert.ToString(teamComparison1TotalCHG) + "|" + Convert.ToString(teamComparison1TotalCHGM));
+            if (teamComparison1TotalCHGM != 0)
+            {
+                var CHGRatio = teamComparison1TotalCHG / teamComparison1TotalCHGM;
+                ControlledHighGoalRatio.Text = Convert.ToString(CHGRatio);
             }
         }
     }
