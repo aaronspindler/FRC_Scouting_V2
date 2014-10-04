@@ -33,6 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamSummaryInformationLabel = new System.Windows.Forms.Label();
@@ -42,11 +43,11 @@
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TeamComparisonCHG = new System.Windows.Forms.Label();
             this.teamCompSelector1 = new System.Windows.Forms.ComboBox();
             this.informationAboutTopTeamSelectorLabel = new System.Windows.Forms.Label();
             this.teamCompSelector2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TeamComparisonCLG = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,7 +105,6 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -191,6 +191,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1043, 600);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 588);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -343,11 +352,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel4.Controls.Add(this.label9, 8, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.TeamComparisonCHG, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.teamCompSelector1, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.informationAboutTopTeamSelectorLabel, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.teamCompSelector2, 8, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.TeamComparisonCLG, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 4);
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 5);
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 6);
@@ -412,17 +421,17 @@
             this.label9.Text = "Figure Out What To Put In These";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // TeamComparisonCHG
             // 
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label1, 4);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Figure Out What To Put In These";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TeamComparisonCHG.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.TeamComparisonCHG, 4);
+            this.TeamComparisonCHG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TeamComparisonCHG.Location = new System.Drawing.Point(3, 74);
+            this.TeamComparisonCHG.Name = "TeamComparisonCHG";
+            this.TeamComparisonCHG.Size = new System.Drawing.Size(254, 37);
+            this.TeamComparisonCHG.TabIndex = 1;
+            this.TeamComparisonCHG.Text = "Figure Out What To Put In These";
+            this.TeamComparisonCHG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamCompSelector1
             // 
@@ -460,17 +469,17 @@
             this.teamCompSelector2.TabIndex = 2;
             this.teamCompSelector2.SelectedIndexChanged += new System.EventHandler(this.teamCompSelector2_SelectedIndexChanged);
             // 
-            // label2
+            // TeamComparisonCLG
             // 
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label2, 4);
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 37);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Figure Out What To Put In These";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TeamComparisonCLG.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.TeamComparisonCLG, 4);
+            this.TeamComparisonCLG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TeamComparisonCLG.Location = new System.Drawing.Point(3, 111);
+            this.TeamComparisonCLG.Name = "TeamComparisonCLG";
+            this.TeamComparisonCLG.Size = new System.Drawing.Size(254, 37);
+            this.TeamComparisonCLG.TabIndex = 3;
+            this.TeamComparisonCLG.Text = "Figure Out What To Put In These";
+            this.TeamComparisonCLG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -1133,15 +1142,6 @@
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
             // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 588);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
-            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1190,11 +1190,11 @@
         private System.Windows.Forms.TabPage teamComparisonTabPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TeamComparisonCHG;
         private System.Windows.Forms.ComboBox teamCompSelector1;
         private System.Windows.Forms.Label informationAboutTopTeamSelectorLabel;
         private System.Windows.Forms.ComboBox teamCompSelector2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TeamComparisonCLG;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

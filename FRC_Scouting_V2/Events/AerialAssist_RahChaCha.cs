@@ -94,8 +94,8 @@ namespace FRC_Scouting_V2
                 teamCompSelector2.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
             }
 
-            this.label1.Text = "Controlled High Goals";
-            this.label2.Text = "Controlled Low Goals";
+            this.TeamComparisonCHG.Text = "Controlled High Goals";
+            this.TeamComparisonCLG.Text = "Controlled Low Goals";
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -267,8 +267,23 @@ namespace FRC_Scouting_V2
             updateTeamComparison();
         }
 
-        public void updateTeamComparison() { 
-            
+        public void updateTeamComparison() {
+            string mySqlConnectionString = us.MakeMySqlConnectionString();
+            var conn = new MySqlConnection(mySqlConnectionString);
+            MySqlCommand cmd = conn.CreateCommand();
+            MySqlDataReader reader;
+            conn.Open();
+            for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
+            {
+                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName, i);
+                reader = cmd.ExecuteReader();
+                while (reader.Read()) {
+                    if (reader["TeamName"] == this.teamNameArray[teamComparison1]) { 
+                        
+                    }
+                }
+            }
+            reader = cmd.ExecuteReader();
         }
     }
 }
