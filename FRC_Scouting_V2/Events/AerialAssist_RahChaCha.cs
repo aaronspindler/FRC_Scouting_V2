@@ -24,6 +24,8 @@
 //===============================================================================
 
 using System;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Reflection;
@@ -60,11 +62,6 @@ namespace FRC_Scouting_V2
 
         private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
-        private string teamLocation = ("");
-        private string teamName = ("");
-        private int teamNumber;
-        private string teamURL;
-        private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
         private string selectedTeam1 = ("");
         private string selectedTeam2 = ("");
@@ -78,6 +75,11 @@ namespace FRC_Scouting_V2
         public int teamComparison2TotalCHGM = 0;
         public int teamComparison2TotalCLG = 0;
         public int teamComparison2TotalCLGM = 0;
+        private string teamLocation = ("");
+        private string teamName = ("");
+        private int teamNumber;
+        private string teamURL;
+        private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
 
         public AerialAssist_RahChaCha()
@@ -105,8 +107,8 @@ namespace FRC_Scouting_V2
                 teamCompSelector2.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
             }
 
-            this.TeamComparisonCHG.Text = "Controlled High Goals";
-            this.TeamComparisonCLG.Text = "Controlled Low Goals";
+            TeamComparisonCHG.Text = "Controlled High Goals";
+            TeamComparisonCLG.Text = "Controlled Low Goals";
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -161,41 +163,18 @@ namespace FRC_Scouting_V2
             teamLocationDisplay.Text = teamLocation;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
             teamURLDisplay.Text = teamURL;
-           
+
             object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
-            teamLogoPictureBox.Image = (System.Drawing.Image)teamImage;
+            teamLogoPictureBox.Image = (Image) teamImage;
 
             Settings.Default.selectedTeamName = teamName;
             Settings.Default.selectedTeamNumber = teamNumber;
             Settings.Default.Save();
         }
 
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
-        }
-
-        public class TeamInformationJSONData
-        {
-            public string country_name { get; set; }
-            public string locality { get; set; }
-            public string location { get; set; }
-            public string name { get; set; }
-            public string nickname { get; set; }
-            public string region { get; set; }
-            public int rookie_year { get; set; }
-            public int team_number { get; set; }
-            public string website { get; set; }
-        }
-
         private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(e.LinkText);
+            Process.Start(e.LinkText);
         }
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
@@ -248,8 +227,8 @@ namespace FRC_Scouting_V2
                     string testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
                     {
-                        MySqlConnection conn = new MySqlConnection(us.MakeMySqlConnectionString());
-                        MySqlCommand cmd = new MySqlCommand();
+                        var conn = new MySqlConnection(us.MakeMySqlConnectionString());
+                        var cmd = new MySqlCommand();
                         cmd.Connection = conn;
                         cmd.CommandText = String.Format("Insert into {0} ()", Settings.Default.currentTableName);
                     }
@@ -260,63 +239,83 @@ namespace FRC_Scouting_V2
                             us.ErrorOccured("The file does not seem to be in the correct format.");
                         }
                     }
-
                 }
             }
         }
 
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Thread BackgroundThread = new Thread(new ThreadStart(UpdateTeamComparison));
+            var BackgroundThread = new Thread(UpdateTeamComparison);
             selectedTeam1 = teamNameArray[teamCompSelector1.SelectedIndex];
             BackgroundThread.Start();
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Thread BackgroundThread = new Thread(new ThreadStart(UpdateTeamComparison));
+            var BackgroundThread = new Thread(UpdateTeamComparison);
             selectedTeam2 = teamNameArray[teamCompSelector2.SelectedIndex];
             BackgroundThread.Start();
         }
 
         public void UpdateTeamComparison()
         {
-            var mySqlConnectionString = us.MakeMySqlConnectionString();
+            string mySqlConnectionString = us.MakeMySqlConnectionString();
             var conn = new MySqlConnection(mySqlConnectionString);
-            var cmd = conn.CreateCommand();
+            MySqlCommand cmd = conn.CreateCommand();
             MySqlDataReader reader;
             conn.Open();
             for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
             {
-                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName, i);
+                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName,
+                    i);
                 reader = cmd.ExecuteReader();
-                while (reader.Read()) 
+                while (reader.Read())
                 {
-                    if (selectedTeam1 != "")
+                    if (reader["TeamName"].ToString() == selectedTeam1)
                     {
-                        if (reader["TeamName"].ToString() == selectedTeam1)
-                        {
-                            teamComparison1TotalCHG = teamComparison1TotalCHG + Convert.ToInt32(reader["ControlledHighGoal"]);
-                            teamComparison1TotalCHGM = teamComparison1TotalCHGM + Convert.ToInt32(reader["ControlledHighMiss"]);
-                        }
+                        teamComparison1TotalCHG = teamComparison1TotalCHG +
+                                                  Convert.ToInt32(reader["ControlledHighGoal"]);
+                        teamComparison1TotalCHGM = teamComparison1TotalCHGM +
+                                                   Convert.ToInt32(reader["ControlledHighMiss"]);
                     }
-                    if (selectedTeam2 != "")
+                    if (reader["TeamName"].ToString() == selectedTeam2)
                     {
-                        if (reader["TeamName"].ToString() == selectedTeam2)
-                        {
-                            teamComparison2TotalCHG += Convert.ToInt32(reader["ControlledHighGoal"]);
-                            teamComparison2TotalCHGM += Convert.ToInt32(reader["ControlledHighMiss"]);
-                        }
+                        teamComparison2TotalCHG += Convert.ToInt32(reader["ControlledHighGoal"]);
+                        teamComparison2TotalCHGM += Convert.ToInt32(reader["ControlledHighMiss"]);
                     }
                 }
                 reader.Close();
             }
-            Console.WriteLine(Convert.ToString(teamComparison1TotalCHG) + "|" + Convert.ToString(teamComparison1TotalCHGM));
+            Console.WriteLine(Convert.ToString(teamComparison1TotalCHG) + "|" +
+                              Convert.ToString(teamComparison1TotalCHGM));
             if (teamComparison1TotalCHGM != 0)
             {
-                var CHGRatio = teamComparison1TotalCHG / teamComparison1TotalCHGM;
+                int CHGRatio = teamComparison1TotalCHG/teamComparison1TotalCHGM;
                 ControlledHighGoalRatio.Text = Convert.ToString(CHGRatio);
             }
+        }
+
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+        }
+
+        public class TeamInformationJSONData
+        {
+            public string country_name { get; set; }
+            public string locality { get; set; }
+            public string location { get; set; }
+            public string name { get; set; }
+            public string nickname { get; set; }
+            public string region { get; set; }
+            public int rookie_year { get; set; }
+            public int team_number { get; set; }
+            public string website { get; set; }
         }
     }
 }

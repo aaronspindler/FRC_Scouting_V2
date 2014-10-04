@@ -136,7 +136,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1063, 663);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1063, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -151,7 +151,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1057, 632);
+            this.tabControl1.Size = new System.Drawing.Size(1057, 630);
             this.tabControl1.TabIndex = 1;
             // 
             // scoutingTabPage
@@ -159,8 +159,8 @@
             this.scoutingTabPage.Controls.Add(this.tableLayoutPanel2);
             this.scoutingTabPage.Location = new System.Drawing.Point(4, 22);
             this.scoutingTabPage.Name = "scoutingTabPage";
-            this.scoutingTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.scoutingTabPage.Size = new System.Drawing.Size(1049, 606);
+            this.scoutingTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.scoutingTabPage.Size = new System.Drawing.Size(1049, 604);
             this.scoutingTabPage.TabIndex = 0;
             this.scoutingTabPage.Text = "Scouting";
             this.scoutingTabPage.UseVisualStyleBackColor = true;
@@ -182,23 +182,23 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1043, 600);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 612F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 612F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 612F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 612F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 612F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 612F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 612F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1043, 598);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // aerial_Assist_Scouting_UI_21
             // 
             this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 588);
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 586);
             this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamSummaryTabPage
@@ -206,7 +206,7 @@
             this.teamSummaryTabPage.Controls.Add(this.tableLayoutPanel5);
             this.teamSummaryTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamSummaryTabPage.Name = "teamSummaryTabPage";
-            this.teamSummaryTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.teamSummaryTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.teamSummaryTabPage.Size = new System.Drawing.Size(1049, 606);
             this.teamSummaryTabPage.TabIndex = 4;
             this.teamSummaryTabPage.Text = "Team Summary";
@@ -267,7 +267,7 @@
             this.teamMatchSummaryTabPage.Controls.Add(this.tableLayoutPanel6);
             this.teamMatchSummaryTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamMatchSummaryTabPage.Name = "teamMatchSummaryTabPage";
-            this.teamMatchSummaryTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.teamMatchSummaryTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.teamMatchSummaryTabPage.Size = new System.Drawing.Size(1049, 606);
             this.teamMatchSummaryTabPage.TabIndex = 5;
             this.teamMatchSummaryTabPage.Text = "Team Matches Summary";
@@ -315,7 +315,7 @@
             this.teamMatchBox.Items.AddRange(new object[] {
             ""});
             this.teamMatchBox.Location = new System.Drawing.Point(2, 2);
-            this.teamMatchBox.Margin = new System.Windows.Forms.Padding(2);
+            this.teamMatchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.teamMatchBox.Name = "teamMatchBox";
             this.tableLayoutPanel6.SetRowSpan(this.teamMatchBox, 16);
             this.teamMatchBox.Size = new System.Drawing.Size(126, 596);
@@ -326,7 +326,7 @@
             this.teamComparisonTabPage.Controls.Add(this.tableLayoutPanel4);
             this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamComparisonTabPage.Name = "teamComparisonTabPage";
-            this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.teamComparisonTabPage.Size = new System.Drawing.Size(1049, 606);
             this.teamComparisonTabPage.TabIndex = 3;
             this.teamComparisonTabPage.Text = "Team Comparison";
@@ -834,7 +834,7 @@
             this.generalTeamInformationTabPage.Controls.Add(this.tableLayoutPanel3);
             this.generalTeamInformationTabPage.Location = new System.Drawing.Point(4, 22);
             this.generalTeamInformationTabPage.Name = "generalTeamInformationTabPage";
-            this.generalTeamInformationTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.generalTeamInformationTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.generalTeamInformationTabPage.Size = new System.Drawing.Size(1049, 606);
             this.generalTeamInformationTabPage.TabIndex = 1;
             this.generalTeamInformationTabPage.Text = "General Team Information";
@@ -1146,7 +1146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 663);
+            this.ClientSize = new System.Drawing.Size(1063, 661);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
