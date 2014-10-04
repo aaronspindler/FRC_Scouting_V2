@@ -267,19 +267,19 @@ namespace FRC_Scouting_V2
 
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Thread BackgroundThread = new Thread(new ThreadStart(updateTeamComparison));
+            Thread BackgroundThread = new Thread(new ThreadStart(UpdateTeamComparison));
             selectedTeam1 = teamNameArray[teamCompSelector1.SelectedIndex];
             BackgroundThread.Start();
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Thread BackgroundThread = new Thread(new ThreadStart(updateTeamComparison));
+            Thread BackgroundThread = new Thread(new ThreadStart(UpdateTeamComparison));
             selectedTeam2 = teamNameArray[teamCompSelector2.SelectedIndex];
             BackgroundThread.Start();
         }
 
-        public void updateTeamComparison()
+        public void UpdateTeamComparison()
         {
             var mySqlConnectionString = us.MakeMySqlConnectionString();
             var conn = new MySqlConnection(mySqlConnectionString);
