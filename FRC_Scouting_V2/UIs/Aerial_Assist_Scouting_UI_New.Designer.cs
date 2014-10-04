@@ -1049,7 +1049,7 @@
             this.tableLayoutPanel.SetRowSpan(this.commentsTextBox, 4);
             this.commentsTextBox.Size = new System.Drawing.Size(1093, 170);
             this.commentsTextBox.TabIndex = 86;
-            this.commentsTextBox.Text = "Comments";
+            this.commentsTextBox.Text = "Comments: Any other information that may be needed";
             this.commentsTextBox.TextChanged += new System.EventHandler(this.commentsTextBox_TextChanged);
             // 
             // saveFileDialog

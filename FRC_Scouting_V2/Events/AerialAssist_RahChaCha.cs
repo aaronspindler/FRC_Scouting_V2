@@ -24,7 +24,6 @@
 //===============================================================================
 
 using System;
-using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Reflection;
@@ -266,7 +265,7 @@ namespace FRC_Scouting_V2
             updateTeamComparison();
         }
 
-        public void updateTeamComparison() 
+        public void updateTeamComparison()
         {
             var mySqlConnectionString = us.MakeMySqlConnectionString();
             var conn = new MySqlConnection(mySqlConnectionString);
