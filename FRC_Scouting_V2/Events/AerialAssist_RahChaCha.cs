@@ -66,8 +66,8 @@ namespace FRC_Scouting_V2
         private string teamURL;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
-        public int teamComparison1 = -1;
-        public int teamComparison2 = -1;
+        private string selectedTeam1 = ("");
+        private string selectedTeam2 = ("");
 
         public AerialAssist_RahChaCha()
         {
@@ -256,34 +256,36 @@ namespace FRC_Scouting_V2
 
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            teamComparison1 = teamCompSelector1.SelectedIndex;
+            selectedTeam1 = teamNameArray[teamCompSelector1.SelectedIndex];
             updateTeamComparison();
-            
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            teamComparison2 = teamCompSelector2.SelectedIndex;
+            selectedTeam2 = teamNameArray[teamCompSelector2.SelectedIndex];
             updateTeamComparison();
         }
 
-        public void updateTeamComparison() {
-            string mySqlConnectionString = us.MakeMySqlConnectionString();
+        public void updateTeamComparison() 
+        {
+            var mySqlConnectionString = us.MakeMySqlConnectionString();
             var conn = new MySqlConnection(mySqlConnectionString);
-            MySqlCommand cmd = conn.CreateCommand();
+            var cmd = conn.CreateCommand();
             MySqlDataReader reader;
             conn.Open();
             for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
             {
                 cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName, i);
                 reader = cmd.ExecuteReader();
-                while (reader.Read()) {
-                    if (reader["TeamName"] == this.teamNameArray[teamComparison1]) { 
+                while (reader.Read()) 
+                {
+                    if (reader["TeamName"].ToString() == selectedTeam1) 
+                    { 
                         
                     }
                 }
+                reader.Close();
             }
-            reader = cmd.ExecuteReader();
         }
     }
 }
