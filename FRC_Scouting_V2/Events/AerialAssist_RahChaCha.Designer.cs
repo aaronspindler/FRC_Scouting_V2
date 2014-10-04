@@ -721,13 +721,13 @@
             this.label24.Text = "0";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label23
+            // ControlledHighGoalRatio
             // 
             this.ControlledHighGoalRatio.AutoSize = true;
             this.tableLayoutPanel4.SetColumnSpan(this.ControlledHighGoalRatio, 4);
             this.ControlledHighGoalRatio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ControlledHighGoalRatio.Location = new System.Drawing.Point(263, 74);
-            this.ControlledHighGoalRatio.Name = "label23";
+            this.ControlledHighGoalRatio.Name = "ControlledHighGoalRatio";
             this.ControlledHighGoalRatio.Size = new System.Drawing.Size(254, 37);
             this.ControlledHighGoalRatio.TabIndex = 24;
             this.ControlledHighGoalRatio.Text = "0";

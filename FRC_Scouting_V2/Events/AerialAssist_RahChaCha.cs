@@ -27,6 +27,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Reflection;
+using System.Threading;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -266,14 +267,16 @@ namespace FRC_Scouting_V2
 
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Thread BackgroundThread = new Thread(new ThreadStart(updateTeamComparison));
             selectedTeam1 = teamNameArray[teamCompSelector1.SelectedIndex];
-            updateTeamComparison();
+            BackgroundThread.Start();
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Thread BackgroundThread = new Thread(new ThreadStart(updateTeamComparison));
             selectedTeam2 = teamNameArray[teamCompSelector2.SelectedIndex];
-            updateTeamComparison();
+            BackgroundThread.Start();
         }
 
         public void updateTeamComparison()
