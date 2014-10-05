@@ -125,7 +125,23 @@ namespace FRC_Scouting_V2
                         var conn = new MySqlConnection(us.MakeMySqlConnectionString());
                         var cmd = new MySqlCommand();
                         cmd.Connection = conn;
-                        cmd.CommandText = String.Format("Insert into {0} ()", Settings.Default.currentTableName);
+                        cmd.CommandText =
+                            String.Format(
+                                "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}');",
+                                Settings.Default.currentTableName, (us.GetNumberOfRowsInATable() + 1),
+                                Settings.Default.selectedTeamNumber, Settings.Default.selectedTeamName, teamColour,
+                                matchNumber,
+                                autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal,
+                                controlledHighMiss,
+                                controlledLowGoal, controlledLowMiss, hotGoal, missedHotGoal, tripleGoal, tripleMiss,
+                                autoBallPickup, autoBallPickupMiss, controlledPickup, controlledPickupMiss,
+                                pickupFromHuman, missedPickupFromHuman, passToOtherBot, missedPassToOtherBot,
+                                successfulTruss,
+                                unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie), comments);
+                        ;
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
                     }
                     else
                     {
@@ -148,13 +164,13 @@ namespace FRC_Scouting_V2
                 conn.Open();
                 for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
                 {
-                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}", Settings.Default.currentTableName, selectedTeam1);
+                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
+                        Settings.Default.currentTableName, selectedTeam1);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
                         if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam1))
                         {
-
                         }
                     }
                     reader.Close();
@@ -177,13 +193,13 @@ namespace FRC_Scouting_V2
                 conn.Open();
                 for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
                 {
-                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}", Settings.Default.currentTableName, selectedTeam2);
+                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
+                        Settings.Default.currentTableName, selectedTeam2);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
                         if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam2))
                         {
-
                         }
                     }
                     reader.Close();
