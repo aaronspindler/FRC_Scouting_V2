@@ -45,7 +45,7 @@ namespace FRC_Scouting_V2
         private readonly string[] teamNameArray =
         {
             "The Rocketeers", "Arctic Warriors", "X-CATS",
-            "Greater Rochester Robotics", "Circuit Stompers", "Red Raider Robotics", "Cresent Robotics",
+            "Greater Rochester Robotics", "Circuit Stompers", "Red Raider Robotics", "The Coyotes",
             "Code Red Robotics", "Warp7", "Simbotics", "SparX", "Theory6", "TheBigBang", "Red Devil Robotics",
             "Finney Robotics", "Warlocks", "Rolling Thunder", "Raider Robotics", "Grapes of Wrath", "DevilTech",
             "Scitobor Robotics", "CougarTech", "XcentricsRobotics", "DM High Voltage", "The Astechz", "Tan[x]",
@@ -65,16 +65,6 @@ namespace FRC_Scouting_V2
 
         private string selectedTeam1 = ("");
         private string selectedTeam2 = ("");
-
-        public int teamComparison1TotalCHG = 0;
-        public int teamComparison1TotalCHGM = 0;
-        public int teamComparison1TotalCLG = 0;
-        public int teamComparison1TotalCLGM = 0;
-
-        public int teamComparison2TotalCHG = 0;
-        public int teamComparison2TotalCHGM = 0;
-        public int teamComparison2TotalCLG = 0;
-        public int teamComparison2TotalCLGM = 0;
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber;
@@ -167,7 +157,7 @@ namespace FRC_Scouting_V2
             object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
             teamLogoPictureBox.Image = (Image) teamImage;
 
-            Settings.Default.selectedTeamName = teamName;
+            Settings.Default.selectedTeamName = teamNameArray[teamSelector.SelectedIndex];
             Settings.Default.selectedTeamNumber = teamNumber;
             Settings.Default.Save();
         }
@@ -248,6 +238,7 @@ namespace FRC_Scouting_V2
             var BackgroundThread = new Thread(UpdateTeamComparison);
             selectedTeam1 = teamNameArray[teamCompSelector1.SelectedIndex];
             BackgroundThread.Start();
+            Console.WriteLine(selectedTeam1);
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
@@ -255,43 +246,34 @@ namespace FRC_Scouting_V2
             var BackgroundThread = new Thread(UpdateTeamComparison);
             selectedTeam2 = teamNameArray[teamCompSelector2.SelectedIndex];
             BackgroundThread.Start();
+            Console.WriteLine(selectedTeam2);
         }
 
         public void UpdateTeamComparison()
         {
-            string mySqlConnectionString = us.MakeMySqlConnectionString();
+            var mySqlConnectionString = us.MakeMySqlConnectionString();
             var conn = new MySqlConnection(mySqlConnectionString);
-            MySqlCommand cmd = conn.CreateCommand();
-            MySqlDataReader reader;
+            var cmd = conn.CreateCommand();
             conn.Open();
-            for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
+            for (var i = 0; i < us.GetNumberOfRowsInATable(); i++)
             {
                 cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName,i);
-                reader = cmd.ExecuteReader();
+                var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     if (reader["TeamName"].ToString() == selectedTeam1)
                     {
-                        teamComparison1TotalCHG = teamComparison1TotalCHG + Convert.ToInt32(reader["ControlledHighGoal"].ToString());
-                        teamComparison1TotalCHGM = teamComparison1TotalCHGM +Convert.ToInt32(reader["ControlledHighMiss"].ToString());
+                        
                     }
                     else
                     {
                         if (reader["TeamName"].ToString() == selectedTeam2)
                         {
-                            teamComparison2TotalCHG += Convert.ToInt32(reader["ControlledHighGoal"].ToString());
-                            teamComparison2TotalCHGM += Convert.ToInt32(reader["ControlledHighMiss"].ToString());
+                            
                         }
                     }
                 }
                 reader.Close();
-            }
-            Console.WriteLine(Convert.ToString(teamComparison1TotalCHG) + "|" +
-                              Convert.ToString(teamComparison1TotalCHGM));
-            if (teamComparison1TotalCHGM != 0)
-            {
-                int CHGRatio = teamComparison1TotalCHG/teamComparison1TotalCHGM;
-                ControlledHighGoalRatio.Text = Convert.ToString(CHGRatio);
             }
         }
 
