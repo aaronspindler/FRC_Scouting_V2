@@ -138,30 +138,61 @@ namespace FRC_Scouting_V2
             }
         }
 
-        public void UpdateTeamComparison()
+        public void UpdateTeamComparison1()
         {
-            string mySqlConnectionString = us.MakeMySqlConnectionString();
-            var conn = new MySqlConnection(mySqlConnectionString);
-            MySqlCommand cmd = conn.CreateCommand();
-            conn.Open();
-            for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
+            try
             {
-                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName,
-                    i);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                var conn = new MySqlConnection(mySqlConnectionString);
+                MySqlCommand cmd = conn.CreateCommand();
+                conn.Open();
+                for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
                 {
-                    if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam1))
+                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}", Settings.Default.currentTableName, selectedTeam1);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
                     {
-                    }
-                    else
-                    {
-                        if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam2))
+                        if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam1))
                         {
+
                         }
                     }
+                    reader.Close();
                 }
-                reader.Close();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.ErrorCode);
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public void UpdateTeamComparison2()
+        {
+            try
+            {
+                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                var conn = new MySqlConnection(mySqlConnectionString);
+                MySqlCommand cmd = conn.CreateCommand();
+                conn.Open();
+                for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
+                {
+                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}", Settings.Default.currentTableName, selectedTeam2);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam2))
+                        {
+
+                        }
+                    }
+                    reader.Close();
+                }
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.ErrorCode);
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -218,18 +249,16 @@ namespace FRC_Scouting_V2
 
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var BackgroundThread = new Thread(UpdateTeamComparison);
+            var BackgroundThread = new Thread(UpdateTeamComparison1);
             selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
             BackgroundThread.Start();
-            Console.WriteLine(selectedTeam1);
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var BackgroundThread = new Thread(UpdateTeamComparison);
+            var BackgroundThread = new Thread(UpdateTeamComparison2);
             selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
             BackgroundThread.Start();
-            Console.WriteLine(selectedTeam2);
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
