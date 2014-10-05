@@ -79,47 +79,49 @@ namespace FRC_Scouting_V2
 
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int numberOfFilesImported = 0;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 foreach (string t in openFileDialog.FileNames)
                 {
+                    numberOfFilesImported++;
                     var reader = new StreamReader(t);
                     //Bypassing the human readable variables to get to the computer readable portion of the text file
                     for (int i = 0; i < 28; i++)
                     {
                         reader.ReadLine();
                     }
-                    int teamNumber = Convert.ToInt32(reader.ReadLine());
-                    string teamName = reader.ReadLine();
-                    string teamColour = reader.ReadLine();
-                    int matchNumber = Convert.ToInt32(reader.ReadLine());
-                    int autoHighGoal = Convert.ToInt32(reader.ReadLine());
-                    int autoHighMiss = Convert.ToInt32(reader.ReadLine());
-                    int autoLowGoal = Convert.ToInt32(reader.ReadLine());
-                    int autoLowMiss = Convert.ToInt32(reader.ReadLine());
-                    int controlledHighGoal = Convert.ToInt32(reader.ReadLine());
-                    int controlledHighMiss = Convert.ToInt32(reader.ReadLine());
-                    int controlledLowGoal = Convert.ToInt32(reader.ReadLine());
-                    int controlledLowMiss = Convert.ToInt32(reader.ReadLine());
-                    int hotGoal = Convert.ToInt32(reader.ReadLine());
-                    int missedHotGoal = Convert.ToInt32(reader.ReadLine());
-                    int tripleGoal = Convert.ToInt32(reader.ReadLine());
-                    int tripleMiss = Convert.ToInt32(reader.ReadLine());
-                    int autoBallPickup = Convert.ToInt32(reader.ReadLine());
-                    int autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
-                    int controlledPickup = Convert.ToInt32(reader.ReadLine());
-                    int controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
-                    int pickupFromHuman = Convert.ToInt32(reader.ReadLine());
-                    int missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
-                    int passToOtherBot = Convert.ToInt32(reader.ReadLine());
-                    int missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
-                    int successfulTruss = Convert.ToInt32(reader.ReadLine());
-                    int unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
-                    int startingX = Convert.ToInt32(reader.ReadLine());
-                    int startingY = Convert.ToInt32(reader.ReadLine());
-                    Boolean didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
-                    string comments = Convert.ToString(reader.ReadLine());
-                    string testIfFileIsGood = reader.ReadLine();
+                    var teamNumberImport = Convert.ToInt32(reader.ReadLine());
+                    var teamNameImport = reader.ReadLine();
+                    var teamColour = reader.ReadLine();
+                    var matchNumber = Convert.ToInt32(reader.ReadLine());
+                    var autoHighGoal = Convert.ToInt32(reader.ReadLine());
+                    var autoHighMiss = Convert.ToInt32(reader.ReadLine());
+                    var autoLowGoal = Convert.ToInt32(reader.ReadLine());
+                    var autoLowMiss = Convert.ToInt32(reader.ReadLine());
+                    var controlledHighGoal = Convert.ToInt32(reader.ReadLine());
+                    var controlledHighMiss = Convert.ToInt32(reader.ReadLine());
+                    var controlledLowGoal = Convert.ToInt32(reader.ReadLine());
+                    var controlledLowMiss = Convert.ToInt32(reader.ReadLine());
+                    var hotGoal = Convert.ToInt32(reader.ReadLine());
+                    var missedHotGoal = Convert.ToInt32(reader.ReadLine());
+                    var tripleGoal = Convert.ToInt32(reader.ReadLine());
+                    var tripleMiss = Convert.ToInt32(reader.ReadLine());
+                    var autoBallPickup = Convert.ToInt32(reader.ReadLine());
+                    var autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    var controlledPickup = Convert.ToInt32(reader.ReadLine());
+                    var controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    var pickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    var missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    var passToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    var missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    var successfulTruss = Convert.ToInt32(reader.ReadLine());
+                    var unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
+                    var startingX = Convert.ToInt32(reader.ReadLine());
+                    var startingY = Convert.ToInt32(reader.ReadLine());
+                    var didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
+                    var comments = Convert.ToString(reader.ReadLine());
+                    var testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
                     {
                         var conn = new MySqlConnection(us.MakeMySqlConnectionString());
@@ -129,7 +131,7 @@ namespace FRC_Scouting_V2
                             String.Format(
                                 "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}');",
                                 Settings.Default.currentTableName, (us.GetNumberOfRowsInATable() + 1),
-                                Settings.Default.selectedTeamNumber, Settings.Default.selectedTeamName, teamColour,
+                                teamNumberImport, teamNameImport, teamColour,
                                 matchNumber,
                                 autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal,
                                 controlledHighMiss,
@@ -138,7 +140,6 @@ namespace FRC_Scouting_V2
                                 pickupFromHuman, missedPickupFromHuman, passToOtherBot, missedPassToOtherBot,
                                 successfulTruss,
                                 unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie), comments);
-                        ;
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close();
@@ -152,6 +153,7 @@ namespace FRC_Scouting_V2
                     }
                 }
             }
+            us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported + " File(s) Into the Database.");
         }
 
         public void UpdateTeamComparison1()
