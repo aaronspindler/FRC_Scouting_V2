@@ -23,8 +23,8 @@
 //SOFTWARE.
 //===============================================================================
 
-using System;
 using FRC_Scouting_V2.Properties;
+using System;
 
 namespace FRC_Scouting_V2
 {

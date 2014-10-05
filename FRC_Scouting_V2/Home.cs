@@ -23,11 +23,11 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Information_Forms;
+using FRC_Scouting_V2.Properties;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Information_Forms;
-using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {

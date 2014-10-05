@@ -77,101 +77,6 @@ namespace FRC_Scouting_V2
             InitializeComponent();
         }
 
-        private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
-        {
-            Settings.Default.currentTableName = (TABLE_NAME);
-            Settings.Default.Save();
-
-            //Starting the clock so that the current time will be displayed and updated every second
-
-            //Setting toolTips
-            var ToolTip1 = new ToolTip();
-            ToolTip1.SetToolTip(teamSelector,
-                "Use this to select the team that you want to enter data / look at data for!");
-
-            //Adding teams to team selector and teamListBox
-            for (int i = 0; i < teamNumberArray.Length; i++)
-            {
-                teamSelector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
-                teamCompSelector1.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
-                teamCompSelector2.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
-            }
-
-            TeamComparisonCHG.Text = "Controlled High Goals";
-            TeamComparisonCLG.Text = "Controlled Low Goals";
-        }
-
-        private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var aaRahChaChaEventInfo = new AerialAssist_RahChaCha_Information();
-            aaRahChaChaEventInfo.Show();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            us.AerialAssistExportTableToCSV();
-        }
-
-        private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage(
-                "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
-        }
-
-        private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            url = ("http://www.thebluealliance.com/api/v2/team/frc");
-            url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
-            string downloadedData;
-            var wc = new MyWebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-
-            try
-            {
-                downloadedData = (wc.DownloadString(url));
-                var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
-
-                teamName = Convert.ToString(deserializedData.nickname);
-                teamNumber = Convert.ToInt32(deserializedData.team_number);
-                teamLocation = Convert.ToString(deserializedData.location);
-                rookieYear = Convert.ToInt32(deserializedData.rookie_year);
-                teamURL = Convert.ToString(deserializedData.website);
-            }
-            catch (Exception webError)
-            {
-                Console.WriteLine("Error Message: " + webError.Message);
-            }
-
-            teamNameDisplay.Text = teamName;
-            teamNumberDisplay.Text = Convert.ToString(teamNumber);
-            teamLocationDisplay.Text = teamLocation;
-            rookieYearDisplay.Text = Convert.ToString(rookieYear);
-            teamURLDisplay.Text = teamURL;
-
-            object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
-            teamLogoPictureBox.Image = (Image) teamImage;
-
-            Settings.Default.selectedTeamName = teamNameArray[teamSelector.SelectedIndex];
-            Settings.Default.selectedTeamNumber = teamNumber;
-            Settings.Default.Save();
-        }
-
-        private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
-        {
-            Process.Start(e.LinkText);
-        }
-
-        public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
-        }
-
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -233,6 +138,85 @@ namespace FRC_Scouting_V2
             }
         }
 
+        public void UpdateTeamComparison()
+        {
+            var mySqlConnectionString = us.MakeMySqlConnectionString();
+            var conn = new MySqlConnection(mySqlConnectionString);
+            var cmd = conn.CreateCommand();
+            conn.Open();
+            for (var i = 0; i < us.GetNumberOfRowsInATable(); i++)
+            {
+                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName, i);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam1))
+                    {
+
+                    }
+                    else
+                    {
+                        if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam2))
+                        {
+
+                        }
+                    }
+                }
+                reader.Close();
+            }
+        }
+
+        public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
+        }
+
+        private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
+        {
+            Settings.Default.currentTableName = (TABLE_NAME);
+            Settings.Default.Save();
+
+            //Starting the clock so that the current time will be displayed and updated every second
+
+            //Setting toolTips
+            var ToolTip1 = new ToolTip();
+            ToolTip1.SetToolTip(teamSelector,
+                "Use this to select the team that you want to enter data / look at data for!");
+
+            //Adding teams to team selector and teamListBox
+            for (int i = 0; i < teamNumberArray.Length; i++)
+            {
+                teamSelector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
+                teamCompSelector1.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
+                teamCompSelector2.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
+            }
+
+            TeamComparisonCHG.Text = "Controlled High Goals";
+            TeamComparisonCLG.Text = "Controlled Low Goals";
+        }
+
+        private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var aaRahChaChaEventInfo = new AerialAssist_RahChaCha_Information();
+            aaRahChaChaEventInfo.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            us.AerialAssistExportTableToCSV();
+        }
+
+        private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.ShowInformationMessage(
+                "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
+        }
+
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var BackgroundThread = new Thread(UpdateTeamComparison);
@@ -249,44 +233,49 @@ namespace FRC_Scouting_V2
             Console.WriteLine(selectedTeam2);
         }
 
-        public void UpdateTeamComparison()
+        private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var mySqlConnectionString = us.MakeMySqlConnectionString();
-            var conn = new MySqlConnection(mySqlConnectionString);
-            var cmd = conn.CreateCommand();
-            conn.Open();
-            for (var i = 0; i < us.GetNumberOfRowsInATable(); i++)
+            url = ("http://www.thebluealliance.com/api/v2/team/frc");
+            url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
+            string downloadedData;
+            var wc = new MyWebClient();
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+
+            try
             {
-                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName,i);
-                var reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam1))
-                    {
-                        
-                    }
-                    else
-                    {
-                        if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam2))
-                        {
-                            
-                        }
-                    }
-                }
-                reader.Close();
+                downloadedData = (wc.DownloadString(url));
+                var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
+
+                teamName = Convert.ToString(deserializedData.nickname);
+                teamNumber = Convert.ToInt32(deserializedData.team_number);
+                teamLocation = Convert.ToString(deserializedData.location);
+                rookieYear = Convert.ToInt32(deserializedData.rookie_year);
+                teamURL = Convert.ToString(deserializedData.website);
             }
+            catch (Exception webError)
+            {
+                Console.WriteLine("Error Message: " + webError.Message);
+            }
+
+            teamNameDisplay.Text = teamName;
+            teamNumberDisplay.Text = Convert.ToString(teamNumber);
+            teamLocationDisplay.Text = teamLocation;
+            rookieYearDisplay.Text = Convert.ToString(rookieYear);
+            teamURLDisplay.Text = teamURL;
+
+            object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
+            teamLogoPictureBox.Image = (Image) teamImage;
+
+            Settings.Default.selectedTeamName = teamNameArray[teamSelector.SelectedIndex];
+            Settings.Default.selectedTeamNumber = teamNumber;
+            Settings.Default.Save();
         }
 
-        private class MyWebClient : WebClient
+        private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
+            Process.Start(e.LinkText);
         }
-
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -298,6 +287,16 @@ namespace FRC_Scouting_V2
             public int rookie_year { get; set; }
             public int team_number { get; set; }
             public string website { get; set; }
+        }
+
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
         }
     }
 }

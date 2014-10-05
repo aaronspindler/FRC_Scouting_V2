@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2.UIs
 {
@@ -325,7 +325,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
                     writer.WriteLine("Team Colour: " + teamColour);
-                    writer.WriteLine("Team Name: " +  FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName);
+                    writer.WriteLine("Team Name: " + FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName);
                     writer.WriteLine("Team Number: " + FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber);
                     writer.WriteLine("#########################################################");
                     writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " + Convert.ToString(autoHighMiss));
@@ -386,7 +386,7 @@ namespace FRC_Scouting_V2.UIs
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
                 conn.Open();
 
                 //Checking if the connection is successful

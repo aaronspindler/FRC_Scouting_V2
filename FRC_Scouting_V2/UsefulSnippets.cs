@@ -23,14 +23,14 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 //@author xNovax
 
@@ -38,20 +38,6 @@ namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
     {
-        public void ClearSettings()
-        {
-            Settings.Default.Reset();
-            Settings.Default.Save();
-            MessageBox.Show("You have successfully reset all settings to default!",
-                "Settings have been reset to default!",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        public void ErrorOccured(string error)
-        {
-            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
         public void AerialAssistExportTableToCSV()
         {
             ShowInformationMessage("This can take a long time! Progress will be shown in the console.");
@@ -106,8 +92,22 @@ namespace FRC_Scouting_V2
                     Console.WriteLine("Error Code: " + ex.ErrorCode);
                     Console.WriteLine(ex.Message);
                 }
-                ShowInformationMessage("Export of " +  numberOfRows + " rows has successfully finished.");
+                ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
             }
+        }
+
+        public void ClearSettings()
+        {
+            Settings.Default.Reset();
+            Settings.Default.Save();
+            MessageBox.Show("You have successfully reset all settings to default!",
+                "Settings have been reset to default!",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void ErrorOccured(string error)
+        {
+            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public string GetCurrentTime()
@@ -122,7 +122,7 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
@@ -148,7 +148,7 @@ namespace FRC_Scouting_V2
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
+            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
 
             return number;
         }
@@ -177,7 +177,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
