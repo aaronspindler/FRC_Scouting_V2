@@ -63,8 +63,8 @@ namespace FRC_Scouting_V2
         private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
 
-        private int selectedTeam1 = 0;
-        private int selectedTeam2 = 0;
+        private int selectedTeam1;
+        private int selectedTeam2;
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber;
@@ -140,25 +140,24 @@ namespace FRC_Scouting_V2
 
         public void UpdateTeamComparison()
         {
-            var mySqlConnectionString = us.MakeMySqlConnectionString();
+            string mySqlConnectionString = us.MakeMySqlConnectionString();
             var conn = new MySqlConnection(mySqlConnectionString);
-            var cmd = conn.CreateCommand();
+            MySqlCommand cmd = conn.CreateCommand();
             conn.Open();
-            for (var i = 0; i < us.GetNumberOfRowsInATable(); i++)
+            for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
             {
-                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName, i);
-                var reader = cmd.ExecuteReader();
+                cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}", Settings.Default.currentTableName,
+                    i);
+                MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam1))
                     {
-
                     }
                     else
                     {
                         if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam2))
                         {
-
                         }
                     }
                 }
@@ -276,6 +275,17 @@ namespace FRC_Scouting_V2
         {
             Process.Start(e.LinkText);
         }
+
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+        }
+
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -287,16 +297,6 @@ namespace FRC_Scouting_V2
             public int rookie_year { get; set; }
             public int team_number { get; set; }
             public string website { get; set; }
-        }
-
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
         }
     }
 }

@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 
 //@author xNovax
 
@@ -102,6 +102,16 @@ namespace FRC_Scouting_V2.Information_Forms
             }
         }
 
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+        }
+
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
@@ -123,16 +133,6 @@ namespace FRC_Scouting_V2.Information_Forms
             public int team_number { get; set; }
 
             public string website { get; set; }
-        }
-
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
         }
     }
 }

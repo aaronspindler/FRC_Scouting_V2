@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2.UIs
 {
@@ -325,28 +325,39 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
                     writer.WriteLine("Team Colour: " + teamColour);
-                    writer.WriteLine("Team Name: " + FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName);
-                    writer.WriteLine("Team Number: " + FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber);
+                    writer.WriteLine("Team Name: " + Settings.Default.selectedTeamName);
+                    writer.WriteLine("Team Number: " + Settings.Default.selectedTeamNumber);
                     writer.WriteLine("#########################################################");
-                    writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " + Convert.ToString(autoHighMiss));
-                    writer.WriteLine("Auto Low: Goal: " + Convert.ToString(autoLowGoal) + " Miss: " + Convert.ToString(autoLowMiss));
-                    writer.WriteLine("Controlled High: Goal: " + Convert.ToString(controlledHighGoal) + " Miss: " + Convert.ToString(controlledHighMiss));
-                    writer.WriteLine("Controlled Low: Goal: " + Convert.ToString(controlledLowGoal) + " Miss: " + Convert.ToString(controlledLowMiss));
+                    writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " +
+                                     Convert.ToString(autoHighMiss));
+                    writer.WriteLine("Auto Low: Goal: " + Convert.ToString(autoLowGoal) + " Miss: " +
+                                     Convert.ToString(autoLowMiss));
+                    writer.WriteLine("Controlled High: Goal: " + Convert.ToString(controlledHighGoal) + " Miss: " +
+                                     Convert.ToString(controlledHighMiss));
+                    writer.WriteLine("Controlled Low: Goal: " + Convert.ToString(controlledLowGoal) + " Miss: " +
+                                     Convert.ToString(controlledLowMiss));
                     writer.WriteLine("Hot: Goal: " + Convert.ToString(hotGoal) + " Miss: " + Convert.ToString(hotMiss));
-                    writer.WriteLine("3-Assist: Goal: " + Convert.ToString(tripleAssistGoal) + " Miss: " + Convert.ToString(tripleAssistMiss));
-                    writer.WriteLine("Auto Pickup: Successful: " + Convert.ToString(autoBallPickup) + " Unsuccessful: " + Convert.ToString(autoBallPickupMiss));
-                    writer.WriteLine("Controlled Pickup: Successful: " + Convert.ToString(controlledBallPickup) + " Unsuccessful: " + Convert.ToString(controlledBallPickupMiss));
-                    writer.WriteLine("Pickup From Human: Successful: " + Convert.ToString(pickupFromHuman) + " Unsuccessful: " + Convert.ToString(pickupFromHumanMiss));
-                    writer.WriteLine("Pass To Another Robot: Successful: " + Convert.ToString(passToOtherRobot) + " Unsuccessful: " + Convert.ToString(passToOtherRobotMiss));
-                    writer.WriteLine("Truss Shot: Successful: " + Convert.ToString(successfulTruss) + " Unsuccessful: " + Convert.ToString(unsuccessfulTruss));
-                    writer.WriteLine("Starting Location: X: " + Convert.ToString(xStarting) + " Y: " + Convert.ToString(yStarting));
+                    writer.WriteLine("3-Assist: Goal: " + Convert.ToString(tripleAssistGoal) + " Miss: " +
+                                     Convert.ToString(tripleAssistMiss));
+                    writer.WriteLine("Auto Pickup: Successful: " + Convert.ToString(autoBallPickup) + " Unsuccessful: " +
+                                     Convert.ToString(autoBallPickupMiss));
+                    writer.WriteLine("Controlled Pickup: Successful: " + Convert.ToString(controlledBallPickup) +
+                                     " Unsuccessful: " + Convert.ToString(controlledBallPickupMiss));
+                    writer.WriteLine("Pickup From Human: Successful: " + Convert.ToString(pickupFromHuman) +
+                                     " Unsuccessful: " + Convert.ToString(pickupFromHumanMiss));
+                    writer.WriteLine("Pass To Another Robot: Successful: " + Convert.ToString(passToOtherRobot) +
+                                     " Unsuccessful: " + Convert.ToString(passToOtherRobotMiss));
+                    writer.WriteLine("Truss Shot: Successful: " + Convert.ToString(successfulTruss) + " Unsuccessful: " +
+                                     Convert.ToString(unsuccessfulTruss));
+                    writer.WriteLine("Starting Location: X: " + Convert.ToString(xStarting) + " Y: " +
+                                     Convert.ToString(yStarting));
                     writer.WriteLine("Comments: " + Convert.ToString(comments));
                     writer.WriteLine("#########################################################");
                     writer.WriteLine("=========================================================");
                     writer.WriteLine("-=============+ Computer Readable Portion +=============-");
                     writer.WriteLine("=========================================================");
-                    writer.WriteLine(Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamNumber));
-                    writer.WriteLine(Convert.ToString(FRC_Scouting_V2.Properties.Settings.Default.selectedTeamName));
+                    writer.WriteLine(Convert.ToString(Settings.Default.selectedTeamNumber));
+                    writer.WriteLine(Convert.ToString(Settings.Default.selectedTeamName));
                     writer.WriteLine(Convert.ToString(teamColour));
                     writer.WriteLine(Convert.ToString(matchNumber));
                     writer.WriteLine(Convert.ToString(autoHighGoal));
@@ -386,7 +397,7 @@ namespace FRC_Scouting_V2.UIs
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
                 //Checking if the connection is successful
