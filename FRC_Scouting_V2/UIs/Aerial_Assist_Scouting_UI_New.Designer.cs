@@ -939,6 +939,11 @@
             this.tableLayoutPanel.SetColumnSpan(this.matchNumberUpDown, 4);
             this.matchNumberUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchNumberUpDown.Location = new System.Drawing.Point(543, 361);
+            this.matchNumberUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.matchNumberUpDown.Minimum = new decimal(new int[] {
             1,
             0,

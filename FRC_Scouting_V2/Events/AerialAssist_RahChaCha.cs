@@ -63,8 +63,8 @@ namespace FRC_Scouting_V2
         private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
 
-        private string selectedTeam1 = ("");
-        private string selectedTeam2 = ("");
+        private int selectedTeam1 = 0;
+        private int selectedTeam2 = 0;
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber;
@@ -236,7 +236,7 @@ namespace FRC_Scouting_V2
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var BackgroundThread = new Thread(UpdateTeamComparison);
-            selectedTeam1 = teamNameArray[teamCompSelector1.SelectedIndex];
+            selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
             BackgroundThread.Start();
             Console.WriteLine(selectedTeam1);
         }
@@ -244,7 +244,7 @@ namespace FRC_Scouting_V2
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
             var BackgroundThread = new Thread(UpdateTeamComparison);
-            selectedTeam2 = teamNameArray[teamCompSelector2.SelectedIndex];
+            selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
             BackgroundThread.Start();
             Console.WriteLine(selectedTeam2);
         }
@@ -261,13 +261,13 @@ namespace FRC_Scouting_V2
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    if (reader["TeamName"].ToString() == selectedTeam1)
+                    if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam1))
                     {
                         
                     }
                     else
                     {
-                        if (reader["TeamName"].ToString() == selectedTeam2)
+                        if (reader["TeamName"].ToString() == Convert.ToString(selectedTeam2))
                         {
                             
                         }
