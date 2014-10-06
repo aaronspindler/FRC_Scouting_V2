@@ -164,7 +164,7 @@ namespace FRC_Scouting_V2
                 var conn = new MySqlConnection(mySqlConnectionString);
                 MySqlCommand cmd = conn.CreateCommand();
                 conn.Open();
-                for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
+                for (int i = 0; i < GetNumberOfRowsThatContainAValue(selectedTeam1); i++)
                 {
                     cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
                         Settings.Default.currentTableName, selectedTeam1);
@@ -194,7 +194,7 @@ namespace FRC_Scouting_V2
                 var conn = new MySqlConnection(mySqlConnectionString);
                 MySqlCommand cmd = conn.CreateCommand();
                 conn.Open();
-                for (int i = 0; i < us.GetNumberOfRowsInATable(); i++)
+                for (int i = 0; i < GetNumberOfRowsThatContainAValue(selectedTeam2); i++)
                 {
                     cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
                         Settings.Default.currentTableName, selectedTeam2);
@@ -330,6 +330,32 @@ namespace FRC_Scouting_V2
                 w.Timeout = 3000;
                 return w;
             }
+        }
+
+        public int GetNumberOfRowsThatContainAValue(int teamNumber)
+        {
+            int numberOfRows = 0;
+            try
+            {
+                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}", Settings.Default.currentTableName, teamNumber);
+                using (var cmd = new MySqlCommand(mySQLCommantText, conn))
+                {
+                    conn.Open();
+                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    conn.Close();
+                    cmd.Dispose();
+                    return numberOfRows;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+            return numberOfRows;
         }
 
         public class TeamInformationJSONData
