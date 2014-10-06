@@ -453,6 +453,7 @@ namespace FRC_Scouting_V2.UIs
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
             }
+            snippets.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " + matchNumber);
 
             //Clearing the values after you submit the data
             autoHighGoal = 0;

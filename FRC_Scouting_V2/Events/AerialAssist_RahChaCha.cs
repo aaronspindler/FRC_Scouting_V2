@@ -173,6 +173,7 @@ namespace FRC_Scouting_V2
                     {
                         if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam1))
                         {
+
                         }
                     }
                     reader.Close();
@@ -202,6 +203,7 @@ namespace FRC_Scouting_V2
                     {
                         if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam2))
                         {
+
                         }
                     }
                     reader.Close();
