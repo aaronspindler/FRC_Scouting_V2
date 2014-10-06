@@ -42,6 +42,32 @@ namespace FRC_Scouting_V2
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
 
+        //TeamComparison Variables
+        private readonly int[] AutoHighGoalTotal = new int[2];
+        private readonly int[] AutoHighMissTotal = new int[2];
+        private readonly int[] AutoLowGoalTotal = new int[2];
+        private readonly int[] AutoLowMissTotal = new int[2];
+        private readonly int[] AutoPickup = new int[2];
+        private readonly int[] AutoPickupMiss = new int[2];
+        private readonly int[] ControlledHighGoalTotal = new int[2];
+        private readonly int[] ControlledHighMissTotal = new int[2];
+        private readonly int[] ControlledLowGoalTotal = new int[2];
+        private readonly int[] ControlledLowMissTotal = new int[2];
+        private readonly int[] ControlledPickup = new int[2];
+        private readonly int[] ControlledPickupMiss = new int[2];
+        private readonly int[] HotGoalTotal = new int[2];
+        private readonly int[] HotMissTotal = new int[2];
+        private readonly int[] MissedPassToAnotherRobot = new int[2];
+        private readonly int[] MissedPickupFromHuman = new int[2];
+        private readonly int[] PassToAnotherRobot = new int[2];
+        private readonly int[] PickupFromHuman = new int[2];
+        private readonly int[] RobotDied = new int[2];
+        private readonly int[] RobotSurvived = new int[2];
+        private readonly int[] SuccessfulTruss = new int[2];
+        private readonly int[] TripleGoal = new int[2];
+        private readonly int[] TripleMiss = new int[2];
+        private readonly int[] UnSuccessfulTruss = new int[2];
+
         private readonly string[] teamNameArray =
         {
             "The Rocketeers", "Arctic Warriors", "X-CATS",
@@ -71,35 +97,6 @@ namespace FRC_Scouting_V2
         private string teamURL;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
-        //TeamComparison
-        private int[] AutoHighGoalTotal;
-        private int[] AutoHighMissTotal;
-        private int[] AutoLowGoalTotal;
-        private int[] AutoLowMissTotal;
-        private int[] ControlledHighGoalTotal;
-        private int[] ControlledHighMissTotal;
-        private int[] ControlledLowGoalTotal;
-        private int[] ControlledLowMissTotal;
-        private int[] HotGoalTotal;
-        private int[] HotMissTotal;
-        private int[] TripleGoal;
-        private int[] TripleMiss;
-        private int[] AutoPickup;
-        private int[] AutoPickupMiss;
-        private int[] ControlledPickup;
-        private int[] ControlledPickupMiss;
-        private int[] PickupFromHuman;
-        private int[] MissedPickupFromHuman;
-        private int[] PassToAnotherRobot;
-        private int[] MissedPassToAnotherRobot;
-        private int[] SuccessfulTruss;
-        private int[] UnSuccessfulTruss;
-        private int[] RobotDied;
-        private int[] RobotSurvived;
-
-
-
-
 
         public AerialAssist_RahChaCha()
         {
@@ -120,37 +117,37 @@ namespace FRC_Scouting_V2
                     {
                         reader.ReadLine();
                     }
-                    var teamNumberImport = Convert.ToInt32(reader.ReadLine());
-                    var teamNameImport = reader.ReadLine();
-                    var teamColour = reader.ReadLine();
-                    var matchNumber = Convert.ToInt32(reader.ReadLine());
-                    var autoHighGoal = Convert.ToInt32(reader.ReadLine());
-                    var autoHighMiss = Convert.ToInt32(reader.ReadLine());
-                    var autoLowGoal = Convert.ToInt32(reader.ReadLine());
-                    var autoLowMiss = Convert.ToInt32(reader.ReadLine());
-                    var controlledHighGoal = Convert.ToInt32(reader.ReadLine());
-                    var controlledHighMiss = Convert.ToInt32(reader.ReadLine());
-                    var controlledLowGoal = Convert.ToInt32(reader.ReadLine());
-                    var controlledLowMiss = Convert.ToInt32(reader.ReadLine());
-                    var hotGoal = Convert.ToInt32(reader.ReadLine());
-                    var missedHotGoal = Convert.ToInt32(reader.ReadLine());
-                    var tripleGoal = Convert.ToInt32(reader.ReadLine());
-                    var tripleMiss = Convert.ToInt32(reader.ReadLine());
-                    var autoBallPickup = Convert.ToInt32(reader.ReadLine());
-                    var autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
-                    var controlledPickup = Convert.ToInt32(reader.ReadLine());
-                    var controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
-                    var pickupFromHuman = Convert.ToInt32(reader.ReadLine());
-                    var missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
-                    var passToOtherBot = Convert.ToInt32(reader.ReadLine());
-                    var missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
-                    var successfulTruss = Convert.ToInt32(reader.ReadLine());
-                    var unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
-                    var startingX = Convert.ToInt32(reader.ReadLine());
-                    var startingY = Convert.ToInt32(reader.ReadLine());
-                    var didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
-                    var comments = Convert.ToString(reader.ReadLine());
-                    var testIfFileIsGood = reader.ReadLine();
+                    int teamNumberImport = Convert.ToInt32(reader.ReadLine());
+                    string teamNameImport = reader.ReadLine();
+                    string teamColour = reader.ReadLine();
+                    int matchNumber = Convert.ToInt32(reader.ReadLine());
+                    int autoHighGoal = Convert.ToInt32(reader.ReadLine());
+                    int autoHighMiss = Convert.ToInt32(reader.ReadLine());
+                    int autoLowGoal = Convert.ToInt32(reader.ReadLine());
+                    int autoLowMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledHighGoal = Convert.ToInt32(reader.ReadLine());
+                    int controlledHighMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledLowGoal = Convert.ToInt32(reader.ReadLine());
+                    int controlledLowMiss = Convert.ToInt32(reader.ReadLine());
+                    int hotGoal = Convert.ToInt32(reader.ReadLine());
+                    int missedHotGoal = Convert.ToInt32(reader.ReadLine());
+                    int tripleGoal = Convert.ToInt32(reader.ReadLine());
+                    int tripleMiss = Convert.ToInt32(reader.ReadLine());
+                    int autoBallPickup = Convert.ToInt32(reader.ReadLine());
+                    int autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    int controlledPickup = Convert.ToInt32(reader.ReadLine());
+                    int controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    int pickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    int missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    int passToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    int missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    int successfulTruss = Convert.ToInt32(reader.ReadLine());
+                    int unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
+                    int startingX = Convert.ToInt32(reader.ReadLine());
+                    int startingY = Convert.ToInt32(reader.ReadLine());
+                    bool didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
+                    string comments = Convert.ToString(reader.ReadLine());
+                    string testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
                     {
                         var conn = new MySqlConnection(us.MakeMySqlConnectionString());
@@ -193,26 +190,52 @@ namespace FRC_Scouting_V2
                 var conn = new MySqlConnection(mySqlConnectionString);
                 MySqlCommand cmd = conn.CreateCommand();
                 conn.Open();
-                for (int i = 0; i < GetNumberOfRowsThatContainAValue(selectedTeam1); i++)
+                cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
+                    Settings.Default.currentTableName, selectedTeam1);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
                 {
-                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
-                        Settings.Default.currentTableName, selectedTeam1);
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+                    AutoHighGoalTotal[0] = AutoHighGoalTotal[0] + Convert.ToInt32(reader["AutoHighGoal"]);
+                    AutoHighMissTotal[0] = AutoHighMissTotal[0] + Convert.ToInt32(reader["AutoHighMiss"]);
+                    AutoLowGoalTotal[0] = AutoLowGoalTotal[0] + Convert.ToInt32(reader["AutoLowGoal"]);
+                    AutoLowMissTotal[0] = AutoLowMissTotal[0] + Convert.ToInt32(reader["AutoLowMiss"]);
+                    ControlledHighGoalTotal[0] = ControlledHighGoalTotal[0] + Convert.ToInt32(reader["ControlledHighGoal"]);
+                    ControlledHighMissTotal[0] = ControlledHighMissTotal[0] + Convert.ToInt32(reader["ControlledHighMiss"]);
+                    ControlledLowGoalTotal[0] = ControlledLowGoalTotal[0] + Convert.ToInt32(reader["ControlledLowGoal"]);
+                    ControlledLowMissTotal[0] = ControlledLowMissTotal[0] + Convert.ToInt32(reader["ControlledLowMiss"]);
+                    HotGoalTotal[0] = HotGoalTotal[0] + Convert.ToInt32(reader["HotGoals"]);
+                    HotMissTotal[0] = HotMissTotal[0] + Convert.ToInt32(reader["HotGoalMiss"]);
+                    TripleGoal[0] =  TripleGoal[0] + Convert.ToInt32(reader["3AssistGoal"]);
+                    TripleMiss[0] = TripleMiss[0] + Convert.ToInt32(reader["3AssistMiss"]);
+                    AutoPickup[0] = AutoPickup[0] + Convert.ToInt32(reader["AutoBallPickup"]);
+                    AutoPickupMiss[0] = AutoPickupMiss[0] + Convert.ToInt32(reader["AutoBallPickupMiss"]);
+                    ControlledPickup[0] = ControlledPickup[0] + Convert.ToInt32(reader["ControlledBallPickup"]);
+                    ControlledPickupMiss[0] = ControlledPickupMiss[0] + Convert.ToInt32(reader["ControlledBallPickupMiss"]);
+                    PickupFromHuman[0] = PickupFromHuman[0] + Convert.ToInt32(reader["PickupFromHuman"]);
+                    MissedPickupFromHuman[0] = MissedPickupFromHuman[0] + Convert.ToInt32(reader["MissedPickupFromHuman"]);
+                    PassToAnotherRobot[0] = PassToAnotherRobot[0] + Convert.ToInt32(reader["PassToAnotherRobot"]);
+                    MissedPassToAnotherRobot[0] = MissedPassToAnotherRobot[0] + Convert.ToInt32(reader["MissedPassToAnotherRobot"]);
+                    SuccessfulTruss[0] = SuccessfulTruss[0] + Convert.ToInt32(reader["SuccessfulTruss"]);
+                    UnSuccessfulTruss[0] = UnSuccessfulTruss[0] + Convert.ToInt32(reader["UnsuccessfulTruss"]);
+                    switch (Convert.ToInt32(reader["DidRobotDie"]))
                     {
-                        if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam1))
-                        {
-                            var temp = Convert.ToInt32(reader["ControlledHighGoal"]);
-                        }
+                        case 0:
+                            RobotSurvived[0] = RobotSurvived[0] + 1;
+                            break;
+                        case 1:
+                            RobotDied[0] = RobotDied[0] + 1;
+                            break;
                     }
-                    reader.Close();
                 }
+                reader.Close();
+
             }
             catch (MySqlException e)
             {
                 Console.WriteLine(e.ErrorCode);
                 Console.WriteLine(e.Message);
             }
+            Console.WriteLine(AutoHighGoalTotal[0]);
         }
 
         public void UpdateTeamComparison2()
@@ -232,7 +255,6 @@ namespace FRC_Scouting_V2
                     {
                         if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam2))
                         {
-
                         }
                     }
                     reader.Close();
@@ -351,25 +373,16 @@ namespace FRC_Scouting_V2
             Process.Start(e.LinkText);
         }
 
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 4000;
-                return w;
-            }
-        }
-
         public int GetNumberOfRowsThatContainAValue(int teamNumber)
         {
-            var numberOfRows = 0;
+            int numberOfRows = 0;
             try
             {
-                var mySqlConnectionString = us.MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
-                var mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}", Settings.Default.currentTableName, teamNumber);
+                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}",
+                    Settings.Default.currentTableName, teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))
                 {
                     conn.Open();
@@ -385,6 +398,16 @@ namespace FRC_Scouting_V2
                 Console.WriteLine(ex.Message);
             }
             return numberOfRows;
+        }
+
+        private class MyWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 4000;
+                return w;
+            }
         }
 
         public class TeamInformationJSONData
