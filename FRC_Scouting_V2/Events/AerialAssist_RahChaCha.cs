@@ -71,6 +71,35 @@ namespace FRC_Scouting_V2
         private string teamURL;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
+        //TeamComparison
+        private int[] AutoHighGoalTotal;
+        private int[] AutoHighMissTotal;
+        private int[] AutoLowGoalTotal;
+        private int[] AutoLowMissTotal;
+        private int[] ControlledHighGoalTotal;
+        private int[] ControlledHighMissTotal;
+        private int[] ControlledLowGoalTotal;
+        private int[] ControlledLowMissTotal;
+        private int[] HotGoalTotal;
+        private int[] HotMissTotal;
+        private int[] TripleGoal;
+        private int[] TripleMiss;
+        private int[] AutoPickup;
+        private int[] AutoPickupMiss;
+        private int[] ControlledPickup;
+        private int[] ControlledPickupMiss;
+        private int[] PickupFromHuman;
+        private int[] MissedPickupFromHuman;
+        private int[] PassToAnotherRobot;
+        private int[] MissedPassToAnotherRobot;
+        private int[] SuccessfulTruss;
+        private int[] UnSuccessfulTruss;
+        private int[] RobotDied;
+        private int[] RobotSurvived;
+
+
+
+
 
         public AerialAssist_RahChaCha()
         {
@@ -173,7 +202,7 @@ namespace FRC_Scouting_V2
                     {
                         if (reader["TeamNumber"].ToString() == Convert.ToString(selectedTeam1))
                         {
-
+                            var temp = Convert.ToInt32(reader["ControlledHighGoal"]);
                         }
                     }
                     reader.Close();
