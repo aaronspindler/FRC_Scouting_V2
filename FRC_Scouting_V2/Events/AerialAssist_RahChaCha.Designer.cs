@@ -421,7 +421,7 @@
             this.TeamComparisonCHG.Name = "TeamComparisonCHG";
             this.TeamComparisonCHG.Size = new System.Drawing.Size(254, 37);
             this.TeamComparisonCHG.TabIndex = 1;
-            this.TeamComparisonCHG.Text = "Figure Out What To Put In These";
+            this.TeamComparisonCHG.Text = "Controlled High Goals";
             this.TeamComparisonCHG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamCompSelector1
@@ -469,7 +469,7 @@
             this.TeamComparisonCLG.Name = "TeamComparisonCLG";
             this.TeamComparisonCLG.Size = new System.Drawing.Size(254, 37);
             this.TeamComparisonCLG.TabIndex = 3;
-            this.TeamComparisonCLG.Text = "Figure Out What To Put In These";
+            this.TeamComparisonCLG.Text = "Controlled Low Goals";
             this.TeamComparisonCLG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -1074,7 +1074,7 @@
             this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importFromTextFileToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // importFromTextFileToolStripMenuItem
@@ -1087,14 +1087,14 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(107, 6);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportToCSVToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // exportToCSVToolStripMenuItem

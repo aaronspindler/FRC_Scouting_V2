@@ -240,9 +240,6 @@ namespace FRC_Scouting_V2
                 teamCompSelector1.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
                 teamCompSelector2.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
             }
-
-            TeamComparisonCHG.Text = "Controlled High Goals";
-            TeamComparisonCLG.Text = "Controlled Low Goals";
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
