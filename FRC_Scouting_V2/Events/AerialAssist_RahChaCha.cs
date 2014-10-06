@@ -327,20 +327,20 @@ namespace FRC_Scouting_V2
             protected override WebRequest GetWebRequest(Uri uri)
             {
                 WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
+                w.Timeout = 4000;
                 return w;
             }
         }
 
         public int GetNumberOfRowsThatContainAValue(int teamNumber)
         {
-            int numberOfRows = 0;
+            var numberOfRows = 0;
             try
             {
-                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                var mySqlConnectionString = us.MakeMySqlConnectionString();
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
-                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}", Settings.Default.currentTableName, teamNumber);
+                var mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}", Settings.Default.currentTableName, teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))
                 {
                     conn.Open();
