@@ -43,30 +43,30 @@ namespace FRC_Scouting_V2
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
 
         //TeamComparison Variables
-        private readonly int[] AutoHighGoalTotal = new int[2];
-        private readonly int[] AutoHighMissTotal = new int[2];
-        private readonly int[] AutoLowGoalTotal = new int[2];
-        private readonly int[] AutoLowMissTotal = new int[2];
-        private readonly int[] AutoPickup = new int[2];
-        private readonly int[] AutoPickupMiss = new int[2];
-        private readonly int[] ControlledHighGoalTotal = new int[2];
-        private readonly int[] ControlledHighMissTotal = new int[2];
-        private readonly int[] ControlledLowGoalTotal = new int[2];
-        private readonly int[] ControlledLowMissTotal = new int[2];
-        private readonly int[] ControlledPickup = new int[2];
-        private readonly int[] ControlledPickupMiss = new int[2];
-        private readonly int[] HotGoalTotal = new int[2];
-        private readonly int[] HotMissTotal = new int[2];
-        private readonly int[] MissedPassToAnotherRobot = new int[2];
-        private readonly int[] MissedPickupFromHuman = new int[2];
-        private readonly int[] PassToAnotherRobot = new int[2];
-        private readonly int[] PickupFromHuman = new int[2];
-        private readonly int[] RobotDied = new int[2];
-        private readonly int[] RobotSurvived = new int[2];
-        private readonly int[] SuccessfulTruss = new int[2];
-        private readonly int[] TripleGoal = new int[2];
-        private readonly int[] TripleMiss = new int[2];
-        private readonly int[] UnSuccessfulTruss = new int[2];
+        private int[] AutoHighGoalTotal = new int[2];
+        private int[] AutoHighMissTotal = new int[2];
+        private int[] AutoLowGoalTotal = new int[2];
+        private int[] AutoLowMissTotal = new int[2];
+        private int[] AutoPickup = new int[2];
+        private int[] AutoPickupMiss = new int[2];
+        private int[] ControlledHighGoalTotal = new int[2];
+        private int[] ControlledHighMissTotal = new int[2];
+        private int[] ControlledLowGoalTotal = new int[2];
+        private int[] ControlledLowMissTotal = new int[2];
+        private int[] ControlledPickup = new int[2];
+        private int[] ControlledPickupMiss = new int[2];
+        private int[] HotGoalTotal = new int[2];
+        private int[] HotMissTotal = new int[2];
+        private int[] MissedPassToAnotherRobot = new int[2];
+        private int[] MissedPickupFromHuman = new int[2];
+        private int[] PassToAnotherRobot = new int[2];
+        private int[] PickupFromHuman = new int[2];
+        private int[] RobotDied = new int[2];
+        private int[] RobotSurvived = new int[2];
+        private int[] SuccessfulTruss = new int[2];
+        private int[] TripleGoal = new int[2];
+        private int[] TripleMiss = new int[2];
+        private int[] UnSuccessfulTruss = new int[2];
 
         private readonly string[] teamNameArray =
         {
@@ -248,10 +248,8 @@ namespace FRC_Scouting_V2
                     AutoHighMissTotal[0] = AutoHighMissTotal[0] + Convert.ToInt32(reader["AutoHighMiss"]);
                     AutoLowGoalTotal[0] = AutoLowGoalTotal[0] + Convert.ToInt32(reader["AutoLowGoal"]);
                     AutoLowMissTotal[0] = AutoLowMissTotal[0] + Convert.ToInt32(reader["AutoLowMiss"]);
-                    ControlledHighGoalTotal[0] = ControlledHighGoalTotal[0] +
-                                                 Convert.ToInt32(reader["ControlledHighGoal"]);
-                    ControlledHighMissTotal[0] = ControlledHighMissTotal[0] +
-                                                 Convert.ToInt32(reader["ControlledHighMiss"]);
+                    ControlledHighGoalTotal[0] = ControlledHighGoalTotal[0] + Convert.ToInt32(reader["ControlledHighGoal"]);
+                    ControlledHighMissTotal[0] = ControlledHighMissTotal[0] + Convert.ToInt32(reader["ControlledHighMiss"]);
                     ControlledLowGoalTotal[0] = ControlledLowGoalTotal[0] + Convert.ToInt32(reader["ControlledLowGoal"]);
                     ControlledLowMissTotal[0] = ControlledLowMissTotal[0] + Convert.ToInt32(reader["ControlledLowMiss"]);
                     HotGoalTotal[0] = HotGoalTotal[0] + Convert.ToInt32(reader["HotGoals"]);
@@ -261,14 +259,11 @@ namespace FRC_Scouting_V2
                     AutoPickup[0] = AutoPickup[0] + Convert.ToInt32(reader["AutoBallPickup"]);
                     AutoPickupMiss[0] = AutoPickupMiss[0] + Convert.ToInt32(reader["AutoBallPickupMiss"]);
                     ControlledPickup[0] = ControlledPickup[0] + Convert.ToInt32(reader["ControlledBallPickup"]);
-                    ControlledPickupMiss[0] = ControlledPickupMiss[0] +
-                                              Convert.ToInt32(reader["ControlledBallPickupMiss"]);
+                    ControlledPickupMiss[0] = ControlledPickupMiss[0] + Convert.ToInt32(reader["ControlledBallPickupMiss"]);
                     PickupFromHuman[0] = PickupFromHuman[0] + Convert.ToInt32(reader["PickupFromHuman"]);
-                    MissedPickupFromHuman[0] = MissedPickupFromHuman[0] +
-                                               Convert.ToInt32(reader["MissedPickupFromHuman"]);
+                    MissedPickupFromHuman[0] = MissedPickupFromHuman[0] + Convert.ToInt32(reader["MissedPickupFromHuman"]);
                     PassToAnotherRobot[0] = PassToAnotherRobot[0] + Convert.ToInt32(reader["PassToAnotherRobot"]);
-                    MissedPassToAnotherRobot[0] = MissedPassToAnotherRobot[0] +
-                                                  Convert.ToInt32(reader["MissedPassToAnotherRobot"]);
+                    MissedPassToAnotherRobot[0] = MissedPassToAnotherRobot[0] + Convert.ToInt32(reader["MissedPassToAnotherRobot"]);
                     SuccessfulTruss[0] = SuccessfulTruss[0] + Convert.ToInt32(reader["SuccessfulTruss"]);
                     UnSuccessfulTruss[0] = UnSuccessfulTruss[0] + Convert.ToInt32(reader["UnsuccessfulTruss"]);
                     switch (Convert.ToInt32(reader["DidRobotDie"]))
@@ -323,8 +318,7 @@ namespace FRC_Scouting_V2
                 var conn = new MySqlConnection(mySqlConnectionString);
                 MySqlCommand cmd = conn.CreateCommand();
                 conn.Open();
-                    cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
-                        Settings.Default.currentTableName, selectedTeam2);
+                cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",Settings.Default.currentTableName, selectedTeam2);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
@@ -332,10 +326,8 @@ namespace FRC_Scouting_V2
                         AutoHighMissTotal[1] = AutoHighMissTotal[1] + Convert.ToInt32(reader["AutoHighMiss"]);
                         AutoLowGoalTotal[1] = AutoLowGoalTotal[1] + Convert.ToInt32(reader["AutoLowGoal"]);
                         AutoLowMissTotal[1] = AutoLowMissTotal[1] + Convert.ToInt32(reader["AutoLowMiss"]);
-                        ControlledHighGoalTotal[1] = ControlledHighGoalTotal[1] +
-                                                     Convert.ToInt32(reader["ControlledHighGoal"]);
-                        ControlledHighMissTotal[1] = ControlledHighMissTotal[1] +
-                                                     Convert.ToInt32(reader["ControlledHighMiss"]);
+                        ControlledHighGoalTotal[1] = ControlledHighGoalTotal[1] + Convert.ToInt32(reader["ControlledHighGoal"]);
+                        ControlledHighMissTotal[1] = ControlledHighMissTotal[1] + Convert.ToInt32(reader["ControlledHighMiss"]);
                         ControlledLowGoalTotal[1] = ControlledLowGoalTotal[1] + Convert.ToInt32(reader["ControlledLowGoal"]);
                         ControlledLowMissTotal[1] = ControlledLowMissTotal[1] + Convert.ToInt32(reader["ControlledLowMiss"]);
                         HotGoalTotal[1] = HotGoalTotal[1] + Convert.ToInt32(reader["HotGoals"]);
@@ -345,14 +337,11 @@ namespace FRC_Scouting_V2
                         AutoPickup[1] = AutoPickup[1] + Convert.ToInt32(reader["AutoBallPickup"]);
                         AutoPickupMiss[1] = AutoPickupMiss[1] + Convert.ToInt32(reader["AutoBallPickupMiss"]);
                         ControlledPickup[1] = ControlledPickup[1] + Convert.ToInt32(reader["ControlledBallPickup"]);
-                        ControlledPickupMiss[1] = ControlledPickupMiss[1] +
-                                                  Convert.ToInt32(reader["ControlledBallPickupMiss"]);
+                        ControlledPickupMiss[1] = ControlledPickupMiss[1] + Convert.ToInt32(reader["ControlledBallPickupMiss"]);
                         PickupFromHuman[1] = PickupFromHuman[1] + Convert.ToInt32(reader["PickupFromHuman"]);
-                        MissedPickupFromHuman[1] = MissedPickupFromHuman[1] +
-                                                   Convert.ToInt32(reader["MissedPickupFromHuman"]);
+                        MissedPickupFromHuman[1] = MissedPickupFromHuman[1] + Convert.ToInt32(reader["MissedPickupFromHuman"]);
                         PassToAnotherRobot[1] = PassToAnotherRobot[1] + Convert.ToInt32(reader["PassToAnotherRobot"]);
-                        MissedPassToAnotherRobot[1] = MissedPassToAnotherRobot[1] +
-                                                      Convert.ToInt32(reader["MissedPassToAnotherRobot"]);
+                        MissedPassToAnotherRobot[1] = MissedPassToAnotherRobot[1] + Convert.ToInt32(reader["MissedPassToAnotherRobot"]);
                         SuccessfulTruss[1] = SuccessfulTruss[1] + Convert.ToInt32(reader["SuccessfulTruss"]);
                         UnSuccessfulTruss[1] = UnSuccessfulTruss[1] + Convert.ToInt32(reader["UnsuccessfulTruss"]);
                         switch (Convert.ToInt32(reader["DidRobotDie"]))
@@ -385,12 +374,9 @@ namespace FRC_Scouting_V2
             Settings.Default.currentTableName = (TABLE_NAME);
             Settings.Default.Save();
 
-            //Starting the clock so that the current time will be displayed and updated every second
-
             //Setting toolTips
             var ToolTip1 = new ToolTip();
-            ToolTip1.SetToolTip(teamSelector,
-                "Use this to select the team that you want to enter data / look at data for!");
+            ToolTip1.SetToolTip(teamSelector,"Use this to select the team that you want to enter data / look at data for!");
 
             //Adding teams to team selector and teamListBox
             for (int i = 0; i < teamNumberArray.Length; i++)
