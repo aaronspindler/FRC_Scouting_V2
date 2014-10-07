@@ -445,7 +445,13 @@ namespace FRC_Scouting_V2
 
         public void ColourStats()
         {
-            this.ControlledHighGoalRatio.Text = Convert.ToString(ControlledHighGoalTotal[0] / ControlledHighMissTotal[0]);
+            Console.WriteLine(ControlledHighGoalTotal[0] + ", " + ControlledHighMissTotal[0]);
+            var CHGR1 = ControlledHighGoalTotal[0] / ControlledHighMissTotal[0];
+            var CHGR2 = ControlledHighGoalTotal[1] / ControlledHighMissTotal[1];
+
+            this.ControlledHighGoalRatio1.Text = CHGR1.ToString("#.##");
+            this.ControlledHighGoalRatio2.Text = CHGR2.ToString("#.##");
+            this.ControlledLowGoalRatio1.Text = (ControlledLowGoalTotal[0] / ControlledLowMissTotal[0]).ToString("#.##");
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
