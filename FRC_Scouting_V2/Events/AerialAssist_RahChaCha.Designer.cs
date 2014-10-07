@@ -77,6 +77,26 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.generalTeamInformationTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.teamLogoPictureBox = new System.Windows.Forms.PictureBox();
@@ -105,26 +125,6 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -869,6 +869,246 @@
             this.label32.Text = "0";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label1, 4);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 370);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(254, 37);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Figure out what to put in these";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label23, 4);
+            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label23.Location = new System.Drawing.Point(263, 370);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(254, 37);
+            this.label23.TabIndex = 36;
+            this.label23.Text = "0";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label2, 4);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(523, 370);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(254, 37);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Figure out what to put in these";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label33, 4);
+            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label33.Location = new System.Drawing.Point(783, 370);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(257, 37);
+            this.label33.TabIndex = 37;
+            this.label33.Text = "0";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label34, 4);
+            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label34.Location = new System.Drawing.Point(3, 407);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(254, 37);
+            this.label34.TabIndex = 38;
+            this.label34.Text = "Figure out what to put in these";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label35, 4);
+            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label35.Location = new System.Drawing.Point(263, 407);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(254, 37);
+            this.label35.TabIndex = 39;
+            this.label35.Text = "0";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label36, 4);
+            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label36.Location = new System.Drawing.Point(523, 407);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(254, 37);
+            this.label36.TabIndex = 40;
+            this.label36.Text = "Figure out what to put in these";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label37, 4);
+            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label37.Location = new System.Drawing.Point(783, 407);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(257, 37);
+            this.label37.TabIndex = 41;
+            this.label37.Text = "0";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label38, 4);
+            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label38.Location = new System.Drawing.Point(3, 444);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(254, 37);
+            this.label38.TabIndex = 42;
+            this.label38.Text = "Figure out what to put in these";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label39, 4);
+            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label39.Location = new System.Drawing.Point(263, 444);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(254, 37);
+            this.label39.TabIndex = 43;
+            this.label39.Text = "0";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label40, 4);
+            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label40.Location = new System.Drawing.Point(523, 444);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(254, 37);
+            this.label40.TabIndex = 44;
+            this.label40.Text = "Figure out what to put in these";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label41, 4);
+            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label41.Location = new System.Drawing.Point(783, 444);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(257, 37);
+            this.label41.TabIndex = 45;
+            this.label41.Text = "0";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label42, 4);
+            this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label42.Location = new System.Drawing.Point(3, 481);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(254, 37);
+            this.label42.TabIndex = 46;
+            this.label42.Text = "Figure out what to put in these";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label43, 4);
+            this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label43.Location = new System.Drawing.Point(263, 481);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(254, 37);
+            this.label43.TabIndex = 47;
+            this.label43.Text = "0";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label44, 4);
+            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label44.Location = new System.Drawing.Point(523, 481);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(254, 37);
+            this.label44.TabIndex = 48;
+            this.label44.Text = "Figure out what to put in these";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label45, 4);
+            this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label45.Location = new System.Drawing.Point(783, 481);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(257, 37);
+            this.label45.TabIndex = 49;
+            this.label45.Text = "0";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label46, 4);
+            this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label46.Location = new System.Drawing.Point(3, 518);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(254, 37);
+            this.label46.TabIndex = 50;
+            this.label46.Text = "Figure out what to put in these";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label47, 4);
+            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label47.Location = new System.Drawing.Point(263, 518);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(254, 37);
+            this.label47.TabIndex = 51;
+            this.label47.Text = "0";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label48, 4);
+            this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label48.Location = new System.Drawing.Point(523, 518);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(254, 37);
+            this.label48.TabIndex = 52;
+            this.label48.Text = "Figure out what to put in these";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label49, 4);
+            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label49.Location = new System.Drawing.Point(783, 518);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(257, 37);
+            this.label49.TabIndex = 53;
+            this.label49.Text = "0";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // generalTeamInformationTabPage
             // 
             this.generalTeamInformationTabPage.Controls.Add(this.tableLayoutPanel3);
@@ -1181,246 +1421,6 @@
             this.openFileDialog.FileName = "openFileDialog1";
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label1, 4);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 370);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 37);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Figure out what to put in these";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label2, 4);
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(523, 370);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 37);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Figure out what to put in these";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label23, 4);
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(263, 370);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(254, 37);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "0";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label33, 4);
-            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Location = new System.Drawing.Point(783, 370);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(257, 37);
-            this.label33.TabIndex = 37;
-            this.label33.Text = "0";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label34, 4);
-            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Location = new System.Drawing.Point(3, 407);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(254, 37);
-            this.label34.TabIndex = 38;
-            this.label34.Text = "Figure out what to put in these";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label35, 4);
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Location = new System.Drawing.Point(263, 407);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(254, 37);
-            this.label35.TabIndex = 39;
-            this.label35.Text = "0";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label36, 4);
-            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Location = new System.Drawing.Point(523, 407);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(254, 37);
-            this.label36.TabIndex = 40;
-            this.label36.Text = "Figure out what to put in these";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label37, 4);
-            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label37.Location = new System.Drawing.Point(783, 407);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(257, 37);
-            this.label37.TabIndex = 41;
-            this.label37.Text = "0";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label38, 4);
-            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label38.Location = new System.Drawing.Point(3, 444);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(254, 37);
-            this.label38.TabIndex = 42;
-            this.label38.Text = "Figure out what to put in these";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label39, 4);
-            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Location = new System.Drawing.Point(263, 444);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(254, 37);
-            this.label39.TabIndex = 43;
-            this.label39.Text = "0";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label40, 4);
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Location = new System.Drawing.Point(523, 444);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(254, 37);
-            this.label40.TabIndex = 44;
-            this.label40.Text = "Figure out what to put in these";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label41, 4);
-            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label41.Location = new System.Drawing.Point(783, 444);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(257, 37);
-            this.label41.TabIndex = 45;
-            this.label41.Text = "0";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label42, 4);
-            this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label42.Location = new System.Drawing.Point(3, 481);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(254, 37);
-            this.label42.TabIndex = 46;
-            this.label42.Text = "Figure out what to put in these";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label43, 4);
-            this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label43.Location = new System.Drawing.Point(263, 481);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(254, 37);
-            this.label43.TabIndex = 47;
-            this.label43.Text = "0";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label44, 4);
-            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label44.Location = new System.Drawing.Point(523, 481);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(254, 37);
-            this.label44.TabIndex = 48;
-            this.label44.Text = "Figure out what to put in these";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label45, 4);
-            this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label45.Location = new System.Drawing.Point(783, 481);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(257, 37);
-            this.label45.TabIndex = 49;
-            this.label45.Text = "0";
-            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label46, 4);
-            this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label46.Location = new System.Drawing.Point(3, 518);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(254, 37);
-            this.label46.TabIndex = 50;
-            this.label46.Text = "Figure out what to put in these";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label47, 4);
-            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label47.Location = new System.Drawing.Point(263, 518);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(254, 37);
-            this.label47.TabIndex = 51;
-            this.label47.Text = "0";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label48, 4);
-            this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label48.Location = new System.Drawing.Point(523, 518);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(254, 37);
-            this.label48.TabIndex = 52;
-            this.label48.Text = "Figure out what to put in these";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label49, 4);
-            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label49.Location = new System.Drawing.Point(783, 518);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(257, 37);
-            this.label49.TabIndex = 53;
-            this.label49.Text = "0";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AerialAssist_RahChaCha
             // 

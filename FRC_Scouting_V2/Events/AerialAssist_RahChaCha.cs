@@ -27,7 +27,6 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Threading;
@@ -68,6 +67,7 @@ namespace FRC_Scouting_V2
         private int[] TripleGoal = new int[2];
         private int[] TripleMiss = new int[2];
         private int[] UnSuccessfulTruss = new int[2];
+        int[] numberOfMatches = new int[2];
         private Boolean team1Selected;
         private Boolean team2Selected;
 
@@ -212,6 +212,7 @@ namespace FRC_Scouting_V2
 
         public void UpdateTeamComparison1()
         {
+            numberOfMatches[0] = 0;
             AutoHighGoalTotal[0] = 0;
             AutoHighMissTotal[0] = 0;
             AutoLowGoalTotal[0] = 0;
@@ -247,6 +248,7 @@ namespace FRC_Scouting_V2
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
+                    numberOfMatches[0] ++;
                     AutoHighGoalTotal[0] = AutoHighGoalTotal[0] + Convert.ToInt32(reader["AutoHighGoal"]);
                     AutoHighMissTotal[0] = AutoHighMissTotal[0] + Convert.ToInt32(reader["AutoHighMiss"]);
                     AutoLowGoalTotal[0] = AutoLowGoalTotal[0] + Convert.ToInt32(reader["AutoLowGoal"]);
@@ -291,6 +293,7 @@ namespace FRC_Scouting_V2
 
         public void UpdateTeamComparison2()
         {
+            numberOfMatches[1] = 0;
             AutoHighGoalTotal[1] = 0;
             AutoHighMissTotal[1] = 0;
             AutoLowGoalTotal[1] = 0;
@@ -325,6 +328,7 @@ namespace FRC_Scouting_V2
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
+                        numberOfMatches[1]++;
                         AutoHighGoalTotal[1] = AutoHighGoalTotal[1] + Convert.ToInt32(reader["AutoHighGoal"]);
                         AutoHighMissTotal[1] = AutoHighMissTotal[1] + Convert.ToInt32(reader["AutoHighMiss"]);
                         AutoLowGoalTotal[1] = AutoLowGoalTotal[1] + Convert.ToInt32(reader["AutoLowGoal"]);
