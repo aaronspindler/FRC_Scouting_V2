@@ -27,6 +27,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Threading;
@@ -358,6 +359,7 @@ namespace FRC_Scouting_V2
                         }
                     }
                     reader.Close();
+                Console.WriteLine(ControlledHighGoalTotal[1]);
             }
             catch (MySqlException e)
             {
@@ -417,6 +419,7 @@ namespace FRC_Scouting_V2
             var BackgroundThread = new Thread(UpdateTeamComparison1);
             selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
             BackgroundThread.Start();
+
             if (team1Selected == true && team2Selected == true)
             {
                  ColourStats();
@@ -429,6 +432,7 @@ namespace FRC_Scouting_V2
             var BackgroundThread = new Thread(UpdateTeamComparison2);
             selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
             BackgroundThread.Start();
+
             if (team1Selected == true && team2Selected == true)
             {
                 ColourStats();
