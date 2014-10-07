@@ -67,6 +67,8 @@ namespace FRC_Scouting_V2
         private int[] TripleGoal = new int[2];
         private int[] TripleMiss = new int[2];
         private int[] UnSuccessfulTruss = new int[2];
+        private Boolean team1Selected;
+        private Boolean team2Selected;
 
         private readonly string[] teamNameArray =
         {
@@ -411,16 +413,31 @@ namespace FRC_Scouting_V2
 
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            team1Selected = true;
             var BackgroundThread = new Thread(UpdateTeamComparison1);
             selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
             BackgroundThread.Start();
+            if (team1Selected == true && team2Selected == true)
+            {
+                 ColourStats();
+            }
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            team2Selected = true;
             var BackgroundThread = new Thread(UpdateTeamComparison2);
             selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
             BackgroundThread.Start();
+            if (team1Selected == true && team2Selected == true)
+            {
+                ColourStats();
+            }
+        }
+
+        public void ColourStats()
+        {
+            
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
@@ -480,21 +497,13 @@ namespace FRC_Scouting_V2
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }
-
             public string locality { get; set; }
-
             public string location { get; set; }
-
             public string name { get; set; }
-
             public string nickname { get; set; }
-
             public string region { get; set; }
-
             public int rookie_year { get; set; }
-
             public int team_number { get; set; }
-
             public string website { get; set; }
         }
     }
