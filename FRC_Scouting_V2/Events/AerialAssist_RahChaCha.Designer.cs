@@ -33,6 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamSummaryInformationLabel = new System.Windows.Forms.Label();
@@ -124,7 +125,6 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -211,6 +211,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 598F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1043, 598);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 586);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -461,7 +470,7 @@
             this.TeamComparisonCHG.Name = "TeamComparisonCHG";
             this.TeamComparisonCHG.Size = new System.Drawing.Size(254, 37);
             this.TeamComparisonCHG.TabIndex = 1;
-            this.TeamComparisonCHG.Text = "Figure out what to put in these";
+            this.TeamComparisonCHG.Text = "High Goal Ratio";
             this.TeamComparisonCHG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamCompSelector1
@@ -509,7 +518,7 @@
             this.TeamComparisonCLG.Name = "TeamComparisonCLG";
             this.TeamComparisonCLG.Size = new System.Drawing.Size(254, 37);
             this.TeamComparisonCLG.TabIndex = 3;
-            this.TeamComparisonCLG.Text = "Figure out what to put in these";
+            this.TeamComparisonCLG.Text = "Low Goal Ratio";
             this.TeamComparisonCLG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -1412,15 +1421,6 @@
             this.openFileDialog.FileName = "openFileDialog1";
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
-            // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 586);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // AerialAssist_RahChaCha
             // 

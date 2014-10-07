@@ -43,30 +43,30 @@ namespace FRC_Scouting_V2
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
 
         //TeamComparison Variables
-        private int[] AutoHighGoalTotal = new int[2];
-        private int[] AutoHighMissTotal = new int[2];
-        private int[] AutoLowGoalTotal = new int[2];
-        private int[] AutoLowMissTotal = new int[2];
-        private int[] AutoPickup = new int[2];
-        private int[] AutoPickupMiss = new int[2];
-        private int[] ControlledHighGoalTotal = new int[2];
-        private int[] ControlledHighMissTotal = new int[2];
-        private int[] ControlledLowGoalTotal = new int[2];
-        private int[] ControlledLowMissTotal = new int[2];
-        private int[] ControlledPickup = new int[2];
-        private int[] ControlledPickupMiss = new int[2];
-        private int[] HotGoalTotal = new int[2];
-        private int[] HotMissTotal = new int[2];
-        private int[] MissedPassToAnotherRobot = new int[2];
-        private int[] MissedPickupFromHuman = new int[2];
-        private int[] PassToAnotherRobot = new int[2];
-        private int[] PickupFromHuman = new int[2];
-        private int[] RobotDied = new int[2];
-        private int[] RobotSurvived = new int[2];
-        private int[] SuccessfulTruss = new int[2];
-        private int[] TripleGoal = new int[2];
-        private int[] TripleMiss = new int[2];
-        private int[] UnSuccessfulTruss = new int[2];
+        private double[] AutoHighGoalTotal = new double[2];
+        private double[] AutoHighMissTotal = new double[2];
+        private double[] AutoLowGoalTotal = new double[2];
+        private double[] AutoLowMissTotal = new double[2];
+        private double[] AutoPickup = new double[2];
+        private double[] AutoPickupMiss = new double[2];
+        private double[] ControlledHighGoalTotal = new double[2];
+        private double[] ControlledHighMissTotal = new double[2];
+        private double[] ControlledLowGoalTotal = new double[2];
+        private double[] ControlledLowMissTotal = new double[2];
+        private double[] ControlledPickup = new double[2];
+        private double[] ControlledPickupMiss = new double[2];
+        private double[] HotGoalTotal = new double[2];
+        private double[] HotMissTotal = new double[2];
+        private double[] MissedPassToAnotherRobot = new double[2];
+        private double[] MissedPickupFromHuman = new double[2];
+        private double[] PassToAnotherRobot = new double[2];
+        private double[] PickupFromHuman = new double[2];
+        private double[] RobotDied = new double[2];
+        private double[] RobotSurvived = new double[2];
+        private double[] SuccessfulTruss = new double[2];
+        private double[] TripleGoal = new double[2];
+        private double[] TripleMiss = new double[2];
+        private double[] UnSuccessfulTruss = new double[2];
         int[] numberOfMatches = new int[2];
         private Boolean team1Selected;
         private Boolean team2Selected;
@@ -249,28 +249,28 @@ namespace FRC_Scouting_V2
                 while (reader.Read())
                 {
                     numberOfMatches[0] ++;
-                    AutoHighGoalTotal[0] = AutoHighGoalTotal[0] + Convert.ToInt32(reader["AutoHighGoal"]);
-                    AutoHighMissTotal[0] = AutoHighMissTotal[0] + Convert.ToInt32(reader["AutoHighMiss"]);
-                    AutoLowGoalTotal[0] = AutoLowGoalTotal[0] + Convert.ToInt32(reader["AutoLowGoal"]);
-                    AutoLowMissTotal[0] = AutoLowMissTotal[0] + Convert.ToInt32(reader["AutoLowMiss"]);
-                    ControlledHighGoalTotal[0] = ControlledHighGoalTotal[0] + Convert.ToInt32(reader["ControlledHighGoal"]);
-                    ControlledHighMissTotal[0] = ControlledHighMissTotal[0] + Convert.ToInt32(reader["ControlledHighMiss"]);
-                    ControlledLowGoalTotal[0] = ControlledLowGoalTotal[0] + Convert.ToInt32(reader["ControlledLowGoal"]);
-                    ControlledLowMissTotal[0] = ControlledLowMissTotal[0] + Convert.ToInt32(reader["ControlledLowMiss"]);
-                    HotGoalTotal[0] = HotGoalTotal[0] + Convert.ToInt32(reader["HotGoals"]);
-                    HotMissTotal[0] = HotMissTotal[0] + Convert.ToInt32(reader["HotGoalMiss"]);
-                    TripleGoal[0] = TripleGoal[0] + Convert.ToInt32(reader["3AssistGoal"]);
-                    TripleMiss[0] = TripleMiss[0] + Convert.ToInt32(reader["3AssistMiss"]);
-                    AutoPickup[0] = AutoPickup[0] + Convert.ToInt32(reader["AutoBallPickup"]);
-                    AutoPickupMiss[0] = AutoPickupMiss[0] + Convert.ToInt32(reader["AutoBallPickupMiss"]);
-                    ControlledPickup[0] = ControlledPickup[0] + Convert.ToInt32(reader["ControlledBallPickup"]);
-                    ControlledPickupMiss[0] = ControlledPickupMiss[0] + Convert.ToInt32(reader["ControlledBallPickupMiss"]);
-                    PickupFromHuman[0] = PickupFromHuman[0] + Convert.ToInt32(reader["PickupFromHuman"]);
-                    MissedPickupFromHuman[0] = MissedPickupFromHuman[0] + Convert.ToInt32(reader["MissedPickupFromHuman"]);
-                    PassToAnotherRobot[0] = PassToAnotherRobot[0] + Convert.ToInt32(reader["PassToAnotherRobot"]);
-                    MissedPassToAnotherRobot[0] = MissedPassToAnotherRobot[0] + Convert.ToInt32(reader["MissedPassToAnotherRobot"]);
-                    SuccessfulTruss[0] = SuccessfulTruss[0] + Convert.ToInt32(reader["SuccessfulTruss"]);
-                    UnSuccessfulTruss[0] = UnSuccessfulTruss[0] + Convert.ToInt32(reader["UnsuccessfulTruss"]);
+                    AutoHighGoalTotal[0] = AutoHighGoalTotal[0] + Convert.ToDouble(reader["AutoHighGoal"]);
+                    AutoHighMissTotal[0] = AutoHighMissTotal[0] + Convert.ToDouble(reader["AutoHighMiss"]);
+                    AutoLowGoalTotal[0] = AutoLowGoalTotal[0] + Convert.ToDouble(reader["AutoLowGoal"]);
+                    AutoLowMissTotal[0] = AutoLowMissTotal[0] + Convert.ToDouble(reader["AutoLowMiss"]);
+                    ControlledHighGoalTotal[0] = ControlledHighGoalTotal[0] + Convert.ToDouble(reader["ControlledHighGoal"]);
+                    ControlledHighMissTotal[0] = ControlledHighMissTotal[0] + Convert.ToDouble(reader["ControlledHighMiss"]);
+                    ControlledLowGoalTotal[0] = ControlledLowGoalTotal[0] + Convert.ToDouble(reader["ControlledLowGoal"]);
+                    ControlledLowMissTotal[0] = ControlledLowMissTotal[0] + Convert.ToDouble(reader["ControlledLowMiss"]);
+                    HotGoalTotal[0] = HotGoalTotal[0] + Convert.ToDouble(reader["HotGoals"]);
+                    HotMissTotal[0] = HotMissTotal[0] + Convert.ToDouble(reader["HotGoalMiss"]);
+                    TripleGoal[0] = TripleGoal[0] + Convert.ToDouble(reader["3AssistGoal"]);
+                    TripleMiss[0] = TripleMiss[0] + Convert.ToDouble(reader["3AssistMiss"]);
+                    AutoPickup[0] = AutoPickup[0] + Convert.ToDouble(reader["AutoBallPickup"]);
+                    AutoPickupMiss[0] = AutoPickupMiss[0] + Convert.ToDouble(reader["AutoBallPickupMiss"]);
+                    ControlledPickup[0] = ControlledPickup[0] + Convert.ToDouble(reader["ControlledBallPickup"]);
+                    ControlledPickupMiss[0] = ControlledPickupMiss[0] + Convert.ToDouble(reader["ControlledBallPickupMiss"]);
+                    PickupFromHuman[0] = PickupFromHuman[0] + Convert.ToDouble(reader["PickupFromHuman"]);
+                    MissedPickupFromHuman[0] = MissedPickupFromHuman[0] + Convert.ToDouble(reader["MissedPickupFromHuman"]);
+                    PassToAnotherRobot[0] = PassToAnotherRobot[0] + Convert.ToDouble(reader["PassToAnotherRobot"]);
+                    MissedPassToAnotherRobot[0] = MissedPassToAnotherRobot[0] + Convert.ToDouble(reader["MissedPassToAnotherRobot"]);
+                    SuccessfulTruss[0] = SuccessfulTruss[0] + Convert.ToDouble(reader["SuccessfulTruss"]);
+                    UnSuccessfulTruss[0] = UnSuccessfulTruss[0] + Convert.ToDouble(reader["UnsuccessfulTruss"]);
                     switch (Convert.ToInt32(reader["DidRobotDie"]))
                     {
                         case 0:
@@ -329,28 +329,28 @@ namespace FRC_Scouting_V2
                     while (reader.Read())
                     {
                         numberOfMatches[1]++;
-                        AutoHighGoalTotal[1] = AutoHighGoalTotal[1] + Convert.ToInt32(reader["AutoHighGoal"]);
-                        AutoHighMissTotal[1] = AutoHighMissTotal[1] + Convert.ToInt32(reader["AutoHighMiss"]);
-                        AutoLowGoalTotal[1] = AutoLowGoalTotal[1] + Convert.ToInt32(reader["AutoLowGoal"]);
-                        AutoLowMissTotal[1] = AutoLowMissTotal[1] + Convert.ToInt32(reader["AutoLowMiss"]);
-                        ControlledHighGoalTotal[1] = ControlledHighGoalTotal[1] + Convert.ToInt32(reader["ControlledHighGoal"]);
-                        ControlledHighMissTotal[1] = ControlledHighMissTotal[1] + Convert.ToInt32(reader["ControlledHighMiss"]);
-                        ControlledLowGoalTotal[1] = ControlledLowGoalTotal[1] + Convert.ToInt32(reader["ControlledLowGoal"]);
-                        ControlledLowMissTotal[1] = ControlledLowMissTotal[1] + Convert.ToInt32(reader["ControlledLowMiss"]);
-                        HotGoalTotal[1] = HotGoalTotal[1] + Convert.ToInt32(reader["HotGoals"]);
-                        HotMissTotal[1] = HotMissTotal[1] + Convert.ToInt32(reader["HotGoalMiss"]);
-                        TripleGoal[1] = TripleGoal[1] + Convert.ToInt32(reader["3AssistGoal"]);
-                        TripleMiss[1] = TripleMiss[1] + Convert.ToInt32(reader["3AssistMiss"]);
-                        AutoPickup[1] = AutoPickup[1] + Convert.ToInt32(reader["AutoBallPickup"]);
-                        AutoPickupMiss[1] = AutoPickupMiss[1] + Convert.ToInt32(reader["AutoBallPickupMiss"]);
-                        ControlledPickup[1] = ControlledPickup[1] + Convert.ToInt32(reader["ControlledBallPickup"]);
-                        ControlledPickupMiss[1] = ControlledPickupMiss[1] + Convert.ToInt32(reader["ControlledBallPickupMiss"]);
-                        PickupFromHuman[1] = PickupFromHuman[1] + Convert.ToInt32(reader["PickupFromHuman"]);
-                        MissedPickupFromHuman[1] = MissedPickupFromHuman[1] + Convert.ToInt32(reader["MissedPickupFromHuman"]);
-                        PassToAnotherRobot[1] = PassToAnotherRobot[1] + Convert.ToInt32(reader["PassToAnotherRobot"]);
-                        MissedPassToAnotherRobot[1] = MissedPassToAnotherRobot[1] + Convert.ToInt32(reader["MissedPassToAnotherRobot"]);
-                        SuccessfulTruss[1] = SuccessfulTruss[1] + Convert.ToInt32(reader["SuccessfulTruss"]);
-                        UnSuccessfulTruss[1] = UnSuccessfulTruss[1] + Convert.ToInt32(reader["UnsuccessfulTruss"]);
+                        AutoHighGoalTotal[1] = AutoHighGoalTotal[1] + Convert.ToDouble(reader["AutoHighGoal"]);
+                        AutoHighMissTotal[1] = AutoHighMissTotal[1] + Convert.ToDouble(reader["AutoHighMiss"]);
+                        AutoLowGoalTotal[1] = AutoLowGoalTotal[1] + Convert.ToDouble(reader["AutoLowGoal"]);
+                        AutoLowMissTotal[1] = AutoLowMissTotal[1] + Convert.ToDouble(reader["AutoLowMiss"]);
+                        ControlledHighGoalTotal[1] = ControlledHighGoalTotal[1] + Convert.ToDouble(reader["ControlledHighGoal"]);
+                        ControlledHighMissTotal[1] = ControlledHighMissTotal[1] + Convert.ToDouble(reader["ControlledHighMiss"]);
+                        ControlledLowGoalTotal[1] = ControlledLowGoalTotal[1] + Convert.ToDouble(reader["ControlledLowGoal"]);
+                        ControlledLowMissTotal[1] = ControlledLowMissTotal[1] + Convert.ToDouble(reader["ControlledLowMiss"]);
+                        HotGoalTotal[1] = HotGoalTotal[1] + Convert.ToDouble(reader["HotGoals"]);
+                        HotMissTotal[1] = HotMissTotal[1] + Convert.ToDouble(reader["HotGoalMiss"]);
+                        TripleGoal[1] = TripleGoal[1] + Convert.ToDouble(reader["3AssistGoal"]);
+                        TripleMiss[1] = TripleMiss[1] + Convert.ToDouble(reader["3AssistMiss"]);
+                        AutoPickup[1] = AutoPickup[1] + Convert.ToDouble(reader["AutoBallPickup"]);
+                        AutoPickupMiss[1] = AutoPickupMiss[1] + Convert.ToDouble(reader["AutoBallPickupMiss"]);
+                        ControlledPickup[1] = ControlledPickup[1] + Convert.ToDouble(reader["ControlledBallPickup"]);
+                        ControlledPickupMiss[1] = ControlledPickupMiss[1] + Convert.ToDouble(reader["ControlledBallPickupMiss"]);
+                        PickupFromHuman[1] = PickupFromHuman[1] + Convert.ToDouble(reader["PickupFromHuman"]);
+                        MissedPickupFromHuman[1] = MissedPickupFromHuman[1] + Convert.ToDouble(reader["MissedPickupFromHuman"]);
+                        PassToAnotherRobot[1] = PassToAnotherRobot[1] + Convert.ToDouble(reader["PassToAnotherRobot"]);
+                        MissedPassToAnotherRobot[1] = MissedPassToAnotherRobot[1] + Convert.ToDouble(reader["MissedPassToAnotherRobot"]);
+                        SuccessfulTruss[1] = SuccessfulTruss[1] + Convert.ToDouble(reader["SuccessfulTruss"]);
+                        UnSuccessfulTruss[1] = UnSuccessfulTruss[1] + Convert.ToDouble(reader["UnsuccessfulTruss"]);
                         switch (Convert.ToInt32(reader["DidRobotDie"]))
                         {
                             case 0:
@@ -445,7 +445,7 @@ namespace FRC_Scouting_V2
 
         public void ColourStats()
         {
-            
+            this.ControlledHighGoalRatio.Text = Convert.ToString(ControlledHighGoalTotal[0] / ControlledHighMissTotal[0]);
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
