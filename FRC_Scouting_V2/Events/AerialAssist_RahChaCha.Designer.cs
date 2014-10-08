@@ -33,7 +33,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.teamSummaryInformationLabel = new System.Windows.Forms.Label();
@@ -42,19 +41,19 @@
             this.teamMatchBox = new System.Windows.Forms.ListBox();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TeamComparisonCHG = new System.Windows.Forms.Label();
+            this.team2HGRLabel = new System.Windows.Forms.Label();
+            this.team1HGRLabel = new System.Windows.Forms.Label();
             this.teamCompSelector1 = new System.Windows.Forms.ComboBox();
             this.informationAboutTopTeamSelectorLabel = new System.Windows.Forms.Label();
             this.teamCompSelector2 = new System.Windows.Forms.ComboBox();
-            this.TeamComparisonCLG = new System.Windows.Forms.Label();
+            this.team1LGRLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.team2LGRLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -67,10 +66,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.ControlledLowGoalRatio1 = new System.Windows.Forms.Label();
-            this.ControlledHighGoalRatio1 = new System.Windows.Forms.Label();
-            this.ControlledHighGoalRatio2 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.controlledLowGoalRatio1Display = new System.Windows.Forms.Label();
+            this.controlledHighGoalRatio1Display = new System.Windows.Forms.Label();
+            this.controlledHighGoalRatio2Display = new System.Windows.Forms.Label();
+            this.controlledLowGoalRatio2Display = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -125,6 +124,7 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -211,15 +211,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 598F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1043, 598);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 586);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamSummaryTabPage
             // 
@@ -371,19 +362,19 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel4.Controls.Add(this.label9, 8, 2);
-            this.tableLayoutPanel4.Controls.Add(this.TeamComparisonCHG, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.team2HGRLabel, 8, 2);
+            this.tableLayoutPanel4.Controls.Add(this.team1HGRLabel, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.teamCompSelector1, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.informationAboutTopTeamSelectorLabel, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.teamCompSelector2, 8, 1);
-            this.tableLayoutPanel4.Controls.Add(this.TeamComparisonCLG, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.team1LGRLabel, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 4);
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 5);
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 6);
             this.tableLayoutPanel4.Controls.Add(this.label6, 0, 7);
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 8);
             this.tableLayoutPanel4.Controls.Add(this.label8, 0, 9);
-            this.tableLayoutPanel4.Controls.Add(this.label10, 8, 3);
+            this.tableLayoutPanel4.Controls.Add(this.team2LGRLabel, 8, 3);
             this.tableLayoutPanel4.Controls.Add(this.label11, 8, 4);
             this.tableLayoutPanel4.Controls.Add(this.label12, 8, 5);
             this.tableLayoutPanel4.Controls.Add(this.label13, 8, 6);
@@ -396,10 +387,10 @@
             this.tableLayoutPanel4.Controls.Add(this.label19, 4, 6);
             this.tableLayoutPanel4.Controls.Add(this.label18, 4, 5);
             this.tableLayoutPanel4.Controls.Add(this.label17, 4, 4);
-            this.tableLayoutPanel4.Controls.Add(this.ControlledLowGoalRatio1, 4, 3);
-            this.tableLayoutPanel4.Controls.Add(this.ControlledHighGoalRatio1, 4, 2);
-            this.tableLayoutPanel4.Controls.Add(this.ControlledHighGoalRatio2, 12, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label26, 12, 3);
+            this.tableLayoutPanel4.Controls.Add(this.controlledLowGoalRatio1Display, 4, 3);
+            this.tableLayoutPanel4.Controls.Add(this.controlledHighGoalRatio1Display, 4, 2);
+            this.tableLayoutPanel4.Controls.Add(this.controlledHighGoalRatio2Display, 12, 2);
+            this.tableLayoutPanel4.Controls.Add(this.controlledLowGoalRatio2Display, 12, 3);
             this.tableLayoutPanel4.Controls.Add(this.label27, 12, 4);
             this.tableLayoutPanel4.Controls.Add(this.label28, 12, 5);
             this.tableLayoutPanel4.Controls.Add(this.label29, 12, 6);
@@ -449,29 +440,29 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1043, 598);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // label9
+            // team2HGRLabel
             // 
-            this.label9.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label9, 4);
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(523, 74);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(254, 37);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Figure out what to put in these";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.team2HGRLabel.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.team2HGRLabel, 4);
+            this.team2HGRLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team2HGRLabel.Location = new System.Drawing.Point(523, 74);
+            this.team2HGRLabel.Name = "team2HGRLabel";
+            this.team2HGRLabel.Size = new System.Drawing.Size(254, 37);
+            this.team2HGRLabel.TabIndex = 10;
+            this.team2HGRLabel.Text = "High Goal Ratio";
+            this.team2HGRLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TeamComparisonCHG
+            // team1HGRLabel
             // 
-            this.TeamComparisonCHG.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.TeamComparisonCHG, 4);
-            this.TeamComparisonCHG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TeamComparisonCHG.Location = new System.Drawing.Point(3, 74);
-            this.TeamComparisonCHG.Name = "TeamComparisonCHG";
-            this.TeamComparisonCHG.Size = new System.Drawing.Size(254, 37);
-            this.TeamComparisonCHG.TabIndex = 1;
-            this.TeamComparisonCHG.Text = "High Goal Ratio";
-            this.TeamComparisonCHG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.team1HGRLabel.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.team1HGRLabel, 4);
+            this.team1HGRLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team1HGRLabel.Location = new System.Drawing.Point(3, 74);
+            this.team1HGRLabel.Name = "team1HGRLabel";
+            this.team1HGRLabel.Size = new System.Drawing.Size(254, 37);
+            this.team1HGRLabel.TabIndex = 1;
+            this.team1HGRLabel.Text = "High Goal Ratio";
+            this.team1HGRLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamCompSelector1
             // 
@@ -509,17 +500,17 @@
             this.teamCompSelector2.TabIndex = 2;
             this.teamCompSelector2.SelectedIndexChanged += new System.EventHandler(this.teamCompSelector2_SelectedIndexChanged);
             // 
-            // TeamComparisonCLG
+            // team1LGRLabel
             // 
-            this.TeamComparisonCLG.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.TeamComparisonCLG, 4);
-            this.TeamComparisonCLG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TeamComparisonCLG.Location = new System.Drawing.Point(3, 111);
-            this.TeamComparisonCLG.Name = "TeamComparisonCLG";
-            this.TeamComparisonCLG.Size = new System.Drawing.Size(254, 37);
-            this.TeamComparisonCLG.TabIndex = 3;
-            this.TeamComparisonCLG.Text = "Low Goal Ratio";
-            this.TeamComparisonCLG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.team1LGRLabel.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.team1LGRLabel, 4);
+            this.team1LGRLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team1LGRLabel.Location = new System.Drawing.Point(3, 111);
+            this.team1LGRLabel.Name = "team1LGRLabel";
+            this.team1LGRLabel.Size = new System.Drawing.Size(254, 37);
+            this.team1LGRLabel.TabIndex = 3;
+            this.team1LGRLabel.Text = "Low Goal Ratio";
+            this.team1LGRLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -593,17 +584,17 @@
             this.label8.Text = "Figure out what to put in these";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // team2LGRLabel
             // 
-            this.label10.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label10, 4);
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(523, 111);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(254, 37);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Figure out what to put in these";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.team2LGRLabel.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.team2LGRLabel, 4);
+            this.team2LGRLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team2LGRLabel.Location = new System.Drawing.Point(523, 111);
+            this.team2LGRLabel.Name = "team2LGRLabel";
+            this.team2LGRLabel.Size = new System.Drawing.Size(254, 37);
+            this.team2LGRLabel.TabIndex = 11;
+            this.team2LGRLabel.Text = "Low Goal Ratio";
+            this.team2LGRLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -749,53 +740,53 @@
             this.label17.Text = "0";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ControlledLowGoalRatio1
+            // controlledLowGoalRatio1Display
             // 
-            this.ControlledLowGoalRatio1.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.ControlledLowGoalRatio1, 4);
-            this.ControlledLowGoalRatio1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ControlledLowGoalRatio1.Location = new System.Drawing.Point(263, 111);
-            this.ControlledLowGoalRatio1.Name = "ControlledLowGoalRatio1";
-            this.ControlledLowGoalRatio1.Size = new System.Drawing.Size(254, 37);
-            this.ControlledLowGoalRatio1.TabIndex = 25;
-            this.ControlledLowGoalRatio1.Text = "0";
-            this.ControlledLowGoalRatio1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.controlledLowGoalRatio1Display.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.controlledLowGoalRatio1Display, 4);
+            this.controlledLowGoalRatio1Display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlledLowGoalRatio1Display.Location = new System.Drawing.Point(263, 111);
+            this.controlledLowGoalRatio1Display.Name = "controlledLowGoalRatio1Display";
+            this.controlledLowGoalRatio1Display.Size = new System.Drawing.Size(254, 37);
+            this.controlledLowGoalRatio1Display.TabIndex = 25;
+            this.controlledLowGoalRatio1Display.Text = "0";
+            this.controlledLowGoalRatio1Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ControlledHighGoalRatio1
+            // controlledHighGoalRatio1Display
             // 
-            this.ControlledHighGoalRatio1.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.ControlledHighGoalRatio1, 4);
-            this.ControlledHighGoalRatio1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ControlledHighGoalRatio1.Location = new System.Drawing.Point(263, 74);
-            this.ControlledHighGoalRatio1.Name = "ControlledHighGoalRatio1";
-            this.ControlledHighGoalRatio1.Size = new System.Drawing.Size(254, 37);
-            this.ControlledHighGoalRatio1.TabIndex = 24;
-            this.ControlledHighGoalRatio1.Text = "0";
-            this.ControlledHighGoalRatio1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.controlledHighGoalRatio1Display.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.controlledHighGoalRatio1Display, 4);
+            this.controlledHighGoalRatio1Display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlledHighGoalRatio1Display.Location = new System.Drawing.Point(263, 74);
+            this.controlledHighGoalRatio1Display.Name = "controlledHighGoalRatio1Display";
+            this.controlledHighGoalRatio1Display.Size = new System.Drawing.Size(254, 37);
+            this.controlledHighGoalRatio1Display.TabIndex = 24;
+            this.controlledHighGoalRatio1Display.Text = "0";
+            this.controlledHighGoalRatio1Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ControlledHighGoalRatio2
+            // controlledHighGoalRatio2Display
             // 
-            this.ControlledHighGoalRatio2.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.ControlledHighGoalRatio2, 4);
-            this.ControlledHighGoalRatio2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ControlledHighGoalRatio2.Location = new System.Drawing.Point(783, 74);
-            this.ControlledHighGoalRatio2.Name = "ControlledHighGoalRatio2";
-            this.ControlledHighGoalRatio2.Size = new System.Drawing.Size(257, 37);
-            this.ControlledHighGoalRatio2.TabIndex = 26;
-            this.ControlledHighGoalRatio2.Text = "0";
-            this.ControlledHighGoalRatio2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.controlledHighGoalRatio2Display.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.controlledHighGoalRatio2Display, 4);
+            this.controlledHighGoalRatio2Display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlledHighGoalRatio2Display.Location = new System.Drawing.Point(783, 74);
+            this.controlledHighGoalRatio2Display.Name = "controlledHighGoalRatio2Display";
+            this.controlledHighGoalRatio2Display.Size = new System.Drawing.Size(257, 37);
+            this.controlledHighGoalRatio2Display.TabIndex = 26;
+            this.controlledHighGoalRatio2Display.Text = "0";
+            this.controlledHighGoalRatio2Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label26
+            // controlledLowGoalRatio2Display
             // 
-            this.label26.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label26, 4);
-            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(783, 111);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(257, 37);
-            this.label26.TabIndex = 27;
-            this.label26.Text = "0";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.controlledLowGoalRatio2Display.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.controlledLowGoalRatio2Display, 4);
+            this.controlledLowGoalRatio2Display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlledLowGoalRatio2Display.Location = new System.Drawing.Point(783, 111);
+            this.controlledLowGoalRatio2Display.Name = "controlledLowGoalRatio2Display";
+            this.controlledLowGoalRatio2Display.Size = new System.Drawing.Size(257, 37);
+            this.controlledLowGoalRatio2Display.TabIndex = 27;
+            this.controlledLowGoalRatio2Display.Text = "0";
+            this.controlledLowGoalRatio2Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label27
             // 
@@ -1422,6 +1413,15 @@
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
             // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1031, 586);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
+            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1469,19 +1469,19 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TabPage teamComparisonTabPage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label TeamComparisonCHG;
+        private System.Windows.Forms.Label team2HGRLabel;
+        private System.Windows.Forms.Label team1HGRLabel;
         private System.Windows.Forms.ComboBox teamCompSelector1;
         private System.Windows.Forms.Label informationAboutTopTeamSelectorLabel;
         private System.Windows.Forms.ComboBox teamCompSelector2;
-        private System.Windows.Forms.Label TeamComparisonCLG;
+        private System.Windows.Forms.Label team1LGRLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label team2LGRLabel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -1494,10 +1494,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label ControlledLowGoalRatio1;
-        private System.Windows.Forms.Label ControlledHighGoalRatio1;
-        private System.Windows.Forms.Label ControlledHighGoalRatio2;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label controlledLowGoalRatio1Display;
+        private System.Windows.Forms.Label controlledHighGoalRatio1Display;
+        private System.Windows.Forms.Label controlledHighGoalRatio2Display;
+        private System.Windows.Forms.Label controlledLowGoalRatio2Display;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;

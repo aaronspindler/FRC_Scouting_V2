@@ -67,6 +67,8 @@ namespace FRC_Scouting_V2
         private double[] TripleGoal = new double[2];
         private double[] TripleMiss = new double[2];
         private double[] UnSuccessfulTruss = new double[2];
+        private double[] autoHighRatio = new double[2];
+        private double[] autoLowRatio = new double[2];
         int[] numberOfMatches = new int[2];
         private Boolean team1Selected;
         private Boolean team2Selected;
@@ -237,6 +239,8 @@ namespace FRC_Scouting_V2
             UnSuccessfulTruss[0] = 0;
             RobotSurvived[0] = 0;
             RobotDied[0] = 0;
+            autoHighRatio[0] = 0;
+            autoLowRatio[0] = 0;
             try
             {
                 string mySqlConnectionString = us.MakeMySqlConnectionString();
@@ -289,6 +293,10 @@ namespace FRC_Scouting_V2
                 Console.WriteLine(e.ErrorCode);
                 Console.WriteLine(e.Message);
             }
+            autoHighRatio[0] = AutoHighGoalTotal[0]/AutoHighMissTotal[0];
+            autoLowRatio[0] = AutoLowGoalTotal[0] / AutoLowMissTotal[0];
+            controlledHighGoalRatio1Display.Text = autoHighRatio[0].ToString("#.##");
+            controlledLowGoalRatio1Display.Text = autoLowRatio[0].ToString("#.##");
         }
 
         public void UpdateTeamComparison2()
@@ -318,6 +326,8 @@ namespace FRC_Scouting_V2
             UnSuccessfulTruss[1] = 0;
             RobotSurvived[1] = 0;
             RobotDied[1] = 0;
+            autoHighRatio[1] = 0;
+            autoLowRatio[1] = 0;
             try
             {
                 string mySqlConnectionString = us.MakeMySqlConnectionString();
@@ -363,13 +373,16 @@ namespace FRC_Scouting_V2
                         }
                     }
                     reader.Close();
-                Console.WriteLine(ControlledHighGoalTotal[1]);
             }
             catch (MySqlException e)
             {
                 Console.WriteLine(e.ErrorCode);
                 Console.WriteLine(e.Message);
             }
+            autoHighRatio[1] = AutoHighGoalTotal[1] / AutoHighMissTotal[1];
+            autoLowRatio[1] = AutoLowGoalTotal[1]/AutoLowMissTotal[1];
+            controlledHighGoalRatio2Display.Text = autoHighRatio[1].ToString("#.##");
+            controlledLowGoalRatio2Display.Text = autoLowRatio[1].ToString("#.##");
         }
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
@@ -420,10 +433,8 @@ namespace FRC_Scouting_V2
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
             team1Selected = true;
-            var BackgroundThread = new Thread(UpdateTeamComparison1);
             selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
-            BackgroundThread.Start();
-
+            UpdateTeamComparison1();
             if (team1Selected == true && team2Selected == true)
             {
                  ColourStats();
@@ -433,9 +444,8 @@ namespace FRC_Scouting_V2
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
             team2Selected = true;
-            var BackgroundThread = new Thread(UpdateTeamComparison2);
             selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
-            BackgroundThread.Start();
+            UpdateTeamComparison2();
 
             if (team1Selected == true && team2Selected == true)
             {
@@ -445,13 +455,7 @@ namespace FRC_Scouting_V2
 
         public void ColourStats()
         {
-            Console.WriteLine(ControlledHighGoalTotal[0] + ", " + ControlledHighMissTotal[0]);
-            var CHGR1 = ControlledHighGoalTotal[0] / ControlledHighMissTotal[0];
-            var CHGR2 = ControlledHighGoalTotal[1] / ControlledHighMissTotal[1];
-
-            this.ControlledHighGoalRatio1.Text = CHGR1.ToString("#.##");
-            this.ControlledHighGoalRatio2.Text = CHGR2.ToString("#.##");
-            this.ControlledLowGoalRatio1.Text = (ControlledLowGoalTotal[0] / ControlledLowMissTotal[0]).ToString("#.##");
+            
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
