@@ -54,7 +54,7 @@ namespace FRC_Scouting_V2.UIs
         private int didRobotDie;
         private int hotGoal;
         private int hotMiss;
-        private int matchNumber;
+        private int matchNumber = 1;
         private int passToOtherRobot;
         private int passToOtherRobotMiss;
         private int pickupFromHuman;
@@ -70,6 +70,7 @@ namespace FRC_Scouting_V2.UIs
         private int unsuccessfulTruss;
         private int xStarting;
         private int yStarting;
+        private Boolean tableCreated = false;
 
         public Aerial_Assist_Scouting_UI_New()
         {
@@ -409,23 +410,27 @@ namespace FRC_Scouting_V2.UIs
                 //Creating the MySQLCommand object
                 MySqlCommand cmd = conn.CreateCommand();
 
-                //Trying to create the table
-                try
+                if (tableCreated == false)
                 {
-                    string createTable =
-                        String.Format(
-                            "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
-                            Settings.Default.currentTableName);
-                    cmd.CommandText = createTable;
-                    cmd.ExecuteNonQuery();
-                    Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
-                    //end of creating the table
-                }
-                catch (MySqlException createException)
-                {
-                    Console.WriteLine("If there is an error it is most likely because the table is already made.");
-                    Console.WriteLine("Errorcode: " + createException.ErrorCode);
-                    Console.WriteLine(createException.Message);
+                    //Trying to create the table
+                    try
+                    {
+                        string createTable =
+                            String.Format(
+                                "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+                                Settings.Default.currentTableName);
+                        cmd.CommandText = createTable;
+                        cmd.ExecuteNonQuery();
+                        Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
+                        //end of creating the table
+                    }
+                    catch (MySqlException createException)
+                    {
+                        Console.WriteLine("If there is an error it is most likely because the table is already made.");
+                        Console.WriteLine("Errorcode: " + createException.ErrorCode);
+                        Console.WriteLine(createException.Message);
+                    }
+                    tableCreated = true;
                 }
 
                 //Submit data into the database
@@ -482,7 +487,6 @@ namespace FRC_Scouting_V2.UIs
             didRobotDie = 0;
             didRobotDieCheckBox.Checked = false;
             matchNumberUpDown.Value++;
-            matchNumber++;
             totalGoal = 0;
             totalMiss = 0;
             totalGoodControl = 0;
