@@ -29,6 +29,7 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Reflection;
+using System.Threading;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -437,6 +438,7 @@ namespace FRC_Scouting_V2
         private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             us.AerialAssistExportTableToCSV();
+            us.ShowInformationMessage("Your data has been successfully exported to CSV.");
         }
 
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)

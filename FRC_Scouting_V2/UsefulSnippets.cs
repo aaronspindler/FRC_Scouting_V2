@@ -82,7 +82,8 @@ namespace FRC_Scouting_V2
                                              reader["Comments"]);
                         }
                         reader.Close();
-                        Console.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
+                        int iPlus1 = i + 1;
+                        Console.WriteLine("Row: " + iPlus1 + " of: " + numberOfRows + " has been exported!");
                     }
                     Console.WriteLine("Your data has been successfully exported!");
                     writer.Close();
