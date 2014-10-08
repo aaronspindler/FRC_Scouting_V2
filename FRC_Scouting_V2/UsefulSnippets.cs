@@ -40,7 +40,7 @@ namespace FRC_Scouting_V2
     {
         public void AerialAssistExportTableToCSV()
         {
-            ShowInformationMessage("This can take a long time! Progress will be shown in the console.");
+            ShowInformationMessage("This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
             int numberOfRows = GetNumberOfRowsInATable();
@@ -57,7 +57,7 @@ namespace FRC_Scouting_V2
                     writer.WriteLine(
                         "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
                     conn.Open();
-                    for (int i = 0; i < GetNumberOfRowsInATable(); i++)
+                    for (int i = 0; i < GetNumberOfRowsInATable() + 1; i++)
                     {
                         cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}",
                             Settings.Default.currentTableName, i);
@@ -82,8 +82,7 @@ namespace FRC_Scouting_V2
                                              reader["Comments"]);
                         }
                         reader.Close();
-                        int iPlus1 = i + 1;
-                        Console.WriteLine("Row: " + iPlus1 + " of: " + numberOfRows + " has been exported!");
+                        Console.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
                     }
                     Console.WriteLine("Your data has been successfully exported!");
                     writer.Close();
