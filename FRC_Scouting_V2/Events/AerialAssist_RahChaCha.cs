@@ -267,6 +267,7 @@ namespace FRC_Scouting_V2
             }
             autoHighRatio[0] = AutoHighGoalTotal[0]/AutoHighMissTotal[0];
             autoLowRatio[0] = AutoLowGoalTotal[0]/AutoLowMissTotal[0];
+            DisplayDataTeam1();
         }
 
         public void UpdateTeamComparison2()
@@ -352,18 +353,37 @@ namespace FRC_Scouting_V2
             }
             autoHighRatio[1] = AutoHighGoalTotal[1]/AutoHighMissTotal[1];
             autoLowRatio[1] = AutoLowGoalTotal[1]/AutoLowMissTotal[1];
+            DisplayDataTeam2();
         }
 
         public void DisplayDataTeam1()
         {
             dataGridViewTeam1.Rows.Clear();
-            dataGridViewTeam1.Rows.Add("");
-            dataGridViewTeam1.Rows.Add("");
+            dataGridViewTeam1.Rows.Add("Total Points","","","");
+            dataGridViewTeam1.Rows.Add("Autonomous High", "", "", "");
+            dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", "");
+            dataGridViewTeam1.Rows.Add("Autonomous Mobility Rating", "", "", "");
+            dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
+            dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
+            dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
+            dataGridViewTeam1.Rows.Add("Pickups", "", "", "");
+            dataGridViewTeam1.Rows.Add("Truss", "", "", "");
+            dataGridViewTeam1.Rows.Add("Survivability", "", "", "");
         }
 
         public void DisplayDataTeam2()
         {
-            
+            dataGridViewTeam2.Rows.Clear();
+            dataGridViewTeam2.Rows.Add("Total Points", "", "", "");
+            dataGridViewTeam2.Rows.Add("Autonomous High", "", "", "");
+            dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", "");
+            dataGridViewTeam2.Rows.Add("Autonomous Mobility Rating", "", "", "");
+            dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
+            dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
+            dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
+            dataGridViewTeam2.Rows.Add("Pickups", "", "", "");
+            dataGridViewTeam2.Rows.Add("Truss", "", "", "");
+            dataGridViewTeam2.Rows.Add("Survivability", "", "", "");
         }
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
@@ -415,32 +435,25 @@ namespace FRC_Scouting_V2
 
         private void teamCompSelector1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            team1Selected = true;
             selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
             ClearColourStats();
+            team1Selected = true;
             UpdateTeamComparison1();
-            if (team1Selected && team2Selected)
-            {
-                ColourStats();
-            }
+            ColourStats();
         }
 
         private void teamCompSelector2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            team2Selected = true;
             selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
             ClearColourStats();
+            team2Selected = true;
             UpdateTeamComparison2();
-
-            if (team1Selected && team2Selected)
-            {
-                ColourStats();
-            }
+            ColourStats();
         }
 
         public void ColourStats()
         {
-
+            
         }
 
         public void ClearColourStats()
@@ -451,11 +464,11 @@ namespace FRC_Scouting_V2
                 {
                     if (team1Selected)
                     {
-                        dataGridViewTeam1.Rows[i].Cells[j].Style.BackColor = Color.Black;
+                        dataGridViewTeam1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
                     }
                     if (team2Selected)
                     {
-                        dataGridViewTeam2.Rows[i].Cells[j].Style.BackColor = Color.Black;
+                        dataGridViewTeam2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
                     }
                 }
             }
