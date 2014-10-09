@@ -41,14 +41,27 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchBox = new System.Windows.Forms.ListBox();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewTeam2 = new System.Windows.Forms.DataGridView();
+            this.dataNameColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meanColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardDeviationColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meanPercentageColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardDeviationPercentageColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teamCompSelector1 = new System.Windows.Forms.ComboBox();
             this.informationAboutTopTeamSelectorLabel = new System.Windows.Forms.Label();
             this.teamCompSelector2 = new System.Windows.Forms.ComboBox();
+            this.dataGridViewTeam1 = new System.Windows.Forms.DataGridView();
+            this.dataNameColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meanColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardDeviationColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meanPercentageColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardDeviationPercentageColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generalTeamInformationTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.teamLogoPictureBox = new System.Windows.Forms.PictureBox();
@@ -77,19 +90,6 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.dataGridViewTeam1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTeam2 = new System.Windows.Forms.DataGridView();
-            this.dataNameColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meanColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardDeviationColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meanPercentageColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardDeviationPercentageColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
-            this.dataNameColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meanColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardDeviationColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meanPercentageColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardDeviationPercentageColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -98,12 +98,12 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.teamComparisonTabPage.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).BeginInit();
             this.generalTeamInformationTabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -175,6 +175,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 594F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1037, 594);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1025, 582);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamMatchSummaryTabPage
             // 
@@ -293,6 +302,66 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1037, 594);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
+            // dataGridViewTeam2
+            // 
+            this.dataGridViewTeam2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTeam2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataNameColumn2,
+            this.meanColumn2,
+            this.standardDeviationColumn2,
+            this.meanPercentageColumn2,
+            this.standardDeviationPercentageColumn2});
+            this.tableLayoutPanel4.SetColumnSpan(this.dataGridViewTeam2, 8);
+            this.dataGridViewTeam2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTeam2.Location = new System.Drawing.Point(515, 65);
+            this.dataGridViewTeam2.Name = "dataGridViewTeam2";
+            this.tableLayoutPanel4.SetRowSpan(this.dataGridViewTeam2, 14);
+            this.dataGridViewTeam2.Size = new System.Drawing.Size(519, 526);
+            this.dataGridViewTeam2.TabIndex = 4;
+            // 
+            // dataNameColumn2
+            // 
+            this.dataNameColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataNameColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataNameColumn2.HeaderText = "Data Name";
+            this.dataNameColumn2.Name = "dataNameColumn2";
+            this.dataNameColumn2.ReadOnly = true;
+            // 
+            // meanColumn2
+            // 
+            this.meanColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.meanColumn2.HeaderText = "Mean";
+            this.meanColumn2.Name = "meanColumn2";
+            this.meanColumn2.ReadOnly = true;
+            // 
+            // standardDeviationColumn2
+            // 
+            this.standardDeviationColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.standardDeviationColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.standardDeviationColumn2.HeaderText = "Standard Deviation";
+            this.standardDeviationColumn2.Name = "standardDeviationColumn2";
+            this.standardDeviationColumn2.ReadOnly = true;
+            // 
+            // meanPercentageColumn2
+            // 
+            this.meanPercentageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.meanPercentageColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.meanPercentageColumn2.HeaderText = "Mean %";
+            this.meanPercentageColumn2.Name = "meanPercentageColumn2";
+            this.meanPercentageColumn2.ReadOnly = true;
+            // 
+            // standardDeviationPercentageColumn2
+            // 
+            this.standardDeviationPercentageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.standardDeviationPercentageColumn2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.standardDeviationPercentageColumn2.HeaderText = "Standard Deviation %";
+            this.standardDeviationPercentageColumn2.Name = "standardDeviationPercentageColumn2";
+            this.standardDeviationPercentageColumn2.ReadOnly = true;
+            // 
             // teamCompSelector1
             // 
             this.tableLayoutPanel4.SetColumnSpan(this.teamCompSelector1, 8);
@@ -328,6 +397,66 @@
             this.teamCompSelector2.Size = new System.Drawing.Size(519, 21);
             this.teamCompSelector2.TabIndex = 2;
             this.teamCompSelector2.SelectedIndexChanged += new System.EventHandler(this.teamCompSelector2_SelectedIndexChanged);
+            // 
+            // dataGridViewTeam1
+            // 
+            this.dataGridViewTeam1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTeam1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataNameColumn1,
+            this.meanColumn1,
+            this.standardDeviationColumn1,
+            this.meanPercentageColumn1,
+            this.standardDeviationPercentageColumn1});
+            this.tableLayoutPanel4.SetColumnSpan(this.dataGridViewTeam1, 8);
+            this.dataGridViewTeam1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTeam1.Location = new System.Drawing.Point(3, 65);
+            this.dataGridViewTeam1.Name = "dataGridViewTeam1";
+            this.tableLayoutPanel4.SetRowSpan(this.dataGridViewTeam1, 14);
+            this.dataGridViewTeam1.Size = new System.Drawing.Size(506, 526);
+            this.dataGridViewTeam1.TabIndex = 3;
+            // 
+            // dataNameColumn1
+            // 
+            this.dataNameColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataNameColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataNameColumn1.HeaderText = "Data Name";
+            this.dataNameColumn1.Name = "dataNameColumn1";
+            this.dataNameColumn1.ReadOnly = true;
+            // 
+            // meanColumn1
+            // 
+            this.meanColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.meanColumn1.HeaderText = "Mean";
+            this.meanColumn1.Name = "meanColumn1";
+            this.meanColumn1.ReadOnly = true;
+            // 
+            // standardDeviationColumn1
+            // 
+            this.standardDeviationColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.standardDeviationColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.standardDeviationColumn1.HeaderText = "Standard Deviation";
+            this.standardDeviationColumn1.Name = "standardDeviationColumn1";
+            this.standardDeviationColumn1.ReadOnly = true;
+            // 
+            // meanPercentageColumn1
+            // 
+            this.meanPercentageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.meanPercentageColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.meanPercentageColumn1.HeaderText = "Mean %";
+            this.meanPercentageColumn1.Name = "meanPercentageColumn1";
+            this.meanPercentageColumn1.ReadOnly = true;
+            // 
+            // standardDeviationPercentageColumn1
+            // 
+            this.standardDeviationPercentageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.standardDeviationPercentageColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.standardDeviationPercentageColumn1.HeaderText = "Standard Deviation %";
+            this.standardDeviationPercentageColumn1.Name = "standardDeviationPercentageColumn1";
+            this.standardDeviationPercentageColumn1.ReadOnly = true;
             // 
             // generalTeamInformationTabPage
             // 
@@ -642,135 +771,6 @@
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
             // 
-            // dataGridViewTeam1
-            // 
-            this.dataGridViewTeam1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTeam1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataNameColumn1,
-            this.meanColumn1,
-            this.standardDeviationColumn1,
-            this.meanPercentageColumn1,
-            this.standardDeviationPercentageColumn1});
-            this.tableLayoutPanel4.SetColumnSpan(this.dataGridViewTeam1, 8);
-            this.dataGridViewTeam1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTeam1.Location = new System.Drawing.Point(3, 65);
-            this.dataGridViewTeam1.Name = "dataGridViewTeam1";
-            this.tableLayoutPanel4.SetRowSpan(this.dataGridViewTeam1, 14);
-            this.dataGridViewTeam1.Size = new System.Drawing.Size(506, 526);
-            this.dataGridViewTeam1.TabIndex = 3;
-            // 
-            // dataGridViewTeam2
-            // 
-            this.dataGridViewTeam2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTeam2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataNameColumn2,
-            this.meanColumn2,
-            this.standardDeviationColumn2,
-            this.meanPercentageColumn2,
-            this.standardDeviationPercentageColumn2});
-            this.tableLayoutPanel4.SetColumnSpan(this.dataGridViewTeam2, 8);
-            this.dataGridViewTeam2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTeam2.Location = new System.Drawing.Point(515, 65);
-            this.dataGridViewTeam2.Name = "dataGridViewTeam2";
-            this.tableLayoutPanel4.SetRowSpan(this.dataGridViewTeam2, 14);
-            this.dataGridViewTeam2.Size = new System.Drawing.Size(519, 526);
-            this.dataGridViewTeam2.TabIndex = 4;
-            // 
-            // dataNameColumn2
-            // 
-            this.dataNameColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataNameColumn2.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataNameColumn2.HeaderText = "Data Name";
-            this.dataNameColumn2.Name = "dataNameColumn2";
-            this.dataNameColumn2.ReadOnly = true;
-            // 
-            // meanColumn2
-            // 
-            this.meanColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.meanColumn2.HeaderText = "Mean";
-            this.meanColumn2.Name = "meanColumn2";
-            this.meanColumn2.ReadOnly = true;
-            // 
-            // standardDeviationColumn2
-            // 
-            this.standardDeviationColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.standardDeviationColumn2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.standardDeviationColumn2.HeaderText = "Standard Deviation";
-            this.standardDeviationColumn2.Name = "standardDeviationColumn2";
-            this.standardDeviationColumn2.ReadOnly = true;
-            // 
-            // meanPercentageColumn2
-            // 
-            this.meanPercentageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.meanPercentageColumn2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.meanPercentageColumn2.HeaderText = "Mean %";
-            this.meanPercentageColumn2.Name = "meanPercentageColumn2";
-            this.meanPercentageColumn2.ReadOnly = true;
-            // 
-            // standardDeviationPercentageColumn2
-            // 
-            this.standardDeviationPercentageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.standardDeviationPercentageColumn2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.standardDeviationPercentageColumn2.HeaderText = "Standard Deviation %";
-            this.standardDeviationPercentageColumn2.Name = "standardDeviationPercentageColumn2";
-            this.standardDeviationPercentageColumn2.ReadOnly = true;
-            // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1025, 582);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
-            // 
-            // dataNameColumn1
-            // 
-            this.dataNameColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataNameColumn1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataNameColumn1.HeaderText = "Data Name";
-            this.dataNameColumn1.Name = "dataNameColumn1";
-            this.dataNameColumn1.ReadOnly = true;
-            // 
-            // meanColumn1
-            // 
-            this.meanColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.meanColumn1.HeaderText = "Mean";
-            this.meanColumn1.Name = "meanColumn1";
-            this.meanColumn1.ReadOnly = true;
-            // 
-            // standardDeviationColumn1
-            // 
-            this.standardDeviationColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.standardDeviationColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.standardDeviationColumn1.HeaderText = "Standard Deviation";
-            this.standardDeviationColumn1.Name = "standardDeviationColumn1";
-            this.standardDeviationColumn1.ReadOnly = true;
-            // 
-            // meanPercentageColumn1
-            // 
-            this.meanPercentageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.meanPercentageColumn1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.meanPercentageColumn1.HeaderText = "Mean %";
-            this.meanPercentageColumn1.Name = "meanPercentageColumn1";
-            this.meanPercentageColumn1.ReadOnly = true;
-            // 
-            // standardDeviationPercentageColumn1
-            // 
-            this.standardDeviationPercentageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.standardDeviationPercentageColumn1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.standardDeviationPercentageColumn1.HeaderText = "Standard Deviation %";
-            this.standardDeviationPercentageColumn1.Name = "standardDeviationPercentageColumn1";
-            this.standardDeviationPercentageColumn1.ReadOnly = true;
-            // 
             // AerialAssist_RahChaCha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -793,14 +793,14 @@
             this.teamComparisonTabPage.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).EndInit();
             this.generalTeamInformationTabPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam2)).EndInit();
             this.ResumeLayout(false);
 
         }
