@@ -295,8 +295,8 @@ namespace FRC_Scouting_V2
             }
             autoHighRatio[0] = AutoHighGoalTotal[0]/AutoHighMissTotal[0];
             autoLowRatio[0] = AutoLowGoalTotal[0]/AutoLowMissTotal[0];
-            controlledHighGoalRatio1Display.Text = autoHighRatio[0].ToString("#.##");
-            controlledLowGoalRatio1Display.Text = autoLowRatio[0].ToString("#.##");
+            //controlledHighGoalRatio1Display.Text = autoHighRatio[0].ToString("#.##");
+            //controlledLowGoalRatio1Display.Text = autoLowRatio[0].ToString("#.##");
         }
 
         public void UpdateTeamComparison2()
@@ -382,8 +382,8 @@ namespace FRC_Scouting_V2
             }
             autoHighRatio[1] = AutoHighGoalTotal[1]/AutoHighMissTotal[1];
             autoLowRatio[1] = AutoLowGoalTotal[1]/AutoLowMissTotal[1];
-            controlledHighGoalRatio2Display.Text = autoHighRatio[1].ToString("#.##");
-            controlledLowGoalRatio2Display.Text = autoLowRatio[1].ToString("#.##");
+            //controlledHighGoalRatio2Display.Text = autoHighRatio[1].ToString("#.##");
+            //controlledLowGoalRatio2Display.Text = autoLowRatio[1].ToString("#.##");
         }
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
