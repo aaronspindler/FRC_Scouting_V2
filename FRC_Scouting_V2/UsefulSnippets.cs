@@ -97,6 +97,33 @@ namespace FRC_Scouting_V2
             }
         }
 
+        public int GetNumberOfRowsThatContainAValue(int teamNumber)
+        {
+            int numberOfRows = 0;
+            try
+            {
+                string mySqlConnectionString = MakeMySqlConnectionString();
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+
+                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}",
+                    Settings.Default.currentTableName, teamNumber);
+                using (var cmd = new MySqlCommand(mySQLCommantText, conn))
+                {
+                    conn.Open();
+                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    conn.Close();
+                    cmd.Dispose();
+                    return numberOfRows;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+            return numberOfRows;
+        }
+
         public void ClearSettings()
         {
             Settings.Default.Reset();

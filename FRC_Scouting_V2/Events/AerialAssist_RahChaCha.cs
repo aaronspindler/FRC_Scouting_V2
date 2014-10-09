@@ -29,7 +29,6 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Reflection;
-using System.Threading;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -104,33 +103,6 @@ namespace FRC_Scouting_V2
         public AerialAssist_RahChaCha()
         {
             InitializeComponent();
-        }
-
-        public int GetNumberOfRowsThatContainAValue(int teamNumber)
-        {
-            int numberOfRows = 0;
-            try
-            {
-                string mySqlConnectionString = us.MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
-
-                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}",
-                    Settings.Default.currentTableName, teamNumber);
-                using (var cmd = new MySqlCommand(mySQLCommantText, conn))
-                {
-                    conn.Open();
-                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
-                    conn.Close();
-                    cmd.Dispose();
-                    return numberOfRows;
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-            }
-            return numberOfRows;
         }
 
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -382,6 +354,18 @@ namespace FRC_Scouting_V2
             autoLowRatio[1] = AutoLowGoalTotal[1]/AutoLowMissTotal[1];
         }
 
+        public void DisplayDataTeam1()
+        {
+            dataGridViewTeam1.Rows.Clear();
+            dataGridViewTeam1.Rows.Add("");
+            dataGridViewTeam1.Rows.Add("");
+        }
+
+        public void DisplayDataTeam2()
+        {
+            
+        }
+
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             us.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
@@ -433,6 +417,7 @@ namespace FRC_Scouting_V2
         {
             team1Selected = true;
             selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
+            ClearColourStats();
             UpdateTeamComparison1();
             if (team1Selected && team2Selected)
             {
@@ -444,6 +429,7 @@ namespace FRC_Scouting_V2
         {
             team2Selected = true;
             selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
+            ClearColourStats();
             UpdateTeamComparison2();
 
             if (team1Selected && team2Selected)
@@ -454,6 +440,25 @@ namespace FRC_Scouting_V2
 
         public void ColourStats()
         {
+
+        }
+
+        public void ClearColourStats()
+        {
+            for (int i = 0; i < dataGridViewTeam1.RowCount; i++)
+            {
+                for (int j = 0; j < dataGridViewTeam1.ColumnCount; j++)
+                {
+                    if (team1Selected)
+                    {
+                        dataGridViewTeam1.Rows[i].Cells[j].Style.BackColor = Color.Black;
+                    }
+                    if (team2Selected)
+                    {
+                        dataGridViewTeam2.Rows[i].Cells[j].Style.BackColor = Color.Black;
+                    }
+                }
+            }
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
