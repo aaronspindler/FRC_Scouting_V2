@@ -98,6 +98,13 @@
             this.didTheRobotDieLabel = new System.Windows.Forms.Label();
             this.didRobotDieCheckBox = new System.Windows.Forms.CheckBox();
             this.commentsTextBox = new System.Windows.Forms.RichTextBox();
+            this.driverRatingLabel = new System.Windows.Forms.Label();
+            this.autonomousMovementLabel = new System.Windows.Forms.Label();
+            this.autonomousMovementCheckBox = new System.Windows.Forms.CheckBox();
+            this.driverRatingButton1 = new System.Windows.Forms.CheckBox();
+            this.driverRatingButton2 = new System.Windows.Forms.CheckBox();
+            this.driverRatingButton3 = new System.Windows.Forms.CheckBox();
+            this.driverRatingButton4 = new System.Windows.Forms.CheckBox();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberUpDown)).BeginInit();
@@ -187,10 +194,10 @@
             this.tableLayoutPanel.Controls.Add(this.totalBallMissesLabel, 20, 7);
             this.tableLayoutPanel.Controls.Add(this.totalGoodDisplay, 19, 7);
             this.tableLayoutPanel.Controls.Add(this.totalBallMissesDisplay, 23, 7);
-            this.tableLayoutPanel.Controls.Add(this.teamColourLabel, 8, 8);
-            this.tableLayoutPanel.Controls.Add(this.teamColourSelector, 12, 8);
-            this.tableLayoutPanel.Controls.Add(this.matchNumberLabel, 8, 9);
-            this.tableLayoutPanel.Controls.Add(this.matchNumberUpDown, 12, 9);
+            this.tableLayoutPanel.Controls.Add(this.teamColourLabel, 4, 8);
+            this.tableLayoutPanel.Controls.Add(this.teamColourSelector, 8, 8);
+            this.tableLayoutPanel.Controls.Add(this.matchNumberLabel, 4, 9);
+            this.tableLayoutPanel.Controls.Add(this.matchNumberUpDown, 8, 9);
             this.tableLayoutPanel.Controls.Add(this.tripleAssistGoals, 0, 6);
             this.tableLayoutPanel.Controls.Add(this.tripleAssistMisses, 4, 6);
             this.tableLayoutPanel.Controls.Add(this.tripleAssistGoalDisplay, 3, 6);
@@ -199,6 +206,13 @@
             this.tableLayoutPanel.Controls.Add(this.didTheRobotDieLabel, 8, 10);
             this.tableLayoutPanel.Controls.Add(this.didRobotDieCheckBox, 12, 10);
             this.tableLayoutPanel.Controls.Add(this.commentsTextBox, 0, 11);
+            this.tableLayoutPanel.Controls.Add(this.driverRatingLabel, 12, 8);
+            this.tableLayoutPanel.Controls.Add(this.autonomousMovementLabel, 12, 9);
+            this.tableLayoutPanel.Controls.Add(this.autonomousMovementCheckBox, 16, 9);
+            this.tableLayoutPanel.Controls.Add(this.driverRatingButton1, 16, 8);
+            this.tableLayoutPanel.Controls.Add(this.driverRatingButton2, 17, 8);
+            this.tableLayoutPanel.Controls.Add(this.driverRatingButton3, 18, 8);
+            this.tableLayoutPanel.Controls.Add(this.driverRatingButton4, 19, 8);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -900,7 +914,7 @@
             this.teamColourLabel.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.teamColourLabel, 4);
             this.teamColourLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamColourLabel.Location = new System.Drawing.Point(363, 333);
+            this.teamColourLabel.Location = new System.Drawing.Point(183, 333);
             this.teamColourLabel.Name = "teamColourLabel";
             this.teamColourLabel.Size = new System.Drawing.Size(174, 25);
             this.teamColourLabel.TabIndex = 76;
@@ -916,7 +930,7 @@
             this.teamColourSelector.Items.AddRange(new object[] {
             "Red",
             "Blue"});
-            this.teamColourSelector.Location = new System.Drawing.Point(543, 336);
+            this.teamColourSelector.Location = new System.Drawing.Point(363, 336);
             this.teamColourSelector.Name = "teamColourSelector";
             this.teamColourSelector.Size = new System.Drawing.Size(174, 21);
             this.teamColourSelector.TabIndex = 77;
@@ -927,7 +941,7 @@
             this.matchNumberLabel.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.matchNumberLabel, 4);
             this.matchNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchNumberLabel.Location = new System.Drawing.Point(363, 358);
+            this.matchNumberLabel.Location = new System.Drawing.Point(183, 358);
             this.matchNumberLabel.Name = "matchNumberLabel";
             this.matchNumberLabel.Size = new System.Drawing.Size(174, 25);
             this.matchNumberLabel.TabIndex = 78;
@@ -938,7 +952,7 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.matchNumberUpDown, 4);
             this.matchNumberUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchNumberUpDown.Location = new System.Drawing.Point(543, 361);
+            this.matchNumberUpDown.Location = new System.Drawing.Point(363, 361);
             this.matchNumberUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1057,6 +1071,99 @@
             this.commentsTextBox.Text = "Comments: Any other information that may be needed";
             this.commentsTextBox.TextChanged += new System.EventHandler(this.commentsTextBox_TextChanged);
             // 
+            // driverRatingLabel
+            // 
+            this.driverRatingLabel.AutoSize = true;
+            this.tableLayoutPanel.SetColumnSpan(this.driverRatingLabel, 4);
+            this.driverRatingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.driverRatingLabel.Location = new System.Drawing.Point(543, 333);
+            this.driverRatingLabel.Name = "driverRatingLabel";
+            this.driverRatingLabel.Size = new System.Drawing.Size(174, 25);
+            this.driverRatingLabel.TabIndex = 87;
+            this.driverRatingLabel.Text = "Driver Rating: ";
+            this.driverRatingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // autonomousMovementLabel
+            // 
+            this.autonomousMovementLabel.AutoSize = true;
+            this.tableLayoutPanel.SetColumnSpan(this.autonomousMovementLabel, 4);
+            this.autonomousMovementLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autonomousMovementLabel.Location = new System.Drawing.Point(543, 358);
+            this.autonomousMovementLabel.Name = "autonomousMovementLabel";
+            this.autonomousMovementLabel.Size = new System.Drawing.Size(174, 25);
+            this.autonomousMovementLabel.TabIndex = 88;
+            this.autonomousMovementLabel.Text = "Autonomous Movement:";
+            this.autonomousMovementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // autonomousMovementCheckBox
+            // 
+            this.autonomousMovementCheckBox.AutoSize = true;
+            this.autonomousMovementCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel.SetColumnSpan(this.autonomousMovementCheckBox, 4);
+            this.autonomousMovementCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autonomousMovementCheckBox.Location = new System.Drawing.Point(723, 361);
+            this.autonomousMovementCheckBox.Name = "autonomousMovementCheckBox";
+            this.autonomousMovementCheckBox.Size = new System.Drawing.Size(174, 19);
+            this.autonomousMovementCheckBox.TabIndex = 89;
+            this.autonomousMovementCheckBox.UseVisualStyleBackColor = true;
+            this.autonomousMovementCheckBox.CheckedChanged += new System.EventHandler(this.autonomousMovementCheckBox_CheckedChanged);
+            // 
+            // driverRatingButton1
+            // 
+            this.driverRatingButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.driverRatingButton1.AutoSize = true;
+            this.driverRatingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.driverRatingButton1.Location = new System.Drawing.Point(723, 336);
+            this.driverRatingButton1.Name = "driverRatingButton1";
+            this.driverRatingButton1.Size = new System.Drawing.Size(39, 19);
+            this.driverRatingButton1.TabIndex = 90;
+            this.driverRatingButton1.Text = "1";
+            this.driverRatingButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.driverRatingButton1.UseVisualStyleBackColor = true;
+            this.driverRatingButton1.CheckedChanged += new System.EventHandler(this.driverRatingButton1_CheckedChanged);
+            // 
+            // driverRatingButton2
+            // 
+            this.driverRatingButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.driverRatingButton2.AutoSize = true;
+            this.driverRatingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.driverRatingButton2.Location = new System.Drawing.Point(768, 336);
+            this.driverRatingButton2.Name = "driverRatingButton2";
+            this.driverRatingButton2.Size = new System.Drawing.Size(39, 19);
+            this.driverRatingButton2.TabIndex = 91;
+            this.driverRatingButton2.Text = "2";
+            this.driverRatingButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.driverRatingButton2.UseVisualStyleBackColor = true;
+            this.driverRatingButton2.CheckedChanged += new System.EventHandler(this.driverRatingButton2_CheckedChanged);
+            // 
+            // driverRatingButton3
+            // 
+            this.driverRatingButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.driverRatingButton3.AutoSize = true;
+            this.driverRatingButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.driverRatingButton3.Location = new System.Drawing.Point(813, 336);
+            this.driverRatingButton3.Name = "driverRatingButton3";
+            this.driverRatingButton3.Size = new System.Drawing.Size(39, 19);
+            this.driverRatingButton3.TabIndex = 92;
+            this.driverRatingButton3.Text = "3";
+            this.driverRatingButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.driverRatingButton3.UseVisualStyleBackColor = true;
+            this.driverRatingButton3.CheckedChanged += new System.EventHandler(this.driverRatingButton3_CheckedChanged);
+            // 
+            // driverRatingButton4
+            // 
+            this.driverRatingButton4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.driverRatingButton4.AutoSize = true;
+            this.driverRatingButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.driverRatingButton4.Location = new System.Drawing.Point(858, 336);
+            this.driverRatingButton4.Name = "driverRatingButton4";
+            this.driverRatingButton4.Size = new System.Drawing.Size(39, 19);
+            this.driverRatingButton4.TabIndex = 93;
+            this.driverRatingButton4.Text = "4";
+            this.driverRatingButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.driverRatingButton4.UseVisualStyleBackColor = true;
+            this.driverRatingButton4.CheckedChanged += new System.EventHandler(this.driverRatingButton4_CheckedChanged);
+            // 
             // saveFileDialog
             // 
             this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
@@ -1149,5 +1256,12 @@
         private System.Windows.Forms.Label didTheRobotDieLabel;
         private System.Windows.Forms.CheckBox didRobotDieCheckBox;
         private System.Windows.Forms.RichTextBox commentsTextBox;
+        private System.Windows.Forms.Label driverRatingLabel;
+        private System.Windows.Forms.Label autonomousMovementLabel;
+        private System.Windows.Forms.CheckBox autonomousMovementCheckBox;
+        private System.Windows.Forms.CheckBox driverRatingButton1;
+        private System.Windows.Forms.CheckBox driverRatingButton2;
+        private System.Windows.Forms.CheckBox driverRatingButton3;
+        private System.Windows.Forms.CheckBox driverRatingButton4;
     }
 }

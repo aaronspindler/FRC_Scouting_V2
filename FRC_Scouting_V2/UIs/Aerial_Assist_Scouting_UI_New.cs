@@ -70,6 +70,8 @@ namespace FRC_Scouting_V2.UIs
         private int unsuccessfulTruss;
         private int xStarting;
         private int yStarting;
+        private int driverRating = 0;
+        private Boolean autoMovement = false;
         private Boolean tableCreated = false;
 
         public Aerial_Assist_Scouting_UI_New()
@@ -352,6 +354,8 @@ namespace FRC_Scouting_V2.UIs
                                      Convert.ToString(unsuccessfulTruss));
                     writer.WriteLine("Starting Location: X: " + Convert.ToString(xStarting) + " Y: " +
                                      Convert.ToString(yStarting));
+                    writer.WriteLine("Driver Rating: " + driverRating);
+                    writer.WriteLine("Auto Movement: " + Convert.ToBoolean(autoMovement));
                     writer.WriteLine("Comments: " + Convert.ToString(comments));
                     writer.WriteLine("#########################################################");
                     writer.WriteLine("=========================================================");
@@ -386,6 +390,8 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine(Convert.ToString(xStarting));
                     writer.WriteLine(Convert.ToString(yStarting));
                     writer.WriteLine(Convert.ToBoolean(didRobotDie));
+                    writer.WriteLine(Convert.ToInt16(driverRating));
+                    writer.WriteLine(Convert.ToBoolean(autoMovement));
                     writer.WriteLine(Convert.ToString(comments));
                     writer.WriteLine("END OF FILE");
                     writer.Close();
@@ -417,7 +423,7 @@ namespace FRC_Scouting_V2.UIs
                     {
                         string createTable =
                             String.Format(
-                                "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+                                "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`DriverRating` int(11) NOT NULL DEFAULT '0',`AutoMovement` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
                                 Settings.Default.currentTableName);
                         cmd.CommandText = createTable;
                         cmd.ExecuteNonQuery();
@@ -436,14 +442,14 @@ namespace FRC_Scouting_V2.UIs
                 //Submit data into the database
                 string insertDataString =
                     String.Format(
-                        "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}');",
+                        "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, DriverRating, AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
                         Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1),
                         Settings.Default.selectedTeamNumber, Settings.Default.selectedTeamName, teamColour, matchNumber,
                         autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal, controlledHighMiss,
                         controlledLowGoal, controlledLowMiss, hotGoal, hotMiss, tripleAssistGoal, tripleAssistMiss,
                         autoBallPickup, autoBallPickupMiss, controlledBallPickup, controlledBallPickupMiss,
                         pickupFromHuman, pickupFromHumanMiss, passToOtherRobot, passToOtherRobotMiss, successfulTruss,
-                        unsuccessfulTruss, xStarting, yStarting, didRobotDie, comments);
+                        unsuccessfulTruss, xStarting, yStarting, didRobotDie,driverRating, Convert.ToInt16(autoMovement), comments);
                 cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
 
@@ -493,6 +499,8 @@ namespace FRC_Scouting_V2.UIs
             totalMissControl = 0;
             comments = ("");
             commentsTextBox.Text = ("Comments: Any other information that may be needed");
+            autoMovement = false;
+            autonomousMovementCheckBox.Checked = false;
             UpdateLabels();
         }
 
@@ -537,6 +545,85 @@ namespace FRC_Scouting_V2.UIs
             unsuccessfulTruss++;
             totalMissControl++;
             UpdateLabels();
+        }
+
+        private void autonomousMovementCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autonomousMovementCheckBox.Checked == true)
+            {
+                autoMovement = true;
+            }
+            else
+            {
+                if (autonomousMovementCheckBox.Checked == false)
+                {
+                    autoMovement = false;
+                }
+            }
+        }
+
+        private void driverRatingButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            driverRatingButton1.Enabled = true;
+            driverRatingButton2.Enabled = true;
+            driverRatingButton3.Enabled = true;
+            driverRatingButton4.Enabled = true;
+
+            if (driverRatingButton1.Checked == true)
+            {
+                driverRating = 1;
+                driverRatingButton2.Enabled = false;
+                driverRatingButton3.Enabled = false; 
+                driverRatingButton4.Enabled = false;
+            }
+        }
+
+        private void driverRatingButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            driverRatingButton1.Enabled = true;
+            driverRatingButton2.Enabled = true;
+            driverRatingButton3.Enabled = true;
+            driverRatingButton4.Enabled = true;
+
+            if (driverRatingButton2.Checked == true)
+            {
+                driverRating = 2;
+                driverRatingButton1.Enabled = false;
+                driverRatingButton3.Enabled = false;
+                driverRatingButton4.Enabled = false;
+            }
+        }
+
+        private void driverRatingButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            driverRatingButton1.Enabled = true;
+            driverRatingButton2.Enabled = true;
+            driverRatingButton3.Enabled = true;
+            driverRatingButton4.Enabled = true;
+
+            if (driverRatingButton3.Checked == true)
+            {
+                driverRating = 3;
+                driverRatingButton1.Enabled = false;
+                driverRatingButton2.Enabled = false;
+                driverRatingButton4.Enabled = false;
+            }
+        }
+
+        private void driverRatingButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            driverRatingButton1.Enabled = true;
+            driverRatingButton2.Enabled = true;
+            driverRatingButton3.Enabled = true;
+            driverRatingButton4.Enabled = true;
+
+            if (driverRatingButton4.Checked == true)
+            {
+                driverRating = 4;
+                driverRatingButton1.Enabled = false;
+                driverRatingButton2.Enabled = false;
+                driverRatingButton3.Enabled = false;
+            }
         }
     }
 }

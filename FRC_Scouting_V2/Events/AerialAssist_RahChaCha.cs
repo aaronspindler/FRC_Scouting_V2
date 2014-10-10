@@ -115,7 +115,7 @@ namespace FRC_Scouting_V2
                     numberOfFilesImported++;
                     var reader = new StreamReader(t);
                     //Bypassing the human readable variables to get to the computer readable portion of the text file
-                    for (int i = 0; i < 28; i++)
+                    for (int i = 0; i < 30; i++)
                     {
                         reader.ReadLine();
                     }
@@ -148,6 +148,8 @@ namespace FRC_Scouting_V2
                     int startingX = Convert.ToInt32(reader.ReadLine());
                     int startingY = Convert.ToInt32(reader.ReadLine());
                     bool didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
+                    int driverRating = Convert.ToInt16(reader.ReadLine());
+                    Boolean autoMovement = Convert.ToBoolean(reader.ReadLine());
                     string comments = Convert.ToString(reader.ReadLine());
                     string testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
@@ -157,7 +159,7 @@ namespace FRC_Scouting_V2
                         cmd.Connection = conn;
                         cmd.CommandText =
                             String.Format(
-                                "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}');",
+                                "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
                                 Settings.Default.currentTableName, (us.GetNumberOfRowsInATable() + 1),
                                 teamNumberImport, teamNameImport, teamColour,
                                 matchNumber,
@@ -167,7 +169,7 @@ namespace FRC_Scouting_V2
                                 autoBallPickup, autoBallPickupMiss, controlledPickup, controlledPickupMiss,
                                 pickupFromHuman, missedPickupFromHuman, passToOtherBot, missedPassToOtherBot,
                                 successfulTruss,
-                                unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie), comments);
+                                unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie), driverRating, Convert.ToInt32(autoMovement), comments);
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close();
