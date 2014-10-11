@@ -257,7 +257,7 @@ namespace FRC_Scouting_V2
                 }
             }
 
-            if (Settings.Default.colourTeamComparisonStatistics == true)
+            if (Settings.Default.colourTeamComparisonStatistics)
             {
                 colourTeamComparisonStatisticsCheckBox.Checked = true;
             }
@@ -379,17 +379,17 @@ namespace FRC_Scouting_V2
 
         private void colourTeamComparisonStatisticsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (colourTeamComparisonStatisticsCheckBox.Checked == true)
+            if (colourTeamComparisonStatisticsCheckBox.Checked)
             {
-                FRC_Scouting_V2.Properties.Settings.Default.colourTeamComparisonStatistics = true;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.colourTeamComparisonStatistics = true;
+                Settings.Default.Save();
             }
             else
             {
                 if (colourTeamComparisonStatisticsCheckBox.Checked == false)
                 {
-                    FRC_Scouting_V2.Properties.Settings.Default.colourTeamComparisonStatistics = false;
-                    FRC_Scouting_V2.Properties.Settings.Default.Save();
+                    Settings.Default.colourTeamComparisonStatistics = false;
+                    Settings.Default.Save();
                 }
             }
         }
