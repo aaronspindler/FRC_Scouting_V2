@@ -66,9 +66,18 @@ namespace FRC_Scouting_V2
         private readonly double[] TripleGoal = new double[2];
         private readonly double[] TripleMiss = new double[2];
         private readonly double[] UnSuccessfulTruss = new double[2];
-        private readonly double[] autoHighRatio = new double[2];
-        private readonly double[] autoLowRatio = new double[2];
         private readonly int[] numberOfMatches = new int[2];
+
+        //Ratios and Statistics
+        private double[] TotalPointsMean = new double[2];
+        double[] TotalPointsSD = new double[2];
+        double[] AutoHighMean = new double[2];
+        double[] AutoHighSD = new double[2];
+        private double[] AutoHighGoalSuccessRate = new double[2];
+        private double[] AutoLowMean = new double[2];
+        private double[] AutoLowSD = new double[2];
+        double[] AutolowGoalSuccessRate = new double[2];
+
 
         private readonly string[] teamNameArray =
         {
@@ -185,6 +194,7 @@ namespace FRC_Scouting_V2
                 }
             }
             us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported + " File(s) Into the Database.");
+
         }
 
         public void UpdateTeamComparison1()
@@ -214,8 +224,6 @@ namespace FRC_Scouting_V2
             UnSuccessfulTruss[0] = 0;
             RobotSurvived[0] = 0;
             RobotDied[0] = 0;
-            autoHighRatio[0] = 0;
-            autoLowRatio[0] = 0;
             try
             {
                 string mySqlConnectionString = us.MakeMySqlConnectionString();
@@ -275,8 +283,8 @@ namespace FRC_Scouting_V2
                 Console.WriteLine(e.ErrorCode);
                 Console.WriteLine(e.Message);
             }
-            autoHighRatio[0] = AutoHighGoalTotal[0]/AutoHighMissTotal[0];
-            autoLowRatio[0] = AutoLowGoalTotal[0]/AutoLowMissTotal[0];
+            AutoHighGoalSuccessRate[0] = AutoHighGoalTotal[0]/(AutoHighGoalTotal[0] + AutoHighMissTotal[0]);
+            AutolowGoalSuccessRate[0] = AutoLowGoalTotal[0] / (AutoLowGoalTotal[0] + AutoLowMissTotal[0]);
             DisplayDataTeam1();
         }
 
@@ -307,8 +315,6 @@ namespace FRC_Scouting_V2
             UnSuccessfulTruss[1] = 0;
             RobotSurvived[1] = 0;
             RobotDied[1] = 0;
-            autoHighRatio[1] = 0;
-            autoLowRatio[1] = 0;
             try
             {
                 string mySqlConnectionString = us.MakeMySqlConnectionString();
@@ -368,19 +374,20 @@ namespace FRC_Scouting_V2
                 Console.WriteLine(e.ErrorCode);
                 Console.WriteLine(e.Message);
             }
-            autoHighRatio[1] = AutoHighGoalTotal[1]/AutoHighMissTotal[1];
-            autoLowRatio[1] = AutoLowGoalTotal[1]/AutoLowMissTotal[1];
+            AutoHighGoalSuccessRate[1] = AutoHighGoalTotal[1] / (AutoHighGoalTotal[1] + AutoHighMissTotal[1]);
+            AutolowGoalSuccessRate[1] = AutoLowGoalTotal[1] / (AutoLowGoalTotal[1] + AutoLowMissTotal[1]);
             DisplayDataTeam2();
         }
 
         public void DisplayDataTeam1()
         {
             dataGridViewTeam1.Rows.Clear();
-            dataGridViewTeam1.Rows.Add("Total Points", "", "", "");
-            dataGridViewTeam1.Rows.Add("Autonomous High", "", "", "");
-            dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", "");
-            dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "");
-            dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "");
+            //Data Name, Mean, Standard Deviation, Successrate
+            dataGridViewTeam1.Rows.Add("Total Points", "", "", "N/A");
+            dataGridViewTeam1.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[0].ToString("P"));
+            dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[0].ToString("P"));
+            dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "N/A");
+            dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "N/A");
             dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
             dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
             dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
@@ -392,11 +399,11 @@ namespace FRC_Scouting_V2
         public void DisplayDataTeam2()
         {
             dataGridViewTeam2.Rows.Clear();
-            dataGridViewTeam2.Rows.Add("Total Points", "", "", "");
-            dataGridViewTeam2.Rows.Add("Autonomous High", "", "", "");
-            dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", "");
-            dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "");
-            dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "");
+            dataGridViewTeam2.Rows.Add("Total Points", "", "", "N/A");
+            dataGridViewTeam2.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[1].ToString("P"));
+            dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[1].ToString("P"));
+            dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "N/A");
+            dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "N/A");
             dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
             dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
             dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
