@@ -257,6 +257,18 @@ namespace FRC_Scouting_V2
                 }
             }
 
+            if (Settings.Default.colourTeamComparisonStatistics == true)
+            {
+                colourTeamComparisonStatisticsCheckBox.Checked = true;
+            }
+            else
+            {
+                if (Settings.Default.colourTeamComparisonStatistics == false)
+                {
+                    colourTeamComparisonStatisticsCheckBox.Checked = false;
+                }
+            }
+
             usernameTextBox.Text = Settings.Default.username;
             databaseIPTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
@@ -363,6 +375,23 @@ namespace FRC_Scouting_V2
             MessageBox.Show(
                 "The Username field is used to keep track of who makes changes to any data. This prevents any mischievous changes to data.",
                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void colourTeamComparisonStatisticsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (colourTeamComparisonStatisticsCheckBox.Checked == true)
+            {
+                FRC_Scouting_V2.Properties.Settings.Default.colourTeamComparisonStatistics = true;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
+            else
+            {
+                if (colourTeamComparisonStatisticsCheckBox.Checked == false)
+                {
+                    FRC_Scouting_V2.Properties.Settings.Default.colourTeamComparisonStatistics = false;
+                    FRC_Scouting_V2.Properties.Settings.Default.Save();
+                }
+            }
         }
     }
 }

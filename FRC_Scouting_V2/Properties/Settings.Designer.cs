@@ -214,5 +214,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["showQuestionButtons"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool colourTeamComparisonStatistics {
+            get {
+                return ((bool)(this["colourTeamComparisonStatistics"]));
+            }
+            set {
+                this["colourTeamComparisonStatistics"] = value;
+            }
+        }
     }
 }

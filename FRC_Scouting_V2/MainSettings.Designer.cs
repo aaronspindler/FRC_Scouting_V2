@@ -68,6 +68,8 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
+            this.colourTeamComparisonStatsLabel = new System.Windows.Forms.Label();
+            this.colourTeamComparisonStatisticsCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -200,6 +202,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.Controls.Add(this.colourTeamComparisonStatsLabel, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.showQuestioButtonsLabel, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.allowExportToTextFileCheckBox, 4, 5);
             this.tableLayoutPanel2.Controls.Add(this.exportToTextFileLabel, 0, 5);
@@ -214,6 +217,7 @@
             this.tableLayoutPanel2.Controls.Add(this.minimizeHomeLabel, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.clearConsoleOnToggleCheckBox, 4, 4);
             this.tableLayoutPanel2.Controls.Add(this.showQuestionButtonsCheckBox, 4, 6);
+            this.tableLayoutPanel2.Controls.Add(this.colourTeamComparisonStatisticsCheckBox, 4, 7);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -589,6 +593,31 @@
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
+            // colourTeamComparisonStatsLabel
+            // 
+            this.colourTeamComparisonStatsLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.colourTeamComparisonStatsLabel, 4);
+            this.colourTeamComparisonStatsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.colourTeamComparisonStatsLabel.Location = new System.Drawing.Point(3, 196);
+            this.colourTeamComparisonStatsLabel.Name = "colourTeamComparisonStatsLabel";
+            this.colourTeamComparisonStatsLabel.Size = new System.Drawing.Size(210, 30);
+            this.colourTeamComparisonStatsLabel.TabIndex = 1;
+            this.colourTeamComparisonStatsLabel.Text = "Colour Team Comparison Statistics";
+            this.colourTeamComparisonStatsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // colourTeamComparisonStatisticsCheckBox
+            // 
+            this.colourTeamComparisonStatisticsCheckBox.AutoSize = true;
+            this.colourTeamComparisonStatisticsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.SetColumnSpan(this.colourTeamComparisonStatisticsCheckBox, 4);
+            this.colourTeamComparisonStatisticsCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.colourTeamComparisonStatisticsCheckBox.Location = new System.Drawing.Point(219, 199);
+            this.colourTeamComparisonStatisticsCheckBox.Name = "colourTeamComparisonStatisticsCheckBox";
+            this.colourTeamComparisonStatisticsCheckBox.Size = new System.Drawing.Size(216, 24);
+            this.colourTeamComparisonStatisticsCheckBox.TabIndex = 8;
+            this.colourTeamComparisonStatisticsCheckBox.UseVisualStyleBackColor = true;
+            this.colourTeamComparisonStatisticsCheckBox.CheckedChanged += new System.EventHandler(this.colourTeamComparisonStatisticsCheckBox_CheckedChanged);
+            // 
             // MainSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,5 +687,7 @@
         private System.Windows.Forms.Label showQuestioButtonsLabel;
         private System.Windows.Forms.CheckBox showQuestionButtonsCheckBox;
         private System.Windows.Forms.ToolStripMenuItem howComeICannotConnectToMyDatabaseToolStripMenuItem;
+        private System.Windows.Forms.Label colourTeamComparisonStatsLabel;
+        private System.Windows.Forms.CheckBox colourTeamComparisonStatisticsCheckBox;
     }
 }

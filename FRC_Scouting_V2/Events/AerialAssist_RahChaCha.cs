@@ -457,7 +457,10 @@ namespace FRC_Scouting_V2
 
         public void ColourStats()
         {
-            
+            if (FRC_Scouting_V2.Properties.Settings.Default.colourTeamComparisonStatistics == true)
+            {
+                
+            }
         }
 
         public void ClearColourStats()
