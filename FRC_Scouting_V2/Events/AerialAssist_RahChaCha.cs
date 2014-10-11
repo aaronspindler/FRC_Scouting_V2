@@ -364,7 +364,8 @@ namespace FRC_Scouting_V2
             dataGridViewTeam1.Rows.Add("Total Points","","","");
             dataGridViewTeam1.Rows.Add("Autonomous High", "", "", "");
             dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", "");
-            dataGridViewTeam1.Rows.Add("Autonomous Mobility Rating", "", "", "");
+            dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "");
+            dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "");
             dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
             dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
             dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
@@ -379,7 +380,8 @@ namespace FRC_Scouting_V2
             dataGridViewTeam2.Rows.Add("Total Points", "", "", "");
             dataGridViewTeam2.Rows.Add("Autonomous High", "", "", "");
             dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", "");
-            dataGridViewTeam2.Rows.Add("Autonomous Mobility Rating", "", "", "");
+            dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "");
+            dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "");
             dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
             dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
             dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
