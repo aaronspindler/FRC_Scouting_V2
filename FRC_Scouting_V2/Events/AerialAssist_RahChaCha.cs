@@ -42,41 +42,6 @@ namespace FRC_Scouting_V2
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
-
-        //TeamComparison Variables
-
-        //Ratios and Statistics
-        private double[] TotalPointsMean = new double[2];
-        private double[] TotalPointsSD = new double[2];
-        private double[] AutoHighMean = new double[2];
-        private double[] AutoHighSD = new double[2];
-        private readonly double[] AutoHighGoalSuccessRate = new double[2];
-        private double[] AutoLowMean = new double[2];
-        private double[] AutoLowSD = new double[2];
-        private readonly double[] AutolowGoalSuccessRate = new double[2];
-        double[] AutoMobilitySuccessRate = new double[2];
-        double[] DriverRatingMean = new double[2];
-        double[] ControlledHighMean = new double[2];
-        double[] ControlledHighSuccessRate = new double[2];
-        double[] ControlledLowMean = new double[2];
-        double[] ControlledLowSuccessRate = new double[2];
-        double[] HotGoalMean = new double[2];
-        double[] HotGoalSuccessRate = new double[2];
-        double[] PickupsMean = new double[2];
-        double[] PickupSuccessRate = new double[2];
-        double[] SuccessfulTrussMean = new double[2];
-        double[] TrussSuccessRate = new double[2];
-        double[] Survivability = new double[2];
-        double[] AutoHighStandardDeviation = new double[2];
-        double[] AutoLowStandardDeviation = new double[2];
-        double[] DriverRatingStandardDeviation = new double[2];
-        double[] ControlledHighStandardDeviation = new double[2];
-        double[] ControlledLowStandardDeviation = new double[2];
-        double[] HotGoalStandardDeviation = new double[2];
-        double[] PickupStandardDeviation = new double[2];
-        double[] TrussStandardDeviation = new double[2];
-
-        //Point Values for Scoring
         private const int HIGH_GOAL_VALUE = 10;
         private const int LOW_GOAL_VALUE = 1;
         private const int BALL_CATCH_VALUE = 10;
@@ -84,8 +49,32 @@ namespace FRC_Scouting_V2
         private const int TRIPLE_ASSIST_GOAL_VALUE = 30;
         private const int AUTO_MOBILITY_VALUE = 5;
         private const int AUTO_ADDITIONAL_POINTS_VALUE = 5;
-
-
+        private readonly double[] AutoHighGoalSuccessRate = new double[2];
+        private readonly double[] AutoHighMean = new double[2];
+        private readonly double[] AutoHighStandardDeviation = new double[2];
+        private readonly double[] AutoLowMean = new double[2];
+        private readonly double[] AutoLowStandardDeviation = new double[2];
+        private readonly double[] AutoMobilitySuccessRate = new double[2];
+        private readonly double[] AutolowGoalSuccessRate = new double[2];
+        private readonly double[] ControlledHighMean = new double[2];
+        private readonly double[] ControlledHighStandardDeviation = new double[2];
+        private readonly double[] ControlledHighSuccessRate = new double[2];
+        private readonly double[] ControlledLowMean = new double[2];
+        private readonly double[] ControlledLowStandardDeviation = new double[2];
+        private readonly double[] ControlledLowSuccessRate = new double[2];
+        private readonly double[] DriverRatingMean = new double[2];
+        private readonly double[] DriverRatingStandardDeviation = new double[2];
+        private readonly double[] HotGoalMean = new double[2];
+        private readonly double[] HotGoalStandardDeviation = new double[2];
+        private readonly double[] HotGoalSuccessRate = new double[2];
+        private readonly double[] PickupStandardDeviation = new double[2];
+        private readonly double[] PickupSuccessRate = new double[2];
+        private readonly double[] PickupsMean = new double[2];
+        private readonly double[] SuccessfulTrussMean = new double[2];
+        private readonly double[] Survivability = new double[2];
+        private readonly double[] TotalPointsMean = new double[2];
+        private readonly double[] TrussStandardDeviation = new double[2];
+        private readonly double[] TrussSuccessRate = new double[2];
 
         private readonly string[] teamNameArray =
         {
@@ -106,6 +95,9 @@ namespace FRC_Scouting_V2
         };
 
         private readonly UsefulSnippets us = new UsefulSnippets();
+        private double[] AutoHighSD = new double[2];
+        private double[] AutoLowSD = new double[2];
+        private double[] TotalPointsSD = new double[2];
         private int rookieYear;
         private int selectedTeam1;
         private int selectedTeam2;
@@ -202,7 +194,6 @@ namespace FRC_Scouting_V2
                 }
             }
             us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported + " File(s) Into the Database.");
-
         }
 
         //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)
@@ -219,7 +210,7 @@ namespace FRC_Scouting_V2
                 double sum = values.Sum(d => Math.Pow(d - avg, 2));
 
                 //Put it all together
-                ret = Math.Sqrt((sum) / values.Count() - 1);
+                ret = Math.Sqrt((sum)/values.Count() - 1);
             }
             return ret;
         }
@@ -227,44 +218,45 @@ namespace FRC_Scouting_V2
         public void GetDataForTeam(int teamNumberLocal, int selection)
         {
             int numberOfMatches = 0;
-            List<double> AutoHighGoal = new List<double>();
-            List<double> AutoHighMiss = new List<double>();
-            List<double> AutoLowGoal = new List<double>();
-            List<double> AutoLowMiss = new List<double>();
-            List<double> ControlledHighGoal = new List<double>();
-            List<double> ControlledHighMiss = new List<double>();
-            List<double> ControlledLowGoal = new List<double>();
-            List<double> ControlledLowMiss = new List<double>();
-            List<double> HotGoal = new List<double>();
-            List<double> HotMiss = new List<double>();
-            List<double> TripleAssistGoal = new List<double>();
-            List<double> TripleAssistMiss = new List<double>();
-            List<double> AutoPickup = new List<double>();
-            List<double> AutoPickupMiss = new List<double>();
-            List<double> ControlledPickup = new List<double>();
-            List<double> ControlledPickupMiss = new List<double>();
-            List<double> PickupFromHuman = new List<double>();
-            List<double> MissedPickupFromHuman = new List<double>();
-            List<double> PassToAnotherRobot = new List<double>();
-            List<double> MissedPassToAnotherRobot = new List<double>();
-            List<double> SuccessfulTruss = new List<double>();
-            List<double> UnSuccessfulTruss = new List<double>();
-            List<double> DriverRating = new List<double>();
-            List<double> RobotDied = new List<double>();
-            List<double> AutoMovementGood = new List<double>();
-            List<double> StartingX = new List<double>();
-            List<double> StartingY = new List<double>();
+            var AutoHighGoal = new List<double>();
+            var AutoHighMiss = new List<double>();
+            var AutoLowGoal = new List<double>();
+            var AutoLowMiss = new List<double>();
+            var ControlledHighGoal = new List<double>();
+            var ControlledHighMiss = new List<double>();
+            var ControlledLowGoal = new List<double>();
+            var ControlledLowMiss = new List<double>();
+            var HotGoal = new List<double>();
+            var HotMiss = new List<double>();
+            var TripleAssistGoal = new List<double>();
+            var TripleAssistMiss = new List<double>();
+            var AutoPickup = new List<double>();
+            var AutoPickupMiss = new List<double>();
+            var ControlledPickup = new List<double>();
+            var ControlledPickupMiss = new List<double>();
+            var PickupFromHuman = new List<double>();
+            var MissedPickupFromHuman = new List<double>();
+            var PassToAnotherRobot = new List<double>();
+            var MissedPassToAnotherRobot = new List<double>();
+            var SuccessfulTruss = new List<double>();
+            var UnSuccessfulTruss = new List<double>();
+            var DriverRating = new List<double>();
+            var RobotDied = new List<double>();
+            var AutoMovementGood = new List<double>();
+            var StartingX = new List<double>();
+            var StartingY = new List<double>();
 
             try
             {
-                MySqlConnection conn = new MySqlConnection(us.MakeMySqlConnectionString());
+                var conn = new MySqlConnection(us.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
-                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",FRC_Scouting_V2.Properties.Settings.Default.currentTableName, teamNumberLocal);
+                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",
+                    Settings.Default.currentTableName, teamNumberLocal);
                 conn.Open();
-                if (conn.Ping() == true)
+                if (conn.Ping())
                 {
-                    Console.WriteLine("Connected");
+                    Console.WriteLine("Connected to the databse. Collecting and generating statistics now!");
                 }
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -329,16 +321,21 @@ namespace FRC_Scouting_V2
                     DriverRatingStandardDeviation[0] = CalculateStdDev(DriverRating);
                     ControlledHighMean[0] = ControlledHighGoal.Average();
                     ControlledHighStandardDeviation[0] = CalculateStdDev(ControlledHighGoal);
-                    ControlledHighSuccessRate[0] = ControlledHighGoal.Sum()/(ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
+                    ControlledHighSuccessRate[0] = ControlledHighGoal.Sum()/
+                                                   (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
                     ControlledLowMean[0] = ControlledLowGoal.Average();
                     ControlledLowStandardDeviation[0] = CalculateStdDev(ControlledLowGoal);
-                    ControlledLowSuccessRate[0] = ControlledLowGoal.Sum()/(ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
+                    ControlledLowSuccessRate[0] = ControlledLowGoal.Sum()/
+                                                  (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
                     HotGoalMean[0] = HotGoal.Average();
                     HotGoalStandardDeviation[0] = CalculateStdDev(HotGoal);
                     HotGoalSuccessRate[0] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
                     PickupsMean[0] = (AutoPickup.Average()) + (ControlledPickup.Average()) + (PickupFromHuman.Average());
                     PickupStandardDeviation[0] = CalculateStdDev(ControlledPickup);
-                    PickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/(AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() + AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() + MissedPickupFromHuman.Sum());
+                    PickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
+                                           (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
+                                            AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() +
+                                            MissedPickupFromHuman.Sum());
                     SuccessfulTrussMean[0] = SuccessfulTruss.Average();
                     TrussStandardDeviation[0] = CalculateStdDev(SuccessfulTruss);
                     TrussSuccessRate[0] = SuccessfulTruss.Sum()/(SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
@@ -348,15 +345,24 @@ namespace FRC_Scouting_V2
 
                     //Data Name, Mean, Standard Deviation, Successrate
                     dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
-                    dataGridViewTeam1.Rows.Add("Autonomous High", AutoHighMean[0].ToString("#.##"), AutoHighStandardDeviation[0].ToString("#.##"), AutoHighGoalSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Autonomous Low", AutoLowMean[0].ToString("#.##"), AutoLowStandardDeviation[0].ToString("#.##"), AutolowGoalSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Autonomous Mobility", "N/A", "N/A", AutoMobilitySuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Driver Rating", DriverRatingMean[0].ToString("#.##"), DriverRatingStandardDeviation[0].ToString("#.##"), "N/A");
-                    dataGridViewTeam1.Rows.Add("Controlled High", ControlledHighMean[0].ToString("#.##"), ControlledHighStandardDeviation[0].ToString("#.##"), ControlledHighSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Controlled Low", ControlledLowMean[0].ToString("#.##"), ControlledLowStandardDeviation[0].ToString("#.##"), ControlledLowSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Hot Goal", HotGoalMean[0].ToString("#.##"), HotGoalStandardDeviation[0].ToString("#.##"), HotGoalSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Pickups", PickupsMean[0].ToString("#.##"), PickupStandardDeviation[0].ToString("#.##"), PickupSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Truss", SuccessfulTrussMean[0].ToString("#.##"), TrussStandardDeviation[0].ToString("#.##"), TrussSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Autonomous High", AutoHighMean[0].ToString("#.##"),
+                        AutoHighStandardDeviation[0].ToString("#.##"), AutoHighGoalSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Autonomous Low", AutoLowMean[0].ToString("#.##"),
+                        AutoLowStandardDeviation[0].ToString("#.##"), AutolowGoalSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Autonomous Mobility", "N/A", "N/A",
+                        AutoMobilitySuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Driver Rating", DriverRatingMean[0].ToString("#.##"),
+                        DriverRatingStandardDeviation[0].ToString("#.##"), "N/A");
+                    dataGridViewTeam1.Rows.Add("Controlled High", ControlledHighMean[0].ToString("#.##"),
+                        ControlledHighStandardDeviation[0].ToString("#.##"), ControlledHighSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Controlled Low", ControlledLowMean[0].ToString("#.##"),
+                        ControlledLowStandardDeviation[0].ToString("#.##"), ControlledLowSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Hot Goal", HotGoalMean[0].ToString("#.##"),
+                        HotGoalStandardDeviation[0].ToString("#.##"), HotGoalSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Pickups", PickupsMean[0].ToString("#.##"),
+                        PickupStandardDeviation[0].ToString("#.##"), PickupSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Truss", SuccessfulTrussMean[0].ToString("#.##"),
+                        TrussStandardDeviation[0].ToString("#.##"), TrussSuccessRate[0].ToString("P"));
                     dataGridViewTeam1.Rows.Add("Survivability", "N/A", "N/A", Survivability[0].ToString("P"));
                 }
                 catch (Exception e)
@@ -375,43 +381,60 @@ namespace FRC_Scouting_V2
                     {
                         AutoHighMean[1] = AutoHighGoal.Average();
                         AutoHighStandardDeviation[1] = CalculateStdDev(AutoHighGoal);
-                        AutoHighGoalSuccessRate[1] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
+                        AutoHighGoalSuccessRate[1] = AutoHighGoal.Sum()/(AutoHighGoal.Sum() + AutoHighMiss.Sum());
                         AutoLowMean[1] = AutoLowGoal.Average();
                         AutoLowStandardDeviation[1] = CalculateStdDev(AutoLowGoal);
-                        AutolowGoalSuccessRate[1] = AutoLowGoal.Sum() / (AutoLowGoal.Sum() + AutoLowMiss.Sum());
-                        AutoMobilitySuccessRate[1] = AutoMovementGood.Sum() / (numberOfMatches);
+                        AutolowGoalSuccessRate[1] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
+                        AutoMobilitySuccessRate[1] = AutoMovementGood.Sum()/(numberOfMatches);
                         DriverRatingMean[1] = DriverRating.Average();
                         DriverRatingStandardDeviation[1] = CalculateStdDev(DriverRating);
                         ControlledHighMean[1] = ControlledHighGoal.Average();
                         ControlledHighStandardDeviation[1] = CalculateStdDev(ControlledHighGoal);
-                        ControlledHighSuccessRate[1] = ControlledHighGoal.Sum() / (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
+                        ControlledHighSuccessRate[1] = ControlledHighGoal.Sum()/
+                                                       (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
                         ControlledLowMean[1] = ControlledLowGoal.Average();
                         ControlledLowStandardDeviation[1] = CalculateStdDev(ControlledLowGoal);
-                        ControlledLowSuccessRate[1] = ControlledLowGoal.Sum() / (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
+                        ControlledLowSuccessRate[1] = ControlledLowGoal.Sum()/
+                                                      (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
                         HotGoalMean[1] = HotGoal.Average();
                         HotGoalStandardDeviation[1] = CalculateStdDev(HotGoal);
-                        HotGoalSuccessRate[1] = HotGoal.Sum() / (HotGoal.Sum() + HotMiss.Sum());
-                        PickupsMean[1] = (AutoPickup.Average()) + (ControlledPickup.Average()) + (PickupFromHuman.Average());
+                        HotGoalSuccessRate[1] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
+                        PickupsMean[1] = (AutoPickup.Average()) + (ControlledPickup.Average()) +
+                                         (PickupFromHuman.Average());
                         PickupStandardDeviation[1] = CalculateStdDev(ControlledPickup);
-                        PickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum()) / (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() + AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() + MissedPickupFromHuman.Sum());
+                        PickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
+                                               (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
+                                                AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() +
+                                                MissedPickupFromHuman.Sum());
                         SuccessfulTrussMean[1] = SuccessfulTruss.Average();
                         TrussStandardDeviation[1] = CalculateStdDev(SuccessfulTruss);
-                        TrussSuccessRate[1] = SuccessfulTruss.Sum() / (SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
-                        Survivability[1] = numberOfMatches / (numberOfMatches + RobotDied.Sum());
+                        TrussSuccessRate[1] = SuccessfulTruss.Sum()/(SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
+                        Survivability[1] = numberOfMatches/(numberOfMatches + RobotDied.Sum());
 
                         dataGridViewTeam2.Rows.Clear();
 
                         //Data Name, Mean, Standard Deviation, Successrate
                         dataGridViewTeam2.Rows.Add("Total Points", TotalPointsMean[1].ToString("#.##"), "", "N/A");
-                        dataGridViewTeam2.Rows.Add("Autonomous High", AutoHighMean[1].ToString("#.##"), AutoHighStandardDeviation[1].ToString("#.##"), AutoHighGoalSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Autonomous Low", AutoLowMean[1].ToString("#.##"), AutoLowStandardDeviation[1].ToString("#.##"), AutolowGoalSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Autonomous Mobility", "N/A", "N/A", AutoMobilitySuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Driver Rating", DriverRatingMean[1].ToString("#.##"), DriverRatingStandardDeviation[1].ToString("#.##"), "N/A");
-                        dataGridViewTeam2.Rows.Add("Controlled High", ControlledHighMean[1].ToString("#.##"), ControlledHighStandardDeviation[1].ToString("#.##"), ControlledHighSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Controlled Low", ControlledLowMean[1].ToString("#.##"), ControlledLowStandardDeviation[1].ToString("#.##"), ControlledLowSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Hot Goal", HotGoalMean[1].ToString("#.##"), HotGoalStandardDeviation[1].ToString("#.##"), HotGoalSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Pickups", PickupsMean[1].ToString("#.##"), PickupStandardDeviation[1].ToString("#.##"), PickupSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Truss", SuccessfulTrussMean[1].ToString("#.##"), TrussStandardDeviation[1].ToString("#.##"), TrussSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Autonomous High", AutoHighMean[1].ToString("#.##"),
+                            AutoHighStandardDeviation[1].ToString("#.##"), AutoHighGoalSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Autonomous Low", AutoLowMean[1].ToString("#.##"),
+                            AutoLowStandardDeviation[1].ToString("#.##"), AutolowGoalSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Autonomous Mobility", "N/A", "N/A",
+                            AutoMobilitySuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Driver Rating", DriverRatingMean[1].ToString("#.##"),
+                            DriverRatingStandardDeviation[1].ToString("#.##"), "N/A");
+                        dataGridViewTeam2.Rows.Add("Controlled High", ControlledHighMean[1].ToString("#.##"),
+                            ControlledHighStandardDeviation[1].ToString("#.##"),
+                            ControlledHighSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Controlled Low", ControlledLowMean[1].ToString("#.##"),
+                            ControlledLowStandardDeviation[1].ToString("#.##"),
+                            ControlledLowSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Hot Goal", HotGoalMean[1].ToString("#.##"),
+                            HotGoalStandardDeviation[1].ToString("#.##"), HotGoalSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Pickups", PickupsMean[1].ToString("#.##"),
+                            PickupStandardDeviation[1].ToString("#.##"), PickupSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Truss", SuccessfulTrussMean[1].ToString("#.##"),
+                            TrussStandardDeviation[1].ToString("#.##"), TrussSuccessRate[1].ToString("P"));
                         dataGridViewTeam2.Rows.Add("Survivability", "N/A", "N/A", Survivability[1].ToString("P"));
                     }
                     catch (Exception e)
@@ -423,7 +446,6 @@ namespace FRC_Scouting_V2
                     }
                 }
             }
-
         }
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
