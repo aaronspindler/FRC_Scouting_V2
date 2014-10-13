@@ -342,19 +342,34 @@ namespace FRC_Scouting_V2
                         AutoHighGoalSuccessRate[1] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
                         AutoLowMean[1] = AutoLowGoal.Average();
                         AutolowGoalSuccessRate[1] = AutoLowGoal.Sum() / (AutoLowGoal.Sum() + AutoLowMiss.Sum());
+                        AutoMobilitySuccessRate[1] = AutoMovementGood.Sum() / (numberOfMatches);
+                        DriverRatingMean[1] = DriverRating.Average();
+                        ControlledHighMean[1] = ControlledHighGoal.Average();
+                        ControlledHighSuccessRate[1] = ControlledHighGoal.Sum() / (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
+                        ControlledLowMean[1] = ControlledLowGoal.Average();
+                        ControlledLowSuccessRate[1] = ControlledLowGoal.Sum() / (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
+                        HotGoalMean[1] = HotGoal.Average();
+                        HotGoalSuccessRate[1] = HotGoal.Sum() / (HotGoal.Sum() + HotMiss.Sum());
+                        PickupsMean[1] = (AutoPickup.Average()) + (ControlledPickup.Average()) + (PickupFromHuman.Average());
+                        PickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum()) / (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() + AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() + MissedPickupFromHuman.Sum());
+                        SuccessfulTrussMean[1] = SuccessfulTruss.Average();
+                        TrussSuccessRate[1] = SuccessfulTruss.Sum() / (SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
+                        Survivability[1] = numberOfMatches / (numberOfMatches + RobotDied.Sum());
+
                         dataGridViewTeam2.Rows.Clear();
+
                         //Data Name, Mean, Standard Deviation, Successrate
                         dataGridViewTeam2.Rows.Add("Total Points", TotalPointsMean[1].ToString("#.##"), "", "N/A");
                         dataGridViewTeam2.Rows.Add("Autonomous High", AutoHighMean[1].ToString("#.##"), "", AutoHighGoalSuccessRate[1].ToString("P"));
                         dataGridViewTeam2.Rows.Add("Autonomous Low", AutoLowMean[1].ToString("#.##"), "", AutolowGoalSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "N/A");
-                        dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "N/A");
-                        dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
-                        dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
-                        dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
-                        dataGridViewTeam2.Rows.Add("Pickups", "", "", "");
-                        dataGridViewTeam2.Rows.Add("Truss", "", "", "");
-                        dataGridViewTeam2.Rows.Add("Survivability", "", "", "");
+                        dataGridViewTeam2.Rows.Add("Autonomous Mobility", "N/A", "N/A", AutoMobilitySuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Driver Rating", DriverRatingMean[1].ToString("#.##"), "", "N/A");
+                        dataGridViewTeam2.Rows.Add("Controlled High", ControlledHighMean[1].ToString("#.##"), "", ControlledHighSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Controlled Low", ControlledLowMean[1].ToString("#.##"), "", ControlledLowSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Hot Goal", HotGoalMean[1].ToString("#.##"), "", HotGoalSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Pickups", PickupsMean[1].ToString("#.##"), "", PickupSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Truss", SuccessfulTrussMean[1].ToString("#.##"), "", TrussSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Survivability", "N/A", "N/A", Survivability[1].ToString("P"));
                     }
                     catch (Exception e)
                     {
