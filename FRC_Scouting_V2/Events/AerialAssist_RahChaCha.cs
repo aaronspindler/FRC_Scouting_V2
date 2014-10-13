@@ -186,33 +186,33 @@ namespace FRC_Scouting_V2
 
         public void GetDataForTeam(int teamNumberLocal, int selection)
         {
-            List<int> AutoHighGoal = new List<int>();
-            List<int> AutoHighMiss = new List<int>();
-            List<int> AutoLowGoal = new List<int>();
-            List<int> AutoLowMiss = new List<int>();
-            List<int> ControlledHighGoal = new List<int>();
-            List<int> ControlledHighMiss = new List<int>();
-            List<int> ControlledLowGoal = new List<int>();
-            List<int> ControlledLowMiss = new List<int>();
-            List<int> HotGoal = new List<int>();
-            List<int> HotMiss = new List<int>();
-            List<int> TripleAssistGoal = new List<int>();
-            List<int> TripleAssistMiss = new List<int>();
-            List<int> AutoPickup = new List<int>();
-            List<int> AutoPickupMiss = new List<int>();
-            List<int> ControlledPickup = new List<int>();
-            List<int> ControlledPickupMiss = new List<int>();
-            List<int> PickupFromHuman = new List<int>();
-            List<int> MissedPickupFromHuman = new List<int>();
-            List<int> PassToAnotherRobot = new List<int>();
-            List<int> MissedPassToAnotherRobot = new List<int>();
-            List<int> SuccessfulTruss = new List<int>();
-            List<int> UnSuccessfulTruss = new List<int>();
-            List<int> DriverRating = new List<int>();
-            List<int> RobotDied = new List<int>();
-            List<int> AutoMovement = new List<int>();
-            List<int> StartingX = new List<int>();
-            List<int> StartingY = new List<int>();
+            List<double> AutoHighGoal = new List<double>();
+            List<double> AutoHighMiss = new List<double>();
+            List<double> AutoLowGoal = new List<double>();
+            List<double> AutoLowMiss = new List<double>();
+            List<double> ControlledHighGoal = new List<double>();
+            List<double> ControlledHighMiss = new List<double>();
+            List<double> ControlledLowGoal = new List<double>();
+            List<double> ControlledLowMiss = new List<double>();
+            List<double> HotGoal = new List<double>();
+            List<double> HotMiss = new List<double>();
+            List<double> TripleAssistGoal = new List<double>();
+            List<double> TripleAssistMiss = new List<double>();
+            List<double> AutoPickup = new List<double>();
+            List<double> AutoPickupMiss = new List<double>();
+            List<double> ControlledPickup = new List<double>();
+            List<double> ControlledPickupMiss = new List<double>();
+            List<double> PickupFromHuman = new List<double>();
+            List<double> MissedPickupFromHuman = new List<double>();
+            List<double> PassToAnotherRobot = new List<double>();
+            List<double> MissedPassToAnotherRobot = new List<double>();
+            List<double> SuccessfulTruss = new List<double>();
+            List<double> UnSuccessfulTruss = new List<double>();
+            List<double> DriverRating = new List<double>();
+            List<double> RobotDied = new List<double>();
+            List<double> AutoMovement = new List<double>();
+            List<double> StartingX = new List<double>();
+            List<double> StartingY = new List<double>();
 
             try
             {
@@ -228,33 +228,33 @@ namespace FRC_Scouting_V2
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    AutoHighGoal.Add(Convert.ToInt32(reader["AutoHighGoal"]));
-                    AutoHighMiss.Add(Convert.ToInt32(reader["AutoHighMiss"]));
-                    AutoLowGoal.Add(Convert.ToInt32(reader["AutoLowGoal"]));
-                    AutoLowMiss.Add(Convert.ToInt32(reader["AutoLowMiss"]));
-                    ControlledHighGoal.Add(Convert.ToInt32(reader["ControlledHighGoal"]));
-                    ControlledHighMiss.Add(Convert.ToInt32(reader["ControlledHighMiss"]));
-                    ControlledLowGoal.Add(Convert.ToInt32(reader["ControlledLowGoal"]));
-                    ControlledLowMiss.Add(Convert.ToInt32(reader["ControlledLowMiss"]));
-                    HotGoal.Add(Convert.ToInt32(reader["HotGoals"]));
-                    HotMiss.Add(Convert.ToInt32(reader["HotGoalMiss"]));
-                    TripleAssistGoal.Add(Convert.ToInt32(reader["3AssistGoal"]));
-                    TripleAssistMiss.Add(Convert.ToInt32(reader["3AssistMiss"]));
-                    AutoPickup.Add(Convert.ToInt32(reader["AutoBallPickup"]));
-                    AutoPickupMiss.Add(Convert.ToInt32(reader["AutoBallPickupMiss"]));
-                    ControlledPickup.Add(Convert.ToInt32(reader["ControlledBallPickup"]));
-                    ControlledPickupMiss.Add(Convert.ToInt32(reader["ControlledBallPickupMiss"]));
-                    PickupFromHuman.Add(Convert.ToInt32(reader["PickupFromHuman"]));
-                    MissedPickupFromHuman.Add(Convert.ToInt32(reader["MissedPickupFromHuman"]));
-                    PassToAnotherRobot.Add(Convert.ToInt32(reader["PassToAnotherRobot"]));
-                    MissedPassToAnotherRobot.Add(Convert.ToInt32(reader["MissedPassToAnotherRobot"]));
-                    SuccessfulTruss.Add(Convert.ToInt32(reader["SuccessfulTruss"]));
-                    UnSuccessfulTruss.Add(Convert.ToInt32(reader["UnsuccessfulTruss"]));
-                    DriverRating.Add(Convert.ToInt32(reader["DriverRating"]));
-                    RobotDied.Add(Convert.ToInt32(reader["DidRobotDie"]));
-                    AutoMovement.Add(Convert.ToInt32(reader["AutoMovement"]));
-                    StartingX.Add(Convert.ToInt32(reader["StartingX"]));
-                    StartingY.Add(Convert.ToInt32(reader["StartingY"]));
+                    AutoHighGoal.Add(Convert.ToDouble(reader["AutoHighGoal"]));
+                    AutoHighMiss.Add(Convert.ToDouble(reader["AutoHighMiss"]));
+                    AutoLowGoal.Add(Convert.ToDouble(reader["AutoLowGoal"]));
+                    AutoLowMiss.Add(Convert.ToDouble(reader["AutoLowMiss"]));
+                    ControlledHighGoal.Add(Convert.ToDouble(reader["ControlledHighGoal"]));
+                    ControlledHighMiss.Add(Convert.ToDouble(reader["ControlledHighMiss"]));
+                    ControlledLowGoal.Add(Convert.ToDouble(reader["ControlledLowGoal"]));
+                    ControlledLowMiss.Add(Convert.ToDouble(reader["ControlledLowMiss"]));
+                    HotGoal.Add(Convert.ToDouble(reader["HotGoals"]));
+                    HotMiss.Add(Convert.ToDouble(reader["HotGoalMiss"]));
+                    TripleAssistGoal.Add(Convert.ToDouble(reader["3AssistGoal"]));
+                    TripleAssistMiss.Add(Convert.ToDouble(reader["3AssistMiss"]));
+                    AutoPickup.Add(Convert.ToDouble(reader["AutoBallPickup"]));
+                    AutoPickupMiss.Add(Convert.ToDouble(reader["AutoBallPickupMiss"]));
+                    ControlledPickup.Add(Convert.ToDouble(reader["ControlledBallPickup"]));
+                    ControlledPickupMiss.Add(Convert.ToDouble(reader["ControlledBallPickupMiss"]));
+                    PickupFromHuman.Add(Convert.ToDouble(reader["PickupFromHuman"]));
+                    MissedPickupFromHuman.Add(Convert.ToDouble(reader["MissedPickupFromHuman"]));
+                    PassToAnotherRobot.Add(Convert.ToDouble(reader["PassToAnotherRobot"]));
+                    MissedPassToAnotherRobot.Add(Convert.ToDouble(reader["MissedPassToAnotherRobot"]));
+                    SuccessfulTruss.Add(Convert.ToDouble(reader["SuccessfulTruss"]));
+                    UnSuccessfulTruss.Add(Convert.ToDouble(reader["UnsuccessfulTruss"]));
+                    DriverRating.Add(Convert.ToDouble(reader["DriverRating"]));
+                    RobotDied.Add(Convert.ToDouble(reader["DidRobotDie"]));
+                    AutoMovement.Add(Convert.ToDouble(reader["AutoMovement"]));
+                    StartingX.Add(Convert.ToDouble(reader["StartingX"]));
+                    StartingY.Add(Convert.ToDouble(reader["StartingY"]));
                 }
                 conn.Close();
             }
@@ -269,6 +269,7 @@ namespace FRC_Scouting_V2
                 try
                 {
                     AutoHighMean[0] = AutoHighGoal.Average();
+                    AutoHighGoalSuccessRate[0] = AutoHighGoal.Sum()/(AutoHighGoal.Sum() + AutoHighMiss.Sum());
                     dataGridViewTeam1.Rows.Clear();
                     //Data Name, Mean, Standard Deviation, Successrate
                     dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
@@ -295,6 +296,7 @@ namespace FRC_Scouting_V2
                     try
                     {
                         AutoHighMean[1] = AutoHighGoal.Average();
+                        AutoHighGoalSuccessRate[1] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
                         dataGridViewTeam2.Rows.Clear();
                         //Data Name, Mean, Standard Deviation, Successrate
                         dataGridViewTeam2.Rows.Add("Total Points", "", "", "N/A");
