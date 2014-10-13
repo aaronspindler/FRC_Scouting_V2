@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -66,17 +67,28 @@ namespace FRC_Scouting_V2
         private readonly double[] TripleGoal = new double[2];
         private readonly double[] TripleMiss = new double[2];
         private readonly double[] UnSuccessfulTruss = new double[2];
-        private readonly int[] numberOfMatches = new int[2];
+        private readonly int[] NumberOfMatches = new int[2];
+        double[] TotalPoints = new double[2];
 
         //Ratios and Statistics
         private double[] TotalPointsMean = new double[2];
-        double[] TotalPointsSD = new double[2];
-        double[] AutoHighMean = new double[2];
-        double[] AutoHighSD = new double[2];
-        private double[] AutoHighGoalSuccessRate = new double[2];
+        private double[] TotalPointsSD = new double[2];
+        private double[] AutoHighMean = new double[2];
+        private double[] AutoHighSD = new double[2];
+        private readonly double[] AutoHighGoalSuccessRate = new double[2];
         private double[] AutoLowMean = new double[2];
         private double[] AutoLowSD = new double[2];
-        double[] AutolowGoalSuccessRate = new double[2];
+        private readonly double[] AutolowGoalSuccessRate = new double[2];
+
+        //Point Values for Scoring
+        private const int HIGH_GOAL_VALUE = 10;
+        private const int LOW_GOAL_VALUE = 1;
+        private const int BALL_CATCH_VALUE = 10;
+        private const int TRUSS_VALUE = 10;
+        private const int TRIPLE_ASSIST_GOAL_VALUE = 30;
+        private const int AUTO_MOBILITY_VALUE = 5;
+        private const int AUTO_ADDITIONAL_POINTS_VALUE = 5;
+
 
 
         private readonly string[] teamNameArray =
@@ -199,7 +211,7 @@ namespace FRC_Scouting_V2
 
         public void UpdateTeamComparison1()
         {
-            numberOfMatches[0] = 0;
+            NumberOfMatches[0] = 0;
             AutoHighGoalTotal[0] = 0;
             AutoHighMissTotal[0] = 0;
             AutoLowGoalTotal[0] = 0;
@@ -235,7 +247,7 @@ namespace FRC_Scouting_V2
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    numberOfMatches[0] ++;
+                    NumberOfMatches[0] ++;
                     AutoHighGoalTotal[0] = AutoHighGoalTotal[0] + Convert.ToDouble(reader["AutoHighGoal"]);
                     AutoHighMissTotal[0] = AutoHighMissTotal[0] + Convert.ToDouble(reader["AutoHighMiss"]);
                     AutoLowGoalTotal[0] = AutoLowGoalTotal[0] + Convert.ToDouble(reader["AutoLowGoal"]);
@@ -283,14 +295,45 @@ namespace FRC_Scouting_V2
                 Console.WriteLine(e.ErrorCode);
                 Console.WriteLine(e.Message);
             }
+            TotalPoints[0] = (((AutoHighGoalTotal[0] + AutoLowGoalTotal[0])*AUTO_ADDITIONAL_POINTS_VALUE) + (AutoLowGoalTotal[0] * LOW_GOAL_VALUE) + (AutoHighGoalTotal[0] * HIGH_GOAL_VALUE) + (SuccessfulTruss[0] * TRUSS_VALUE) + (TripleGoal[0] * TRIPLE_ASSIST_GOAL_VALUE));
+            TotalPointsMean[0] = TotalPoints[0] / NumberOfMatches[0];
             AutoHighGoalSuccessRate[0] = AutoHighGoalTotal[0]/(AutoHighGoalTotal[0] + AutoHighMissTotal[0]);
             AutolowGoalSuccessRate[0] = AutoLowGoalTotal[0] / (AutoLowGoalTotal[0] + AutoLowMissTotal[0]);
             DisplayDataTeam1();
         }
 
+        public void GetDataForTeam(int teamNumber, int selection)
+        {
+            List<int> AutoHighGoal = new List<int>();
+            List<int> AutoHighMiss = new List<int>();
+            List<int> AutoLowGoal = new List<int>();
+            List<int> AutoLowMiss = new List<int>();
+            List<int> ControlledHighGoal = new List<int>();
+            List<int> ControlledHighMiss = new List<int>();
+            List<int> ControlledLowGoal = new List<int>();
+            List<int> ControlledLowMiss = new List<int>();
+            List<int> HotGoal = new List<int>();
+            List<int> HotMiss = new List<int>();
+            List<int> TripleAssistGoal = new List<int>();
+            List<int> TripleAssistMiss = new List<int>();
+            List<int> AutoPickup = new List<int>();
+            List<int> AutoPickupMiss = new List<int>();
+            List<int> ControlledPickup = new List<int>();
+            List<int> ControlledPickupMiss = new List<int>();
+            List<int> PickupFromHuman = new List<int>();
+            List<int> MissedPickupFromHuman = new List<int>();
+            List<int> PassToAnotherRobot = new List<int>();
+            List<int> MissedPassToAnotherRobot = new List<int>();
+            List<int> SuccessfulTruss = new List<int>();
+            List<int> UnSuccessfulTruss = new List<int>();
+            List<int> DriverRating = new List<int>();
+            List<int> RobotDied = new List<int>();
+            List<int> AutoMovement = new List<int>();
+        }
+
         public void UpdateTeamComparison2()
         {
-            numberOfMatches[1] = 0;
+            NumberOfMatches[1] = 0;
             AutoHighGoalTotal[1] = 0;
             AutoHighMissTotal[1] = 0;
             AutoLowGoalTotal[1] = 0;
@@ -326,7 +369,7 @@ namespace FRC_Scouting_V2
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    numberOfMatches[1]++;
+                    NumberOfMatches[1]++;
                     AutoHighGoalTotal[1] = AutoHighGoalTotal[1] + Convert.ToDouble(reader["AutoHighGoal"]);
                     AutoHighMissTotal[1] = AutoHighMissTotal[1] + Convert.ToDouble(reader["AutoHighMiss"]);
                     AutoLowGoalTotal[1] = AutoLowGoalTotal[1] + Convert.ToDouble(reader["AutoLowGoal"]);
@@ -374,6 +417,7 @@ namespace FRC_Scouting_V2
                 Console.WriteLine(e.ErrorCode);
                 Console.WriteLine(e.Message);
             }
+            TotalPointsMean[1] = TotalPoints[1]/NumberOfMatches[1];
             AutoHighGoalSuccessRate[1] = AutoHighGoalTotal[1] / (AutoHighGoalTotal[1] + AutoHighMissTotal[1]);
             AutolowGoalSuccessRate[1] = AutoLowGoalTotal[1] / (AutoLowGoalTotal[1] + AutoLowMissTotal[1]);
             DisplayDataTeam2();
@@ -383,7 +427,7 @@ namespace FRC_Scouting_V2
         {
             dataGridViewTeam1.Rows.Clear();
             //Data Name, Mean, Standard Deviation, Successrate
-            dataGridViewTeam1.Rows.Add("Total Points", "", "", "N/A");
+            dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
             dataGridViewTeam1.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[0].ToString("P"));
             dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[0].ToString("P"));
             dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "N/A");
