@@ -221,7 +221,9 @@ namespace FRC_Scouting_V2
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    
+                    AutoHighGoal.Add(Convert.ToInt32(reader["AutoHighGoal"]));
+                    AutoHighMiss.Add(Convert.ToInt32(reader["AutoHighMiss"]));
+                    AutoLowGoal.Add(Convert.ToInt32(reader["AutoHighGoal"]));
                 }
                 conn.Close();
             }
