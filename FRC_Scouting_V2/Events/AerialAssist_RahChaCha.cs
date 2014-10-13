@@ -43,32 +43,6 @@ namespace FRC_Scouting_V2
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
 
         //TeamComparison Variables
-        private readonly double[] AutoHighGoalTotal = new double[2];
-        private readonly double[] AutoHighMissTotal = new double[2];
-        private readonly double[] AutoLowGoalTotal = new double[2];
-        private readonly double[] AutoLowMissTotal = new double[2];
-        private readonly double[] AutoPickup = new double[2];
-        private readonly double[] AutoPickupMiss = new double[2];
-        private readonly double[] ControlledHighGoalTotal = new double[2];
-        private readonly double[] ControlledHighMissTotal = new double[2];
-        private readonly double[] ControlledLowGoalTotal = new double[2];
-        private readonly double[] ControlledLowMissTotal = new double[2];
-        private readonly double[] ControlledPickup = new double[2];
-        private readonly double[] ControlledPickupMiss = new double[2];
-        private readonly double[] HotGoalTotal = new double[2];
-        private readonly double[] HotMissTotal = new double[2];
-        private readonly double[] MissedPassToAnotherRobot = new double[2];
-        private readonly double[] MissedPickupFromHuman = new double[2];
-        private readonly double[] PassToAnotherRobot = new double[2];
-        private readonly double[] PickupFromHuman = new double[2];
-        private readonly double[] RobotDied = new double[2];
-        private readonly double[] RobotSurvived = new double[2];
-        private readonly double[] SuccessfulTruss = new double[2];
-        private readonly double[] TripleGoal = new double[2];
-        private readonly double[] TripleMiss = new double[2];
-        private readonly double[] UnSuccessfulTruss = new double[2];
-        private readonly int[] NumberOfMatches = new int[2];
-        double[] TotalPoints = new double[2];
 
         //Ratios and Statistics
         private double[] TotalPointsMean = new double[2];
@@ -209,100 +183,7 @@ namespace FRC_Scouting_V2
 
         }
 
-        public void UpdateTeamComparison1()
-        {
-            NumberOfMatches[0] = 0;
-            AutoHighGoalTotal[0] = 0;
-            AutoHighMissTotal[0] = 0;
-            AutoLowGoalTotal[0] = 0;
-            AutoLowMissTotal[0] = 0;
-            ControlledHighGoalTotal[0] = 0;
-            ControlledHighMissTotal[0] = 0;
-            ControlledLowGoalTotal[0] = 0;
-            ControlledLowMissTotal[0] = 0;
-            HotGoalTotal[0] = 0;
-            HotMissTotal[0] = 0;
-            TripleGoal[0] = 0;
-            TripleMiss[0] = 0;
-            AutoPickup[0] = 0;
-            AutoPickupMiss[0] = 0;
-            ControlledPickup[0] = 0;
-            ControlledPickupMiss[0] = 0;
-            PickupFromHuman[0] = 0;
-            MissedPickupFromHuman[0] = 0;
-            PassToAnotherRobot[0] = 0;
-            MissedPassToAnotherRobot[0] = 0;
-            SuccessfulTruss[0] = 0;
-            UnSuccessfulTruss[0] = 0;
-            RobotSurvived[0] = 0;
-            RobotDied[0] = 0;
-            try
-            {
-                string mySqlConnectionString = us.MakeMySqlConnectionString();
-                var conn = new MySqlConnection(mySqlConnectionString);
-                MySqlCommand cmd = conn.CreateCommand();
-                conn.Open();
-                cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
-                    Settings.Default.currentTableName, selectedTeam1);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    NumberOfMatches[0] ++;
-                    AutoHighGoalTotal[0] = AutoHighGoalTotal[0] + Convert.ToDouble(reader["AutoHighGoal"]);
-                    AutoHighMissTotal[0] = AutoHighMissTotal[0] + Convert.ToDouble(reader["AutoHighMiss"]);
-                    AutoLowGoalTotal[0] = AutoLowGoalTotal[0] + Convert.ToDouble(reader["AutoLowGoal"]);
-                    AutoLowMissTotal[0] = AutoLowMissTotal[0] + Convert.ToDouble(reader["AutoLowMiss"]);
-                    ControlledHighGoalTotal[0] = ControlledHighGoalTotal[0] +
-                                                 Convert.ToDouble(reader["ControlledHighGoal"]);
-                    ControlledHighMissTotal[0] = ControlledHighMissTotal[0] +
-                                                 Convert.ToDouble(reader["ControlledHighMiss"]);
-                    ControlledLowGoalTotal[0] = ControlledLowGoalTotal[0] +
-                                                Convert.ToDouble(reader["ControlledLowGoal"]);
-                    ControlledLowMissTotal[0] = ControlledLowMissTotal[0] +
-                                                Convert.ToDouble(reader["ControlledLowMiss"]);
-                    HotGoalTotal[0] = HotGoalTotal[0] + Convert.ToDouble(reader["HotGoals"]);
-                    HotMissTotal[0] = HotMissTotal[0] + Convert.ToDouble(reader["HotGoalMiss"]);
-                    TripleGoal[0] = TripleGoal[0] + Convert.ToDouble(reader["3AssistGoal"]);
-                    TripleMiss[0] = TripleMiss[0] + Convert.ToDouble(reader["3AssistMiss"]);
-                    AutoPickup[0] = AutoPickup[0] + Convert.ToDouble(reader["AutoBallPickup"]);
-                    AutoPickupMiss[0] = AutoPickupMiss[0] + Convert.ToDouble(reader["AutoBallPickupMiss"]);
-                    ControlledPickup[0] = ControlledPickup[0] + Convert.ToDouble(reader["ControlledBallPickup"]);
-                    ControlledPickupMiss[0] = ControlledPickupMiss[0] +
-                                              Convert.ToDouble(reader["ControlledBallPickupMiss"]);
-                    PickupFromHuman[0] = PickupFromHuman[0] + Convert.ToDouble(reader["PickupFromHuman"]);
-                    MissedPickupFromHuman[0] = MissedPickupFromHuman[0] +
-                                               Convert.ToDouble(reader["MissedPickupFromHuman"]);
-                    PassToAnotherRobot[0] = PassToAnotherRobot[0] + Convert.ToDouble(reader["PassToAnotherRobot"]);
-                    MissedPassToAnotherRobot[0] = MissedPassToAnotherRobot[0] +
-                                                  Convert.ToDouble(reader["MissedPassToAnotherRobot"]);
-                    SuccessfulTruss[0] = SuccessfulTruss[0] + Convert.ToDouble(reader["SuccessfulTruss"]);
-                    UnSuccessfulTruss[0] = UnSuccessfulTruss[0] + Convert.ToDouble(reader["UnsuccessfulTruss"]);
-                    switch (Convert.ToInt32(reader["DidRobotDie"]))
-                    {
-                        case 0:
-                            RobotSurvived[0] = RobotSurvived[0] + 1;
-                            break;
-
-                        case 1:
-                            RobotDied[0] = RobotDied[0] + 1;
-                            break;
-                    }
-                }
-                reader.Close();
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine(e.ErrorCode);
-                Console.WriteLine(e.Message);
-            }
-            TotalPoints[0] = (((AutoHighGoalTotal[0] + AutoLowGoalTotal[0])*AUTO_ADDITIONAL_POINTS_VALUE) + (AutoLowGoalTotal[0] * LOW_GOAL_VALUE) + (AutoHighGoalTotal[0] * HIGH_GOAL_VALUE) + (SuccessfulTruss[0] * TRUSS_VALUE) + (TripleGoal[0] * TRIPLE_ASSIST_GOAL_VALUE));
-            TotalPointsMean[0] = TotalPoints[0] / NumberOfMatches[0];
-            AutoHighGoalSuccessRate[0] = AutoHighGoalTotal[0]/(AutoHighGoalTotal[0] + AutoHighMissTotal[0]);
-            AutolowGoalSuccessRate[0] = AutoLowGoalTotal[0] / (AutoLowGoalTotal[0] + AutoLowMissTotal[0]);
-            DisplayDataTeam1();
-        }
-
-        public void GetDataForTeam(int teamNumber, int selection)
+        public void GetDataForTeam(int teamNumberLocal, int selection)
         {
             List<int> AutoHighGoal = new List<int>();
             List<int> AutoHighMiss = new List<int>();
@@ -329,131 +210,63 @@ namespace FRC_Scouting_V2
             List<int> DriverRating = new List<int>();
             List<int> RobotDied = new List<int>();
             List<int> AutoMovement = new List<int>();
-        }
 
-        public void UpdateTeamComparison2()
-        {
-            NumberOfMatches[1] = 0;
-            AutoHighGoalTotal[1] = 0;
-            AutoHighMissTotal[1] = 0;
-            AutoLowGoalTotal[1] = 0;
-            AutoLowMissTotal[1] = 0;
-            ControlledHighGoalTotal[1] = 0;
-            ControlledHighMissTotal[1] = 0;
-            ControlledLowGoalTotal[1] = 0;
-            ControlledLowMissTotal[1] = 0;
-            HotGoalTotal[1] = 0;
-            HotMissTotal[1] = 0;
-            TripleGoal[1] = 0;
-            TripleMiss[1] = 0;
-            AutoPickup[1] = 0;
-            AutoPickupMiss[1] = 0;
-            ControlledPickup[1] = 0;
-            ControlledPickupMiss[1] = 0;
-            PickupFromHuman[1] = 0;
-            MissedPickupFromHuman[1] = 0;
-            PassToAnotherRobot[1] = 0;
-            MissedPassToAnotherRobot[1] = 0;
-            SuccessfulTruss[1] = 0;
-            UnSuccessfulTruss[1] = 0;
-            RobotSurvived[1] = 0;
-            RobotDied[1] = 0;
             try
             {
-                string mySqlConnectionString = us.MakeMySqlConnectionString();
-                var conn = new MySqlConnection(mySqlConnectionString);
+                MySqlConnection conn = new MySqlConnection(us.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
+                MySqlDataReader reader;
+                cmd.CommandText = String.Format("SELECT (*) From{0} where TeamNumber={1}",FRC_Scouting_V2.Properties.Settings.Default.currentTableName, teamNumberLocal);
                 conn.Open();
-                cmd.CommandText = String.Format("SELECT * from {0} where TeamNumber={1}",
-                    Settings.Default.currentTableName, selectedTeam2);
-                MySqlDataReader reader = cmd.ExecuteReader();
+                reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    NumberOfMatches[1]++;
-                    AutoHighGoalTotal[1] = AutoHighGoalTotal[1] + Convert.ToDouble(reader["AutoHighGoal"]);
-                    AutoHighMissTotal[1] = AutoHighMissTotal[1] + Convert.ToDouble(reader["AutoHighMiss"]);
-                    AutoLowGoalTotal[1] = AutoLowGoalTotal[1] + Convert.ToDouble(reader["AutoLowGoal"]);
-                    AutoLowMissTotal[1] = AutoLowMissTotal[1] + Convert.ToDouble(reader["AutoLowMiss"]);
-                    ControlledHighGoalTotal[1] = ControlledHighGoalTotal[1] +
-                                                 Convert.ToDouble(reader["ControlledHighGoal"]);
-                    ControlledHighMissTotal[1] = ControlledHighMissTotal[1] +
-                                                 Convert.ToDouble(reader["ControlledHighMiss"]);
-                    ControlledLowGoalTotal[1] = ControlledLowGoalTotal[1] +
-                                                Convert.ToDouble(reader["ControlledLowGoal"]);
-                    ControlledLowMissTotal[1] = ControlledLowMissTotal[1] +
-                                                Convert.ToDouble(reader["ControlledLowMiss"]);
-                    HotGoalTotal[1] = HotGoalTotal[1] + Convert.ToDouble(reader["HotGoals"]);
-                    HotMissTotal[1] = HotMissTotal[1] + Convert.ToDouble(reader["HotGoalMiss"]);
-                    TripleGoal[1] = TripleGoal[1] + Convert.ToDouble(reader["3AssistGoal"]);
-                    TripleMiss[1] = TripleMiss[1] + Convert.ToDouble(reader["3AssistMiss"]);
-                    AutoPickup[1] = AutoPickup[1] + Convert.ToDouble(reader["AutoBallPickup"]);
-                    AutoPickupMiss[1] = AutoPickupMiss[1] + Convert.ToDouble(reader["AutoBallPickupMiss"]);
-                    ControlledPickup[1] = ControlledPickup[1] + Convert.ToDouble(reader["ControlledBallPickup"]);
-                    ControlledPickupMiss[1] = ControlledPickupMiss[1] +
-                                              Convert.ToDouble(reader["ControlledBallPickupMiss"]);
-                    PickupFromHuman[1] = PickupFromHuman[1] + Convert.ToDouble(reader["PickupFromHuman"]);
-                    MissedPickupFromHuman[1] = MissedPickupFromHuman[1] +
-                                               Convert.ToDouble(reader["MissedPickupFromHuman"]);
-                    PassToAnotherRobot[1] = PassToAnotherRobot[1] + Convert.ToDouble(reader["PassToAnotherRobot"]);
-                    MissedPassToAnotherRobot[1] = MissedPassToAnotherRobot[1] +
-                                                  Convert.ToDouble(reader["MissedPassToAnotherRobot"]);
-                    SuccessfulTruss[1] = SuccessfulTruss[1] + Convert.ToDouble(reader["SuccessfulTruss"]);
-                    UnSuccessfulTruss[1] = UnSuccessfulTruss[1] + Convert.ToDouble(reader["UnsuccessfulTruss"]);
-                    switch (Convert.ToInt32(reader["DidRobotDie"]))
-                    {
-                        case 0:
-                            RobotSurvived[1] = RobotSurvived[1] + 1;
-                            break;
-
-                        case 1:
-                            RobotDied[1] = RobotDied[1] + 1;
-                            break;
-                    }
+                    
                 }
-                reader.Close();
+                conn.Close();
             }
             catch (MySqlException e)
             {
-                Console.WriteLine(e.ErrorCode);
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error Code: " + e.ErrorCode);
+                Console.WriteLine("Error Message: " + e.Message);
             }
-            TotalPointsMean[1] = TotalPoints[1]/NumberOfMatches[1];
-            AutoHighGoalSuccessRate[1] = AutoHighGoalTotal[1] / (AutoHighGoalTotal[1] + AutoHighMissTotal[1]);
-            AutolowGoalSuccessRate[1] = AutoLowGoalTotal[1] / (AutoLowGoalTotal[1] + AutoLowMissTotal[1]);
-            DisplayDataTeam2();
-        }
 
-        public void DisplayDataTeam1()
-        {
-            dataGridViewTeam1.Rows.Clear();
-            //Data Name, Mean, Standard Deviation, Successrate
-            dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
-            dataGridViewTeam1.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[0].ToString("P"));
-            dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[0].ToString("P"));
-            dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "N/A");
-            dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "N/A");
-            dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
-            dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
-            dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
-            dataGridViewTeam1.Rows.Add("Pickups", "", "", "");
-            dataGridViewTeam1.Rows.Add("Truss", "", "", "");
-            dataGridViewTeam1.Rows.Add("Survivability", "", "", "");
-        }
+            if (selection == 1)
+            {
+                dataGridViewTeam1.Rows.Clear();
+                //Data Name, Mean, Standard Deviation, Successrate
+                dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
+                dataGridViewTeam1.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[0].ToString("P"));
+                dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[0].ToString("P"));
+                dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "N/A");
+                dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "N/A");
+                dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
+                dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
+                dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
+                dataGridViewTeam1.Rows.Add("Pickups", "", "", "");
+                dataGridViewTeam1.Rows.Add("Truss", "", "", "");
+                dataGridViewTeam1.Rows.Add("Survivability", "", "", "");
+            }
+            else
+            {
+                if (selection == 2)
+                {
+                    dataGridViewTeam2.Rows.Clear();
+                    //Data Name, Mean, Standard Deviation, Successrate
+                    dataGridViewTeam2.Rows.Add("Total Points", "", "", "N/A");
+                    dataGridViewTeam2.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[1].ToString("P"));
+                    dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[1].ToString("P"));
+                    dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "N/A");
+                    dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "N/A");
+                    dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
+                    dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
+                    dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
+                    dataGridViewTeam2.Rows.Add("Pickups", "", "", "");
+                    dataGridViewTeam2.Rows.Add("Truss", "", "", "");
+                    dataGridViewTeam2.Rows.Add("Survivability", "", "", "");
+                }
+            }
 
-        public void DisplayDataTeam2()
-        {
-            dataGridViewTeam2.Rows.Clear();
-            dataGridViewTeam2.Rows.Add("Total Points", "", "", "N/A");
-            dataGridViewTeam2.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[1].ToString("P"));
-            dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[1].ToString("P"));
-            dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "N/A");
-            dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "N/A");
-            dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
-            dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
-            dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
-            dataGridViewTeam2.Rows.Add("Pickups", "", "", "");
-            dataGridViewTeam2.Rows.Add("Truss", "", "", "");
-            dataGridViewTeam2.Rows.Add("Survivability", "", "", "");
         }
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
@@ -508,7 +321,7 @@ namespace FRC_Scouting_V2
             selectedTeam1 = teamNumberArray[teamCompSelector1.SelectedIndex];
             ClearColourStats();
             team1Selected = true;
-            UpdateTeamComparison1();
+            GetDataForTeam(selectedTeam1, 1);
             ColourStats();
         }
 
@@ -517,7 +330,7 @@ namespace FRC_Scouting_V2
             selectedTeam2 = teamNumberArray[teamCompSelector2.SelectedIndex];
             ClearColourStats();
             team2Selected = true;
-            UpdateTeamComparison2();
+            GetDataForTeam(selectedTeam2, 2);
             ColourStats();
         }
 
