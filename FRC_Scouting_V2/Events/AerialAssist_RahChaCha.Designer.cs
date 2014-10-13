@@ -91,6 +91,7 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.startingLocationPanel = new System.Windows.Forms.Panel();
             this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -201,6 +202,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel6.Controls.Add(this.teamMatchBox, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.startingLocationPanel, 3, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -236,6 +238,7 @@
             this.tableLayoutPanel6.SetRowSpan(this.teamMatchBox, 16);
             this.teamMatchBox.Size = new System.Drawing.Size(125, 590);
             this.teamMatchBox.TabIndex = 0;
+            this.teamMatchBox.SelectedIndexChanged += new System.EventHandler(this.teamMatchBox_SelectedIndexChanged);
             // 
             // teamComparisonTabPage
             // 
@@ -802,6 +805,18 @@
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
             // 
+            // startingLocationPanel
+            // 
+            this.startingLocationPanel.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel6.SetColumnSpan(this.startingLocationPanel, 3);
+            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startingLocationPanel.Location = new System.Drawing.Point(390, 3);
+            this.startingLocationPanel.Name = "startingLocationPanel";
+            this.tableLayoutPanel6.SetRowSpan(this.startingLocationPanel, 11);
+            this.startingLocationPanel.Size = new System.Drawing.Size(381, 269);
+            this.startingLocationPanel.TabIndex = 5;
+            this.startingLocationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startingLocationPanel_Paint);
+            // 
             // aerial_Assist_Scouting_UI_21
             // 
             this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -898,5 +913,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn meanColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn standardDeviationColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn successRateColumn1;
+        private System.Windows.Forms.Panel startingLocationPanel;
     }
 }

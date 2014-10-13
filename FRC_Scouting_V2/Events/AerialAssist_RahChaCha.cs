@@ -604,5 +604,48 @@ namespace FRC_Scouting_V2
             public int team_number { get; set; }
             public string website { get; set; }
         }
+
+        public void PlotInitialLines()
+        {
+            var blackpen = new Pen(Color.Black, 4);
+            var fineBluePen = new Pen(Color.Blue, 2);
+            var fineWhitePen = new Pen(Color.White, 2);
+            var fineRedPen = new Pen(Color.Red, 2);
+            Graphics initGraphics = startingLocationPanel.CreateGraphics();
+
+            //Drawing square around the outside edge
+            initGraphics.DrawRectangle(blackpen, 0, 0, 330, 231);
+
+            //Drawing field lines
+            initGraphics.DrawRectangle(fineBluePen, 4, 4, 108, 223);
+            initGraphics.DrawRectangle(fineWhitePen, 116, 4, 98, 223);
+            initGraphics.DrawRectangle(fineRedPen, 218, 4, 108, 223);
+            initGraphics.DrawLine(blackpen, 165, 0, 165, 231);
+            initGraphics.Dispose();
+        }
+
+        public void BlankPanel()
+        {
+            Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();
+            clearPanelGraphics.FillRectangle(Brushes.White, 0, 0, 370, 252);
+            clearPanelGraphics.Dispose();
+            PlotInitialLines();
+        }
+
+        private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
+        {
+            PlotInitialLines();
+        }
+
+        private void teamMatchBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //BlankPanel();
+            //PlotInitialLines();
+            //Graphics g = startingLocationPanel.CreateGraphics();
+            //xStarting = Convert.ToInt32(e.X) - 3;
+            //yStarting = Convert.ToInt32(e.Y) - 3;
+            //g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
+            //startingLocationXYDisplay.Text = ("X: " + xStarting + " Y: " + yStarting);
+        }
     }
 }
