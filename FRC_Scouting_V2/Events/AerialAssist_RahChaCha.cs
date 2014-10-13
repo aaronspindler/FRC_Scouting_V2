@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
@@ -210,20 +211,50 @@ namespace FRC_Scouting_V2
             List<int> DriverRating = new List<int>();
             List<int> RobotDied = new List<int>();
             List<int> AutoMovement = new List<int>();
+            List<int> StartingX = new List<int>();
+            List<int> StartingY = new List<int>();
 
             try
             {
                 MySqlConnection conn = new MySqlConnection(us.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
-                cmd.CommandText = String.Format("SELECT (*) From{0} where TeamNumber={1}",FRC_Scouting_V2.Properties.Settings.Default.currentTableName, teamNumberLocal);
+                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",FRC_Scouting_V2.Properties.Settings.Default.currentTableName, teamNumberLocal);
                 conn.Open();
+                if (conn.Ping() == true)
+                {
+                    Console.WriteLine("Connected");
+                }
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     AutoHighGoal.Add(Convert.ToInt32(reader["AutoHighGoal"]));
                     AutoHighMiss.Add(Convert.ToInt32(reader["AutoHighMiss"]));
-                    AutoLowGoal.Add(Convert.ToInt32(reader["AutoHighGoal"]));
+                    AutoLowGoal.Add(Convert.ToInt32(reader["AutoLowGoal"]));
+                    AutoLowMiss.Add(Convert.ToInt32(reader["AutoLowMiss"]));
+                    ControlledHighGoal.Add(Convert.ToInt32(reader["ControlledHighGoal"]));
+                    ControlledHighMiss.Add(Convert.ToInt32(reader["ControlledHighMiss"]));
+                    ControlledLowGoal.Add(Convert.ToInt32(reader["ControlledLowGoal"]));
+                    ControlledLowMiss.Add(Convert.ToInt32(reader["ControlledLowMiss"]));
+                    HotGoal.Add(Convert.ToInt32(reader["HotGoals"]));
+                    HotMiss.Add(Convert.ToInt32(reader["HotGoalMiss"]));
+                    TripleAssistGoal.Add(Convert.ToInt32(reader["3AssistGoal"]));
+                    TripleAssistMiss.Add(Convert.ToInt32(reader["3AssistMiss"]));
+                    AutoPickup.Add(Convert.ToInt32(reader["AutoBallPickup"]));
+                    AutoPickupMiss.Add(Convert.ToInt32(reader["AutoBallPickupMiss"]));
+                    ControlledPickup.Add(Convert.ToInt32(reader["ControlledBallPickup"]));
+                    ControlledPickupMiss.Add(Convert.ToInt32(reader["ControlledBallPickupMiss"]));
+                    PickupFromHuman.Add(Convert.ToInt32(reader["PickupFromHuman"]));
+                    MissedPickupFromHuman.Add(Convert.ToInt32(reader["MissedPickupFromHuman"]));
+                    PassToAnotherRobot.Add(Convert.ToInt32(reader["PassToAnotherRobot"]));
+                    MissedPassToAnotherRobot.Add(Convert.ToInt32(reader["MissedPassToAnotherRobot"]));
+                    SuccessfulTruss.Add(Convert.ToInt32(reader["SuccessfulTruss"]));
+                    UnSuccessfulTruss.Add(Convert.ToInt32(reader["UnsuccessfulTruss"]));
+                    DriverRating.Add(Convert.ToInt32(reader["DriverRating"]));
+                    RobotDied.Add(Convert.ToInt32(reader["DidRobotDie"]));
+                    AutoMovement.Add(Convert.ToInt32(reader["AutoMovement"]));
+                    StartingX.Add(Convert.ToInt32(reader["StartingX"]));
+                    StartingY.Add(Convert.ToInt32(reader["StartingY"]));
                 }
                 conn.Close();
             }
@@ -235,37 +266,53 @@ namespace FRC_Scouting_V2
 
             if (selection == 1)
             {
-                dataGridViewTeam1.Rows.Clear();
-                //Data Name, Mean, Standard Deviation, Successrate
-                dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
-                dataGridViewTeam1.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[0].ToString("P"));
-                dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[0].ToString("P"));
-                dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "N/A");
-                dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "N/A");
-                dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
-                dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
-                dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
-                dataGridViewTeam1.Rows.Add("Pickups", "", "", "");
-                dataGridViewTeam1.Rows.Add("Truss", "", "", "");
-                dataGridViewTeam1.Rows.Add("Survivability", "", "", "");
+                try
+                {
+                    AutoHighMean[0] = AutoHighGoal.Average();
+                    dataGridViewTeam1.Rows.Clear();
+                    //Data Name, Mean, Standard Deviation, Successrate
+                    dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
+                    dataGridViewTeam1.Rows.Add("Autonomous High", AutoHighMean[0].ToString("#.##"), "", AutoHighGoalSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "N/A");
+                    dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "N/A");
+                    dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
+                    dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
+                    dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
+                    dataGridViewTeam1.Rows.Add("Pickups", "", "", "");
+                    dataGridViewTeam1.Rows.Add("Truss", "", "", "");
+                    dataGridViewTeam1.Rows.Add("Survivability", "", "", "");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error Message: " + e.Message);
+                }
             }
             else
             {
                 if (selection == 2)
                 {
-                    dataGridViewTeam2.Rows.Clear();
-                    //Data Name, Mean, Standard Deviation, Successrate
-                    dataGridViewTeam2.Rows.Add("Total Points", "", "", "N/A");
-                    dataGridViewTeam2.Rows.Add("Autonomous High", "", "", AutoHighGoalSuccessRate[1].ToString("P"));
-                    dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[1].ToString("P"));
-                    dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "N/A");
-                    dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "N/A");
-                    dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
-                    dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
-                    dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
-                    dataGridViewTeam2.Rows.Add("Pickups", "", "", "");
-                    dataGridViewTeam2.Rows.Add("Truss", "", "", "");
-                    dataGridViewTeam2.Rows.Add("Survivability", "", "", "");
+                    try
+                    {
+                        AutoHighMean[1] = AutoHighGoal.Average();
+                        dataGridViewTeam2.Rows.Clear();
+                        //Data Name, Mean, Standard Deviation, Successrate
+                        dataGridViewTeam2.Rows.Add("Total Points", "", "", "N/A");
+                        dataGridViewTeam2.Rows.Add("Autonomous High", AutoHighMean[1].ToString("#.##"), "", AutoHighGoalSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "N/A");
+                        dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "N/A");
+                        dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
+                        dataGridViewTeam2.Rows.Add("Controlled Low", "", "", "");
+                        dataGridViewTeam2.Rows.Add("Hot Goal", "", "", "");
+                        dataGridViewTeam2.Rows.Add("Pickups", "", "", "");
+                        dataGridViewTeam2.Rows.Add("Truss", "", "", "");
+                        dataGridViewTeam2.Rows.Add("Survivability", "", "", "");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Error Message: " + e.Message);
+                    }
                 }
             }
 
