@@ -54,6 +54,16 @@ namespace FRC_Scouting_V2
         private double[] AutoLowMean = new double[2];
         private double[] AutoLowSD = new double[2];
         private readonly double[] AutolowGoalSuccessRate = new double[2];
+        double[] AutoMobilitySuccessRate = new double[2];
+        double[] DriverRatingMean = new double[2];
+        double[] ControlledHighMean = new double[2];
+        double[] ControlledHighSuccessRate = new double[2];
+        double[] ControlledLowMean = new double[2];
+        double[] ControlledLowSuccessRate = new double[2];
+        double[] HotGoalMean = new double[2];
+        double[] HotGoalSuccessRate = new double[2];
+        double[] PickupsMean = new double[2];
+        double[] PickupSuccessRate = new double[2];
 
         //Point Values for Scoring
         private const int HIGH_GOAL_VALUE = 10;
@@ -186,6 +196,7 @@ namespace FRC_Scouting_V2
 
         public void GetDataForTeam(int teamNumberLocal, int selection)
         {
+            int numberOfMatches = 0;
             List<double> AutoHighGoal = new List<double>();
             List<double> AutoHighMiss = new List<double>();
             List<double> AutoLowGoal = new List<double>();
@@ -210,7 +221,7 @@ namespace FRC_Scouting_V2
             List<double> UnSuccessfulTruss = new List<double>();
             List<double> DriverRating = new List<double>();
             List<double> RobotDied = new List<double>();
-            List<double> AutoMovement = new List<double>();
+            List<double> AutoMovementGood = new List<double>();
             List<double> StartingX = new List<double>();
             List<double> StartingY = new List<double>();
 
@@ -228,6 +239,7 @@ namespace FRC_Scouting_V2
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
+                    numberOfMatches++;
                     AutoHighGoal.Add(Convert.ToDouble(reader["AutoHighGoal"]));
                     AutoHighMiss.Add(Convert.ToDouble(reader["AutoHighMiss"]));
                     AutoLowGoal.Add(Convert.ToDouble(reader["AutoLowGoal"]));
@@ -252,7 +264,10 @@ namespace FRC_Scouting_V2
                     UnSuccessfulTruss.Add(Convert.ToDouble(reader["UnsuccessfulTruss"]));
                     DriverRating.Add(Convert.ToDouble(reader["DriverRating"]));
                     RobotDied.Add(Convert.ToDouble(reader["DidRobotDie"]));
-                    AutoMovement.Add(Convert.ToDouble(reader["AutoMovement"]));
+                    if (Convert.ToInt32(reader["AutoMovement"].ToString()) == 1)
+                    {
+                        AutoMovementGood.Add(Convert.ToDouble(reader["AutoMovement"]));
+                    }
                     StartingX.Add(Convert.ToDouble(reader["StartingX"]));
                     StartingY.Add(Convert.ToDouble(reader["StartingY"]));
                 }
@@ -270,16 +285,27 @@ namespace FRC_Scouting_V2
                 {
                     AutoHighMean[0] = AutoHighGoal.Average();
                     AutoHighGoalSuccessRate[0] = AutoHighGoal.Sum()/(AutoHighGoal.Sum() + AutoHighMiss.Sum());
+                    AutoLowMean[0] = AutoLowGoal.Average();
+                    AutolowGoalSuccessRate[0] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
+                    AutoMobilitySuccessRate[0] = AutoMovementGood.Sum()/(numberOfMatches);
+                    DriverRatingMean[0] = DriverRating.Average();
+                    ControlledHighMean[0] = ControlledHighGoal.Average();
+                    ControlledHighSuccessRate[0] = ControlledHighGoal.Sum()/(ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
+                    ControlledLowMean[0] = ControlledLowGoal.Average();
+                    ControlledLowSuccessRate[0] = ControlledLowGoal.Sum()/(ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
+                    HotGoalMean[0] = HotGoal.Average();
+                    HotGoalSuccessRate[0] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
+
                     dataGridViewTeam1.Rows.Clear();
                     //Data Name, Mean, Standard Deviation, Successrate
                     dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
                     dataGridViewTeam1.Rows.Add("Autonomous High", AutoHighMean[0].ToString("#.##"), "", AutoHighGoalSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Autonomous Mobility", "", "", "N/A");
-                    dataGridViewTeam1.Rows.Add("Driver Rating", "", "", "N/A");
-                    dataGridViewTeam1.Rows.Add("Controlled High", "", "", "");
-                    dataGridViewTeam1.Rows.Add("Controlled Low", "", "", "");
-                    dataGridViewTeam1.Rows.Add("Hot Goal", "", "", "");
+                    dataGridViewTeam1.Rows.Add("Autonomous Low", AutoLowMean[0].ToString("#.##"), "", AutolowGoalSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Autonomous Mobility", "N/A", "N/A", AutoMobilitySuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Driver Rating", DriverRatingMean[0].ToString("#.##"), "", "N/A");
+                    dataGridViewTeam1.Rows.Add("Controlled High", ControlledHighMean[0].ToString("#.##"), "", ControlledHighSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Controlled Low", ControlledLowMean[0].ToString("#.##"), "", ControlledLowSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Hot Goal", HotGoalMean[0].ToString("#.##"), "", HotGoalSuccessRate[0].ToString("P"));
                     dataGridViewTeam1.Rows.Add("Pickups", "", "", "");
                     dataGridViewTeam1.Rows.Add("Truss", "", "", "");
                     dataGridViewTeam1.Rows.Add("Survivability", "", "", "");
@@ -297,11 +323,13 @@ namespace FRC_Scouting_V2
                     {
                         AutoHighMean[1] = AutoHighGoal.Average();
                         AutoHighGoalSuccessRate[1] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
+                        AutoLowMean[1] = AutoLowGoal.Average();
+                        AutolowGoalSuccessRate[1] = AutoLowGoal.Sum() / (AutoLowGoal.Sum() + AutoLowMiss.Sum());
                         dataGridViewTeam2.Rows.Clear();
                         //Data Name, Mean, Standard Deviation, Successrate
-                        dataGridViewTeam2.Rows.Add("Total Points", "", "", "N/A");
+                        dataGridViewTeam2.Rows.Add("Total Points", TotalPointsMean[1].ToString("#.##"), "", "N/A");
                         dataGridViewTeam2.Rows.Add("Autonomous High", AutoHighMean[1].ToString("#.##"), "", AutoHighGoalSuccessRate[1].ToString("P"));
-                        dataGridViewTeam2.Rows.Add("Autonomous Low", "", "", AutolowGoalSuccessRate[1].ToString("P"));
+                        dataGridViewTeam2.Rows.Add("Autonomous Low", AutoLowMean[1].ToString("#.##"), "", AutolowGoalSuccessRate[1].ToString("P"));
                         dataGridViewTeam2.Rows.Add("Autonomous Mobility", "", "", "N/A");
                         dataGridViewTeam2.Rows.Add("Driver Rating", "", "", "N/A");
                         dataGridViewTeam2.Rows.Add("Controlled High", "", "", "");
