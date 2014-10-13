@@ -64,6 +64,9 @@ namespace FRC_Scouting_V2
         double[] HotGoalSuccessRate = new double[2];
         double[] PickupsMean = new double[2];
         double[] PickupSuccessRate = new double[2];
+        double[] SuccessfulTrussMean = new double[2];
+        double[] TrussSuccessRate = new double[2];
+        double[] Survivability = new double[2];
 
         //Point Values for Scoring
         private const int HIGH_GOAL_VALUE = 10;
@@ -263,7 +266,11 @@ namespace FRC_Scouting_V2
                     SuccessfulTruss.Add(Convert.ToDouble(reader["SuccessfulTruss"]));
                     UnSuccessfulTruss.Add(Convert.ToDouble(reader["UnsuccessfulTruss"]));
                     DriverRating.Add(Convert.ToDouble(reader["DriverRating"]));
-                    RobotDied.Add(Convert.ToDouble(reader["DidRobotDie"]));
+                    if (Convert.ToInt32(reader["DidRobotDie"]) == 1)
+                    {
+                        RobotDied.Add(1);
+                    }
+
                     if (Convert.ToInt32(reader["AutoMovement"].ToString()) == 1)
                     {
                         AutoMovementGood.Add(Convert.ToDouble(reader["AutoMovement"]));
@@ -277,6 +284,7 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + e.ErrorCode);
                 Console.WriteLine("Error Message: " + e.Message);
+                us.ErrorOccured("Looks like something went wrong. Check console for the error message");
             }
 
             if (selection == 1)
@@ -295,8 +303,14 @@ namespace FRC_Scouting_V2
                     ControlledLowSuccessRate[0] = ControlledLowGoal.Sum()/(ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
                     HotGoalMean[0] = HotGoal.Average();
                     HotGoalSuccessRate[0] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
+                    PickupsMean[0] = (AutoPickup.Average()) + (ControlledPickup.Average()) + (PickupFromHuman.Average());
+                    PickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/(AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() + AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() + MissedPickupFromHuman.Sum());
+                    SuccessfulTrussMean[0] = SuccessfulTruss.Average();
+                    TrussSuccessRate[0] = SuccessfulTruss.Sum()/(SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
+                    Survivability[0] = numberOfMatches/(numberOfMatches + RobotDied.Sum());
 
                     dataGridViewTeam1.Rows.Clear();
+
                     //Data Name, Mean, Standard Deviation, Successrate
                     dataGridViewTeam1.Rows.Add("Total Points", TotalPointsMean[0].ToString("#.##"), "", "N/A");
                     dataGridViewTeam1.Rows.Add("Autonomous High", AutoHighMean[0].ToString("#.##"), "", AutoHighGoalSuccessRate[0].ToString("P"));
@@ -306,12 +320,15 @@ namespace FRC_Scouting_V2
                     dataGridViewTeam1.Rows.Add("Controlled High", ControlledHighMean[0].ToString("#.##"), "", ControlledHighSuccessRate[0].ToString("P"));
                     dataGridViewTeam1.Rows.Add("Controlled Low", ControlledLowMean[0].ToString("#.##"), "", ControlledLowSuccessRate[0].ToString("P"));
                     dataGridViewTeam1.Rows.Add("Hot Goal", HotGoalMean[0].ToString("#.##"), "", HotGoalSuccessRate[0].ToString("P"));
-                    dataGridViewTeam1.Rows.Add("Pickups", "", "", "");
-                    dataGridViewTeam1.Rows.Add("Truss", "", "", "");
-                    dataGridViewTeam1.Rows.Add("Survivability", "", "", "");
+                    dataGridViewTeam1.Rows.Add("Pickups", PickupsMean[0].ToString("#.##"), "", PickupSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Truss", SuccessfulTrussMean[0].ToString("#.##"), "", TrussSuccessRate[0].ToString("P"));
+                    dataGridViewTeam1.Rows.Add("Survivability", "N/A", "N/A", Survivability[0].ToString("P"));
                 }
                 catch (Exception e)
                 {
+                    dataGridViewTeam1.Rows.Clear();
+                    team1Selected = false;
+                    us.ErrorOccured("Looks like something went wrong. Check console for the error message");
                     Console.WriteLine("Error Message: " + e.Message);
                 }
             }
@@ -341,6 +358,9 @@ namespace FRC_Scouting_V2
                     }
                     catch (Exception e)
                     {
+                        dataGridViewTeam2.Rows.Clear();
+                        team2Selected = false;
+                        us.ErrorOccured("Looks like something went wrong. Check console for the error message");
                         Console.WriteLine("Error Message: " + e.Message);
                     }
                 }
