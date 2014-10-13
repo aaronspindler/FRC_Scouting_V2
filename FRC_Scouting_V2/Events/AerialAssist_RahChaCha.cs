@@ -194,6 +194,7 @@ namespace FRC_Scouting_V2
         }
 
         //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)
+        //Update - Mildly updated this method so it is no longer the same as what is on the website above
         private double CalculateStdDev(IEnumerable<double> values)
         {
             double ret = 0;
