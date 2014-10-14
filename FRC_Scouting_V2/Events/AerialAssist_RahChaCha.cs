@@ -517,7 +517,133 @@ namespace FRC_Scouting_V2
             {
                 if (team1Selected && team2Selected)
                 {
-                    
+                    if (_autoHighMean[0] > _autoHighMean[1])
+                    {
+                        dataGridViewTeam1.Rows[1].Cells[1].Style.ForeColor = Color.Green;
+                        dataGridViewTeam2.Rows[1].Cells[1].Style.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (_autoHighMean[1] > _autoHighMean[0])
+                        {
+                            dataGridViewTeam1.Rows[1].Cells[1].Style.ForeColor = Color.Red;
+                            dataGridViewTeam2.Rows[1].Cells[1].Style.ForeColor = Color.Green;
+                        }
+                    }
+
+                    if (_autoHighStandardDeviation[0] > _autoHighStandardDeviation[1])
+                    {
+                        dataGridViewTeam1.Rows[1].Cells[2].Style.ForeColor = Color.Red;
+                        dataGridViewTeam2.Rows[1].Cells[2].Style.ForeColor = Color.Green;
+                    }
+                    else
+                    {
+                        if (_autoHighStandardDeviation[1] > _autoHighStandardDeviation[0])
+                        {
+                            dataGridViewTeam1.Rows[1].Cells[2].Style.ForeColor = Color.Green;
+                            dataGridViewTeam2.Rows[1].Cells[2].Style.ForeColor = Color.Red;
+                        }
+                    }
+
+                    if (_autoHighGoalSuccessRate[0] > _autoHighGoalSuccessRate[1])
+                    {
+                        dataGridViewTeam1.Rows[1].Cells[3].Style.ForeColor = Color.Green;
+                        dataGridViewTeam2.Rows[1].Cells[3].Style.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (_autoHighGoalSuccessRate[1] > _autoHighGoalSuccessRate[0])
+                        {
+                            dataGridViewTeam1.Rows[1].Cells[3].Style.ForeColor = Color.Red;
+                            dataGridViewTeam2.Rows[1].Cells[3].Style.ForeColor = Color.Green;
+                        }
+                    }
+
+                    if (_autoLowMean[0] > _autoLowMean[1])
+                    {
+                        dataGridViewTeam1.Rows[2].Cells[1].Style.ForeColor = Color.Green;
+                        dataGridViewTeam2.Rows[2].Cells[1].Style.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (_autoLowMean[1] > _autoLowMean[0])
+                        {
+                            dataGridViewTeam1.Rows[2].Cells[1].Style.ForeColor = Color.Red;
+                            dataGridViewTeam2.Rows[2].Cells[1].Style.ForeColor = Color.Green;
+                        }
+                    }
+
+                    if (_autoLowStandardDeviation[0] > _autoLowStandardDeviation[1])
+                    {
+                        dataGridViewTeam1.Rows[2].Cells[2].Style.ForeColor = Color.Red;
+                        dataGridViewTeam2.Rows[2].Cells[2].Style.ForeColor = Color.Green;
+                    }
+                    else
+                    {
+                        if (_autoLowStandardDeviation[1] > _autoLowStandardDeviation[0])
+                        {
+                            dataGridViewTeam1.Rows[2].Cells[2].Style.ForeColor = Color.Green;
+                            dataGridViewTeam2.Rows[2].Cells[2].Style.ForeColor = Color.Red;
+                        }
+                    }
+
+                    if (_autolowGoalSuccessRate[0] > _autolowGoalSuccessRate[1])
+                    {
+                        dataGridViewTeam1.Rows[2].Cells[3].Style.ForeColor = Color.Green;
+                        dataGridViewTeam2.Rows[2].Cells[3].Style.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (_autolowGoalSuccessRate[1] > _autolowGoalSuccessRate[0])
+                        {
+                            dataGridViewTeam1.Rows[2].Cells[3].Style.ForeColor = Color.Red;
+                            dataGridViewTeam2.Rows[2].Cells[3].Style.ForeColor = Color.Green;
+                        }
+                    }
+
+                    if (_autoMobilitySuccessRate[0] > _autoMobilitySuccessRate[1])
+                    {
+                        dataGridViewTeam1.Rows[3].Cells[3].Style.ForeColor = Color.Green;
+                        dataGridViewTeam2.Rows[3].Cells[3].Style.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (_autoMobilitySuccessRate[1] > _autoMobilitySuccessRate[0])
+                        {
+                            dataGridViewTeam1.Rows[3].Cells[3].Style.ForeColor = Color.Red;
+                            dataGridViewTeam2.Rows[3].Cells[3].Style.ForeColor = Color.Green;
+                        }
+                    }
+
+                    if (_driverRatingMean[0] > _driverRatingMean[1])
+                    {
+                        dataGridViewTeam1.Rows[4].Cells[1].Style.ForeColor = Color.Green;
+                        dataGridViewTeam2.Rows[4].Cells[1].Style.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (_driverRatingMean[1] > _driverRatingMean[0])
+                        {
+                            dataGridViewTeam1.Rows[4].Cells[1].Style.ForeColor = Color.Red;
+                            dataGridViewTeam2.Rows[4].Cells[1].Style.ForeColor = Color.Green;
+                        }
+                    }
+
+                    if (_driverRatingStandardDeviation[0] > _driverRatingStandardDeviation[1])
+                    {
+                        dataGridViewTeam1.Rows[4].Cells[2].Style.ForeColor = Color.Red;
+                        dataGridViewTeam2.Rows[4].Cells[2].Style.ForeColor = Color.Green;
+                    }
+                    else
+                    {
+                        if (_driverRatingStandardDeviation[1] > _driverRatingStandardDeviation[0])
+                        {
+                            dataGridViewTeam1.Rows[4].Cells[2].Style.ForeColor = Color.Green;
+                            dataGridViewTeam2.Rows[4].Cells[2].Style.ForeColor = Color.Red;
+                        }
+                    }
+
+
                 }
             }
         }
