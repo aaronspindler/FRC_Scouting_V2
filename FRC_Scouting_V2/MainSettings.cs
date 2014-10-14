@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -269,6 +270,8 @@ namespace FRC_Scouting_V2
                 }
             }
 
+            teamComparisonEqualValueColourDisplay.BackColor = FRC_Scouting_V2.Properties.Settings.Default.teamComparisonEqualValueColour;
+
             usernameTextBox.Text = Settings.Default.username;
             databaseIPTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
@@ -334,11 +337,13 @@ namespace FRC_Scouting_V2
                 if (conn.Ping())
                 {
                     Console.WriteLine("You have successfully connected to your database!");
+                    connectionDisplay.BackColor = Color.Chartreuse;
                     us.ShowInformationMessage("You have successfully connected to your database!");
                 }
                 else
                 {
                     Console.WriteLine("You have unsuccessfully connected to your database!");
+                    connectionDisplay.BackColor = Color.Red;
                     us.ShowInformationMessage("You have unsuccessfully connected to your database!");
                 }
 
@@ -391,6 +396,16 @@ namespace FRC_Scouting_V2
                     Settings.Default.colourTeamComparisonStatistics = false;
                     Settings.Default.Save();
                 }
+            }
+        }
+
+        private void teamComparisonEqualColourButton_Click(object sender, EventArgs e)
+        {
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                teamComparisonEqualValueColourDisplay.BackColor = colorDialog.Color;
+                FRC_Scouting_V2.Properties.Settings.Default.teamComparisonEqualValueColour = colorDialog.Color;
+                FRC_Scouting_V2.Properties.Settings.Default.Save();
             }
         }
     }

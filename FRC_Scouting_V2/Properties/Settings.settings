@@ -1,7 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
-              GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="clickToEmptyTextBoxes" Type="System.Boolean" Scope="User">
@@ -54,6 +52,9 @@
     </Setting>
     <Setting Name="colourTeamComparisonStatistics" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="teamComparisonEqualValueColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Blue</Value>
     </Setting>
   </Settings>
 </SettingsFile>

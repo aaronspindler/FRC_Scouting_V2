@@ -226,5 +226,17 @@ namespace FRC_Scouting_V2.Properties {
                 this["colourTeamComparisonStatistics"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Blue")]
+        public global::System.Drawing.Color teamComparisonEqualValueColour {
+            get {
+                return ((global::System.Drawing.Color)(this["teamComparisonEqualValueColour"]));
+            }
+            set {
+                this["teamComparisonEqualValueColour"] = value;
+            }
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalSettingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.colourTeamComparisonStatsLabel = new System.Windows.Forms.Label();
             this.showQuestioButtonsLabel = new System.Windows.Forms.Label();
             this.allowExportToTextFileCheckBox = new System.Windows.Forms.CheckBox();
             this.exportToTextFileLabel = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.minimizeHomeLabel = new System.Windows.Forms.Label();
             this.clearConsoleOnToggleCheckBox = new System.Windows.Forms.CheckBox();
             this.showQuestionButtonsCheckBox = new System.Windows.Forms.CheckBox();
+            this.colourTeamComparisonStatisticsCheckBox = new System.Windows.Forms.CheckBox();
             this.databaseSettingsTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.testConnectionToDatabaseButton = new System.Windows.Forms.Button();
@@ -68,8 +70,11 @@
             this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
-            this.colourTeamComparisonStatsLabel = new System.Windows.Forms.Label();
-            this.colourTeamComparisonStatisticsCheckBox = new System.Windows.Forms.CheckBox();
+            this.connectionDisplay = new System.Windows.Forms.Label();
+            this.teamComparisonSameValueLabel = new System.Windows.Forms.Label();
+            this.teamComparisonEqualColourButton = new System.Windows.Forms.Button();
+            this.teamComparisonEqualValueColourDisplay = new System.Windows.Forms.Label();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -105,7 +110,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 289);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(458, 370);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -177,7 +182,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 8);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(452, 258);
+            this.tabControl1.Size = new System.Drawing.Size(452, 339);
             this.tabControl1.TabIndex = 1;
             // 
             // generalSettingsPage
@@ -186,7 +191,7 @@
             this.generalSettingsPage.Location = new System.Drawing.Point(4, 22);
             this.generalSettingsPage.Name = "generalSettingsPage";
             this.generalSettingsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.generalSettingsPage.Size = new System.Drawing.Size(444, 232);
+            this.generalSettingsPage.Size = new System.Drawing.Size(444, 313);
             this.generalSettingsPage.TabIndex = 0;
             this.generalSettingsPage.Text = "General Settings";
             this.generalSettingsPage.UseVisualStyleBackColor = true;
@@ -202,6 +207,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.Controls.Add(this.teamComparisonSameValueLabel, 0, 8);
             this.tableLayoutPanel2.Controls.Add(this.colourTeamComparisonStatsLabel, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.showQuestioButtonsLabel, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.allowExportToTextFileCheckBox, 4, 5);
@@ -218,20 +224,38 @@
             this.tableLayoutPanel2.Controls.Add(this.clearConsoleOnToggleCheckBox, 4, 4);
             this.tableLayoutPanel2.Controls.Add(this.showQuestionButtonsCheckBox, 4, 6);
             this.tableLayoutPanel2.Controls.Add(this.colourTeamComparisonStatisticsCheckBox, 4, 7);
+            this.tableLayoutPanel2.Controls.Add(this.teamComparisonEqualColourButton, 4, 8);
+            this.tableLayoutPanel2.Controls.Add(this.teamComparisonEqualValueColourDisplay, 7, 8);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(438, 226);
+            this.tableLayoutPanel2.RowCount = 12;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(438, 307);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // colourTeamComparisonStatsLabel
+            // 
+            this.colourTeamComparisonStatsLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.colourTeamComparisonStatsLabel, 4);
+            this.colourTeamComparisonStatsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.colourTeamComparisonStatsLabel.Location = new System.Drawing.Point(3, 196);
+            this.colourTeamComparisonStatsLabel.Name = "colourTeamComparisonStatsLabel";
+            this.colourTeamComparisonStatsLabel.Size = new System.Drawing.Size(210, 28);
+            this.colourTeamComparisonStatsLabel.TabIndex = 1;
+            this.colourTeamComparisonStatsLabel.Text = "Colour Team Comparison Statistics";
+            this.colourTeamComparisonStatsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // showQuestioButtonsLabel
             // 
@@ -407,13 +431,26 @@
             this.showQuestionButtonsCheckBox.UseVisualStyleBackColor = true;
             this.showQuestionButtonsCheckBox.CheckedChanged += new System.EventHandler(this.showQuestionButtonsCheckBox_CheckedChanged);
             // 
+            // colourTeamComparisonStatisticsCheckBox
+            // 
+            this.colourTeamComparisonStatisticsCheckBox.AutoSize = true;
+            this.colourTeamComparisonStatisticsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.SetColumnSpan(this.colourTeamComparisonStatisticsCheckBox, 4);
+            this.colourTeamComparisonStatisticsCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.colourTeamComparisonStatisticsCheckBox.Location = new System.Drawing.Point(219, 199);
+            this.colourTeamComparisonStatisticsCheckBox.Name = "colourTeamComparisonStatisticsCheckBox";
+            this.colourTeamComparisonStatisticsCheckBox.Size = new System.Drawing.Size(216, 22);
+            this.colourTeamComparisonStatisticsCheckBox.TabIndex = 8;
+            this.colourTeamComparisonStatisticsCheckBox.UseVisualStyleBackColor = true;
+            this.colourTeamComparisonStatisticsCheckBox.CheckedChanged += new System.EventHandler(this.colourTeamComparisonStatisticsCheckBox_CheckedChanged);
+            // 
             // databaseSettingsTab
             // 
             this.databaseSettingsTab.Controls.Add(this.tableLayoutPanel3);
             this.databaseSettingsTab.Location = new System.Drawing.Point(4, 22);
             this.databaseSettingsTab.Name = "databaseSettingsTab";
             this.databaseSettingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.databaseSettingsTab.Size = new System.Drawing.Size(444, 232);
+            this.databaseSettingsTab.Size = new System.Drawing.Size(444, 313);
             this.databaseSettingsTab.TabIndex = 1;
             this.databaseSettingsTab.Text = "Database Settings";
             this.databaseSettingsTab.UseVisualStyleBackColor = true;
@@ -435,19 +472,22 @@
             this.tableLayoutPanel3.Controls.Add(this.databaseSettingsCautionLabel, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.databaseNameLabel, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.databaseNameTextBox, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.connectionDisplay, 0, 8);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 8;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(438, 226);
+            this.tableLayoutPanel3.RowCount = 10;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(438, 307);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // testConnectionToDatabaseButton
@@ -456,7 +496,7 @@
             this.testConnectionToDatabaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(3, 199);
             this.testConnectionToDatabaseButton.Name = "testConnectionToDatabaseButton";
-            this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(432, 24);
+            this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(432, 22);
             this.testConnectionToDatabaseButton.TabIndex = 12;
             this.testConnectionToDatabaseButton.Text = "Test Connection To Database";
             this.testConnectionToDatabaseButton.UseVisualStyleBackColor = true;
@@ -593,36 +633,59 @@
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             this.databaseNameTextBox.TextChanged += new System.EventHandler(this.databaseNameTextBox_TextChanged);
             // 
-            // colourTeamComparisonStatsLabel
+            // connectionDisplay
             // 
-            this.colourTeamComparisonStatsLabel.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.colourTeamComparisonStatsLabel, 4);
-            this.colourTeamComparisonStatsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.colourTeamComparisonStatsLabel.Location = new System.Drawing.Point(3, 196);
-            this.colourTeamComparisonStatsLabel.Name = "colourTeamComparisonStatsLabel";
-            this.colourTeamComparisonStatsLabel.Size = new System.Drawing.Size(210, 30);
-            this.colourTeamComparisonStatsLabel.TabIndex = 1;
-            this.colourTeamComparisonStatsLabel.Text = "Colour Team Comparison Statistics";
-            this.colourTeamComparisonStatsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.connectionDisplay.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.connectionDisplay, 2);
+            this.connectionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.connectionDisplay.Location = new System.Drawing.Point(3, 224);
+            this.connectionDisplay.Name = "connectionDisplay";
+            this.connectionDisplay.Size = new System.Drawing.Size(432, 28);
+            this.connectionDisplay.TabIndex = 13;
             // 
-            // colourTeamComparisonStatisticsCheckBox
+            // teamComparisonSameValueLabel
             // 
-            this.colourTeamComparisonStatisticsCheckBox.AutoSize = true;
-            this.colourTeamComparisonStatisticsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tableLayoutPanel2.SetColumnSpan(this.colourTeamComparisonStatisticsCheckBox, 4);
-            this.colourTeamComparisonStatisticsCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.colourTeamComparisonStatisticsCheckBox.Location = new System.Drawing.Point(219, 199);
-            this.colourTeamComparisonStatisticsCheckBox.Name = "colourTeamComparisonStatisticsCheckBox";
-            this.colourTeamComparisonStatisticsCheckBox.Size = new System.Drawing.Size(216, 24);
-            this.colourTeamComparisonStatisticsCheckBox.TabIndex = 8;
-            this.colourTeamComparisonStatisticsCheckBox.UseVisualStyleBackColor = true;
-            this.colourTeamComparisonStatisticsCheckBox.CheckedChanged += new System.EventHandler(this.colourTeamComparisonStatisticsCheckBox_CheckedChanged);
+            this.teamComparisonSameValueLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.teamComparisonSameValueLabel, 4);
+            this.teamComparisonSameValueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamComparisonSameValueLabel.Location = new System.Drawing.Point(3, 224);
+            this.teamComparisonSameValueLabel.Name = "teamComparisonSameValueLabel";
+            this.teamComparisonSameValueLabel.Size = new System.Drawing.Size(210, 28);
+            this.teamComparisonSameValueLabel.TabIndex = 2;
+            this.teamComparisonSameValueLabel.Text = "Team Comparison Equal Value Colour";
+            this.teamComparisonSameValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // teamComparisonEqualColourButton
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.teamComparisonEqualColourButton, 3);
+            this.teamComparisonEqualColourButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamComparisonEqualColourButton.Location = new System.Drawing.Point(219, 227);
+            this.teamComparisonEqualColourButton.Name = "teamComparisonEqualColourButton";
+            this.teamComparisonEqualColourButton.Size = new System.Drawing.Size(156, 22);
+            this.teamComparisonEqualColourButton.TabIndex = 9;
+            this.teamComparisonEqualColourButton.Text = "Set Colour";
+            this.teamComparisonEqualColourButton.UseVisualStyleBackColor = true;
+            this.teamComparisonEqualColourButton.Click += new System.EventHandler(this.teamComparisonEqualColourButton_Click);
+            // 
+            // teamComparisonEqualValueColourDisplay
+            // 
+            this.teamComparisonEqualValueColourDisplay.AutoSize = true;
+            this.teamComparisonEqualValueColourDisplay.BackColor = System.Drawing.Color.Blue;
+            this.teamComparisonEqualValueColourDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamComparisonEqualValueColourDisplay.Location = new System.Drawing.Point(381, 224);
+            this.teamComparisonEqualValueColourDisplay.Name = "teamComparisonEqualValueColourDisplay";
+            this.teamComparisonEqualValueColourDisplay.Size = new System.Drawing.Size(54, 28);
+            this.teamComparisonEqualValueColourDisplay.TabIndex = 10;
+            // 
+            // colorDialog
+            // 
+            this.colorDialog.Color = System.Drawing.Color.Blue;
             // 
             // MainSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 289);
+            this.ClientSize = new System.Drawing.Size(458, 370);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -689,5 +752,10 @@
         private System.Windows.Forms.ToolStripMenuItem howComeICannotConnectToMyDatabaseToolStripMenuItem;
         private System.Windows.Forms.Label colourTeamComparisonStatsLabel;
         private System.Windows.Forms.CheckBox colourTeamComparisonStatisticsCheckBox;
+        private System.Windows.Forms.Label connectionDisplay;
+        private System.Windows.Forms.Label teamComparisonSameValueLabel;
+        private System.Windows.Forms.Button teamComparisonEqualColourButton;
+        private System.Windows.Forms.Label teamComparisonEqualValueColourDisplay;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }
