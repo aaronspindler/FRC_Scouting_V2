@@ -351,6 +351,7 @@ namespace FRC_Scouting_V2
             }
             catch (MySqlException ex)
             {
+                connectionDisplay.BackColor = Color.Red;
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
                 us.ErrorOccured(
