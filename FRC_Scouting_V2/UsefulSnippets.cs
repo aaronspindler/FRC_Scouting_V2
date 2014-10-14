@@ -189,6 +189,7 @@ namespace FRC_Scouting_V2
             builder["Port"] = Settings.Default.databasePort;
             builder["Uid"] = Settings.Default.databaseUsername;
             builder["Password"] = Settings.Default.databasePassword;
+            builder.SslMode = MySqlSslMode.Preferred;
             return builder.ConnectionString;
         }
 
