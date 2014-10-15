@@ -92,6 +92,21 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.teamMatchSummaryTeamNameDisplay = new System.Windows.Forms.Label();
+            this.teamMatchSummaryTeamNumberDisplay = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.teamMatchSummaryTeamColourDisplay = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.teamMatchSummaryMatchNumberDisplay = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -203,6 +218,21 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel6.Controls.Add(this.teamMatchBox, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.startingLocationPanel, 5, 0);
+            this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryTeamNameDisplay, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryTeamNumberDisplay, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryTeamColourDisplay, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryMatchNumberDisplay, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.label14, 1, 4);
+            this.tableLayoutPanel6.Controls.Add(this.label15, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.label3, 1, 6);
+            this.tableLayoutPanel6.Controls.Add(this.label7, 1, 7);
+            this.tableLayoutPanel6.Controls.Add(this.label11, 1, 8);
+            this.tableLayoutPanel6.Controls.Add(this.label12, 1, 9);
+            this.tableLayoutPanel6.Controls.Add(this.label8, 1, 10);
+            this.tableLayoutPanel6.Controls.Add(this.label4, 1, 11);
+            this.tableLayoutPanel6.Controls.Add(this.label13, 1, 12);
+            this.tableLayoutPanel6.Controls.Add(this.label9, 1, 13);
+            this.tableLayoutPanel6.Controls.Add(this.label5, 1, 14);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -817,6 +847,186 @@
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
             // 
+            // teamMatchSummaryTeamNameDisplay
+            // 
+            this.teamMatchSummaryTeamNameDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryTeamNameDisplay, 3);
+            this.teamMatchSummaryTeamNameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryTeamNameDisplay.Location = new System.Drawing.Point(132, 0);
+            this.teamMatchSummaryTeamNameDisplay.Name = "teamMatchSummaryTeamNameDisplay";
+            this.teamMatchSummaryTeamNameDisplay.Size = new System.Drawing.Size(381, 25);
+            this.teamMatchSummaryTeamNameDisplay.TabIndex = 6;
+            this.teamMatchSummaryTeamNameDisplay.Text = "Team Name: ";
+            this.teamMatchSummaryTeamNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamMatchSummaryTeamNumberDisplay
+            // 
+            this.teamMatchSummaryTeamNumberDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryTeamNumberDisplay, 3);
+            this.teamMatchSummaryTeamNumberDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryTeamNumberDisplay.Location = new System.Drawing.Point(132, 25);
+            this.teamMatchSummaryTeamNumberDisplay.Name = "teamMatchSummaryTeamNumberDisplay";
+            this.teamMatchSummaryTeamNumberDisplay.Size = new System.Drawing.Size(381, 25);
+            this.teamMatchSummaryTeamNumberDisplay.TabIndex = 7;
+            this.teamMatchSummaryTeamNumberDisplay.Text = "Team Number:";
+            this.teamMatchSummaryTeamNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label3, 3);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(132, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(381, 25);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "label3";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label4, 3);
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(132, 275);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(381, 25);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label5, 3);
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(132, 350);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(381, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "label5";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamMatchSummaryTeamColourDisplay
+            // 
+            this.teamMatchSummaryTeamColourDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryTeamColourDisplay, 3);
+            this.teamMatchSummaryTeamColourDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryTeamColourDisplay.Location = new System.Drawing.Point(132, 50);
+            this.teamMatchSummaryTeamColourDisplay.Name = "teamMatchSummaryTeamColourDisplay";
+            this.teamMatchSummaryTeamColourDisplay.Size = new System.Drawing.Size(381, 25);
+            this.teamMatchSummaryTeamColourDisplay.TabIndex = 12;
+            this.teamMatchSummaryTeamColourDisplay.Text = "Team Colour:";
+            this.teamMatchSummaryTeamColourDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label7, 3);
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Location = new System.Drawing.Point(132, 175);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(381, 25);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "label7";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label8, 3);
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(132, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(381, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "label8";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label9, 3);
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Location = new System.Drawing.Point(132, 325);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(381, 25);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "label9";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamMatchSummaryMatchNumberDisplay
+            // 
+            this.teamMatchSummaryMatchNumberDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryMatchNumberDisplay, 3);
+            this.teamMatchSummaryMatchNumberDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryMatchNumberDisplay.Location = new System.Drawing.Point(132, 75);
+            this.teamMatchSummaryMatchNumberDisplay.Name = "teamMatchSummaryMatchNumberDisplay";
+            this.teamMatchSummaryMatchNumberDisplay.Size = new System.Drawing.Size(381, 25);
+            this.teamMatchSummaryMatchNumberDisplay.TabIndex = 16;
+            this.teamMatchSummaryMatchNumberDisplay.Text = "label10";
+            this.teamMatchSummaryMatchNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label11, 3);
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Location = new System.Drawing.Point(132, 200);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(381, 25);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "label11";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label12, 3);
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(132, 225);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(381, 25);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "label12";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label13, 3);
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Location = new System.Drawing.Point(132, 300);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(381, 25);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "label13";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label14, 3);
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Location = new System.Drawing.Point(132, 100);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(381, 25);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "label14";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.label15, 3);
+            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Location = new System.Drawing.Point(132, 125);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(381, 25);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "label15";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // aerial_Assist_Scouting_UI_21
             // 
             this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -845,6 +1055,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.teamMatchSummaryTabPage.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.teamComparisonTabPage.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -914,5 +1125,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn standardDeviationColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn successRateColumn1;
         private System.Windows.Forms.Panel startingLocationPanel;
+        private System.Windows.Forms.Label teamMatchSummaryTeamNameDisplay;
+        private System.Windows.Forms.Label teamMatchSummaryTeamNumberDisplay;
+        private System.Windows.Forms.Label teamMatchSummaryTeamColourDisplay;
+        private System.Windows.Forms.Label teamMatchSummaryMatchNumberDisplay;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -96,7 +96,39 @@ namespace FRC_Scouting_V2
         private readonly double[] _totalPointsMean = new double[2];
         private readonly double[] _trussStandardDeviation = new double[2];
         private readonly double[] _trussSuccessRate = new double[2];
+        private readonly List<int> matchSummaryAutoBallPickup = new List<int>();
+        private readonly List<int> matchSummaryAutoBallPickupMiss = new List<int>();
 
+        private readonly List<int> matchSummaryAutoHighGoal = new List<int>();
+        private readonly List<int> matchSummaryAutoHighMiss = new List<int>();
+        private readonly List<int> matchSummaryAutoLowGoal = new List<int>();
+        private readonly List<int> matchSummaryAutoLowMiss = new List<int>();
+        private readonly List<int> matchSummaryAutoMovement = new List<int>();
+        private readonly List<string> matchSummaryComments = new List<string>();
+        private readonly List<int> matchSummaryControlledBallPickup = new List<int>();
+        private readonly List<int> matchSummaryControlledBallPickupMiss = new List<int>();
+        private readonly List<int> matchSummaryControlledHighGoal = new List<int>();
+        private readonly List<int> matchSummaryControlledHighMiss = new List<int>();
+        private readonly List<int> matchSummaryControlledLowGoal = new List<int>();
+        private readonly List<int> matchSummaryControlledLowMiss = new List<int>();
+        private readonly List<int> matchSummaryDidRobotDie = new List<int>();
+        private readonly List<int> matchSummaryEntryID = new List<int>();
+        private readonly List<int> matchSummaryHotGoals = new List<int>();
+        private readonly List<int> matchSummaryHotMisses = new List<int>();
+        private readonly List<int> matchSummaryMatchNumber = new List<int>();
+        private readonly List<int> matchSummaryPassToAnotherRobot = new List<int>();
+        private readonly List<int> matchSummaryPassToAnotherRobotMiss = new List<int>();
+        private readonly List<int> matchSummaryPickupFromHuman = new List<int>();
+        private readonly List<int> matchSummaryPickupFromHumanMiss = new List<int>();
+        private readonly List<int> matchSummaryStartingX = new List<int>();
+        private readonly List<int> matchSummaryStartingY = new List<int>();
+        private readonly List<int> matchSummarySuccessfulTruss = new List<int>();
+        private readonly List<string> matchSummaryTeamColour = new List<string>();
+        private readonly List<string> matchSummaryTeamName = new List<string>();
+        private readonly List<int> matchSummaryTeamNumber = new List<int>();
+        private readonly List<int> matchSummaryTripleAssistGoal = new List<int>();
+        private readonly List<int> matchSummaryTripleAssistMiss = new List<int>();
+        private readonly List<int> matchSummaryUnSuccessfulTruss = new List<int>();
         private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
         private int selectedTeam1;
@@ -108,7 +140,6 @@ namespace FRC_Scouting_V2
         private int teamNumber;
         private string teamURL;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
-
 
 
         public AerialAssist_RahChaCha()
@@ -1181,22 +1212,88 @@ namespace FRC_Scouting_V2
             Settings.Default.selectedTeamNumber = teamNumber;
             Settings.Default.Save();
 
+            matchSummaryEntryID.Clear();
+            matchSummaryTeamNumber.Clear();
+            matchSummaryTeamName.Clear();
+            matchSummaryTeamColour.Clear();
+            matchSummaryMatchNumber.Clear();
+            matchSummaryAutoHighGoal.Clear();
+            matchSummaryAutoHighMiss.Clear();
+            matchSummaryAutoLowGoal.Clear();
+            matchSummaryAutoLowMiss.Clear();
+            matchSummaryControlledHighGoal.Clear();
+            matchSummaryControlledHighMiss.Clear();
+            matchSummaryControlledLowGoal.Clear();
+            matchSummaryControlledLowMiss.Clear();
+            matchSummaryHotGoals.Clear();
+            matchSummaryHotMisses.Clear();
+            matchSummaryTripleAssistGoal.Clear();
+            matchSummaryTripleAssistMiss.Clear();
+            matchSummaryAutoBallPickup.Clear();
+            matchSummaryAutoBallPickupMiss.Clear();
+            matchSummaryControlledBallPickup.Clear();
+            matchSummaryControlledBallPickupMiss.Clear();
+            matchSummaryPickupFromHuman.Clear();
+            matchSummaryPickupFromHumanMiss.Clear();
+            matchSummaryPassToAnotherRobot.Clear();
+            matchSummaryPassToAnotherRobotMiss.Clear();
+            matchSummarySuccessfulTruss.Clear();
+            matchSummaryUnSuccessfulTruss.Clear();
+            matchSummaryStartingX.Clear();
+            matchSummaryStartingY.Clear();
+            matchSummaryDidRobotDie.Clear();
+            matchSummaryAutoMovement.Clear();
+            matchSummaryComments.Clear();
+
             try
             {
                 var conn = new MySqlConnection(us.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
-                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",Settings.Default.currentTableName, Settings.Default.selectedTeamNumber);
+                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",
+                    Settings.Default.currentTableName, Settings.Default.selectedTeamNumber);
                 conn.Open();
-                if (conn.Ping())
-                {
-                    Console.WriteLine("Connected to the databse. Collecting and generating statistics now!");
-                }
                 reader = cmd.ExecuteReader();
+                teamMatchBox.Items.Clear();
                 while (reader.Read())
                 {
-                    teamMatchBox.Items.Add("Match Number: " + reader["MatchNumber"].ToString());
+                    teamMatchBox.Items.Add("Match Number: " + reader["MatchNumber"]);
+
+                    matchSummaryEntryID.Add(Convert.ToInt32(reader["EntryID"]));
+                    matchSummaryTeamNumber.Add(Convert.ToInt32(reader["TeamNumber"]));
+                    matchSummaryTeamName.Add(reader["TeamName"].ToString());
+                    matchSummaryTeamColour.Add(reader["TeamColour"].ToString());
+                    matchSummaryMatchNumber.Add(Convert.ToInt32(reader["MatchNumber"]));
+                    matchSummaryAutoHighGoal.Add(Convert.ToInt32(reader["AutoHighGoal"]));
+                    matchSummaryAutoHighMiss.Add(Convert.ToInt32(reader["AutoHighMiss"]));
+                    matchSummaryAutoLowGoal.Add(Convert.ToInt32(reader["AutoLowGoal"]));
+                    matchSummaryAutoLowMiss.Add(Convert.ToInt32(reader["AutoLowMiss"]));
+                    matchSummaryControlledHighGoal.Add(Convert.ToInt32(reader["ControlledHighGoal"]));
+                    matchSummaryControlledHighMiss.Add(Convert.ToInt32(reader["ControlledHighMiss"]));
+                    matchSummaryControlledLowGoal.Add(Convert.ToInt32(reader["ControlledLowGoal"]));
+                    matchSummaryControlledLowMiss.Add(Convert.ToInt32(reader["ControlledLowMiss"]));
+                    matchSummaryHotGoals.Add(Convert.ToInt32(reader["HotGoals"]));
+                    matchSummaryHotMisses.Add(Convert.ToInt32(reader["HotGoalMiss"]));
+                    matchSummaryTripleAssistGoal.Add(Convert.ToInt32(reader["3AssistGoal"]));
+                    matchSummaryTripleAssistMiss.Add(Convert.ToInt32(reader["3AssistMiss"]));
+                    matchSummaryAutoBallPickup.Add(Convert.ToInt32(reader["AutoBallPickup"]));
+                    matchSummaryAutoBallPickupMiss.Add(Convert.ToInt32(reader["AutoBallPickupMiss"]));
+                    matchSummaryControlledBallPickup.Add(Convert.ToInt32(reader["ControlledBallPickup"]));
+                    matchSummaryControlledBallPickupMiss.Add(Convert.ToInt32(reader["ControlledBallPickupMiss"]));
+                    matchSummaryPickupFromHuman.Add(Convert.ToInt32(reader["PickupFromHuman"]));
+                    matchSummaryPickupFromHumanMiss.Add(Convert.ToInt32(reader["MissedPickupFromHuman"]));
+                    matchSummaryPassToAnotherRobot.Add(Convert.ToInt32(reader["PassToAnotherRobot"]));
+                    matchSummaryPassToAnotherRobotMiss.Add(Convert.ToInt32(reader["MissedPassToAnotherRobot"]));
+                    matchSummarySuccessfulTruss.Add(Convert.ToInt32(reader["SuccessfulTruss"]));
+                    matchSummaryUnSuccessfulTruss.Add(Convert.ToInt32(reader["UnsuccessfulTruss"]));
+                    matchSummaryStartingX.Add(Convert.ToInt32(reader["StartingX"]));
+                    matchSummaryStartingY.Add(Convert.ToInt32(reader["StartingY"]));
+                    matchSummaryDidRobotDie.Add(Convert.ToInt32(reader["DidRobotDie"]));
+                    matchSummaryAutoMovement.Add(Convert.ToInt32(reader["AutoMovement"]));
+                    matchSummaryComments.Add(reader["Comments"].ToString());
+
                 }
+                conn.Close();
             }
             catch (MySqlException exception)
             {
@@ -1244,6 +1341,8 @@ namespace FRC_Scouting_V2
 
         private void teamMatchBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            teamMatchSummaryTeamNameDisplay.Text = "Team Name: " + matchSummaryTeamName[teamMatchBox.SelectedIndex];
+
             //BlankPanel();
             //PlotInitialLines();
             //Graphics g = startingLocationPanel.CreateGraphics();
