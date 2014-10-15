@@ -314,6 +314,7 @@ namespace FRC_Scouting_V2.UIs
 
         private void submitDataButton_Click(object sender, EventArgs e)
         {
+            submitDataButton.Enabled = false;
             if (Settings.Default.allowExportToTextFile)
             {
                 //Write to TextFile
@@ -514,6 +515,8 @@ namespace FRC_Scouting_V2.UIs
             driverRatingButton4.Enabled = true;
             driverRatingButton4.Checked = false;
             UpdateLabels();
+
+            submitDataButton.Enabled = true;
         }
 
         private void successfulTrussButton_Click(object sender, EventArgs e)
