@@ -497,10 +497,22 @@ namespace FRC_Scouting_V2.UIs
             totalMiss = 0;
             totalGoodControl = 0;
             totalMissControl = 0;
+            xStarting = 0;
+            yStarting = 0;
+            startingLocationXYDisplay.Text = ("X: 0 Y: 0");
             comments = ("");
             commentsTextBox.Text = ("Comments: Any other information that may be needed");
             autoMovement = false;
             autonomousMovementCheckBox.Checked = false;
+            driverRating = 0;
+            driverRatingButton1.Enabled = true;
+            driverRatingButton1.Checked = false;
+            driverRatingButton2.Enabled = true;
+            driverRatingButton2.Checked = false;
+            driverRatingButton3.Enabled = true;
+            driverRatingButton3.Checked = false;
+            driverRatingButton4.Enabled = true;
+            driverRatingButton4.Checked = false;
             UpdateLabels();
         }
 

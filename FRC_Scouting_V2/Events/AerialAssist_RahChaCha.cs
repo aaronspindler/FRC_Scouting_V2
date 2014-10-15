@@ -50,6 +50,7 @@ namespace FRC_Scouting_V2
         private const int TRIPLE_ASSIST_GOAL_VALUE = 30;
         private const int AUTO_MOBILITY_VALUE = 5;
         private const int AUTO_ADDITIONAL_POINTS_VALUE = 5;
+        private const int HOT_GOT_POINTS_VALUE = 5;
 
         private readonly double[] _autoHighGoalSuccessRate = new double[2];
         private readonly double[] _autoHighMean = new double[2];

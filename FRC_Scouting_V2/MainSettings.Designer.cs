@@ -40,6 +40,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalSettingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.teamComparisonSameValueLabel = new System.Windows.Forms.Label();
             this.colourTeamComparisonStatsLabel = new System.Windows.Forms.Label();
             this.showQuestioButtonsLabel = new System.Windows.Forms.Label();
             this.allowExportToTextFileCheckBox = new System.Windows.Forms.CheckBox();
@@ -56,6 +57,8 @@
             this.clearConsoleOnToggleCheckBox = new System.Windows.Forms.CheckBox();
             this.showQuestionButtonsCheckBox = new System.Windows.Forms.CheckBox();
             this.colourTeamComparisonStatisticsCheckBox = new System.Windows.Forms.CheckBox();
+            this.teamComparisonEqualColourButton = new System.Windows.Forms.Button();
+            this.teamComparisonEqualValueColourDisplay = new System.Windows.Forms.Label();
             this.databaseSettingsTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.testConnectionToDatabaseButton = new System.Windows.Forms.Button();
@@ -71,9 +74,6 @@
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
             this.connectionDisplay = new System.Windows.Forms.Label();
-            this.teamComparisonSameValueLabel = new System.Windows.Forms.Label();
-            this.teamComparisonEqualColourButton = new System.Windows.Forms.Button();
-            this.teamComparisonEqualValueColourDisplay = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -244,6 +244,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(438, 307);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // teamComparisonSameValueLabel
+            // 
+            this.teamComparisonSameValueLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.teamComparisonSameValueLabel, 4);
+            this.teamComparisonSameValueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamComparisonSameValueLabel.Location = new System.Drawing.Point(3, 224);
+            this.teamComparisonSameValueLabel.Name = "teamComparisonSameValueLabel";
+            this.teamComparisonSameValueLabel.Size = new System.Drawing.Size(210, 28);
+            this.teamComparisonSameValueLabel.TabIndex = 2;
+            this.teamComparisonSameValueLabel.Text = "Team Comparison Equal Value Colour";
+            this.teamComparisonSameValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // colourTeamComparisonStatsLabel
             // 
@@ -444,6 +456,28 @@
             this.colourTeamComparisonStatisticsCheckBox.UseVisualStyleBackColor = true;
             this.colourTeamComparisonStatisticsCheckBox.CheckedChanged += new System.EventHandler(this.colourTeamComparisonStatisticsCheckBox_CheckedChanged);
             // 
+            // teamComparisonEqualColourButton
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.teamComparisonEqualColourButton, 3);
+            this.teamComparisonEqualColourButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamComparisonEqualColourButton.Location = new System.Drawing.Point(219, 227);
+            this.teamComparisonEqualColourButton.Name = "teamComparisonEqualColourButton";
+            this.teamComparisonEqualColourButton.Size = new System.Drawing.Size(156, 22);
+            this.teamComparisonEqualColourButton.TabIndex = 9;
+            this.teamComparisonEqualColourButton.Text = "Set Colour";
+            this.teamComparisonEqualColourButton.UseVisualStyleBackColor = true;
+            this.teamComparisonEqualColourButton.Click += new System.EventHandler(this.teamComparisonEqualColourButton_Click);
+            // 
+            // teamComparisonEqualValueColourDisplay
+            // 
+            this.teamComparisonEqualValueColourDisplay.AutoSize = true;
+            this.teamComparisonEqualValueColourDisplay.BackColor = System.Drawing.Color.Blue;
+            this.teamComparisonEqualValueColourDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamComparisonEqualValueColourDisplay.Location = new System.Drawing.Point(381, 224);
+            this.teamComparisonEqualValueColourDisplay.Name = "teamComparisonEqualValueColourDisplay";
+            this.teamComparisonEqualValueColourDisplay.Size = new System.Drawing.Size(54, 28);
+            this.teamComparisonEqualValueColourDisplay.TabIndex = 10;
+            // 
             // databaseSettingsTab
             // 
             this.databaseSettingsTab.Controls.Add(this.tableLayoutPanel3);
@@ -642,40 +676,6 @@
             this.connectionDisplay.Name = "connectionDisplay";
             this.connectionDisplay.Size = new System.Drawing.Size(432, 28);
             this.connectionDisplay.TabIndex = 13;
-            // 
-            // teamComparisonSameValueLabel
-            // 
-            this.teamComparisonSameValueLabel.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.teamComparisonSameValueLabel, 4);
-            this.teamComparisonSameValueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamComparisonSameValueLabel.Location = new System.Drawing.Point(3, 224);
-            this.teamComparisonSameValueLabel.Name = "teamComparisonSameValueLabel";
-            this.teamComparisonSameValueLabel.Size = new System.Drawing.Size(210, 28);
-            this.teamComparisonSameValueLabel.TabIndex = 2;
-            this.teamComparisonSameValueLabel.Text = "Team Comparison Equal Value Colour";
-            this.teamComparisonSameValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // teamComparisonEqualColourButton
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.teamComparisonEqualColourButton, 3);
-            this.teamComparisonEqualColourButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamComparisonEqualColourButton.Location = new System.Drawing.Point(219, 227);
-            this.teamComparisonEqualColourButton.Name = "teamComparisonEqualColourButton";
-            this.teamComparisonEqualColourButton.Size = new System.Drawing.Size(156, 22);
-            this.teamComparisonEqualColourButton.TabIndex = 9;
-            this.teamComparisonEqualColourButton.Text = "Set Colour";
-            this.teamComparisonEqualColourButton.UseVisualStyleBackColor = true;
-            this.teamComparisonEqualColourButton.Click += new System.EventHandler(this.teamComparisonEqualColourButton_Click);
-            // 
-            // teamComparisonEqualValueColourDisplay
-            // 
-            this.teamComparisonEqualValueColourDisplay.AutoSize = true;
-            this.teamComparisonEqualValueColourDisplay.BackColor = System.Drawing.Color.Blue;
-            this.teamComparisonEqualValueColourDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamComparisonEqualValueColourDisplay.Location = new System.Drawing.Point(381, 224);
-            this.teamComparisonEqualValueColourDisplay.Name = "teamComparisonEqualValueColourDisplay";
-            this.teamComparisonEqualValueColourDisplay.Size = new System.Drawing.Size(54, 28);
-            this.teamComparisonEqualValueColourDisplay.TabIndex = 10;
             // 
             // colorDialog
             // 
