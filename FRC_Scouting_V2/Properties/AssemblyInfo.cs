@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
         "A scouting program built to improve my team’s (FRC3710) existing scouting procedure and overall make the experience of scouting more enjoyable. This program will eventually be able to input data into a database to track teams, scout matches in the program, analyze the data that has been collected, and give information on teams / events. If you want to contribute code visit the Github page at https://github.com/xNovax/FRC_Scouting_V2."
         )]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("xNovax @ FRC 3710")]
+[assembly: AssemblyCompany("xNovax")]
 [assembly: AssemblyProduct("FRC_Scouting_V2")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
