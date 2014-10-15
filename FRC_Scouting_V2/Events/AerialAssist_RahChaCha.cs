@@ -1178,6 +1178,29 @@ namespace FRC_Scouting_V2
             Settings.Default.selectedTeamName = _teamNameArray[teamSelector.SelectedIndex];
             Settings.Default.selectedTeamNumber = teamNumber;
             Settings.Default.Save();
+
+            try
+            {
+                var conn = new MySqlConnection(us.MakeMySqlConnectionString());
+                MySqlCommand cmd = conn.CreateCommand();
+                MySqlDataReader reader;
+                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",Settings.Default.currentTableName, Settings.Default.selectedTeamNumber);
+                conn.Open();
+                if (conn.Ping())
+                {
+                    Console.WriteLine("Connected to the databse. Collecting and generating statistics now!");
+                }
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    teamMatchBox.Items.Add("Match Number: " + reader["MatchNumber"].ToString());
+                }
+            }
+            catch (MySqlException exception)
+            {
+                Console.WriteLine("Error Code: " + exception.ErrorCode);
+                Console.WriteLine("Error Message: " + exception.Message);
+            }
         }
 
         private void teamURLDisplay_LinkClicked(object sender, LinkClickedEventArgs e)

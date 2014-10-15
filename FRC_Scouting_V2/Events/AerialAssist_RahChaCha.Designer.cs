@@ -45,9 +45,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchBox = new System.Windows.Forms.ListBox();
+            this.startingLocationPanel = new System.Windows.Forms.Panel();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewTeam2 = new System.Windows.Forms.DataGridView();
@@ -91,8 +93,6 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.startingLocationPanel = new System.Windows.Forms.Panel();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -179,6 +179,15 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1037, 594);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1025, 582);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
+            // 
             // teamMatchSummaryTabPage
             // 
             this.teamMatchSummaryTabPage.Controls.Add(this.tableLayoutPanel6);
@@ -239,6 +248,18 @@
             this.teamMatchBox.Size = new System.Drawing.Size(125, 590);
             this.teamMatchBox.TabIndex = 0;
             this.teamMatchBox.SelectedIndexChanged += new System.EventHandler(this.teamMatchBox_SelectedIndexChanged);
+            // 
+            // startingLocationPanel
+            // 
+            this.startingLocationPanel.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel6.SetColumnSpan(this.startingLocationPanel, 3);
+            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startingLocationPanel.Location = new System.Drawing.Point(390, 3);
+            this.startingLocationPanel.Name = "startingLocationPanel";
+            this.tableLayoutPanel6.SetRowSpan(this.startingLocationPanel, 11);
+            this.startingLocationPanel.Size = new System.Drawing.Size(381, 269);
+            this.startingLocationPanel.TabIndex = 5;
+            this.startingLocationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startingLocationPanel_Paint);
             // 
             // teamComparisonTabPage
             // 
@@ -804,27 +825,6 @@
             this.openFileDialog.FileName = "openFileDialog1";
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
-            // 
-            // startingLocationPanel
-            // 
-            this.startingLocationPanel.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel6.SetColumnSpan(this.startingLocationPanel, 3);
-            this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.startingLocationPanel.Location = new System.Drawing.Point(390, 3);
-            this.startingLocationPanel.Name = "startingLocationPanel";
-            this.tableLayoutPanel6.SetRowSpan(this.startingLocationPanel, 11);
-            this.startingLocationPanel.Size = new System.Drawing.Size(381, 269);
-            this.startingLocationPanel.TabIndex = 5;
-            this.startingLocationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startingLocationPanel_Paint);
-            // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1025, 582);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // AerialAssist_RahChaCha
             // 
