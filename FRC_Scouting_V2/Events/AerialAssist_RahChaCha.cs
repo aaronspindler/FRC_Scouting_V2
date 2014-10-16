@@ -1343,6 +1343,16 @@ namespace FRC_Scouting_V2
         private void teamMatchBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             teamMatchSummaryTeamNameDisplay.Text = "Team Name: " + matchSummaryTeamName[teamMatchBox.SelectedIndex];
+            teamMatchSummaryTeamNumberDisplay.Text = "Team Number: " + matchSummaryTeamNumber[teamMatchBox.SelectedIndex];
+            teamMatchSummaryTeamColourDisplay.Text = "Team Colour: " + matchSummaryTeamColour[teamMatchBox.SelectedIndex];
+            teamMatchSummaryMatchNumberDisplay.Text = "Match Number: " + matchSummaryMatchNumber[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoHighDisplay.Text = "Auto High Goals: " + matchSummaryAutoHighGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryAutoHighMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoLowDisplay.Text = "Auto Low Goals: " + matchSummaryAutoLowGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryAutoLowMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryControlledHighDisplay.Text = "Controlled High Goals: " + matchSummaryControlledHighGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryControlledHighMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryControlledLowDisplay.Text = "Controlled Low Goals: " + matchSummaryControlledLowGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryControlledLowMiss[teamMatchBox.SelectedIndex];
+
+
+
 
             //BlankPanel();
             //PlotInitialLines();

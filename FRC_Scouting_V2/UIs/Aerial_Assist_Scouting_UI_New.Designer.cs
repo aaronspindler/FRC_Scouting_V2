@@ -99,13 +99,13 @@
             this.didRobotDieCheckBox = new System.Windows.Forms.CheckBox();
             this.commentsTextBox = new System.Windows.Forms.RichTextBox();
             this.driverRatingLabel = new System.Windows.Forms.Label();
+            this.autonomousMovementLabel = new System.Windows.Forms.Label();
             this.autonomousMovementCheckBox = new System.Windows.Forms.CheckBox();
             this.driverRatingButton1 = new System.Windows.Forms.CheckBox();
             this.driverRatingButton2 = new System.Windows.Forms.CheckBox();
             this.driverRatingButton3 = new System.Windows.Forms.CheckBox();
             this.driverRatingButton4 = new System.Windows.Forms.CheckBox();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.autonomousMovementLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchNumberUpDown)).BeginInit();
             this.SuspendLayout();
@@ -1082,6 +1082,18 @@
             this.driverRatingLabel.Text = "Driver Rating: ";
             this.driverRatingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // autonomousMovementLabel
+            // 
+            this.autonomousMovementLabel.AutoSize = true;
+            this.tableLayoutPanel.SetColumnSpan(this.autonomousMovementLabel, 4);
+            this.autonomousMovementLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autonomousMovementLabel.Location = new System.Drawing.Point(543, 358);
+            this.autonomousMovementLabel.Name = "autonomousMovementLabel";
+            this.autonomousMovementLabel.Size = new System.Drawing.Size(174, 25);
+            this.autonomousMovementLabel.TabIndex = 88;
+            this.autonomousMovementLabel.Text = "Autonomous Movement:";
+            this.autonomousMovementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // autonomousMovementCheckBox
             // 
             this.autonomousMovementCheckBox.AutoSize = true;
@@ -1153,18 +1165,6 @@
             // saveFileDialog
             // 
             this.saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            // 
-            // autonomousMovementLabel
-            // 
-            this.autonomousMovementLabel.AutoSize = true;
-            this.tableLayoutPanel.SetColumnSpan(this.autonomousMovementLabel, 4);
-            this.autonomousMovementLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autonomousMovementLabel.Location = new System.Drawing.Point(543, 358);
-            this.autonomousMovementLabel.Name = "autonomousMovementLabel";
-            this.autonomousMovementLabel.Size = new System.Drawing.Size(174, 25);
-            this.autonomousMovementLabel.TabIndex = 88;
-            this.autonomousMovementLabel.Text = "Autonomous Movement:";
-            this.autonomousMovementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Aerial_Assist_Scouting_UI_New
             // 
