@@ -113,6 +113,7 @@ namespace FRC_Scouting_V2
         private readonly List<int> matchSummaryControlledLowGoal = new List<int>();
         private readonly List<int> matchSummaryControlledLowMiss = new List<int>();
         private readonly List<int> matchSummaryDidRobotDie = new List<int>();
+        private readonly List<int> matchSummaryDriverRating = new List<int>();
         private readonly List<int> matchSummaryEntryID = new List<int>();
         private readonly List<int> matchSummaryHotGoals = new List<int>();
         private readonly List<int> matchSummaryHotMisses = new List<int>();
@@ -123,9 +124,6 @@ namespace FRC_Scouting_V2
         private readonly List<int> matchSummaryPickupFromHumanMiss = new List<int>();
         private readonly List<int> matchSummaryStartingX = new List<int>();
         private readonly List<int> matchSummaryStartingY = new List<int>();
-        List<int> matchSummaryDriverRating = new List<int>(); 
-        List<int> matchSummaryX = new List<int>();
-        List<int> matchSummaryY = new List<int>();
         private readonly List<int> matchSummarySuccessfulTruss = new List<int>();
         private readonly List<string> matchSummaryTeamColour = new List<string>();
         private readonly List<string> matchSummaryTeamName = new List<string>();
@@ -133,6 +131,8 @@ namespace FRC_Scouting_V2
         private readonly List<int> matchSummaryTripleAssistGoal = new List<int>();
         private readonly List<int> matchSummaryTripleAssistMiss = new List<int>();
         private readonly List<int> matchSummaryUnSuccessfulTruss = new List<int>();
+        private readonly List<int> matchSummaryX = new List<int>();
+        private readonly List<int> matchSummaryY = new List<int>();
         private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
         private int selectedTeam1;
@@ -1301,7 +1301,6 @@ namespace FRC_Scouting_V2
                     matchSummaryX.Add(Convert.ToInt32(reader["StartingX"]));
                     matchSummaryY.Add(Convert.ToInt32(reader["StartingY"]));
                     matchSummaryComments.Add(reader["Comments"].ToString());
-
                 }
                 conn.Close();
             }
@@ -1352,23 +1351,62 @@ namespace FRC_Scouting_V2
         private void teamMatchBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             teamMatchSummaryTeamNameDisplay.Text = "Team Name: " + matchSummaryTeamName[teamMatchBox.SelectedIndex];
-            teamMatchSummaryTeamNumberDisplay.Text = "Team Number: " + matchSummaryTeamNumber[teamMatchBox.SelectedIndex];
-            teamMatchSummaryTeamColourDisplay.Text = "Team Colour: " + matchSummaryTeamColour[teamMatchBox.SelectedIndex];
-            teamMatchSummaryMatchNumberDisplay.Text = "Match Number: " + matchSummaryMatchNumber[teamMatchBox.SelectedIndex];
-            teamMatchSummaryAutoHighDisplay.Text = "Auto High Goals: " + matchSummaryAutoHighGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryAutoHighMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryAutoLowDisplay.Text = "Auto Low Goals: " + matchSummaryAutoLowGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryAutoLowMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryControlledHighDisplay.Text = "Controlled High Goals: " + matchSummaryControlledHighGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryControlledHighMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryControlledLowDisplay.Text = "Controlled Low Goals: " + matchSummaryControlledLowGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryControlledLowMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryHotDisplay.Text = "Hot Goal: " + matchSummaryHotGoals[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryHotMisses[teamMatchBox.SelectedIndex];
-            teamMatchSummaryTripleAssistDisplay.Text = "Triple Assist Goals: " + matchSummaryTripleAssistGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryTripleAssistMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryAutoBallPickupDisplay.Text = "Autonomous Ball Pickup: " + matchSummaryAutoBallPickup[teamMatchBox.SelectedIndex] + " Missed Pickup: " + matchSummaryAutoBallPickupMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryControlledBallPickupDisplay.Text = "Controlled Ball Pickup: " + matchSummaryControlledBallPickup[teamMatchBox.SelectedIndex] + " Missed Pickup: " + matchSummaryControlledBallPickupMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryPickupFromHumanDisplay.Text = "Pickup From Human: " + matchSummaryPickupFromHuman[teamMatchBox.SelectedIndex] + " Missed Pickup: " + matchSummaryPickupFromHumanMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryPassToAnotherRobotDisplay.Text = "Pass to Another Robot: " + matchSummaryPassToAnotherRobot[teamMatchBox.SelectedIndex] + " Missed Pass: " + matchSummaryPassToAnotherRobotMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryTrussDisplay.Text = "Successful Truss: " + matchSummarySuccessfulTruss[teamMatchBox.SelectedIndex] + " Unsuccessful Truss: " + matchSummaryUnSuccessfulTruss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryDidRobotDieDisplay.Text = "Did robot die?: " + Convert.ToBoolean(matchSummaryDidRobotDie[teamMatchBox.SelectedIndex]);
-            teamMatchSummaryDriverRatingDisplay.Text = "Driver Rating: " + matchSummaryDriverRating[teamMatchBox.SelectedIndex];
-            teamMatchSummaryAutoMovementDisplay.Text = "Autonomous Movement: " + Convert.ToBoolean(matchSummaryAutoMovement[teamMatchBox.SelectedIndex]);
+            teamMatchSummaryTeamNumberDisplay.Text = "Team Number: " +
+                                                     matchSummaryTeamNumber[teamMatchBox.SelectedIndex];
+            teamMatchSummaryTeamColourDisplay.Text = "Team Colour: " +
+                                                     matchSummaryTeamColour[teamMatchBox.SelectedIndex];
+            teamMatchSummaryMatchNumberDisplay.Text = "Match Number: " +
+                                                      matchSummaryMatchNumber[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoHighDisplay.Text = "Auto High Goals: " +
+                                                   matchSummaryAutoHighGoal[teamMatchBox.SelectedIndex] + " Misses: " +
+                                                   matchSummaryAutoHighMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoLowDisplay.Text = "Auto Low Goals: " +
+                                                  matchSummaryAutoLowGoal[teamMatchBox.SelectedIndex] + " Misses: " +
+                                                  matchSummaryAutoLowMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryControlledHighDisplay.Text = "Controlled High Goals: " +
+                                                         matchSummaryControlledHighGoal[teamMatchBox.SelectedIndex] +
+                                                         " Misses: " +
+                                                         matchSummaryControlledHighMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryControlledLowDisplay.Text = "Controlled Low Goals: " +
+                                                        matchSummaryControlledLowGoal[teamMatchBox.SelectedIndex] +
+                                                        " Misses: " +
+                                                        matchSummaryControlledLowMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryHotDisplay.Text = "Hot Goal: " + matchSummaryHotGoals[teamMatchBox.SelectedIndex] +
+                                              " Misses: " + matchSummaryHotMisses[teamMatchBox.SelectedIndex];
+            teamMatchSummaryTripleAssistDisplay.Text = "Triple Assist Goals: " +
+                                                       matchSummaryTripleAssistGoal[teamMatchBox.SelectedIndex] +
+                                                       " Misses: " +
+                                                       matchSummaryTripleAssistMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoBallPickupDisplay.Text = "Autonomous Ball Pickup: " +
+                                                         matchSummaryAutoBallPickup[teamMatchBox.SelectedIndex] +
+                                                         " Missed Pickup: " +
+                                                         matchSummaryAutoBallPickupMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryControlledBallPickupDisplay.Text = "Controlled Ball Pickup: " +
+                                                               matchSummaryControlledBallPickup[
+                                                                   teamMatchBox.SelectedIndex] + " Missed Pickup: " +
+                                                               matchSummaryControlledBallPickupMiss[
+                                                                   teamMatchBox.SelectedIndex];
+            teamMatchSummaryPickupFromHumanDisplay.Text = "Pickup From Human: " +
+                                                          matchSummaryPickupFromHuman[teamMatchBox.SelectedIndex] +
+                                                          " Missed Pickup: " +
+                                                          matchSummaryPickupFromHumanMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryPassToAnotherRobotDisplay.Text = "Pass to Another Robot: " +
+                                                             matchSummaryPassToAnotherRobot[teamMatchBox.SelectedIndex] +
+                                                             " Missed Pass: " +
+                                                             matchSummaryPassToAnotherRobotMiss[
+                                                                 teamMatchBox.SelectedIndex];
+            teamMatchSummaryTrussDisplay.Text = "Successful Truss: " +
+                                                matchSummarySuccessfulTruss[teamMatchBox.SelectedIndex] +
+                                                " Unsuccessful Truss: " +
+                                                matchSummaryUnSuccessfulTruss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryDidRobotDieDisplay.Text = "Did robot die?: " +
+                                                      Convert.ToBoolean(
+                                                          matchSummaryDidRobotDie[teamMatchBox.SelectedIndex]);
+            teamMatchSummaryDriverRatingDisplay.Text = "Driver Rating: " +
+                                                       matchSummaryDriverRating[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoMovementDisplay.Text = "Autonomous Movement: " +
+                                                       Convert.ToBoolean(
+                                                           matchSummaryAutoMovement[teamMatchBox.SelectedIndex]);
             teamMatchSummaryCommentsDisplay.Text = "Comments: " + matchSummaryComments[teamMatchBox.SelectedIndex];
 
             //Draw the starting location on the starting location panel
