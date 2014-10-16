@@ -81,11 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Console.cs">
+    <Compile Include="ConsoleWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Console.Designer.cs">
-      <DependentUpon>Console.cs</DependentUpon>
+    <Compile Include="ConsoleWindow.Designer.cs">
+      <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Events\AerialAssist_Northbay.cs">
       <SubType>Form</SubType>
@@ -173,8 +173,8 @@
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </Compile>
     <Compile Include="UsefulSnippets.cs" />
-    <EmbeddedResource Include="Console.resx">
-      <DependentUpon>Console.cs</DependentUpon>
+    <EmbeddedResource Include="ConsoleWindow.resx">
+      <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events\AerialAssist_Northbay.resx">
       <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>

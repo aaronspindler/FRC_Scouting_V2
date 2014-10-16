@@ -137,7 +137,8 @@ namespace FRC_Scouting_V2
 
         private void showConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ConsoleWindow csw = new ConsoleWindow();
+            csw.Show();
         }
     }
 }
