@@ -53,7 +53,7 @@
             this.teamMatchSummaryTeamNumberDisplay = new System.Windows.Forms.Label();
             this.teamMatchSummaryTeamColourDisplay = new System.Windows.Forms.Label();
             this.teamMatchSummaryMatchNumberDisplay = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.teamMatchSummaryAutoHighGoalDisplay = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -222,7 +222,7 @@
             this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryTeamNumberDisplay, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryTeamColourDisplay, 1, 2);
             this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryMatchNumberDisplay, 1, 3);
-            this.tableLayoutPanel6.Controls.Add(this.label14, 1, 4);
+            this.tableLayoutPanel6.Controls.Add(this.teamMatchSummaryAutoHighGoalDisplay, 1, 4);
             this.tableLayoutPanel6.Controls.Add(this.label15, 1, 5);
             this.tableLayoutPanel6.Controls.Add(this.label3, 1, 6);
             this.tableLayoutPanel6.Controls.Add(this.label7, 1, 7);
@@ -327,20 +327,20 @@
             this.teamMatchSummaryMatchNumberDisplay.Name = "teamMatchSummaryMatchNumberDisplay";
             this.teamMatchSummaryMatchNumberDisplay.Size = new System.Drawing.Size(381, 25);
             this.teamMatchSummaryMatchNumberDisplay.TabIndex = 16;
-            this.teamMatchSummaryMatchNumberDisplay.Text = "label10";
+            this.teamMatchSummaryMatchNumberDisplay.Text = "Match Number:";
             this.teamMatchSummaryMatchNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label14
+            // teamMatchSummaryAutoHighGoalDisplay
             // 
-            this.label14.AutoSize = true;
-            this.tableLayoutPanel6.SetColumnSpan(this.label14, 3);
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(132, 100);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(381, 25);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "label14";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.teamMatchSummaryAutoHighGoalDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryAutoHighGoalDisplay, 3);
+            this.teamMatchSummaryAutoHighGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryAutoHighGoalDisplay.Location = new System.Drawing.Point(132, 100);
+            this.teamMatchSummaryAutoHighGoalDisplay.Name = "teamMatchSummaryAutoHighGoalDisplay";
+            this.teamMatchSummaryAutoHighGoalDisplay.Size = new System.Drawing.Size(381, 25);
+            this.teamMatchSummaryAutoHighGoalDisplay.TabIndex = 20;
+            this.teamMatchSummaryAutoHighGoalDisplay.Text = "Autonomous High Goals:";
+            this.teamMatchSummaryAutoHighGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
             // 
@@ -375,7 +375,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(381, 25);
             this.label7.TabIndex = 13;
-            this.label7.Text = "label7";
+            this.label7.Text = "F";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
@@ -1129,7 +1129,7 @@
         private System.Windows.Forms.Label teamMatchSummaryTeamNumberDisplay;
         private System.Windows.Forms.Label teamMatchSummaryTeamColourDisplay;
         private System.Windows.Forms.Label teamMatchSummaryMatchNumberDisplay;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label teamMatchSummaryAutoHighGoalDisplay;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;

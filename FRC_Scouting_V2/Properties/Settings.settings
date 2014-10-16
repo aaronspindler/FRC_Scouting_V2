@@ -42,7 +42,7 @@
       <Value Profile="(Default)">FRC_Scouting</Value>
     </Setting>
     <Setting Name="clearConsoleOnToggle" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="allowExportToTextFile" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
