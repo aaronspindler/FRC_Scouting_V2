@@ -24,7 +24,6 @@
 //===============================================================================
 
 using System;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
@@ -35,46 +34,12 @@ namespace FRC_Scouting_V2
     public partial class Home : Form
     {
         //Variables
-        private const int SW_HIDE = 0;
-
-        private const int SW_SHOW = 5;
         private readonly UsefulSnippets us = new UsefulSnippets();
-        private Boolean isConsoleVisible;
 
         public Home()
         {
             InitializeComponent();
         }
-
-        public static void HideConsoleWindow()
-        {
-            IntPtr handle = GetConsoleWindow();
-
-            ShowWindow(handle, SW_HIDE);
-        }
-
-        public static void ShowConsoleWindow()
-        {
-            IntPtr handle = GetConsoleWindow();
-
-            if (handle == IntPtr.Zero)
-            {
-                AllocConsole();
-            }
-            else
-            {
-                ShowWindow(handle, SW_SHOW);
-            }
-        }
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        private static extern bool AllocConsole();
-
-        [DllImport("kernel32.dll")]
-        private static extern IntPtr GetConsoleWindow();
-
-        [DllImport("user32.dll")]
-        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         private void changelogToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -122,7 +87,6 @@ namespace FRC_Scouting_V2
 
         private void Home_Load(object sender, EventArgs e)
         {
-            HideConsoleWindow();
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
 
@@ -171,30 +135,9 @@ namespace FRC_Scouting_V2
             teamInformationLookup.Show();
         }
 
-        private void toggleConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        private void showConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (isConsoleVisible == false)
-            {
-                ShowConsoleWindow();
-                if (Settings.Default.clearConsoleOnToggle)
-                {
-                    Console.Clear();
-                }
 
-                isConsoleVisible = true;
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Closing this window results in closure of the program!");
-                Console.WriteLine("To hide console go to Home -> Debug -> Toggle Console Window!");
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            else
-            {
-                if (isConsoleVisible)
-                {
-                    HideConsoleWindow();
-                    isConsoleVisible = false;
-                }
-            }
         }
     }
 }

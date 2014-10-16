@@ -44,9 +44,9 @@
             this.teamInformationLookupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toggleConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ToolStripComboBox();
+            this.showConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -189,8 +189,8 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem,
-            this.toggleConsoleWindowToolStripMenuItem});
+            this.showConsoleWindowToolStripMenuItem,
+            this.resetAllSavedSettingsToDefaultToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
             this.debugToolStripMenuItem.Text = "Debug";
@@ -201,13 +201,6 @@
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Text = "Reset All Saved Settings to Default";
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetAllSavedSettingsToDefaultToolStripMenuItem_Click);
-            // 
-            // toggleConsoleWindowToolStripMenuItem
-            // 
-            this.toggleConsoleWindowToolStripMenuItem.Name = "toggleConsoleWindowToolStripMenuItem";
-            this.toggleConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.toggleConsoleWindowToolStripMenuItem.Text = "Toggle Console Window";
-            this.toggleConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.toggleConsoleWindowToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
@@ -224,6 +217,13 @@
             this.eventSelector.Name = "eventSelector";
             this.eventSelector.Size = new System.Drawing.Size(248, 21);
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged_1);
+            // 
+            // showConsoleWindowToolStripMenuItem
+            // 
+            this.showConsoleWindowToolStripMenuItem.Name = "showConsoleWindowToolStripMenuItem";
+            this.showConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.showConsoleWindowToolStripMenuItem.Text = "Show Console Window";
+            this.showConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.showConsoleWindowToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -262,11 +262,11 @@
         private System.Windows.Forms.ToolStripMenuItem resetAllSavedSettingsToDefaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changelogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem licenseInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toggleConsoleWindowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teamInformationLookupToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripComboBox eventSelector;
+        private System.Windows.Forms.ToolStripMenuItem showConsoleWindowToolStripMenuItem;
     }
 }
 
