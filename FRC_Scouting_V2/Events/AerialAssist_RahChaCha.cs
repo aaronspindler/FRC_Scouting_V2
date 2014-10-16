@@ -1350,8 +1350,8 @@ namespace FRC_Scouting_V2
             teamMatchSummaryAutoLowDisplay.Text = "Auto Low Goals: " + matchSummaryAutoLowGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryAutoLowMiss[teamMatchBox.SelectedIndex];
             teamMatchSummaryControlledHighDisplay.Text = "Controlled High Goals: " + matchSummaryControlledHighGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryControlledHighMiss[teamMatchBox.SelectedIndex];
             teamMatchSummaryControlledLowDisplay.Text = "Controlled Low Goals: " + matchSummaryControlledLowGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryControlledLowMiss[teamMatchBox.SelectedIndex];
-
-
+            teamMatchSummaryHotDisplay.Text = "Hot Goal: " + matchSummaryHotGoals[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryHotMisses[teamMatchBox.SelectedIndex];
+            teamMatchSummaryTripleAssistDisplay.Text = "Triple Assist Goals: " + matchSummaryTripleAssistGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryTripleAssistMiss[teamMatchBox.SelectedIndex];
 
 
             //BlankPanel();

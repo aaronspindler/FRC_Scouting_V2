@@ -45,6 +45,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchBox = new System.Windows.Forms.ListBox();
@@ -64,6 +65,11 @@
             this.teamMatchSummaryPickupFromHumanDisplay = new System.Windows.Forms.Label();
             this.teamMatchSummaryPassToAnotherRobotDisplay = new System.Windows.Forms.Label();
             this.teamMatchSummaryTrussDisplay = new System.Windows.Forms.Label();
+            this.teamMatchSummaryDidRobotDieDisplay = new System.Windows.Forms.Label();
+            this.teamMatchSummaryDriverRatingDisplay = new System.Windows.Forms.Label();
+            this.teamMatchSummaryAutoMovementDisplay = new System.Windows.Forms.Label();
+            this.teamMatchSummaryCommentsDisplay = new System.Windows.Forms.RichTextBox();
+            this.teamMatchSummaryXYDisplay = new System.Windows.Forms.Label();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewTeam2 = new System.Windows.Forms.DataGridView();
@@ -107,12 +113,6 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.teamMatchSummaryDidRobotDieDisplay = new System.Windows.Forms.Label();
-            this.teamMatchSummaryDriverRatingDisplay = new System.Windows.Forms.Label();
-            this.teamMatchSummaryAutoMovementDisplay = new System.Windows.Forms.Label();
-            this.teamMatchSummaryCommentsDisplay = new System.Windows.Forms.RichTextBox();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
-            this.teamMatchSummaryXYDisplay = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -198,6 +198,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 594F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1037, 594);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // aerial_Assist_Scouting_UI_21
+            // 
+            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
+            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
+            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
+            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1025, 582);
+            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamMatchSummaryTabPage
             // 
@@ -481,6 +490,67 @@
             this.teamMatchSummaryTrussDisplay.TabIndex = 11;
             this.teamMatchSummaryTrussDisplay.Text = "Successful Truss: 0 Unsuccessful Truss: 0";
             this.teamMatchSummaryTrussDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamMatchSummaryDidRobotDieDisplay
+            // 
+            this.teamMatchSummaryDidRobotDieDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryDidRobotDieDisplay, 2);
+            this.teamMatchSummaryDidRobotDieDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryDidRobotDieDisplay.Location = new System.Drawing.Point(132, 375);
+            this.teamMatchSummaryDidRobotDieDisplay.Name = "teamMatchSummaryDidRobotDieDisplay";
+            this.teamMatchSummaryDidRobotDieDisplay.Size = new System.Drawing.Size(252, 25);
+            this.teamMatchSummaryDidRobotDieDisplay.TabIndex = 22;
+            this.teamMatchSummaryDidRobotDieDisplay.Text = "Did the robot die?: No Team Selected";
+            this.teamMatchSummaryDidRobotDieDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamMatchSummaryDriverRatingDisplay
+            // 
+            this.teamMatchSummaryDriverRatingDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryDriverRatingDisplay, 2);
+            this.teamMatchSummaryDriverRatingDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryDriverRatingDisplay.Location = new System.Drawing.Point(132, 400);
+            this.teamMatchSummaryDriverRatingDisplay.Name = "teamMatchSummaryDriverRatingDisplay";
+            this.teamMatchSummaryDriverRatingDisplay.Size = new System.Drawing.Size(252, 25);
+            this.teamMatchSummaryDriverRatingDisplay.TabIndex = 23;
+            this.teamMatchSummaryDriverRatingDisplay.Text = "Driver Rating: 0";
+            this.teamMatchSummaryDriverRatingDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamMatchSummaryAutoMovementDisplay
+            // 
+            this.teamMatchSummaryAutoMovementDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryAutoMovementDisplay, 2);
+            this.teamMatchSummaryAutoMovementDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryAutoMovementDisplay.Location = new System.Drawing.Point(132, 425);
+            this.teamMatchSummaryAutoMovementDisplay.Name = "teamMatchSummaryAutoMovementDisplay";
+            this.teamMatchSummaryAutoMovementDisplay.Size = new System.Drawing.Size(252, 25);
+            this.teamMatchSummaryAutoMovementDisplay.TabIndex = 24;
+            this.teamMatchSummaryAutoMovementDisplay.Text = "Autonomous Movement: No Team Selected";
+            this.teamMatchSummaryAutoMovementDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamMatchSummaryCommentsDisplay
+            // 
+            this.teamMatchSummaryCommentsDisplay.BackColor = System.Drawing.Color.Silver;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryCommentsDisplay, 4);
+            this.teamMatchSummaryCommentsDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryCommentsDisplay.Location = new System.Drawing.Point(519, 328);
+            this.teamMatchSummaryCommentsDisplay.Name = "teamMatchSummaryCommentsDisplay";
+            this.teamMatchSummaryCommentsDisplay.ReadOnly = true;
+            this.tableLayoutPanel6.SetRowSpan(this.teamMatchSummaryCommentsDisplay, 10);
+            this.teamMatchSummaryCommentsDisplay.Size = new System.Drawing.Size(515, 244);
+            this.teamMatchSummaryCommentsDisplay.TabIndex = 25;
+            this.teamMatchSummaryCommentsDisplay.Text = "";
+            // 
+            // teamMatchSummaryXYDisplay
+            // 
+            this.teamMatchSummaryXYDisplay.AutoSize = true;
+            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryXYDisplay, 3);
+            this.teamMatchSummaryXYDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamMatchSummaryXYDisplay.Location = new System.Drawing.Point(648, 275);
+            this.teamMatchSummaryXYDisplay.Name = "teamMatchSummaryXYDisplay";
+            this.teamMatchSummaryXYDisplay.Size = new System.Drawing.Size(386, 25);
+            this.teamMatchSummaryXYDisplay.TabIndex = 26;
+            this.teamMatchSummaryXYDisplay.Text = "X = 0, Y = 0";
+            this.teamMatchSummaryXYDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamComparisonTabPage
             // 
@@ -1046,76 +1116,6 @@
             this.openFileDialog.FileName = "openFileDialog1";
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
-            // 
-            // teamMatchSummaryDidRobotDieDisplay
-            // 
-            this.teamMatchSummaryDidRobotDieDisplay.AutoSize = true;
-            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryDidRobotDieDisplay, 2);
-            this.teamMatchSummaryDidRobotDieDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamMatchSummaryDidRobotDieDisplay.Location = new System.Drawing.Point(132, 375);
-            this.teamMatchSummaryDidRobotDieDisplay.Name = "teamMatchSummaryDidRobotDieDisplay";
-            this.teamMatchSummaryDidRobotDieDisplay.Size = new System.Drawing.Size(252, 25);
-            this.teamMatchSummaryDidRobotDieDisplay.TabIndex = 22;
-            this.teamMatchSummaryDidRobotDieDisplay.Text = "Did the robot die?: No Team Selected";
-            this.teamMatchSummaryDidRobotDieDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // teamMatchSummaryDriverRatingDisplay
-            // 
-            this.teamMatchSummaryDriverRatingDisplay.AutoSize = true;
-            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryDriverRatingDisplay, 2);
-            this.teamMatchSummaryDriverRatingDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamMatchSummaryDriverRatingDisplay.Location = new System.Drawing.Point(132, 400);
-            this.teamMatchSummaryDriverRatingDisplay.Name = "teamMatchSummaryDriverRatingDisplay";
-            this.teamMatchSummaryDriverRatingDisplay.Size = new System.Drawing.Size(252, 25);
-            this.teamMatchSummaryDriverRatingDisplay.TabIndex = 23;
-            this.teamMatchSummaryDriverRatingDisplay.Text = "Driver Rating: 0";
-            this.teamMatchSummaryDriverRatingDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // teamMatchSummaryAutoMovementDisplay
-            // 
-            this.teamMatchSummaryAutoMovementDisplay.AutoSize = true;
-            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryAutoMovementDisplay, 2);
-            this.teamMatchSummaryAutoMovementDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamMatchSummaryAutoMovementDisplay.Location = new System.Drawing.Point(132, 425);
-            this.teamMatchSummaryAutoMovementDisplay.Name = "teamMatchSummaryAutoMovementDisplay";
-            this.teamMatchSummaryAutoMovementDisplay.Size = new System.Drawing.Size(252, 25);
-            this.teamMatchSummaryAutoMovementDisplay.TabIndex = 24;
-            this.teamMatchSummaryAutoMovementDisplay.Text = "Autonomous Movement: No Team Selected";
-            this.teamMatchSummaryAutoMovementDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // teamMatchSummaryCommentsDisplay
-            // 
-            this.teamMatchSummaryCommentsDisplay.BackColor = System.Drawing.Color.Silver;
-            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryCommentsDisplay, 4);
-            this.teamMatchSummaryCommentsDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamMatchSummaryCommentsDisplay.Location = new System.Drawing.Point(519, 328);
-            this.teamMatchSummaryCommentsDisplay.Name = "teamMatchSummaryCommentsDisplay";
-            this.teamMatchSummaryCommentsDisplay.ReadOnly = true;
-            this.tableLayoutPanel6.SetRowSpan(this.teamMatchSummaryCommentsDisplay, 10);
-            this.teamMatchSummaryCommentsDisplay.Size = new System.Drawing.Size(515, 244);
-            this.teamMatchSummaryCommentsDisplay.TabIndex = 25;
-            this.teamMatchSummaryCommentsDisplay.Text = "";
-            // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(6, 6);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(6);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(1025, 582);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
-            // 
-            // teamMatchSummaryXYDisplay
-            // 
-            this.teamMatchSummaryXYDisplay.AutoSize = true;
-            this.tableLayoutPanel6.SetColumnSpan(this.teamMatchSummaryXYDisplay, 3);
-            this.teamMatchSummaryXYDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamMatchSummaryXYDisplay.Location = new System.Drawing.Point(648, 275);
-            this.teamMatchSummaryXYDisplay.Name = "teamMatchSummaryXYDisplay";
-            this.teamMatchSummaryXYDisplay.Size = new System.Drawing.Size(386, 25);
-            this.teamMatchSummaryXYDisplay.TabIndex = 26;
-            this.teamMatchSummaryXYDisplay.Text = "X = 0, Y = 0";
-            this.teamMatchSummaryXYDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AerialAssist_RahChaCha
             // 
