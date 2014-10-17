@@ -25,6 +25,7 @@
 
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -407,6 +408,36 @@ namespace FRC_Scouting_V2
                 teamComparisonEqualValueColourDisplay.BackColor = colorDialog.Color;
                 FRC_Scouting_V2.Properties.Settings.Default.teamComparisonEqualValueColour = colorDialog.Color;
                 FRC_Scouting_V2.Properties.Settings.Default.Save();
+            }
+        }
+
+        private void importDatabaseConnectionSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    var reader = new StreamReader(openFileDialog.FileName);
+                    Settings.Default.databaseIP = Convert.ToString(reader.ReadLine());
+                    Settings.Default.databasePort = Convert.ToString(reader.ReadLine());
+                    Settings.Default.databaseName = Convert.ToString(reader.ReadLine());
+                    Settings.Default.databaseUsername = Convert.ToString(reader.ReadLine());
+                    Settings.Default.databasePassword = Convert.ToString(reader.ReadLine());
+                    Settings.Default.Save();
+
+                    usernameTextBox.Text = Settings.Default.username;
+                    databaseIPTextBox.Text = Settings.Default.databaseIP;
+                    databasePortTextBox.Text = Settings.Default.databasePort;
+                    databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
+                    databasePasswordTextBox.Text = Settings.Default.databasePassword;
+                    databaseNameTextBox.Text = Settings.Default.databaseName;
+
+                    us.ShowInformationMessage("You have successfully imported your connection details. Please test the connection");
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Occured: " + exception.Message);
+                }
             }
         }
     }

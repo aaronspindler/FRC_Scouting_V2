@@ -75,6 +75,9 @@
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
             this.connectionDisplay = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importDatabaseConnectionSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -119,6 +122,7 @@
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.importToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -681,6 +685,25 @@
             // 
             this.colorDialog.Color = System.Drawing.Color.Blue;
             // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importDatabaseConnectionSettingsToolStripMenuItem});
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.importToolStripMenuItem.Text = "Import";
+            // 
+            // importDatabaseConnectionSettingsToolStripMenuItem
+            // 
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Name = "importDatabaseConnectionSettingsToolStripMenuItem";
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Text = "Import Database Connection Settings";
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Click += new System.EventHandler(this.importDatabaseConnectionSettingsToolStripMenuItem_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
             // MainSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -757,5 +780,8 @@
         private System.Windows.Forms.Button teamComparisonEqualColourButton;
         private System.Windows.Forms.Label teamComparisonEqualValueColourDisplay;
         private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importDatabaseConnectionSettingsToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
