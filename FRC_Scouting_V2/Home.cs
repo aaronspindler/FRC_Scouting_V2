@@ -137,7 +137,7 @@ namespace FRC_Scouting_V2
 
         private void showConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("There is no console currently setup.");
+
         }
     }
 }
