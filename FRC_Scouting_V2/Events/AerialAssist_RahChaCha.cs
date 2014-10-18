@@ -153,7 +153,8 @@ namespace FRC_Scouting_V2
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var conn = new MySqlConnection(us.MakeMySqlConnectionString());
-            var cmd = new MySqlCommand();
+            var cmd = new MySqlCommand {Connection = conn};
+            conn.Open();
 
             int numberOfFilesImported = 0;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -203,7 +204,7 @@ namespace FRC_Scouting_V2
 
                     if (comments.Contains(";"))
                     {
-                        comments = ("YOUR COMMENT IS TRYING TO BREAK MY PROGRAM!");
+                        comments = ("");
                     }
 
                     string testIfFileIsGood = reader.ReadLine();
@@ -212,7 +213,6 @@ namespace FRC_Scouting_V2
                         if (teamNumberImport == 0)
                         {
                             var slot = 0;
-                            var actualTeamNum = 0;
                             var sameTeam = false;
 
                             while (sameTeam == false)
@@ -226,8 +226,9 @@ namespace FRC_Scouting_V2
                             }
                         }
                         Console.WriteLine("Actual Team Number: " + teamNumberImport);
-                        cmd.Connection = conn;
-                        cmd.CommandText =
+                        try
+                        {
+                            cmd.CommandText =
                             String.Format(
                                 "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
                                 Settings.Default.currentTableName, (us.GetNumberOfRowsInATable() + 1),
@@ -241,8 +242,13 @@ namespace FRC_Scouting_V2
                                 successfulTruss,
                                 unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie), driverRating,
                                 Convert.ToInt32(autoMovement), comments);
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (MySqlException ex)
+                        {
+                            Console.WriteLine("Error Code: " + ex.ErrorCode);
+                            Console.WriteLine("Error Message: " + ex.Message);
+                        }
                         conn.Close();
                     }
                     else

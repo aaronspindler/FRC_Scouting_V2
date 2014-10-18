@@ -190,6 +190,11 @@ namespace FRC_Scouting_V2.UIs
             {
                 comments = commentsTextBox.Text;
             }
+
+            if (commentsTextBox.Text.Contains(";"))
+            {
+                snippets.ErrorOccured("You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
+            }
         }
 
         private void controlledBallPickupButton_Click(object sender, EventArgs e)
