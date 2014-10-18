@@ -193,7 +193,7 @@ namespace FRC_Scouting_V2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool allowExportToTextFile {
             get {
                 return ((bool)(this["allowExportToTextFile"]));
