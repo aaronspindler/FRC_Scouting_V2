@@ -40,31 +40,35 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.richTextBox1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 31);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 59);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 315);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 606);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // richTextBox1
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.richTextBox1, 2);
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.tableLayoutPanel2.SetRowSpan(this.richTextBox1, 2);
-            this.richTextBox1.Size = new System.Drawing.Size(394, 309);
+            this.richTextBox1.Size = new System.Drawing.Size(788, 594);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "No changelog yet since there has been no releases";
+            this.richTextBox1.Text = "Version 0.1.0.0\n=================================================================" +
+    "\nFirst Stable Release";
             // 
             // Changelog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(400, 346);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.ClientSize = new System.Drawing.Size(800, 665);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.Name = "Changelog";
             this.Text = "Change Log";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);

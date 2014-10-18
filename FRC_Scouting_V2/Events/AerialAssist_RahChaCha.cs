@@ -84,14 +84,14 @@ namespace FRC_Scouting_V2
             "Finney Robotics", "Warlocks", "Rolling Thunder", "Raider Robotics", "Grapes of Wrath", "DevilTech",
             "Scitobor Robotics", "CougarTech", "XcentricsRobotics", "DM High Voltage", "The Astechz", "Tan[x]",
             "Ranger Robotics", "Eastridge Robotics", "IgKnighters", "Pittsford Panthers", "CyberFalcons", "S.U.I.T.S.",
-            "Retro Rams", "MakeShift", "MaxTech", "W.A.F.F.L.E.S.", "VP Robotics", "Electric Mayhem", "Robot Raiders"
+            "Retro Rams", "MakeShift", "MaxTech", "W.A.F.F.L.E.S.", "VP Robotics", "Electric Mayhem", "Robot Raiders", "Blinding Light"
         };
 
         private readonly int[] _teamNumberArray =
         {
             20, 174, 191, 340, 378, 578, 610, 639, 865, 1114, 1126, 1241, 1285,
             1334, 1405, 1507, 1511, 1518, 1551, 1559, 1585, 2228, 2340, 2852, 2994, 3003, 3015, 3157, 3173, 3181, 3710,
-            3951, 4001, 4039, 4343, 4476, 4914, 4930, 5254
+            3951, 4001, 4039, 4343, 4476, 4914, 4930, 5254, 5433
         };
 
         private readonly double[] _trussStandardDeviation = new double[2];
@@ -152,6 +152,9 @@ namespace FRC_Scouting_V2
 
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var conn = new MySqlConnection(us.MakeMySqlConnectionString());
+            var cmd = new MySqlCommand();
+
             int numberOfFilesImported = 0;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -159,12 +162,13 @@ namespace FRC_Scouting_V2
                 {
                     numberOfFilesImported++;
                     var reader = new StreamReader(t);
+
                     //Bypassing the human readable variables to get to the computer readable portion of the text file
                     for (int i = 0; i < 30; i++)
                     {
                         reader.ReadLine();
                     }
-                    int teamNumberImport = Convert.ToInt32(reader.ReadLine());
+                    int teamNumberImport = Convert.ToInt16(reader.ReadLine());
                     string teamNameImport = reader.ReadLine();
                     string teamColour = reader.ReadLine();
                     int matchNumber = Convert.ToInt32(reader.ReadLine());
@@ -196,11 +200,32 @@ namespace FRC_Scouting_V2
                     int driverRating = Convert.ToInt16(reader.ReadLine());
                     Boolean autoMovement = Convert.ToBoolean(reader.ReadLine());
                     string comments = Convert.ToString(reader.ReadLine());
+
+                    if (comments.Contains(";"))
+                    {
+                        comments = ("YOUR COMMENT IS TRYING TO BREAK MY PROGRAM!");
+                    }
+
                     string testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
                     {
-                        var conn = new MySqlConnection(us.MakeMySqlConnectionString());
-                        var cmd = new MySqlCommand();
+                        if (teamNumberImport == 0)
+                        {
+                            var slot = 0;
+                            var actualTeamNum = 0;
+                            var sameTeam = false;
+
+                            while (sameTeam == false)
+                            {
+                                if (teamNameImport == _teamNameArray[slot])
+                                {
+                                    teamNumberImport = _teamNumberArray[slot];
+                                    sameTeam = true;
+                                }
+                                slot++;
+                            }
+                        }
+                        Console.WriteLine("Actual Team Number: " + teamNumberImport);
                         cmd.Connection = conn;
                         cmd.CommandText =
                             String.Format(
@@ -228,8 +253,8 @@ namespace FRC_Scouting_V2
                         }
                     }
                 }
+                us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported + " File(s) Into the Database.");
             }
-            us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported + " File(s) Into the Database.");
         }
 
         //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)
@@ -1206,11 +1231,11 @@ namespace FRC_Scouting_V2
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
             teamURLDisplay.Text = teamURL;
 
-            object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumber);
+            object teamImage = Resources.ResourceManager.GetObject("FRC" + _teamNumberArray[teamSelector.SelectedIndex]);
             teamLogoPictureBox.Image = (Image) teamImage;
 
             Settings.Default.selectedTeamName = _teamNameArray[teamSelector.SelectedIndex];
-            Settings.Default.selectedTeamNumber = teamNumber;
+            Settings.Default.selectedTeamNumber = _teamNumberArray[teamSelector.SelectedIndex];
             Settings.Default.Save();
 
             matchSummaryEntryID.Clear();
