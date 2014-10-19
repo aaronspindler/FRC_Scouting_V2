@@ -154,7 +154,6 @@ namespace FRC_Scouting_V2
         {
             var conn = new MySqlConnection(us.MakeMySqlConnectionString());
             var cmd = new MySqlCommand {Connection = conn};
-            conn.Open();
 
             int numberOfFilesImported = 0;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -242,6 +241,7 @@ namespace FRC_Scouting_V2
                                 successfulTruss,
                                 unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie), driverRating,
                                 Convert.ToInt32(autoMovement), comments);
+                            conn.Open();
                             cmd.ExecuteNonQuery();
                         }
                         catch (MySqlException ex)
