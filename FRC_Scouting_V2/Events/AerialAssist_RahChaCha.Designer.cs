@@ -45,7 +45,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.aerial_Assist_Scouting_UI_21 = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.teamMatchSummaryTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.teamMatchBox = new System.Windows.Forms.ListBox();
@@ -113,6 +112,7 @@
             this.howComeICannotSeeAnyTeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.aerial_Assist_Scouting_UI = new FRC_Scouting_V2.UIs.Aerial_Assist_Scouting_UI_New();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -186,7 +186,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Controls.Add(this.aerial_Assist_Scouting_UI_21, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.aerial_Assist_Scouting_UI, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
@@ -202,15 +202,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1153F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(2082, 1153);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // aerial_Assist_Scouting_UI_21
-            // 
-            this.aerial_Assist_Scouting_UI_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aerial_Assist_Scouting_UI_21.Location = new System.Drawing.Point(12, 12);
-            this.aerial_Assist_Scouting_UI_21.Margin = new System.Windows.Forms.Padding(12);
-            this.aerial_Assist_Scouting_UI_21.Name = "aerial_Assist_Scouting_UI_21";
-            this.aerial_Assist_Scouting_UI_21.Size = new System.Drawing.Size(2058, 1129);
-            this.aerial_Assist_Scouting_UI_21.TabIndex = 0;
             // 
             // teamMatchSummaryTabPage
             // 
@@ -1108,7 +1099,7 @@
             this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importFromTextFileToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(161, 36);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // importFromTextFileToolStripMenuItem
@@ -1121,14 +1112,14 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(241, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(158, 6);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportToCSVToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(161, 36);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // exportToCSVToolStripMenuItem
@@ -1166,6 +1157,15 @@
             this.openFileDialog.FileName = "openFileDialog1";
             this.openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Multiselect = true;
+            // 
+            // aerial_Assist_Scouting_UI
+            // 
+            this.aerial_Assist_Scouting_UI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aerial_Assist_Scouting_UI.Location = new System.Drawing.Point(12, 12);
+            this.aerial_Assist_Scouting_UI.Margin = new System.Windows.Forms.Padding(12);
+            this.aerial_Assist_Scouting_UI.Name = "aerial_Assist_Scouting_UI";
+            this.aerial_Assist_Scouting_UI.Size = new System.Drawing.Size(2058, 1129);
+            this.aerial_Assist_Scouting_UI.TabIndex = 0;
             // 
             // AerialAssist_RahChaCha
             // 
@@ -1233,7 +1233,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem howComeICannotSeeAnyTeamInformationToolStripMenuItem;
         private System.Windows.Forms.ListBox teamMatchBox;
-        private UIs.Aerial_Assist_Scouting_UI_New aerial_Assist_Scouting_UI_21;
+        private UIs.Aerial_Assist_Scouting_UI_New aerial_Assist_Scouting_UI;
         private System.Windows.Forms.Label teamNameLabel;
         private System.Windows.Forms.Label teamNumberLabel;
         private System.Windows.Forms.Label teamLocationLabel;
