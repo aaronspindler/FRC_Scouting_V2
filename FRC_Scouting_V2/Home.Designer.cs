@@ -43,10 +43,11 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.teamInformationLookupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ToolStripComboBox();
-            this.showConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.websiteDisplay = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -65,19 +66,19 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Controls.Add(this.frcLogoPictureBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.websiteDisplay, 0, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(496, 379);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -89,8 +90,8 @@
             this.frcLogoPictureBox.Image = global::FRC_Scouting_V2.Properties.Resources.FRC_LOGO;
             this.frcLogoPictureBox.Location = new System.Drawing.Point(3, 28);
             this.frcLogoPictureBox.Name = "frcLogoPictureBox";
-            this.tableLayoutPanel1.SetRowSpan(this.frcLogoPictureBox, 8);
-            this.frcLogoPictureBox.Size = new System.Drawing.Size(490, 348);
+            this.tableLayoutPanel1.SetRowSpan(this.frcLogoPictureBox, 7);
+            this.frcLogoPictureBox.Size = new System.Drawing.Size(490, 323);
             this.frcLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.frcLogoPictureBox.TabIndex = 1;
             this.frcLogoPictureBox.TabStop = false;
@@ -195,6 +196,13 @@
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
+            // showConsoleWindowToolStripMenuItem
+            // 
+            this.showConsoleWindowToolStripMenuItem.Name = "showConsoleWindowToolStripMenuItem";
+            this.showConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.showConsoleWindowToolStripMenuItem.Text = "Show Console Window";
+            this.showConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.showConsoleWindowToolStripMenuItem_Click);
+            // 
             // resetAllSavedSettingsToDefaultToolStripMenuItem
             // 
             this.resetAllSavedSettingsToDefaultToolStripMenuItem.Name = "resetAllSavedSettingsToDefaultToolStripMenuItem";
@@ -218,12 +226,17 @@
             this.eventSelector.Size = new System.Drawing.Size(248, 21);
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged_1);
             // 
-            // showConsoleWindowToolStripMenuItem
+            // websiteDisplay
             // 
-            this.showConsoleWindowToolStripMenuItem.Name = "showConsoleWindowToolStripMenuItem";
-            this.showConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.showConsoleWindowToolStripMenuItem.Text = "Show Console Window";
-            this.showConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.showConsoleWindowToolStripMenuItem_Click);
+            this.websiteDisplay.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.websiteDisplay, 8);
+            this.websiteDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.websiteDisplay.Location = new System.Drawing.Point(3, 354);
+            this.websiteDisplay.Name = "websiteDisplay";
+            this.websiteDisplay.Size = new System.Drawing.Size(490, 25);
+            this.websiteDisplay.TabIndex = 2;
+            this.websiteDisplay.Text = "Visit my website at https:www.xNovax.net";
+            this.websiteDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home
             // 
@@ -267,6 +280,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripComboBox eventSelector;
         private System.Windows.Forms.ToolStripMenuItem showConsoleWindowToolStripMenuItem;
+        private System.Windows.Forms.Label websiteDisplay;
     }
 }
 
