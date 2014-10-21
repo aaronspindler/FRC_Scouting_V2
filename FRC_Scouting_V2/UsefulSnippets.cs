@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
@@ -131,6 +132,24 @@ namespace FRC_Scouting_V2
             MessageBox.Show("You have successfully reset all settings to default!",
                 "Settings have been reset to default!",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)
+        //Update - Mildly updated this method so it is no longer the same as what is on the website above
+        private double CalculateStdDev(IEnumerable<double> values)
+        {
+            double ret = 0;
+            double[] enumerable = values as double[] ?? values.ToArray();
+            if (!enumerable.Any()) return ret;
+            //Compute the Average
+            double avg = enumerable.Average();
+
+            //Perform the Sum of (value-avg)^2
+            double sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
+
+            //Put it all together
+            ret = Math.Sqrt((sum) / enumerable.Count() - 1);
+            return ret;
         }
 
         public void ErrorOccured(string error)
@@ -288,6 +307,20 @@ namespace FRC_Scouting_V2
         public void ShowInformationMessage(string informationText)
         {
             MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public string EncryptString(string plainText)
+        {
+            string encryptedText = ("");
+
+            return encryptedText;
+        }
+
+        public string DeCryptString(string encryptedText)
+        {
+            string plainText = ("");
+
+            return plainText;
         }
     }
 }
