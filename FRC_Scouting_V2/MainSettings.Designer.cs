@@ -72,7 +72,6 @@
             this.databasePortTextBox = new System.Windows.Forms.TextBox();
             this.databaseUsernameTextBox = new System.Windows.Forms.TextBox();
             this.databasePasswordTextBox = new System.Windows.Forms.TextBox();
-            this.databaseSettingsCautionLabel = new System.Windows.Forms.Label();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
             this.connectionDisplay = new System.Windows.Forms.Label();
@@ -513,19 +512,18 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.testConnectionToDatabaseButton, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.databaseIPLabel, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.databaseUsernameLabel, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.databasePortLabel, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.databasePasswordLabel, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.databaseIPTextBox, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.databasePortTextBox, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.databaseUsernameTextBox, 1, 5);
-            this.tableLayoutPanel3.Controls.Add(this.databasePasswordTextBox, 1, 6);
-            this.tableLayoutPanel3.Controls.Add(this.databaseSettingsCautionLabel, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.databaseNameLabel, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.databaseNameTextBox, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.connectionDisplay, 0, 8);
+            this.tableLayoutPanel3.Controls.Add(this.testConnectionToDatabaseButton, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.databaseIPLabel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.databaseUsernameLabel, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.databasePortLabel, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.databasePasswordLabel, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.databaseIPTextBox, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.databasePortTextBox, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.databaseUsernameTextBox, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.databasePasswordTextBox, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.databaseNameLabel, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.databaseNameTextBox, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.connectionDisplay, 0, 6);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -540,6 +538,28 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(438, 307);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -547,7 +567,7 @@
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.testConnectionToDatabaseButton, 2);
             this.testConnectionToDatabaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(3, 199);
+            this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(3, 143);
             this.testConnectionToDatabaseButton.Name = "testConnectionToDatabaseButton";
             this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(432, 22);
             this.testConnectionToDatabaseButton.TabIndex = 12;
@@ -559,7 +579,7 @@
             // 
             this.databaseIPLabel.AutoSize = true;
             this.databaseIPLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseIPLabel.Location = new System.Drawing.Point(3, 56);
+            this.databaseIPLabel.Location = new System.Drawing.Point(3, 0);
             this.databaseIPLabel.Name = "databaseIPLabel";
             this.databaseIPLabel.Size = new System.Drawing.Size(213, 28);
             this.databaseIPLabel.TabIndex = 1;
@@ -570,7 +590,7 @@
             // 
             this.databaseUsernameLabel.AutoSize = true;
             this.databaseUsernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseUsernameLabel.Location = new System.Drawing.Point(3, 140);
+            this.databaseUsernameLabel.Location = new System.Drawing.Point(3, 84);
             this.databaseUsernameLabel.Name = "databaseUsernameLabel";
             this.databaseUsernameLabel.Size = new System.Drawing.Size(213, 28);
             this.databaseUsernameLabel.TabIndex = 3;
@@ -581,7 +601,7 @@
             // 
             this.databasePortLabel.AutoSize = true;
             this.databasePortLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePortLabel.Location = new System.Drawing.Point(3, 84);
+            this.databasePortLabel.Location = new System.Drawing.Point(3, 28);
             this.databasePortLabel.Name = "databasePortLabel";
             this.databasePortLabel.Size = new System.Drawing.Size(213, 28);
             this.databasePortLabel.TabIndex = 2;
@@ -592,7 +612,7 @@
             // 
             this.databasePasswordLabel.AutoSize = true;
             this.databasePasswordLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePasswordLabel.Location = new System.Drawing.Point(3, 168);
+            this.databasePasswordLabel.Location = new System.Drawing.Point(3, 112);
             this.databasePasswordLabel.Name = "databasePasswordLabel";
             this.databasePasswordLabel.Size = new System.Drawing.Size(213, 28);
             this.databasePasswordLabel.TabIndex = 4;
@@ -602,7 +622,7 @@
             // databaseIPTextBox
             // 
             this.databaseIPTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseIPTextBox.Location = new System.Drawing.Point(222, 59);
+            this.databaseIPTextBox.Location = new System.Drawing.Point(222, 3);
             this.databaseIPTextBox.Name = "databaseIPTextBox";
             this.databaseIPTextBox.Size = new System.Drawing.Size(213, 20);
             this.databaseIPTextBox.TabIndex = 7;
@@ -614,7 +634,7 @@
             // databasePortTextBox
             // 
             this.databasePortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePortTextBox.Location = new System.Drawing.Point(222, 87);
+            this.databasePortTextBox.Location = new System.Drawing.Point(222, 31);
             this.databasePortTextBox.Name = "databasePortTextBox";
             this.databasePortTextBox.Size = new System.Drawing.Size(213, 20);
             this.databasePortTextBox.TabIndex = 8;
@@ -626,7 +646,7 @@
             // databaseUsernameTextBox
             // 
             this.databaseUsernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseUsernameTextBox.Location = new System.Drawing.Point(222, 143);
+            this.databaseUsernameTextBox.Location = new System.Drawing.Point(222, 87);
             this.databaseUsernameTextBox.Name = "databaseUsernameTextBox";
             this.databaseUsernameTextBox.Size = new System.Drawing.Size(213, 20);
             this.databaseUsernameTextBox.TabIndex = 10;
@@ -638,7 +658,7 @@
             // databasePasswordTextBox
             // 
             this.databasePasswordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databasePasswordTextBox.Location = new System.Drawing.Point(222, 171);
+            this.databasePasswordTextBox.Location = new System.Drawing.Point(222, 115);
             this.databasePasswordTextBox.Name = "databasePasswordTextBox";
             this.databasePasswordTextBox.PasswordChar = '*';
             this.databasePasswordTextBox.Size = new System.Drawing.Size(213, 20);
@@ -648,26 +668,11 @@
             this.databasePasswordTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databasePasswordTextBox_MouseClick);
             this.databasePasswordTextBox.TextChanged += new System.EventHandler(this.databasePasswordTextBox_TextChanged);
             // 
-            // databaseSettingsCautionLabel
-            // 
-            this.databaseSettingsCautionLabel.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.databaseSettingsCautionLabel, 8);
-            this.databaseSettingsCautionLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseSettingsCautionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.databaseSettingsCautionLabel.Location = new System.Drawing.Point(3, 0);
-            this.databaseSettingsCautionLabel.Name = "databaseSettingsCautionLabel";
-            this.tableLayoutPanel3.SetRowSpan(this.databaseSettingsCautionLabel, 2);
-            this.databaseSettingsCautionLabel.Size = new System.Drawing.Size(432, 56);
-            this.databaseSettingsCautionLabel.TabIndex = 9;
-            this.databaseSettingsCautionLabel.Text = "Currently all settings are stored in plain text so be cautious what computer you " +
-    "put your password into";
-            this.databaseSettingsCautionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // databaseNameLabel
             // 
             this.databaseNameLabel.AutoSize = true;
             this.databaseNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseNameLabel.Location = new System.Drawing.Point(3, 112);
+            this.databaseNameLabel.Location = new System.Drawing.Point(3, 56);
             this.databaseNameLabel.Name = "databaseNameLabel";
             this.databaseNameLabel.Size = new System.Drawing.Size(213, 28);
             this.databaseNameLabel.TabIndex = 10;
@@ -677,7 +682,7 @@
             // databaseNameTextBox
             // 
             this.databaseNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseNameTextBox.Location = new System.Drawing.Point(222, 115);
+            this.databaseNameTextBox.Location = new System.Drawing.Point(222, 59);
             this.databaseNameTextBox.Name = "databaseNameTextBox";
             this.databaseNameTextBox.Size = new System.Drawing.Size(213, 20);
             this.databaseNameTextBox.TabIndex = 9;
@@ -691,7 +696,7 @@
             this.connectionDisplay.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.connectionDisplay, 2);
             this.connectionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.connectionDisplay.Location = new System.Drawing.Point(3, 224);
+            this.connectionDisplay.Location = new System.Drawing.Point(3, 168);
             this.connectionDisplay.Name = "connectionDisplay";
             this.connectionDisplay.Size = new System.Drawing.Size(432, 28);
             this.connectionDisplay.TabIndex = 13;
@@ -762,7 +767,6 @@
         private System.Windows.Forms.TextBox databasePortTextBox;
         private System.Windows.Forms.TextBox databaseUsernameTextBox;
         private System.Windows.Forms.TextBox databasePasswordTextBox;
-        private System.Windows.Forms.Label databaseSettingsCautionLabel;
         private System.Windows.Forms.Label databaseNameLabel;
         private System.Windows.Forms.TextBox databaseNameTextBox;
         private System.Windows.Forms.Label clearConsoleOnToggleLabel;
