@@ -140,7 +140,7 @@ namespace FRC_Scouting_V2
         {
             if (databasePasswordTextBox.Text != (""))
             {
-                Settings.Default.databasePassword = databasePasswordTextBox.Text;
+                Settings.Default.databasePassword = us.EncryptString(databasePasswordTextBox.Text);
                 Settings.Default.Save();
             }
         }
@@ -271,13 +271,13 @@ namespace FRC_Scouting_V2
                 }
             }
 
-            teamComparisonEqualValueColourDisplay.BackColor = FRC_Scouting_V2.Properties.Settings.Default.teamComparisonEqualValueColour;
+            teamComparisonEqualValueColourDisplay.BackColor = Settings.Default.teamComparisonEqualValueColour;
 
             usernameTextBox.Text = Settings.Default.username;
             databaseIPTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
             databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
-            databasePasswordTextBox.Text = Settings.Default.databasePassword;
+            databasePasswordTextBox.Text = us.DeCryptString(Settings.Default.databasePassword);
             databaseNameTextBox.Text = Settings.Default.databaseName;
         }
 
@@ -324,13 +324,7 @@ namespace FRC_Scouting_V2
         {
             try
             {
-                string databaseIP = Settings.Default.databaseIP;
-                string databasePort = Settings.Default.databasePort;
-                string databaseName = Settings.Default.databaseName;
-                string databaseUsername = Settings.Default.databaseUsername;
-                string databasePassword = Settings.Default.databasePassword;
-                string mySqlConnectionString = String.Format("Server={0};Port={1};Database={2};Uid={3};password={4};",
-                    databaseIP, databasePort, databaseName, databaseUsername, databasePassword);
+                string mySqlConnectionString = us.MakeMySqlConnectionString();
                 var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 conn.Open();

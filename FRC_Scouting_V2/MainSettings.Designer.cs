@@ -33,6 +33,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importDatabaseConnectionSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howDoISaveMySettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whatIsTheUsernameFieldUsedForToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,8 +77,6 @@
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
             this.connectionDisplay = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importDatabaseConnectionSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -144,6 +144,21 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importDatabaseConnectionSettingsToolStripMenuItem});
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.importToolStripMenuItem.Text = "Import";
+            // 
+            // importDatabaseConnectionSettingsToolStripMenuItem
+            // 
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Name = "importDatabaseConnectionSettingsToolStripMenuItem";
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Text = "Import Database Connection Settings";
+            this.importDatabaseConnectionSettingsToolStripMenuItem.Click += new System.EventHandler(this.importDatabaseConnectionSettingsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -684,21 +699,6 @@
             // colorDialog
             // 
             this.colorDialog.Color = System.Drawing.Color.Blue;
-            // 
-            // importToolStripMenuItem
-            // 
-            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importDatabaseConnectionSettingsToolStripMenuItem});
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.importToolStripMenuItem.Text = "Import";
-            // 
-            // importDatabaseConnectionSettingsToolStripMenuItem
-            // 
-            this.importDatabaseConnectionSettingsToolStripMenuItem.Name = "importDatabaseConnectionSettingsToolStripMenuItem";
-            this.importDatabaseConnectionSettingsToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
-            this.importDatabaseConnectionSettingsToolStripMenuItem.Text = "Import Database Connection Settings";
-            this.importDatabaseConnectionSettingsToolStripMenuItem.Click += new System.EventHandler(this.importDatabaseConnectionSettingsToolStripMenuItem_Click);
             // 
             // openFileDialog
             // 

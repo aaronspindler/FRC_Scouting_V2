@@ -29,6 +29,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -41,7 +42,8 @@ namespace FRC_Scouting_V2
     {
         public void AerialAssistExportTableToCSV()
         {
-            ShowInformationMessage("This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
+            ShowInformationMessage(
+                "This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
             int numberOfRows = GetNumberOfRowsInATable();
@@ -98,33 +100,6 @@ namespace FRC_Scouting_V2
             }
         }
 
-        public int GetNumberOfRowsThatContainAValue(int teamNumber)
-        {
-            int numberOfRows = 0;
-            try
-            {
-                string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
-
-                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}",
-                    Settings.Default.currentTableName, teamNumber);
-                using (var cmd = new MySqlCommand(mySQLCommantText, conn))
-                {
-                    conn.Open();
-                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
-                    conn.Close();
-                    cmd.Dispose();
-                    return numberOfRows;
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-            }
-            return numberOfRows;
-        }
-
         public void ClearSettings()
         {
             Settings.Default.Reset();
@@ -134,22 +109,42 @@ namespace FRC_Scouting_V2
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)
-        //Update - Mildly updated this method so it is no longer the same as what is on the website above
-        private double CalculateStdDev(IEnumerable<double> values)
+        public string DeCryptString(string encryptedText)
         {
-            double ret = 0;
-            double[] enumerable = values as double[] ?? values.ToArray();
-            if (!enumerable.Any()) return ret;
-            //Compute the Average
-            double avg = enumerable.Average();
+            string plainText;
+            const string key = ("abcdefghijklmnopqrstuvwxyz123456");
+            const string IV = ("1234567890123456");
+            byte[] encryptedBytes = Convert.FromBase64String(encryptedText);
+            var aes = new AesCryptoServiceProvider();
+            aes.BlockSize = 128;
+            aes.KeySize = 256;
+            aes.Key = Encoding.ASCII.GetBytes(key);
+            aes.IV = Encoding.ASCII.GetBytes(IV);
+            aes.Padding = PaddingMode.PKCS7;
+            aes.Mode = CipherMode.CBC;
+            ICryptoTransform crypto = aes.CreateDecryptor(aes.Key, aes.IV);
+            byte[] plainTextBytes = crypto.TransformFinalBlock(encryptedBytes, 0, encryptedBytes.Length);
+            plainText = Encoding.ASCII.GetString(plainTextBytes);
+            return plainText;
+        }
 
-            //Perform the Sum of (value-avg)^2
-            double sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
-
-            //Put it all together
-            ret = Math.Sqrt((sum) / enumerable.Count() - 1);
-            return ret;
+        public string EncryptString(string plainText)
+        {
+            string encryptedText;
+            const string key = ("abcdefghijklmnopqrstuvwxyz123456");
+            const string IV = ("1234567890123456");
+            byte[] plainTextBytes = Encoding.ASCII.GetBytes(plainText);
+            var aes = new AesCryptoServiceProvider();
+            aes.BlockSize = 128;
+            aes.KeySize = 256;
+            aes.Key = Encoding.ASCII.GetBytes(key);
+            aes.IV = Encoding.ASCII.GetBytes(IV);
+            aes.Padding = PaddingMode.PKCS7;
+            aes.Mode = CipherMode.CBC;
+            ICryptoTransform crypto = aes.CreateEncryptor(aes.Key, aes.IV);
+            byte[] encrypted = crypto.TransformFinalBlock(plainTextBytes, 0, plainTextBytes.Length);
+            encryptedText = Convert.ToBase64String(encrypted);
+            return encryptedText;
         }
 
         public void ErrorOccured(string error)
@@ -169,7 +164,7 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
@@ -188,6 +183,32 @@ namespace FRC_Scouting_V2
             return numberOfRows;
         }
 
+        public int GetNumberOfRowsThatContainAValue(int teamNumber)
+        {
+            int numberOfRows = 0;
+            try
+            {
+                string mySqlConnectionString = MakeMySqlConnectionString();
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+
+                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}",
+                    Settings.Default.currentTableName, teamNumber);
+                using (var cmd = new MySqlCommand(mySQLCommantText, conn))
+                {
+                    conn.Open();
+                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
+                    conn.Close();
+                    cmd.Dispose();
+                    return numberOfRows;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+            }
+            return numberOfRows;
+        }
         public int GetSecureRandomNum(int startingNum, int endingNum)
         {
             int difference = endingNum - startingNum;
@@ -195,7 +216,7 @@ namespace FRC_Scouting_V2
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
+            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
 
             return number;
         }
@@ -207,7 +228,7 @@ namespace FRC_Scouting_V2
             builder["Database"] = Settings.Default.databaseName;
             builder["Port"] = Settings.Default.databasePort;
             builder["Uid"] = Settings.Default.databaseUsername;
-            builder["Password"] = Settings.Default.databasePassword;
+            builder["Password"] = DeCryptString(Settings.Default.databasePassword);
             builder.SslMode = MySqlSslMode.Preferred;
             return builder.ConnectionString;
         }
@@ -225,7 +246,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
@@ -309,42 +330,22 @@ namespace FRC_Scouting_V2
             MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public string EncryptString(string plainText)
+        //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)
+        //Update - Mildly updated this method so it is no longer the same as what is on the website above
+        private double CalculateStdDev(IEnumerable<double> values)
         {
-            string encryptedText;
-            string key = ("abcdefghijklmnopqrstuvwxyz123456");
-            string IV = ("1234567890123456");
-            byte[] plainTextBytes = System.Text.ASCIIEncoding.ASCII.GetBytes(plainText);
-            AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
-            aes.BlockSize = 128;
-            aes.KeySize = 256;
-            aes.Key = System.Text.ASCIIEncoding.ASCII.GetBytes(key);
-            aes.IV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV);
-            aes.Padding = PaddingMode.PKCS7;
-            aes.Mode = CipherMode.CBC;
-            ICryptoTransform crypto = aes.CreateEncryptor(aes.Key, aes.IV);
-            byte[] encrypted = crypto.TransformFinalBlock(plainTextBytes, 0, plainTextBytes.Length);
-            encryptedText = Convert.ToBase64String(encrypted);
-            return encryptedText;
-        }
+            double ret = 0;
+            double[] enumerable = values as double[] ?? values.ToArray();
+            if (!enumerable.Any()) return ret;
+            //Compute the Average
+            double avg = enumerable.Average();
 
-        public string DeCryptString(string encryptedText)
-        {
-            string plainText;
-            string key = ("abcdefghijklmnopqrstuvwxyz123456");
-            string IV = ("1234567890123456");
-            byte[] encryptedBytes = Convert.FromBase64String(encryptedText);
-            AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
-            aes.BlockSize = 128;
-            aes.KeySize = 256;
-            aes.Key = System.Text.ASCIIEncoding.ASCII.GetBytes(key);
-            aes.IV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV);
-            aes.Padding = PaddingMode.PKCS7;
-            aes.Mode = CipherMode.CBC;
-            ICryptoTransform crypto = aes.CreateDecryptor(aes.Key, aes.IV);
-            byte[] plainTextBytes = crypto.TransformFinalBlock(encryptedBytes, 0, encryptedBytes.Length);
-            plainText = System.Text.ASCIIEncoding.ASCII.GetString(plainTextBytes);
-            return plainText;
+            //Perform the Sum of (value-avg)^2
+            double sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
+
+            //Put it all together
+            ret = Math.Sqrt((sum)/enumerable.Count() - 1);
+            return ret;
         }
     }
 }
