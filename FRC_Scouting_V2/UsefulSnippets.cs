@@ -115,13 +115,15 @@ namespace FRC_Scouting_V2
             const string key = ("abcdefghijklmnopqrstuvwxyz123456");
             const string IV = ("1234567890123456");
             byte[] encryptedBytes = Convert.FromBase64String(encryptedText);
-            var aes = new AesCryptoServiceProvider();
-            aes.BlockSize = 128;
-            aes.KeySize = 256;
-            aes.Key = Encoding.ASCII.GetBytes(key);
-            aes.IV = Encoding.ASCII.GetBytes(IV);
-            aes.Padding = PaddingMode.PKCS7;
-            aes.Mode = CipherMode.CBC;
+            var aes = new AesCryptoServiceProvider
+            {
+                BlockSize = 128,
+                KeySize = 256,
+                Key = Encoding.ASCII.GetBytes(key),
+                IV = Encoding.ASCII.GetBytes(IV),
+                Padding = PaddingMode.PKCS7,
+                Mode = CipherMode.CBC
+            };
             ICryptoTransform crypto = aes.CreateDecryptor(aes.Key, aes.IV);
             byte[] plainTextBytes = crypto.TransformFinalBlock(encryptedBytes, 0, encryptedBytes.Length);
             plainText = Encoding.ASCII.GetString(plainTextBytes);
@@ -134,13 +136,15 @@ namespace FRC_Scouting_V2
             const string key = ("abcdefghijklmnopqrstuvwxyz123456");
             const string IV = ("1234567890123456");
             byte[] plainTextBytes = Encoding.ASCII.GetBytes(plainText);
-            var aes = new AesCryptoServiceProvider();
-            aes.BlockSize = 128;
-            aes.KeySize = 256;
-            aes.Key = Encoding.ASCII.GetBytes(key);
-            aes.IV = Encoding.ASCII.GetBytes(IV);
-            aes.Padding = PaddingMode.PKCS7;
-            aes.Mode = CipherMode.CBC;
+            var aes = new AesCryptoServiceProvider
+            {
+                BlockSize = 128,
+                KeySize = 256,
+                Key = Encoding.ASCII.GetBytes(key),
+                IV = Encoding.ASCII.GetBytes(IV),
+                Padding = PaddingMode.PKCS7,
+                Mode = CipherMode.CBC
+            };
             ICryptoTransform crypto = aes.CreateEncryptor(aes.Key, aes.IV);
             byte[] encrypted = crypto.TransformFinalBlock(plainTextBytes, 0, plainTextBytes.Length);
             encryptedText = Convert.ToBase64String(encrypted);
@@ -164,7 +168,7 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
                 {
@@ -209,6 +213,7 @@ namespace FRC_Scouting_V2
             }
             return numberOfRows;
         }
+
         public int GetSecureRandomNum(int startingNum, int endingNum)
         {
             int difference = endingNum - startingNum;
@@ -216,7 +221,7 @@ namespace FRC_Scouting_V2
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
+            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
 
             return number;
         }
@@ -246,7 +251,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
