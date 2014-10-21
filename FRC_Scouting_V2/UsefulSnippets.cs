@@ -311,15 +311,39 @@ namespace FRC_Scouting_V2
 
         public string EncryptString(string plainText)
         {
-            string encryptedText = ("");
-
+            string encryptedText;
+            string key = ("abcdefghijklmnopqrstuvwxyz123456");
+            string IV = ("1234567890123456");
+            byte[] plainTextBytes = System.Text.ASCIIEncoding.ASCII.GetBytes(plainText);
+            AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
+            aes.BlockSize = 128;
+            aes.KeySize = 256;
+            aes.Key = System.Text.ASCIIEncoding.ASCII.GetBytes(key);
+            aes.IV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV);
+            aes.Padding = PaddingMode.PKCS7;
+            aes.Mode = CipherMode.CBC;
+            ICryptoTransform crypto = aes.CreateEncryptor(aes.Key, aes.IV);
+            byte[] encrypted = crypto.TransformFinalBlock(plainTextBytes, 0, plainTextBytes.Length);
+            encryptedText = Convert.ToBase64String(encrypted);
             return encryptedText;
         }
 
         public string DeCryptString(string encryptedText)
         {
-            string plainText = ("");
-
+            string plainText;
+            string key = ("abcdefghijklmnopqrstuvwxyz123456");
+            string IV = ("1234567890123456");
+            byte[] encryptedBytes = Convert.FromBase64String(encryptedText);
+            AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
+            aes.BlockSize = 128;
+            aes.KeySize = 256;
+            aes.Key = System.Text.ASCIIEncoding.ASCII.GetBytes(key);
+            aes.IV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV);
+            aes.Padding = PaddingMode.PKCS7;
+            aes.Mode = CipherMode.CBC;
+            ICryptoTransform crypto = aes.CreateDecryptor(aes.Key, aes.IV);
+            byte[] plainTextBytes = crypto.TransformFinalBlock(encryptedBytes, 0, encryptedBytes.Length);
+            plainText = System.Text.ASCIIEncoding.ASCII.GetString(plainTextBytes);
             return plainText;
         }
     }
