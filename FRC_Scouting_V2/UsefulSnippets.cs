@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -40,6 +41,22 @@ namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
     {
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (var stream = client.OpenRead("http://www.google.com"))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public void AerialAssistExportTableToCSV()
         {
             ShowInformationMessage(
