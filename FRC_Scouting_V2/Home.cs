@@ -139,5 +139,9 @@ namespace FRC_Scouting_V2
         {
 
         }
+
+        private void printConnectionStringToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
