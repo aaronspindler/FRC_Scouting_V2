@@ -89,6 +89,8 @@ namespace FRC_Scouting_V2
         {
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
+            eventSelector.Items.Add("Unknown | GTR-East | 2015");
+            eventSelector.Items.Add("Unknown | Northbay | 2015");
 
             if (Settings.Default.firstTimeLoad)
             {

@@ -215,7 +215,6 @@
             this.tableLayoutPanel.Controls.Add(this.driverRatingButton4, 19, 8);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 16;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
@@ -225,26 +224,25 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(2198, 1221);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1099, 635);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // controlledBallPickupMissButton
             // 
             this.tableLayoutPanel.SetColumnSpan(this.controlledBallPickupMissButton, 3);
             this.controlledBallPickupMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledBallPickupMissButton.Location = new System.Drawing.Point(1826, 176);
-            this.controlledBallPickupMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.controlledBallPickupMissButton.Location = new System.Drawing.Point(903, 91);
             this.controlledBallPickupMissButton.Name = "controlledBallPickupMissButton";
-            this.controlledBallPickupMissButton.Size = new System.Drawing.Size(261, 73);
+            this.controlledBallPickupMissButton.Size = new System.Drawing.Size(129, 38);
             this.controlledBallPickupMissButton.TabIndex = 59;
             this.controlledBallPickupMissButton.Text = "Controlled Ball Pickup Miss";
             this.controlledBallPickupMissButton.UseVisualStyleBackColor = true;
@@ -254,10 +252,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.controlledBallPickupButton, 3);
             this.controlledBallPickupButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledBallPickupButton.Location = new System.Drawing.Point(1462, 176);
-            this.controlledBallPickupButton.Margin = new System.Windows.Forms.Padding(6);
+            this.controlledBallPickupButton.Location = new System.Drawing.Point(723, 91);
             this.controlledBallPickupButton.Name = "controlledBallPickupButton";
-            this.controlledBallPickupButton.Size = new System.Drawing.Size(261, 73);
+            this.controlledBallPickupButton.Size = new System.Drawing.Size(129, 38);
             this.controlledBallPickupButton.TabIndex = 56;
             this.controlledBallPickupButton.Text = "Controlled Ball Pickup";
             this.controlledBallPickupButton.UseVisualStyleBackColor = true;
@@ -267,10 +264,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.autoHighGoalButton, 3);
             this.autoHighGoalButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoHighGoalButton.Location = new System.Drawing.Point(6, 91);
-            this.autoHighGoalButton.Margin = new System.Windows.Forms.Padding(6);
+            this.autoHighGoalButton.Location = new System.Drawing.Point(3, 47);
             this.autoHighGoalButton.Name = "autoHighGoalButton";
-            this.autoHighGoalButton.Size = new System.Drawing.Size(261, 73);
+            this.autoHighGoalButton.Size = new System.Drawing.Size(129, 38);
             this.autoHighGoalButton.TabIndex = 0;
             this.autoHighGoalButton.Text = "Auto High Goal";
             this.autoHighGoalButton.UseVisualStyleBackColor = true;
@@ -281,10 +277,9 @@
             this.startingLocationXYDisplay.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.startingLocationXYDisplay, 8);
             this.startingLocationXYDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.startingLocationXYDisplay.Location = new System.Drawing.Point(734, 595);
-            this.startingLocationXYDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.startingLocationXYDisplay.Location = new System.Drawing.Point(363, 308);
             this.startingLocationXYDisplay.Name = "startingLocationXYDisplay";
-            this.startingLocationXYDisplay.Size = new System.Drawing.Size(716, 48);
+            this.startingLocationXYDisplay.Size = new System.Drawing.Size(354, 25);
             this.startingLocationXYDisplay.TabIndex = 0;
             this.startingLocationXYDisplay.Text = "X: 0 Y: 0";
             this.startingLocationXYDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,10 +290,9 @@
             this.tableLayoutPanel.SetColumnSpan(this.ballScoreLabel, 8);
             this.ballScoreLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ballScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ballScoreLabel.Location = new System.Drawing.Point(6, 0);
-            this.ballScoreLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ballScoreLabel.Location = new System.Drawing.Point(3, 0);
             this.ballScoreLabel.Name = "ballScoreLabel";
-            this.ballScoreLabel.Size = new System.Drawing.Size(716, 85);
+            this.ballScoreLabel.Size = new System.Drawing.Size(354, 44);
             this.ballScoreLabel.TabIndex = 1;
             this.ballScoreLabel.Text = "Ball Scores";
             this.ballScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,10 +303,9 @@
             this.tableLayoutPanel.SetColumnSpan(this.startingLocationLabel, 8);
             this.startingLocationLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startingLocationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startingLocationLabel.Location = new System.Drawing.Point(734, 0);
-            this.startingLocationLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.startingLocationLabel.Location = new System.Drawing.Point(363, 0);
             this.startingLocationLabel.Name = "startingLocationLabel";
-            this.startingLocationLabel.Size = new System.Drawing.Size(716, 85);
+            this.startingLocationLabel.Size = new System.Drawing.Size(354, 44);
             this.startingLocationLabel.TabIndex = 2;
             this.startingLocationLabel.Text = "Starting Location";
             this.startingLocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,10 +316,9 @@
             this.tableLayoutPanel.SetColumnSpan(this.ballControlLabel, 8);
             this.ballControlLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ballControlLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ballControlLabel.Location = new System.Drawing.Point(1462, 0);
-            this.ballControlLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ballControlLabel.Location = new System.Drawing.Point(723, 0);
             this.ballControlLabel.Name = "ballControlLabel";
-            this.ballControlLabel.Size = new System.Drawing.Size(730, 85);
+            this.ballControlLabel.Size = new System.Drawing.Size(373, 44);
             this.ballControlLabel.TabIndex = 3;
             this.ballControlLabel.Text = "Ball Control";
             this.ballControlLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -336,11 +328,10 @@
             this.startingLocationPanel.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel.SetColumnSpan(this.startingLocationPanel, 8);
             this.startingLocationPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.startingLocationPanel.Location = new System.Drawing.Point(734, 91);
-            this.startingLocationPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.startingLocationPanel.Location = new System.Drawing.Point(363, 47);
             this.startingLocationPanel.Name = "startingLocationPanel";
             this.tableLayoutPanel.SetRowSpan(this.startingLocationPanel, 6);
-            this.startingLocationPanel.Size = new System.Drawing.Size(716, 481);
+            this.startingLocationPanel.Size = new System.Drawing.Size(354, 250);
             this.startingLocationPanel.TabIndex = 4;
             this.startingLocationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.startingLocationPanel_Paint);
             this.startingLocationPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.startingLocationPanel_MouseClick);
@@ -349,10 +340,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.autoLowGoalButton, 3);
             this.autoLowGoalButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoLowGoalButton.Location = new System.Drawing.Point(6, 176);
-            this.autoLowGoalButton.Margin = new System.Windows.Forms.Padding(6);
+            this.autoLowGoalButton.Location = new System.Drawing.Point(3, 91);
             this.autoLowGoalButton.Name = "autoLowGoalButton";
-            this.autoLowGoalButton.Size = new System.Drawing.Size(261, 73);
+            this.autoLowGoalButton.Size = new System.Drawing.Size(129, 38);
             this.autoLowGoalButton.TabIndex = 6;
             this.autoLowGoalButton.Text = "Auto Low Goal";
             this.autoLowGoalButton.UseVisualStyleBackColor = true;
@@ -362,10 +352,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.controlledHighGoalButton, 3);
             this.controlledHighGoalButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighGoalButton.Location = new System.Drawing.Point(6, 261);
-            this.controlledHighGoalButton.Margin = new System.Windows.Forms.Padding(6);
+            this.controlledHighGoalButton.Location = new System.Drawing.Point(3, 135);
             this.controlledHighGoalButton.Name = "controlledHighGoalButton";
-            this.controlledHighGoalButton.Size = new System.Drawing.Size(261, 73);
+            this.controlledHighGoalButton.Size = new System.Drawing.Size(129, 38);
             this.controlledHighGoalButton.TabIndex = 7;
             this.controlledHighGoalButton.Text = "Controlled High Goal";
             this.controlledHighGoalButton.UseVisualStyleBackColor = true;
@@ -375,10 +364,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.controlledLowGoalButton, 3);
             this.controlledLowGoalButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledLowGoalButton.Location = new System.Drawing.Point(6, 346);
-            this.controlledLowGoalButton.Margin = new System.Windows.Forms.Padding(6);
+            this.controlledLowGoalButton.Location = new System.Drawing.Point(3, 179);
             this.controlledLowGoalButton.Name = "controlledLowGoalButton";
-            this.controlledLowGoalButton.Size = new System.Drawing.Size(261, 73);
+            this.controlledLowGoalButton.Size = new System.Drawing.Size(129, 38);
             this.controlledLowGoalButton.TabIndex = 8;
             this.controlledLowGoalButton.Text = "Controlled Low Goal";
             this.controlledLowGoalButton.UseVisualStyleBackColor = true;
@@ -388,10 +376,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.hotGoalButton, 3);
             this.hotGoalButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hotGoalButton.Location = new System.Drawing.Point(6, 431);
-            this.hotGoalButton.Margin = new System.Windows.Forms.Padding(6);
+            this.hotGoalButton.Location = new System.Drawing.Point(3, 223);
             this.hotGoalButton.Name = "hotGoalButton";
-            this.hotGoalButton.Size = new System.Drawing.Size(261, 73);
+            this.hotGoalButton.Size = new System.Drawing.Size(129, 38);
             this.hotGoalButton.TabIndex = 9;
             this.hotGoalButton.Text = "Hot Goal";
             this.hotGoalButton.UseVisualStyleBackColor = true;
@@ -401,10 +388,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.autoLowMissButton, 3);
             this.autoLowMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoLowMissButton.Location = new System.Drawing.Point(370, 176);
-            this.autoLowMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.autoLowMissButton.Location = new System.Drawing.Point(183, 91);
             this.autoLowMissButton.Name = "autoLowMissButton";
-            this.autoLowMissButton.Size = new System.Drawing.Size(261, 73);
+            this.autoLowMissButton.Size = new System.Drawing.Size(129, 38);
             this.autoLowMissButton.TabIndex = 21;
             this.autoLowMissButton.Text = "Auto Low Miss";
             this.autoLowMissButton.UseVisualStyleBackColor = true;
@@ -414,10 +400,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.controlledHighMissButton, 3);
             this.controlledHighMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighMissButton.Location = new System.Drawing.Point(370, 261);
-            this.controlledHighMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.controlledHighMissButton.Location = new System.Drawing.Point(183, 135);
             this.controlledHighMissButton.Name = "controlledHighMissButton";
-            this.controlledHighMissButton.Size = new System.Drawing.Size(261, 73);
+            this.controlledHighMissButton.Size = new System.Drawing.Size(129, 38);
             this.controlledHighMissButton.TabIndex = 18;
             this.controlledHighMissButton.Text = "Controlled High Miss";
             this.controlledHighMissButton.UseVisualStyleBackColor = true;
@@ -427,10 +412,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.controlledLowMissButton, 3);
             this.controlledLowMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledLowMissButton.Location = new System.Drawing.Point(370, 346);
-            this.controlledLowMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.controlledLowMissButton.Location = new System.Drawing.Point(183, 179);
             this.controlledLowMissButton.Name = "controlledLowMissButton";
-            this.controlledLowMissButton.Size = new System.Drawing.Size(261, 73);
+            this.controlledLowMissButton.Size = new System.Drawing.Size(129, 38);
             this.controlledLowMissButton.TabIndex = 19;
             this.controlledLowMissButton.Text = "Controlled Low Miss";
             this.controlledLowMissButton.UseVisualStyleBackColor = true;
@@ -440,10 +424,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.hotMissButton, 3);
             this.hotMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hotMissButton.Location = new System.Drawing.Point(370, 431);
-            this.hotMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.hotMissButton.Location = new System.Drawing.Point(183, 223);
             this.hotMissButton.Name = "hotMissButton";
-            this.hotMissButton.Size = new System.Drawing.Size(261, 73);
+            this.hotMissButton.Size = new System.Drawing.Size(129, 38);
             this.hotMissButton.TabIndex = 20;
             this.hotMissButton.Text = "Hot Goal Miss";
             this.hotMissButton.UseVisualStyleBackColor = true;
@@ -453,10 +436,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.autoHighMissButton, 3);
             this.autoHighMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoHighMissButton.Location = new System.Drawing.Point(370, 91);
-            this.autoHighMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.autoHighMissButton.Location = new System.Drawing.Point(183, 47);
             this.autoHighMissButton.Name = "autoHighMissButton";
-            this.autoHighMissButton.Size = new System.Drawing.Size(261, 73);
+            this.autoHighMissButton.Size = new System.Drawing.Size(129, 38);
             this.autoHighMissButton.TabIndex = 29;
             this.autoHighMissButton.Text = "Auto High Miss";
             this.autoHighMissButton.UseVisualStyleBackColor = true;
@@ -468,10 +450,9 @@
             this.tableLayoutPanel.SetColumnSpan(this.totalGoalLabel, 3);
             this.totalGoalLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalGoalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalGoalLabel.Location = new System.Drawing.Point(6, 595);
-            this.totalGoalLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalGoalLabel.Location = new System.Drawing.Point(3, 308);
             this.totalGoalLabel.Name = "totalGoalLabel";
-            this.totalGoalLabel.Size = new System.Drawing.Size(261, 48);
+            this.totalGoalLabel.Size = new System.Drawing.Size(129, 25);
             this.totalGoalLabel.TabIndex = 32;
             this.totalGoalLabel.Text = "Total Goals: ";
             this.totalGoalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -482,10 +463,9 @@
             this.tableLayoutPanel.SetColumnSpan(this.totalMissesLabel, 3);
             this.totalMissesLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalMissesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMissesLabel.Location = new System.Drawing.Point(370, 595);
-            this.totalMissesLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalMissesLabel.Location = new System.Drawing.Point(183, 308);
             this.totalMissesLabel.Name = "totalMissesLabel";
-            this.totalMissesLabel.Size = new System.Drawing.Size(261, 48);
+            this.totalMissesLabel.Size = new System.Drawing.Size(129, 25);
             this.totalMissesLabel.TabIndex = 33;
             this.totalMissesLabel.Text = "Total Misses: ";
             this.totalMissesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -495,10 +475,9 @@
             this.totalGoalDisplay.AutoSize = true;
             this.totalGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalGoalDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalGoalDisplay.Location = new System.Drawing.Point(279, 595);
-            this.totalGoalDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalGoalDisplay.Location = new System.Drawing.Point(138, 308);
             this.totalGoalDisplay.Name = "totalGoalDisplay";
-            this.totalGoalDisplay.Size = new System.Drawing.Size(79, 48);
+            this.totalGoalDisplay.Size = new System.Drawing.Size(39, 25);
             this.totalGoalDisplay.TabIndex = 34;
             this.totalGoalDisplay.Text = "0";
             this.totalGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -508,10 +487,9 @@
             this.totalMissesDisplay.AutoSize = true;
             this.totalMissesDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalMissesDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMissesDisplay.Location = new System.Drawing.Point(643, 595);
-            this.totalMissesDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalMissesDisplay.Location = new System.Drawing.Point(318, 308);
             this.totalMissesDisplay.Name = "totalMissesDisplay";
-            this.totalMissesDisplay.Size = new System.Drawing.Size(79, 48);
+            this.totalMissesDisplay.Size = new System.Drawing.Size(39, 25);
             this.totalMissesDisplay.TabIndex = 35;
             this.totalMissesDisplay.Text = "0";
             this.totalMissesDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -520,10 +498,9 @@
             // 
             this.autoHighGoalDisplay.AutoSize = true;
             this.autoHighGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoHighGoalDisplay.Location = new System.Drawing.Point(279, 85);
-            this.autoHighGoalDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.autoHighGoalDisplay.Location = new System.Drawing.Point(138, 44);
             this.autoHighGoalDisplay.Name = "autoHighGoalDisplay";
-            this.autoHighGoalDisplay.Size = new System.Drawing.Size(79, 85);
+            this.autoHighGoalDisplay.Size = new System.Drawing.Size(39, 44);
             this.autoHighGoalDisplay.TabIndex = 36;
             this.autoHighGoalDisplay.Text = "0";
             this.autoHighGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -532,10 +509,9 @@
             // 
             this.autoHighMissDisplay.AutoSize = true;
             this.autoHighMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoHighMissDisplay.Location = new System.Drawing.Point(643, 85);
-            this.autoHighMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.autoHighMissDisplay.Location = new System.Drawing.Point(318, 44);
             this.autoHighMissDisplay.Name = "autoHighMissDisplay";
-            this.autoHighMissDisplay.Size = new System.Drawing.Size(79, 85);
+            this.autoHighMissDisplay.Size = new System.Drawing.Size(39, 44);
             this.autoHighMissDisplay.TabIndex = 37;
             this.autoHighMissDisplay.Text = "0";
             this.autoHighMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -544,10 +520,9 @@
             // 
             this.autoLowGoalDisplay.AutoSize = true;
             this.autoLowGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoLowGoalDisplay.Location = new System.Drawing.Point(279, 170);
-            this.autoLowGoalDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.autoLowGoalDisplay.Location = new System.Drawing.Point(138, 88);
             this.autoLowGoalDisplay.Name = "autoLowGoalDisplay";
-            this.autoLowGoalDisplay.Size = new System.Drawing.Size(79, 85);
+            this.autoLowGoalDisplay.Size = new System.Drawing.Size(39, 44);
             this.autoLowGoalDisplay.TabIndex = 39;
             this.autoLowGoalDisplay.Text = "0";
             this.autoLowGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -556,10 +531,9 @@
             // 
             this.autoLowMissDisplay.AutoSize = true;
             this.autoLowMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoLowMissDisplay.Location = new System.Drawing.Point(643, 170);
-            this.autoLowMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.autoLowMissDisplay.Location = new System.Drawing.Point(318, 88);
             this.autoLowMissDisplay.Name = "autoLowMissDisplay";
-            this.autoLowMissDisplay.Size = new System.Drawing.Size(79, 85);
+            this.autoLowMissDisplay.Size = new System.Drawing.Size(39, 44);
             this.autoLowMissDisplay.TabIndex = 38;
             this.autoLowMissDisplay.Text = "0";
             this.autoLowMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -568,10 +542,9 @@
             // 
             this.controlledHighGoalDisplay.AutoSize = true;
             this.controlledHighGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighGoalDisplay.Location = new System.Drawing.Point(279, 255);
-            this.controlledHighGoalDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.controlledHighGoalDisplay.Location = new System.Drawing.Point(138, 132);
             this.controlledHighGoalDisplay.Name = "controlledHighGoalDisplay";
-            this.controlledHighGoalDisplay.Size = new System.Drawing.Size(79, 85);
+            this.controlledHighGoalDisplay.Size = new System.Drawing.Size(39, 44);
             this.controlledHighGoalDisplay.TabIndex = 40;
             this.controlledHighGoalDisplay.Text = "0";
             this.controlledHighGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -580,10 +553,9 @@
             // 
             this.controlledHighMissDisplay.AutoSize = true;
             this.controlledHighMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledHighMissDisplay.Location = new System.Drawing.Point(643, 255);
-            this.controlledHighMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.controlledHighMissDisplay.Location = new System.Drawing.Point(318, 132);
             this.controlledHighMissDisplay.Name = "controlledHighMissDisplay";
-            this.controlledHighMissDisplay.Size = new System.Drawing.Size(79, 85);
+            this.controlledHighMissDisplay.Size = new System.Drawing.Size(39, 44);
             this.controlledHighMissDisplay.TabIndex = 41;
             this.controlledHighMissDisplay.Text = "0";
             this.controlledHighMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -592,10 +564,9 @@
             // 
             this.controlledLowGoalDisplay.AutoSize = true;
             this.controlledLowGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledLowGoalDisplay.Location = new System.Drawing.Point(279, 340);
-            this.controlledLowGoalDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.controlledLowGoalDisplay.Location = new System.Drawing.Point(138, 176);
             this.controlledLowGoalDisplay.Name = "controlledLowGoalDisplay";
-            this.controlledLowGoalDisplay.Size = new System.Drawing.Size(79, 85);
+            this.controlledLowGoalDisplay.Size = new System.Drawing.Size(39, 44);
             this.controlledLowGoalDisplay.TabIndex = 42;
             this.controlledLowGoalDisplay.Text = "0";
             this.controlledLowGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -604,10 +575,9 @@
             // 
             this.controlledLowMissDisplay.AutoSize = true;
             this.controlledLowMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledLowMissDisplay.Location = new System.Drawing.Point(643, 340);
-            this.controlledLowMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.controlledLowMissDisplay.Location = new System.Drawing.Point(318, 176);
             this.controlledLowMissDisplay.Name = "controlledLowMissDisplay";
-            this.controlledLowMissDisplay.Size = new System.Drawing.Size(79, 85);
+            this.controlledLowMissDisplay.Size = new System.Drawing.Size(39, 44);
             this.controlledLowMissDisplay.TabIndex = 43;
             this.controlledLowMissDisplay.Text = "0";
             this.controlledLowMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -616,10 +586,9 @@
             // 
             this.hotGoalDisplay.AutoSize = true;
             this.hotGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hotGoalDisplay.Location = new System.Drawing.Point(279, 425);
-            this.hotGoalDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.hotGoalDisplay.Location = new System.Drawing.Point(138, 220);
             this.hotGoalDisplay.Name = "hotGoalDisplay";
-            this.hotGoalDisplay.Size = new System.Drawing.Size(79, 85);
+            this.hotGoalDisplay.Size = new System.Drawing.Size(39, 44);
             this.hotGoalDisplay.TabIndex = 44;
             this.hotGoalDisplay.Text = "0";
             this.hotGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -628,10 +597,9 @@
             // 
             this.hotMissDisplay.AutoSize = true;
             this.hotMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hotMissDisplay.Location = new System.Drawing.Point(643, 425);
-            this.hotMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.hotMissDisplay.Location = new System.Drawing.Point(318, 220);
             this.hotMissDisplay.Name = "hotMissDisplay";
-            this.hotMissDisplay.Size = new System.Drawing.Size(79, 85);
+            this.hotMissDisplay.Size = new System.Drawing.Size(39, 44);
             this.hotMissDisplay.TabIndex = 45;
             this.hotMissDisplay.Text = "0";
             this.hotMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,10 +608,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.autoBallPickupButton, 3);
             this.autoBallPickupButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoBallPickupButton.Location = new System.Drawing.Point(1462, 91);
-            this.autoBallPickupButton.Margin = new System.Windows.Forms.Padding(6);
+            this.autoBallPickupButton.Location = new System.Drawing.Point(723, 47);
             this.autoBallPickupButton.Name = "autoBallPickupButton";
-            this.autoBallPickupButton.Size = new System.Drawing.Size(261, 73);
+            this.autoBallPickupButton.Size = new System.Drawing.Size(129, 38);
             this.autoBallPickupButton.TabIndex = 48;
             this.autoBallPickupButton.Text = "Auto Ball Pickup";
             this.autoBallPickupButton.UseVisualStyleBackColor = true;
@@ -653,10 +620,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.pickupFromHumanButton, 3);
             this.pickupFromHumanButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pickupFromHumanButton.Location = new System.Drawing.Point(1462, 261);
-            this.pickupFromHumanButton.Margin = new System.Windows.Forms.Padding(6);
+            this.pickupFromHumanButton.Location = new System.Drawing.Point(723, 135);
             this.pickupFromHumanButton.Name = "pickupFromHumanButton";
-            this.pickupFromHumanButton.Size = new System.Drawing.Size(261, 73);
+            this.pickupFromHumanButton.Size = new System.Drawing.Size(129, 38);
             this.pickupFromHumanButton.TabIndex = 49;
             this.pickupFromHumanButton.Text = "Pickup From Human";
             this.pickupFromHumanButton.UseVisualStyleBackColor = true;
@@ -666,10 +632,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.passToOtherBotButton, 3);
             this.passToOtherBotButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passToOtherBotButton.Location = new System.Drawing.Point(1462, 346);
-            this.passToOtherBotButton.Margin = new System.Windows.Forms.Padding(6);
+            this.passToOtherBotButton.Location = new System.Drawing.Point(723, 179);
             this.passToOtherBotButton.Name = "passToOtherBotButton";
-            this.passToOtherBotButton.Size = new System.Drawing.Size(261, 73);
+            this.passToOtherBotButton.Size = new System.Drawing.Size(129, 38);
             this.passToOtherBotButton.TabIndex = 50;
             this.passToOtherBotButton.Text = "Pass To Other Robot";
             this.passToOtherBotButton.UseVisualStyleBackColor = true;
@@ -679,10 +644,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.successfulTrussButton, 3);
             this.successfulTrussButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.successfulTrussButton.Location = new System.Drawing.Point(1462, 431);
-            this.successfulTrussButton.Margin = new System.Windows.Forms.Padding(6);
+            this.successfulTrussButton.Location = new System.Drawing.Point(723, 223);
             this.successfulTrussButton.Name = "successfulTrussButton";
-            this.successfulTrussButton.Size = new System.Drawing.Size(261, 73);
+            this.successfulTrussButton.Size = new System.Drawing.Size(129, 38);
             this.successfulTrussButton.TabIndex = 51;
             this.successfulTrussButton.Text = "Successful Truss";
             this.successfulTrussButton.UseVisualStyleBackColor = true;
@@ -692,10 +656,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.button11, 3);
             this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.Location = new System.Drawing.Point(1462, 516);
-            this.button11.Margin = new System.Windows.Forms.Padding(6);
+            this.button11.Location = new System.Drawing.Point(723, 267);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(261, 73);
+            this.button11.Size = new System.Drawing.Size(129, 38);
             this.button11.TabIndex = 52;
             this.button11.Text = "Extra Button 1";
             this.button11.UseVisualStyleBackColor = true;
@@ -705,10 +668,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.autoBallPickupMissButton, 3);
             this.autoBallPickupMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoBallPickupMissButton.Location = new System.Drawing.Point(1826, 91);
-            this.autoBallPickupMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.autoBallPickupMissButton.Location = new System.Drawing.Point(903, 47);
             this.autoBallPickupMissButton.Name = "autoBallPickupMissButton";
-            this.autoBallPickupMissButton.Size = new System.Drawing.Size(261, 73);
+            this.autoBallPickupMissButton.Size = new System.Drawing.Size(129, 38);
             this.autoBallPickupMissButton.TabIndex = 53;
             this.autoBallPickupMissButton.Text = "Auto Ball Pickup Miss";
             this.autoBallPickupMissButton.UseVisualStyleBackColor = true;
@@ -718,10 +680,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.pickupFromHumanMissButton, 3);
             this.pickupFromHumanMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pickupFromHumanMissButton.Location = new System.Drawing.Point(1826, 261);
-            this.pickupFromHumanMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.pickupFromHumanMissButton.Location = new System.Drawing.Point(903, 135);
             this.pickupFromHumanMissButton.Name = "pickupFromHumanMissButton";
-            this.pickupFromHumanMissButton.Size = new System.Drawing.Size(261, 73);
+            this.pickupFromHumanMissButton.Size = new System.Drawing.Size(129, 38);
             this.pickupFromHumanMissButton.TabIndex = 54;
             this.pickupFromHumanMissButton.Text = "Missed Pickup From Human";
             this.pickupFromHumanMissButton.UseVisualStyleBackColor = true;
@@ -731,10 +692,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.passToOtherBotMissButton, 3);
             this.passToOtherBotMissButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passToOtherBotMissButton.Location = new System.Drawing.Point(1826, 346);
-            this.passToOtherBotMissButton.Margin = new System.Windows.Forms.Padding(6);
+            this.passToOtherBotMissButton.Location = new System.Drawing.Point(903, 179);
             this.passToOtherBotMissButton.Name = "passToOtherBotMissButton";
-            this.passToOtherBotMissButton.Size = new System.Drawing.Size(261, 73);
+            this.passToOtherBotMissButton.Size = new System.Drawing.Size(129, 38);
             this.passToOtherBotMissButton.TabIndex = 55;
             this.passToOtherBotMissButton.Tag = "";
             this.passToOtherBotMissButton.Text = "Missed Pass to Bot";
@@ -745,10 +705,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.unsuccessfulTrussButton, 3);
             this.unsuccessfulTrussButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unsuccessfulTrussButton.Location = new System.Drawing.Point(1826, 431);
-            this.unsuccessfulTrussButton.Margin = new System.Windows.Forms.Padding(6);
+            this.unsuccessfulTrussButton.Location = new System.Drawing.Point(903, 223);
             this.unsuccessfulTrussButton.Name = "unsuccessfulTrussButton";
-            this.unsuccessfulTrussButton.Size = new System.Drawing.Size(261, 73);
+            this.unsuccessfulTrussButton.Size = new System.Drawing.Size(129, 38);
             this.unsuccessfulTrussButton.TabIndex = 57;
             this.unsuccessfulTrussButton.Text = "Unsuccessful Truss";
             this.unsuccessfulTrussButton.UseVisualStyleBackColor = true;
@@ -758,10 +717,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.button22, 3);
             this.button22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button22.Location = new System.Drawing.Point(1826, 516);
-            this.button22.Margin = new System.Windows.Forms.Padding(6);
+            this.button22.Location = new System.Drawing.Point(903, 267);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(261, 73);
+            this.button22.Size = new System.Drawing.Size(129, 38);
             this.button22.TabIndex = 58;
             this.button22.Text = "Extra Button 2";
             this.button22.UseVisualStyleBackColor = true;
@@ -771,10 +729,9 @@
             // 
             this.autoBallPickupDisplay.AutoSize = true;
             this.autoBallPickupDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoBallPickupDisplay.Location = new System.Drawing.Point(1735, 85);
-            this.autoBallPickupDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.autoBallPickupDisplay.Location = new System.Drawing.Point(858, 44);
             this.autoBallPickupDisplay.Name = "autoBallPickupDisplay";
-            this.autoBallPickupDisplay.Size = new System.Drawing.Size(79, 85);
+            this.autoBallPickupDisplay.Size = new System.Drawing.Size(39, 44);
             this.autoBallPickupDisplay.TabIndex = 60;
             this.autoBallPickupDisplay.Text = "0";
             this.autoBallPickupDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -783,10 +740,9 @@
             // 
             this.autoBallPickupMissDisplay.AutoSize = true;
             this.autoBallPickupMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autoBallPickupMissDisplay.Location = new System.Drawing.Point(2099, 85);
-            this.autoBallPickupMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.autoBallPickupMissDisplay.Location = new System.Drawing.Point(1038, 44);
             this.autoBallPickupMissDisplay.Name = "autoBallPickupMissDisplay";
-            this.autoBallPickupMissDisplay.Size = new System.Drawing.Size(93, 85);
+            this.autoBallPickupMissDisplay.Size = new System.Drawing.Size(58, 44);
             this.autoBallPickupMissDisplay.TabIndex = 61;
             this.autoBallPickupMissDisplay.Text = "0";
             this.autoBallPickupMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -795,10 +751,9 @@
             // 
             this.controlledBallPickupDisplay.AutoSize = true;
             this.controlledBallPickupDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledBallPickupDisplay.Location = new System.Drawing.Point(1735, 170);
-            this.controlledBallPickupDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.controlledBallPickupDisplay.Location = new System.Drawing.Point(858, 88);
             this.controlledBallPickupDisplay.Name = "controlledBallPickupDisplay";
-            this.controlledBallPickupDisplay.Size = new System.Drawing.Size(79, 85);
+            this.controlledBallPickupDisplay.Size = new System.Drawing.Size(39, 44);
             this.controlledBallPickupDisplay.TabIndex = 62;
             this.controlledBallPickupDisplay.Text = "0";
             this.controlledBallPickupDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -807,10 +762,9 @@
             // 
             this.controlledBallPickupMissDisplay.AutoSize = true;
             this.controlledBallPickupMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlledBallPickupMissDisplay.Location = new System.Drawing.Point(2099, 170);
-            this.controlledBallPickupMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.controlledBallPickupMissDisplay.Location = new System.Drawing.Point(1038, 88);
             this.controlledBallPickupMissDisplay.Name = "controlledBallPickupMissDisplay";
-            this.controlledBallPickupMissDisplay.Size = new System.Drawing.Size(93, 85);
+            this.controlledBallPickupMissDisplay.Size = new System.Drawing.Size(58, 44);
             this.controlledBallPickupMissDisplay.TabIndex = 63;
             this.controlledBallPickupMissDisplay.Text = "0";
             this.controlledBallPickupMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -819,10 +773,9 @@
             // 
             this.pickupFromHumanDisplay.AutoSize = true;
             this.pickupFromHumanDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pickupFromHumanDisplay.Location = new System.Drawing.Point(1735, 255);
-            this.pickupFromHumanDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.pickupFromHumanDisplay.Location = new System.Drawing.Point(858, 132);
             this.pickupFromHumanDisplay.Name = "pickupFromHumanDisplay";
-            this.pickupFromHumanDisplay.Size = new System.Drawing.Size(79, 85);
+            this.pickupFromHumanDisplay.Size = new System.Drawing.Size(39, 44);
             this.pickupFromHumanDisplay.TabIndex = 64;
             this.pickupFromHumanDisplay.Text = "0";
             this.pickupFromHumanDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -831,10 +784,9 @@
             // 
             this.missedPickupFromHumanDisplay.AutoSize = true;
             this.missedPickupFromHumanDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.missedPickupFromHumanDisplay.Location = new System.Drawing.Point(2099, 255);
-            this.missedPickupFromHumanDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.missedPickupFromHumanDisplay.Location = new System.Drawing.Point(1038, 132);
             this.missedPickupFromHumanDisplay.Name = "missedPickupFromHumanDisplay";
-            this.missedPickupFromHumanDisplay.Size = new System.Drawing.Size(93, 85);
+            this.missedPickupFromHumanDisplay.Size = new System.Drawing.Size(58, 44);
             this.missedPickupFromHumanDisplay.TabIndex = 65;
             this.missedPickupFromHumanDisplay.Text = "0";
             this.missedPickupFromHumanDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -843,10 +795,9 @@
             // 
             this.passToOtherBotDisplay.AutoSize = true;
             this.passToOtherBotDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passToOtherBotDisplay.Location = new System.Drawing.Point(1735, 340);
-            this.passToOtherBotDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.passToOtherBotDisplay.Location = new System.Drawing.Point(858, 176);
             this.passToOtherBotDisplay.Name = "passToOtherBotDisplay";
-            this.passToOtherBotDisplay.Size = new System.Drawing.Size(79, 85);
+            this.passToOtherBotDisplay.Size = new System.Drawing.Size(39, 44);
             this.passToOtherBotDisplay.TabIndex = 66;
             this.passToOtherBotDisplay.Text = "0";
             this.passToOtherBotDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -855,10 +806,9 @@
             // 
             this.missedPassToOtherBotDisplay.AutoSize = true;
             this.missedPassToOtherBotDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.missedPassToOtherBotDisplay.Location = new System.Drawing.Point(2099, 340);
-            this.missedPassToOtherBotDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.missedPassToOtherBotDisplay.Location = new System.Drawing.Point(1038, 176);
             this.missedPassToOtherBotDisplay.Name = "missedPassToOtherBotDisplay";
-            this.missedPassToOtherBotDisplay.Size = new System.Drawing.Size(93, 85);
+            this.missedPassToOtherBotDisplay.Size = new System.Drawing.Size(58, 44);
             this.missedPassToOtherBotDisplay.TabIndex = 67;
             this.missedPassToOtherBotDisplay.Text = "0";
             this.missedPassToOtherBotDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -867,10 +817,9 @@
             // 
             this.successfulTrussDisplay.AutoSize = true;
             this.successfulTrussDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.successfulTrussDisplay.Location = new System.Drawing.Point(1735, 425);
-            this.successfulTrussDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.successfulTrussDisplay.Location = new System.Drawing.Point(858, 220);
             this.successfulTrussDisplay.Name = "successfulTrussDisplay";
-            this.successfulTrussDisplay.Size = new System.Drawing.Size(79, 85);
+            this.successfulTrussDisplay.Size = new System.Drawing.Size(39, 44);
             this.successfulTrussDisplay.TabIndex = 68;
             this.successfulTrussDisplay.Text = "0";
             this.successfulTrussDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -879,10 +828,9 @@
             // 
             this.unsuccessfulTrussDisplay.AutoSize = true;
             this.unsuccessfulTrussDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unsuccessfulTrussDisplay.Location = new System.Drawing.Point(2099, 425);
-            this.unsuccessfulTrussDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.unsuccessfulTrussDisplay.Location = new System.Drawing.Point(1038, 220);
             this.unsuccessfulTrussDisplay.Name = "unsuccessfulTrussDisplay";
-            this.unsuccessfulTrussDisplay.Size = new System.Drawing.Size(93, 85);
+            this.unsuccessfulTrussDisplay.Size = new System.Drawing.Size(58, 44);
             this.unsuccessfulTrussDisplay.TabIndex = 69;
             this.unsuccessfulTrussDisplay.Text = "0";
             this.unsuccessfulTrussDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -891,10 +839,9 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(1735, 510);
-            this.label28.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label28.Location = new System.Drawing.Point(858, 264);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(79, 85);
+            this.label28.Size = new System.Drawing.Size(39, 44);
             this.label28.TabIndex = 70;
             this.label28.Text = "0";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -904,10 +851,9 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(2099, 510);
-            this.label29.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label29.Location = new System.Drawing.Point(1038, 264);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(93, 85);
+            this.label29.Size = new System.Drawing.Size(58, 44);
             this.label29.TabIndex = 71;
             this.label29.Text = "0";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -919,10 +865,9 @@
             this.tableLayoutPanel.SetColumnSpan(this.totalGoodLabel, 3);
             this.totalGoodLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalGoodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalGoodLabel.Location = new System.Drawing.Point(1462, 595);
-            this.totalGoodLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalGoodLabel.Location = new System.Drawing.Point(723, 308);
             this.totalGoodLabel.Name = "totalGoodLabel";
-            this.totalGoodLabel.Size = new System.Drawing.Size(261, 48);
+            this.totalGoodLabel.Size = new System.Drawing.Size(129, 25);
             this.totalGoodLabel.TabIndex = 72;
             this.totalGoodLabel.Text = "Total Good: ";
             this.totalGoodLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -933,10 +878,9 @@
             this.tableLayoutPanel.SetColumnSpan(this.totalBallMissesLabel, 3);
             this.totalBallMissesLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalBallMissesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBallMissesLabel.Location = new System.Drawing.Point(1826, 595);
-            this.totalBallMissesLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalBallMissesLabel.Location = new System.Drawing.Point(903, 308);
             this.totalBallMissesLabel.Name = "totalBallMissesLabel";
-            this.totalBallMissesLabel.Size = new System.Drawing.Size(261, 48);
+            this.totalBallMissesLabel.Size = new System.Drawing.Size(129, 25);
             this.totalBallMissesLabel.TabIndex = 73;
             this.totalBallMissesLabel.Text = "Total Misses:";
             this.totalBallMissesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -946,10 +890,9 @@
             this.totalGoodDisplay.AutoSize = true;
             this.totalGoodDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalGoodDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalGoodDisplay.Location = new System.Drawing.Point(1735, 595);
-            this.totalGoodDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalGoodDisplay.Location = new System.Drawing.Point(858, 308);
             this.totalGoodDisplay.Name = "totalGoodDisplay";
-            this.totalGoodDisplay.Size = new System.Drawing.Size(79, 48);
+            this.totalGoodDisplay.Size = new System.Drawing.Size(39, 25);
             this.totalGoodDisplay.TabIndex = 74;
             this.totalGoodDisplay.Text = "0";
             this.totalGoodDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -959,10 +902,9 @@
             this.totalBallMissesDisplay.AutoSize = true;
             this.totalBallMissesDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalBallMissesDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBallMissesDisplay.Location = new System.Drawing.Point(2099, 595);
-            this.totalBallMissesDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalBallMissesDisplay.Location = new System.Drawing.Point(1038, 308);
             this.totalBallMissesDisplay.Name = "totalBallMissesDisplay";
-            this.totalBallMissesDisplay.Size = new System.Drawing.Size(93, 48);
+            this.totalBallMissesDisplay.Size = new System.Drawing.Size(58, 25);
             this.totalBallMissesDisplay.TabIndex = 75;
             this.totalBallMissesDisplay.Text = "0";
             this.totalBallMissesDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -972,10 +914,9 @@
             this.teamColourLabel.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.teamColourLabel, 4);
             this.teamColourLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamColourLabel.Location = new System.Drawing.Point(370, 643);
-            this.teamColourLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.teamColourLabel.Location = new System.Drawing.Point(183, 333);
             this.teamColourLabel.Name = "teamColourLabel";
-            this.teamColourLabel.Size = new System.Drawing.Size(352, 48);
+            this.teamColourLabel.Size = new System.Drawing.Size(174, 25);
             this.teamColourLabel.TabIndex = 76;
             this.teamColourLabel.Text = "Team Colour: ";
             this.teamColourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -989,10 +930,9 @@
             this.teamColourSelector.Items.AddRange(new object[] {
             "Red",
             "Blue"});
-            this.teamColourSelector.Location = new System.Drawing.Point(734, 649);
-            this.teamColourSelector.Margin = new System.Windows.Forms.Padding(6);
+            this.teamColourSelector.Location = new System.Drawing.Point(363, 336);
             this.teamColourSelector.Name = "teamColourSelector";
-            this.teamColourSelector.Size = new System.Drawing.Size(352, 33);
+            this.teamColourSelector.Size = new System.Drawing.Size(174, 21);
             this.teamColourSelector.TabIndex = 77;
             this.teamColourSelector.SelectedIndexChanged += new System.EventHandler(this.teamColourSelector_SelectedIndexChanged);
             // 
@@ -1001,10 +941,9 @@
             this.matchNumberLabel.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.matchNumberLabel, 4);
             this.matchNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchNumberLabel.Location = new System.Drawing.Point(370, 691);
-            this.matchNumberLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.matchNumberLabel.Location = new System.Drawing.Point(183, 358);
             this.matchNumberLabel.Name = "matchNumberLabel";
-            this.matchNumberLabel.Size = new System.Drawing.Size(352, 48);
+            this.matchNumberLabel.Size = new System.Drawing.Size(174, 25);
             this.matchNumberLabel.TabIndex = 78;
             this.matchNumberLabel.Text = "Match Number: ";
             this.matchNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1013,8 +952,7 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.matchNumberUpDown, 4);
             this.matchNumberUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchNumberUpDown.Location = new System.Drawing.Point(734, 697);
-            this.matchNumberUpDown.Margin = new System.Windows.Forms.Padding(6);
+            this.matchNumberUpDown.Location = new System.Drawing.Point(363, 361);
             this.matchNumberUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1026,7 +964,7 @@
             0,
             0});
             this.matchNumberUpDown.Name = "matchNumberUpDown";
-            this.matchNumberUpDown.Size = new System.Drawing.Size(352, 31);
+            this.matchNumberUpDown.Size = new System.Drawing.Size(174, 20);
             this.matchNumberUpDown.TabIndex = 79;
             this.matchNumberUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.matchNumberUpDown.Value = new decimal(new int[] {
@@ -1040,10 +978,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.tripleAssistGoals, 3);
             this.tripleAssistGoals.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tripleAssistGoals.Location = new System.Drawing.Point(6, 516);
-            this.tripleAssistGoals.Margin = new System.Windows.Forms.Padding(6);
+            this.tripleAssistGoals.Location = new System.Drawing.Point(3, 267);
             this.tripleAssistGoals.Name = "tripleAssistGoals";
-            this.tripleAssistGoals.Size = new System.Drawing.Size(261, 73);
+            this.tripleAssistGoals.Size = new System.Drawing.Size(129, 38);
             this.tripleAssistGoals.TabIndex = 80;
             this.tripleAssistGoals.Text = "3-Assist Goals";
             this.tripleAssistGoals.UseVisualStyleBackColor = true;
@@ -1053,10 +990,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.tripleAssistMisses, 3);
             this.tripleAssistMisses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tripleAssistMisses.Location = new System.Drawing.Point(370, 516);
-            this.tripleAssistMisses.Margin = new System.Windows.Forms.Padding(6);
+            this.tripleAssistMisses.Location = new System.Drawing.Point(183, 267);
             this.tripleAssistMisses.Name = "tripleAssistMisses";
-            this.tripleAssistMisses.Size = new System.Drawing.Size(261, 73);
+            this.tripleAssistMisses.Size = new System.Drawing.Size(129, 38);
             this.tripleAssistMisses.TabIndex = 81;
             this.tripleAssistMisses.Text = "3-Assist Misses";
             this.tripleAssistMisses.UseVisualStyleBackColor = true;
@@ -1066,10 +1002,9 @@
             // 
             this.tripleAssistGoalDisplay.AutoSize = true;
             this.tripleAssistGoalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tripleAssistGoalDisplay.Location = new System.Drawing.Point(279, 510);
-            this.tripleAssistGoalDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.tripleAssistGoalDisplay.Location = new System.Drawing.Point(138, 264);
             this.tripleAssistGoalDisplay.Name = "tripleAssistGoalDisplay";
-            this.tripleAssistGoalDisplay.Size = new System.Drawing.Size(79, 85);
+            this.tripleAssistGoalDisplay.Size = new System.Drawing.Size(39, 44);
             this.tripleAssistGoalDisplay.TabIndex = 82;
             this.tripleAssistGoalDisplay.Text = "0";
             this.tripleAssistGoalDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1078,10 +1013,9 @@
             // 
             this.tripleAssistMissDisplay.AutoSize = true;
             this.tripleAssistMissDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tripleAssistMissDisplay.Location = new System.Drawing.Point(643, 510);
-            this.tripleAssistMissDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.tripleAssistMissDisplay.Location = new System.Drawing.Point(318, 264);
             this.tripleAssistMissDisplay.Name = "tripleAssistMissDisplay";
-            this.tripleAssistMissDisplay.Size = new System.Drawing.Size(79, 85);
+            this.tripleAssistMissDisplay.Size = new System.Drawing.Size(39, 44);
             this.tripleAssistMissDisplay.TabIndex = 83;
             this.tripleAssistMissDisplay.Text = "0";
             this.tripleAssistMissDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1090,10 +1024,9 @@
             // 
             this.tableLayoutPanel.SetColumnSpan(this.submitDataButton, 4);
             this.submitDataButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.submitDataButton.Location = new System.Drawing.Point(916, 1133);
-            this.submitDataButton.Margin = new System.Windows.Forms.Padding(6);
+            this.submitDataButton.Location = new System.Drawing.Point(453, 587);
             this.submitDataButton.Name = "submitDataButton";
-            this.submitDataButton.Size = new System.Drawing.Size(352, 82);
+            this.submitDataButton.Size = new System.Drawing.Size(174, 45);
             this.submitDataButton.TabIndex = 0;
             this.submitDataButton.Text = "Submit Data";
             this.submitDataButton.UseVisualStyleBackColor = true;
@@ -1104,10 +1037,9 @@
             this.didTheRobotDieLabel.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.didTheRobotDieLabel, 4);
             this.didTheRobotDieLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.didTheRobotDieLabel.Location = new System.Drawing.Point(734, 739);
-            this.didTheRobotDieLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.didTheRobotDieLabel.Location = new System.Drawing.Point(363, 383);
             this.didTheRobotDieLabel.Name = "didTheRobotDieLabel";
-            this.didTheRobotDieLabel.Size = new System.Drawing.Size(352, 48);
+            this.didTheRobotDieLabel.Size = new System.Drawing.Size(174, 25);
             this.didTheRobotDieLabel.TabIndex = 84;
             this.didTheRobotDieLabel.Text = "Did the Robot Die?";
             this.didTheRobotDieLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1117,10 +1049,9 @@
             this.didRobotDieCheckBox.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.didRobotDieCheckBox, 4);
             this.didRobotDieCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.didRobotDieCheckBox.Location = new System.Drawing.Point(1098, 745);
-            this.didRobotDieCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.didRobotDieCheckBox.Location = new System.Drawing.Point(543, 386);
             this.didRobotDieCheckBox.Name = "didRobotDieCheckBox";
-            this.didRobotDieCheckBox.Size = new System.Drawing.Size(352, 36);
+            this.didRobotDieCheckBox.Size = new System.Drawing.Size(174, 19);
             this.didRobotDieCheckBox.TabIndex = 85;
             this.didRobotDieCheckBox.UseVisualStyleBackColor = true;
             this.didRobotDieCheckBox.CheckedChanged += new System.EventHandler(this.didRobotDieCheckBox_CheckedChanged);
@@ -1131,12 +1062,11 @@
             this.tableLayoutPanel.SetColumnSpan(this.commentsTextBox, 24);
             this.commentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.commentsTextBox.EnableAutoDragDrop = true;
-            this.commentsTextBox.Location = new System.Drawing.Point(6, 793);
-            this.commentsTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.commentsTextBox.Location = new System.Drawing.Point(3, 411);
             this.commentsTextBox.Multiline = false;
             this.commentsTextBox.Name = "commentsTextBox";
             this.tableLayoutPanel.SetRowSpan(this.commentsTextBox, 4);
-            this.commentsTextBox.Size = new System.Drawing.Size(2186, 328);
+            this.commentsTextBox.Size = new System.Drawing.Size(1093, 170);
             this.commentsTextBox.TabIndex = 86;
             this.commentsTextBox.Text = "Comments: Any other information that may be needed";
             this.commentsTextBox.TextChanged += new System.EventHandler(this.commentsTextBox_TextChanged);
@@ -1146,10 +1076,9 @@
             this.driverRatingLabel.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.driverRatingLabel, 4);
             this.driverRatingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.driverRatingLabel.Location = new System.Drawing.Point(1098, 643);
-            this.driverRatingLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.driverRatingLabel.Location = new System.Drawing.Point(543, 333);
             this.driverRatingLabel.Name = "driverRatingLabel";
-            this.driverRatingLabel.Size = new System.Drawing.Size(352, 48);
+            this.driverRatingLabel.Size = new System.Drawing.Size(174, 25);
             this.driverRatingLabel.TabIndex = 87;
             this.driverRatingLabel.Text = "Driver Rating: ";
             this.driverRatingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1159,10 +1088,9 @@
             this.autonomousMovementLabel.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.autonomousMovementLabel, 4);
             this.autonomousMovementLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autonomousMovementLabel.Location = new System.Drawing.Point(1098, 691);
-            this.autonomousMovementLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.autonomousMovementLabel.Location = new System.Drawing.Point(543, 358);
             this.autonomousMovementLabel.Name = "autonomousMovementLabel";
-            this.autonomousMovementLabel.Size = new System.Drawing.Size(352, 48);
+            this.autonomousMovementLabel.Size = new System.Drawing.Size(174, 25);
             this.autonomousMovementLabel.TabIndex = 88;
             this.autonomousMovementLabel.Text = "Autonomous Movement:";
             this.autonomousMovementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1172,10 +1100,9 @@
             this.autonomousMovementCheckBox.AutoSize = true;
             this.tableLayoutPanel.SetColumnSpan(this.autonomousMovementCheckBox, 4);
             this.autonomousMovementCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autonomousMovementCheckBox.Location = new System.Drawing.Point(1462, 697);
-            this.autonomousMovementCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.autonomousMovementCheckBox.Location = new System.Drawing.Point(723, 361);
             this.autonomousMovementCheckBox.Name = "autonomousMovementCheckBox";
-            this.autonomousMovementCheckBox.Size = new System.Drawing.Size(352, 36);
+            this.autonomousMovementCheckBox.Size = new System.Drawing.Size(174, 19);
             this.autonomousMovementCheckBox.TabIndex = 89;
             this.autonomousMovementCheckBox.UseVisualStyleBackColor = true;
             this.autonomousMovementCheckBox.CheckedChanged += new System.EventHandler(this.autonomousMovementCheckBox_CheckedChanged);
@@ -1185,10 +1112,9 @@
             this.driverRatingButton1.Appearance = System.Windows.Forms.Appearance.Button;
             this.driverRatingButton1.AutoSize = true;
             this.driverRatingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.driverRatingButton1.Location = new System.Drawing.Point(1462, 649);
-            this.driverRatingButton1.Margin = new System.Windows.Forms.Padding(6);
+            this.driverRatingButton1.Location = new System.Drawing.Point(723, 336);
             this.driverRatingButton1.Name = "driverRatingButton1";
-            this.driverRatingButton1.Size = new System.Drawing.Size(79, 36);
+            this.driverRatingButton1.Size = new System.Drawing.Size(39, 19);
             this.driverRatingButton1.TabIndex = 90;
             this.driverRatingButton1.Text = "1";
             this.driverRatingButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1200,10 +1126,9 @@
             this.driverRatingButton2.Appearance = System.Windows.Forms.Appearance.Button;
             this.driverRatingButton2.AutoSize = true;
             this.driverRatingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.driverRatingButton2.Location = new System.Drawing.Point(1553, 649);
-            this.driverRatingButton2.Margin = new System.Windows.Forms.Padding(6);
+            this.driverRatingButton2.Location = new System.Drawing.Point(768, 336);
             this.driverRatingButton2.Name = "driverRatingButton2";
-            this.driverRatingButton2.Size = new System.Drawing.Size(79, 36);
+            this.driverRatingButton2.Size = new System.Drawing.Size(39, 19);
             this.driverRatingButton2.TabIndex = 91;
             this.driverRatingButton2.Text = "2";
             this.driverRatingButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1215,10 +1140,9 @@
             this.driverRatingButton3.Appearance = System.Windows.Forms.Appearance.Button;
             this.driverRatingButton3.AutoSize = true;
             this.driverRatingButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.driverRatingButton3.Location = new System.Drawing.Point(1644, 649);
-            this.driverRatingButton3.Margin = new System.Windows.Forms.Padding(6);
+            this.driverRatingButton3.Location = new System.Drawing.Point(813, 336);
             this.driverRatingButton3.Name = "driverRatingButton3";
-            this.driverRatingButton3.Size = new System.Drawing.Size(79, 36);
+            this.driverRatingButton3.Size = new System.Drawing.Size(39, 19);
             this.driverRatingButton3.TabIndex = 92;
             this.driverRatingButton3.Text = "3";
             this.driverRatingButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1230,10 +1154,9 @@
             this.driverRatingButton4.Appearance = System.Windows.Forms.Appearance.Button;
             this.driverRatingButton4.AutoSize = true;
             this.driverRatingButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.driverRatingButton4.Location = new System.Drawing.Point(1735, 649);
-            this.driverRatingButton4.Margin = new System.Windows.Forms.Padding(6);
+            this.driverRatingButton4.Location = new System.Drawing.Point(858, 336);
             this.driverRatingButton4.Name = "driverRatingButton4";
-            this.driverRatingButton4.Size = new System.Drawing.Size(79, 36);
+            this.driverRatingButton4.Size = new System.Drawing.Size(39, 19);
             this.driverRatingButton4.TabIndex = 93;
             this.driverRatingButton4.Text = "4";
             this.driverRatingButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1246,12 +1169,11 @@
             // 
             // Aerial_Assist_Scouting_UI_New
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Aerial_Assist_Scouting_UI_New";
-            this.Size = new System.Drawing.Size(2198, 1221);
+            this.Size = new System.Drawing.Size(1099, 635);
             this.Load += new System.EventHandler(this.Aerial_Assist_Scouting_UI_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
