@@ -41,12 +41,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.licenseInformationDisplay, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 31);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 26);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 315);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(587, 315);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // licenseInformationDisplay
@@ -57,17 +57,17 @@
             this.licenseInformationDisplay.Name = "licenseInformationDisplay";
             this.licenseInformationDisplay.ReadOnly = true;
             this.tableLayoutPanel2.SetRowSpan(this.licenseInformationDisplay, 2);
-            this.licenseInformationDisplay.Size = new System.Drawing.Size(394, 309);
+            this.licenseInformationDisplay.Size = new System.Drawing.Size(581, 309);
             this.licenseInformationDisplay.TabIndex = 0;
             this.licenseInformationDisplay.Text = resources.GetString("licenseInformationDisplay.Text");
             // 
             // License
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(400, 346);
+            this.ClientSize = new System.Drawing.Size(587, 341);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "License";
-            this.Text = "License Information";
+            this.Text = "Licenses";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
