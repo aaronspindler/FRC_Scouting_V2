@@ -124,6 +124,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Information Forms\EventInformationLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information Forms\EventInformationLookup.Designer.cs">
+      <DependentUpon>EventInformationLookup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Information Forms\License.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information Forms\EventInformationLookup.resx">
+      <DependentUpon>EventInformationLookup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\License.resx">
       <DependentUpon>License.cs</DependentUpon>

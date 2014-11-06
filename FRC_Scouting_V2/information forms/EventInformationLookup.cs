@@ -23,14 +23,21 @@
 //SOFTWARE.
 //===============================================================================
 
-namespace FRC_Scouting_V2
+using System;
+using System.Windows.Forms;
+
+namespace FRC_Scouting_V2.Information_Forms
 {
-    //@author xNovax
-    public partial class Team3710Information : GeneralFormTemplate.GeneralFormTemplate
+    public partial class EventInformationLookup : Form
     {
-        public Team3710Information()
+        public EventInformationLookup()
         {
             InitializeComponent();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
