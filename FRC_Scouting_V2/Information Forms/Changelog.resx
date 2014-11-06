@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Version 0.1.1.0
+=========================================================================================
+ - Bug Fixes
+    - Made it so that you cannot put semi-colons in the comments of a scouting entry
+    - Fixed comments being stored in multiple lines when exported to a textfile making import impossible
+
+Version 0.1.0.0
+=========================================================================================
+ - First Stable Release</value>
+  </data>
 </root>
