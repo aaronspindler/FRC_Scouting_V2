@@ -63,8 +63,8 @@ namespace FRC_Scouting_V2
             {
                 if (eventSelector.SelectedIndex == 1)
                 {
-                    var aaRahChaCha = new AerialAssist_RahChaCha();
-                    aaRahChaCha.Show();
+                    var aaRahChaCha2014 = new AerialAssist_RahChaCha();
+                    aaRahChaCha2014.Show();
 
                     if (Settings.Default.minimizeHomeWentEventLoads)
                     {
@@ -138,6 +138,12 @@ namespace FRC_Scouting_V2
         private void showConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void eventInformationLookupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var eil = new EventInformationLookup();
+            eil.Show();
         }
     }
 }

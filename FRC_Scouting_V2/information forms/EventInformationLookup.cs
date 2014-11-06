@@ -28,6 +28,7 @@ using System.Windows.Forms;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
+    //@author xNovax
     public partial class EventInformationLookup : Form
     {
         public EventInformationLookup()
