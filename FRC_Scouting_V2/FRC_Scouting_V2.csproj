@@ -260,7 +260,6 @@
     <Content Include="MySql.Data.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Information Files\To-Do.txt" />
     <Resource Include="Resources\FRC340.png" />
     <Resource Include="Resources\FRC191.png" />
     <Resource Include="Resources\FRC378.png" />
