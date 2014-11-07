@@ -102,29 +102,11 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void databaseIPTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databaseIPTextBox.Text != (""))
-            {
-                Settings.Default.databaseIP = databaseIPTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
         private void databaseNameTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             if (Settings.Default.clickToEmptyTextBoxes)
             {
                 databaseNameTextBox.Text = ("");
-            }
-        }
-
-        private void databaseNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databaseNameTextBox.Text != (""))
-            {
-                Settings.Default.databaseName = databaseNameTextBox.Text;
-                Settings.Default.Save();
             }
         }
 
@@ -136,15 +118,6 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void databasePasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databasePasswordTextBox.Text != (""))
-            {
-                Settings.Default.databasePassword = us.EncryptString(databasePasswordTextBox.Text);
-                Settings.Default.Save();
-            }
-        }
-
         private void databasePortTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             if (Settings.Default.clickToEmptyTextBoxes)
@@ -153,29 +126,11 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void databasePortTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databasePortTextBox.Text != (""))
-            {
-                Settings.Default.databasePort = databasePortTextBox.Text;
-                Settings.Default.Save();
-            }
-        }
-
         private void databaseUsernameTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             if (Settings.Default.clickToEmptyTextBoxes)
             {
                 databaseUsernameTextBox.Text = ("");
-            }
-        }
-
-        private void databaseUsernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (databaseUsernameTextBox.Text != (""))
-            {
-                Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
-                Settings.Default.Save();
             }
         }
 
@@ -272,7 +227,6 @@ namespace FRC_Scouting_V2
             }
 
             teamComparisonEqualValueColourDisplay.BackColor = Settings.Default.teamComparisonEqualValueColour;
-
             usernameTextBox.Text = Settings.Default.username;
             databaseIPTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
@@ -333,13 +287,13 @@ namespace FRC_Scouting_V2
                 {
                     Console.WriteLine("You have successfully connected to your database!");
                     connectionDisplay.BackColor = Color.Chartreuse;
-                    us.ShowInformationMessage("You have successfully connected to your database!");
+                    connectionDisplay.Text = ("Successfully Connected to Database.");
                 }
                 else
                 {
                     Console.WriteLine("You have unsuccessfully connected to your database!");
                     connectionDisplay.BackColor = Color.Red;
-                    us.ShowInformationMessage("You have unsuccessfully connected to your database!");
+                    connectionDisplay.Text = ("Connection to Database Failed.");
                 }
 
                 conn.Close();
@@ -347,10 +301,9 @@ namespace FRC_Scouting_V2
             catch (MySqlException ex)
             {
                 connectionDisplay.BackColor = Color.Red;
+                connectionDisplay.Text = ("Connection to Database Failed.");
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
-                us.ErrorOccured(
-                    "Something went wrong with the connection to your database! Make sure that your connection info is correct.");
             }
         }
 
@@ -433,6 +386,17 @@ namespace FRC_Scouting_V2
                     Console.WriteLine("Error Occured: " + exception.Message);
                 }
             }
+        }
+
+        private void saveDatabaseSettingsButton_Click(object sender, EventArgs e)
+        {
+            Settings.Default.databaseIP = databaseIPTextBox.Text;
+            Settings.Default.databasePort = databasePortTextBox.Text;
+            Settings.Default.databaseName = databaseNameTextBox.Text;
+            Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
+            Settings.Default.databasePassword = us.EncryptString(databasePasswordTextBox.Text);
+            Settings.Default.Save();
+            us.ShowInformationMessage("Successfully Saved Database Settings");
         }
     }
 }
