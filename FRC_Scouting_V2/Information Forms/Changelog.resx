@@ -118,7 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Version 0.1.1.0
+    <value>Version 0.1.2.0
+=========================================================================================
+ - UI Changes
+    - Remade the UI for database settings
+
+Version 0.1.1.0
 =========================================================================================
  - Bug Fixes
     - Made it so that you cannot put semi-colons in the comments of a scouting entry
