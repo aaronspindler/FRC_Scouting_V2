@@ -133,7 +133,7 @@ namespace FRC_Scouting_V2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("donotusepasswordasyourpassword")]
+        [global::System.Configuration.DefaultSettingValueAttribute("hT6+jtAMvfTNjhYK7fhNoOVtrXFiR079bjIX2uKqhK8=")]
         public string databasePassword {
             get {
                 return ((string)(this["databasePassword"]));

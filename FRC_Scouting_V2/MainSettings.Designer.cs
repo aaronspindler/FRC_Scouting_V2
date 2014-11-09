@@ -63,6 +63,12 @@
             this.teamComparisonEqualValueColourDisplay = new System.Windows.Forms.Label();
             this.databaseSettingsTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.connectionTestGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.testConnectionToDatabaseButton = new System.Windows.Forms.Button();
+            this.connectionDisplay = new System.Windows.Forms.Label();
+            this.databaseSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.databaseIPLabel = new System.Windows.Forms.Label();
             this.databaseUsernameLabel = new System.Windows.Forms.Label();
             this.databasePortLabel = new System.Windows.Forms.Label();
@@ -73,15 +79,9 @@
             this.databasePasswordTextBox = new System.Windows.Forms.TextBox();
             this.databaseNameLabel = new System.Windows.Forms.Label();
             this.databaseNameTextBox = new System.Windows.Forms.TextBox();
+            this.saveDatabaseSettingsButton = new System.Windows.Forms.Button();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.databaseSettingsGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.connectionDisplay = new System.Windows.Forms.Label();
-            this.testConnectionToDatabaseButton = new System.Windows.Forms.Button();
-            this.connectionTestGroupBox = new System.Windows.Forms.GroupBox();
-            this.saveDatabaseSettingsButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -89,10 +89,10 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.databaseSettingsTab.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.connectionTestGroupBox.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.databaseSettingsGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.connectionTestGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -532,6 +532,102 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(646, 308);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // connectionTestGroupBox
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.connectionTestGroupBox, 2);
+            this.connectionTestGroupBox.Controls.Add(this.tableLayoutPanel4);
+            this.connectionTestGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.connectionTestGroupBox.Location = new System.Drawing.Point(3, 187);
+            this.connectionTestGroupBox.Name = "connectionTestGroupBox";
+            this.connectionTestGroupBox.Size = new System.Drawing.Size(640, 118);
+            this.connectionTestGroupBox.TabIndex = 1;
+            this.connectionTestGroupBox.TabStop = false;
+            this.connectionTestGroupBox.Text = "Connection Test";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.testConnectionToDatabaseButton, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.connectionDisplay, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(634, 99);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // testConnectionToDatabaseButton
+            // 
+            this.tableLayoutPanel4.SetColumnSpan(this.testConnectionToDatabaseButton, 2);
+            this.testConnectionToDatabaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(3, 3);
+            this.testConnectionToDatabaseButton.Name = "testConnectionToDatabaseButton";
+            this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(628, 24);
+            this.testConnectionToDatabaseButton.TabIndex = 12;
+            this.testConnectionToDatabaseButton.Text = "Test Connection To Database";
+            this.testConnectionToDatabaseButton.UseVisualStyleBackColor = true;
+            this.testConnectionToDatabaseButton.Click += new System.EventHandler(this.testConnectionToDatabaseButton_Click);
+            // 
+            // connectionDisplay
+            // 
+            this.connectionDisplay.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.connectionDisplay, 2);
+            this.connectionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.connectionDisplay.Location = new System.Drawing.Point(3, 30);
+            this.connectionDisplay.Name = "connectionDisplay";
+            this.connectionDisplay.Size = new System.Drawing.Size(628, 25);
+            this.connectionDisplay.TabIndex = 13;
+            this.connectionDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // databaseSettingsGroupBox
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.databaseSettingsGroupBox, 2);
+            this.databaseSettingsGroupBox.Controls.Add(this.tableLayoutPanel5);
+            this.databaseSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.databaseSettingsGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.databaseSettingsGroupBox.Name = "databaseSettingsGroupBox";
+            this.databaseSettingsGroupBox.Size = new System.Drawing.Size(640, 178);
+            this.databaseSettingsGroupBox.TabIndex = 14;
+            this.databaseSettingsGroupBox.TabStop = false;
+            this.databaseSettingsGroupBox.Text = "Database Settings";
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 4;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.Controls.Add(this.databaseIPLabel, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.databasePortLabel, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.saveDatabaseSettingsButton, 1, 5);
+            this.tableLayoutPanel5.Controls.Add(this.databasePasswordTextBox, 2, 4);
+            this.tableLayoutPanel5.Controls.Add(this.databasePasswordLabel, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.databaseUsernameLabel, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.databaseUsernameTextBox, 2, 3);
+            this.tableLayoutPanel5.Controls.Add(this.databaseIPTextBox, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.databasePortTextBox, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.databaseNameLabel, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.databaseNameTextBox, 2, 2);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 7;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(634, 159);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
             // databaseIPLabel
             // 
             this.databaseIPLabel.AutoSize = true;
@@ -653,110 +749,6 @@
             this.databaseNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.databaseNameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.databaseNameTextBox_MouseClick);
             // 
-            // colorDialog
-            // 
-            this.colorDialog.Color = System.Drawing.Color.Blue;
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog1";
-            // 
-            // databaseSettingsGroupBox
-            // 
-            this.tableLayoutPanel3.SetColumnSpan(this.databaseSettingsGroupBox, 2);
-            this.databaseSettingsGroupBox.Controls.Add(this.tableLayoutPanel5);
-            this.databaseSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.databaseSettingsGroupBox.Location = new System.Drawing.Point(3, 3);
-            this.databaseSettingsGroupBox.Name = "databaseSettingsGroupBox";
-            this.databaseSettingsGroupBox.Size = new System.Drawing.Size(640, 178);
-            this.databaseSettingsGroupBox.TabIndex = 14;
-            this.databaseSettingsGroupBox.TabStop = false;
-            this.databaseSettingsGroupBox.Text = "Database Settings";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 4;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Controls.Add(this.databaseIPLabel, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.databasePortLabel, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.saveDatabaseSettingsButton, 1, 5);
-            this.tableLayoutPanel5.Controls.Add(this.databasePasswordTextBox, 2, 4);
-            this.tableLayoutPanel5.Controls.Add(this.databasePasswordLabel, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.databaseUsernameLabel, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.databaseUsernameTextBox, 2, 3);
-            this.tableLayoutPanel5.Controls.Add(this.databaseIPTextBox, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.databasePortTextBox, 2, 1);
-            this.tableLayoutPanel5.Controls.Add(this.databaseNameLabel, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.databaseNameTextBox, 2, 2);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 7;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(634, 159);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.testConnectionToDatabaseButton, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.connectionDisplay, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(634, 99);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // connectionDisplay
-            // 
-            this.connectionDisplay.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.connectionDisplay, 2);
-            this.connectionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.connectionDisplay.Location = new System.Drawing.Point(3, 30);
-            this.connectionDisplay.Name = "connectionDisplay";
-            this.connectionDisplay.Size = new System.Drawing.Size(628, 25);
-            this.connectionDisplay.TabIndex = 13;
-            this.connectionDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // testConnectionToDatabaseButton
-            // 
-            this.tableLayoutPanel4.SetColumnSpan(this.testConnectionToDatabaseButton, 2);
-            this.testConnectionToDatabaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.testConnectionToDatabaseButton.Location = new System.Drawing.Point(3, 3);
-            this.testConnectionToDatabaseButton.Name = "testConnectionToDatabaseButton";
-            this.testConnectionToDatabaseButton.Size = new System.Drawing.Size(628, 24);
-            this.testConnectionToDatabaseButton.TabIndex = 12;
-            this.testConnectionToDatabaseButton.Text = "Test Connection To Database";
-            this.testConnectionToDatabaseButton.UseVisualStyleBackColor = true;
-            this.testConnectionToDatabaseButton.Click += new System.EventHandler(this.testConnectionToDatabaseButton_Click);
-            // 
-            // connectionTestGroupBox
-            // 
-            this.tableLayoutPanel3.SetColumnSpan(this.connectionTestGroupBox, 2);
-            this.connectionTestGroupBox.Controls.Add(this.tableLayoutPanel4);
-            this.connectionTestGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.connectionTestGroupBox.Location = new System.Drawing.Point(3, 187);
-            this.connectionTestGroupBox.Name = "connectionTestGroupBox";
-            this.connectionTestGroupBox.Size = new System.Drawing.Size(640, 118);
-            this.connectionTestGroupBox.TabIndex = 1;
-            this.connectionTestGroupBox.TabStop = false;
-            this.connectionTestGroupBox.Text = "Connection Test";
-            // 
             // saveDatabaseSettingsButton
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.saveDatabaseSettingsButton, 2);
@@ -768,6 +760,14 @@
             this.saveDatabaseSettingsButton.Text = "Save Database Settings";
             this.saveDatabaseSettingsButton.UseVisualStyleBackColor = true;
             this.saveDatabaseSettingsButton.Click += new System.EventHandler(this.saveDatabaseSettingsButton_Click);
+            // 
+            // colorDialog
+            // 
+            this.colorDialog.Color = System.Drawing.Color.Blue;
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
             // 
             // MainSettings
             // 
@@ -792,12 +792,12 @@
             this.tableLayoutPanel2.PerformLayout();
             this.databaseSettingsTab.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.connectionTestGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.databaseSettingsGroupBox.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.connectionTestGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

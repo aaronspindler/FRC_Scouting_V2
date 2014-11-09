@@ -30,7 +30,7 @@
       <Value Profile="(Default)">xNovax</Value>
     </Setting>
     <Setting Name="databasePassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">donotusepasswordasyourpassword</Value>
+      <Value Profile="(Default)">hT6+jtAMvfTNjhYK7fhNoOVtrXFiR079bjIX2uKqhK8=</Value>
     </Setting>
     <Setting Name="currentEventName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>
