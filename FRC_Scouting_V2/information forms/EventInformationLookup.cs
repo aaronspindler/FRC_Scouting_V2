@@ -24,7 +24,10 @@
 //===============================================================================
 
 using System;
+using System.Net;
+using System.Reflection;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
@@ -41,40 +44,68 @@ namespace FRC_Scouting_V2.Information_Forms
             Close();
         }
 
-
-        public class Event
+        private class MyWebClient : WebClient
         {
-            public string key { get; set; }
-            public string website { get; set; }
-            public bool official { get; set; }
-            public string end_date { get; set; }
-            public string name { get; set; }
-            public string short_name { get; set; }
-            public object facebook_eid { get; set; }
-            public object event_district_string { get; set; }
-            public string venue_address { get; set; }
-            public int event_district { get; set; }
-            public string location { get; set; }
-            public string event_code { get; set; }
-            public int year { get; set; }
-            public Webcast[] webcast { get; set; }
-            public Alliance[] alliances { get; set; }
-            public string event_type_string { get; set; }
-            public string start_date { get; set; }
-            public int event_type { get; set; }
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                WebRequest w = base.GetWebRequest(uri);
+                w.Timeout = 3000;
+                return w;
+            }
+
         }
 
-        public class Webcast
-        {
-            public string type { get; set; }
-            public string channel { get; set; }
-        }
 
-        public class Alliance
-        {
-            public object[] declines { get; set; }
-            public string[] picks { get; set; }
-        }
+            public class Event
+            {
+                public string key { get; set; }
+                public string website { get; set; }
+                public bool official { get; set; }
+                public string end_date { get; set; }
+                public string name { get; set; }
+                public string short_name { get; set; }
+                public object facebook_eid { get; set; }
+                public object event_district_string { get; set; }
+                public string venue_address { get; set; }
+                public int event_district { get; set; }
+                public string location { get; set; }
+                public string event_code { get; set; }
+                public int year { get; set; }
+                public Webcast[] webcast { get; set; }
+                public Alliances[] alliances { get; set; }
+                public string event_type_string { get; set; }
+                public string start_date { get; set; }
+                public int event_type { get; set; }
+            }
 
+            public class Webcast
+            {
+                public string type { get; set; }
+                public string channel { get; set; }
+            }
+
+            public class Alliances
+            {
+                public object[] declines { get; set; }
+                public string[] picks { get; set; }
+            }
+
+        private void findEventButton_Click(object sender, EventArgs e)
+        {
+            var wc = new MyWebClient();
+            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            try
+            {
+                string url = ("http://www.thebluealliance.com/api/v2/event/" + Convert.ToString(eventCodeEntryTextBox.Text));
+                string downloadedData = (wc.DownloadString(url));
+                var deserializedData = JsonConvert.DeserializeObject<Event>(downloadedData);
+
+                locationTextBox.Text = deserializedData.venue_address;
+            }
+            catch (Exception webError)
+            {
+                Console.WriteLine("Error Message: " + webError.Message);
+            }
+        }
     }
 }
