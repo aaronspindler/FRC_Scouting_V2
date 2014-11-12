@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
@@ -104,6 +105,8 @@ namespace FRC_Scouting_V2
                 Settings.Default.firstTimeLoad = false;
                 Settings.Default.Save();
             }
+
+            myWebsiteRichTextBox.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         private void licenseInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,6 +147,11 @@ namespace FRC_Scouting_V2
         {
             var eil = new EventInformationLookup();
             eil.Show();
+        }
+
+        private void myWebsiteRichTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
         }
     }
 }

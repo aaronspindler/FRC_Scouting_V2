@@ -48,7 +48,7 @@
             this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ToolStripComboBox();
-            this.websiteDisplay = new System.Windows.Forms.Label();
+            this.myWebsiteRichTextBox = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -67,7 +67,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Controls.Add(this.frcLogoPictureBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.websiteDisplay, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.myWebsiteRichTextBox, 0, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -235,17 +235,17 @@
             this.eventSelector.Size = new System.Drawing.Size(248, 21);
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged_1);
             // 
-            // websiteDisplay
+            // myWebsiteRichTextBox
             // 
-            this.websiteDisplay.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.websiteDisplay, 8);
-            this.websiteDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.websiteDisplay.Location = new System.Drawing.Point(3, 354);
-            this.websiteDisplay.Name = "websiteDisplay";
-            this.websiteDisplay.Size = new System.Drawing.Size(490, 25);
-            this.websiteDisplay.TabIndex = 2;
-            this.websiteDisplay.Text = "Visit my website at https:www.xNovax.net";
-            this.websiteDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel1.SetColumnSpan(this.myWebsiteRichTextBox, 8);
+            this.myWebsiteRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.myWebsiteRichTextBox.Location = new System.Drawing.Point(3, 357);
+            this.myWebsiteRichTextBox.Name = "myWebsiteRichTextBox";
+            this.myWebsiteRichTextBox.ReadOnly = true;
+            this.myWebsiteRichTextBox.Size = new System.Drawing.Size(490, 19);
+            this.myWebsiteRichTextBox.TabIndex = 2;
+            this.myWebsiteRichTextBox.Text = "Visit my website at https:www.xNovax.net";
+            this.myWebsiteRichTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.myWebsiteRichTextBox_LinkClicked);
             // 
             // Home
             // 
@@ -289,8 +289,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripComboBox eventSelector;
         private System.Windows.Forms.ToolStripMenuItem showConsoleWindowToolStripMenuItem;
-        private System.Windows.Forms.Label websiteDisplay;
         private System.Windows.Forms.ToolStripMenuItem eventInformationLookupToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox myWebsiteRichTextBox;
     }
 }
 
