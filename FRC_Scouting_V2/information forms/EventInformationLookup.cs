@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.Drawing;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
@@ -101,6 +102,18 @@ namespace FRC_Scouting_V2.Information_Forms
                 var deserializedData = JsonConvert.DeserializeObject<Event>(downloadedData);
 
                 locationTextBox.Text = deserializedData.venue_address;
+                eventNameLabel.Text = ("Event Name: " + deserializedData.name);
+                eventSpanLabel.Text = string.Format("Event Date(s): {0} to {1}", deserializedData.start_date, deserializedData.end_date);
+                isOfficialLabel.Text = "Is Official?: " + deserializedData.official;
+                if (deserializedData.official == true)
+                {
+                    isOfficialLabel.ForeColor = Color.Green;
+                }
+                else
+                {
+                    isOfficialLabel.ForeColor = Color.Red;
+                }
+                websiteDisplay.Text = deserializedData.website;
             }
             catch (Exception webError)
             {
