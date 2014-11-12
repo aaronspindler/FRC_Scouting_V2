@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Net;
 using System.Reflection;
@@ -119,6 +120,11 @@ namespace FRC_Scouting_V2.Information_Forms
             {
                 Console.WriteLine("Error Message: " + webError.Message);
             }
+        }
+
+        private void websiteDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
         }
     }
 }
