@@ -40,8 +40,8 @@
             this.locationTextBox = new System.Windows.Forms.RichTextBox();
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.eventSpanLabel = new System.Windows.Forms.Label();
-            this.isOfficialLabel = new System.Windows.Forms.Label();
             this.websiteDisplay = new System.Windows.Forms.RichTextBox();
+            this.isOfficialLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.eventLocationGroupBox.SuspendLayout();
@@ -168,7 +168,7 @@
             this.eventLocationGroupBox.Location = new System.Drawing.Point(473, 29);
             this.eventLocationGroupBox.Name = "eventLocationGroupBox";
             this.tableLayoutPanel1.SetRowSpan(this.eventLocationGroupBox, 4);
-            this.eventLocationGroupBox.Size = new System.Drawing.Size(283, 110);
+            this.eventLocationGroupBox.Size = new System.Drawing.Size(283, 106);
             this.eventLocationGroupBox.TabIndex = 4;
             this.eventLocationGroupBox.TabStop = false;
             this.eventLocationGroupBox.Text = "Event Location";
@@ -179,7 +179,7 @@
             this.locationTextBox.Location = new System.Drawing.Point(3, 16);
             this.locationTextBox.Name = "locationTextBox";
             this.locationTextBox.ReadOnly = true;
-            this.locationTextBox.Size = new System.Drawing.Size(277, 91);
+            this.locationTextBox.Size = new System.Drawing.Size(277, 87);
             this.locationTextBox.TabIndex = 1;
             this.locationTextBox.Text = "";
             // 
@@ -191,7 +191,7 @@
             this.eventNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventNameLabel.Location = new System.Drawing.Point(3, 26);
             this.eventNameLabel.Name = "eventNameLabel";
-            this.eventNameLabel.Size = new System.Drawing.Size(464, 29);
+            this.eventNameLabel.Size = new System.Drawing.Size(464, 28);
             this.eventNameLabel.TabIndex = 5;
             this.eventNameLabel.Text = "Event Name: ";
             this.eventNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,35 +202,36 @@
             this.tableLayoutPanel1.SetColumnSpan(this.eventSpanLabel, 10);
             this.eventSpanLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eventSpanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.eventSpanLabel.Location = new System.Drawing.Point(3, 55);
+            this.eventSpanLabel.Location = new System.Drawing.Point(3, 54);
             this.eventSpanLabel.Name = "eventSpanLabel";
-            this.eventSpanLabel.Size = new System.Drawing.Size(464, 29);
+            this.eventSpanLabel.Size = new System.Drawing.Size(464, 28);
             this.eventSpanLabel.TabIndex = 6;
-            this.eventSpanLabel.Text = "Event  Date(s):";
+            this.eventSpanLabel.Text = "Event Date(s):";
             this.eventSpanLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // websiteDisplay
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.websiteDisplay, 6);
+            this.websiteDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.websiteDisplay.Location = new System.Drawing.Point(473, 141);
+            this.websiteDisplay.Name = "websiteDisplay";
+            this.websiteDisplay.ReadOnly = true;
+            this.websiteDisplay.Size = new System.Drawing.Size(283, 22);
+            this.websiteDisplay.TabIndex = 8;
+            this.websiteDisplay.Text = "";
+            this.websiteDisplay.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.websiteDisplay_LinkClicked);
             // 
             // isOfficialLabel
             // 
             this.isOfficialLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.isOfficialLabel, 10);
             this.isOfficialLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.isOfficialLabel.Location = new System.Drawing.Point(3, 84);
+            this.isOfficialLabel.Location = new System.Drawing.Point(3, 82);
             this.isOfficialLabel.Name = "isOfficialLabel";
-            this.isOfficialLabel.Size = new System.Drawing.Size(464, 29);
+            this.isOfficialLabel.Size = new System.Drawing.Size(464, 28);
             this.isOfficialLabel.TabIndex = 7;
+            this.isOfficialLabel.Text = "Is the event official?";
             this.isOfficialLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // websiteDisplay
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.websiteDisplay, 6);
-            this.websiteDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.websiteDisplay.Location = new System.Drawing.Point(473, 145);
-            this.websiteDisplay.Name = "websiteDisplay";
-            this.websiteDisplay.ReadOnly = true;
-            this.websiteDisplay.Size = new System.Drawing.Size(283, 23);
-            this.websiteDisplay.TabIndex = 8;
-            this.websiteDisplay.Text = "";
-            this.websiteDisplay.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.websiteDisplay_LinkClicked);
             // 
             // EventInformationLookup
             // 

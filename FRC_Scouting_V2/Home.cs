@@ -140,7 +140,8 @@ namespace FRC_Scouting_V2
 
         private void showConsoleWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var Console = new ConsoleWindow();
+            Console.Show();
         }
 
         private void eventInformationLookupToolStripMenuItem_Click(object sender, EventArgs e)
