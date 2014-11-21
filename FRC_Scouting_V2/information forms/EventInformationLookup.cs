@@ -106,7 +106,7 @@ namespace FRC_Scouting_V2.Information_Forms
                 eventNameLabel.Text = ("Event Name: " + deserializedData.name);
                 eventSpanLabel.Text = string.Format("Event Date(s): {0} to {1}", deserializedData.start_date, deserializedData.end_date);
                 isOfficialLabel.Text = "Is Official?: " + deserializedData.official;
-                if (deserializedData.official == true)
+                if (deserializedData.official)
                 {
                     isOfficialLabel.ForeColor = Color.Green;
                 }

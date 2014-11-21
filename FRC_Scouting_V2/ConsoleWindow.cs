@@ -25,7 +25,7 @@ namespace FRC_Scouting_V2
 
         private void ConsoleWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Dispose();
+            
         }
     }
 }

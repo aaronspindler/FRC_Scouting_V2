@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.frcLogoPictureBox = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,8 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ToolStripComboBox();
             this.myWebsiteRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.isInternetConnectedLabel = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -68,6 +71,7 @@
             this.tableLayoutPanel1.Controls.Add(this.frcLogoPictureBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.myWebsiteRichTextBox, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.isInternetConnectedLabel, 4, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -237,15 +241,32 @@
             // 
             // myWebsiteRichTextBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.myWebsiteRichTextBox, 8);
+            this.tableLayoutPanel1.SetColumnSpan(this.myWebsiteRichTextBox, 4);
             this.myWebsiteRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myWebsiteRichTextBox.Location = new System.Drawing.Point(3, 357);
             this.myWebsiteRichTextBox.Name = "myWebsiteRichTextBox";
             this.myWebsiteRichTextBox.ReadOnly = true;
-            this.myWebsiteRichTextBox.Size = new System.Drawing.Size(490, 19);
+            this.myWebsiteRichTextBox.Size = new System.Drawing.Size(242, 19);
             this.myWebsiteRichTextBox.TabIndex = 2;
             this.myWebsiteRichTextBox.Text = "Visit my website at https:www.xNovax.net";
             this.myWebsiteRichTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.myWebsiteRichTextBox_LinkClicked);
+            // 
+            // isInternetConnectedLabel
+            // 
+            this.isInternetConnectedLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.isInternetConnectedLabel, 4);
+            this.isInternetConnectedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.isInternetConnectedLabel.Location = new System.Drawing.Point(251, 354);
+            this.isInternetConnectedLabel.Name = "isInternetConnectedLabel";
+            this.isInternetConnectedLabel.Size = new System.Drawing.Size(242, 25);
+            this.isInternetConnectedLabel.TabIndex = 3;
+            this.isInternetConnectedLabel.Text = "Testing your internet connection...";
+            this.isInternetConnectedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 5000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Home
             // 
@@ -259,6 +280,7 @@
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "FRC_Scouting_V2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.Load += new System.EventHandler(this.Home_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -291,6 +313,8 @@
         private System.Windows.Forms.ToolStripMenuItem showConsoleWindowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eventInformationLookupToolStripMenuItem;
         private System.Windows.Forms.RichTextBox myWebsiteRichTextBox;
+        private System.Windows.Forms.Label isInternetConnectedLabel;
+        private System.Windows.Forms.Timer timer;
     }
 }
 

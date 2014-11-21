@@ -36,11 +36,15 @@ using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
 
 //@author xNovax
+using Newtonsoft.Json.Serialization;
 
 namespace FRC_Scouting_V2
 {
     internal class UsefulSnippets
     {
+        public static string IV = "TEST";
+        public static string KEY = "TEST";
+
         public static bool CheckForInternetConnection()
         {
             try

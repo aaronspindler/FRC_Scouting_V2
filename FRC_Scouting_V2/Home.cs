@@ -25,6 +25,9 @@
 
 using System;
 using System.Diagnostics;
+using System.Drawing;
+using System.Net;
+using System.Threading;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
@@ -35,7 +38,29 @@ namespace FRC_Scouting_V2
     public partial class Home : Form
     {
         //Variables
-        private readonly UsefulSnippets us = new UsefulSnippets();
+        private UsefulSnippets us = new UsefulSnippets();
+        Thread internetTestTH = new Thread(checkInternet);
+        public static Boolean internetAvailable;
+
+        static void checkInternet()
+        {
+            while (true)
+            {
+                try
+                {
+                    using (var client = new WebClient())
+                    using (var stream = client.OpenRead("http://www.google.com"))
+                    {
+                        internetAvailable = true;
+                    }
+                }
+                catch
+                {
+                    internetAvailable = false;
+                }
+                Thread.Sleep(5000);
+            }
+        }
 
         public Home()
         {
@@ -88,6 +113,8 @@ namespace FRC_Scouting_V2
 
         private void Home_Load(object sender, EventArgs e)
         {
+            internetTestTH.Start();
+            timer.Start();
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
             eventSelector.Items.Add("Unknown | GTR-East | 2015");
@@ -153,6 +180,28 @@ namespace FRC_Scouting_V2
         private void myWebsiteRichTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             Process.Start(e.LinkText);
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            internetTestTH.Abort();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (internetAvailable == true)
+            {
+                isInternetConnectedLabel.Text = ("Internet Connected");
+                isInternetConnectedLabel.ForeColor = Color.DarkGreen;
+            }
+            else
+            {
+                if (internetAvailable == false)
+                {
+                    isInternetConnectedLabel.Text = ("Internet Not Connected");
+                    isInternetConnectedLabel.ForeColor = Color.Red;
+                }
+            }
         }
     }
 }
