@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsoleWindow));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.consoleDataGridView = new System.Windows.Forms.DataGridView();
@@ -36,6 +38,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consoleDataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -67,10 +70,21 @@
             this.timestampColumn,
             this.messageColumn});
             this.tableLayoutPanel1.SetColumnSpan(this.consoleDataGridView, 2);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.consoleDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.consoleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleDataGridView.Enabled = false;
             this.consoleDataGridView.Location = new System.Drawing.Point(3, 28);
+            this.consoleDataGridView.MultiSelect = false;
             this.consoleDataGridView.Name = "consoleDataGridView";
             this.consoleDataGridView.ReadOnly = true;
+            this.consoleDataGridView.RowHeadersVisible = false;
             this.tableLayoutPanel1.SetRowSpan(this.consoleDataGridView, 2);
             this.consoleDataGridView.Size = new System.Drawing.Size(761, 348);
             this.consoleDataGridView.TabIndex = 0;
@@ -119,6 +133,10 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ConsoleWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,7 +147,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ConsoleWindow";
             this.Text = "Console";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsoleWindow_FormClosing);
+            this.Load += new System.EventHandler(this.ConsoleWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consoleDataGridView)).EndInit();
@@ -148,5 +166,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn timestampColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn messageColumn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
