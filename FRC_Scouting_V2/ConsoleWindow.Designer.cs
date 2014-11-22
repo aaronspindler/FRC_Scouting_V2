@@ -38,9 +38,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToCSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consoleDataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -81,7 +81,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.consoleDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.consoleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consoleDataGridView.Enabled = false;
             this.consoleDataGridView.Location = new System.Drawing.Point(3, 28);
             this.consoleDataGridView.MultiSelect = false;
             this.consoleDataGridView.Name = "consoleDataGridView";
@@ -136,10 +135,6 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -151,9 +146,13 @@
             // exportToCSVToolStripMenuItem
             // 
             this.exportToCSVToolStripMenuItem.Name = "exportToCSVToolStripMenuItem";
-            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.exportToCSVToolStripMenuItem.Text = "Export to CSV";
             this.exportToCSVToolStripMenuItem.Click += new System.EventHandler(this.exportToCSVToolStripMenuItem_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ConsoleWindow
             // 

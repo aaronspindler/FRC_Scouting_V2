@@ -66,12 +66,13 @@ namespace FRC_Scouting_V2.Information_Forms
                 rookieYear = Convert.ToInt32(deserializedData.rookie_year);
                 teamWebsite = Convert.ToString(deserializedData.website);
 
-                Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
-                                  " has been found successfully.");
+                Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +" has been found successfully.");
+                ConsoleWindow.AddItem("The information for team: " + Convert.ToString(teamNumber) + " has been found successfully.");
             }
             catch (Exception webError)
             {
                 Console.WriteLine("Error Message: " + webError.Message);
+                ConsoleWindow.AddItem("Error Message: " + webError.Message);
             }
 
             teamNameDisplay.Text = teamName;

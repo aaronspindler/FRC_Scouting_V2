@@ -417,6 +417,7 @@ namespace FRC_Scouting_V2.UIs
                 if (conn.Ping())
                 {
                     Console.WriteLine("The connection to your database has been made successfully.");
+                    ConsoleWindow.AddItem("The connection to your database has been made successfully.");
                 }
 
                 //Creating the MySQLCommand object
@@ -434,6 +435,7 @@ namespace FRC_Scouting_V2.UIs
                         cmd.CommandText = createTable;
                         cmd.ExecuteNonQuery();
                         Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
+                        ConsoleWindow.AddItem("The table: " + Settings.Default.currentTableName + " has been created.");
                         //end of creating the table
                     }
                     catch (MySqlException createException)
@@ -441,6 +443,9 @@ namespace FRC_Scouting_V2.UIs
                         Console.WriteLine("If there is an error it is most likely because the table is already made.");
                         Console.WriteLine("Errorcode: " + createException.ErrorCode);
                         Console.WriteLine(createException.Message);
+                        ConsoleWindow.AddItem("If there is an error it is most likely because the table is already made.");
+                        ConsoleWindow.AddItem("Errorcode: " + createException.ErrorCode);
+                        ConsoleWindow.AddItem(createException.Message);
                     }
                     tableCreated = true;
                 }
@@ -460,6 +465,7 @@ namespace FRC_Scouting_V2.UIs
                 cmd.ExecuteNonQuery();
 
                 Console.WriteLine("Data has been inserted into the database!");
+                ConsoleWindow.AddItem("Data has been inserted into the database!");
 
                 //Closing the connection
                 conn.Close();
@@ -469,6 +475,8 @@ namespace FRC_Scouting_V2.UIs
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
+                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.AddItem(ex.Message);
             }
             snippets.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " + matchNumber);
 
