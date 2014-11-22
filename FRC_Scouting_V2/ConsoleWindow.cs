@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace FRC_Scouting_V2
 {
@@ -29,6 +31,30 @@ namespace FRC_Scouting_V2
             MessageList.Add(message);
         }
 
+        public static void ExportToCSV()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
+            try
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    var writer = new StreamWriter(sfd.FileName);
+                    writer.WriteLine("Timestamp,Message");
+                    for (int i = 0; i < TimeStampList.Count; i++)
+                    {
+                        writer.WriteLine(TimeStampList[i] + "," + MessageList[i]);
+                    }
+                    writer.Close();
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Error Message: " + exception.Message);
+                AddItem("Error Message: " + exception.Message);
+            }
+        }
+
         private void ConsoleWindow_Load(object sender, EventArgs e)
         {
             foreach (DataGridViewColumn column in consoleDataGridView.Columns)
@@ -51,6 +77,11 @@ namespace FRC_Scouting_V2
             {
                 consoleDataGridView.Rows.Add(TimeStampList[i], MessageList[i]);
             }
+        }
+
+        private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportToCSV();
         }
     }
 }

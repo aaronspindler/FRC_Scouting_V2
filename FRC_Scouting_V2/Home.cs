@@ -27,6 +27,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net;
+using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Information_Forms;
@@ -113,6 +114,7 @@ namespace FRC_Scouting_V2
 
         private void Home_Load(object sender, EventArgs e)
         {
+            ConsoleWindow.AddItem("Started FRC_Scouting_V2_" + Assembly.GetExecutingAssembly().GetName().Version);
             internetTestTH.Start();
             timer.Start();
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
