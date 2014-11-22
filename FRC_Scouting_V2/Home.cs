@@ -195,13 +195,15 @@ namespace FRC_Scouting_V2
             {
                 isInternetConnectedLabel.Text = ("Internet Connected");
                 isInternetConnectedLabel.ForeColor = Color.DarkGreen;
+                ConsoleWindow.AddItem("Internet Connection Available");
             }
             else
             {
                 if (internetAvailable == false)
                 {
                     isInternetConnectedLabel.Text = ("Internet Not Connected");
-                    isInternetConnectedLabel.ForeColor = Color.Red;
+                    isInternetConnectedLabel.ForeColor = Color.Red; 
+                    ConsoleWindow.AddItem("Internet Connection Unavailable");
                 }
             }
         }
