@@ -123,11 +123,14 @@ namespace FRC_Scouting_V2
 
         public void ClearSettings()
         {
-            Settings.Default.Reset();
-            Settings.Default.Save();
-            MessageBox.Show("You have successfully reset all settings to default!",
-                "Settings have been reset to default!",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (MessageBox.Show("Are you sure you want to reset your settings?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+            {
+                Settings.Default.Reset();
+                Settings.Default.Save();
+                MessageBox.Show("You have successfully reset all settings to default!",
+                    "Settings have been reset to default!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         public string DeCryptString(string encryptedText)
