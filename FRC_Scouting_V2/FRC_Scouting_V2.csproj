@@ -62,9 +62,6 @@
     <ManifestCertificateThumbprint>07DD92550F654A0DDCF795F7E186082018A177F5</ManifestCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoUpdater.NET">
-      <HintPath>..\packages\AutoupdaterdotNet.1.3.1\lib\AutoUpdater.NET.dll</HintPath>
-    </Reference>
     <Reference Include="GeneralFormTemplate">
       <HintPath>..\GeneralFormTemplate\bin\Debug\GeneralFormTemplate.dll</HintPath>
     </Reference>
