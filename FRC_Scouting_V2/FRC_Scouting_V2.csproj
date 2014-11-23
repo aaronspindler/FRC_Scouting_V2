@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>ftp://ftp.xnovax.net/public_html/program_releases/frc_scouting_v2/latest/</PublishUrl>
+    <PublishUrl>C:\Users\xNovax\Desktop\FRC_Scouting_v2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -22,12 +22,18 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://www.xnovax.net/public_html/program_releases/frc_scouting_v2/latest/</InstallUrl>
+    <InstallUrl>http://xnovax.net/program_releases/frc_scouting_v2/latest/</InstallUrl>
+    <UpdateUrl>http://xnovax.net/program_releases/frc_scouting_v2/latest/</UpdateUrl>
+    <SupportUrl>http://www.xnovax.net/</SupportUrl>
+    <TargetCulture>en-CA</TargetCulture>
+    <ProductName>FRC_Scouting_V2</ProductName>
+    <PublisherName>xNovax</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
