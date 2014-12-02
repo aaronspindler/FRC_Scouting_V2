@@ -14,7 +14,7 @@ FRC_Scouting_V2
 The ultimate goal of this program is to increase the productivity and ease of use for our exisiting scouting system. This is also a learning experience for me to learn how to input and manipulate data in C#.
 
 
-```
+```csharp
 if (youLikeTheProject == true)
 {
   pressStar = true;
