@@ -55,12 +55,13 @@
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(767, 379);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1534, 729);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // consoleDataGridView
@@ -81,13 +82,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.consoleDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.consoleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consoleDataGridView.Location = new System.Drawing.Point(3, 28);
+            this.consoleDataGridView.Location = new System.Drawing.Point(6, 54);
+            this.consoleDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.consoleDataGridView.MultiSelect = false;
             this.consoleDataGridView.Name = "consoleDataGridView";
             this.consoleDataGridView.ReadOnly = true;
             this.consoleDataGridView.RowHeadersVisible = false;
             this.tableLayoutPanel1.SetRowSpan(this.consoleDataGridView, 2);
-            this.consoleDataGridView.Size = new System.Drawing.Size(761, 348);
+            this.consoleDataGridView.Size = new System.Drawing.Size(1522, 669);
             this.consoleDataGridView.TabIndex = 0;
             // 
             // timestampColumn
@@ -116,7 +118,8 @@
             this.exportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(767, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(1534, 48);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -125,13 +128,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 21);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 40);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -140,29 +143,30 @@
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportToCSVToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(94, 40);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // exportToCSVToolStripMenuItem
             // 
             this.exportToCSVToolStripMenuItem.Name = "exportToCSVToolStripMenuItem";
-            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(236, 36);
             this.exportToCSVToolStripMenuItem.Text = "Export to CSV";
             this.exportToCSVToolStripMenuItem.Click += new System.EventHandler(this.exportToCSVToolStripMenuItem_Click);
             // 
             // timer1
             // 
-            this.timer1.Interval = 15000;
+            this.timer1.Interval = 10000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ConsoleWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 379);
+            this.ClientSize = new System.Drawing.Size(1534, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ConsoleWindow";
             this.Text = "Console";
             this.Load += new System.EventHandler(this.ConsoleWindow_Load);

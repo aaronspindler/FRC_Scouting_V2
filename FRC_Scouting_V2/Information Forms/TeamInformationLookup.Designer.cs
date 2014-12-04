@@ -70,19 +70,19 @@
             this.tableLayoutPanel2.Controls.Add(this.findTeamButton, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.rookieYearDisplay, 3, 6);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 28);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 54);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(494, 184);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(988, 354);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // rookieYearLabel
@@ -90,10 +90,10 @@
             this.rookieYearLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.rookieYearLabel, 3);
             this.rookieYearLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rookieYearLabel.Location = new System.Drawing.Point(2, 156);
-            this.rookieYearLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.rookieYearLabel.Location = new System.Drawing.Point(4, 300);
+            this.rookieYearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rookieYearLabel.Name = "rookieYearLabel";
-            this.rookieYearLabel.Size = new System.Drawing.Size(179, 26);
+            this.rookieYearLabel.Size = new System.Drawing.Size(361, 50);
             this.rookieYearLabel.TabIndex = 2;
             this.rookieYearLabel.Text = "Rookie Year: ";
             this.rookieYearLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,10 +103,10 @@
             this.enterTeamNumberLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.enterTeamNumberLabel, 3);
             this.enterTeamNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.enterTeamNumberLabel.Location = new System.Drawing.Point(2, 0);
-            this.enterTeamNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.enterTeamNumberLabel.Location = new System.Drawing.Point(4, 0);
+            this.enterTeamNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.enterTeamNumberLabel.Name = "enterTeamNumberLabel";
-            this.enterTeamNumberLabel.Size = new System.Drawing.Size(179, 26);
+            this.enterTeamNumberLabel.Size = new System.Drawing.Size(361, 50);
             this.enterTeamNumberLabel.TabIndex = 2;
             this.enterTeamNumberLabel.Text = "Enter a Team Number: ";
             this.enterTeamNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,10 +116,10 @@
             this.teamNameLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamNameLabel, 3);
             this.teamNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNameLabel.Location = new System.Drawing.Point(2, 52);
-            this.teamNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamNameLabel.Location = new System.Drawing.Point(4, 100);
+            this.teamNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamNameLabel.Name = "teamNameLabel";
-            this.teamNameLabel.Size = new System.Drawing.Size(179, 26);
+            this.teamNameLabel.Size = new System.Drawing.Size(361, 50);
             this.teamNameLabel.TabIndex = 3;
             this.teamNameLabel.Text = "Team Name: ";
             this.teamNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,10 +129,10 @@
             this.teamNumberLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamNumberLabel, 3);
             this.teamNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNumberLabel.Location = new System.Drawing.Point(2, 78);
-            this.teamNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamNumberLabel.Location = new System.Drawing.Point(4, 150);
+            this.teamNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamNumberLabel.Name = "teamNumberLabel";
-            this.teamNumberLabel.Size = new System.Drawing.Size(179, 26);
+            this.teamNumberLabel.Size = new System.Drawing.Size(361, 50);
             this.teamNumberLabel.TabIndex = 4;
             this.teamNumberLabel.Text = "Team Number: ";
             this.teamNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,10 +142,10 @@
             this.teamLocationLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamLocationLabel, 3);
             this.teamLocationLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamLocationLabel.Location = new System.Drawing.Point(2, 104);
-            this.teamLocationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamLocationLabel.Location = new System.Drawing.Point(4, 200);
+            this.teamLocationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamLocationLabel.Name = "teamLocationLabel";
-            this.teamLocationLabel.Size = new System.Drawing.Size(179, 26);
+            this.teamLocationLabel.Size = new System.Drawing.Size(361, 50);
             this.teamLocationLabel.TabIndex = 5;
             this.teamLocationLabel.Text = "Team Location: ";
             this.teamLocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,10 +155,10 @@
             this.teamWebsiteLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamWebsiteLabel, 3);
             this.teamWebsiteLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamWebsiteLabel.Location = new System.Drawing.Point(2, 130);
-            this.teamWebsiteLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamWebsiteLabel.Location = new System.Drawing.Point(4, 250);
+            this.teamWebsiteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamWebsiteLabel.Name = "teamWebsiteLabel";
-            this.teamWebsiteLabel.Size = new System.Drawing.Size(179, 26);
+            this.teamWebsiteLabel.Size = new System.Drawing.Size(361, 50);
             this.teamWebsiteLabel.TabIndex = 6;
             this.teamWebsiteLabel.Text = "Team Website: ";
             this.teamWebsiteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,10 +168,10 @@
             this.teamLocationDisplay.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamLocationDisplay, 5);
             this.teamLocationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamLocationDisplay.Location = new System.Drawing.Point(185, 104);
-            this.teamLocationDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamLocationDisplay.Location = new System.Drawing.Point(373, 200);
+            this.teamLocationDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamLocationDisplay.Name = "teamLocationDisplay";
-            this.teamLocationDisplay.Size = new System.Drawing.Size(307, 26);
+            this.teamLocationDisplay.Size = new System.Drawing.Size(611, 50);
             this.teamLocationDisplay.TabIndex = 11;
             this.teamLocationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -180,10 +180,10 @@
             this.teamNumberDisplay.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamNumberDisplay, 5);
             this.teamNumberDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNumberDisplay.Location = new System.Drawing.Point(185, 78);
-            this.teamNumberDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamNumberDisplay.Location = new System.Drawing.Point(373, 150);
+            this.teamNumberDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamNumberDisplay.Name = "teamNumberDisplay";
-            this.teamNumberDisplay.Size = new System.Drawing.Size(307, 26);
+            this.teamNumberDisplay.Size = new System.Drawing.Size(611, 50);
             this.teamNumberDisplay.TabIndex = 10;
             this.teamNumberDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -192,10 +192,10 @@
             this.teamNameDisplay.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamNameDisplay, 5);
             this.teamNameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNameDisplay.Location = new System.Drawing.Point(185, 52);
-            this.teamNameDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamNameDisplay.Location = new System.Drawing.Point(373, 100);
+            this.teamNameDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamNameDisplay.Name = "teamNameDisplay";
-            this.teamNameDisplay.Size = new System.Drawing.Size(307, 26);
+            this.teamNameDisplay.Size = new System.Drawing.Size(611, 50);
             this.teamNameDisplay.TabIndex = 9;
             this.teamNameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -204,10 +204,10 @@
             this.teamWebsiteDisplay.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.teamWebsiteDisplay, 5);
             this.teamWebsiteDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamWebsiteDisplay.Location = new System.Drawing.Point(185, 130);
-            this.teamWebsiteDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.teamWebsiteDisplay.Location = new System.Drawing.Point(373, 250);
+            this.teamWebsiteDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.teamWebsiteDisplay.Name = "teamWebsiteDisplay";
-            this.teamWebsiteDisplay.Size = new System.Drawing.Size(307, 26);
+            this.teamWebsiteDisplay.Size = new System.Drawing.Size(611, 50);
             this.teamWebsiteDisplay.TabIndex = 12;
             this.teamWebsiteDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -215,10 +215,10 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.teamNumberTextBox, 3);
             this.teamNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamNumberTextBox.Location = new System.Drawing.Point(185, 2);
-            this.teamNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.teamNumberTextBox.Location = new System.Drawing.Point(373, 4);
+            this.teamNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.teamNumberTextBox.Name = "teamNumberTextBox";
-            this.teamNumberTextBox.Size = new System.Drawing.Size(179, 20);
+            this.teamNumberTextBox.Size = new System.Drawing.Size(361, 31);
             this.teamNumberTextBox.TabIndex = 15;
             this.teamNumberTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.teamNumberTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.teamNumberTextBox_MouseClick);
@@ -228,10 +228,10 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.findTeamButton, 2);
             this.findTeamButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.findTeamButton.Location = new System.Drawing.Point(368, 2);
-            this.findTeamButton.Margin = new System.Windows.Forms.Padding(2);
+            this.findTeamButton.Location = new System.Drawing.Point(742, 4);
+            this.findTeamButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.findTeamButton.Name = "findTeamButton";
-            this.findTeamButton.Size = new System.Drawing.Size(124, 22);
+            this.findTeamButton.Size = new System.Drawing.Size(242, 42);
             this.findTeamButton.TabIndex = 16;
             this.findTeamButton.Text = "Find Team";
             this.findTeamButton.UseVisualStyleBackColor = true;
@@ -242,19 +242,19 @@
             this.rookieYearDisplay.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.rookieYearDisplay, 5);
             this.rookieYearDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rookieYearDisplay.Location = new System.Drawing.Point(185, 156);
-            this.rookieYearDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.rookieYearDisplay.Location = new System.Drawing.Point(373, 300);
+            this.rookieYearDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rookieYearDisplay.Name = "rookieYearDisplay";
-            this.rookieYearDisplay.Size = new System.Drawing.Size(307, 26);
+            this.rookieYearDisplay.Size = new System.Drawing.Size(611, 50);
             this.rookieYearDisplay.TabIndex = 17;
             this.rookieYearDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TeamInformationLookup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(494, 212);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.ClientSize = new System.Drawing.Size(988, 408);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TeamInformationLookup";
             this.Text = "Team Information Lookup";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
