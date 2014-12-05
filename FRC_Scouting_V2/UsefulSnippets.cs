@@ -23,6 +23,7 @@
 //SOFTWARE.
 //===============================================================================
 
+//@author xNovax
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -34,9 +35,6 @@ using System.Text;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
-
-//@author xNovax
-using Newtonsoft.Json.Serialization;
 
 namespace FRC_Scouting_V2
 {
@@ -50,7 +48,7 @@ namespace FRC_Scouting_V2
             try
             {
                 using (var client = new WebClient())
-                using (var stream = client.OpenRead("http://www.google.com"))
+                using (Stream stream = client.OpenRead("http://www.google.com"))
                 {
                     return true;
                 }
@@ -123,7 +121,9 @@ namespace FRC_Scouting_V2
 
         public void ClearSettings()
         {
-            if (MessageBox.Show("Are you sure you want to reset your settings?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+            if (
+                MessageBox.Show("Are you sure you want to reset your settings?", "Are you sure?",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
             {
                 Settings.Default.Reset();
                 Settings.Default.Save();
@@ -359,6 +359,13 @@ namespace FRC_Scouting_V2
             MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public Boolean SubmitCrashReport()
+        {
+            Boolean sendSuccessful = false;
+
+            return sendSuccessful;
+        }
+
         //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)
         //Update - Mildly updated this method so it is no longer the same as what is on the website above
         private double CalculateStdDev(IEnumerable<double> values)
@@ -375,13 +382,6 @@ namespace FRC_Scouting_V2
             //Put it all together
             ret = Math.Sqrt((sum)/enumerable.Count() - 1);
             return ret;
-        }
-
-        public Boolean SubmitCrashReport()
-        {
-            Boolean sendSuccessful = false;
-
-            return sendSuccessful;
         }
     }
 }
