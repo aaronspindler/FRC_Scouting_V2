@@ -376,5 +376,12 @@ namespace FRC_Scouting_V2
             ret = Math.Sqrt((sum)/enumerable.Count() - 1);
             return ret;
         }
+
+        public Boolean SubmitCrashReport()
+        {
+            Boolean sendSuccessful = false;
+
+            return sendSuccessful;
+        }
     }
 }

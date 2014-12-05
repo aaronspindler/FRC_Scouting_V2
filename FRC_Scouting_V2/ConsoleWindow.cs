@@ -25,6 +25,18 @@ namespace FRC_Scouting_V2
             this.Dispose();
         }
 
+        public string[] getLog()
+        {
+            var logStrings = new string[TimeStampList.Count];
+
+            for (int i = 0; i < TimeStampList.Count; i++)
+            {
+                logStrings[i] = (TimeStampList[i] + " : " + MessageList[i]);
+            }
+
+            return logStrings;
+        }
+
         public static void AddItem(string message)
         {
             itemAdded = true;
