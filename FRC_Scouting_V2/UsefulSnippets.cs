@@ -33,6 +33,7 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using CrashReporterDotNET;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
 
@@ -343,6 +344,16 @@ namespace FRC_Scouting_V2
                 ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.AddItem(ex.Message);
             }
+        }
+
+        private void ReportCrash(Exception exception)
+        {
+            var reportCrash = new ReportCrash
+            {
+                ToEmail = "aaron@xnovax.net"
+            };
+
+            reportCrash.Send(exception);
         }
 
         //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)

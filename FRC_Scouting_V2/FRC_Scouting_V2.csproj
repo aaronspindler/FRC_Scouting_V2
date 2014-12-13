@@ -81,6 +81,9 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrashReporter.NET">
+      <HintPath>..\packages\CrashReporterdotNet.1.5\lib\net20\CrashReporter.NET.dll</HintPath>
+    </Reference>
     <Reference Include="GeneralFormTemplate">
       <HintPath>..\GeneralFormTemplate\bin\Debug\GeneralFormTemplate.dll</HintPath>
     </Reference>
