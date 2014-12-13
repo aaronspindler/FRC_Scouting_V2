@@ -59,66 +59,6 @@ namespace FRC_Scouting_V2
             }
         }
 
-        public void AerialAssistExportTableToCSV()
-        {
-            ShowInformationMessage(
-                "This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
-            var sfd = new SaveFileDialog();
-            sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
-            int numberOfRows = GetNumberOfRowsInATable();
-
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    string mySqlConnectionString = MakeMySqlConnectionString();
-                    var conn = new MySqlConnection(mySqlConnectionString);
-                    MySqlCommand cmd = conn.CreateCommand();
-                    var writer = new StreamWriter(sfd.FileName);
-                    MySqlDataReader reader;
-                    writer.WriteLine(
-                        "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
-                    conn.Open();
-                    for (int i = 0; i < GetNumberOfRowsInATable() + 1; i++)
-                    {
-                        cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}",
-                            Settings.Default.currentTableName, i);
-                        reader = cmd.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            writer.WriteLine(reader["EntryID"] + "," + reader["TeamNumber"] + "," + reader["TeamName"] +
-                                             "," + reader["TeamColour"] + "," + reader["MatchNumber"] + "," +
-                                             reader["AutoHighGoal"] + "," + reader["AutoHighMiss"] + "," +
-                                             reader["AutoLowGoal"] + "," + reader["AutoLowMiss"] + "," +
-                                             reader["ControlledHighGoal"] + "," + reader["ControlledHighMiss"] + "," +
-                                             reader["ControlledLowGoal"] + "," + reader["ControlledLowMiss"] + "," +
-                                             reader["HotGoals"] + "," + reader["HotGoalMiss"] + "," +
-                                             reader["3AssistGoal"] + "," + reader["3AssistMiss"] + "," +
-                                             reader["AutoBallPickup"] + "," + reader["AutoBallPickupMiss"] + "," +
-                                             reader["ControlledBallPickup"] + "," + reader["ControlledBallPickupMiss"] +
-                                             "," + reader["PickupFromHuman"] + "," + reader["MissedPickupFromHuman"] +
-                                             "," + reader["PassToAnotherRobot"] + "," +
-                                             reader["MissedPassToAnotherRobot"] + "," + reader["SuccessfulTruss"] + "," +
-                                             reader["UnsuccessfulTruss"] + "," + reader["StartingX"] + "," +
-                                             reader["StartingY"] + "," + reader["DidRobotDie"] + "," +
-                                             reader["Comments"]);
-                        }
-                        reader.Close();
-                        Console.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
-                    }
-                    Console.WriteLine("Your data has been successfully exported!");
-                    writer.Close();
-                    conn.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    Console.WriteLine("Error Code: " + ex.ErrorCode);
-                    Console.WriteLine(ex.Message);
-                }
-                ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
-            }
-        }
-
         public void ClearSettings()
         {
             if (
@@ -207,6 +147,8 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
+                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.AddItem(ex.Message);
             }
             return numberOfRows;
         }
@@ -364,6 +306,21 @@ namespace FRC_Scouting_V2
             Boolean sendSuccessful = false;
 
             return sendSuccessful;
+        }
+
+        public void InitializeDatabases()
+        {
+            try
+            {
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error Code: " + ex.ErrorCode);
+                Console.WriteLine(ex.Message);
+                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.AddItem(ex.Message);
+            }
         }
 
         //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)

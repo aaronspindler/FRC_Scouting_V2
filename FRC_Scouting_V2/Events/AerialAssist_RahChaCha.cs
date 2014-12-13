@@ -560,7 +560,64 @@ namespace FRC_Scouting_V2
 
         private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            us.AerialAssistExportTableToCSV();
+            us.ShowInformationMessage("This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
+            var sfd = new SaveFileDialog();
+            sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
+            int numberOfRows = us.GetNumberOfRowsInATable();
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string mySqlConnectionString = us.MakeMySqlConnectionString();
+                    var conn = new MySqlConnection(mySqlConnectionString);
+                    MySqlCommand cmd = conn.CreateCommand();
+                    var writer = new StreamWriter(sfd.FileName);
+                    MySqlDataReader reader;
+                    writer.WriteLine(
+                        "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
+                    conn.Open();
+                    for (int i = 0; i < us.GetNumberOfRowsInATable() + 1; i++)
+                    {
+                        cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}",
+                            Settings.Default.currentTableName, i);
+                        reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            writer.WriteLine(reader["EntryID"] + "," + reader["TeamNumber"] + "," + reader["TeamName"] +
+                                             "," + reader["TeamColour"] + "," + reader["MatchNumber"] + "," +
+                                             reader["AutoHighGoal"] + "," + reader["AutoHighMiss"] + "," +
+                                             reader["AutoLowGoal"] + "," + reader["AutoLowMiss"] + "," +
+                                             reader["ControlledHighGoal"] + "," + reader["ControlledHighMiss"] + "," +
+                                             reader["ControlledLowGoal"] + "," + reader["ControlledLowMiss"] + "," +
+                                             reader["HotGoals"] + "," + reader["HotGoalMiss"] + "," +
+                                             reader["3AssistGoal"] + "," + reader["3AssistMiss"] + "," +
+                                             reader["AutoBallPickup"] + "," + reader["AutoBallPickupMiss"] + "," +
+                                             reader["ControlledBallPickup"] + "," + reader["ControlledBallPickupMiss"] +
+                                             "," + reader["PickupFromHuman"] + "," + reader["MissedPickupFromHuman"] +
+                                             "," + reader["PassToAnotherRobot"] + "," +
+                                             reader["MissedPassToAnotherRobot"] + "," + reader["SuccessfulTruss"] + "," +
+                                             reader["UnsuccessfulTruss"] + "," + reader["StartingX"] + "," +
+                                             reader["StartingY"] + "," + reader["DidRobotDie"] + "," +
+                                             reader["Comments"]);
+                        }
+                        reader.Close();
+                        Console.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
+                        ConsoleWindow.AddItem("Row: " + i + " of: " + numberOfRows + " has been exported!");
+                    }
+                    Console.WriteLine("Your data has been successfully exported!");
+                    writer.Close();
+                    conn.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Error Code: " + ex.ErrorCode);
+                    Console.WriteLine(ex.Message);
+                    ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
+                    ConsoleWindow.AddItem(ex.Message);
+                }
+                us.ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
+            }
             us.ShowInformationMessage("Your data has been successfully exported to CSV.");
         }
 
