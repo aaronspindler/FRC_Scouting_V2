@@ -138,8 +138,7 @@ namespace FRC_Scouting_V2.UIs
 
         private void Aerial_Assist_Scouting_UI_Load(object sender, EventArgs e)
         {
-            Settings.Default.currentTableName = ("AerialAssist_RahChaCha");
-            Settings.Default.Save();
+            
         }
 
         private void autoBallPickupButton_Click(object sender, EventArgs e)
