@@ -207,5 +207,10 @@ namespace FRC_Scouting_V2
                 }
             }
         }
+
+        private void initializeDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            us.InitializeDatabases();
+        }
     }
 }
