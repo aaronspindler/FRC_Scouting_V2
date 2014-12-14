@@ -302,13 +302,6 @@ namespace FRC_Scouting_V2
             MessageBox.Show(informationText, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public Boolean SubmitCrashReport()
-        {
-            Boolean sendSuccessful = false;
-
-            return sendSuccessful;
-        }
-
         public void InitializeDatabases()
         {
             try
