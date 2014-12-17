@@ -3,26 +3,25 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace FRC_Scouting_V2
 {
     public partial class ConsoleWindow : Form
     {
+        private static readonly List<string> TimeStampList = new List<string>();
+        private static readonly List<string> MessageList = new List<string>();
+        private static Boolean itemAdded;
+        private UsefulSnippets us = new UsefulSnippets();
+
         public ConsoleWindow()
         {
             InitializeComponent();
         }
 
-        UsefulSnippets us = new UsefulSnippets();
-        static List<string> TimeStampList = new List<string>();
-        static List<string> MessageList = new List<string>();
-        static private Boolean itemAdded = false;
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
-            this.Dispose();
+            Dispose();
         }
 
         public string[] getLog()
@@ -47,7 +46,7 @@ namespace FRC_Scouting_V2
 
         public static void ExportToCSV()
         {
-            SaveFileDialog sfd = new SaveFileDialog();
+            var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
             try
             {
@@ -86,7 +85,7 @@ namespace FRC_Scouting_V2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (itemAdded == true)
+            if (itemAdded)
             {
                 consoleDataGridView.Rows.Clear();
                 for (int i = 0; i < TimeStampList.Count; i++)

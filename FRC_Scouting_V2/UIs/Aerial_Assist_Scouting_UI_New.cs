@@ -44,6 +44,7 @@ namespace FRC_Scouting_V2.UIs
         private int autoHighMiss;
         private int autoLowGoal;
         private int autoLowMiss;
+        private Boolean autoMovement;
         private string comments;
         private int controlledBallPickup;
         private int controlledBallPickupMiss;
@@ -52,6 +53,7 @@ namespace FRC_Scouting_V2.UIs
         private int controlledLowGoal;
         private int controlledLowMiss;
         private int didRobotDie;
+        private int driverRating;
         private int hotGoal;
         private int hotMiss;
         private int matchNumber = 1;
@@ -60,6 +62,7 @@ namespace FRC_Scouting_V2.UIs
         private int pickupFromHuman;
         private int pickupFromHumanMiss;
         private int successfulTruss;
+        private Boolean tableCreated;
         private string teamColour;
         private int totalGoal;
         private int totalGoodControl;
@@ -70,9 +73,6 @@ namespace FRC_Scouting_V2.UIs
         private int unsuccessfulTruss;
         private int xStarting;
         private int yStarting;
-        private int driverRating = 0;
-        private Boolean autoMovement = false;
-        private Boolean tableCreated = false;
 
         public Aerial_Assist_Scouting_UI_New()
         {
@@ -138,7 +138,6 @@ namespace FRC_Scouting_V2.UIs
 
         private void Aerial_Assist_Scouting_UI_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void autoBallPickupButton_Click(object sender, EventArgs e)
@@ -192,7 +191,8 @@ namespace FRC_Scouting_V2.UIs
 
             if (commentsTextBox.Text.Contains(";"))
             {
-                snippets.ErrorOccured("You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
+                snippets.ErrorOccured(
+                    "You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
             }
         }
 
@@ -442,7 +442,8 @@ namespace FRC_Scouting_V2.UIs
                         Console.WriteLine("If there is an error it is most likely because the table is already made.");
                         Console.WriteLine("Errorcode: " + createException.ErrorCode);
                         Console.WriteLine(createException.Message);
-                        ConsoleWindow.AddItem("If there is an error it is most likely because the table is already made.");
+                        ConsoleWindow.AddItem(
+                            "If there is an error it is most likely because the table is already made.");
                         ConsoleWindow.AddItem("Errorcode: " + createException.ErrorCode);
                         ConsoleWindow.AddItem(createException.Message);
                     }
@@ -459,7 +460,8 @@ namespace FRC_Scouting_V2.UIs
                         controlledLowGoal, controlledLowMiss, hotGoal, hotMiss, tripleAssistGoal, tripleAssistMiss,
                         autoBallPickup, autoBallPickupMiss, controlledBallPickup, controlledBallPickupMiss,
                         pickupFromHuman, pickupFromHumanMiss, passToOtherRobot, passToOtherRobotMiss, successfulTruss,
-                        unsuccessfulTruss, xStarting, yStarting, didRobotDie,driverRating, Convert.ToInt16(autoMovement), comments);
+                        unsuccessfulTruss, xStarting, yStarting, didRobotDie, driverRating,
+                        Convert.ToInt16(autoMovement), comments);
                 cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
 
@@ -477,7 +479,8 @@ namespace FRC_Scouting_V2.UIs
                 ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.AddItem(ex.Message);
             }
-            snippets.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " + matchNumber);
+            snippets.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " +
+                                            matchNumber);
 
             //Clearing the values after you submit the data
             autoHighGoal = 0;
@@ -576,7 +579,7 @@ namespace FRC_Scouting_V2.UIs
 
         private void autonomousMovementCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (autonomousMovementCheckBox.Checked == true)
+            if (autonomousMovementCheckBox.Checked)
             {
                 autoMovement = true;
             }
@@ -596,11 +599,11 @@ namespace FRC_Scouting_V2.UIs
             driverRatingButton3.Enabled = true;
             driverRatingButton4.Enabled = true;
 
-            if (driverRatingButton1.Checked == true)
+            if (driverRatingButton1.Checked)
             {
                 driverRating = 1;
                 driverRatingButton2.Enabled = false;
-                driverRatingButton3.Enabled = false; 
+                driverRatingButton3.Enabled = false;
                 driverRatingButton4.Enabled = false;
             }
         }
@@ -612,7 +615,7 @@ namespace FRC_Scouting_V2.UIs
             driverRatingButton3.Enabled = true;
             driverRatingButton4.Enabled = true;
 
-            if (driverRatingButton2.Checked == true)
+            if (driverRatingButton2.Checked)
             {
                 driverRating = 2;
                 driverRatingButton1.Enabled = false;
@@ -628,7 +631,7 @@ namespace FRC_Scouting_V2.UIs
             driverRatingButton3.Enabled = true;
             driverRatingButton4.Enabled = true;
 
-            if (driverRatingButton3.Checked == true)
+            if (driverRatingButton3.Checked)
             {
                 driverRating = 3;
                 driverRatingButton1.Enabled = false;
@@ -644,7 +647,7 @@ namespace FRC_Scouting_V2.UIs
             driverRatingButton3.Enabled = true;
             driverRatingButton4.Enabled = true;
 
-            if (driverRatingButton4.Checked == true)
+            if (driverRatingButton4.Checked)
             {
                 driverRating = 4;
                 driverRatingButton1.Enabled = false;

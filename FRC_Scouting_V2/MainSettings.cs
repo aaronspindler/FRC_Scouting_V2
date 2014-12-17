@@ -357,8 +357,8 @@ namespace FRC_Scouting_V2
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 teamComparisonEqualValueColourDisplay.BackColor = colorDialog.Color;
-                FRC_Scouting_V2.Properties.Settings.Default.teamComparisonEqualValueColour = colorDialog.Color;
-                FRC_Scouting_V2.Properties.Settings.Default.Save();
+                Settings.Default.teamComparisonEqualValueColour = colorDialog.Color;
+                Settings.Default.Save();
             }
         }
 
@@ -383,7 +383,8 @@ namespace FRC_Scouting_V2
                     databasePasswordTextBox.Text = Settings.Default.databasePassword;
                     databaseNameTextBox.Text = Settings.Default.databaseName;
 
-                    us.ShowInformationMessage("You have successfully imported your connection details. Please test the connection");
+                    us.ShowInformationMessage(
+                        "You have successfully imported your connection details. Please test the connection");
                 }
                 catch (Exception exception)
                 {

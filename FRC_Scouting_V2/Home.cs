@@ -26,6 +26,7 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Threading;
@@ -39,18 +40,23 @@ namespace FRC_Scouting_V2
     public partial class Home : Form
     {
         //Variables
-        private UsefulSnippets us = new UsefulSnippets();
-        Thread internetTestTH = new Thread(checkInternet);
         public static Boolean internetAvailable;
+        private readonly Thread internetTestTH = new Thread(checkInternet);
+        private readonly UsefulSnippets us = new UsefulSnippets();
 
-        static void checkInternet()
+        public Home()
+        {
+            InitializeComponent();
+        }
+
+        private static void checkInternet()
         {
             while (true)
             {
                 try
                 {
                     using (var client = new WebClient())
-                    using (var stream = client.OpenRead("http://www.google.com"))
+                    using (Stream stream = client.OpenRead("http://www.google.com"))
                     {
                         internetAvailable = true;
                     }
@@ -61,11 +67,6 @@ namespace FRC_Scouting_V2
                 }
                 Thread.Sleep(5000);
             }
-        }
-
-        public Home()
-        {
-            InitializeComponent();
         }
 
         private void changelogToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,7 +125,10 @@ namespace FRC_Scouting_V2
 
             if (Settings.Default.firstTimeLoad)
             {
-                if (MessageBox.Show("Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?","Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (
+                    MessageBox.Show(
+                        "Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?",
+                        "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     var settingsPage = new MainSettings();
                     settingsPage.Show();
@@ -191,7 +195,7 @@ namespace FRC_Scouting_V2
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (internetAvailable == true)
+            if (internetAvailable)
             {
                 isInternetConnectedLabel.Text = ("Internet Connected");
                 isInternetConnectedLabel.ForeColor = Color.DarkGreen;
@@ -202,7 +206,7 @@ namespace FRC_Scouting_V2
                 if (internetAvailable == false)
                 {
                     isInternetConnectedLabel.Text = ("Internet Not Connected");
-                    isInternetConnectedLabel.ForeColor = Color.Red; 
+                    isInternetConnectedLabel.ForeColor = Color.Red;
                     ConsoleWindow.AddItem("Internet Connection Unavailable");
                 }
             }

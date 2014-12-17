@@ -110,28 +110,28 @@
     <Compile Include="ConsoleWindow.Designer.cs">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\AerialAssist_Northbay.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\AerialAssist_Northbay.Designer.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay.Designer.cs">
       <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\AerialAssist_Northbay_Information.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\AerialAssist_Northbay_Information.Designer.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.Designer.cs">
       <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\AerialAssist_RahChaCha.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\AerialAssist_RahChaCha.Designer.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.Designer.cs">
       <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\AerialAssist_RahChaCha_Information.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\AerialAssist_RahChaCha_Information.Designer.cs">
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.Designer.cs">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </Compile>
     <Compile Include="Information Forms\Changelog.cs">
@@ -205,16 +205,16 @@
     <EmbeddedResource Include="ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Events\AerialAssist_Northbay.resx">
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_Northbay.resx">
       <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Events\AerialAssist_Northbay_Information.resx">
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.resx">
       <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Events\AerialAssist_RahChaCha.resx">
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.resx">
       <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Events\AerialAssist_RahChaCha_Information.resx">
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.resx">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\Changelog.resx">
@@ -353,6 +353,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\2015\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

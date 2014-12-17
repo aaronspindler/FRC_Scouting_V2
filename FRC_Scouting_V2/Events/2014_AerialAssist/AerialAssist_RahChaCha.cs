@@ -84,7 +84,8 @@ namespace FRC_Scouting_V2
             "Finney Robotics", "Warlocks", "Rolling Thunder", "Raider Robotics", "Grapes of Wrath", "DevilTech",
             "Scitobor Robotics", "CougarTech", "XcentricsRobotics", "DM High Voltage", "The Astechz", "Tan[x]",
             "Ranger Robotics", "Eastridge Robotics", "IgKnighters", "Pittsford Panthers", "CyberFalcons", "S.U.I.T.S.",
-            "Retro Rams", "MakeShift", "MaxTech", "W.A.F.F.L.E.S.", "VP Robotics", "Electric Mayhem", "Robot Raiders", "Blinding Light"
+            "Retro Rams", "MakeShift", "MaxTech", "W.A.F.F.L.E.S.", "VP Robotics", "Electric Mayhem", "Robot Raiders",
+            "Blinding Light"
         };
 
         private readonly int[] _teamNumberArray =
@@ -211,8 +212,8 @@ namespace FRC_Scouting_V2
                     {
                         if (teamNumberImport == 0)
                         {
-                            var slot = 0;
-                            var sameTeam = false;
+                            int slot = 0;
+                            bool sameTeam = false;
 
                             while (sameTeam == false)
                             {
@@ -229,19 +230,20 @@ namespace FRC_Scouting_V2
                         try
                         {
                             cmd.CommandText =
-                            String.Format(
-                                "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
-                                Settings.Default.currentTableName, (us.GetNumberOfRowsInATable() + 1),
-                                teamNumberImport, teamNameImport, teamColour,
-                                matchNumber,
-                                autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal,
-                                controlledHighMiss,
-                                controlledLowGoal, controlledLowMiss, hotGoal, missedHotGoal, tripleGoal, tripleMiss,
-                                autoBallPickup, autoBallPickupMiss, controlledPickup, controlledPickupMiss,
-                                pickupFromHuman, missedPickupFromHuman, passToOtherBot, missedPassToOtherBot,
-                                successfulTruss,
-                                unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie), driverRating,
-                                Convert.ToInt32(autoMovement), comments);
+                                String.Format(
+                                    "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
+                                    Settings.Default.currentTableName, (us.GetNumberOfRowsInATable() + 1),
+                                    teamNumberImport, teamNameImport, teamColour,
+                                    matchNumber,
+                                    autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal,
+                                    controlledHighMiss,
+                                    controlledLowGoal, controlledLowMiss, hotGoal, missedHotGoal, tripleGoal, tripleMiss,
+                                    autoBallPickup, autoBallPickupMiss, controlledPickup, controlledPickupMiss,
+                                    pickupFromHuman, missedPickupFromHuman, passToOtherBot, missedPassToOtherBot,
+                                    successfulTruss,
+                                    unsuccessfulTruss, startingX, startingY, Convert.ToInt32(didTheRobotDie),
+                                    driverRating,
+                                    Convert.ToInt32(autoMovement), comments);
                             conn.Open();
                             cmd.ExecuteNonQuery();
                         }
@@ -262,7 +264,8 @@ namespace FRC_Scouting_V2
                         }
                     }
                 }
-                us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported + " File(s) Into the Database.");
+                us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported +
+                                          " File(s) Into the Database.");
             }
         }
 
@@ -327,7 +330,6 @@ namespace FRC_Scouting_V2
                 {
                     Console.WriteLine("Connected to the databse. Collecting and generating statistics now!");
                     ConsoleWindow.AddItem("Connected to the databse. Collecting and generating statistics now!");
-
                 }
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -560,7 +562,8 @@ namespace FRC_Scouting_V2
 
         private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
+            us.ShowInformationMessage(
+                "This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
             int numberOfRows = us.GetNumberOfRowsInATable();
