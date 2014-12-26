@@ -1,7 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
-              GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="clickToEmptyTextBoxes" Type="System.Boolean" Scope="User">
@@ -23,22 +21,22 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="databaseIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.1.1</Value>
+      <Value Profile="(Default)">50.87.144.85</Value>
     </Setting>
     <Setting Name="databasePort" Type="System.String" Scope="User">
       <Value Profile="(Default)">3306</Value>
     </Setting>
     <Setting Name="databaseUsername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">xNovax</Value>
+      <Value Profile="(Default)">xnovax_testers</Value>
     </Setting>
     <Setting Name="databasePassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">hT6+jtAMvfTNjhYK7fhNoOVtrXFiR079bjIX2uKqhK8=</Value>
+      <Value Profile="(Default)">ZxwghMRiBbD5LsxHavQp/A==</Value>
     </Setting>
     <Setting Name="currentEventName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>
     </Setting>
     <Setting Name="databaseName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">FRC_Scouting_Test</Value>
+      <Value Profile="(Default)">xnovax_robotics_test</Value>
     </Setting>
     <Setting Name="currentTableName" Type="System.String" Scope="User">
       <Value Profile="(Default)">FRC_Scouting</Value>
