@@ -322,6 +322,8 @@ namespace FRC_Scouting_V2
                     {
                         cmd.CommandText = commands[i];
                         cmd.ExecuteNonQuery();
+                        Console.WriteLine("Successfully initialized: " + i + " of " + commands.Count);
+                        ConsoleWindow.AddItem("Successfully initialized: " + i + " of " + commands.Count);
                     }
                     catch (MySqlException error)
                     {

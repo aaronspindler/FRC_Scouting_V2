@@ -199,7 +199,7 @@ namespace FRC_Scouting_V2
             {
                 isInternetConnectedLabel.Text = ("Internet Connected");
                 isInternetConnectedLabel.ForeColor = Color.DarkGreen;
-                ConsoleWindow.AddItem("Internet Connection Available");
+                ConsoleWindow.AddItem("Internet Connected");
             }
             else
             {
@@ -207,7 +207,7 @@ namespace FRC_Scouting_V2
                 {
                     isInternetConnectedLabel.Text = ("Internet Not Connected");
                     isInternetConnectedLabel.ForeColor = Color.Red;
-                    ConsoleWindow.AddItem("Internet Connection Unavailable");
+                    ConsoleWindow.AddItem("Internet Disconnected");
                 }
             }
         }
