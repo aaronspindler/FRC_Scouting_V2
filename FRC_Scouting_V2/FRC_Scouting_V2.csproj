@@ -25,12 +25,13 @@
     <InstallUrl>http://xnovax.net/program_releases/frc_scouting_v2/latest/</InstallUrl>
     <UpdateUrl>http://xnovax.net/program_releases/frc_scouting_v2/latest/</UpdateUrl>
     <SupportUrl>http://www.xnovax.net/</SupportUrl>
+    <ErrorReportUrl>http://www.xnovax.net/</ErrorReportUrl>
     <TargetCulture>en-CA</TargetCulture>
     <ProductName>FRC_Scouting_V2</ProductName>
     <PublisherName>xNovax</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
