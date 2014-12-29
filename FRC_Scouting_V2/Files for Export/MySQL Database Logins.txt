@@ -1,5 +1,0 @@
-50.87.144.85
-3306
-xnovax_robotics
-xnovax_testers
-Temp123@

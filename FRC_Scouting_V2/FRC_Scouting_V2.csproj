@@ -307,12 +307,6 @@
     <Resource Include="Resources\FRC_Logo_ICO.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Files for Export\MySQL Database Logins.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files for Export\README.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="FRC_Logo_ICO.ico" />
     <Resource Include="Resources\FRC340.png" />
     <Resource Include="Resources\FRC191.png" />
