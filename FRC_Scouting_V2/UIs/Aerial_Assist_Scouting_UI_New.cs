@@ -334,7 +334,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
                     writer.WriteLine("Team Colour: " + teamColour);
                     writer.WriteLine("Team Name: " + Settings.Default.selectedTeamName);
-                    writer.WriteLine("Team Number: " + Settings.Default.selectedTeamNumber);
+                    writer.WriteLine("Team Number: " + Program.selectedTeamNumber);
                     writer.WriteLine("#########################################################");
                     writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " +
                                      Convert.ToString(autoHighMiss));
@@ -366,7 +366,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("=========================================================");
                     writer.WriteLine("-=============+ Computer Readable Portion +=============-");
                     writer.WriteLine("=========================================================");
-                    writer.WriteLine(Convert.ToString(Settings.Default.selectedTeamNumber));
+                    writer.WriteLine(Convert.ToString(Program.selectedTeamNumber));
                     writer.WriteLine(Convert.ToString(Settings.Default.selectedTeamName));
                     writer.WriteLine(Convert.ToString(teamColour));
                     writer.WriteLine(Convert.ToString(matchNumber));
@@ -430,11 +430,11 @@ namespace FRC_Scouting_V2.UIs
                         string createTable =
                             String.Format(
                                 "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`DriverRating` int(11) NOT NULL DEFAULT '0',`AutoMovement` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
-                                Settings.Default.currentTableName);
+                                Program.selectedEventName);
                         cmd.CommandText = createTable;
                         cmd.ExecuteNonQuery();
-                        Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
-                        ConsoleWindow.AddItem("The table: " + Settings.Default.currentTableName + " has been created.");
+                        Console.WriteLine("The table: " + Program.selectedEventName + " has been created.");
+                        ConsoleWindow.AddItem("The table: " + Program.selectedEventName + " has been created.");
                         //end of creating the table
                     }
                     catch (MySqlException createException)
@@ -454,8 +454,8 @@ namespace FRC_Scouting_V2.UIs
                 string insertDataString =
                     String.Format(
                         "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, DriverRating, AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
-                        Settings.Default.currentTableName, (snippets.GetNumberOfRowsInATable() + 1),
-                        Settings.Default.selectedTeamNumber, Settings.Default.selectedTeamName, teamColour, matchNumber,
+                        Program.selectedEventName, (snippets.GetNumberOfRowsInATable() + 1),
+                        Program.selectedTeamNumber, Settings.Default.selectedTeamName, teamColour, matchNumber,
                         autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal, controlledHighMiss,
                         controlledLowGoal, controlledLowMiss, hotGoal, hotMiss, tripleAssistGoal, tripleAssistMiss,
                         autoBallPickup, autoBallPickupMiss, controlledBallPickup, controlledBallPickupMiss,

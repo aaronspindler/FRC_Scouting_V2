@@ -85,18 +85,6 @@ namespace FRC_Scouting_V2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int selectedTeamNumber {
-            get {
-                return ((int)(this["selectedTeamNumber"]));
-            }
-            set {
-                this["selectedTeamNumber"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("50.87.144.85")]
         public string databaseIP {
             get {
@@ -164,18 +152,6 @@ namespace FRC_Scouting_V2.Properties {
             }
             set {
                 this["databaseName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("FRC_Scouting")]
-        public string currentTableName {
-            get {
-                return ((string)(this["currentTableName"]));
-            }
-            set {
-                this["currentTableName"] = value;
             }
         }
         

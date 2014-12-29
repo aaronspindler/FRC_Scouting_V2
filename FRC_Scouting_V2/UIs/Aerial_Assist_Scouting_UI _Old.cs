@@ -76,7 +76,7 @@ namespace FRC_Scouting_V2
                 string mySqlConnectionString = us.MakeMySqlConnectionString();
                 var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
-                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
+                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Program.selectedEventName, conn))
                 {
                     conn.Open();
                     numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
@@ -472,7 +472,7 @@ namespace FRC_Scouting_V2
                     writer.WriteLine("Did the robot die?: " + didRobotDie);
                     writer.WriteLine("===============================================");
                     writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
-                    writer.WriteLine("Team Number: " + Convert.ToString(Settings.Default.selectedTeamNumber));
+                    writer.WriteLine("Team Number: " + Convert.ToString(Program.selectedTeamNumber));
                     writer.WriteLine("Team Color During Match: " + teamColour);
                     writer.WriteLine("===============================================");
                     writer.WriteLine();
@@ -525,11 +525,11 @@ namespace FRC_Scouting_V2
                     string createTable =
                         String.Format(
                             "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default', `TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8",
-                            Settings.Default.currentTableName);
+                            Program.selectedEventName);
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
-                    Console.WriteLine("The table: " + Settings.Default.currentTableName + " has been created.");
-                    ConsoleWindow.AddItem("The table: " + Settings.Default.currentTableName + " has been created.");
+                    Console.WriteLine("The table: " + Program.selectedEventName + " has been created.");
+                    ConsoleWindow.AddItem("The table: " + Program.selectedEventName + " has been created.");
                     //end of creating the table
                 }
                 catch (MySqlException createException)
@@ -546,9 +546,9 @@ namespace FRC_Scouting_V2
                 string insertDataString =
                     String.Format(
                         "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",
-                        Settings.Default.currentTableName, (CountRowsInDatabase() + 1),
+                        Program.selectedEventName, (CountRowsInDatabase() + 1),
                         Settings.Default.selectedTeamName,
-                        Settings.Default.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
+                        Program.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
                         controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,
                         missedPickupsTally, xStarting, yStarting, comments, didRobotDieINT);
 

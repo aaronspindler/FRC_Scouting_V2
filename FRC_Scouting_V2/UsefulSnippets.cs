@@ -136,7 +136,7 @@ namespace FRC_Scouting_V2
                 string mySqlConnectionString = MakeMySqlConnectionString();
                 var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
-                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Settings.Default.currentTableName, conn))
+                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Program.selectedEventName, conn))
                 {
                     conn.Open();
                     numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
@@ -164,7 +164,7 @@ namespace FRC_Scouting_V2
                 var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}",
-                    Settings.Default.currentTableName, teamNumber);
+                    Program.selectedEventName, teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))
                 {
                     conn.Open();

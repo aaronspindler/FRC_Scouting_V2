@@ -47,7 +47,7 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_Northbay_Load(object sender, EventArgs e)
         {
-            Settings.Default.currentTableName = ("AerialAssist_Northbay");
+            Program.selectedEventName = ("AerialAssist_Northbay");
             Settings.Default.Save();
             //Loading Team Names
             //36 Teams
@@ -332,7 +332,7 @@ namespace FRC_Scouting_V2
             teamLocationDisplay.Text = selectedTeamLocation;
 
             Settings.Default.selectedTeamName = selectedTeamName;
-            Settings.Default.selectedTeamNumber = selectedTeamNumber;
+            Program.selectedTeamNumber = selectedTeamNumber;
             Settings.Default.Save();
         }
     }

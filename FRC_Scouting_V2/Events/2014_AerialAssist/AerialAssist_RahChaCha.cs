@@ -232,7 +232,7 @@ namespace FRC_Scouting_V2
                             cmd.CommandText =
                                 String.Format(
                                     "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
-                                    Settings.Default.currentTableName, (us.GetNumberOfRowsInATable() + 1),
+                                    Program.selectedEventName, (us.GetNumberOfRowsInATable() + 1),
                                     teamNumberImport, teamNameImport, teamColour,
                                     matchNumber,
                                     autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal,
@@ -324,7 +324,7 @@ namespace FRC_Scouting_V2
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
                 cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",
-                    Settings.Default.currentTableName, teamNumberLocal);
+                    Program.selectedEventName, teamNumberLocal);
                 conn.Open();
                 if (conn.Ping())
                 {
@@ -532,7 +532,7 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
         {
-            Settings.Default.currentTableName = (TABLE_NAME);
+            Program.selectedEventName = (TABLE_NAME);
             Settings.Default.Save();
 
             //Setting toolTips
@@ -583,7 +583,7 @@ namespace FRC_Scouting_V2
                     for (int i = 0; i < us.GetNumberOfRowsInATable() + 1; i++)
                     {
                         cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}",
-                            Settings.Default.currentTableName, i);
+                            Program.selectedEventName, i);
                         reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
@@ -1311,7 +1311,7 @@ namespace FRC_Scouting_V2
             teamLogoPictureBox.Image = (Image) teamImage;
 
             Settings.Default.selectedTeamName = _teamNameArray[teamSelector.SelectedIndex];
-            Settings.Default.selectedTeamNumber = _teamNumberArray[teamSelector.SelectedIndex];
+            Program.selectedTeamNumber = _teamNumberArray[teamSelector.SelectedIndex];
             Settings.Default.Save();
 
             matchSummaryEntryID.Clear();
@@ -1356,7 +1356,7 @@ namespace FRC_Scouting_V2
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
                 cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",
-                    Settings.Default.currentTableName, Settings.Default.selectedTeamNumber);
+                    Program.selectedEventName, Program.selectedTeamNumber);
                 conn.Open();
                 reader = cmd.ExecuteReader();
                 teamMatchBox.Items.Clear();

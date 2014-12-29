@@ -17,9 +17,6 @@
     <Setting Name="selectedTeamName" Type="System.String" Scope="User">
       <Value Profile="(Default)">None - Selected</Value>
     </Setting>
-    <Setting Name="selectedTeamNumber" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
     <Setting Name="databaseIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">50.87.144.85</Value>
     </Setting>
@@ -37,9 +34,6 @@
     </Setting>
     <Setting Name="databaseName" Type="System.String" Scope="User">
       <Value Profile="(Default)">xnovax_robotics_test</Value>
-    </Setting>
-    <Setting Name="currentTableName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">FRC_Scouting</Value>
     </Setting>
     <Setting Name="clearConsoleOnToggle" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

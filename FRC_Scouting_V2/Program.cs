@@ -30,6 +30,9 @@ namespace FRC_Scouting_V2
 {
     internal static class Program
     {
+        public static int selectedTeamNumber = 0;
+        public static string selectedEventName = ("");
+
         /// <summary>
         ///     The main entry point for the application.
         /// </summary>
