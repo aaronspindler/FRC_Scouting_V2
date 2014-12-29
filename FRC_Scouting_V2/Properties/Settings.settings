@@ -29,9 +29,6 @@
     <Setting Name="databasePassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">ZxwghMRiBbD5LsxHavQp/A==</Value>
     </Setting>
-    <Setting Name="currentEventName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Default</Value>
-    </Setting>
     <Setting Name="databaseName" Type="System.String" Scope="User">
       <Value Profile="(Default)">xnovax_robotics_test</Value>
     </Setting>
