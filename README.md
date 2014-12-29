@@ -25,6 +25,11 @@ else
   submitIssue = true;
 }
 ```
+### Releases
+For the most up to date release visit
+```
+http://xnovax.net/program_releases/frc_scouting_v2/latest/publish.htm
+```
 
 ### Support for this Project
 
