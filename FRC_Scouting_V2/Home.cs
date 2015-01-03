@@ -31,6 +31,8 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Events._2015_RecycleRush;
+using FRC_Scouting_V2.Events._2015_Recycle_Rush;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
 
@@ -99,6 +101,32 @@ namespace FRC_Scouting_V2
                         WindowState = FormWindowState.Minimized;
                     }
                 }
+                else
+                {
+                    if (eventSelector.SelectedIndex == 2)
+                    {
+                        var rrgtre = new RecycleRush_GTR_East();
+                        rrgtre.Show();
+
+                        if (Settings.Default.minimizeHomeWentEventLoads)
+                        {
+                            WindowState = FormWindowState.Minimized;
+                        }
+                    }
+                    else
+                    {
+                        if (eventSelector.SelectedIndex == 3)
+                        {
+                            var rrnb = new RecycleRush_Northbay();
+                            rrnb.Show();
+
+                            if (Settings.Default.minimizeHomeWentEventLoads)
+                            {
+                                WindowState = FormWindowState.Minimized;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -120,8 +148,8 @@ namespace FRC_Scouting_V2
             timer.Start();
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
-            eventSelector.Items.Add("Unknown | GTR-East | 2015");
-            eventSelector.Items.Add("Unknown | Northbay | 2015");
+            eventSelector.Items.Add("RecycleRush | GTR-East | 2015");
+            eventSelector.Items.Add("RecycleRush | Northbay | 2015");
 
             if (Settings.Default.firstTimeLoad)
             {
