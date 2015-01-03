@@ -231,6 +231,12 @@
     <Compile Include="Information Forms\Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fields\RecycleRush_Field.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fields\RecycleRush_Field.Designer.cs">
+      <DependentUpon>RecycleRush_Field.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\Aerial_Assist_Scouting_UI _Old.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\Team3710Information.resx">
       <DependentUpon>Team3710Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields\RecycleRush_Field.resx">
+      <DependentUpon>RecycleRush_Field.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI _Old.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI _Old.cs</DependentUpon>
