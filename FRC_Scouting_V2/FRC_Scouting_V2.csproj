@@ -152,6 +152,30 @@
     <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.Designer.cs">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East.Designer.cs">
+      <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East_Information.Designer.cs">
+      <DependentUpon>RecycleRush_GTR_East_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay.Designer.cs">
+      <DependentUpon>RecycleRush_Northbay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay_Information.Designer.cs">
+      <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Information Forms\Changelog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +270,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.resx">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_GTR_East.resx">
+      <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_GTR_East_Information.resx">
+      <DependentUpon>RecycleRush_GTR_East_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Northbay.resx">
+      <DependentUpon>RecycleRush_Northbay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Northbay_Information.resx">
+      <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\Changelog.resx">
       <DependentUpon>Changelog.cs</DependentUpon>
@@ -384,9 +420,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\2015\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
