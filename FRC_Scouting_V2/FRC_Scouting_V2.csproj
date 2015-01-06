@@ -249,18 +249,6 @@
     <Compile Include="UIs\Aerial_Assist_Scouting_UI_New.Designer.cs">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Pit_Scouting_Input.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIs\Pit_Scouting_Input.Designer.cs">
-      <DependentUpon>Pit_Scouting_Input.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIs\Pit_Scouting_View.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIs\Pit_Scouting_View.Designer.cs">
-      <DependentUpon>Pit_Scouting_View.cs</DependentUpon>
-    </Compile>
     <Compile Include="UsefulSnippets.cs" />
     <EmbeddedResource Include="ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
@@ -326,12 +314,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI_New.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Pit_Scouting_Input.resx">
-      <DependentUpon>Pit_Scouting_Input.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Pit_Scouting_View.resx">
-      <DependentUpon>Pit_Scouting_View.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
