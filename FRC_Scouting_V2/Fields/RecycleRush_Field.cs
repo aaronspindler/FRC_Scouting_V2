@@ -40,5 +40,25 @@ namespace FRC_Scouting_V2
         {
             InitializeComponent();
         }
+
+        public void PlotInitialLines()
+        {
+            var blackpen = new Pen(Color.Black, 4);
+            var fineBluePen = new Pen(Color.Blue, 2);
+            var fineWhitePen = new Pen(Color.White, 2);
+            var fineRedPen = new Pen(Color.Red, 2);
+            var graphics = fieldPanel.CreateGraphics();
+
+            //Drawing square around the outside edge
+            graphics.DrawRectangle(blackpen, 0, 0, 708, 417);
+            graphics.FillRectangle(Brushes.DarkBlue, 2, 2, 704, 413);
+            graphics.FillRectangle(Brushes.Red, 351, 2, 355, 413);
+            graphics.Dispose();
+        }
+
+        private void fieldPanel_Paint(object sender, PaintEventArgs e)
+        {
+            PlotInitialLines();
+        }
     }
 }

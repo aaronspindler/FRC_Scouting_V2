@@ -244,5 +244,11 @@ namespace FRC_Scouting_V2
         {
             us.InitializeDatabases();
         }
+
+        private void frcLogoPictureBox_Click(object sender, EventArgs e)
+        {
+            var tf = new TestForm();
+            tf.Show();
+        }
     }
 }

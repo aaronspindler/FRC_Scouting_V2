@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.Controls.Add(this.isInternetConnectedLabel, 4, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
@@ -98,13 +98,14 @@
             this.frcLogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.frcLogoPictureBox.Image = global::FRC_Scouting_V2.Properties.Resources.FRC_LOGO;
             this.frcLogoPictureBox.Location = new System.Drawing.Point(6, 54);
-            this.frcLogoPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.frcLogoPictureBox.Margin = new System.Windows.Forms.Padding(6);
             this.frcLogoPictureBox.Name = "frcLogoPictureBox";
             this.tableLayoutPanel1.SetRowSpan(this.frcLogoPictureBox, 7);
             this.frcLogoPictureBox.Size = new System.Drawing.Size(980, 625);
             this.frcLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.frcLogoPictureBox.TabIndex = 1;
             this.frcLogoPictureBox.TabStop = false;
+            this.frcLogoPictureBox.Click += new System.EventHandler(this.frcLogoPictureBox_Click);
             // 
             // menuStrip1
             // 
@@ -270,7 +271,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.myWebsiteRichTextBox, 4);
             this.myWebsiteRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myWebsiteRichTextBox.Location = new System.Drawing.Point(6, 691);
-            this.myWebsiteRichTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.myWebsiteRichTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.myWebsiteRichTextBox.Name = "myWebsiteRichTextBox";
             this.myWebsiteRichTextBox.ReadOnly = true;
             this.myWebsiteRichTextBox.Size = new System.Drawing.Size(484, 32);
@@ -305,7 +306,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "FRC_Scouting_V2";

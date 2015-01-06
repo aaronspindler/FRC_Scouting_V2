@@ -28,12 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.fieldPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // fieldPanel
+            // 
+            this.fieldPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fieldPanel.Location = new System.Drawing.Point(0, 0);
+            this.fieldPanel.Name = "fieldPanel";
+            this.fieldPanel.Size = new System.Drawing.Size(1442, 873);
+            this.fieldPanel.TabIndex = 0;
+            this.fieldPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.fieldPanel_Paint);
             // 
             // RecycleRush_Field
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.fieldPanel);
             this.Name = "RecycleRush_Field";
             this.Size = new System.Drawing.Size(1442, 873);
             this.ResumeLayout(false);
@@ -41,5 +52,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel fieldPanel;
     }
 }
