@@ -40,5 +40,10 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

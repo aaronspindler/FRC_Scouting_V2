@@ -22,23 +22,35 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FRC_Scouting_V2.Events._2015_Recycle_Rush
+namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
     public partial class RecycleRush_GTR_East : Form
     {
         public RecycleRush_GTR_East()
         {
             InitializeComponent();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void RecycleRush_GTR_East_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public List<string> GetTeamList()
+        {
+            var teams = new List<string>();
+
+            return teams;
         }
     }
 }
