@@ -237,12 +237,6 @@
     <Compile Include="Fields\RecycleRush_Field.Designer.cs">
       <DependentUpon>RecycleRush_Field.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestForm.Designer.cs">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIs\Aerial_Assist_Scouting_UI _Old.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -314,9 +308,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fields\RecycleRush_Field.resx">
       <DependentUpon>RecycleRush_Field.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestForm.resx">
-      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI _Old.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI _Old.cs</DependentUpon>
