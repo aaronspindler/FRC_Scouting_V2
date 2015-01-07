@@ -33,6 +33,8 @@
             // 
             // fieldPanel
             // 
+            this.fieldPanel.AutoSize = true;
+            this.fieldPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.fieldPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldPanel.Location = new System.Drawing.Point(0, 0);
             this.fieldPanel.Name = "fieldPanel";
@@ -44,10 +46,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.fieldPanel);
             this.Name = "RecycleRush_Field";
             this.Size = new System.Drawing.Size(1442, 873);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -49,10 +49,9 @@ namespace FRC_Scouting_V2
             var fineRedPen = new Pen(Color.Red, 2);
             var graphics = fieldPanel.CreateGraphics();
 
-            //Drawing square around the outside edge
-            graphics.DrawRectangle(blackpen, 0, 0, 708, 417);
-            graphics.FillRectangle(Brushes.DarkBlue, 2, 2, 704, 413);
-            graphics.FillRectangle(Brushes.Red, 351, 2, 355, 413);
+            graphics.DrawRectangle(blackpen, 0, 0, 708, 352);
+            graphics.FillRectangle(Brushes.DarkBlue, 2, 2, 704, 348);
+            graphics.FillRectangle(Brushes.Red, 351, 2, 355, 348);
             graphics.Dispose();
         }
 
