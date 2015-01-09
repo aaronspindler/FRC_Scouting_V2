@@ -22,15 +22,11 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -44,14 +40,17 @@ namespace FRC_Scouting_V2
         public void PlotInitialLines()
         {
             var blackpen = new Pen(Color.Black, 4);
+            var fineBlackPen = new Pen(Color.Black, 2);
             var fineBluePen = new Pen(Color.Blue, 2);
             var fineWhitePen = new Pen(Color.White, 2);
             var fineRedPen = new Pen(Color.Red, 2);
             var graphics = fieldPanel.CreateGraphics();
 
-            graphics.DrawRectangle(blackpen, 0, 0, 708, 352);
-            graphics.FillRectangle(Brushes.DarkBlue, 2, 2, 704, 348);
-            graphics.FillRectangle(Brushes.Red, 351, 2, 355, 348);
+            //graphics.DrawRectangle(blackpen, 0, 0, 708, 352);
+            //graphics.FillRectangle(Brushes.DarkBlue, 2, 2, 704, 348);
+            //graphics.FillRectangle(Brushes.Red, 351, 2, 355, 348);
+            var fieldImage = Resources.ResourceManager.GetObject("RecycleRushField");
+            graphics.DrawImage((Image) fieldImage, 0,0);
             graphics.Dispose();
         }
 

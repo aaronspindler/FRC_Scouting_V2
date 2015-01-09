@@ -295,4 +295,10 @@
   <data name="FRC378" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FRC378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RecycleRushField" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RecycleRushField.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RecycleRushField_NoItems" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RecycleRushField_NoItems.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
