@@ -82,7 +82,6 @@
             this.fieldPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tableLayoutPanel1.SetColumnSpan(this.fieldPictureBox, 2);
             this.fieldPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fieldPictureBox.Image = global::FRC_Scouting_V2.Properties.Resources.RecycleRush_2015_No_Items;
             this.fieldPictureBox.Location = new System.Drawing.Point(3, 3);
             this.fieldPictureBox.Name = "fieldPictureBox";
             this.fieldPictureBox.Size = new System.Drawing.Size(1036, 515);

@@ -24,6 +24,7 @@
 //===============================================================================
 
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 
@@ -31,25 +32,33 @@ namespace FRC_Scouting_V2
 {
     public partial class RecycleRush_Field : UserControl
     {
+        private Graphics g;
+        private int startingLocX;
+        private int startingLocY;
 
         public RecycleRush_Field()
         {
             InitializeComponent();
             fieldTypeComboBox.SelectedIndex = 0;
+            g = fieldPictureBox.CreateGraphics();
+            PlotInitialImage();
         }
 
         private void fieldTypeComboBox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (fieldTypeComboBox.SelectedIndex == 0)
+            PlotInitialImage();
+        }
+
+        private void PlotInitialImage()
+        {
+            switch (fieldTypeComboBox.SelectedIndex)
             {
-                fieldPictureBox.Image = Resources.RecycleRush_2015_No_Items;
-            }
-            else
-            {
-                if (fieldTypeComboBox.SelectedIndex == 1)
-                {
+                case 0:
+                    fieldPictureBox.Image = Resources.RecycleRush_2015_No_Items;
+                    break;
+                case 1:
                     fieldPictureBox.Image = Resources.RecycleRush_2015_With_Items;
-                }
+                    break;
             }
         }
 
@@ -60,23 +69,13 @@ namespace FRC_Scouting_V2
             var fineWhitePen = new Pen(Color.White, 2);
             var fineRedPen = new Pen(Color.Red, 2);
 
-            var g = fieldPictureBox.CreateGraphics();
-            int xLoc = e.X;
-            int yLoc = e.Y;
-
-            g.DrawRectangle(fineWhitePen, xLoc - 2, yLoc - 2, 4, 4);
+            startingLocX = e.X - 2;
+            startingLocY = e.Y - 2;
         }
 
         private void fieldPictureBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var blackpen = new Pen(Color.Black, 4);
-            var fineBluePen = new Pen(Color.Blue, 2);
-            var fineWhitePen = new Pen(Color.White, 2);
-            var fineRedPen = new Pen(Color.Red, 2);
 
-            var g = fieldPictureBox.CreateGraphics();
-            int xLoc = e.X;
-            int yLoc = e.Y;
         }
     }
 }
