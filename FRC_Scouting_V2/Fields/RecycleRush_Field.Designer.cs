@@ -28,30 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fieldPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.fieldTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.fieldTypeLabel = new System.Windows.Forms.Label();
+            this.fieldPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // fieldPanel
-            // 
-            this.fieldPanel.AutoSize = true;
-            this.fieldPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.SetColumnSpan(this.fieldPanel, 2);
-            this.fieldPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fieldPanel.Location = new System.Drawing.Point(2, 2);
-            this.fieldPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.fieldPanel.Name = "fieldPanel";
-            this.fieldPanel.Size = new System.Drawing.Size(1038, 517);
-            this.fieldPanel.TabIndex = 0;
-            this.fieldPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.fieldPanel_Paint);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.fieldPanel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.fieldTypeComboBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fieldTypeLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fieldPictureBox, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -61,24 +53,66 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1042, 546);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // fieldTypeComboBox
+            // 
+            this.fieldTypeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fieldTypeComboBox.FormattingEnabled = true;
+            this.fieldTypeComboBox.Items.AddRange(new object[] {
+            "Field without Bins / Totes",
+            "Field with Bins / Totes"});
+            this.fieldTypeComboBox.Location = new System.Drawing.Point(524, 524);
+            this.fieldTypeComboBox.Name = "fieldTypeComboBox";
+            this.fieldTypeComboBox.Size = new System.Drawing.Size(515, 21);
+            this.fieldTypeComboBox.TabIndex = 2;
+            this.fieldTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.fieldTypeComboBox_SelectedIndexChanged);
+            // 
+            // fieldTypeLabel
+            // 
+            this.fieldTypeLabel.AutoSize = true;
+            this.fieldTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fieldTypeLabel.Location = new System.Drawing.Point(3, 521);
+            this.fieldTypeLabel.Name = "fieldTypeLabel";
+            this.fieldTypeLabel.Size = new System.Drawing.Size(515, 25);
+            this.fieldTypeLabel.TabIndex = 3;
+            this.fieldTypeLabel.Text = "Field Type: ";
+            this.fieldTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // fieldPictureBox
+            // 
+            this.fieldPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.fieldPictureBox, 2);
+            this.fieldPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fieldPictureBox.Image = global::FRC_Scouting_V2.Properties.Resources.RecycleRush_2015_No_Items;
+            this.fieldPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.fieldPictureBox.Name = "fieldPictureBox";
+            this.fieldPictureBox.Size = new System.Drawing.Size(1036, 515);
+            this.fieldPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fieldPictureBox.TabIndex = 4;
+            this.fieldPictureBox.TabStop = false;
+            this.fieldPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fieldPictureBox_MouseClick);
+            this.fieldPictureBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.fieldPictureBox_MouseDoubleClick);
+            // 
             // RecycleRush_Field
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RecycleRush_Field";
             this.Size = new System.Drawing.Size(1042, 546);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel fieldPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ComboBox fieldTypeComboBox;
+        private System.Windows.Forms.Label fieldTypeLabel;
+        private System.Windows.Forms.PictureBox fieldPictureBox;
     }
 }

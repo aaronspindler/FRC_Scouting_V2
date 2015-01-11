@@ -31,28 +31,36 @@ namespace FRC_Scouting_V2
 {
     public partial class RecycleRush_Field : UserControl
     {
+
         public RecycleRush_Field()
         {
             InitializeComponent();
+            fieldTypeComboBox.SelectedIndex = 0;
         }
 
-        public void PlotInitialLines()
+        private void fieldTypeComboBox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            var blackpen = new Pen(Color.Black, 4);
-            var fineBlackPen = new Pen(Color.Black, 2);
-            var fineBluePen = new Pen(Color.Blue, 2);
-            var fineWhitePen = new Pen(Color.White, 2);
-            var fineRedPen = new Pen(Color.Red, 2);
-            var graphics = fieldPanel.CreateGraphics();
-
-            var fieldImage = Resources.ResourceManager.GetObject("RecycleRushField_NoItems");
-            graphics.DrawImage((Image) fieldImage, 0,0);
-            graphics.Dispose();
+            if (fieldTypeComboBox.SelectedIndex == 0)
+            {
+                fieldPictureBox.Image = Resources.RecycleRush_2015_No_Items;
+            }
+            else
+            {
+                if (fieldTypeComboBox.SelectedIndex == 1)
+                {
+                    fieldPictureBox.Image = Resources.RecycleRush_2015_With_Items;
+                }
+            }
         }
 
-        private void fieldPanel_Paint(object sender, PaintEventArgs e)
+        private void fieldPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            PlotInitialLines();
+
+        }
+
+        private void fieldPictureBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
