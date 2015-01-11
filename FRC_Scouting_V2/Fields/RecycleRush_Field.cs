@@ -55,12 +55,28 @@ namespace FRC_Scouting_V2
 
         private void fieldPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
+            var blackpen = new Pen(Color.Black, 4);
+            var fineBluePen = new Pen(Color.Blue, 2);
+            var fineWhitePen = new Pen(Color.White, 2);
+            var fineRedPen = new Pen(Color.Red, 2);
 
+            var g = fieldPictureBox.CreateGraphics();
+            int xLoc = e.X;
+            int yLoc = e.Y;
+
+            g.DrawRectangle(fineWhitePen, xLoc - 2, yLoc - 2, 4, 4);
         }
 
         private void fieldPictureBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            var blackpen = new Pen(Color.Black, 4);
+            var fineBluePen = new Pen(Color.Blue, 2);
+            var fineWhitePen = new Pen(Color.White, 2);
+            var fineRedPen = new Pen(Color.Red, 2);
 
+            var g = fieldPictureBox.CreateGraphics();
+            int xLoc = e.X;
+            int yLoc = e.Y;
         }
     }
 }
