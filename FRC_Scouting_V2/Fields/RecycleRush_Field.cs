@@ -24,7 +24,6 @@
 //===============================================================================
 
 using System.Drawing;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 
@@ -46,10 +45,7 @@ namespace FRC_Scouting_V2
             var fineRedPen = new Pen(Color.Red, 2);
             var graphics = fieldPanel.CreateGraphics();
 
-            //graphics.DrawRectangle(blackpen, 0, 0, 708, 352);
-            //graphics.FillRectangle(Brushes.DarkBlue, 2, 2, 704, 348);
-            //graphics.FillRectangle(Brushes.Red, 351, 2, 355, 348);
-            var fieldImage = Resources.ResourceManager.GetObject("RecycleRushField");
+            var fieldImage = Resources.ResourceManager.GetObject("RecycleRushField_NoItems");
             graphics.DrawImage((Image) fieldImage, 0,0);
             graphics.Dispose();
         }

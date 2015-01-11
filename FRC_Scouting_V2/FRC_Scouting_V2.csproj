@@ -344,8 +344,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FRC_Logo_ICO.ico" />
-    <None Include="Resources\RecycleRushField_NoItems.png" />
-    <None Include="Resources\RecycleRushField.png" />
     <Resource Include="Resources\FRC340.png" />
     <Resource Include="Resources\FRC191.png" />
     <Resource Include="Resources\FRC378.png" />
