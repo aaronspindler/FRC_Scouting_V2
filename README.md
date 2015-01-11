@@ -8,6 +8,10 @@ FRC_Scouting_V2
   ```
   https://github.com/xNovax/FRC_Scouting
   ```
+### Events Supported
+
+- Aerial Assist
+- Recycle Rush
 
 ### Goal of this Project
 
