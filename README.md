@@ -25,7 +25,7 @@ FRC_Scouting_V2
   - [ ] Pit Scouting for RecycleRush
     - [ ] Data Entry
     - [ ] Data Presentation
-  - [ ] Field Drawing
+  - [x] Field Drawing
     - [ ] Starting Location Recording
     - [ ] End of Autonomous Location Recording
   - [ ] Scouting Interface
