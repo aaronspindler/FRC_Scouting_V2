@@ -8,38 +8,45 @@ FRC_Scouting_V2
   ```
   https://github.com/xNovax/FRC_Scouting
   ```
+### Features
+- Ability to look at individual match performance for a team
+- Ability to look at the overall performance of a team for a single event
+- Integration with TheBlueAlliance.com to pull up team information
+- Retrieval of information from TheBlueAlliance.com to pull event information
+- MySQL for network collaboration or export to text file for future importation
+- And many new features for this years game!
+  
 ### Events Supported
+- [x] Aerial Assist
+- [ ] Recycle Rush (Work in Progress)
 
-- Aerial Assist
-- Recycle Rush
+### To-Do
+- 2015 RecycleRush
+  - [ ] Pit Scouting for RecycleRush
+    - [ ] Data Entry
+    - [ ] Data Presentation
+  - [ ] Field Drawing
+    - [ ] Starting Location Recording
+    - [ ] End of Autonomous Location Recording
+  - [ ] Scouting Interface
+  - [ ] Statistics Analysis
+    - [ ] Calculating OPR 
+  - [ ] Singular Match Breakdown
 
-### Goal of this Project
-
-The ultimate goal of this program is to increase the productivity and ease of use for our exisiting scouting system. This is also a learning experience for me to learn how to input and manipulate data in C#.
-
-
-```csharp
-if (youLikeTheProject == true)
-{
-  pressStar = true;
-  pressWatch = true;
-}
-else
-{
-  submitIssue = true;
-}
-```
 ### Releases
 For the most up to date release visit
 ```
 http://xnovax.net/program_releases/frc_scouting_v2/latest/publish.htm
 ```
 
-### Support for this Project
+### Bug / Issue Reporting
 
-If there is an issue with the program or if you think that there is a feature that should be added create a new issue and I will take a look at it.
+If there is a bug / issue with the software please make a bug at:
+```
+https://github.com/xNovax/FRC_Scouting_V2/issues
+```
 
-### Helping Out
+### Would you like to contribute?
 
 If you would like to help out with the project give me a shout at 
 
