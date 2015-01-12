@@ -14,6 +14,7 @@ FRC_Scouting_V2
 - Integration with TheBlueAlliance.com to pull up team information
 - Retrieval of information from TheBlueAlliance.com to pull event information
 - MySQL for network collaboration or export to text file for future importation
+- Custom console output that works with Linux
 - And many new features for this years game!
   
 ### Events Supported
