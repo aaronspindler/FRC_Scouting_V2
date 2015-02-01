@@ -79,7 +79,6 @@
             // 
             // fieldPictureBox
             // 
-            this.fieldPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tableLayoutPanel1.SetColumnSpan(this.fieldPictureBox, 2);
             this.fieldPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldPictureBox.Location = new System.Drawing.Point(3, 3);
@@ -88,8 +87,8 @@
             this.fieldPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fieldPictureBox.TabIndex = 4;
             this.fieldPictureBox.TabStop = false;
+            this.fieldPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.fieldPictureBox_Paint);
             this.fieldPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fieldPictureBox_MouseClick);
-            this.fieldPictureBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.fieldPictureBox_MouseDoubleClick);
             // 
             // RecycleRush_Field
             // 

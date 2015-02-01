@@ -23,8 +23,8 @@
 //SOFTWARE.
 //===============================================================================
 
+using System;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 
@@ -32,15 +32,13 @@ namespace FRC_Scouting_V2
 {
     public partial class RecycleRush_Field : UserControl
     {
-        private Graphics g;
-        private int startingLocX;
-        private int startingLocY;
+        private int startingLocX = 0;
+        private int startingLocY = 0;
 
         public RecycleRush_Field()
         {
             InitializeComponent();
             fieldTypeComboBox.SelectedIndex = 0;
-            g = fieldPictureBox.CreateGraphics();
             PlotInitialImage();
         }
 
@@ -51,31 +49,45 @@ namespace FRC_Scouting_V2
 
         private void PlotInitialImage()
         {
-            switch (fieldTypeComboBox.SelectedIndex)
+            try
             {
-                case 0:
-                    fieldPictureBox.Image = Resources.RecycleRush_2015_No_Items;
-                    break;
-                case 1:
-                    fieldPictureBox.Image = Resources.RecycleRush_2015_With_Items;
-                    break;
+                switch (fieldTypeComboBox.SelectedIndex)
+                {
+                    case 0:
+                        fieldPictureBox.Image = Resources.RecycleRush_2015_No_Items;
+                        break;
+                    case 1:
+                        fieldPictureBox.Image = Resources.RecycleRush_2015_With_Items;
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
             }
         }
 
         private void fieldPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            var blackpen = new Pen(Color.Black, 4);
-            var fineBluePen = new Pen(Color.Blue, 2);
-            var fineWhitePen = new Pen(Color.White, 2);
-            var fineRedPen = new Pen(Color.Red, 2);
-
             startingLocX = e.X - 2;
             startingLocY = e.Y - 2;
         }
 
-        private void fieldPictureBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void fieldPictureBox_Paint(object sender, PaintEventArgs e)
         {
+            PlotInitialImage();
+            var blackpen = new Pen(Color.Black, 2);
+            e.Graphics.DrawRectangle(blackpen, startingLocX, startingLocY, 8, 8);
+        }
 
+        public int getX()
+        {
+            return startingLocX;
+        }
+
+        public int getY()
+        {
+            return startingLocY;
         }
     }
 }
