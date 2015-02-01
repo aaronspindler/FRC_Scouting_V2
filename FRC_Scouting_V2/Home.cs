@@ -161,8 +161,8 @@ namespace FRC_Scouting_V2
                     var settingsPage = new MainSettings();
                     settingsPage.Show();
                     WindowState = FormWindowState.Minimized;
-                }
 
+                }
                 Settings.Default.firstTimeLoad = false;
                 Settings.Default.Save();
             }
