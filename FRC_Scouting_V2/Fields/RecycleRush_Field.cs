@@ -34,6 +34,11 @@ namespace FRC_Scouting_V2
     {
         private int startingLocX = 0;
         private int startingLocY = 0;
+        private int autoEndX = 0;
+        private int autoEndY = 0;
+
+        private Boolean leftClick = false;
+        private Boolean rightClick = false;
 
         public RecycleRush_Field()
         {
@@ -69,25 +74,65 @@ namespace FRC_Scouting_V2
 
         private void fieldPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            startingLocX = e.X - 2;
-            startingLocY = e.Y - 2;
+            if (e.Button == MouseButtons.Left)
+            {
+                startingLocX = e.X - 2;
+                startingLocY = e.Y - 2;
+                leftClick = true;
+            }
+            else
+            {
+                if (e.Button == MouseButtons.Right)
+                {
+                    autoEndX = e.X - 2;
+                    autoEndY = e.Y - 2;
+                    rightClick = true;
+                }
+            }
         }
 
         private void fieldPictureBox_Paint(object sender, PaintEventArgs e)
         {
             PlotInitialImage();
             var blackpen = new Pen(Color.Black, 2);
-            e.Graphics.DrawRectangle(blackpen, startingLocX, startingLocY, 8, 8);
+            var redPen = new Pen(Color.DarkOrange, 2);
+
+            if (leftClick)
+            {
+                e.Graphics.DrawRectangle(blackpen, startingLocX, startingLocY, 8, 8);
+            }
+
+            if (rightClick)
+            {
+                e.Graphics.DrawRectangle(redPen, autoEndX, autoEndY, 8, 8);
+            }
         }
 
-        public int getX()
+        public int getStartingX()
         {
             return startingLocX;
         }
 
-        public int getY()
+        public int getStartingY()
         {
             return startingLocY;
+        }
+
+        public int getEndX()
+        {
+            return autoEndX;
+        }
+
+        public int getEndY()
+        {
+            return autoEndY;
+        }
+
+        public void resetField()
+        {
+            PlotInitialImage();
+            leftClick = false;
+            rightClick = false;
         }
     }
 }

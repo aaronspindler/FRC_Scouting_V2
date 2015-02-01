@@ -27,6 +27,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -334,6 +335,22 @@ namespace FRC_Scouting_V2
                     }
                 }
                 conn.Close();
+
+                //Team List Databases
+                SQLiteConnection.CreateFile("TeamLists.sqlite");
+                Console.WriteLine("Team List Database Successfully Initialized");
+                ConsoleWindow.AddItem("Team List Database Successfully Initialized");
+                SQLiteConnection m_dbConnection;
+                m_dbConnection = new SQLiteConnection("Data Source=TeamLists.sqlite;Version=3;");
+                m_dbConnection.Open();
+                var sql = "CREATE TABLE RecycleRush_GTR_East_Teams (name VARCHAR(100), teamNumber INT)";
+                var command = new SQLiteCommand(sql, m_dbConnection);
+                command.ExecuteNonQuery();
+                var sql2 = "CREATE TABLE RecycleRush_NorthBay_Teams (name VARCHAR(100), teamNumber INT)";
+                var command2 = new SQLiteCommand(sql2, m_dbConnection);
+                command2.ExecuteNonQuery();
+                m_dbConnection.Close();
+
             }
             catch (MySqlException ex)
             {
