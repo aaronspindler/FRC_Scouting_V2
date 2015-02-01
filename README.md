@@ -27,7 +27,7 @@ FRC_Scouting_V2
     - [ ] Data Entry
     - [ ] Data Presentation
   - [x] Field Drawing
-    - [ ] Starting Location Recording
+    - [x] Starting Location Recording
     - [ ] End of Autonomous Location Recording
   - [ ] Scouting Interface
   - [ ] Statistics Analysis
