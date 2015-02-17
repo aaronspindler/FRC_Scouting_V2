@@ -44,7 +44,6 @@ namespace FRC_Scouting_V2
         {
             InitializeComponent();
             fieldTypeComboBox.SelectedIndex = 0;
-            PlotInitialImage();
         }
 
         private void fieldTypeComboBox_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -133,6 +132,11 @@ namespace FRC_Scouting_V2
             PlotInitialImage();
             leftClick = false;
             rightClick = false;
+        }
+
+        private void RecycleRush_Field_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

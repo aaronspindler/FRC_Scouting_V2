@@ -338,8 +338,6 @@ namespace FRC_Scouting_V2
 
                 //Team List Databases
                 SQLiteConnection.CreateFile("TeamLists.sqlite");
-                Console.WriteLine("Team List Database Successfully Initialized");
-                ConsoleWindow.AddItem("Team List Database Successfully Initialized");
                 SQLiteConnection m_dbConnection;
                 m_dbConnection = new SQLiteConnection("Data Source=TeamLists.sqlite;Version=3;");
                 m_dbConnection.Open();
@@ -350,6 +348,8 @@ namespace FRC_Scouting_V2
                 var command2 = new SQLiteCommand(sql2, m_dbConnection);
                 command2.ExecuteNonQuery();
                 m_dbConnection.Close();
+                Console.WriteLine("Team List Database Successfully Initialized");
+                ConsoleWindow.AddItem("Team List Database Successfully Initialized");
 
             }
             catch (MySqlException ex)

@@ -1310,7 +1310,7 @@ namespace FRC_Scouting_V2
             object teamImage = Resources.ResourceManager.GetObject("FRC" + _teamNumberArray[teamSelector.SelectedIndex]);
             teamLogoPictureBox.Image = (Image) teamImage;
 
-            Settings.Default.selectedTeamName = _teamNameArray[teamSelector.SelectedIndex];
+            Program.selectedTeamName = _teamNameArray[teamSelector.SelectedIndex];
             Program.selectedTeamNumber = _teamNumberArray[teamSelector.SelectedIndex];
             Settings.Default.Save();
 

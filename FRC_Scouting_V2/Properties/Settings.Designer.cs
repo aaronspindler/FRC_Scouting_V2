@@ -73,18 +73,6 @@ namespace FRC_Scouting_V2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("None - Selected")]
-        public string selectedTeamName {
-            get {
-                return ((string)(this["selectedTeamName"]));
-            }
-            set {
-                this["selectedTeamName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("50.87.144.85")]
         public string databaseIP {
             get {

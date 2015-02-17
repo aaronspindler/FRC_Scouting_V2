@@ -50,7 +50,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1042, 546);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(772, 407);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // fieldTypeComboBox
@@ -60,9 +60,9 @@
             this.fieldTypeComboBox.Items.AddRange(new object[] {
             "Field without Bins / Totes",
             "Field with Bins / Totes"});
-            this.fieldTypeComboBox.Location = new System.Drawing.Point(524, 524);
+            this.fieldTypeComboBox.Location = new System.Drawing.Point(389, 385);
             this.fieldTypeComboBox.Name = "fieldTypeComboBox";
-            this.fieldTypeComboBox.Size = new System.Drawing.Size(515, 21);
+            this.fieldTypeComboBox.Size = new System.Drawing.Size(380, 21);
             this.fieldTypeComboBox.TabIndex = 2;
             this.fieldTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.fieldTypeComboBox_SelectedIndexChanged);
             // 
@@ -70,20 +70,21 @@
             // 
             this.fieldTypeLabel.AutoSize = true;
             this.fieldTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fieldTypeLabel.Location = new System.Drawing.Point(3, 521);
+            this.fieldTypeLabel.Location = new System.Drawing.Point(3, 382);
             this.fieldTypeLabel.Name = "fieldTypeLabel";
-            this.fieldTypeLabel.Size = new System.Drawing.Size(515, 25);
+            this.fieldTypeLabel.Size = new System.Drawing.Size(380, 25);
             this.fieldTypeLabel.TabIndex = 3;
             this.fieldTypeLabel.Text = "Field Type: ";
             this.fieldTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // fieldPictureBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.fieldPictureBox, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.fieldPictureBox, 10);
             this.fieldPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fieldPictureBox.Image = global::FRC_Scouting_V2.Properties.Resources.RecycleRush_2015_With_Items;
             this.fieldPictureBox.Location = new System.Drawing.Point(3, 3);
             this.fieldPictureBox.Name = "fieldPictureBox";
-            this.fieldPictureBox.Size = new System.Drawing.Size(1036, 515);
+            this.fieldPictureBox.Size = new System.Drawing.Size(766, 376);
             this.fieldPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fieldPictureBox.TabIndex = 4;
             this.fieldPictureBox.TabStop = false;
@@ -98,7 +99,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RecycleRush_Field";
-            this.Size = new System.Drawing.Size(1042, 546);
+            this.Size = new System.Drawing.Size(772, 407);
+            this.Load += new System.EventHandler(this.RecycleRush_Field_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fieldPictureBox)).EndInit();

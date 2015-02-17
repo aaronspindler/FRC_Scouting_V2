@@ -333,7 +333,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
                     writer.WriteLine("Team Colour: " + teamColour);
-                    writer.WriteLine("Team Name: " + Settings.Default.selectedTeamName);
+                    writer.WriteLine("Team Name: " + Program.selectedTeamName);
                     writer.WriteLine("Team Number: " + Program.selectedTeamNumber);
                     writer.WriteLine("#########################################################");
                     writer.WriteLine("Auto High: Goal: " + Convert.ToString(autoHighGoal) + " Miss: " +
@@ -367,7 +367,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("-=============+ Computer Readable Portion +=============-");
                     writer.WriteLine("=========================================================");
                     writer.WriteLine(Convert.ToString(Program.selectedTeamNumber));
-                    writer.WriteLine(Convert.ToString(Settings.Default.selectedTeamName));
+                    writer.WriteLine(Convert.ToString(Program.selectedTeamName));
                     writer.WriteLine(Convert.ToString(teamColour));
                     writer.WriteLine(Convert.ToString(matchNumber));
                     writer.WriteLine(Convert.ToString(autoHighGoal));
@@ -455,7 +455,7 @@ namespace FRC_Scouting_V2.UIs
                     String.Format(
                         "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, DriverRating, AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
                         Program.selectedEventName, (snippets.GetNumberOfRowsInATable() + 1),
-                        Program.selectedTeamNumber, Settings.Default.selectedTeamName, teamColour, matchNumber,
+                        Program.selectedTeamNumber, Program.selectedTeamName, teamColour, matchNumber,
                         autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal, controlledHighMiss,
                         controlledLowGoal, controlledLowMiss, hotGoal, hotMiss, tripleAssistGoal, tripleAssistMiss,
                         autoBallPickup, autoBallPickupMiss, controlledBallPickup, controlledBallPickupMiss,

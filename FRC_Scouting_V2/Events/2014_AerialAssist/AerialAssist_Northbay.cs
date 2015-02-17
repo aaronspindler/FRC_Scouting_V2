@@ -331,9 +331,8 @@ namespace FRC_Scouting_V2
             teamNumberDisplay.Text = Convert.ToString(selectedTeamNumber);
             teamLocationDisplay.Text = selectedTeamLocation;
 
-            Settings.Default.selectedTeamName = selectedTeamName;
+            Program.selectedTeamName = selectedTeamName;
             Program.selectedTeamNumber = selectedTeamNumber;
-            Settings.Default.Save();
         }
     }
 }

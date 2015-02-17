@@ -471,7 +471,7 @@ namespace FRC_Scouting_V2
                     writer.WriteLine("FRC_Scouting_V2 Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + didRobotDie);
                     writer.WriteLine("===============================================");
-                    writer.WriteLine("Team Name: " + Convert.ToString(Settings.Default.selectedTeamName));
+                    writer.WriteLine("Team Name: " + Convert.ToString(Program.selectedTeamName));
                     writer.WriteLine("Team Number: " + Convert.ToString(Program.selectedTeamNumber));
                     writer.WriteLine("Team Color During Match: " + teamColour);
                     writer.WriteLine("===============================================");
@@ -547,7 +547,7 @@ namespace FRC_Scouting_V2
                     String.Format(
                         "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",
                         Program.selectedEventName, (CountRowsInDatabase() + 1),
-                        Settings.Default.selectedTeamName,
+                        Program.selectedTeamName,
                         Program.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
                         controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,
                         missedPickupsTally, xStarting, yStarting, comments, didRobotDieINT);

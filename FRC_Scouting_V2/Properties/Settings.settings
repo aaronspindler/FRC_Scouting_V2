@@ -14,9 +14,6 @@
     <Setting Name="firstTimeLoad" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="selectedTeamName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">None - Selected</Value>
-    </Setting>
     <Setting Name="databaseIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">50.87.144.85</Value>
     </Setting>
