@@ -32,7 +32,7 @@ FRC_Scouting_V2
         - [ ] Backend
     - [ ] Team Object
   - [ ] Field Object
-    - [ ] Drawing the field on UI
+    - [x] Drawing the field on UI
     - [ ] Starting Location Recording
     - [ ] End of Autonomous Location Recording
     - [ ] Stack Locations
