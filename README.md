@@ -23,16 +23,38 @@ FRC_Scouting_V2
 
 ### To-Do
 - 2015 RecycleRush
-  - [ ] Pit Scouting for RecycleRush
-    - [ ] Data Entry
-    - [ ] Data Presentation
-  - [x] Field Drawing
-    - [x] Starting Location Recording
+  - [ ] Pit Scouting
+    - [ ] Data Editor
+        - [ ] UI
+        - [ ] Backend
+    - [ ] Data Viewer
+        - [ ] UI
+        - [ ] Backend
+    - [ ] Team Object
+  - [ ] Field Object
+    - [ ] Drawing the field on UI
+    - [ ] Starting Location Recording
     - [ ] End of Autonomous Location Recording
-  - [ ] Scouting Interface
-  - [ ] Statistics Analysis
-    - [ ] Calculating OPR 
-  - [ ] Singular Match Breakdown
+    - [ ] Stack Locations
+  - [ ] Scouting
+    - [ ] UI
+    - [ ] Backend
+  - [ ] Statistics
+    - [ ] Calculating OPR
+  - [ ] Team Comparison
+    - [x] UI
+    - [ ] Backend
+  - [ ] Match Breakdown
+    - [ ] UI
+    - [ ] Backend
+  - [ ] Team Information
+    - [ ] UI
+    - [ ] Backend
+  - [ ] Undo Button
+  - [ ] Team List
+    - [ ] Addition of Team
+    - [ ] Removal of Team
+  - [ ] Overhall Settings
 
 ### Releases
 For the most up to date release visit
