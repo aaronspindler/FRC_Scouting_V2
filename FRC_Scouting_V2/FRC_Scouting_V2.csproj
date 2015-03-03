@@ -237,8 +237,8 @@
     <Compile Include="Fields\RecycleRush_Field.Designer.cs">
       <DependentUpon>RecycleRush_Field.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objects\RecycleRush_Pit_Scouting_Team.cs" />
-    <Compile Include="Objects\RecycleRush_Scout_Match.cs" />
+    <Compile Include="Models\RecycleRush_Pit_Scouting_Team.cs" />
+    <Compile Include="Models\RecycleRush_Scout_Match.cs" />
     <Compile Include="UIs\Aerial_Assist_Scouting_UI _Old.cs">
       <SubType>UserControl</SubType>
     </Compile>
