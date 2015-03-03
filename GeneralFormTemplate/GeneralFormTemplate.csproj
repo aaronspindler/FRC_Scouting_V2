@@ -35,9 +35,13 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.5.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +66,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
