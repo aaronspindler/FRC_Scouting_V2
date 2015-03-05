@@ -6,6 +6,9 @@ namespace FRC_Scouting_V2
     {
         //General Information
         public string Author { get; set; }
+        public DateTime TimeCreated { get; set; }
+        public string UniqueID { get; set; }
+
         public int Team_Number { get; set; }
         public string Team_Name { get; set; }
         public string Time_Created { get; set; }
@@ -19,7 +22,6 @@ namespace FRC_Scouting_V2
         public int Auto_Starting_Y { get; set; }
         public int Auto_Yellow_Stacked_Totes { get; set; }
         public int Auto_Yellow_Moved_Totes { get; set; }
-        public int Auto_Grey_Acquired_Totes { get; set; }
         public int Auto_Acquired_Step_Bins { get; set; }
         public int Auto_Moved_Bins { get; set; }
         public int Auto_Fouls { get; set; }
@@ -35,6 +37,7 @@ namespace FRC_Scouting_V2
         public Boolean Tele_Picked_Up_Center_Step_Bins { get; set; }
         public Boolean Tele_Pushed_Litter { get; set; }
         public Boolean Tele_Placed_In_Container_Litter { get; set; }
+        public Boolean Human_Throwing_Noodles { get; set; }
         public int Tele_Fouls { get; set; }
         public Boolean Tele_Knocked_Over_Stacks { get; set; }
                // X, Y, Height

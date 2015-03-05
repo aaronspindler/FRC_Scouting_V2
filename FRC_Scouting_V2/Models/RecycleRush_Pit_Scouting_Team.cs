@@ -6,7 +6,9 @@ namespace FRC_Scouting_V2
     {
         public string Author { get; set; }
         public string Last_Editor { get; set; }
-        public string Time_Created { get; set; }
+        public DateTime Time_Created { get; set; }
+        public string UniqueID { get; set; }
+
         public int Team_Number { get; set; }
         public string Team_Name { get; set; }
         public string Team_Website { get; set; }
@@ -40,10 +42,10 @@ namespace FRC_Scouting_V2
         public string Comments { get; set; }
 
         public byte[] Front_Picture { get; set; }
-        public byte[] Back_Picture { get; set; }
-        public byte[] Left_Picture { get; set; }
-        public byte[] Right_Picture { get; set; }
-        public byte[] Top_Picture { get; set; }
+        public byte[] Left_Side_Picture { get; set; }
+        public byte[] Left_Isometric_Picture { get; set; }
+        public byte[] Right_Side_Picture { get; set; }
+        public byte[] Right_Isometic_Picture { get; set; }
         public byte[] Other_Picture { get; set; }
     }
 }
