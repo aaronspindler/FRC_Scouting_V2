@@ -48,5 +48,6 @@ namespace FRC_Scouting_V2
 
         //Other
         public int Final_Score { get; set; }
+        public int Driver_Rating { get; set; }
     }
 }

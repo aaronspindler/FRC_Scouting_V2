@@ -17,9 +17,6 @@ namespace FRC_Scouting_V2
         public double Robot_Height { get; set; }
 
         public string Drive_Train { get; set; }
-        public Boolean Swerve_Drive { get; set; }
-        public Boolean Omni_Wheels { get; set; }
-        public Boolean Mechanam_Wheels { get; set; }
 
         public Boolean Can_Move_Totes { get; set; }
         public Boolean Can_Move_Bins { get; set; }
@@ -45,7 +42,7 @@ namespace FRC_Scouting_V2
         public byte[] Left_Side_Picture { get; set; }
         public byte[] Left_Isometric_Picture { get; set; }
         public byte[] Right_Side_Picture { get; set; }
-        public byte[] Right_Isometic_Picture { get; set; }
+        public byte[] Right_Isometric_Picture { get; set; }
         public byte[] Other_Picture { get; set; }
     }
 }
