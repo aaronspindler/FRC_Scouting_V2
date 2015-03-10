@@ -61,7 +61,6 @@ namespace FRC_Scouting_V2
                 return false;
             }
         }
-
         public void ClearSettings()
         {
             if (

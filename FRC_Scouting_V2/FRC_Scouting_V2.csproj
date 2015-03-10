@@ -216,6 +216,7 @@
     <Compile Include="MainSettings.Designer.cs">
       <DependentUpon>MainSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Recycle_Rush_Stack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Information Forms\ProgramInformation.cs">
       <SubType>Form</SubType>
