@@ -216,7 +216,7 @@
     <Compile Include="MainSettings.Designer.cs">
       <DependentUpon>MainSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Recycle_Rush_Stack.cs" />
+    <Compile Include="Models\RecycleRush_Stack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Information Forms\ProgramInformation.cs">
       <SubType>Form</SubType>
@@ -235,12 +235,6 @@
     </Compile>
     <Compile Include="Information Forms\Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Fields\RecycleRush_Field.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Fields\RecycleRush_Field.Designer.cs">
-      <DependentUpon>RecycleRush_Field.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\RecycleRush_Pit_Scouting_Team.cs" />
     <Compile Include="Models\RecycleRush_Scout_Match.cs" />
@@ -312,9 +306,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\Team3710Information.resx">
       <DependentUpon>Team3710Information.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fields\RecycleRush_Field.resx">
-      <DependentUpon>RecycleRush_Field.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI _Old.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI _Old.cs</DependentUpon>

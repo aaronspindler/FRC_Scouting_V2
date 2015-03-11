@@ -47,10 +47,6 @@
             this.scoutingFieldTypeLabel = new System.Windows.Forms.Label();
             this.scoutingFieldTypeSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.scoutingDriverRatingLabel = new System.Windows.Forms.Label();
-            this.scoutingDriverRatingButton1 = new System.Windows.Forms.Button();
-            this.scoutingDriverRatingButton2 = new System.Windows.Forms.Button();
-            this.scoutingDriverRatingButton3 = new System.Windows.Forms.Button();
-            this.scoutingDriverRatingButton4 = new System.Windows.Forms.Button();
             this.scoutingCommentsRichTextBox = new System.Windows.Forms.RichTextBox();
             this.scoutingMatchNumberLabel = new System.Windows.Forms.Label();
             this.scoutingDidTheRobotDieCheckBox = new System.Windows.Forms.CheckBox();
@@ -96,17 +92,27 @@
             this.scoutingBinPickupUpsideDownCheckBox = new System.Windows.Forms.CheckBox();
             this.scoutingBinPickupSidewaysCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.scoutingPushedLitterToLandfill = new System.Windows.Forms.CheckBox();
             this.scoutingHumanStationLabel = new System.Windows.Forms.Label();
             this.scoutingHumanStationLoadTotesCheckBox = new System.Windows.Forms.CheckBox();
             this.scoutingHumanStationStackTotesCheckBox = new System.Windows.Forms.CheckBox();
             this.scoutingHumanStationInsertLitterCheckBox = new System.Windows.Forms.CheckBox();
             this.scoutingHumanThrowingLitterLabel = new System.Windows.Forms.Label();
             this.scoutingHumanThrowingLitterCheckBox = new System.Windows.Forms.CheckBox();
+            this.scoutingCoopertitionGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.scoutingCoopertitionSetCheckBox = new System.Windows.Forms.CheckBox();
+            this.scoutingCoopertitionStackCheckBox = new System.Windows.Forms.CheckBox();
+            this.scoutingTeleFoulPointsLabel = new System.Windows.Forms.Label();
+            this.scoutingTeleFoulPointsNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.scoutingRedAllianceFinalScoreLabel = new System.Windows.Forms.Label();
             this.scoutingRedAllianceFinalScoreNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.scoutingBlueAllianceFinalScoreNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.scoutingBlueAllianceFinalScoreLabel = new System.Windows.Forms.Label();
+            this.scoutingDriverRatingButton1 = new System.Windows.Forms.CheckBox();
+            this.scoutingDriverRatingButton2 = new System.Windows.Forms.CheckBox();
+            this.scoutingDriverRatingButton3 = new System.Windows.Forms.CheckBox();
+            this.scoutingDriverRatingButton4 = new System.Windows.Forms.CheckBox();
             this.matchBreakdownTabPage = new System.Windows.Forms.TabPage();
             this.matchBreakdownTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.matchBreakdownFieldImageBox = new System.Windows.Forms.PictureBox();
@@ -180,6 +186,9 @@
             this.scoutingStacksGroupBox.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingStacksHeightNumUpDown)).BeginInit();
+            this.scoutingCoopertitionGroupBox.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoutingTeleFoulPointsNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingRedAllianceFinalScoreNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingBlueAllianceFinalScoreNumUpDown)).BeginInit();
             this.matchBreakdownTabPage.SuspendLayout();
@@ -279,10 +288,6 @@
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingFieldTypeLabel, 4, 8);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingFieldTypeSelectorComboBox, 8, 8);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingLabel, 4, 9);
-            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton1, 8, 9);
-            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton2, 9, 9);
-            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton3, 10, 9);
-            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton4, 11, 9);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingCommentsRichTextBox, 0, 11);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingMatchNumberLabel, 4, 10);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDidTheRobotDieCheckBox, 8, 10);
@@ -294,6 +299,10 @@
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingRedAllianceFinalScoreNumUpDown, 3, 15);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingBlueAllianceFinalScoreNumUpDown, 10, 15);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingBlueAllianceFinalScoreLabel, 13, 15);
+            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton1, 8, 9);
+            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton2, 9, 9);
+            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton3, 10, 9);
+            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton4, 11, 9);
             this.scoutingTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingTableLayoutPanel.Location = new System.Drawing.Point(2, 2);
             this.scoutingTableLayoutPanel.Name = "scoutingTableLayoutPanel";
@@ -330,6 +339,8 @@
             this.scoutingFieldPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.scoutingFieldPictureBox.TabIndex = 1;
             this.scoutingFieldPictureBox.TabStop = false;
+            this.scoutingFieldPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.scoutingFieldPictureBox_Paint);
+            this.scoutingFieldPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.scoutingFieldPictureBox_MouseClick);
             // 
             // scoutingFieldTypeLabel
             // 
@@ -356,6 +367,7 @@
             this.scoutingFieldTypeSelectorComboBox.Name = "scoutingFieldTypeSelectorComboBox";
             this.scoutingFieldTypeSelectorComboBox.Size = new System.Drawing.Size(342, 21);
             this.scoutingFieldTypeSelectorComboBox.TabIndex = 3;
+            this.scoutingFieldTypeSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.scoutingFieldTypeSelectorComboBox_SelectedIndexChanged);
             // 
             // scoutingDriverRatingLabel
             // 
@@ -369,51 +381,12 @@
             this.scoutingDriverRatingLabel.Text = "Driver Rating";
             this.scoutingDriverRatingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // scoutingDriverRatingButton1
-            // 
-            this.scoutingDriverRatingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton1.Location = new System.Drawing.Point(699, 452);
-            this.scoutingDriverRatingButton1.Name = "scoutingDriverRatingButton1";
-            this.scoutingDriverRatingButton1.Size = new System.Drawing.Size(81, 19);
-            this.scoutingDriverRatingButton1.TabIndex = 5;
-            this.scoutingDriverRatingButton1.Text = "1";
-            this.scoutingDriverRatingButton1.UseVisualStyleBackColor = true;
-            // 
-            // scoutingDriverRatingButton2
-            // 
-            this.scoutingDriverRatingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton2.Location = new System.Drawing.Point(786, 452);
-            this.scoutingDriverRatingButton2.Name = "scoutingDriverRatingButton2";
-            this.scoutingDriverRatingButton2.Size = new System.Drawing.Size(81, 19);
-            this.scoutingDriverRatingButton2.TabIndex = 6;
-            this.scoutingDriverRatingButton2.Text = "2";
-            this.scoutingDriverRatingButton2.UseVisualStyleBackColor = true;
-            // 
-            // scoutingDriverRatingButton3
-            // 
-            this.scoutingDriverRatingButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton3.Location = new System.Drawing.Point(873, 452);
-            this.scoutingDriverRatingButton3.Name = "scoutingDriverRatingButton3";
-            this.scoutingDriverRatingButton3.Size = new System.Drawing.Size(81, 19);
-            this.scoutingDriverRatingButton3.TabIndex = 7;
-            this.scoutingDriverRatingButton3.Text = "3";
-            this.scoutingDriverRatingButton3.UseVisualStyleBackColor = true;
-            // 
-            // scoutingDriverRatingButton4
-            // 
-            this.scoutingDriverRatingButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton4.Location = new System.Drawing.Point(960, 452);
-            this.scoutingDriverRatingButton4.Name = "scoutingDriverRatingButton4";
-            this.scoutingDriverRatingButton4.Size = new System.Drawing.Size(81, 19);
-            this.scoutingDriverRatingButton4.TabIndex = 8;
-            this.scoutingDriverRatingButton4.Text = "4";
-            this.scoutingDriverRatingButton4.UseVisualStyleBackColor = true;
-            // 
             // scoutingCommentsRichTextBox
             // 
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingCommentsRichTextBox, 16);
             this.scoutingCommentsRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingCommentsRichTextBox.Location = new System.Drawing.Point(3, 502);
+            this.scoutingCommentsRichTextBox.Multiline = false;
             this.scoutingCommentsRichTextBox.Name = "scoutingCommentsRichTextBox";
             this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingCommentsRichTextBox, 4);
             this.scoutingCommentsRichTextBox.Size = new System.Drawing.Size(1395, 206);
@@ -451,6 +424,11 @@
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingMatchNumberNumericUpDown, 2);
             this.scoutingMatchNumberNumericUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingMatchNumberNumericUpDown.Location = new System.Drawing.Point(525, 477);
+            this.scoutingMatchNumberNumericUpDown.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.scoutingMatchNumberNumericUpDown.Name = "scoutingMatchNumberNumericUpDown";
             this.scoutingMatchNumberNumericUpDown.Size = new System.Drawing.Size(168, 20);
             this.scoutingMatchNumberNumericUpDown.TabIndex = 15;
@@ -466,6 +444,7 @@
             this.scoutingSubmitButton.TabIndex = 1;
             this.scoutingSubmitButton.Text = "Submit";
             this.scoutingSubmitButton.UseVisualStyleBackColor = true;
+            this.scoutingSubmitButton.Click += new System.EventHandler(this.scoutingSubmitButton_Click);
             // 
             // scoutingAutonomousGroupBox
             // 
@@ -719,7 +698,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Controls.Add(this.scoutingTotePickupLabel, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.scoutingStacksGroupBox, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.scoutingStacksGroupBox, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.scoutingTotePickupUprightCheckbox, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.scoutingTotePickupUpsideDownCheckBox, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.scoutingTotePickupSideWaysCheckBox, 3, 0);
@@ -728,24 +707,28 @@
             this.tableLayoutPanel3.Controls.Add(this.scoutingBinPickupUpsideDownCheckBox, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.scoutingBinPickupSidewaysCheckBox, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.checkBox7, 2, 4);
+            this.tableLayoutPanel3.Controls.Add(this.scoutingPushedLitterToLandfill, 2, 4);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanStationLabel, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanStationLoadTotesCheckBox, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanStationStackTotesCheckBox, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanStationInsertLitterCheckBox, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanThrowingLitterLabel, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanThrowingLitterCheckBox, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.scoutingCoopertitionGroupBox, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.scoutingTeleFoulPointsLabel, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.scoutingTeleFoulPointsNumUpDown, 2, 5);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 7;
+            this.tableLayoutPanel3.RowCount = 8;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(345, 474);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -765,9 +748,9 @@
             this.tableLayoutPanel3.SetColumnSpan(this.scoutingStacksGroupBox, 4);
             this.scoutingStacksGroupBox.Controls.Add(this.tableLayoutPanel6);
             this.scoutingStacksGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingStacksGroupBox.Location = new System.Drawing.Point(3, 173);
+            this.scoutingStacksGroupBox.Location = new System.Drawing.Point(3, 271);
             this.scoutingStacksGroupBox.Name = "scoutingStacksGroupBox";
-            this.scoutingStacksGroupBox.Size = new System.Drawing.Size(339, 298);
+            this.scoutingStacksGroupBox.Size = new System.Drawing.Size(339, 200);
             this.scoutingStacksGroupBox.TabIndex = 0;
             this.scoutingStacksGroupBox.TabStop = false;
             this.scoutingStacksGroupBox.Text = "Stacks";
@@ -791,20 +774,20 @@
             this.tableLayoutPanel6.Controls.Add(this.scoutingStacksBinOnTopCheckBox, 3, 1);
             this.tableLayoutPanel6.Controls.Add(this.scoutingStacksLitterInBinCheckBox, 3, 2);
             this.tableLayoutPanel6.Controls.Add(this.scoutingDidTheyMakeStackCheckBox, 3, 3);
-            this.tableLayoutPanel6.Controls.Add(this.scoutingStacksSubmitButton, 2, 5);
+            this.tableLayoutPanel6.Controls.Add(this.scoutingStacksSubmitButton, 2, 4);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 8;
+            this.tableLayoutPanel6.RowCount = 6;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(333, 279);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(333, 181);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // scoutingStacksDidTheyMakeStackLabel
@@ -905,12 +888,13 @@
             // 
             this.tableLayoutPanel6.SetColumnSpan(this.scoutingStacksSubmitButton, 4);
             this.scoutingStacksSubmitButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingStacksSubmitButton.Location = new System.Drawing.Point(85, 153);
+            this.scoutingStacksSubmitButton.Location = new System.Drawing.Point(85, 123);
             this.scoutingStacksSubmitButton.Name = "scoutingStacksSubmitButton";
             this.scoutingStacksSubmitButton.Size = new System.Drawing.Size(158, 24);
             this.scoutingStacksSubmitButton.TabIndex = 8;
             this.scoutingStacksSubmitButton.Text = "Submit Stack";
             this.scoutingStacksSubmitButton.UseVisualStyleBackColor = true;
+            this.scoutingStacksSubmitButton.Click += new System.EventHandler(this.scoutingStacksSubmitButton_Click);
             // 
             // scoutingTotePickupUprightCheckbox
             // 
@@ -1010,22 +994,22 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 25);
+            this.label3.Size = new System.Drawing.Size(166, 30);
             this.label3.TabIndex = 9;
             this.label3.Text = "Pushed Litter to Landfill";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // checkBox7
+            // scoutingPushedLitterToLandfill
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tableLayoutPanel3.SetColumnSpan(this.checkBox7, 2);
-            this.checkBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox7.Location = new System.Drawing.Point(175, 123);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(167, 19);
-            this.checkBox7.TabIndex = 10;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.scoutingPushedLitterToLandfill.AutoSize = true;
+            this.scoutingPushedLitterToLandfill.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel3.SetColumnSpan(this.scoutingPushedLitterToLandfill, 2);
+            this.scoutingPushedLitterToLandfill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingPushedLitterToLandfill.Location = new System.Drawing.Point(175, 123);
+            this.scoutingPushedLitterToLandfill.Name = "scoutingPushedLitterToLandfill";
+            this.scoutingPushedLitterToLandfill.Size = new System.Drawing.Size(167, 24);
+            this.scoutingPushedLitterToLandfill.TabIndex = 10;
+            this.scoutingPushedLitterToLandfill.UseVisualStyleBackColor = true;
             // 
             // scoutingHumanStationLabel
             // 
@@ -1101,6 +1085,91 @@
             this.scoutingHumanThrowingLitterCheckBox.TabIndex = 16;
             this.scoutingHumanThrowingLitterCheckBox.UseVisualStyleBackColor = true;
             // 
+            // scoutingCoopertitionGroupBox
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.scoutingCoopertitionGroupBox, 4);
+            this.scoutingCoopertitionGroupBox.Controls.Add(this.tableLayoutPanel7);
+            this.scoutingCoopertitionGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingCoopertitionGroupBox.Location = new System.Drawing.Point(3, 183);
+            this.scoutingCoopertitionGroupBox.Name = "scoutingCoopertitionGroupBox";
+            this.scoutingCoopertitionGroupBox.Size = new System.Drawing.Size(339, 82);
+            this.scoutingCoopertitionGroupBox.TabIndex = 17;
+            this.scoutingCoopertitionGroupBox.TabStop = false;
+            this.scoutingCoopertitionGroupBox.Text = "Coopertition";
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.Controls.Add(this.scoutingCoopertitionSetCheckBox, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.scoutingCoopertitionStackCheckBox, 2, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(333, 63);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // scoutingCoopertitionSetCheckBox
+            // 
+            this.scoutingCoopertitionSetCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingCoopertitionSetCheckBox.AutoSize = true;
+            this.tableLayoutPanel7.SetColumnSpan(this.scoutingCoopertitionSetCheckBox, 2);
+            this.scoutingCoopertitionSetCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingCoopertitionSetCheckBox.Location = new System.Drawing.Point(3, 3);
+            this.scoutingCoopertitionSetCheckBox.Name = "scoutingCoopertitionSetCheckBox";
+            this.scoutingCoopertitionSetCheckBox.Size = new System.Drawing.Size(160, 24);
+            this.scoutingCoopertitionSetCheckBox.TabIndex = 0;
+            this.scoutingCoopertitionSetCheckBox.Text = "Coopertition Set";
+            this.scoutingCoopertitionSetCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingCoopertitionSetCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // scoutingCoopertitionStackCheckBox
+            // 
+            this.scoutingCoopertitionStackCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingCoopertitionStackCheckBox.AutoSize = true;
+            this.tableLayoutPanel7.SetColumnSpan(this.scoutingCoopertitionStackCheckBox, 2);
+            this.scoutingCoopertitionStackCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingCoopertitionStackCheckBox.Location = new System.Drawing.Point(169, 3);
+            this.scoutingCoopertitionStackCheckBox.Name = "scoutingCoopertitionStackCheckBox";
+            this.scoutingCoopertitionStackCheckBox.Size = new System.Drawing.Size(161, 24);
+            this.scoutingCoopertitionStackCheckBox.TabIndex = 1;
+            this.scoutingCoopertitionStackCheckBox.Text = "Coopertition Stack";
+            this.scoutingCoopertitionStackCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingCoopertitionStackCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // scoutingTeleFoulPointsLabel
+            // 
+            this.scoutingTeleFoulPointsLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.scoutingTeleFoulPointsLabel, 2);
+            this.scoutingTeleFoulPointsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingTeleFoulPointsLabel.Location = new System.Drawing.Point(3, 150);
+            this.scoutingTeleFoulPointsLabel.Name = "scoutingTeleFoulPointsLabel";
+            this.scoutingTeleFoulPointsLabel.Size = new System.Drawing.Size(166, 30);
+            this.scoutingTeleFoulPointsLabel.TabIndex = 18;
+            this.scoutingTeleFoulPointsLabel.Text = "Foul Points:";
+            this.scoutingTeleFoulPointsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoutingTeleFoulPointsNumUpDown
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.scoutingTeleFoulPointsNumUpDown, 2);
+            this.scoutingTeleFoulPointsNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingTeleFoulPointsNumUpDown.Location = new System.Drawing.Point(175, 153);
+            this.scoutingTeleFoulPointsNumUpDown.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.scoutingTeleFoulPointsNumUpDown.Name = "scoutingTeleFoulPointsNumUpDown";
+            this.scoutingTeleFoulPointsNumUpDown.Size = new System.Drawing.Size(167, 20);
+            this.scoutingTeleFoulPointsNumUpDown.TabIndex = 19;
+            this.scoutingTeleFoulPointsNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // scoutingRedAllianceFinalScoreLabel
             // 
             this.scoutingRedAllianceFinalScoreLabel.AutoSize = true;
@@ -1144,6 +1213,62 @@
             this.scoutingBlueAllianceFinalScoreLabel.TabIndex = 22;
             this.scoutingBlueAllianceFinalScoreLabel.Text = "Blue Alliance Final Score:";
             this.scoutingBlueAllianceFinalScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // scoutingDriverRatingButton1
+            // 
+            this.scoutingDriverRatingButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingDriverRatingButton1.AutoSize = true;
+            this.scoutingDriverRatingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingDriverRatingButton1.Location = new System.Drawing.Point(699, 452);
+            this.scoutingDriverRatingButton1.Name = "scoutingDriverRatingButton1";
+            this.scoutingDriverRatingButton1.Size = new System.Drawing.Size(81, 19);
+            this.scoutingDriverRatingButton1.TabIndex = 23;
+            this.scoutingDriverRatingButton1.Text = "1";
+            this.scoutingDriverRatingButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingDriverRatingButton1.UseVisualStyleBackColor = true;
+            this.scoutingDriverRatingButton1.CheckedChanged += new System.EventHandler(this.scoutingDriverRatingButton1_CheckedChanged);
+            // 
+            // scoutingDriverRatingButton2
+            // 
+            this.scoutingDriverRatingButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingDriverRatingButton2.AutoSize = true;
+            this.scoutingDriverRatingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingDriverRatingButton2.Location = new System.Drawing.Point(786, 452);
+            this.scoutingDriverRatingButton2.Name = "scoutingDriverRatingButton2";
+            this.scoutingDriverRatingButton2.Size = new System.Drawing.Size(81, 19);
+            this.scoutingDriverRatingButton2.TabIndex = 24;
+            this.scoutingDriverRatingButton2.Text = "2";
+            this.scoutingDriverRatingButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingDriverRatingButton2.UseVisualStyleBackColor = true;
+            this.scoutingDriverRatingButton2.CheckedChanged += new System.EventHandler(this.scoutingDriverRatingButton2_CheckedChanged);
+            // 
+            // scoutingDriverRatingButton3
+            // 
+            this.scoutingDriverRatingButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingDriverRatingButton3.AutoSize = true;
+            this.scoutingDriverRatingButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingDriverRatingButton3.Location = new System.Drawing.Point(873, 452);
+            this.scoutingDriverRatingButton3.Name = "scoutingDriverRatingButton3";
+            this.scoutingDriverRatingButton3.Size = new System.Drawing.Size(81, 19);
+            this.scoutingDriverRatingButton3.TabIndex = 25;
+            this.scoutingDriverRatingButton3.Text = "3";
+            this.scoutingDriverRatingButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingDriverRatingButton3.UseVisualStyleBackColor = true;
+            this.scoutingDriverRatingButton3.CheckedChanged += new System.EventHandler(this.scoutingDriverRatingButton3_CheckedChanged);
+            // 
+            // scoutingDriverRatingButton4
+            // 
+            this.scoutingDriverRatingButton4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingDriverRatingButton4.AutoSize = true;
+            this.scoutingDriverRatingButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingDriverRatingButton4.Location = new System.Drawing.Point(960, 452);
+            this.scoutingDriverRatingButton4.Name = "scoutingDriverRatingButton4";
+            this.scoutingDriverRatingButton4.Size = new System.Drawing.Size(81, 19);
+            this.scoutingDriverRatingButton4.TabIndex = 26;
+            this.scoutingDriverRatingButton4.Text = "4";
+            this.scoutingDriverRatingButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingDriverRatingButton4.UseVisualStyleBackColor = true;
+            this.scoutingDriverRatingButton4.CheckedChanged += new System.EventHandler(this.scoutingDriverRatingButton4_CheckedChanged);
             // 
             // matchBreakdownTabPage
             // 
@@ -1587,7 +1712,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1157, 578);
+            this.tabPage2.Size = new System.Drawing.Size(1393, 719);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Editor";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1631,7 +1756,7 @@
             this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.Size = new System.Drawing.Size(1151, 572);
+            this.pitScoutingEditorTableLayout.Size = new System.Drawing.Size(1387, 713);
             this.pitScoutingEditorTableLayout.TabIndex = 0;
             // 
             // teamInformationTabPage
@@ -1913,6 +2038,7 @@
             this.teamSelector.Name = "teamSelector";
             this.teamSelector.Size = new System.Drawing.Size(703, 21);
             this.teamSelector.TabIndex = 5;
+            this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
             // 
             // RecycleRush_GTR_East
             // 
@@ -1945,6 +2071,10 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingStacksHeightNumUpDown)).EndInit();
+            this.scoutingCoopertitionGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoutingTeleFoulPointsNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingRedAllianceFinalScoreNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingBlueAllianceFinalScoreNumUpDown)).EndInit();
             this.matchBreakdownTabPage.ResumeLayout(false);
@@ -2018,10 +2148,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn meanColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn standardDeviationColumn1;
         private System.Windows.Forms.Label scoutingDriverRatingLabel;
-        private System.Windows.Forms.Button scoutingDriverRatingButton1;
-        private System.Windows.Forms.Button scoutingDriverRatingButton2;
-        private System.Windows.Forms.Button scoutingDriverRatingButton3;
-        private System.Windows.Forms.Button scoutingDriverRatingButton4;
         private System.Windows.Forms.ToolStripMenuItem importExportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
@@ -2082,7 +2208,7 @@
         private System.Windows.Forms.CheckBox scoutingBinPickupUpsideDownCheckBox;
         private System.Windows.Forms.CheckBox scoutingBinPickupSidewaysCheckBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox scoutingPushedLitterToLandfill;
         private System.Windows.Forms.ToolStripMenuItem gameManualToolStripMenuItem;
         private System.Windows.Forms.Label scoutingHumanStationLabel;
         private System.Windows.Forms.CheckBox scoutingHumanStationLoadTotesCheckBox;
@@ -2100,5 +2226,15 @@
         private System.Windows.Forms.Button scoutingStacksSubmitButton;
         private System.Windows.Forms.Label scoutingHumanThrowingLitterLabel;
         private System.Windows.Forms.CheckBox scoutingHumanThrowingLitterCheckBox;
+        private System.Windows.Forms.GroupBox scoutingCoopertitionGroupBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.CheckBox scoutingCoopertitionSetCheckBox;
+        private System.Windows.Forms.CheckBox scoutingCoopertitionStackCheckBox;
+        private System.Windows.Forms.Label scoutingTeleFoulPointsLabel;
+        private System.Windows.Forms.NumericUpDown scoutingTeleFoulPointsNumUpDown;
+        private System.Windows.Forms.CheckBox scoutingDriverRatingButton1;
+        private System.Windows.Forms.CheckBox scoutingDriverRatingButton2;
+        private System.Windows.Forms.CheckBox scoutingDriverRatingButton3;
+        private System.Windows.Forms.CheckBox scoutingDriverRatingButton4;
     }
 }

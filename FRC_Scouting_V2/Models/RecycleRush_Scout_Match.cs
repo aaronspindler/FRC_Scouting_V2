@@ -1,4 +1,28 @@
-﻿using System;
+﻿//*********************************License***************************************
+//===============================================================================
+//The MIT License (MIT)
+
+//Copyright (c) 2014 FRC_Scouting_V2
+
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+
+//The above copyright notice and this permission notice shall be included in all
+//copies or substantial portions of the Software.
+
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//SOFTWARE.
+//===============================================================================
+using System;
 using System.Collections.Generic;
 using FRC_Scouting_V2.Models;
 
@@ -42,8 +66,13 @@ namespace FRC_Scouting_V2
         public Boolean Tele_Human_Station_Insert_Litter { get; set; }
         public Boolean Tele_Human_Throwing_Litter { get; set; }
         public Boolean Tele_Pushed_Litter_To_Landfill { get; set; }
-        public List<Recycle_Rush_Stack> Stacks = new List<Recycle_Rush_Stack>(); 
+        public int Tele_Fouls { get; set; }
         public string Comments { get; set; }
+        public List<RecycleRush_Stack> Stacks = new List<RecycleRush_Stack>(); 
+
+        //Coopertition
+        public Boolean Coopertition_Set { get; set; }
+        public Boolean Coopertition_Stack { get; set; }
 
         //Other
         public int Final_Score_Red { get; set; }
