@@ -221,12 +221,12 @@
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamSelector = new System.Windows.Forms.ComboBox();
-            this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -2843,18 +2843,25 @@
             this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.matchScoutingDataToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
+            // 
+            // matchScoutingDataToolStripMenuItem
+            // 
+            this.matchScoutingDataToolStripMenuItem.Name = "matchScoutingDataToolStripMenuItem";
+            this.matchScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
+            this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(107, 6);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // gameManualToolStripMenuItem
@@ -2881,16 +2888,10 @@
             this.teamSelector.TabIndex = 5;
             this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
             // 
-            // matchScoutingDataToolStripMenuItem
-            // 
-            this.matchScoutingDataToolStripMenuItem.Name = "matchScoutingDataToolStripMenuItem";
-            this.matchScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
-            this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click);
-            // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.Filter = "JSon Files (*.json)|*.json|All Files (*.*)|*.*";
+            this.openFileDialog.Multiselect = true;
             // 
             // RecycleRush_GTR_East
             // 
