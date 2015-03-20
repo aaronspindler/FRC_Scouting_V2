@@ -116,6 +116,11 @@
             this.scoutingDriverRatingButton2 = new System.Windows.Forms.CheckBox();
             this.scoutingDriverRatingButton3 = new System.Windows.Forms.CheckBox();
             this.scoutingDriverRatingButton4 = new System.Windows.Forms.CheckBox();
+            this.scoutingOtherGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.scoutingAllianceColourLabel = new System.Windows.Forms.Label();
+            this.scoutingAllianceColourRedCheckBox = new System.Windows.Forms.CheckBox();
+            this.scoutingAllianceColourBlueCheckBox = new System.Windows.Forms.CheckBox();
             this.matchBreakdownTabPage = new System.Windows.Forms.TabPage();
             this.matchBreakdownTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.matchBreakdownFieldImageBox = new System.Windows.Forms.PictureBox();
@@ -134,7 +139,7 @@
             this.matchBreakDownRobotSetDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownToteSetDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownStackedToteSetDisplay = new System.Windows.Forms.Label();
-            this.matchBreakDownBinSetLabelDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownBinSetDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownBinsOffStepDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownAutoFoulsLabel = new System.Windows.Forms.Label();
             this.matchBreakDownAutoFoulsDisplay = new System.Windows.Forms.Label();
@@ -177,6 +182,8 @@
             this.matchBreakDownDriverRatingDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownCoopertitionStackDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownFinalScoresBlueDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownAllianceColourLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownAllianceColourDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownAuthorDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownTimeCreatedDisplay = new System.Windows.Forms.Label();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
@@ -219,6 +226,8 @@
             this.gameManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamSelector = new System.Windows.Forms.ComboBox();
+            this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -239,6 +248,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.scoutingTeleFoulPointsNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingRedAllianceFinalScoreNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingBlueAllianceFinalScoreNumUpDown)).BeginInit();
+            this.scoutingOtherGroupBox.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.matchBreakdownTabPage.SuspendLayout();
             this.matchBreakdownTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchBreakdownFieldImageBox)).BeginInit();
@@ -356,6 +367,7 @@
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton2, 9, 9);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton3, 10, 9);
             this.scoutingTableLayoutPanel.Controls.Add(this.scoutingDriverRatingButton4, 11, 9);
+            this.scoutingTableLayoutPanel.Controls.Add(this.scoutingOtherGroupBox, 0, 8);
             this.scoutingTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingTableLayoutPanel.Location = new System.Drawing.Point(2, 2);
             this.scoutingTableLayoutPanel.Name = "scoutingTableLayoutPanel";
@@ -516,8 +528,8 @@
             this.scoutingAutonomousGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingAutonomousGroupBox.Location = new System.Drawing.Point(3, 3);
             this.scoutingAutonomousGroupBox.Name = "scoutingAutonomousGroupBox";
-            this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingAutonomousGroupBox, 11);
-            this.scoutingAutonomousGroupBox.Size = new System.Drawing.Size(342, 453);
+            this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingAutonomousGroupBox, 8);
+            this.scoutingAutonomousGroupBox.Size = new System.Drawing.Size(342, 378);
             this.scoutingAutonomousGroupBox.TabIndex = 16;
             this.scoutingAutonomousGroupBox.TabStop = false;
             this.scoutingAutonomousGroupBox.Text = "Autonomous";
@@ -561,7 +573,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(336, 434);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(336, 359);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // scoutingRobotSetLabel
@@ -735,6 +747,11 @@
             // 
             this.scoutingAutoFoulsNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingAutoFoulsNumUpDown.Location = new System.Drawing.Point(171, 153);
+            this.scoutingAutoFoulsNumUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.scoutingAutoFoulsNumUpDown.Name = "scoutingAutoFoulsNumUpDown";
             this.scoutingAutoFoulsNumUpDown.Size = new System.Drawing.Size(162, 20);
             this.scoutingAutoFoulsNumUpDown.TabIndex = 20;
@@ -1224,7 +1241,7 @@
             this.scoutingTeleFoulPointsNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingTeleFoulPointsNumUpDown.Location = new System.Drawing.Point(175, 153);
             this.scoutingTeleFoulPointsNumUpDown.Maximum = new decimal(new int[] {
-            5000,
+            1000,
             0,
             0,
             0});
@@ -1250,6 +1267,11 @@
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingRedAllianceFinalScoreNumUpDown, 3);
             this.scoutingRedAllianceFinalScoreNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingRedAllianceFinalScoreNumUpDown.Location = new System.Drawing.Point(264, 654);
+            this.scoutingRedAllianceFinalScoreNumUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.scoutingRedAllianceFinalScoreNumUpDown.Name = "scoutingRedAllianceFinalScoreNumUpDown";
             this.scoutingRedAllianceFinalScoreNumUpDown.Size = new System.Drawing.Size(255, 20);
             this.scoutingRedAllianceFinalScoreNumUpDown.TabIndex = 20;
@@ -1260,6 +1282,11 @@
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingBlueAllianceFinalScoreNumUpDown, 3);
             this.scoutingBlueAllianceFinalScoreNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingBlueAllianceFinalScoreNumUpDown.Location = new System.Drawing.Point(873, 654);
+            this.scoutingBlueAllianceFinalScoreNumUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.scoutingBlueAllianceFinalScoreNumUpDown.Name = "scoutingBlueAllianceFinalScoreNumUpDown";
             this.scoutingBlueAllianceFinalScoreNumUpDown.Size = new System.Drawing.Size(255, 20);
             this.scoutingBlueAllianceFinalScoreNumUpDown.TabIndex = 21;
@@ -1332,6 +1359,76 @@
             this.scoutingDriverRatingButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.scoutingDriverRatingButton4.UseVisualStyleBackColor = true;
             this.scoutingDriverRatingButton4.CheckedChanged += new System.EventHandler(this.scoutingDriverRatingButton4_CheckedChanged);
+            // 
+            // scoutingOtherGroupBox
+            // 
+            this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingOtherGroupBox, 4);
+            this.scoutingOtherGroupBox.Controls.Add(this.tableLayoutPanel9);
+            this.scoutingOtherGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingOtherGroupBox.Location = new System.Drawing.Point(3, 387);
+            this.scoutingOtherGroupBox.Name = "scoutingOtherGroupBox";
+            this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingOtherGroupBox, 3);
+            this.scoutingOtherGroupBox.Size = new System.Drawing.Size(342, 69);
+            this.scoutingOtherGroupBox.TabIndex = 27;
+            this.scoutingOtherGroupBox.TabStop = false;
+            this.scoutingOtherGroupBox.Text = "Other";
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 3;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.Controls.Add(this.scoutingAllianceColourLabel, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.scoutingAllianceColourRedCheckBox, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.scoutingAllianceColourBlueCheckBox, 2, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(336, 50);
+            this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // scoutingAllianceColourLabel
+            // 
+            this.scoutingAllianceColourLabel.AutoSize = true;
+            this.scoutingAllianceColourLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingAllianceColourLabel.Location = new System.Drawing.Point(3, 0);
+            this.scoutingAllianceColourLabel.Name = "scoutingAllianceColourLabel";
+            this.scoutingAllianceColourLabel.Size = new System.Drawing.Size(106, 25);
+            this.scoutingAllianceColourLabel.TabIndex = 0;
+            this.scoutingAllianceColourLabel.Text = "Alliance Colour:";
+            this.scoutingAllianceColourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoutingAllianceColourRedCheckBox
+            // 
+            this.scoutingAllianceColourRedCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingAllianceColourRedCheckBox.AutoSize = true;
+            this.scoutingAllianceColourRedCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingAllianceColourRedCheckBox.Location = new System.Drawing.Point(115, 3);
+            this.scoutingAllianceColourRedCheckBox.Name = "scoutingAllianceColourRedCheckBox";
+            this.scoutingAllianceColourRedCheckBox.Size = new System.Drawing.Size(106, 19);
+            this.scoutingAllianceColourRedCheckBox.TabIndex = 1;
+            this.scoutingAllianceColourRedCheckBox.Text = "Red";
+            this.scoutingAllianceColourRedCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingAllianceColourRedCheckBox.UseVisualStyleBackColor = true;
+            this.scoutingAllianceColourRedCheckBox.CheckedChanged += new System.EventHandler(this.scoutingAllianceColourRedCheckBox_CheckedChanged);
+            // 
+            // scoutingAllianceColourBlueCheckBox
+            // 
+            this.scoutingAllianceColourBlueCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.scoutingAllianceColourBlueCheckBox.AutoSize = true;
+            this.scoutingAllianceColourBlueCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingAllianceColourBlueCheckBox.Location = new System.Drawing.Point(227, 3);
+            this.scoutingAllianceColourBlueCheckBox.Name = "scoutingAllianceColourBlueCheckBox";
+            this.scoutingAllianceColourBlueCheckBox.Size = new System.Drawing.Size(106, 19);
+            this.scoutingAllianceColourBlueCheckBox.TabIndex = 2;
+            this.scoutingAllianceColourBlueCheckBox.Text = "Blue";
+            this.scoutingAllianceColourBlueCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingAllianceColourBlueCheckBox.UseVisualStyleBackColor = true;
+            this.scoutingAllianceColourBlueCheckBox.CheckedChanged += new System.EventHandler(this.scoutingAllianceColourBlueCheckBox_CheckedChanged);
             // 
             // matchBreakdownTabPage
             // 
@@ -1481,7 +1578,7 @@
             this.tableLayoutPanel4.Controls.Add(this.matchBreakDownRobotSetDisplay, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.matchBreakDownToteSetDisplay, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.matchBreakDownStackedToteSetDisplay, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownBinSetLabelDisplay, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownBinSetDisplay, 1, 4);
             this.tableLayoutPanel4.Controls.Add(this.matchBreakDownBinsOffStepDisplay, 1, 5);
             this.tableLayoutPanel4.Controls.Add(this.matchBreakDownAutoFoulsLabel, 0, 6);
             this.tableLayoutPanel4.Controls.Add(this.matchBreakDownAutoFoulsDisplay, 1, 6);
@@ -1609,15 +1706,15 @@
             this.matchBreakDownStackedToteSetDisplay.TabIndex = 10;
             this.matchBreakDownStackedToteSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // matchBreakDownBinSetLabelDisplay
+            // matchBreakDownBinSetDisplay
             // 
-            this.matchBreakDownBinSetLabelDisplay.AutoSize = true;
-            this.matchBreakDownBinSetLabelDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownBinSetLabelDisplay.Location = new System.Drawing.Point(243, 100);
-            this.matchBreakDownBinSetLabelDisplay.Name = "matchBreakDownBinSetLabelDisplay";
-            this.matchBreakDownBinSetLabelDisplay.Size = new System.Drawing.Size(234, 25);
-            this.matchBreakDownBinSetLabelDisplay.TabIndex = 11;
-            this.matchBreakDownBinSetLabelDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.matchBreakDownBinSetDisplay.AutoSize = true;
+            this.matchBreakDownBinSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownBinSetDisplay.Location = new System.Drawing.Point(243, 100);
+            this.matchBreakDownBinSetDisplay.Name = "matchBreakDownBinSetDisplay";
+            this.matchBreakDownBinSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinSetDisplay.TabIndex = 11;
+            this.matchBreakDownBinSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // matchBreakDownBinsOffStepDisplay
             // 
@@ -2033,11 +2130,8 @@
             // 
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.Controls.Add(this.matchBreakDownDriveRatingLabel, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.matchBreakDownCoopertitionLabel, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.matchBreakDownFinalScoresLabel, 0, 2);
@@ -2046,10 +2140,13 @@
             this.tableLayoutPanel8.Controls.Add(this.matchBreakDownDriverRatingDisplay, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.matchBreakDownCoopertitionStackDisplay, 2, 1);
             this.tableLayoutPanel8.Controls.Add(this.matchBreakDownFinalScoresBlueDisplay, 2, 2);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownAllianceColourLabel, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownAllianceColourDisplay, 1, 3);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 4;
+            this.tableLayoutPanel8.RowCount = 5;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -2105,11 +2202,12 @@
             // 
             this.matchBreakDownFinalScoresRedDisplay.AutoSize = true;
             this.matchBreakDownFinalScoresRedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownFinalScoresRedDisplay.ForeColor = System.Drawing.Color.Red;
             this.matchBreakDownFinalScoresRedDisplay.Location = new System.Drawing.Point(163, 50);
             this.matchBreakDownFinalScoresRedDisplay.Name = "matchBreakDownFinalScoresRedDisplay";
             this.matchBreakDownFinalScoresRedDisplay.Size = new System.Drawing.Size(153, 25);
             this.matchBreakDownFinalScoresRedDisplay.TabIndex = 5;
-            this.matchBreakDownFinalScoresRedDisplay.Text = "0";
+            this.matchBreakDownFinalScoresRedDisplay.Text = "Red: 0";
             this.matchBreakDownFinalScoresRedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // matchBreakDownDriverRatingDisplay
@@ -2139,12 +2237,35 @@
             // 
             this.matchBreakDownFinalScoresBlueDisplay.AutoSize = true;
             this.matchBreakDownFinalScoresBlueDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownFinalScoresBlueDisplay.ForeColor = System.Drawing.Color.Blue;
             this.matchBreakDownFinalScoresBlueDisplay.Location = new System.Drawing.Point(322, 50);
             this.matchBreakDownFinalScoresBlueDisplay.Name = "matchBreakDownFinalScoresBlueDisplay";
             this.matchBreakDownFinalScoresBlueDisplay.Size = new System.Drawing.Size(155, 25);
             this.matchBreakDownFinalScoresBlueDisplay.TabIndex = 8;
-            this.matchBreakDownFinalScoresBlueDisplay.Text = "0";
+            this.matchBreakDownFinalScoresBlueDisplay.Text = "Blue: 0";
             this.matchBreakDownFinalScoresBlueDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownAllianceColourLabel
+            // 
+            this.matchBreakDownAllianceColourLabel.AutoSize = true;
+            this.matchBreakDownAllianceColourLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownAllianceColourLabel.Location = new System.Drawing.Point(3, 75);
+            this.matchBreakDownAllianceColourLabel.Name = "matchBreakDownAllianceColourLabel";
+            this.matchBreakDownAllianceColourLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownAllianceColourLabel.TabIndex = 9;
+            this.matchBreakDownAllianceColourLabel.Text = "Alliance Colour:";
+            this.matchBreakDownAllianceColourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownAllianceColourDisplay
+            // 
+            this.matchBreakDownAllianceColourDisplay.AutoSize = true;
+            this.tableLayoutPanel8.SetColumnSpan(this.matchBreakDownAllianceColourDisplay, 2);
+            this.matchBreakDownAllianceColourDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownAllianceColourDisplay.Location = new System.Drawing.Point(163, 75);
+            this.matchBreakDownAllianceColourDisplay.Name = "matchBreakDownAllianceColourDisplay";
+            this.matchBreakDownAllianceColourDisplay.Size = new System.Drawing.Size(314, 25);
+            this.matchBreakDownAllianceColourDisplay.TabIndex = 10;
+            this.matchBreakDownAllianceColourDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // matchBreakDownAuthorDisplay
             // 
@@ -2719,19 +2840,21 @@
             // 
             // importToolStripMenuItem
             // 
+            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.matchScoutingDataToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(107, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // gameManualToolStripMenuItem
@@ -2757,6 +2880,17 @@
             this.teamSelector.Size = new System.Drawing.Size(703, 21);
             this.teamSelector.TabIndex = 5;
             this.teamSelector.SelectedIndexChanged += new System.EventHandler(this.teamSelector_SelectedIndexChanged);
+            // 
+            // matchScoutingDataToolStripMenuItem
+            // 
+            this.matchScoutingDataToolStripMenuItem.Name = "matchScoutingDataToolStripMenuItem";
+            this.matchScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
+            this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
             // 
             // RecycleRush_GTR_East
             // 
@@ -2795,6 +2929,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.scoutingTeleFoulPointsNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingRedAllianceFinalScoreNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingBlueAllianceFinalScoreNumUpDown)).EndInit();
+            this.scoutingOtherGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
             this.matchBreakdownTabPage.ResumeLayout(false);
             this.matchBreakdownTableLayoutPanel.ResumeLayout(false);
             this.matchBreakdownTableLayoutPanel.PerformLayout();
@@ -2963,7 +3100,7 @@
         private System.Windows.Forms.Label matchBreakDownRobotSetDisplay;
         private System.Windows.Forms.Label matchBreakDownToteSetDisplay;
         private System.Windows.Forms.Label matchBreakDownStackedToteSetDisplay;
-        private System.Windows.Forms.Label matchBreakDownBinSetLabelDisplay;
+        private System.Windows.Forms.Label matchBreakDownBinSetDisplay;
         private System.Windows.Forms.Label matchBreakDownBinsOffStepDisplay;
         private System.Windows.Forms.Label matchBreakDownAutoFoulsLabel;
         private System.Windows.Forms.Label matchBreakDownAutoFoulsDisplay;
@@ -3007,5 +3144,14 @@
         private System.Windows.Forms.Label matchBreakDownFinalScoresBlueDisplay;
         private System.Windows.Forms.Label matchBreakDownAuthorDisplay;
         private System.Windows.Forms.Label matchBreakDownTimeCreatedDisplay;
+        private System.Windows.Forms.Label matchBreakDownAllianceColourLabel;
+        private System.Windows.Forms.Label matchBreakDownAllianceColourDisplay;
+        private System.Windows.Forms.GroupBox scoutingOtherGroupBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Label scoutingAllianceColourLabel;
+        private System.Windows.Forms.CheckBox scoutingAllianceColourRedCheckBox;
+        private System.Windows.Forms.CheckBox scoutingAllianceColourBlueCheckBox;
+        private System.Windows.Forms.ToolStripMenuItem matchScoutingDataToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }

@@ -39,6 +39,7 @@ namespace FRC_Scouting_V2
         public string Team_Name { get; set; }
 
         public int Match_Number { get; set; }
+        public String Alliance_Colour { get; set; }
         public Boolean Robot_Dead { get; set; }
 
         //Autonomous
