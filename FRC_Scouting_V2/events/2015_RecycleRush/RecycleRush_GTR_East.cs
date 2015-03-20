@@ -617,25 +617,28 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private void matchScoutingDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog.InitialDirectory = assemblyPath + "\\Saves\\";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (MessageBox.Show("The importation of these files can take a long time, are you sure you want to continue?", "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
             {
-                foreach (var t in openFileDialog.FileNames)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    var match = JsonConvert.DeserializeObject<RecycleRush_Scout_Match>(File.ReadAllText(t));
-                    try
+                    foreach (var t in openFileDialog.FileNames)
                     {
-                        var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
-                        conn.Open();
-                        var cmd = conn.CreateCommand();
-                        var commandText =String.Format("Insert into RecycleRush_GTR_East (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');",(snippets.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author,match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number,match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X,match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone),Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set),Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set),match.Auto_Acquired_Step_Bins, match.Auto_Fouls,Convert.ToInt16(match.Auto_Did_Nothing),Convert.ToInt16(match.Tele_Tote_Pickup_Upright),Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down),Convert.ToInt16(match.Tele_Tote_Pickup_Sideways),Convert.ToInt16(match.Tele_Bin_Pickup_Upright),Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down),Convert.ToInt16(match.Tele_Bin_Pickup_Sideways),Convert.ToInt16(match.Tele_Human_Station_Load_Totes),Convert.ToInt16(match.Tele_Human_Station_Stack_Totes),Convert.ToInt16(match.Tele_Human_Station_Insert_Litter),Convert.ToInt16(match.Tele_Human_Throwing_Litter),Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls,match.Comments, JsonConvert.SerializeObject(match.Stacks),Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack),match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
-                        cmd.CommandText = commandText;
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                    }
-                    catch (Exception)
-                    {
-                        Console.Write("Avoided Duplicated When Importing!");
-                        ConsoleWindow.AddItem("Avoided Duplicated When Importing!");
+                        var match = JsonConvert.DeserializeObject<RecycleRush_Scout_Match>(File.ReadAllText(t));
+                        try
+                        {
+                            var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                            conn.Open();
+                            var cmd = conn.CreateCommand();
+                            var commandText = String.Format("Insert into RecycleRush_GTR_East (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (snippets.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
+                            cmd.CommandText = commandText;
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        catch (Exception)
+                        {
+                            Console.Write("Avoided Duplicated When Importing!");
+                            ConsoleWindow.AddItem("Avoided Duplicated When Importing!");
+                        }
                     }
                 }
             }
