@@ -67,7 +67,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private string currentTeamName;
         private int currentTeamNumber;
         private int driverRating;
-        private string allianceColour;
+        private string allianceColour = "Unset";
         private Boolean leftClick;
         private int startingX;
         private int startingY;
@@ -88,6 +88,8 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             for (int i = 0; i < teamNumberArray.Length; i++)
             {
                 teamSelector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
+                teamComparisonTeam1Selector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
+                teamComparisonTeam2Selector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
             }
         }
 
@@ -636,8 +638,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
                             }
-                            catch (Exception)
+                            catch (MySqlException exception)
                             {
+                                UsefulSnippets.ReportCrash(exception);
+                                Console.WriteLine(exception.ErrorCode);
+                                Console.WriteLine(exception.Message);
                                 Console.Write("Avoided Duplicated When Importing!");
                                 ConsoleWindow.AddItem("Avoided Duplicated When Importing!");
                             }

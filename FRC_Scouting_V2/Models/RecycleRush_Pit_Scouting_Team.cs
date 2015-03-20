@@ -35,7 +35,6 @@ namespace FRC_Scouting_V2
 
         public int Team_Number { get; set; }
         public string Team_Name { get; set; }
-        public string Team_Website { get; set; }
 
         public double Robot_Weight { get; set; }
         public double Robot_Height { get; set; }
@@ -48,11 +47,11 @@ namespace FRC_Scouting_V2
         public Boolean Can_Acquire_Bins { get; set; }
 
         public Boolean Needs_Special_Starting_Position { get; set; }
-        public int Special_Starting_Position_X { get; set; }
-        public int Special_Starting_Position_Y { get; set; }
+        public string Special_Starting_Position { get; set; }
 
         public int Stack_Capacity { get; set; }
         public Boolean Can_It_Bin { get; set; }
+        public Boolean Can_It_Manipulate_Litter { get; set; }
 
         public Boolean Human_Tote_Loading { get; set; }
         public Boolean Human_Litter_Loading { get; set; }
