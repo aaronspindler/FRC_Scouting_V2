@@ -31,26 +31,20 @@ FRC_Scouting_V2
         - [ ] UI
         - [ ] Backend
     - [ ] Team Object
-  - [ ] Field Object
-    - [x] Drawing the field on UI
-    - [ ] Starting Location Recording
-    - [ ] End of Autonomous Location Recording
-    - [ ] Stack Locations
-  - [ ] Scouting
-    - [ ] UI
-    - [ ] Backend
+  - [x] Scouting
+    - [x] UI
+    - [x] Backend
   - [ ] Statistics
     - [ ] Calculating OPR
   - [ ] Team Comparison
     - [x] UI
     - [ ] Backend
-  - [ ] Match Breakdown
-    - [ ] UI
-    - [ ] Backend
-  - [ ] Team Information
-    - [ ] UI
-    - [ ] Backend
-  - [ ] Undo Button
+  - [x] Match Breakdown
+    - [x] UI
+    - [x] Backend
+  - [x] Team Information
+    - [x] UI
+    - [x] Backend
   - [ ] Team List
     - [ ] Addition of Team
     - [ ] Removal of Team
