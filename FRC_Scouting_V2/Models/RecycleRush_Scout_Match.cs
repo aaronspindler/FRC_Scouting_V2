@@ -32,7 +32,7 @@ namespace FRC_Scouting_V2
     {
         //General Information
         public string Author { get; set; }
-        public DateTime TimeCreated { get; set; }
+        public string TimeCreated { get; set; }
         public string UniqueID { get; set; }
 
         public int Team_Number { get; set; }

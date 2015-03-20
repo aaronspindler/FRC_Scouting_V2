@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>b1cd9539</NuGetPackageImportStamp>
     <PublishUrl>C:\Users\xNovax\Desktop\FRC_Scouting_v2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -37,7 +38,6 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>b1cd9539</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -156,6 +156,18 @@
     <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.Designer.cs">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship.Designer.cs">
+      <DependentUpon>RecycleRush_Championship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship_Information.Designer.cs">
+      <DependentUpon>RecycleRush_Championship_Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +278,12 @@
     <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.resx">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Championship.resx">
+      <DependentUpon>RecycleRush_Championship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Championship_Information.resx">
+      <DependentUpon>RecycleRush_Championship_Information.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_GTR_East.resx">
       <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +351,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FRC_Logo_ICO.ico" />
+    <Content Include="Resources\FRC2015GameManual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\RecycleRush_2015_No_Items.png" />
     <None Include="Resources\RecycleRush_2015_With_Items.png" />
     <Resource Include="Resources\FRC340.png" />

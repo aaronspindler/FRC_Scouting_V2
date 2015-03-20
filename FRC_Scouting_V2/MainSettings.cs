@@ -323,6 +323,16 @@ namespace FRC_Scouting_V2
                     ConsoleWindow.AddItem("You have successfully connected to your database!");
                     connectionDisplay.BackColor = Color.Chartreuse;
                     connectionDisplay.Text = ("Successfully Connected to Database.");
+                    UsefulSnippets snippets = new UsefulSnippets();
+                    try
+                    {
+                        snippets.InitializeDatabases();
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine("Error Message: " + exception.Message);
+                        ConsoleWindow.AddItem("Error Message: " + exception.Message);
+                    }
                 }
                 else
                 {

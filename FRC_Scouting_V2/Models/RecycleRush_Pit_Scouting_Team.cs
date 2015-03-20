@@ -41,6 +41,7 @@ namespace FRC_Scouting_V2
         public double Robot_Height { get; set; }
 
         public string Drive_Train { get; set; }
+        public int Number_Of_Robots { get; set; }
 
         public Boolean Can_Move_Totes { get; set; }
         public Boolean Can_Move_Bins { get; set; }

@@ -22,14 +22,18 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Net;
+using System.Reflection;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using FRC_Scouting_V2.Models;
 using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
@@ -37,23 +41,35 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
     public partial class RecycleRush_GTR_East : Form
     {
         //Variables
+        UsefulSnippets snippets = new UsefulSnippets();
+        private List<RecycleRush_Stack> matchStacks = new List<RecycleRush_Stack>();
+
+        private readonly string[] teamNameArray =
+        {
+            "The Circuit Stompers", "Red Raider Robotics", "Gearheads", "Kinetic Knights", "Wildcats", "THEORY6",
+            "Agincourt Lancers", "Ice Cubed", "Inverse Paradox", "Black Scots", "Cybergnomes", "OP Robotics",
+            "RAMAZOIDZ", "Paradigm Shift", "CougarTech", "Xcentrics", "DM High Voltage", "NACI Robotics", "Harfangs",
+            "IgKnighters", "Tornades", "Les Aigles d'Or", "Patriotix", "Robotronix", "FSS Cyber Falcons", "Express-O",
+            "Scarabot", "Tech for Kids", "Jag", "Bits & Pieces", "Cardinal Robotics", "W.A.F.F.L.E.S.",
+            "MANNING ROBOTICS", "Northern Lights Robotics", "RoboPanthers", "SWC Robotics", "RoboRavens",
+            "The Coltenoids", "Fullmetal Mustangs", "The Robo Devils", "Fast Eddie Community Robotics", "Stormbots",
+            "Blizzard", "Breaking Bots", "Wolverines", "Eagles", "Titans"
+        };
+
+        private readonly int[] teamNumberArray =
+        {
+            378, 578, 746, 781, 886, 1241, 1246, 1305, 1325, 1815, 2013, 2056, 2185, 2198, 2228, 2340, 2852, 2935, 3117,
+            3173, 3386, 3387, 3530, 3550, 3710, 3986, 3988, 3990, 4015, 4248, 4252, 4476, 4627, 4704, 4718, 4732, 4783,
+            4825, 5031, 5036, 5051, 5076, 5094, 5428, 5596, 5652, 5719
+        };
+
         private string currentTeamName;
         private int currentTeamNumber;
+        private int driverRating;
+        private Boolean leftClick;
         private int startingX;
         private int startingY;
-        private int driverRating;
-        private List<RecycleRush_Stack> matchStacks = new List<RecycleRush_Stack>();
-        private Boolean leftClick = false;
-
-        private readonly string[] teamNameArray = new[]
-        {
-            "The Circuit Stompers","Red Raider Robotics","Gearheads","Kinetic Knights","Wildcats","THEORY6","Agincourt Lancers","Ice Cubed","Inverse Paradox","Black Scots","Cybergnomes","OP Robotics","RAMAZOIDZ","Paradigm Shift","CougarTech","Xcentrics","DM High Voltage","NACI Robotics","Harfangs","IgKnighters","Tornades","Les Aigles d'Or","Patriotix","Robotronix","FSS Cyber Falcons","Express-O","Scarabot","Tech for Kids","Jag","Bits & Pieces","Cardinal Robotics","W.A.F.F.L.E.S.","MANNING ROBOTICS","Northern Lights Robotics","RoboPanthers","SWC Robotics","RoboRavens","The Coltenoids","Fullmetal Mustangs","The Robo Devils","Fast Eddie Community Robotics","Stormbots","Blizzard","Breaking Bots","Wolverines","Eagles","Titans"
-        };
-
-        private readonly int[] teamNumberArray = new[]
-        {
-            378,578,746,781,886,1241,1246,1305,1325,1815,2013,2056,2185,2198,2228,2340,2852,2935,3117,3173,3386,3387,3530,3550,3710,3986,3988,3990,4015,4248,4252,4476,4627,4704,4718,4732,4783,4825,5031,5036,5051,5076,5094,5428,5596,5652,5719
-        };
+        List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>(); 
 
         public RecycleRush_GTR_East()
         {
@@ -62,7 +78,10 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private void RecycleRush_GTR_East_Load(object sender, EventArgs e)
         {
+            Program.selectedEventName = "RecycleRush_GTR_East";
             scoutingFieldTypeSelectorComboBox.SelectedIndex = 0;
+            matchBreakdownFieldTypeComboBox.SelectedIndex = 0;
+
             for (int i = 0; i < teamNumberArray.Length; i++)
             {
                 teamSelector.Items.Add(teamNumberArray[i] + " | " + teamNameArray[i]);
@@ -72,11 +91,12 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private void scoutingSubmitButton_Click(object sender, EventArgs e)
         {
             scoutingSubmitButton.Enabled = false;
+            Program.selectedEventName = "RecycleRush_GTR_East";
 
             var match = new RecycleRush_Scout_Match
             {
                 Author = Settings.Default.username,
-                TimeCreated = DateTime.Now,
+                TimeCreated = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss"),
                 UniqueID = Guid.NewGuid().ToString(),
                 Team_Number = currentTeamNumber,
                 Team_Name = currentTeamName,
@@ -115,14 +135,36 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             try
             {
-                var jsonText = JsonConvert.SerializeObject(match, Formatting.Indented);
-                File.WriteAllText(@"C:\Users\xNovax\Desktop\match.json", jsonText);
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves");
+                string jsonText = JsonConvert.SerializeObject(match, Formatting.Indented);
+                string matchLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\RecycleRush_GTR_East_" + Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value) + "_" + currentTeamName + ".json");
+                File.WriteAllText(matchLocation, jsonText);
             }
             catch (Exception exception)
             {
                 Console.Write("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+                UsefulSnippets.ReportCrash(exception);
             }
+
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                conn.Open();
+                MySqlCommand cmd = conn.CreateCommand();
+                string commandText = String.Format("Insert into RecycleRush_GTR_East (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}');", (snippets.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
+                cmd.CommandText = commandText;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception exception)
+            {
+                Console.Write("Error Occured: " + exception.Message);
+                ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+                UsefulSnippets.ReportCrash(exception);
+            }
+
+            ResetScoutingInterface();
             scoutingSubmitButton.Enabled = true;
         }
 
@@ -150,7 +192,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private void scoutingFieldTypeSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           PlotInitialImage();
+            PlotInitialImage();
         }
 
         private void PlotInitialImage()
@@ -185,7 +227,8 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private void scoutingFieldPictureBox_Paint(object sender, PaintEventArgs e)
         {
-            PlotInitialImage();
+            //Commented out cause it uses a ton of CPU time
+            // PlotInitialImage();
             var blackpen = new Pen(Color.Black, 2);
 
             if (leftClick)
@@ -262,6 +305,114 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             currentTeamName = teamNameArray[teamSelector.SelectedIndex];
             currentTeamNumber = teamNumberArray[teamSelector.SelectedIndex];
+            Program.selectedTeamNumber = currentTeamNumber;
+
+            teamInformationTeamName.Text = ("Team Name: " + teamNameArray[teamSelector.SelectedIndex]);
+            teamInformationTeamNumber.Text = ("Team Number: " + teamNumberArray[teamSelector.SelectedIndex]);
+
+            ResetMatchBreakdownInterface();
+
+            try
+            {
+                object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumberArray[teamSelector.SelectedIndex]);
+                teamInformationLogo.Image = (Image)teamImage;
+            }
+            catch (Exception exception)
+            {
+                Console.Write("Error Occured: " + exception.Message);
+                ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+            }
+
+            if (Home.internetAvailable)
+            {
+               string url = ("http://www.thebluealliance.com/api/v2/team/frc");
+                url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
+                string downloadedData;
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+
+                try
+                {
+                    downloadedData = (wc.DownloadString(url));
+                    var deserializedData = JsonConvert.DeserializeObject<AerialAssist_RahChaCha.TeamInformationJSONData>(downloadedData);
+
+                    teamInformationTeamLocation.Text = "Team Location: " + Convert.ToString(deserializedData.location);
+                    teamInformationRookieYear.Text = "Rookie Year: " + Convert.ToString(deserializedData.rookie_year);
+                    teamInformationWebsiteLinkLabel.Text = Convert.ToString(deserializedData.website);
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                    ConsoleWindow.AddItem("Error Message: " + webError.Message);
+                }
+            }
+            else
+            {
+                teamInformationTeamLocation.Text = "Team Location: ";
+                teamInformationRookieYear.Text = "Rookie Year: ";
+                teamInformationWebsiteLinkLabel.Text = "";
+            }
+
+            if (Home.internetAvailable)
+            {
+                try
+                {
+                    var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                    MySqlCommand cmd = conn.CreateCommand();
+                    MySqlDataReader reader;
+                    cmd.CommandText = String.Format("SELECT * FROM RecycleRush_GTR_East WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
+                    conn.Open();
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var match = new RecycleRush_Scout_Match();
+                        match.Author = reader["Author"].ToString();
+                        match.TimeCreated = reader["TimeCreated"].ToString();
+                        match.Match_Number = Convert.ToInt32(reader["Match_Number"]);
+                        match.Robot_Dead = Convert.ToBoolean(reader["Robot_Dead"]);
+                        match.Auto_Starting_X = Convert.ToInt32(reader["Auto_Starting_X"]);
+                        match.Auto_Starting_Y = Convert.ToInt32(reader["Auto_Starting_Y"]);
+                        match.Auto_Drive_To_Autozone = Convert.ToBoolean(reader["Auto_Drive_To_Autozone"]);
+                        match.Auto_Robot_Set = Convert.ToBoolean(reader["Auto_Robot_Set"]);
+                        match.Auto_Tote_Set = Convert.ToBoolean(reader["Auto_Tote_Set"]);
+                        match.Auto_Bin_Set = Convert.ToBoolean(reader["Auto_Bin_Set"]);
+                        match.Auto_Stacked_Tote_Set = Convert.ToBoolean(reader["Auto_Stacked_Tote_Set"]);
+                        match.Auto_Acquired_Step_Bins = Convert.ToInt32(reader["Auto_Acquired_Step_Bins"]);
+                        match.Auto_Fouls = Convert.ToInt32(reader["Auto_Fouls"]);
+                        match.Auto_Did_Nothing = Convert.ToBoolean(reader["Auto_Did_Nothing"]);
+                        match.Tele_Tote_Pickup_Upright = Convert.ToBoolean(reader["Tele_Tote_Pickup_Upright"]);
+                        match.Tele_Tote_Pickup_Upside_Down = Convert.ToBoolean(reader["Tele_Tote_Pickup_Upside_Down"]);
+                        match.Tele_Tote_Pickup_Sideways = Convert.ToBoolean(reader["Tele_Tote_Pickup_Sideways"]);
+                        match.Tele_Bin_Pickup_Upright = Convert.ToBoolean(reader["Tele_Bin_Pickup_Upright"]);
+                        match.Tele_Bin_Pickup_Upside_Down = Convert.ToBoolean(reader["Tele_Bin_Pickup_Upside_Down"]);
+                        match.Tele_Bin_Pickup_Sideways = Convert.ToBoolean(reader["Tele_Bin_Pickup_Sideways"]);
+                        match.Tele_Human_Station_Load_Totes = Convert.ToBoolean(reader["Tele_Human_Station_Load_Totes"]);
+                        match.Tele_Human_Station_Stack_Totes = Convert.ToBoolean(reader["Tele_Human_Station_Stack_Totes"]);
+                        match.Tele_Human_Station_Insert_Litter = Convert.ToBoolean(reader["Tele_Human_Station_Insert_Litter"]);
+                        match.Tele_Human_Throwing_Litter = Convert.ToBoolean(reader["Tele_Human_Throwing_Litter"]);
+                        match.Tele_Pushed_Litter_To_Landfill = Convert.ToBoolean(reader["Tele_Pushed_Litter_To_Landfill"]);
+                        match.Tele_Fouls = Convert.ToInt32(reader["Tele_Fouls"]);
+                        match.Comments = Convert.ToString(reader["Comments"]);
+                        match.Stacks = JsonConvert.DeserializeObject<List<RecycleRush_Stack>>(reader["Stacks"].ToString());
+                        match.Coopertition_Set = Convert.ToBoolean(reader["Coopertition_Set"]);
+                        match.Coopertition_Stack = Convert.ToBoolean(reader["Coopertition_Stack"]);
+                        match.Final_Score_Red = Convert.ToInt32(reader["Final_Score_Red"]);
+                        match.Final_Score_Blue = Convert.ToInt32(reader["Final_Score_Blue"]);
+                        match.Driver_Rating = Convert.ToInt32(reader["Driver_Rating"]);
+
+                        teamsMatches.Add(match);
+
+                        matchBreakdownMatchList.Items.Add("Match Number: " + reader["Match_Number"]);
+                    }
+                    conn.Close();
+
+                }
+                catch (MySqlException exception)
+                {
+                    Console.Write("Error Occured: " + exception.Message);
+                    ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+                }
+            }
         }
 
         private void ResetScoutingInterface()
@@ -298,8 +449,93 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             scoutingTeleFoulPointsNumUpDown.Value = Convert.ToDecimal(0);
             scoutingCoopertitionSetCheckBox.Checked = false;
             scoutingCoopertitionStackCheckBox.Checked = false;
+        }
 
+        public void ResetMatchBreakdownInterface()
+        {
+            matchBreakdownMatchList.Items.Clear();
+            teamsMatches.Clear();
 
+            matchBreakDownAuthorDisplay.Text = "Author:";
+            matchBreakDownTimeCreatedDisplay.Text = "Time Created:";
+            matchBreakDownDriveToAutozoneDisplay.Text = "";
+            matchBreakDownRobotSetDisplay.Text = "";
+            matchBreakDownToteSetDisplay.Text = "";
+            matchBreakDownStackedToteSetDisplay.Text = "";
+            matchBreakDownBinSetLabelDisplay.Text = "";
+            matchBreakDownBinsOffStepDisplay.Text = "";
+            matchBreakDownAutoFoulsDisplay.Text = "";
+            matchBreakDownAutoDidNothingDisplay.Text = "";
+            matchBreakDownTeleTotePickupUprightDisplay.Text = "Upright:";
+            matchBreakDownTeleTotePickupUpsideDownDisplay.Text = "Upside Down:";
+            matchBreakDownTeleTotePickupSidewaysDisplay.Text = "Sideways:";
+            matchBreakDownTeleBinPickupUprightDisplay.Text = "Upright:";
+            matchBreakDownTeleBinPickupUpsideDownDisplay.Text = "Upside Down:";
+            matchBreakDownTeleBinPickupSidewaysDisplay.Text = "Sideways:";
+            matchBreakDownTeleHumanStationLoadingTotesDisplay.Text = "Loading Totes:";
+            matchBreakDownTeleHumanStationStackTotesDisplay.Text = "Inserting Litter:";
+            matchBreakDownTeleThrowingLitterDisplay.Text = "";
+            matchBreakDownTelePushingLitterDisplay.Text = "";
+            matchBreakDownTeleFoulsDisplay.Text = "";
+            matchBreakDownDriverRatingDisplay.Text = "0";
+            matchBreakDownCoopertitionSetDisplay.Text = "Set:";
+            matchBreakDownCoopertitionStackDisplay.Text = "Stack:";
+
+            matchBreakDownCommentsTextBox.Text = "Comments:";
+
+            matchBreakdownStacksGridView.Rows.Clear();
+
+        }
+
+        private void gameManualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
+            var proc = new Process();
+            proc.StartInfo = new ProcessStartInfo()
+            {
+                FileName = assemblyPath + "\\Resources\\FRC2015GameManual.pdf"
+            };
+            proc.Start();
+        }
+
+        private void teamInformationWebsiteLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Process.Start(teamInformationWebsiteLinkLabel.Text);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Error Message: " + exception.Message);
+                ConsoleWindow.AddItem("Error Message: " + exception.Message);
+            }
+        }
+
+        private void matchBreakdownFieldTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (matchBreakdownFieldTypeComboBox.SelectedIndex)
+                {
+                    case 0:
+                        matchBreakdownFieldImageBox.Image = Resources.RecycleRush_2015_No_Items;
+                        break;
+                    case 1:
+                        matchBreakdownFieldImageBox.Image = Resources.RecycleRush_2015_With_Items;
+                        break;
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.ToString());
+                ConsoleWindow.AddItem(exception.ToString());
+            }
+        }
+
+        private void matchBreakdownMatchList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            matchBreakDownAuthorDisplay.Text = "Author: " + teamsMatches[matchBreakdownMatchList.SelectedIndex].Author;
+            matchBreakDownTimeCreatedDisplay.Text = "Time: " + teamsMatches[matchBreakdownMatchList.SelectedIndex].TimeCreated;
         }
     }
 }

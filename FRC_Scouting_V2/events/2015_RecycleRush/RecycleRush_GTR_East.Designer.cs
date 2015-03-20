@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleRush_GTR_East));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -91,7 +94,7 @@
             this.scoutingBinPickupUprightCheckBox = new System.Windows.Forms.CheckBox();
             this.scoutingBinPickupUpsideDownCheckBox = new System.Windows.Forms.CheckBox();
             this.scoutingBinPickupSidewaysCheckBox = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.scoutingPushedLitterToLandFillLabel = new System.Windows.Forms.Label();
             this.scoutingPushedLitterToLandfill = new System.Windows.Forms.CheckBox();
             this.scoutingHumanStationLabel = new System.Windows.Forms.Label();
             this.scoutingHumanStationLoadTotesCheckBox = new System.Windows.Forms.CheckBox();
@@ -121,8 +124,61 @@
             this.matchBreakdownFieldTypeComboBox = new System.Windows.Forms.ComboBox();
             this.matchBreakdownAutoGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.matchBreakDownDriveToAutozoneLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownRobotSetLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownToteSetLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownStackedToteSetLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownBinSetLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownBinsOffStepLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownDriveToAutozoneDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownRobotSetDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownToteSetDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownStackedToteSetDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownBinSetLabelDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownBinsOffStepDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownAutoFoulsLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownAutoFoulsDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownAutoDidNothingLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownAutoDidNothingDisplay = new System.Windows.Forms.Label();
             this.matchBreakdownTeleGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.matchBreakDownTeleTotePickupLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleTotePickupUprightDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleTotePickupSidewaysDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleBinPickup = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleBinPickupUprightDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleBinPickupSidewaysDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleHumanStation = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleHumanStationStackTotesDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleThrowingLitterLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownTelePushingLitterLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownTelePushingLitterDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleFoulsLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleFoulsDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTeleThrowingLitterDisplay = new System.Windows.Forms.Label();
+            this.matchBreakdownStacksGridView = new System.Windows.Forms.DataGridView();
+            this.StackNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StackHeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BinOnTop = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.LitterInBin = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.DidTheyMakeStack = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.matchBreakDownCommentsTextBox = new System.Windows.Forms.RichTextBox();
+            this.matchBreakDownOtherGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.matchBreakDownDriveRatingLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownCoopertitionLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownFinalScoresLabel = new System.Windows.Forms.Label();
+            this.matchBreakDownCoopertitionSetDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownFinalScoresRedDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownDriverRatingDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownCoopertitionStackDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownFinalScoresBlueDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownAuthorDisplay = new System.Windows.Forms.Label();
+            this.matchBreakDownTimeCreatedDisplay = new System.Windows.Forms.Label();
             this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
             this.teamComparisonTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewTeam2 = new System.Windows.Forms.DataGridView();
@@ -151,18 +207,10 @@
             this.teamInformationTeamLocation = new System.Windows.Forms.Label();
             this.teamInformationWebsiteLinkLabel = new System.Windows.Forms.LinkLabel();
             this.teamInformationTeamWebsite = new System.Windows.Forms.Label();
+            this.teamInformationRookieYear = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teamsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teamNumberTextBoxAddTeam = new System.Windows.Forms.ToolStripTextBox();
-            this.teamNameTextBoxAddTeam = new System.Windows.Forms.ToolStripTextBox();
-            this.submitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.pullTeamsFromTheBlueAlliancecomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -195,7 +243,12 @@
             this.matchBreakdownTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchBreakdownFieldImageBox)).BeginInit();
             this.matchBreakdownAutoGroupBox.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.matchBreakdownTeleGroupBox.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.matchBreakdownStacksGridView)).BeginInit();
+            this.matchBreakDownOtherGroupBox.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.teamComparisonTabPage.SuspendLayout();
             this.teamComparisonTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam2)).BeginInit();
@@ -233,7 +286,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1417, 804);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1417, 744);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -250,7 +303,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 4);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1413, 775);
+            this.tabControl1.Size = new System.Drawing.Size(1413, 715);
             this.tabControl1.TabIndex = 3;
             // 
             // scoutingTabPage
@@ -260,7 +313,7 @@
             this.scoutingTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.scoutingTabPage.Name = "scoutingTabPage";
             this.scoutingTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.scoutingTabPage.Size = new System.Drawing.Size(1405, 749);
+            this.scoutingTabPage.Size = new System.Drawing.Size(1405, 689);
             this.scoutingTabPage.TabIndex = 0;
             this.scoutingTabPage.Text = "Scouting";
             this.scoutingTabPage.UseVisualStyleBackColor = true;
@@ -323,7 +376,7 @@
             this.scoutingTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.33356F));
             this.scoutingTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.33356F));
             this.scoutingTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.scoutingTableLayoutPanel.Size = new System.Drawing.Size(1401, 745);
+            this.scoutingTableLayoutPanel.Size = new System.Drawing.Size(1401, 685);
             this.scoutingTableLayoutPanel.TabIndex = 0;
             // 
             // scoutingFieldPictureBox
@@ -335,7 +388,7 @@
             this.scoutingFieldPictureBox.Location = new System.Drawing.Point(351, 3);
             this.scoutingFieldPictureBox.Name = "scoutingFieldPictureBox";
             this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingFieldPictureBox, 8);
-            this.scoutingFieldPictureBox.Size = new System.Drawing.Size(690, 418);
+            this.scoutingFieldPictureBox.Size = new System.Drawing.Size(690, 378);
             this.scoutingFieldPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.scoutingFieldPictureBox.TabIndex = 1;
             this.scoutingFieldPictureBox.TabStop = false;
@@ -347,7 +400,7 @@
             this.scoutingFieldTypeLabel.AutoSize = true;
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingFieldTypeLabel, 4);
             this.scoutingFieldTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingFieldTypeLabel.Location = new System.Drawing.Point(351, 424);
+            this.scoutingFieldTypeLabel.Location = new System.Drawing.Point(351, 384);
             this.scoutingFieldTypeLabel.Name = "scoutingFieldTypeLabel";
             this.scoutingFieldTypeLabel.Size = new System.Drawing.Size(342, 25);
             this.scoutingFieldTypeLabel.TabIndex = 2;
@@ -363,7 +416,7 @@
             this.scoutingFieldTypeSelectorComboBox.Items.AddRange(new object[] {
             "Field With No Game Pieces",
             "Field With Game Pieces"});
-            this.scoutingFieldTypeSelectorComboBox.Location = new System.Drawing.Point(699, 427);
+            this.scoutingFieldTypeSelectorComboBox.Location = new System.Drawing.Point(699, 387);
             this.scoutingFieldTypeSelectorComboBox.Name = "scoutingFieldTypeSelectorComboBox";
             this.scoutingFieldTypeSelectorComboBox.Size = new System.Drawing.Size(342, 21);
             this.scoutingFieldTypeSelectorComboBox.TabIndex = 3;
@@ -374,7 +427,7 @@
             this.scoutingDriverRatingLabel.AutoSize = true;
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingDriverRatingLabel, 4);
             this.scoutingDriverRatingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingLabel.Location = new System.Drawing.Point(351, 449);
+            this.scoutingDriverRatingLabel.Location = new System.Drawing.Point(351, 409);
             this.scoutingDriverRatingLabel.Name = "scoutingDriverRatingLabel";
             this.scoutingDriverRatingLabel.Size = new System.Drawing.Size(342, 25);
             this.scoutingDriverRatingLabel.TabIndex = 1;
@@ -385,11 +438,11 @@
             // 
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingCommentsRichTextBox, 16);
             this.scoutingCommentsRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingCommentsRichTextBox.Location = new System.Drawing.Point(3, 502);
+            this.scoutingCommentsRichTextBox.Location = new System.Drawing.Point(3, 462);
             this.scoutingCommentsRichTextBox.Multiline = false;
             this.scoutingCommentsRichTextBox.Name = "scoutingCommentsRichTextBox";
             this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingCommentsRichTextBox, 4);
-            this.scoutingCommentsRichTextBox.Size = new System.Drawing.Size(1395, 206);
+            this.scoutingCommentsRichTextBox.Size = new System.Drawing.Size(1395, 186);
             this.scoutingCommentsRichTextBox.TabIndex = 11;
             this.scoutingCommentsRichTextBox.Text = "Comments:";
             // 
@@ -398,7 +451,7 @@
             this.scoutingMatchNumberLabel.AutoSize = true;
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingMatchNumberLabel, 2);
             this.scoutingMatchNumberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingMatchNumberLabel.Location = new System.Drawing.Point(351, 474);
+            this.scoutingMatchNumberLabel.Location = new System.Drawing.Point(351, 434);
             this.scoutingMatchNumberLabel.Name = "scoutingMatchNumberLabel";
             this.scoutingMatchNumberLabel.Size = new System.Drawing.Size(168, 25);
             this.scoutingMatchNumberLabel.TabIndex = 12;
@@ -411,7 +464,7 @@
             this.scoutingDidTheRobotDieCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingDidTheRobotDieCheckBox, 4);
             this.scoutingDidTheRobotDieCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDidTheRobotDieCheckBox.Location = new System.Drawing.Point(699, 477);
+            this.scoutingDidTheRobotDieCheckBox.Location = new System.Drawing.Point(699, 437);
             this.scoutingDidTheRobotDieCheckBox.Name = "scoutingDidTheRobotDieCheckBox";
             this.scoutingDidTheRobotDieCheckBox.Size = new System.Drawing.Size(342, 19);
             this.scoutingDidTheRobotDieCheckBox.TabIndex = 14;
@@ -423,9 +476,14 @@
             // 
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingMatchNumberNumericUpDown, 2);
             this.scoutingMatchNumberNumericUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingMatchNumberNumericUpDown.Location = new System.Drawing.Point(525, 477);
+            this.scoutingMatchNumberNumericUpDown.Location = new System.Drawing.Point(525, 437);
             this.scoutingMatchNumberNumericUpDown.Maximum = new decimal(new int[] {
             5000,
+            0,
+            0,
+            0});
+            this.scoutingMatchNumberNumericUpDown.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -433,12 +491,17 @@
             this.scoutingMatchNumberNumericUpDown.Size = new System.Drawing.Size(168, 20);
             this.scoutingMatchNumberNumericUpDown.TabIndex = 15;
             this.scoutingMatchNumberNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.scoutingMatchNumberNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // scoutingSubmitButton
             // 
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingSubmitButton, 4);
             this.scoutingSubmitButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingSubmitButton.Location = new System.Drawing.Point(525, 714);
+            this.scoutingSubmitButton.Location = new System.Drawing.Point(525, 654);
             this.scoutingSubmitButton.Name = "scoutingSubmitButton";
             this.scoutingSubmitButton.Size = new System.Drawing.Size(342, 28);
             this.scoutingSubmitButton.TabIndex = 1;
@@ -454,7 +517,7 @@
             this.scoutingAutonomousGroupBox.Location = new System.Drawing.Point(3, 3);
             this.scoutingAutonomousGroupBox.Name = "scoutingAutonomousGroupBox";
             this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingAutonomousGroupBox, 11);
-            this.scoutingAutonomousGroupBox.Size = new System.Drawing.Size(342, 493);
+            this.scoutingAutonomousGroupBox.Size = new System.Drawing.Size(342, 453);
             this.scoutingAutonomousGroupBox.TabIndex = 16;
             this.scoutingAutonomousGroupBox.TabStop = false;
             this.scoutingAutonomousGroupBox.Text = "Autonomous";
@@ -498,7 +561,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(336, 474);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(336, 434);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // scoutingRobotSetLabel
@@ -685,7 +748,7 @@
             this.scoutingTeleOpGroupBox.Location = new System.Drawing.Point(1047, 3);
             this.scoutingTeleOpGroupBox.Name = "scoutingTeleOpGroupBox";
             this.scoutingTableLayoutPanel.SetRowSpan(this.scoutingTeleOpGroupBox, 11);
-            this.scoutingTeleOpGroupBox.Size = new System.Drawing.Size(351, 493);
+            this.scoutingTeleOpGroupBox.Size = new System.Drawing.Size(351, 453);
             this.scoutingTeleOpGroupBox.TabIndex = 17;
             this.scoutingTeleOpGroupBox.TabStop = false;
             this.scoutingTeleOpGroupBox.Text = "Tele-Operated";
@@ -706,7 +769,7 @@
             this.tableLayoutPanel3.Controls.Add(this.scoutingBinPickupUprightCheckBox, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.scoutingBinPickupUpsideDownCheckBox, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.scoutingBinPickupSidewaysCheckBox, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.scoutingPushedLitterToLandFillLabel, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.scoutingPushedLitterToLandfill, 2, 4);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanStationLabel, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.scoutingHumanStationLoadTotesCheckBox, 1, 2);
@@ -729,7 +792,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(345, 474);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(345, 434);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // scoutingTotePickupLabel
@@ -748,9 +811,9 @@
             this.tableLayoutPanel3.SetColumnSpan(this.scoutingStacksGroupBox, 4);
             this.scoutingStacksGroupBox.Controls.Add(this.tableLayoutPanel6);
             this.scoutingStacksGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingStacksGroupBox.Location = new System.Drawing.Point(3, 271);
+            this.scoutingStacksGroupBox.Location = new System.Drawing.Point(3, 259);
             this.scoutingStacksGroupBox.Name = "scoutingStacksGroupBox";
-            this.scoutingStacksGroupBox.Size = new System.Drawing.Size(339, 200);
+            this.scoutingStacksGroupBox.Size = new System.Drawing.Size(339, 172);
             this.scoutingStacksGroupBox.TabIndex = 0;
             this.scoutingStacksGroupBox.TabStop = false;
             this.scoutingStacksGroupBox.Text = "Stacks";
@@ -787,7 +850,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(333, 181);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(333, 153);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // scoutingStacksDidTheyMakeStackLabel
@@ -987,17 +1050,17 @@
             this.scoutingBinPickupSidewaysCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.scoutingBinPickupSidewaysCheckBox.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // scoutingPushedLitterToLandFillLabel
             // 
-            this.label3.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.label3, 2);
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 30);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Pushed Litter to Landfill";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoutingPushedLitterToLandFillLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.scoutingPushedLitterToLandFillLabel, 2);
+            this.scoutingPushedLitterToLandFillLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scoutingPushedLitterToLandFillLabel.Location = new System.Drawing.Point(3, 120);
+            this.scoutingPushedLitterToLandFillLabel.Name = "scoutingPushedLitterToLandFillLabel";
+            this.scoutingPushedLitterToLandFillLabel.Size = new System.Drawing.Size(166, 30);
+            this.scoutingPushedLitterToLandFillLabel.TabIndex = 9;
+            this.scoutingPushedLitterToLandFillLabel.Text = "Pushed Litter to Landfill";
+            this.scoutingPushedLitterToLandFillLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // scoutingPushedLitterToLandfill
             // 
@@ -1092,7 +1155,7 @@
             this.scoutingCoopertitionGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scoutingCoopertitionGroupBox.Location = new System.Drawing.Point(3, 183);
             this.scoutingCoopertitionGroupBox.Name = "scoutingCoopertitionGroupBox";
-            this.scoutingCoopertitionGroupBox.Size = new System.Drawing.Size(339, 82);
+            this.scoutingCoopertitionGroupBox.Size = new System.Drawing.Size(339, 70);
             this.scoutingCoopertitionGroupBox.TabIndex = 17;
             this.scoutingCoopertitionGroupBox.TabStop = false;
             this.scoutingCoopertitionGroupBox.Text = "Coopertition";
@@ -1112,7 +1175,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(333, 63);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(333, 51);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // scoutingCoopertitionSetCheckBox
@@ -1175,7 +1238,7 @@
             this.scoutingRedAllianceFinalScoreLabel.AutoSize = true;
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingRedAllianceFinalScoreLabel, 3);
             this.scoutingRedAllianceFinalScoreLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingRedAllianceFinalScoreLabel.Location = new System.Drawing.Point(3, 711);
+            this.scoutingRedAllianceFinalScoreLabel.Location = new System.Drawing.Point(3, 651);
             this.scoutingRedAllianceFinalScoreLabel.Name = "scoutingRedAllianceFinalScoreLabel";
             this.scoutingRedAllianceFinalScoreLabel.Size = new System.Drawing.Size(255, 34);
             this.scoutingRedAllianceFinalScoreLabel.TabIndex = 18;
@@ -1186,7 +1249,7 @@
             // 
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingRedAllianceFinalScoreNumUpDown, 3);
             this.scoutingRedAllianceFinalScoreNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingRedAllianceFinalScoreNumUpDown.Location = new System.Drawing.Point(264, 714);
+            this.scoutingRedAllianceFinalScoreNumUpDown.Location = new System.Drawing.Point(264, 654);
             this.scoutingRedAllianceFinalScoreNumUpDown.Name = "scoutingRedAllianceFinalScoreNumUpDown";
             this.scoutingRedAllianceFinalScoreNumUpDown.Size = new System.Drawing.Size(255, 20);
             this.scoutingRedAllianceFinalScoreNumUpDown.TabIndex = 20;
@@ -1196,7 +1259,7 @@
             // 
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingBlueAllianceFinalScoreNumUpDown, 3);
             this.scoutingBlueAllianceFinalScoreNumUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingBlueAllianceFinalScoreNumUpDown.Location = new System.Drawing.Point(873, 714);
+            this.scoutingBlueAllianceFinalScoreNumUpDown.Location = new System.Drawing.Point(873, 654);
             this.scoutingBlueAllianceFinalScoreNumUpDown.Name = "scoutingBlueAllianceFinalScoreNumUpDown";
             this.scoutingBlueAllianceFinalScoreNumUpDown.Size = new System.Drawing.Size(255, 20);
             this.scoutingBlueAllianceFinalScoreNumUpDown.TabIndex = 21;
@@ -1207,7 +1270,7 @@
             this.scoutingBlueAllianceFinalScoreLabel.AutoSize = true;
             this.scoutingTableLayoutPanel.SetColumnSpan(this.scoutingBlueAllianceFinalScoreLabel, 3);
             this.scoutingBlueAllianceFinalScoreLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingBlueAllianceFinalScoreLabel.Location = new System.Drawing.Point(1134, 711);
+            this.scoutingBlueAllianceFinalScoreLabel.Location = new System.Drawing.Point(1134, 651);
             this.scoutingBlueAllianceFinalScoreLabel.Name = "scoutingBlueAllianceFinalScoreLabel";
             this.scoutingBlueAllianceFinalScoreLabel.Size = new System.Drawing.Size(264, 34);
             this.scoutingBlueAllianceFinalScoreLabel.TabIndex = 22;
@@ -1219,7 +1282,7 @@
             this.scoutingDriverRatingButton1.Appearance = System.Windows.Forms.Appearance.Button;
             this.scoutingDriverRatingButton1.AutoSize = true;
             this.scoutingDriverRatingButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton1.Location = new System.Drawing.Point(699, 452);
+            this.scoutingDriverRatingButton1.Location = new System.Drawing.Point(699, 412);
             this.scoutingDriverRatingButton1.Name = "scoutingDriverRatingButton1";
             this.scoutingDriverRatingButton1.Size = new System.Drawing.Size(81, 19);
             this.scoutingDriverRatingButton1.TabIndex = 23;
@@ -1233,7 +1296,7 @@
             this.scoutingDriverRatingButton2.Appearance = System.Windows.Forms.Appearance.Button;
             this.scoutingDriverRatingButton2.AutoSize = true;
             this.scoutingDriverRatingButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton2.Location = new System.Drawing.Point(786, 452);
+            this.scoutingDriverRatingButton2.Location = new System.Drawing.Point(786, 412);
             this.scoutingDriverRatingButton2.Name = "scoutingDriverRatingButton2";
             this.scoutingDriverRatingButton2.Size = new System.Drawing.Size(81, 19);
             this.scoutingDriverRatingButton2.TabIndex = 24;
@@ -1247,7 +1310,7 @@
             this.scoutingDriverRatingButton3.Appearance = System.Windows.Forms.Appearance.Button;
             this.scoutingDriverRatingButton3.AutoSize = true;
             this.scoutingDriverRatingButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton3.Location = new System.Drawing.Point(873, 452);
+            this.scoutingDriverRatingButton3.Location = new System.Drawing.Point(873, 412);
             this.scoutingDriverRatingButton3.Name = "scoutingDriverRatingButton3";
             this.scoutingDriverRatingButton3.Size = new System.Drawing.Size(81, 19);
             this.scoutingDriverRatingButton3.TabIndex = 25;
@@ -1261,7 +1324,7 @@
             this.scoutingDriverRatingButton4.Appearance = System.Windows.Forms.Appearance.Button;
             this.scoutingDriverRatingButton4.AutoSize = true;
             this.scoutingDriverRatingButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scoutingDriverRatingButton4.Location = new System.Drawing.Point(960, 452);
+            this.scoutingDriverRatingButton4.Location = new System.Drawing.Point(960, 412);
             this.scoutingDriverRatingButton4.Name = "scoutingDriverRatingButton4";
             this.scoutingDriverRatingButton4.Size = new System.Drawing.Size(81, 19);
             this.scoutingDriverRatingButton4.TabIndex = 26;
@@ -1277,7 +1340,7 @@
             this.matchBreakdownTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.matchBreakdownTabPage.Name = "matchBreakdownTabPage";
             this.matchBreakdownTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.matchBreakdownTabPage.Size = new System.Drawing.Size(1405, 749);
+            this.matchBreakdownTabPage.Size = new System.Drawing.Size(1405, 689);
             this.matchBreakdownTabPage.TabIndex = 1;
             this.matchBreakdownTabPage.Text = "Match Breakdown";
             this.matchBreakdownTabPage.UseVisualStyleBackColor = true;
@@ -1285,50 +1348,56 @@
             // matchBreakdownTableLayoutPanel
             // 
             this.matchBreakdownTableLayoutPanel.ColumnCount = 17;
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
+            this.matchBreakdownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.882352F));
             this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownFieldImageBox, 9, 0);
             this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownMatchList, 0, 0);
-            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownFieldTypeLabel, 9, 8);
-            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownFieldTypeComboBox, 13, 8);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownFieldTypeLabel, 9, 9);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownFieldTypeComboBox, 13, 9);
             this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownAutoGroupBox, 3, 0);
-            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownTeleGroupBox, 3, 6);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownTeleGroupBox, 3, 5);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakdownStacksGridView, 9, 10);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakDownCommentsTextBox, 3, 14);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakDownOtherGroupBox, 3, 11);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakDownAuthorDisplay, 0, 15);
+            this.matchBreakdownTableLayoutPanel.Controls.Add(this.matchBreakDownTimeCreatedDisplay, 0, 16);
             this.matchBreakdownTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakdownTableLayoutPanel.Location = new System.Drawing.Point(2, 2);
             this.matchBreakdownTableLayoutPanel.Name = "matchBreakdownTableLayoutPanel";
-            this.matchBreakdownTableLayoutPanel.RowCount = 16;
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.matchBreakdownTableLayoutPanel.RowCount = 17;
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
             this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.matchBreakdownTableLayoutPanel.Size = new System.Drawing.Size(1401, 745);
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.matchBreakdownTableLayoutPanel.Size = new System.Drawing.Size(1401, 685);
             this.matchBreakdownTableLayoutPanel.TabIndex = 1;
             // 
             // matchBreakdownFieldImageBox
@@ -1339,8 +1408,8 @@
             this.matchBreakdownFieldImageBox.InitialImage = null;
             this.matchBreakdownFieldImageBox.Location = new System.Drawing.Point(741, 3);
             this.matchBreakdownFieldImageBox.Name = "matchBreakdownFieldImageBox";
-            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownFieldImageBox, 8);
-            this.matchBreakdownFieldImageBox.Size = new System.Drawing.Size(657, 378);
+            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownFieldImageBox, 9);
+            this.matchBreakdownFieldImageBox.Size = new System.Drawing.Size(657, 381);
             this.matchBreakdownFieldImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.matchBreakdownFieldImageBox.TabIndex = 2;
             this.matchBreakdownFieldImageBox.TabStop = false;
@@ -1352,16 +1421,17 @@
             this.matchBreakdownMatchList.FormattingEnabled = true;
             this.matchBreakdownMatchList.Location = new System.Drawing.Point(3, 3);
             this.matchBreakdownMatchList.Name = "matchBreakdownMatchList";
-            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownMatchList, 16);
-            this.matchBreakdownMatchList.Size = new System.Drawing.Size(240, 739);
+            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownMatchList, 15);
+            this.matchBreakdownMatchList.Size = new System.Drawing.Size(240, 621);
             this.matchBreakdownMatchList.TabIndex = 0;
+            this.matchBreakdownMatchList.SelectedIndexChanged += new System.EventHandler(this.matchBreakdownMatchList_SelectedIndexChanged);
             // 
             // matchBreakdownFieldTypeLabel
             // 
             this.matchBreakdownFieldTypeLabel.AutoSize = true;
             this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakdownFieldTypeLabel, 4);
             this.matchBreakdownFieldTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakdownFieldTypeLabel.Location = new System.Drawing.Point(741, 384);
+            this.matchBreakdownFieldTypeLabel.Location = new System.Drawing.Point(741, 387);
             this.matchBreakdownFieldTypeLabel.Name = "matchBreakdownFieldTypeLabel";
             this.matchBreakdownFieldTypeLabel.Size = new System.Drawing.Size(322, 25);
             this.matchBreakdownFieldTypeLabel.TabIndex = 3;
@@ -1377,10 +1447,11 @@
             this.matchBreakdownFieldTypeComboBox.Items.AddRange(new object[] {
             "Field With No Game Pieces",
             "Field With Game Pieces"});
-            this.matchBreakdownFieldTypeComboBox.Location = new System.Drawing.Point(1069, 387);
+            this.matchBreakdownFieldTypeComboBox.Location = new System.Drawing.Point(1069, 390);
             this.matchBreakdownFieldTypeComboBox.Name = "matchBreakdownFieldTypeComboBox";
             this.matchBreakdownFieldTypeComboBox.Size = new System.Drawing.Size(329, 21);
             this.matchBreakdownFieldTypeComboBox.TabIndex = 4;
+            this.matchBreakdownFieldTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.matchBreakdownFieldTypeComboBox_SelectedIndexChanged);
             // 
             // matchBreakdownAutoGroupBox
             // 
@@ -1390,7 +1461,7 @@
             this.matchBreakdownAutoGroupBox.Location = new System.Drawing.Point(249, 3);
             this.matchBreakdownAutoGroupBox.Name = "matchBreakdownAutoGroupBox";
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownAutoGroupBox, 6);
-            this.matchBreakdownAutoGroupBox.Size = new System.Drawing.Size(486, 282);
+            this.matchBreakdownAutoGroupBox.Size = new System.Drawing.Size(486, 252);
             this.matchBreakdownAutoGroupBox.TabIndex = 5;
             this.matchBreakdownAutoGroupBox.TabStop = false;
             this.matchBreakdownAutoGroupBox.Text = "Autonomous";
@@ -1400,41 +1471,704 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownDriveToAutozoneLabel, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownRobotSetLabel, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownToteSetLabel, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownStackedToteSetLabel, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownBinSetLabel, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownBinsOffStepLabel, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownDriveToAutozoneDisplay, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownRobotSetDisplay, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownToteSetDisplay, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownStackedToteSetDisplay, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownBinSetLabelDisplay, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownBinsOffStepDisplay, 1, 5);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownAutoFoulsLabel, 0, 6);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownAutoFoulsDisplay, 1, 6);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownAutoDidNothingLabel, 0, 7);
+            this.tableLayoutPanel4.Controls.Add(this.matchBreakDownAutoDidNothingDisplay, 1, 7);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(480, 263);
+            this.tableLayoutPanel4.RowCount = 9;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(480, 233);
             this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // matchBreakDownDriveToAutozoneLabel
+            // 
+            this.matchBreakDownDriveToAutozoneLabel.AutoSize = true;
+            this.matchBreakDownDriveToAutozoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownDriveToAutozoneLabel.Location = new System.Drawing.Point(3, 0);
+            this.matchBreakDownDriveToAutozoneLabel.Name = "matchBreakDownDriveToAutozoneLabel";
+            this.matchBreakDownDriveToAutozoneLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownDriveToAutozoneLabel.TabIndex = 1;
+            this.matchBreakDownDriveToAutozoneLabel.Text = "Drive to Autozone:";
+            this.matchBreakDownDriveToAutozoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownRobotSetLabel
+            // 
+            this.matchBreakDownRobotSetLabel.AutoSize = true;
+            this.matchBreakDownRobotSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownRobotSetLabel.Location = new System.Drawing.Point(3, 25);
+            this.matchBreakDownRobotSetLabel.Name = "matchBreakDownRobotSetLabel";
+            this.matchBreakDownRobotSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownRobotSetLabel.TabIndex = 2;
+            this.matchBreakDownRobotSetLabel.Text = "Robot Set:";
+            this.matchBreakDownRobotSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownToteSetLabel
+            // 
+            this.matchBreakDownToteSetLabel.AutoSize = true;
+            this.matchBreakDownToteSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownToteSetLabel.Location = new System.Drawing.Point(3, 50);
+            this.matchBreakDownToteSetLabel.Name = "matchBreakDownToteSetLabel";
+            this.matchBreakDownToteSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownToteSetLabel.TabIndex = 3;
+            this.matchBreakDownToteSetLabel.Text = "Tote Set:";
+            this.matchBreakDownToteSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownStackedToteSetLabel
+            // 
+            this.matchBreakDownStackedToteSetLabel.AutoSize = true;
+            this.matchBreakDownStackedToteSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownStackedToteSetLabel.Location = new System.Drawing.Point(3, 75);
+            this.matchBreakDownStackedToteSetLabel.Name = "matchBreakDownStackedToteSetLabel";
+            this.matchBreakDownStackedToteSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownStackedToteSetLabel.TabIndex = 4;
+            this.matchBreakDownStackedToteSetLabel.Text = "Stacked Tote Set:";
+            this.matchBreakDownStackedToteSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownBinSetLabel
+            // 
+            this.matchBreakDownBinSetLabel.AutoSize = true;
+            this.matchBreakDownBinSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownBinSetLabel.Location = new System.Drawing.Point(3, 100);
+            this.matchBreakDownBinSetLabel.Name = "matchBreakDownBinSetLabel";
+            this.matchBreakDownBinSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinSetLabel.TabIndex = 5;
+            this.matchBreakDownBinSetLabel.Text = "Bin Set:";
+            this.matchBreakDownBinSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownBinsOffStepLabel
+            // 
+            this.matchBreakDownBinsOffStepLabel.AutoSize = true;
+            this.matchBreakDownBinsOffStepLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownBinsOffStepLabel.Location = new System.Drawing.Point(3, 125);
+            this.matchBreakDownBinsOffStepLabel.Name = "matchBreakDownBinsOffStepLabel";
+            this.matchBreakDownBinsOffStepLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinsOffStepLabel.TabIndex = 6;
+            this.matchBreakDownBinsOffStepLabel.Text = "Bins Off Step:";
+            this.matchBreakDownBinsOffStepLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownDriveToAutozoneDisplay
+            // 
+            this.matchBreakDownDriveToAutozoneDisplay.AutoSize = true;
+            this.matchBreakDownDriveToAutozoneDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownDriveToAutozoneDisplay.Location = new System.Drawing.Point(243, 0);
+            this.matchBreakDownDriveToAutozoneDisplay.Name = "matchBreakDownDriveToAutozoneDisplay";
+            this.matchBreakDownDriveToAutozoneDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownDriveToAutozoneDisplay.TabIndex = 7;
+            this.matchBreakDownDriveToAutozoneDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownRobotSetDisplay
+            // 
+            this.matchBreakDownRobotSetDisplay.AutoSize = true;
+            this.matchBreakDownRobotSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownRobotSetDisplay.Location = new System.Drawing.Point(243, 25);
+            this.matchBreakDownRobotSetDisplay.Name = "matchBreakDownRobotSetDisplay";
+            this.matchBreakDownRobotSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownRobotSetDisplay.TabIndex = 8;
+            this.matchBreakDownRobotSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownToteSetDisplay
+            // 
+            this.matchBreakDownToteSetDisplay.AutoSize = true;
+            this.matchBreakDownToteSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownToteSetDisplay.Location = new System.Drawing.Point(243, 50);
+            this.matchBreakDownToteSetDisplay.Name = "matchBreakDownToteSetDisplay";
+            this.matchBreakDownToteSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownToteSetDisplay.TabIndex = 9;
+            this.matchBreakDownToteSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownStackedToteSetDisplay
+            // 
+            this.matchBreakDownStackedToteSetDisplay.AutoSize = true;
+            this.matchBreakDownStackedToteSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownStackedToteSetDisplay.Location = new System.Drawing.Point(243, 75);
+            this.matchBreakDownStackedToteSetDisplay.Name = "matchBreakDownStackedToteSetDisplay";
+            this.matchBreakDownStackedToteSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownStackedToteSetDisplay.TabIndex = 10;
+            this.matchBreakDownStackedToteSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownBinSetLabelDisplay
+            // 
+            this.matchBreakDownBinSetLabelDisplay.AutoSize = true;
+            this.matchBreakDownBinSetLabelDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownBinSetLabelDisplay.Location = new System.Drawing.Point(243, 100);
+            this.matchBreakDownBinSetLabelDisplay.Name = "matchBreakDownBinSetLabelDisplay";
+            this.matchBreakDownBinSetLabelDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinSetLabelDisplay.TabIndex = 11;
+            this.matchBreakDownBinSetLabelDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownBinsOffStepDisplay
+            // 
+            this.matchBreakDownBinsOffStepDisplay.AutoSize = true;
+            this.matchBreakDownBinsOffStepDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownBinsOffStepDisplay.Location = new System.Drawing.Point(243, 125);
+            this.matchBreakDownBinsOffStepDisplay.Name = "matchBreakDownBinsOffStepDisplay";
+            this.matchBreakDownBinsOffStepDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinsOffStepDisplay.TabIndex = 12;
+            this.matchBreakDownBinsOffStepDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownAutoFoulsLabel
+            // 
+            this.matchBreakDownAutoFoulsLabel.AutoSize = true;
+            this.matchBreakDownAutoFoulsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownAutoFoulsLabel.Location = new System.Drawing.Point(3, 150);
+            this.matchBreakDownAutoFoulsLabel.Name = "matchBreakDownAutoFoulsLabel";
+            this.matchBreakDownAutoFoulsLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoFoulsLabel.TabIndex = 13;
+            this.matchBreakDownAutoFoulsLabel.Text = "Fouls:";
+            this.matchBreakDownAutoFoulsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownAutoFoulsDisplay
+            // 
+            this.matchBreakDownAutoFoulsDisplay.AutoSize = true;
+            this.matchBreakDownAutoFoulsDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownAutoFoulsDisplay.Location = new System.Drawing.Point(243, 150);
+            this.matchBreakDownAutoFoulsDisplay.Name = "matchBreakDownAutoFoulsDisplay";
+            this.matchBreakDownAutoFoulsDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoFoulsDisplay.TabIndex = 14;
+            this.matchBreakDownAutoFoulsDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownAutoDidNothingLabel
+            // 
+            this.matchBreakDownAutoDidNothingLabel.AutoSize = true;
+            this.matchBreakDownAutoDidNothingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownAutoDidNothingLabel.Location = new System.Drawing.Point(3, 175);
+            this.matchBreakDownAutoDidNothingLabel.Name = "matchBreakDownAutoDidNothingLabel";
+            this.matchBreakDownAutoDidNothingLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoDidNothingLabel.TabIndex = 15;
+            this.matchBreakDownAutoDidNothingLabel.Text = "Did Nothing:";
+            this.matchBreakDownAutoDidNothingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownAutoDidNothingDisplay
+            // 
+            this.matchBreakDownAutoDidNothingDisplay.AutoSize = true;
+            this.matchBreakDownAutoDidNothingDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownAutoDidNothingDisplay.Location = new System.Drawing.Point(243, 175);
+            this.matchBreakDownAutoDidNothingDisplay.Name = "matchBreakDownAutoDidNothingDisplay";
+            this.matchBreakDownAutoDidNothingDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoDidNothingDisplay.TabIndex = 16;
+            this.matchBreakDownAutoDidNothingDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // matchBreakdownTeleGroupBox
             // 
             this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakdownTeleGroupBox, 6);
             this.matchBreakdownTeleGroupBox.Controls.Add(this.tableLayoutPanel5);
             this.matchBreakdownTeleGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakdownTeleGroupBox.Location = new System.Drawing.Point(249, 291);
+            this.matchBreakdownTeleGroupBox.Location = new System.Drawing.Point(249, 261);
             this.matchBreakdownTeleGroupBox.Name = "matchBreakdownTeleGroupBox";
-            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownTeleGroupBox, 6);
-            this.matchBreakdownTeleGroupBox.Size = new System.Drawing.Size(486, 259);
+            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownTeleGroupBox, 5);
+            this.matchBreakdownTeleGroupBox.Size = new System.Drawing.Size(486, 191);
             this.matchBreakdownTeleGroupBox.TabIndex = 6;
             this.matchBreakdownTeleGroupBox.TabStop = false;
             this.matchBreakdownTeleGroupBox.Text = "Tele-Operated";
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnCount = 4;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleTotePickupLabel, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleTotePickupUprightDisplay, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleTotePickupUpsideDownDisplay, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleTotePickupSidewaysDisplay, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleBinPickup, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleBinPickupUprightDisplay, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleBinPickupUpsideDownDisplay, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleBinPickupSidewaysDisplay, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleHumanStation, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleHumanStationLoadingTotesDisplay, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleHumanStationStackTotesDisplay, 2, 2);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleHumanStationInsertLitterDisplay, 3, 2);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleThrowingLitterLabel, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTelePushingLitterLabel, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTelePushingLitterDisplay, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleFoulsLabel, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleFoulsDisplay, 1, 5);
+            this.tableLayoutPanel5.Controls.Add(this.matchBreakDownTeleThrowingLitterDisplay, 1, 3);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(480, 240);
+            this.tableLayoutPanel5.RowCount = 7;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(480, 172);
             this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // matchBreakDownTeleTotePickupLabel
+            // 
+            this.matchBreakDownTeleTotePickupLabel.AutoSize = true;
+            this.matchBreakDownTeleTotePickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleTotePickupLabel.Location = new System.Drawing.Point(3, 0);
+            this.matchBreakDownTeleTotePickupLabel.Name = "matchBreakDownTeleTotePickupLabel";
+            this.matchBreakDownTeleTotePickupLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupLabel.TabIndex = 0;
+            this.matchBreakDownTeleTotePickupLabel.Text = "Tote Pickup:";
+            this.matchBreakDownTeleTotePickupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleTotePickupUprightDisplay
+            // 
+            this.matchBreakDownTeleTotePickupUprightDisplay.AutoSize = true;
+            this.matchBreakDownTeleTotePickupUprightDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleTotePickupUprightDisplay.Location = new System.Drawing.Point(123, 0);
+            this.matchBreakDownTeleTotePickupUprightDisplay.Name = "matchBreakDownTeleTotePickupUprightDisplay";
+            this.matchBreakDownTeleTotePickupUprightDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupUprightDisplay.TabIndex = 1;
+            this.matchBreakDownTeleTotePickupUprightDisplay.Text = "Upright:";
+            this.matchBreakDownTeleTotePickupUprightDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleTotePickupUpsideDownDisplay
+            // 
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.AutoSize = true;
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Location = new System.Drawing.Point(243, 0);
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Name = "matchBreakDownTeleTotePickupUpsideDownDisplay";
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.TabIndex = 2;
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Text = "Upside Down:";
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleTotePickupSidewaysDisplay
+            // 
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.AutoSize = true;
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.Location = new System.Drawing.Point(363, 0);
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.Name = "matchBreakDownTeleTotePickupSidewaysDisplay";
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.TabIndex = 3;
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.Text = "Sideways:";
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleBinPickup
+            // 
+            this.matchBreakDownTeleBinPickup.AutoSize = true;
+            this.matchBreakDownTeleBinPickup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleBinPickup.Location = new System.Drawing.Point(3, 25);
+            this.matchBreakDownTeleBinPickup.Name = "matchBreakDownTeleBinPickup";
+            this.matchBreakDownTeleBinPickup.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickup.TabIndex = 4;
+            this.matchBreakDownTeleBinPickup.Text = "Bin Pickup:";
+            this.matchBreakDownTeleBinPickup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleBinPickupUprightDisplay
+            // 
+            this.matchBreakDownTeleBinPickupUprightDisplay.AutoSize = true;
+            this.matchBreakDownTeleBinPickupUprightDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleBinPickupUprightDisplay.Location = new System.Drawing.Point(123, 25);
+            this.matchBreakDownTeleBinPickupUprightDisplay.Name = "matchBreakDownTeleBinPickupUprightDisplay";
+            this.matchBreakDownTeleBinPickupUprightDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickupUprightDisplay.TabIndex = 5;
+            this.matchBreakDownTeleBinPickupUprightDisplay.Text = "Upright:";
+            this.matchBreakDownTeleBinPickupUprightDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleBinPickupUpsideDownDisplay
+            // 
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.AutoSize = true;
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Location = new System.Drawing.Point(243, 25);
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Name = "matchBreakDownTeleBinPickupUpsideDownDisplay";
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.TabIndex = 6;
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Text = "Upside Down:";
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleBinPickupSidewaysDisplay
+            // 
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.AutoSize = true;
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.Location = new System.Drawing.Point(363, 25);
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.Name = "matchBreakDownTeleBinPickupSidewaysDisplay";
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.TabIndex = 7;
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.Text = "Sideways:";
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleHumanStation
+            // 
+            this.matchBreakDownTeleHumanStation.AutoSize = true;
+            this.matchBreakDownTeleHumanStation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleHumanStation.Location = new System.Drawing.Point(3, 50);
+            this.matchBreakDownTeleHumanStation.Name = "matchBreakDownTeleHumanStation";
+            this.matchBreakDownTeleHumanStation.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStation.TabIndex = 8;
+            this.matchBreakDownTeleHumanStation.Text = "Human Station:";
+            this.matchBreakDownTeleHumanStation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleHumanStationLoadingTotesDisplay
+            // 
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.AutoSize = true;
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Location = new System.Drawing.Point(123, 50);
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Name = "matchBreakDownTeleHumanStationLoadingTotesDisplay";
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.TabIndex = 9;
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Text = "Loading Totes:";
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleHumanStationStackTotesDisplay
+            // 
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.AutoSize = true;
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.Location = new System.Drawing.Point(243, 50);
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.Name = "matchBreakDownTeleHumanStationStackTotesDisplay";
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.TabIndex = 10;
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.Text = "Stack Totes:";
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleHumanStationInsertLitterDisplay
+            // 
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.AutoSize = true;
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Location = new System.Drawing.Point(363, 50);
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Name = "matchBreakDownTeleHumanStationInsertLitterDisplay";
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.TabIndex = 11;
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Text = "Inserting Litter:";
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleThrowingLitterLabel
+            // 
+            this.matchBreakDownTeleThrowingLitterLabel.AutoSize = true;
+            this.matchBreakDownTeleThrowingLitterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleThrowingLitterLabel.Location = new System.Drawing.Point(3, 75);
+            this.matchBreakDownTeleThrowingLitterLabel.Name = "matchBreakDownTeleThrowingLitterLabel";
+            this.matchBreakDownTeleThrowingLitterLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleThrowingLitterLabel.TabIndex = 12;
+            this.matchBreakDownTeleThrowingLitterLabel.Text = "Throwing Litter:";
+            this.matchBreakDownTeleThrowingLitterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTelePushingLitterLabel
+            // 
+            this.matchBreakDownTelePushingLitterLabel.AutoSize = true;
+            this.matchBreakDownTelePushingLitterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTelePushingLitterLabel.Location = new System.Drawing.Point(3, 100);
+            this.matchBreakDownTelePushingLitterLabel.Name = "matchBreakDownTelePushingLitterLabel";
+            this.matchBreakDownTelePushingLitterLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTelePushingLitterLabel.TabIndex = 16;
+            this.matchBreakDownTelePushingLitterLabel.Text = "Pushing Litter:";
+            this.matchBreakDownTelePushingLitterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTelePushingLitterDisplay
+            // 
+            this.matchBreakDownTelePushingLitterDisplay.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.matchBreakDownTelePushingLitterDisplay, 3);
+            this.matchBreakDownTelePushingLitterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTelePushingLitterDisplay.Location = new System.Drawing.Point(123, 100);
+            this.matchBreakDownTelePushingLitterDisplay.Name = "matchBreakDownTelePushingLitterDisplay";
+            this.matchBreakDownTelePushingLitterDisplay.Size = new System.Drawing.Size(354, 25);
+            this.matchBreakDownTelePushingLitterDisplay.TabIndex = 17;
+            this.matchBreakDownTelePushingLitterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleFoulsLabel
+            // 
+            this.matchBreakDownTeleFoulsLabel.AutoSize = true;
+            this.matchBreakDownTeleFoulsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleFoulsLabel.Location = new System.Drawing.Point(3, 125);
+            this.matchBreakDownTeleFoulsLabel.Name = "matchBreakDownTeleFoulsLabel";
+            this.matchBreakDownTeleFoulsLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleFoulsLabel.TabIndex = 20;
+            this.matchBreakDownTeleFoulsLabel.Text = "Fouls:";
+            this.matchBreakDownTeleFoulsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleFoulsDisplay
+            // 
+            this.matchBreakDownTeleFoulsDisplay.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.matchBreakDownTeleFoulsDisplay, 3);
+            this.matchBreakDownTeleFoulsDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleFoulsDisplay.Location = new System.Drawing.Point(123, 125);
+            this.matchBreakDownTeleFoulsDisplay.Name = "matchBreakDownTeleFoulsDisplay";
+            this.matchBreakDownTeleFoulsDisplay.Size = new System.Drawing.Size(354, 25);
+            this.matchBreakDownTeleFoulsDisplay.TabIndex = 21;
+            this.matchBreakDownTeleFoulsDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTeleThrowingLitterDisplay
+            // 
+            this.matchBreakDownTeleThrowingLitterDisplay.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.matchBreakDownTeleThrowingLitterDisplay, 3);
+            this.matchBreakDownTeleThrowingLitterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTeleThrowingLitterDisplay.Location = new System.Drawing.Point(123, 75);
+            this.matchBreakDownTeleThrowingLitterDisplay.Name = "matchBreakDownTeleThrowingLitterDisplay";
+            this.matchBreakDownTeleThrowingLitterDisplay.Size = new System.Drawing.Size(354, 25);
+            this.matchBreakDownTeleThrowingLitterDisplay.TabIndex = 18;
+            this.matchBreakDownTeleThrowingLitterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakdownStacksGridView
+            // 
+            this.matchBreakdownStacksGridView.AllowUserToAddRows = false;
+            this.matchBreakdownStacksGridView.AllowUserToDeleteRows = false;
+            this.matchBreakdownStacksGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.matchBreakdownStacksGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.matchBreakdownStacksGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.matchBreakdownStacksGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.matchBreakdownStacksGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StackNumber,
+            this.StackHeight,
+            this.BinOnTop,
+            this.LitterInBin,
+            this.DidTheyMakeStack});
+            this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakdownStacksGridView, 8);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.matchBreakdownStacksGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.matchBreakdownStacksGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakdownStacksGridView.Location = new System.Drawing.Point(741, 415);
+            this.matchBreakdownStacksGridView.Name = "matchBreakdownStacksGridView";
+            this.matchBreakdownStacksGridView.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.matchBreakdownStacksGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.matchBreakdownStacksGridView.RowHeadersVisible = false;
+            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownStacksGridView, 7);
+            this.matchBreakdownStacksGridView.Size = new System.Drawing.Size(657, 267);
+            this.matchBreakdownStacksGridView.TabIndex = 8;
+            // 
+            // StackNumber
+            // 
+            this.StackNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StackNumber.HeaderText = "Stack Number";
+            this.StackNumber.Name = "StackNumber";
+            this.StackNumber.ReadOnly = true;
+            // 
+            // StackHeight
+            // 
+            this.StackHeight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StackHeight.HeaderText = "Height";
+            this.StackHeight.Name = "StackHeight";
+            this.StackHeight.ReadOnly = true;
+            // 
+            // BinOnTop
+            // 
+            this.BinOnTop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BinOnTop.HeaderText = "Bin On Top?";
+            this.BinOnTop.Name = "BinOnTop";
+            this.BinOnTop.ReadOnly = true;
+            // 
+            // LitterInBin
+            // 
+            this.LitterInBin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LitterInBin.HeaderText = "Litter In Bin?";
+            this.LitterInBin.Name = "LitterInBin";
+            this.LitterInBin.ReadOnly = true;
+            // 
+            // DidTheyMakeStack
+            // 
+            this.DidTheyMakeStack.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DidTheyMakeStack.FillWeight = 130F;
+            this.DidTheyMakeStack.HeaderText = "Did They Make The Stack?";
+            this.DidTheyMakeStack.Name = "DidTheyMakeStack";
+            this.DidTheyMakeStack.ReadOnly = true;
+            // 
+            // matchBreakDownCommentsTextBox
+            // 
+            this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakDownCommentsTextBox, 6);
+            this.matchBreakDownCommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownCommentsTextBox.Location = new System.Drawing.Point(249, 587);
+            this.matchBreakDownCommentsTextBox.Name = "matchBreakDownCommentsTextBox";
+            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakDownCommentsTextBox, 3);
+            this.matchBreakDownCommentsTextBox.Size = new System.Drawing.Size(486, 95);
+            this.matchBreakDownCommentsTextBox.TabIndex = 9;
+            this.matchBreakDownCommentsTextBox.Text = "Comments:";
+            // 
+            // matchBreakDownOtherGroupBox
+            // 
+            this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakDownOtherGroupBox, 6);
+            this.matchBreakDownOtherGroupBox.Controls.Add(this.tableLayoutPanel8);
+            this.matchBreakDownOtherGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownOtherGroupBox.Location = new System.Drawing.Point(249, 458);
+            this.matchBreakDownOtherGroupBox.Name = "matchBreakDownOtherGroupBox";
+            this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakDownOtherGroupBox, 3);
+            this.matchBreakDownOtherGroupBox.Size = new System.Drawing.Size(486, 123);
+            this.matchBreakDownOtherGroupBox.TabIndex = 10;
+            this.matchBreakDownOtherGroupBox.TabStop = false;
+            this.matchBreakDownOtherGroupBox.Text = "Other";
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownDriveRatingLabel, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownCoopertitionLabel, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownFinalScoresLabel, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownCoopertitionSetDisplay, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownFinalScoresRedDisplay, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownDriverRatingDisplay, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownCoopertitionStackDisplay, 2, 1);
+            this.tableLayoutPanel8.Controls.Add(this.matchBreakDownFinalScoresBlueDisplay, 2, 2);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 4;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(480, 104);
+            this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // matchBreakDownDriveRatingLabel
+            // 
+            this.matchBreakDownDriveRatingLabel.AutoSize = true;
+            this.matchBreakDownDriveRatingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownDriveRatingLabel.Location = new System.Drawing.Point(3, 0);
+            this.matchBreakDownDriveRatingLabel.Name = "matchBreakDownDriveRatingLabel";
+            this.matchBreakDownDriveRatingLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownDriveRatingLabel.TabIndex = 0;
+            this.matchBreakDownDriveRatingLabel.Text = "Drive Rating:";
+            this.matchBreakDownDriveRatingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownCoopertitionLabel
+            // 
+            this.matchBreakDownCoopertitionLabel.AutoSize = true;
+            this.matchBreakDownCoopertitionLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownCoopertitionLabel.Location = new System.Drawing.Point(3, 25);
+            this.matchBreakDownCoopertitionLabel.Name = "matchBreakDownCoopertitionLabel";
+            this.matchBreakDownCoopertitionLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownCoopertitionLabel.TabIndex = 2;
+            this.matchBreakDownCoopertitionLabel.Text = "Coopertition:";
+            this.matchBreakDownCoopertitionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownFinalScoresLabel
+            // 
+            this.matchBreakDownFinalScoresLabel.AutoSize = true;
+            this.matchBreakDownFinalScoresLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownFinalScoresLabel.Location = new System.Drawing.Point(3, 50);
+            this.matchBreakDownFinalScoresLabel.Name = "matchBreakDownFinalScoresLabel";
+            this.matchBreakDownFinalScoresLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownFinalScoresLabel.TabIndex = 4;
+            this.matchBreakDownFinalScoresLabel.Text = "Final Scores:";
+            this.matchBreakDownFinalScoresLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownCoopertitionSetDisplay
+            // 
+            this.matchBreakDownCoopertitionSetDisplay.AutoSize = true;
+            this.matchBreakDownCoopertitionSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownCoopertitionSetDisplay.Location = new System.Drawing.Point(163, 25);
+            this.matchBreakDownCoopertitionSetDisplay.Name = "matchBreakDownCoopertitionSetDisplay";
+            this.matchBreakDownCoopertitionSetDisplay.Size = new System.Drawing.Size(153, 25);
+            this.matchBreakDownCoopertitionSetDisplay.TabIndex = 3;
+            this.matchBreakDownCoopertitionSetDisplay.Text = "Set:";
+            this.matchBreakDownCoopertitionSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownFinalScoresRedDisplay
+            // 
+            this.matchBreakDownFinalScoresRedDisplay.AutoSize = true;
+            this.matchBreakDownFinalScoresRedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownFinalScoresRedDisplay.Location = new System.Drawing.Point(163, 50);
+            this.matchBreakDownFinalScoresRedDisplay.Name = "matchBreakDownFinalScoresRedDisplay";
+            this.matchBreakDownFinalScoresRedDisplay.Size = new System.Drawing.Size(153, 25);
+            this.matchBreakDownFinalScoresRedDisplay.TabIndex = 5;
+            this.matchBreakDownFinalScoresRedDisplay.Text = "0";
+            this.matchBreakDownFinalScoresRedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownDriverRatingDisplay
+            // 
+            this.matchBreakDownDriverRatingDisplay.AutoSize = true;
+            this.tableLayoutPanel8.SetColumnSpan(this.matchBreakDownDriverRatingDisplay, 2);
+            this.matchBreakDownDriverRatingDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownDriverRatingDisplay.Location = new System.Drawing.Point(163, 0);
+            this.matchBreakDownDriverRatingDisplay.Name = "matchBreakDownDriverRatingDisplay";
+            this.matchBreakDownDriverRatingDisplay.Size = new System.Drawing.Size(314, 25);
+            this.matchBreakDownDriverRatingDisplay.TabIndex = 1;
+            this.matchBreakDownDriverRatingDisplay.Text = "0";
+            this.matchBreakDownDriverRatingDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownCoopertitionStackDisplay
+            // 
+            this.matchBreakDownCoopertitionStackDisplay.AutoSize = true;
+            this.matchBreakDownCoopertitionStackDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownCoopertitionStackDisplay.Location = new System.Drawing.Point(322, 25);
+            this.matchBreakDownCoopertitionStackDisplay.Name = "matchBreakDownCoopertitionStackDisplay";
+            this.matchBreakDownCoopertitionStackDisplay.Size = new System.Drawing.Size(155, 25);
+            this.matchBreakDownCoopertitionStackDisplay.TabIndex = 7;
+            this.matchBreakDownCoopertitionStackDisplay.Text = "Stack:";
+            this.matchBreakDownCoopertitionStackDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownFinalScoresBlueDisplay
+            // 
+            this.matchBreakDownFinalScoresBlueDisplay.AutoSize = true;
+            this.matchBreakDownFinalScoresBlueDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownFinalScoresBlueDisplay.Location = new System.Drawing.Point(322, 50);
+            this.matchBreakDownFinalScoresBlueDisplay.Name = "matchBreakDownFinalScoresBlueDisplay";
+            this.matchBreakDownFinalScoresBlueDisplay.Size = new System.Drawing.Size(155, 25);
+            this.matchBreakDownFinalScoresBlueDisplay.TabIndex = 8;
+            this.matchBreakDownFinalScoresBlueDisplay.Text = "0";
+            this.matchBreakDownFinalScoresBlueDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownAuthorDisplay
+            // 
+            this.matchBreakDownAuthorDisplay.AutoSize = true;
+            this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakDownAuthorDisplay, 3);
+            this.matchBreakDownAuthorDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownAuthorDisplay.Location = new System.Drawing.Point(3, 627);
+            this.matchBreakDownAuthorDisplay.Name = "matchBreakDownAuthorDisplay";
+            this.matchBreakDownAuthorDisplay.Size = new System.Drawing.Size(240, 25);
+            this.matchBreakDownAuthorDisplay.TabIndex = 11;
+            this.matchBreakDownAuthorDisplay.Text = "Author:";
+            this.matchBreakDownAuthorDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchBreakDownTimeCreatedDisplay
+            // 
+            this.matchBreakDownTimeCreatedDisplay.AutoSize = true;
+            this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakDownTimeCreatedDisplay, 3);
+            this.matchBreakDownTimeCreatedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchBreakDownTimeCreatedDisplay.Location = new System.Drawing.Point(3, 652);
+            this.matchBreakDownTimeCreatedDisplay.Name = "matchBreakDownTimeCreatedDisplay";
+            this.matchBreakDownTimeCreatedDisplay.Size = new System.Drawing.Size(240, 33);
+            this.matchBreakDownTimeCreatedDisplay.TabIndex = 12;
+            this.matchBreakDownTimeCreatedDisplay.Text = "Time Created:";
+            this.matchBreakDownTimeCreatedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // teamComparisonTabPage
             // 
@@ -1442,7 +2176,7 @@
             this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamComparisonTabPage.Name = "teamComparisonTabPage";
             this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.teamComparisonTabPage.Size = new System.Drawing.Size(1405, 749);
+            this.teamComparisonTabPage.Size = new System.Drawing.Size(1405, 689);
             this.teamComparisonTabPage.TabIndex = 5;
             this.teamComparisonTabPage.Text = "Team Comparison";
             this.teamComparisonTabPage.UseVisualStyleBackColor = true;
@@ -1467,7 +2201,7 @@
             this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.teamComparisonTableLayoutPanel.Size = new System.Drawing.Size(1399, 743);
+            this.teamComparisonTableLayoutPanel.Size = new System.Drawing.Size(1399, 683);
             this.teamComparisonTableLayoutPanel.TabIndex = 1;
             // 
             // dataGridViewTeam2
@@ -1476,50 +2210,50 @@
             this.dataGridViewTeam2.AllowUserToDeleteRows = false;
             this.dataGridViewTeam2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewTeam2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTeam2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTeam2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTeam2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.teamComparisonTableLayoutPanel.SetColumnSpan(this.dataGridViewTeam2, 2);
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTeam2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTeam2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTeam2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTeam2.Location = new System.Drawing.Point(702, 28);
             this.dataGridViewTeam2.Name = "dataGridViewTeam2";
             this.dataGridViewTeam2.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTeam2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewTeam2.RowHeadersVisible = false;
             this.teamComparisonTableLayoutPanel.SetRowSpan(this.dataGridViewTeam2, 2);
-            this.dataGridViewTeam2.Size = new System.Drawing.Size(694, 712);
+            this.dataGridViewTeam2.Size = new System.Drawing.Size(694, 652);
             this.dataGridViewTeam2.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn1.FillWeight = 178.3475F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Data Type";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -1536,8 +2270,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn3.FillWeight = 61.07648F;
             this.dataGridViewTextBoxColumn3.HeaderText = "Standard Deviation";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -1549,50 +2283,50 @@
             this.dataGridViewTeam1.AllowUserToDeleteRows = false;
             this.dataGridViewTeam1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewTeam1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTeam1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTeam1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTeam1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataNameColumn1,
             this.meanColumn1,
             this.standardDeviationColumn1});
             this.teamComparisonTableLayoutPanel.SetColumnSpan(this.dataGridViewTeam1, 2);
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTeam1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTeam1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTeam1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTeam1.Location = new System.Drawing.Point(3, 28);
             this.dataGridViewTeam1.Name = "dataGridViewTeam1";
             this.dataGridViewTeam1.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam1.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTeam1.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTeam1.RowHeadersVisible = false;
             this.teamComparisonTableLayoutPanel.SetRowSpan(this.dataGridViewTeam1, 2);
-            this.dataGridViewTeam1.Size = new System.Drawing.Size(693, 712);
+            this.dataGridViewTeam1.Size = new System.Drawing.Size(693, 652);
             this.dataGridViewTeam1.TabIndex = 7;
             // 
             // dataNameColumn1
             // 
             this.dataNameColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataNameColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataNameColumn1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataNameColumn1.FillWeight = 178.3475F;
             this.dataNameColumn1.HeaderText = "Data Type";
             this.dataNameColumn1.Name = "dataNameColumn1";
@@ -1609,8 +2343,8 @@
             // standardDeviationColumn1
             // 
             this.standardDeviationColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.standardDeviationColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.standardDeviationColumn1.DefaultCellStyle = dataGridViewCellStyle11;
             this.standardDeviationColumn1.FillWeight = 61.07648F;
             this.standardDeviationColumn1.HeaderText = "Standard Deviation";
             this.standardDeviationColumn1.Name = "standardDeviationColumn1";
@@ -1663,7 +2397,7 @@
             this.pitScoutingTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.pitScoutingTabPage.Name = "pitScoutingTabPage";
             this.pitScoutingTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.pitScoutingTabPage.Size = new System.Drawing.Size(1405, 749);
+            this.pitScoutingTabPage.Size = new System.Drawing.Size(1405, 689);
             this.pitScoutingTabPage.TabIndex = 3;
             this.pitScoutingTabPage.Text = "Pit Scouting";
             this.pitScoutingTabPage.UseVisualStyleBackColor = true;
@@ -1678,7 +2412,7 @@
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1401, 745);
+            this.tabControl2.Size = new System.Drawing.Size(1401, 685);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage1
@@ -1687,7 +2421,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1393, 719);
+            this.tabPage1.Size = new System.Drawing.Size(1393, 659);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Viewer";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1703,7 +2437,7 @@
             this.pitScoutingViewerTableLayout.RowCount = 2;
             this.pitScoutingViewerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.pitScoutingViewerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pitScoutingViewerTableLayout.Size = new System.Drawing.Size(1387, 713);
+            this.pitScoutingViewerTableLayout.Size = new System.Drawing.Size(1387, 653);
             this.pitScoutingViewerTableLayout.TabIndex = 0;
             // 
             // tabPage2
@@ -1712,51 +2446,83 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1393, 719);
+            this.tabPage2.Size = new System.Drawing.Size(1393, 659);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Editor";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pitScoutingEditorTableLayout
             // 
-            this.pitScoutingEditorTableLayout.ColumnCount = 16;
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.pitScoutingEditorTableLayout.ColumnCount = 32;
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
             this.pitScoutingEditorTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pitScoutingEditorTableLayout.Location = new System.Drawing.Point(3, 3);
             this.pitScoutingEditorTableLayout.Name = "pitScoutingEditorTableLayout";
-            this.pitScoutingEditorTableLayout.RowCount = 16;
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.pitScoutingEditorTableLayout.Size = new System.Drawing.Size(1387, 713);
+            this.pitScoutingEditorTableLayout.RowCount = 32;
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.125F));
+            this.pitScoutingEditorTableLayout.Size = new System.Drawing.Size(1387, 653);
             this.pitScoutingEditorTableLayout.TabIndex = 0;
             // 
             // teamInformationTabPage
@@ -1766,7 +2532,7 @@
             this.teamInformationTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.teamInformationTabPage.Name = "teamInformationTabPage";
             this.teamInformationTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.teamInformationTabPage.Size = new System.Drawing.Size(1405, 749);
+            this.teamInformationTabPage.Size = new System.Drawing.Size(1405, 689);
             this.teamInformationTabPage.TabIndex = 4;
             this.teamInformationTabPage.Text = "Team Information";
             this.teamInformationTabPage.UseVisualStyleBackColor = true;
@@ -1790,43 +2556,46 @@
             this.teamInformationTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.teamInformationTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.teamInformationTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationLogo, 0, 0);
+            this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationLogo, 2, 0);
             this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationTeamName, 0, 12);
             this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationTeamNumber, 0, 13);
             this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationTeamLocation, 0, 14);
-            this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationWebsiteLinkLabel, 8, 15);
-            this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationTeamWebsite, 0, 15);
+            this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationWebsiteLinkLabel, 8, 16);
+            this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationTeamWebsite, 0, 16);
+            this.teamInformationTableLayoutPanel.Controls.Add(this.teamInformationRookieYear, 0, 15);
             this.teamInformationTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamInformationTableLayoutPanel.Location = new System.Drawing.Point(2, 2);
             this.teamInformationTableLayoutPanel.Name = "teamInformationTableLayoutPanel";
-            this.teamInformationTableLayoutPanel.RowCount = 16;
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.teamInformationTableLayoutPanel.Size = new System.Drawing.Size(1401, 745);
+            this.teamInformationTableLayoutPanel.RowCount = 17;
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
+            this.teamInformationTableLayoutPanel.Size = new System.Drawing.Size(1401, 685);
             this.teamInformationTableLayoutPanel.TabIndex = 1;
             // 
             // teamInformationLogo
             // 
-            this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationLogo, 16);
+            this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationLogo, 12);
             this.teamInformationLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationLogo.Location = new System.Drawing.Point(3, 3);
+            this.teamInformationLogo.Location = new System.Drawing.Point(177, 3);
             this.teamInformationLogo.Name = "teamInformationLogo";
             this.teamInformationTableLayoutPanel.SetRowSpan(this.teamInformationLogo, 12);
-            this.teamInformationLogo.Size = new System.Drawing.Size(1395, 546);
+            this.teamInformationLogo.Size = new System.Drawing.Size(1038, 474);
+            this.teamInformationLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.teamInformationLogo.TabIndex = 0;
             this.teamInformationLogo.TabStop = false;
             // 
@@ -1835,9 +2604,9 @@
             this.teamInformationTeamName.AutoSize = true;
             this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationTeamName, 16);
             this.teamInformationTeamName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationTeamName.Location = new System.Drawing.Point(3, 552);
+            this.teamInformationTeamName.Location = new System.Drawing.Point(3, 480);
             this.teamInformationTeamName.Name = "teamInformationTeamName";
-            this.teamInformationTeamName.Size = new System.Drawing.Size(1395, 46);
+            this.teamInformationTeamName.Size = new System.Drawing.Size(1395, 40);
             this.teamInformationTeamName.TabIndex = 1;
             this.teamInformationTeamName.Text = "Team Name:";
             this.teamInformationTeamName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1847,9 +2616,9 @@
             this.teamInformationTeamNumber.AutoSize = true;
             this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationTeamNumber, 16);
             this.teamInformationTeamNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationTeamNumber.Location = new System.Drawing.Point(3, 598);
+            this.teamInformationTeamNumber.Location = new System.Drawing.Point(3, 520);
             this.teamInformationTeamNumber.Name = "teamInformationTeamNumber";
-            this.teamInformationTeamNumber.Size = new System.Drawing.Size(1395, 46);
+            this.teamInformationTeamNumber.Size = new System.Drawing.Size(1395, 40);
             this.teamInformationTeamNumber.TabIndex = 2;
             this.teamInformationTeamNumber.Text = "Team Number:";
             this.teamInformationTeamNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1859,9 +2628,9 @@
             this.teamInformationTeamLocation.AutoSize = true;
             this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationTeamLocation, 16);
             this.teamInformationTeamLocation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationTeamLocation.Location = new System.Drawing.Point(3, 644);
+            this.teamInformationTeamLocation.Location = new System.Drawing.Point(3, 560);
             this.teamInformationTeamLocation.Name = "teamInformationTeamLocation";
-            this.teamInformationTeamLocation.Size = new System.Drawing.Size(1395, 46);
+            this.teamInformationTeamLocation.Size = new System.Drawing.Size(1395, 40);
             this.teamInformationTeamLocation.TabIndex = 3;
             this.teamInformationTeamLocation.Text = "Team Location:";
             this.teamInformationTeamLocation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1871,23 +2640,36 @@
             this.teamInformationWebsiteLinkLabel.AutoSize = true;
             this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationWebsiteLinkLabel, 8);
             this.teamInformationWebsiteLinkLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationWebsiteLinkLabel.Location = new System.Drawing.Point(699, 690);
+            this.teamInformationWebsiteLinkLabel.Location = new System.Drawing.Point(699, 640);
             this.teamInformationWebsiteLinkLabel.Name = "teamInformationWebsiteLinkLabel";
-            this.teamInformationWebsiteLinkLabel.Size = new System.Drawing.Size(699, 55);
+            this.teamInformationWebsiteLinkLabel.Size = new System.Drawing.Size(699, 45);
             this.teamInformationWebsiteLinkLabel.TabIndex = 4;
             this.teamInformationWebsiteLinkLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.teamInformationWebsiteLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.teamInformationWebsiteLinkLabel_LinkClicked);
             // 
             // teamInformationTeamWebsite
             // 
             this.teamInformationTeamWebsite.AutoSize = true;
             this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationTeamWebsite, 8);
             this.teamInformationTeamWebsite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationTeamWebsite.Location = new System.Drawing.Point(3, 690);
+            this.teamInformationTeamWebsite.Location = new System.Drawing.Point(3, 640);
             this.teamInformationTeamWebsite.Name = "teamInformationTeamWebsite";
-            this.teamInformationTeamWebsite.Size = new System.Drawing.Size(690, 55);
+            this.teamInformationTeamWebsite.Size = new System.Drawing.Size(690, 45);
             this.teamInformationTeamWebsite.TabIndex = 8;
             this.teamInformationTeamWebsite.Text = "Team Website:";
             this.teamInformationTeamWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // teamInformationRookieYear
+            // 
+            this.teamInformationRookieYear.AutoSize = true;
+            this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationRookieYear, 16);
+            this.teamInformationRookieYear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teamInformationRookieYear.Location = new System.Drawing.Point(3, 600);
+            this.teamInformationRookieYear.Name = "teamInformationRookieYear";
+            this.teamInformationRookieYear.Size = new System.Drawing.Size(1395, 40);
+            this.teamInformationRookieYear.TabIndex = 9;
+            this.teamInformationRookieYear.Text = "Rookie Year:";
+            this.teamInformationRookieYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menuStrip1
             // 
@@ -1895,8 +2677,6 @@
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.teamsToolStripMenuItem,
             this.eventInformationToolStripMenuItem,
             this.importExportToolStripMenuItem,
             this.gameManualToolStripMenuItem,
@@ -1920,69 +2700,6 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.undoToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // undoToolStripMenuItem
-            // 
-            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.undoToolStripMenuItem.Text = "Undo";
-            // 
-            // teamsToolStripMenuItem
-            // 
-            this.teamsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addTeamToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.pullTeamsFromTheBlueAlliancecomToolStripMenuItem});
-            this.teamsToolStripMenuItem.Name = "teamsToolStripMenuItem";
-            this.teamsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.teamsToolStripMenuItem.Text = "Teams";
-            // 
-            // addTeamToolStripMenuItem
-            // 
-            this.addTeamToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.teamNumberTextBoxAddTeam,
-            this.teamNameTextBoxAddTeam,
-            this.submitToolStripMenuItem});
-            this.addTeamToolStripMenuItem.Name = "addTeamToolStripMenuItem";
-            this.addTeamToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
-            this.addTeamToolStripMenuItem.Text = "Add Team";
-            // 
-            // teamNumberTextBoxAddTeam
-            // 
-            this.teamNumberTextBoxAddTeam.Name = "teamNumberTextBoxAddTeam";
-            this.teamNumberTextBoxAddTeam.Size = new System.Drawing.Size(100, 23);
-            this.teamNumberTextBoxAddTeam.Text = "Team Number:";
-            // 
-            // teamNameTextBoxAddTeam
-            // 
-            this.teamNameTextBoxAddTeam.Name = "teamNameTextBoxAddTeam";
-            this.teamNameTextBoxAddTeam.Size = new System.Drawing.Size(100, 23);
-            this.teamNameTextBoxAddTeam.Text = "Team Name:";
-            // 
-            // submitToolStripMenuItem
-            // 
-            this.submitToolStripMenuItem.Name = "submitToolStripMenuItem";
-            this.submitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.submitToolStripMenuItem.Text = "Submit";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(275, 6);
-            // 
-            // pullTeamsFromTheBlueAlliancecomToolStripMenuItem
-            // 
-            this.pullTeamsFromTheBlueAlliancecomToolStripMenuItem.Name = "pullTeamsFromTheBlueAlliancecomToolStripMenuItem";
-            this.pullTeamsFromTheBlueAlliancecomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
-            this.pullTeamsFromTheBlueAlliancecomToolStripMenuItem.Text = "Pull Teams From TheBlueAlliance.com";
             // 
             // eventInformationToolStripMenuItem
             // 
@@ -2022,6 +2739,7 @@
             this.gameManualToolStripMenuItem.Name = "gameManualToolStripMenuItem";
             this.gameManualToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.gameManualToolStripMenuItem.Text = "Game Manual";
+            this.gameManualToolStripMenuItem.Click += new System.EventHandler(this.gameManualToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -2044,7 +2762,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 804);
+            this.ClientSize = new System.Drawing.Size(1417, 744);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -2082,7 +2800,15 @@
             this.matchBreakdownTableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchBreakdownFieldImageBox)).EndInit();
             this.matchBreakdownAutoGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.matchBreakdownTeleGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.matchBreakdownStacksGridView)).EndInit();
+            this.matchBreakDownOtherGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.teamComparisonTabPage.ResumeLayout(false);
             this.teamComparisonTableLayoutPanel.ResumeLayout(false);
             this.teamComparisonTableLayoutPanel.PerformLayout();
@@ -2114,15 +2840,6 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ComboBox teamSelector;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem teamsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addTeamToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem pullTeamsFromTheBlueAlliancecomToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox teamNumberTextBoxAddTeam;
-        private System.Windows.Forms.ToolStripTextBox teamNameTextBoxAddTeam;
-        private System.Windows.Forms.ToolStripMenuItem submitToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel scoutingTableLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel matchBreakdownTableLayoutPanel;
         private System.Windows.Forms.TabPage teamComparisonTabPage;
@@ -2207,7 +2924,7 @@
         private System.Windows.Forms.CheckBox scoutingBinPickupUprightCheckBox;
         private System.Windows.Forms.CheckBox scoutingBinPickupUpsideDownCheckBox;
         private System.Windows.Forms.CheckBox scoutingBinPickupSidewaysCheckBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label scoutingPushedLitterToLandFillLabel;
         private System.Windows.Forms.CheckBox scoutingPushedLitterToLandfill;
         private System.Windows.Forms.ToolStripMenuItem gameManualToolStripMenuItem;
         private System.Windows.Forms.Label scoutingHumanStationLabel;
@@ -2236,5 +2953,59 @@
         private System.Windows.Forms.CheckBox scoutingDriverRatingButton2;
         private System.Windows.Forms.CheckBox scoutingDriverRatingButton3;
         private System.Windows.Forms.CheckBox scoutingDriverRatingButton4;
+        private System.Windows.Forms.Label matchBreakDownDriveToAutozoneLabel;
+        private System.Windows.Forms.Label matchBreakDownRobotSetLabel;
+        private System.Windows.Forms.Label matchBreakDownToteSetLabel;
+        private System.Windows.Forms.Label matchBreakDownStackedToteSetLabel;
+        private System.Windows.Forms.Label matchBreakDownBinSetLabel;
+        private System.Windows.Forms.Label matchBreakDownBinsOffStepLabel;
+        private System.Windows.Forms.Label matchBreakDownDriveToAutozoneDisplay;
+        private System.Windows.Forms.Label matchBreakDownRobotSetDisplay;
+        private System.Windows.Forms.Label matchBreakDownToteSetDisplay;
+        private System.Windows.Forms.Label matchBreakDownStackedToteSetDisplay;
+        private System.Windows.Forms.Label matchBreakDownBinSetLabelDisplay;
+        private System.Windows.Forms.Label matchBreakDownBinsOffStepDisplay;
+        private System.Windows.Forms.Label matchBreakDownAutoFoulsLabel;
+        private System.Windows.Forms.Label matchBreakDownAutoFoulsDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleTotePickupLabel;
+        private System.Windows.Forms.Label matchBreakDownTeleTotePickupUprightDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleTotePickupUpsideDownDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleTotePickupSidewaysDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleBinPickup;
+        private System.Windows.Forms.Label matchBreakDownTeleBinPickupUprightDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleBinPickupUpsideDownDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleBinPickupSidewaysDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleHumanStation;
+        private System.Windows.Forms.Label matchBreakDownTeleHumanStationLoadingTotesDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleHumanStationStackTotesDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleHumanStationInsertLitterDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleThrowingLitterLabel;
+        private System.Windows.Forms.Label matchBreakDownTelePushingLitterLabel;
+        private System.Windows.Forms.Label matchBreakDownTelePushingLitterDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleThrowingLitterDisplay;
+        private System.Windows.Forms.Label matchBreakDownTeleFoulsLabel;
+        private System.Windows.Forms.Label matchBreakDownTeleFoulsDisplay;
+        private System.Windows.Forms.Label teamInformationRookieYear;
+        private System.Windows.Forms.Label matchBreakDownAutoDidNothingLabel;
+        private System.Windows.Forms.Label matchBreakDownAutoDidNothingDisplay;
+        private System.Windows.Forms.DataGridView matchBreakdownStacksGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StackNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StackHeight;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn BinOnTop;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn LitterInBin;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn DidTheyMakeStack;
+        private System.Windows.Forms.RichTextBox matchBreakDownCommentsTextBox;
+        private System.Windows.Forms.GroupBox matchBreakDownOtherGroupBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label matchBreakDownDriveRatingLabel;
+        private System.Windows.Forms.Label matchBreakDownCoopertitionLabel;
+        private System.Windows.Forms.Label matchBreakDownDriverRatingDisplay;
+        private System.Windows.Forms.Label matchBreakDownCoopertitionSetDisplay;
+        private System.Windows.Forms.Label matchBreakDownFinalScoresLabel;
+        private System.Windows.Forms.Label matchBreakDownFinalScoresRedDisplay;
+        private System.Windows.Forms.Label matchBreakDownCoopertitionStackDisplay;
+        private System.Windows.Forms.Label matchBreakDownFinalScoresBlueDisplay;
+        private System.Windows.Forms.Label matchBreakDownAuthorDisplay;
+        private System.Windows.Forms.Label matchBreakDownTimeCreatedDisplay;
     }
 }
