@@ -640,11 +640,8 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             }
                             catch (MySqlException exception)
                             {
-                                UsefulSnippets.ReportCrash(exception);
-                                Console.WriteLine(exception.ErrorCode);
-                                Console.WriteLine(exception.Message);
-                                Console.Write("Avoided Duplicated When Importing!");
-                                ConsoleWindow.AddItem("Avoided Duplicated When Importing!");
+                                Console.Write(exception.ToString());
+                                ConsoleWindow.AddItem(exception.ToString());
                             }
                         }
                     }
