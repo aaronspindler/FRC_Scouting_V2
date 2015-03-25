@@ -38,6 +38,7 @@ namespace FRC_Scouting_V2
 
         public string Drive_Train { get; set; }
         public int Number_Of_Robots { get; set; }
+        public Boolean Does_It_have_A_Ramp { get; set; }
 
         public Boolean Can_It_Manipulate_Totes { get; set; }
         public Boolean Can_It_Manipulate_Bins { get; set; }
@@ -52,11 +53,6 @@ namespace FRC_Scouting_V2
         public Boolean Human_Tote_Loading { get; set; }
         public Boolean Human_Litter_Loading { get; set; }
         public Boolean Human_Litter_Throwing { get; set; }
-
-        public Boolean Does_It_have_A_Ramp { get; set; }
-
-        public string Know_Weaknesses { get; set; }
-        public string Known_Strengths { get; set; }
 
         public string Comments { get; set; }
 

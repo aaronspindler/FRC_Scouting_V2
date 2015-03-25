@@ -174,12 +174,6 @@
     <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East.Designer.cs">
       <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East_Information.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East_Information.Designer.cs">
-      <DependentUpon>RecycleRush_GTR_East_Information.cs</DependentUpon>
-    </Compile>
     <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_GTR_East.resx">
       <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_GTR_East_Information.resx">
-      <DependentUpon>RecycleRush_GTR_East_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Northbay.resx">
       <DependentUpon>RecycleRush_Northbay.cs</DependentUpon>
