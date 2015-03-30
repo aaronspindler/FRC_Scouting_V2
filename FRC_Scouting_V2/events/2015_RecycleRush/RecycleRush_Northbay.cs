@@ -68,6 +68,12 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private Boolean leftClick;
         private int startingX;
         private int startingY;
+
+        byte[] Front_Picture;
+        byte[] Left_Side_Picture;
+        byte[] Left_Isometric_Picture;
+        byte[] Other_Picture;
+
         string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
         List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>(); 
 
@@ -143,9 +149,9 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             try
             {
-                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves");
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Matches");
                 string jsonText = JsonConvert.SerializeObject(match, Formatting.Indented);
-                string matchLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\RecycleRush_Northbay_" + Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value) + "_" + currentTeamName + ".json");
+                string matchLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Matches\\RecycleRush_Northbay_" + Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value) + "_" + currentTeamName + ".json");
                 File.WriteAllText(matchLocation, jsonText);
             }
             catch (Exception exception)
@@ -319,6 +325,16 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             teamInformationTeamNumber.Text = ("Team Number: " + teamNumberArray[teamSelector.SelectedIndex]);
 
             ResetMatchBreakdownInterface();
+
+            Front_Picture = null;
+            Left_Side_Picture = null;
+            Left_Isometric_Picture = null;
+            Other_Picture = null;
+
+            pitScoutingEditaorFrontPictureLabel.Text = "Front Picture:";
+            pitScoutingEditorSidePictureLabel.Text = "Side Picture:";
+            pitScoutingEditorSideIsometricPictureLabel.Text = "Side Isometric Picture:";
+            pitScoutingEditorOtherPictureLabel.Text = "Other Picture:";
 
             try
             {
@@ -615,14 +631,14 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private void matchScoutingDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog.InitialDirectory = assemblyPath + "\\Saves\\";
+            importationOpenFileDialog.InitialDirectory = assemblyPath + "\\Saves\\Matches";
             if (Home.internetAvailable)
             {
                 if (MessageBox.Show("The importation of these files can take a long time, are you sure you want to continue?", "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
                 {
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    if (importationOpenFileDialog.ShowDialog() == DialogResult.OK)
                     {
-                        foreach (var t in openFileDialog.FileNames)
+                        foreach (var t in importationOpenFileDialog.FileNames)
                         {
                             var match = JsonConvert.DeserializeObject<RecycleRush_Scout_Match>(File.ReadAllText(t));
                             try
@@ -652,27 +668,98 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private void pitScoutingEditorSubmitButton_Click(object sender, EventArgs e)
         {
+            var pitScout = new RecycleRush_Pit_Scouting_Team
+            {
+                Author = Settings.Default.username,
+                Time_Created = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss"),
+                UniqueID = Guid.NewGuid().ToString(),
+                Team_Number = currentTeamNumber,
+                Team_Name = currentTeamName,
+                Drive_Train = pitScoutingEditorRobotSpecsDriveTrainTextBox.Text,
+                Number_Of_Robots = Convert.ToInt32(pitScoutingEditorRobotSpecsNumberOfRobotsNumUpDown.Value),
+                Does_It_have_A_Ramp = pitScoutingEditorRobotSpecsDoTheyHaveARampCheckBox.Checked,
+                Can_It_Manipulate_Totes = pitScoutingEditorManipulationTotesCheckBox.Checked,
+                Can_It_Manipulate_Bins = pitScoutingEditorManipulationBinsCheckBox.Checked,
+                Can_It_Manipulate_Litter = pitScoutingEditorManipulationLitterCheckBox.Checked,
+                Needs_Special_Starting_Position = pitScoutingEditorStartingLocationSpecificLocationCheckBox.Checked,
+                Special_Starting_Position = pitScoutingEditorStartingLocationSpecificStartingLocationTextBox.Text,
+                Max_Stack_Height = Convert.ToInt32(pitScoutingEditorStackInformationMaxStackHeightNumUpDown.Value),
+                Max_Bin_On_Stack_Height = Convert.ToInt32(pitScoutingEditorStackInformationMaxStackWithBinNumUpDown.Value),
+                Human_Tote_Loading = pitScoutingEditorHumanInteractionToteLoadingCheckBox.Checked,
+                Human_Litter_Loading = pitScoutingEditorHumanInteractionLitterLoadingCheckBox.Checked,
+                Human_Litter_Throwing = pitScoutingEditorHumanInteractionLitterThrowingCheckBox.Checked,
+                Comments = pitScoutingEditorCommentsTextBox.Text,
+                Front_Picture = Front_Picture,
+                Left_Side_Picture = Left_Side_Picture,
+                Left_Isometric_Picture = Left_Isometric_Picture,
+                Other_Picture = Other_Picture
+            };
 
+            try
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Pits");
+                string jsonText = JsonConvert.SerializeObject(pitScout, Formatting.Indented);
+                string pitLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Pits\\RecycleRush_Northbay_" + currentTeamName + ".json");
+                File.WriteAllText(pitLocation, jsonText);
+            }
+            catch (Exception exception)
+            {
+                Console.Write("Error Occured: " + exception.Message);
+                ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+                UsefulSnippets.ReportCrash(exception);
+            }
         }
 
         private void pitScoutingEditorFrontPictureFileSelectorButton_Click(object sender, EventArgs e)
         {
-
+            if(pictureOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileLoc = pictureOpenFileDialog.FileName;
+                pitScoutingEditaorFrontPictureLabel.Text = fileLoc;
+                
+                FileStream fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                Front_Picture = br.ReadBytes((int)fs.Length);
+            }
         }
 
         private void pitScoutingEditorSidePictureFileSelectorButton_Click(object sender, EventArgs e)
         {
+            if (pictureOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileLoc = pictureOpenFileDialog.FileName;
+                pitScoutingEditorSidePictureLabel.Text = fileLoc;
 
+                FileStream fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                Left_Side_Picture = br.ReadBytes((int)fs.Length);
+            }
         }
 
         private void pitScoutingEditorSideIsometricPictureFileSelectorButton_Click(object sender, EventArgs e)
         {
+            if (pictureOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileLoc = pictureOpenFileDialog.FileName;
+                pitScoutingEditorSideIsometricPictureLabel.Text = fileLoc;
 
+                FileStream fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                Left_Isometric_Picture = br.ReadBytes((int)fs.Length);
+            }
         }
 
         private void pitScoutingEditorOtherPictureFileSelectorButton_Click(object sender, EventArgs e)
         {
+            if (pictureOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileLoc = pictureOpenFileDialog.FileName;
+                pitScoutingEditorOtherPictureLabel.Text = fileLoc;
 
+                FileStream fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                Other_Picture = br.ReadBytes((int)fs.Length);
+            }
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
