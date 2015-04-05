@@ -23,14 +23,13 @@ FRC_Scouting_V2
 
 ### To-Do
 - 2015 RecycleRush
-  - [ ] Pit Scouting
-    - [ ] Data Editor
-        - [ ] UI
-        - [ ] Backend
-    - [ ] Data Viewer
-        - [ ] UI
-        - [ ] Backend
-    - [ ] Team Object
+  - [x] Pit Scouting
+    - [x] Data Editor
+        - [x] UI
+        - [x] Backend
+    - [x] Data Viewer
+        - [x] UI
+        - [x] Backend
   - [x] Scouting
     - [x] UI
     - [x] Backend
