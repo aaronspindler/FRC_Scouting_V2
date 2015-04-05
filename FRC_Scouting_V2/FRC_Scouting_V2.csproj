@@ -156,18 +156,6 @@
     <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.Designer.cs">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship.Designer.cs">
-      <DependentUpon>RecycleRush_Championship.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship_Information.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Championship_Information.Designer.cs">
-      <DependentUpon>RecycleRush_Championship_Information.cs</DependentUpon>
-    </Compile>
     <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,12 +259,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.resx">
       <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Championship.resx">
-      <DependentUpon>RecycleRush_Championship.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Championship_Information.resx">
-      <DependentUpon>RecycleRush_Championship_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_GTR_East.resx">
       <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>

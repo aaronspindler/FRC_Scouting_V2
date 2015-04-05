@@ -519,6 +519,34 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         }
 
+        public void ResetPitScoutingViewerInterface()
+        {
+            pitScoutingViewerEntryInformationAuthorDisplay.Text = "";
+            pitScoutingViewerEntryInformationLastEditorDisplay.Text = "";
+            pitScoutingViewerEntryInformationTimeCreatedDisplay.Text = "";
+            pitScoutingViewerManipulationTotesDisplay.Text = "";
+            pitScoutingViewerManipulationBinsDisplay.Text = "";
+            pitScoutingViewerManipulationLitterDisplay.Text = "";
+            pitScoutingViewerRobotSpecsNumRobotsDisplay.Text = "";
+            pitScoutingViewerRobotSpecsDriveTrainTextBox.Text = "Drive Train:";
+            pitScoutingViewerRobotSpecsDoesItHaveARampDisplay.Text = "";
+            pitScoutingViewerStartingLocationDoesItNeedSpecificStartingLocationDisplay.Text = "";
+            pitScoutingViewerStartingLocationSpecificStartingLocationTextBox.Text = "If so where?";
+            pitScoutingViewerStackInformationMaxStackHeightDisplay.Text = "";
+            pitScoutingViewerStackInformationMaxHeightWithBinDisplay.Text = "";
+            pitScoutingViewerPictureBox.Image = null;
+            pitScoutingViewerHumanInteractionToteLoadingDisplay.Text = "";
+            pitScoutingViewerHumanInteractionLitterLoadingDisplay.Text = "";
+            pitScoutingViewerHumanInteractionLitterThrowingDisplay.Text = "";
+            pitScoutingViewerCommentsBox.Text = "Comments:";
+
+        }
+
+        public void ResetPitScoutingEditorInterface()
+        {
+            
+        }
+
         private void gameManualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var proc = new Process();
