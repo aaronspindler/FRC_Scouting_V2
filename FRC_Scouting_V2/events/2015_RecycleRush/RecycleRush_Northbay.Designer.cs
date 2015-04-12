@@ -3580,7 +3580,7 @@
             this.tableLayoutPanel11.SetRowSpan(this.pitScoutingEditorRobotSpecsDriveTrainTextBox, 3);
             this.pitScoutingEditorRobotSpecsDriveTrainTextBox.Size = new System.Drawing.Size(220, 69);
             this.pitScoutingEditorRobotSpecsDriveTrainTextBox.TabIndex = 4;
-            this.pitScoutingEditorRobotSpecsDriveTrainTextBox.Text = "Drive Train:";
+            this.pitScoutingEditorRobotSpecsDriveTrainTextBox.Text = "Drive Train";
             // 
             // pitScoutingEditorRobotSpecsDoTheyHaveARampCheckBox
             // 
@@ -3648,7 +3648,7 @@
             this.pitScoutingEditorStartingLocationSpecificStartingLocationTextBox.Name = "pitScoutingEditorStartingLocationSpecificStartingLocationTextBox";
             this.pitScoutingEditorStartingLocationSpecificStartingLocationTextBox.Size = new System.Drawing.Size(220, 25);
             this.pitScoutingEditorStartingLocationSpecificStartingLocationTextBox.TabIndex = 1;
-            this.pitScoutingEditorStartingLocationSpecificStartingLocationTextBox.Text = "if so where:";
+            this.pitScoutingEditorStartingLocationSpecificStartingLocationTextBox.Text = "if so where";
             // 
             // pitScoutingEditorStackInformationGroupBox
             // 
@@ -3803,7 +3803,7 @@
             this.pitScoutingEditorTableLayout.SetRowSpan(this.pitScoutingEditorCommentsTextBox, 10);
             this.pitScoutingEditorCommentsTextBox.Size = new System.Drawing.Size(845, 174);
             this.pitScoutingEditorCommentsTextBox.TabIndex = 8;
-            this.pitScoutingEditorCommentsTextBox.Text = "Comments:";
+            this.pitScoutingEditorCommentsTextBox.Text = "Comments";
             // 
             // pitScoutingEditorSubmitButton
             // 
