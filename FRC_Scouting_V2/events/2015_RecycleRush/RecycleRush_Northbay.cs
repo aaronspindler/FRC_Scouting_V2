@@ -956,22 +956,61 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private void pitScoutingViewerFrontPictureButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Front_Picture);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                ConsoleWindow.AddItem(ex.Message);
+            }
         }
 
         private void pitScoutingViewerSidePictureButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Left_Side_Picture);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                ConsoleWindow.AddItem(ex.Message);
+            }
         }
 
         private void pitScoutingViewerIsometricPictureButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Left_Isometric_Picture);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                ConsoleWindow.AddItem(ex.Message);
+            }
         }
 
         private void pitScoutingViewerOtherPictureButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Other_Picture);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                ConsoleWindow.AddItem(ex.Message);
+            }
+        }
 
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
     }
 }
