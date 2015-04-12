@@ -207,10 +207,8 @@
             this.pitScoutingViewerEntryInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.pitScoutingViewerEntryInformationAuthorLabel = new System.Windows.Forms.Label();
-            this.pitScoutingViewerEntryInformationLastEditorLabel = new System.Windows.Forms.Label();
             this.pitScoutingViewerEntryInformationTimeCreatedLabel = new System.Windows.Forms.Label();
             this.pitScoutingViewerEntryInformationAuthorDisplay = new System.Windows.Forms.Label();
-            this.pitScoutingViewerEntryInformationLastEditorDisplay = new System.Windows.Forms.Label();
             this.pitScoutingViewerEntryInformationTimeCreatedDisplay = new System.Windows.Forms.Label();
             this.pitScoutingViewerManipulationGroupbox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
@@ -2769,19 +2767,17 @@
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationAuthorLabel, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationLastEditorLabel, 0, 1);
-            this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationTimeCreatedLabel, 0, 2);
+            this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationTimeCreatedLabel, 0, 1);
             this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationAuthorDisplay, 1, 0);
-            this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationLastEditorDisplay, 1, 1);
-            this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationTimeCreatedDisplay, 1, 2);
+            this.tableLayoutPanel15.Controls.Add(this.pitScoutingViewerEntryInformationTimeCreatedDisplay, 1, 1);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 4;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel15.RowCount = 3;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel15.Size = new System.Drawing.Size(328, 83);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
@@ -2796,22 +2792,11 @@
             this.pitScoutingViewerEntryInformationAuthorLabel.Text = "Author:";
             this.pitScoutingViewerEntryInformationAuthorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pitScoutingViewerEntryInformationLastEditorLabel
-            // 
-            this.pitScoutingViewerEntryInformationLastEditorLabel.AutoSize = true;
-            this.pitScoutingViewerEntryInformationLastEditorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitScoutingViewerEntryInformationLastEditorLabel.Location = new System.Drawing.Point(3, 25);
-            this.pitScoutingViewerEntryInformationLastEditorLabel.Name = "pitScoutingViewerEntryInformationLastEditorLabel";
-            this.pitScoutingViewerEntryInformationLastEditorLabel.Size = new System.Drawing.Size(158, 25);
-            this.pitScoutingViewerEntryInformationLastEditorLabel.TabIndex = 1;
-            this.pitScoutingViewerEntryInformationLastEditorLabel.Text = "Last Editor:";
-            this.pitScoutingViewerEntryInformationLastEditorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pitScoutingViewerEntryInformationTimeCreatedLabel
             // 
             this.pitScoutingViewerEntryInformationTimeCreatedLabel.AutoSize = true;
             this.pitScoutingViewerEntryInformationTimeCreatedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitScoutingViewerEntryInformationTimeCreatedLabel.Location = new System.Drawing.Point(3, 50);
+            this.pitScoutingViewerEntryInformationTimeCreatedLabel.Location = new System.Drawing.Point(3, 25);
             this.pitScoutingViewerEntryInformationTimeCreatedLabel.Name = "pitScoutingViewerEntryInformationTimeCreatedLabel";
             this.pitScoutingViewerEntryInformationTimeCreatedLabel.Size = new System.Drawing.Size(158, 25);
             this.pitScoutingViewerEntryInformationTimeCreatedLabel.TabIndex = 2;
@@ -2828,21 +2813,11 @@
             this.pitScoutingViewerEntryInformationAuthorDisplay.TabIndex = 3;
             this.pitScoutingViewerEntryInformationAuthorDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pitScoutingViewerEntryInformationLastEditorDisplay
-            // 
-            this.pitScoutingViewerEntryInformationLastEditorDisplay.AutoSize = true;
-            this.pitScoutingViewerEntryInformationLastEditorDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitScoutingViewerEntryInformationLastEditorDisplay.Location = new System.Drawing.Point(167, 25);
-            this.pitScoutingViewerEntryInformationLastEditorDisplay.Name = "pitScoutingViewerEntryInformationLastEditorDisplay";
-            this.pitScoutingViewerEntryInformationLastEditorDisplay.Size = new System.Drawing.Size(158, 25);
-            this.pitScoutingViewerEntryInformationLastEditorDisplay.TabIndex = 4;
-            this.pitScoutingViewerEntryInformationLastEditorDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pitScoutingViewerEntryInformationTimeCreatedDisplay
             // 
             this.pitScoutingViewerEntryInformationTimeCreatedDisplay.AutoSize = true;
             this.pitScoutingViewerEntryInformationTimeCreatedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitScoutingViewerEntryInformationTimeCreatedDisplay.Location = new System.Drawing.Point(167, 50);
+            this.pitScoutingViewerEntryInformationTimeCreatedDisplay.Location = new System.Drawing.Point(167, 25);
             this.pitScoutingViewerEntryInformationTimeCreatedDisplay.Name = "pitScoutingViewerEntryInformationTimeCreatedDisplay";
             this.pitScoutingViewerEntryInformationTimeCreatedDisplay.Size = new System.Drawing.Size(158, 25);
             this.pitScoutingViewerEntryInformationTimeCreatedDisplay.TabIndex = 5;
@@ -3307,6 +3282,7 @@
             this.pitScoutingViewerOtherPictureButton.TabIndex = 11;
             this.pitScoutingViewerOtherPictureButton.Text = "Other Picture";
             this.pitScoutingViewerOtherPictureButton.UseVisualStyleBackColor = true;
+            this.pitScoutingViewerOtherPictureButton.Click += new System.EventHandler(this.pitScoutingViewerOtherPictureButton_Click);
             // 
             // pitScoutingViewerIsometricPictureButton
             // 
@@ -3319,6 +3295,7 @@
             this.pitScoutingViewerIsometricPictureButton.TabIndex = 10;
             this.pitScoutingViewerIsometricPictureButton.Text = "Isometric Picture";
             this.pitScoutingViewerIsometricPictureButton.UseVisualStyleBackColor = true;
+            this.pitScoutingViewerIsometricPictureButton.Click += new System.EventHandler(this.pitScoutingViewerIsometricPictureButton_Click);
             // 
             // pitScoutingViewerSidePictureButton
             // 
@@ -3331,6 +3308,7 @@
             this.pitScoutingViewerSidePictureButton.TabIndex = 9;
             this.pitScoutingViewerSidePictureButton.Text = "Side Picture";
             this.pitScoutingViewerSidePictureButton.UseVisualStyleBackColor = true;
+            this.pitScoutingViewerSidePictureButton.Click += new System.EventHandler(this.pitScoutingViewerSidePictureButton_Click);
             // 
             // pitScoutingViewerFrontPictureButton
             // 
@@ -3343,6 +3321,7 @@
             this.pitScoutingViewerFrontPictureButton.TabIndex = 8;
             this.pitScoutingViewerFrontPictureButton.Text = "Front Picture";
             this.pitScoutingViewerFrontPictureButton.UseVisualStyleBackColor = true;
+            this.pitScoutingViewerFrontPictureButton.Click += new System.EventHandler(this.pitScoutingViewerFrontPictureButton_Click);
             // 
             // tabPage2
             // 
@@ -4535,10 +4514,8 @@
         private System.Windows.Forms.GroupBox pitScoutingViewerEntryInformationGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Label pitScoutingViewerEntryInformationAuthorLabel;
-        private System.Windows.Forms.Label pitScoutingViewerEntryInformationLastEditorLabel;
         private System.Windows.Forms.Label pitScoutingViewerEntryInformationTimeCreatedLabel;
         private System.Windows.Forms.Label pitScoutingViewerEntryInformationAuthorDisplay;
-        private System.Windows.Forms.Label pitScoutingViewerEntryInformationLastEditorDisplay;
         private System.Windows.Forms.Label pitScoutingViewerEntryInformationTimeCreatedDisplay;
         private System.Windows.Forms.GroupBox pitScoutingViewerManipulationGroupbox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
