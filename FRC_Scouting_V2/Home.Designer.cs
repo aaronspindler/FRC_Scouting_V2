@@ -36,8 +36,6 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changelogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.fRC3710TeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licenseInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -140,8 +138,6 @@
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changelogToolStripMenuItem,
-            this.toolStripSeparator1,
             this.fRC3710TeamInformationToolStripMenuItem,
             this.programInformationToolStripMenuItem,
             this.licenseInformationToolStripMenuItem,
@@ -151,18 +147,6 @@
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
             this.informationToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
             this.informationToolStripMenuItem.Text = "Information";
-            // 
-            // changelogToolStripMenuItem
-            // 
-            this.changelogToolStripMenuItem.Name = "changelogToolStripMenuItem";
-            this.changelogToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
-            this.changelogToolStripMenuItem.Text = "Changelog";
-            this.changelogToolStripMenuItem.Click += new System.EventHandler(this.changelogToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(218, 6);
             // 
             // fRC3710TeamInformationToolStripMenuItem
             // 
@@ -328,10 +312,8 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.PictureBox frcLogoPictureBox;
         private System.Windows.Forms.ToolStripMenuItem resetAllSavedSettingsToDefaultToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changelogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem licenseInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teamInformationLookupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripComboBox eventSelector;
         private System.Windows.Forms.ToolStripMenuItem showConsoleWindowToolStripMenuItem;

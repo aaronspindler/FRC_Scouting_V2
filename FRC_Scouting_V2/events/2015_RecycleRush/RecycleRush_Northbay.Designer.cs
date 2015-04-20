@@ -306,6 +306,7 @@
             this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pitScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -313,7 +314,6 @@
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.importationOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pictureOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.pitScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -2415,7 +2415,7 @@
             this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.teamComparisonTabPage.Size = new System.Drawing.Size(1107, 638);
             this.teamComparisonTabPage.TabIndex = 5;
-            this.teamComparisonTabPage.Text = "Team Comparison";
+            this.teamComparisonTabPage.Text = "Team Comparison - Work in Progress";
             this.teamComparisonTabPage.UseVisualStyleBackColor = true;
             // 
             // teamComparisonTableLayoutPanel
@@ -4126,7 +4126,7 @@
             this.matchScoutingDataToolStripMenuItem,
             this.pitScoutingDataToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // matchScoutingDataToolStripMenuItem
@@ -4136,15 +4136,22 @@
             this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
             this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click);
             // 
+            // pitScoutingDataToolStripMenuItem
+            // 
+            this.pitScoutingDataToolStripMenuItem.Name = "pitScoutingDataToolStripMenuItem";
+            this.pitScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.pitScoutingDataToolStripMenuItem.Text = "Pit Scouting Data";
+            this.pitScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(107, 6);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // gameManualToolStripMenuItem
@@ -4180,13 +4187,6 @@
             // 
             this.pictureOpenFileDialog.FileName = "openFileDialog1";
             this.pictureOpenFileDialog.Filter = "Image files | *.jpg";
-            // 
-            // pitScoutingDataToolStripMenuItem
-            // 
-            this.pitScoutingDataToolStripMenuItem.Name = "pitScoutingDataToolStripMenuItem";
-            this.pitScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.pitScoutingDataToolStripMenuItem.Text = "Pit Scouting Data";
-            this.pitScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem_Click);
             // 
             // RecycleRush_Northbay
             // 
