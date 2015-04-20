@@ -69,10 +69,10 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private int startingX;
         private int startingY;
 
-        byte[] Front_Picture;
-        byte[] Left_Side_Picture;
-        byte[] Left_Isometric_Picture;
-        byte[] Other_Picture;
+        byte[] Front_Picture = new byte[]{};
+        byte[] Left_Side_Picture = new byte[] { };
+        byte[] Left_Isometric_Picture = new byte[] { };
+        byte[] Other_Picture = new byte[] { };
 
         private RecycleRush_Pit_Scouting_Team currentTeamPit;
 
@@ -816,31 +816,66 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             try
             {
                 //Removes entries for a team before adding new info!
-                if (GetNumberOfPitEntriesForATeam(currentTeamNumber) == 1)
+                //if (GetNumberOfPitEntriesForATeam(currentTeamNumber) == 1)
+                //{
+                //    try
+                //    {
+                //        MySqlConnection conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                //        conn.Open();
+                //        string commandText = string.Format("DELETE FROM RecycleRush_Northbay_Pits WHERE `Team_Number`='{0}';", currentTeamNumber);
+                //        MySqlCommand cmd = new MySqlCommand(commandText, conn);
+                //        cmd.ExecuteNonQuery();
+                //        conn.Close();
+                //    }
+                //    catch (Exception exception)
+                //    {
+                //        Console.WriteLine("Error Occured: " + exception.Message);
+                //        ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+                //        UsefulSnippets.ReportCrash(exception);
+                //    }
+                //}
+
+                //MySqlConnection conn1 = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                //conn1.Open();
+                //string commandText1 = String.Format("INSERT INTO `RecycleRush_Northbay_Pits`(`EntryID`,`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}');", GetNumberOfRowsInPitEntry(), pitScout.UniqueID, pitScout.Author, pitScout.Time_Created, pitScout.Team_Number, pitScout.Team_Name, pitScout.Drive_Train, pitScout.Number_Of_Robots, Convert.ToInt16(pitScout.Can_It_Manipulate_Totes), Convert.ToInt16(pitScout.Can_It_Manipulate_Bins), Convert.ToInt16(pitScout.Can_It_Manipulate_Litter), Convert.ToInt16(pitScout.Needs_Special_Starting_Position), pitScout.Special_Starting_Position, pitScout.Max_Stack_Height, pitScout.Max_Bin_On_Stack_Height, Convert.ToInt16(pitScout.Human_Tote_Loading), Convert.ToInt16(pitScout.Human_Litter_Loading), Convert.ToInt16(pitScout.Human_Litter_Throwing), Convert.ToInt16(pitScout.Does_It_have_A_Ramp), pitScout.Comments, pitScout.Front_Picture, pitScout.Left_Side_Picture, pitScout.Left_Isometric_Picture, pitScout.Other_Picture);
+                //MySqlCommand cmd1 = new MySqlCommand(commandText1, conn1);
+                //cmd1.ExecuteNonQuery();
+                //conn1.Close();
+
+                using (MySqlConnection con = new MySqlConnection(snippets.MakeMySqlConnectionString()))
                 {
-                    try
+                    string query = "INSERT INTO `RecycleRush_Northbay_Pits`(`EntryID`,`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,-`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@EntryID,@UniqueID,@Author,@Time_Created,@TeamNumber,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
-                        MySqlConnection conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
-                        conn.Open();
-                        string commandText = string.Format("DELETE FROM RecycleRush_Northbay_Pits WHERE `Team_Number`='{0}';", currentTeamNumber);
-                        MySqlCommand cmd = new MySqlCommand(commandText, conn);
+                        cmd.Parameters.AddWithValue("@EntryID", GetNumberOfRowsInPitEntry());
+                        cmd.Parameters.AddWithValue("@UniqueID", pitScout.UniqueID);
+                        cmd.Parameters.AddWithValue("@Author", pitScout.Author);
+                        cmd.Parameters.AddWithValue("@Time_Created`", pitScout.Time_Created);
+                        cmd.Parameters.AddWithValue("@Team_Number", pitScout.Team_Number);
+                        cmd.Parameters.AddWithValue("@Team_Name", pitScout.Team_Name);
+                        cmd.Parameters.AddWithValue("@Drive_Train", pitScout.Drive_Train);
+                        cmd.Parameters.AddWithValue("@Number_Of_Robots", pitScout.Number_Of_Robots);
+                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Totes", pitScout.Can_It_Manipulate_Totes);
+                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Bins", pitScout.Can_It_Manipulate_Bins);
+                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Litter", pitScout.Can_It_Manipulate_Litter);
+                        cmd.Parameters.AddWithValue("@Needs_Special_Starting_Position", pitScout.Needs_Special_Starting_Position);
+                        cmd.Parameters.AddWithValue("@Special_Starting_Position", pitScout.Special_Starting_Position);
+                        cmd.Parameters.AddWithValue("@Max_Stack_Height", pitScout.Max_Stack_Height);
+                        cmd.Parameters.AddWithValue("@Max_Bin_On_Stack_Height", pitScout.Max_Bin_On_Stack_Height);
+                        cmd.Parameters.AddWithValue("@Human_Tote_Loading", pitScout.Human_Tote_Loading);
+                        cmd.Parameters.AddWithValue("@Human_Litter_Loading", pitScout.Human_Litter_Loading);
+                        cmd.Parameters.AddWithValue("@Human_Litter_Throwing", pitScout.Human_Litter_Throwing);
+                        cmd.Parameters.AddWithValue("@Does_It_have_A_Ramp", pitScout.Does_It_have_A_Ramp);
+                        cmd.Parameters.AddWithValue("@Comments", pitScout.Comments);
+                        cmd.Parameters.AddWithValue("@Front_Picture", pitScout.Front_Picture);
+                        cmd.Parameters.AddWithValue("@Left_Side_Picture", pitScout.Left_Side_Picture);
+                        cmd.Parameters.AddWithValue("@Left_Isometric_Picture", pitScout.Left_Isometric_Picture);
+                        cmd.Parameters.AddWithValue("@Other_Picture", pitScout.Other_Picture);
+                        con.Open();
                         cmd.ExecuteNonQuery();
-                        conn.Close();
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine("Error Occured: " + exception.Message);
-                        ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                        UsefulSnippets.ReportCrash(exception);
+                        con.Close();
                     }
                 }
-
-                MySqlConnection conn1 = new MySqlConnection(snippets.MakeMySqlConnectionString());
-                conn1.Open();
-                string commandText1 = String.Format("INSERT INTO `RecycleRush_Northbay_Pits`(`EntryID`,`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}');", GetNumberOfRowsInPitEntry(), pitScout.UniqueID, pitScout.Author, pitScout.Time_Created, pitScout.Team_Number, pitScout.Team_Name, pitScout.Drive_Train, pitScout.Number_Of_Robots, Convert.ToInt16(pitScout.Can_It_Manipulate_Totes), Convert.ToInt16(pitScout.Can_It_Manipulate_Bins), Convert.ToInt16(pitScout.Can_It_Manipulate_Litter), Convert.ToInt16(pitScout.Needs_Special_Starting_Position), pitScout.Special_Starting_Position, pitScout.Max_Stack_Height, pitScout.Max_Bin_On_Stack_Height, Convert.ToInt16(pitScout.Human_Tote_Loading), Convert.ToInt16(pitScout.Human_Litter_Loading), Convert.ToInt16(pitScout.Human_Litter_Throwing), Convert.ToInt16(pitScout.Does_It_have_A_Ramp), pitScout.Comments, pitScout.Front_Picture, pitScout.Left_Side_Picture, pitScout.Left_Isometric_Picture, pitScout.Other_Picture);
-                MySqlCommand cmd1 = new MySqlCommand(commandText1, conn1);
-                cmd1.ExecuteNonQuery();
-                conn1.Close();
             }
             catch (Exception exception)
             {
@@ -857,7 +892,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 string fileLoc = pictureOpenFileDialog.FileName;
                 pitScoutingEditaorFrontPictureLabel.Text = fileLoc;
-                
+
                 FileStream fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 Front_Picture = br.ReadBytes((int)fs.Length);
