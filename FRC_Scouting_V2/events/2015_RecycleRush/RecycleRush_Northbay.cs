@@ -816,41 +816,33 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             try
             {
                 //Removes entries for a team before adding new info!
-                //if (GetNumberOfPitEntriesForATeam(currentTeamNumber) == 1)
-                //{
-                //    try
-                //    {
-                //        MySqlConnection conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
-                //        conn.Open();
-                //        string commandText = string.Format("DELETE FROM RecycleRush_Northbay_Pits WHERE `Team_Number`='{0}';", currentTeamNumber);
-                //        MySqlCommand cmd = new MySqlCommand(commandText, conn);
-                //        cmd.ExecuteNonQuery();
-                //        conn.Close();
-                //    }
-                //    catch (Exception exception)
-                //    {
-                //        Console.WriteLine("Error Occured: " + exception.Message);
-                //        ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                //        UsefulSnippets.ReportCrash(exception);
-                //    }
-                //}
-
-                //MySqlConnection conn1 = new MySqlConnection(snippets.MakeMySqlConnectionString());
-                //conn1.Open();
-                //string commandText1 = String.Format("INSERT INTO `RecycleRush_Northbay_Pits`(`EntryID`,`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}');", GetNumberOfRowsInPitEntry(), pitScout.UniqueID, pitScout.Author, pitScout.Time_Created, pitScout.Team_Number, pitScout.Team_Name, pitScout.Drive_Train, pitScout.Number_Of_Robots, Convert.ToInt16(pitScout.Can_It_Manipulate_Totes), Convert.ToInt16(pitScout.Can_It_Manipulate_Bins), Convert.ToInt16(pitScout.Can_It_Manipulate_Litter), Convert.ToInt16(pitScout.Needs_Special_Starting_Position), pitScout.Special_Starting_Position, pitScout.Max_Stack_Height, pitScout.Max_Bin_On_Stack_Height, Convert.ToInt16(pitScout.Human_Tote_Loading), Convert.ToInt16(pitScout.Human_Litter_Loading), Convert.ToInt16(pitScout.Human_Litter_Throwing), Convert.ToInt16(pitScout.Does_It_have_A_Ramp), pitScout.Comments, pitScout.Front_Picture, pitScout.Left_Side_Picture, pitScout.Left_Isometric_Picture, pitScout.Other_Picture);
-                //MySqlCommand cmd1 = new MySqlCommand(commandText1, conn1);
-                //cmd1.ExecuteNonQuery();
-                //conn1.Close();
+                if (GetNumberOfPitEntriesForATeam(currentTeamNumber) == 1)
+                {
+                    try
+                    {
+                        MySqlConnection conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                        conn.Open();
+                        string commandText = string.Format("DELETE FROM RecycleRush_Northbay_Pits WHERE `Team_Number`='{0}';", currentTeamNumber);
+                        MySqlCommand cmd = new MySqlCommand(commandText, conn);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine("Error Occured: " + exception.Message);
+                        ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+                        UsefulSnippets.ReportCrash(exception);
+                    }
+                }
 
                 using (MySqlConnection con = new MySqlConnection(snippets.MakeMySqlConnectionString()))
                 {
-                    string query = "INSERT INTO `RecycleRush_Northbay_Pits`(`EntryID`,`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,-`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@EntryID,@UniqueID,@Author,@Time_Created,@TeamNumber,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
+                    string query = "INSERT INTO `RecycleRush_Northbay_Pits`(`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@UniqueID,@Author,@Time_Created,@Team_Number,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@EntryID", GetNumberOfRowsInPitEntry());
                         cmd.Parameters.AddWithValue("@UniqueID", pitScout.UniqueID);
                         cmd.Parameters.AddWithValue("@Author", pitScout.Author);
-                        cmd.Parameters.AddWithValue("@Time_Created`", pitScout.Time_Created);
+                        cmd.Parameters.AddWithValue("@Time_Created", pitScout.Time_Created);
                         cmd.Parameters.AddWithValue("@Team_Number", pitScout.Team_Number);
                         cmd.Parameters.AddWithValue("@Team_Name", pitScout.Team_Name);
                         cmd.Parameters.AddWithValue("@Drive_Train", pitScout.Drive_Train);
@@ -872,7 +864,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         cmd.Parameters.AddWithValue("@Left_Isometric_Picture", pitScout.Left_Isometric_Picture);
                         cmd.Parameters.AddWithValue("@Other_Picture", pitScout.Other_Picture);
                         con.Open();
-                        cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery(); 
                         con.Close();
                     }
                 }
@@ -966,33 +958,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
-            }
-            return numberOfRows;
-        }
-
-        public int GetNumberOfRowsInPitEntry()
-        {
-            int numberOfRows = 0;
-            try
-            {
-                string mySqlConnectionString = snippets.MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
-
-                using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + "RecycleRush_Northbay_Pits", conn))
-                {
-                    conn.Open();
-                    numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
-                    conn.Close();
-                    cmd.Dispose();
-                    return numberOfRows;
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
-                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
-                ConsoleWindow.AddItem(ex.Message);
             }
             return numberOfRows;
         }
