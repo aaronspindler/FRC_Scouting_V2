@@ -25,9 +25,11 @@
 
 //@author xNovax
 
+using CrashReporterDotNET;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -36,9 +38,6 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using CrashReporterDotNET;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -62,17 +61,14 @@ namespace FRC_Scouting_V2
                 return false;
             }
         }
+
         public void ClearSettings()
         {
-            if (
-                MessageBox.Show("Are you sure you want to reset your settings?", "Are you sure?",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to reset your settings?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
             {
                 Settings.Default.Reset();
                 Settings.Default.Save();
-                MessageBox.Show("You have successfully reset all settings to default!",
-                    "Settings have been reset to default!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You have successfully reset all settings to default!", "Settings have been reset to default!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -135,7 +131,7 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Program.selectedEventName, conn))
                 {
@@ -162,10 +158,9 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
-                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}",
-                    Program.selectedEventName, teamNumber);
+                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM {0} WHERE TeamNumber={1}", Program.selectedEventName, teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))
                 {
                     conn.Open();
@@ -190,7 +185,7 @@ namespace FRC_Scouting_V2
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
+            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
 
             return number;
         }
@@ -220,7 +215,7 @@ namespace FRC_Scouting_V2
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
@@ -310,7 +305,7 @@ namespace FRC_Scouting_V2
             {
                 var conn = new MySqlConnection(MakeMySqlConnectionString());
                 conn.Open();
-                var cmd = new MySqlCommand {Connection = conn};
+                var cmd = new MySqlCommand { Connection = conn };
                 var commands = new List<string>
                 {
                     "CREATE TABLE `AerialAssist_Northbay` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default', `TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8",
@@ -341,20 +336,19 @@ namespace FRC_Scouting_V2
                 conn.Close();
 
                 //Team List Databases
-                SQLiteConnection.CreateFile("TeamLists.sqlite");
-                SQLiteConnection m_dbConnection;
-                m_dbConnection = new SQLiteConnection("Data Source=TeamLists.sqlite;Version=3;");
-                m_dbConnection.Open();
-                var sql = "CREATE TABLE RecycleRush_GTR_East_Teams (name VARCHAR(100), teamNumber INT)";
-                var command = new SQLiteCommand(sql, m_dbConnection);
-                command.ExecuteNonQuery();
-                var sql2 = "CREATE TABLE RecycleRush_NorthBay_Teams (name VARCHAR(100), teamNumber INT)";
-                var command2 = new SQLiteCommand(sql2, m_dbConnection);
-                command2.ExecuteNonQuery();
-                m_dbConnection.Close();
-                Console.WriteLine("Team List Database Successfully Initialized");
-                ConsoleWindow.AddItem("Team List Database Successfully Initialized");
-
+                //SQLiteConnection.CreateFile("TeamLists.sqlite");
+                //SQLiteConnection m_dbConnection;
+                //m_dbConnection = new SQLiteConnection("Data Source=TeamLists.sqlite;Version=3;");
+                //m_dbConnection.Open();
+                //var sql = "CREATE TABLE RecycleRush_GTR_East_Teams (name VARCHAR(100), teamNumber INT)";
+                //var command = new SQLiteCommand(sql, m_dbConnection);
+                //command.ExecuteNonQuery();
+                //var sql2 = "CREATE TABLE RecycleRush_NorthBay_Teams (name VARCHAR(100), teamNumber INT)";
+                //var command2 = new SQLiteCommand(sql2, m_dbConnection);
+                //command2.ExecuteNonQuery();
+                //m_dbConnection.Close();
+                //Console.WriteLine("Team List Database Successfully Initialized");
+                //ConsoleWindow.AddItem("Team List Database Successfully Initialized");
             }
             catch (MySqlException ex)
             {
@@ -389,7 +383,7 @@ namespace FRC_Scouting_V2
             double sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
 
             //Put it all together
-            ret = Math.Sqrt((sum)/enumerable.Count() - 1);
+            ret = Math.Sqrt((sum) / enumerable.Count() - 1);
             return ret;
         }
 

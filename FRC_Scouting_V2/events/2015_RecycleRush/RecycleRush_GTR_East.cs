@@ -23,6 +23,10 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Models;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,17 +36,14 @@ using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Models;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
     public partial class RecycleRush_GTR_East : Form
     {
         //Variables
-        UsefulSnippets snippets = new UsefulSnippets();
+        private UsefulSnippets snippets = new UsefulSnippets();
+
         private List<RecycleRush_Stack> matchStacks = new List<RecycleRush_Stack>();
 
         private readonly string[] teamNameArray =
@@ -71,8 +72,8 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private Boolean leftClick;
         private int startingX;
         private int startingY;
-        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
-        List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>(); 
+        private string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
+        private List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>();
 
         public RecycleRush_GTR_East()
         {
@@ -215,6 +216,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     case 0:
                         scoutingFieldPictureBox.Image = Resources.RecycleRush_2015_No_Items;
                         break;
+
                     case 1:
                         scoutingFieldPictureBox.Image = Resources.RecycleRush_2015_With_Items;
                         break;
@@ -336,11 +338,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             if (Home.internetAvailable)
             {
-               string url = ("http://www.thebluealliance.com/api/v2/team/frc");
+                string url = ("http://www.thebluealliance.com/api/v2/team/frc");
                 url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
                 string downloadedData;
                 var wc = new WebClient();
-                wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
 
                 try
                 {
@@ -419,7 +421,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         matchBreakdownMatchList.Items.Add("Match Number: " + reader["Match_Number"]);
                     }
                     conn.Close();
-
                 }
                 catch (MySqlException exception)
                 {
@@ -503,7 +504,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             matchBreakDownCommentsTextBox.Text = "Comments:";
 
             matchBreakdownStacksGridView.Rows.Clear();
-
         }
 
         private void gameManualToolStripMenuItem_Click(object sender, EventArgs e)
@@ -538,6 +538,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     case 0:
                         matchBreakdownFieldImageBox.Image = Resources.RecycleRush_2015_No_Items;
                         break;
+
                     case 1:
                         matchBreakdownFieldImageBox.Image = Resources.RecycleRush_2015_With_Items;
                         break;

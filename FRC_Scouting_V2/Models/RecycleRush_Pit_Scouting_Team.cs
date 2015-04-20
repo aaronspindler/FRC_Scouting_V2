@@ -26,38 +26,52 @@ using System;
 
 namespace FRC_Scouting_V2
 {
-    class RecycleRush_Pit_Scouting_Team
+    internal class RecycleRush_Pit_Scouting_Team
     {
         public string Author { get; set; }
+
         public string Time_Created { get; set; }
+
         public string UniqueID { get; set; }
 
         public int Team_Number { get; set; }
+
         public string Team_Name { get; set; }
 
         public string Drive_Train { get; set; }
+
         public int Number_Of_Robots { get; set; }
+
         public Boolean Does_It_have_A_Ramp { get; set; }
 
         public Boolean Can_It_Manipulate_Totes { get; set; }
+
         public Boolean Can_It_Manipulate_Bins { get; set; }
+
         public Boolean Can_It_Manipulate_Litter { get; set; }
 
         public Boolean Needs_Special_Starting_Position { get; set; }
+
         public string Special_Starting_Position { get; set; }
 
         public int Max_Stack_Height { get; set; }
+
         public int Max_Bin_On_Stack_Height { get; set; }
 
         public Boolean Human_Tote_Loading { get; set; }
+
         public Boolean Human_Litter_Loading { get; set; }
+
         public Boolean Human_Litter_Throwing { get; set; }
 
         public string Comments { get; set; }
 
         public byte[] Front_Picture { get; set; }
+
         public byte[] Left_Side_Picture { get; set; }
+
         public byte[] Left_Isometric_Picture { get; set; }
+
         public byte[] Other_Picture { get; set; }
     }
 }

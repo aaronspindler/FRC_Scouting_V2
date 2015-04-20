@@ -23,13 +23,13 @@
 //SOFTWARE.
 //===============================================================================
 
+using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
@@ -88,28 +88,46 @@ namespace FRC_Scouting_V2.Information_Forms
         public class Alliances
         {
             public object[] declines { get; set; }
+
             public string[] picks { get; set; }
         }
 
         public class Event
         {
             public string key { get; set; }
+
             public string website { get; set; }
+
             public bool official { get; set; }
+
             public string end_date { get; set; }
+
             public string name { get; set; }
+
             public string short_name { get; set; }
+
             public object facebook_eid { get; set; }
+
             public object event_district_string { get; set; }
+
             public string venue_address { get; set; }
+
             public int event_district { get; set; }
+
             public string location { get; set; }
+
             public string event_code { get; set; }
+
             public int year { get; set; }
+
             public Webcast[] webcast { get; set; }
+
             public Alliances[] alliances { get; set; }
+
             public string event_type_string { get; set; }
+
             public string start_date { get; set; }
+
             public int event_type { get; set; }
         }
 
@@ -126,6 +144,7 @@ namespace FRC_Scouting_V2.Information_Forms
         public class Webcast
         {
             public string type { get; set; }
+
             public string channel { get; set; }
         }
     }

@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 
 namespace FRC_Scouting_V2
 {
@@ -313,7 +313,7 @@ namespace FRC_Scouting_V2
             try
             {
                 string mySqlConnectionString = us.MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 conn.Open();
 

@@ -23,6 +23,10 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Models;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,17 +36,14 @@ using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Models;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
     public partial class RecycleRush_Northbay : Form
     {
         //Variables
-        UsefulSnippets snippets = new UsefulSnippets();
+        private UsefulSnippets snippets = new UsefulSnippets();
+
         private List<RecycleRush_Stack> matchStacks = new List<RecycleRush_Stack>();
 
         private readonly string[] teamNameArray =
@@ -69,15 +70,15 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private int startingX;
         private int startingY;
 
-        byte[] Front_Picture = new byte[]{};
-        byte[] Left_Side_Picture = new byte[] { };
-        byte[] Left_Isometric_Picture = new byte[] { };
-        byte[] Other_Picture = new byte[] { };
+        private byte[] Front_Picture = new byte[] { };
+        private byte[] Left_Side_Picture = new byte[] { };
+        private byte[] Left_Isometric_Picture = new byte[] { };
+        private byte[] Other_Picture = new byte[] { };
 
         private RecycleRush_Pit_Scouting_Team currentTeamPit;
 
-        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
-        List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>(); 
+        private string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
+        private List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>();
 
         public RecycleRush_Northbay()
         {
@@ -220,6 +221,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     case 0:
                         scoutingFieldPictureBox.Image = Resources.RecycleRush_2015_No_Items;
                         break;
+
                     case 1:
                         scoutingFieldPictureBox.Image = Resources.RecycleRush_2015_With_Items;
                         break;
@@ -351,11 +353,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             if (Home.internetAvailable)
             {
-               string url = ("http://www.thebluealliance.com/api/v2/team/frc");
+                string url = ("http://www.thebluealliance.com/api/v2/team/frc");
                 url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
                 string downloadedData;
                 var wc = new WebClient();
-                wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
 
                 try
                 {
@@ -434,7 +436,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         matchBreakdownMatchList.Items.Add("Match Number: " + reader["Match_Number"]);
                     }
                     conn.Close();
-
                 }
                 catch (MySqlException exception)
                 {
@@ -591,7 +592,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             matchBreakDownCommentsTextBox.Text = "Comments:";
 
             matchBreakdownStacksGridView.Rows.Clear();
-
         }
 
         public void ResetPitScoutingViewerInterface()
@@ -613,12 +613,10 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             pitScoutingViewerHumanInteractionLitterLoadingDisplay.Text = "";
             pitScoutingViewerHumanInteractionLitterThrowingDisplay.Text = "";
             pitScoutingViewerCommentsBox.Text = "Comments:";
-
         }
 
         public void ResetPitScoutingEditorInterface()
         {
-            
         }
 
         private void gameManualToolStripMenuItem_Click(object sender, EventArgs e)
@@ -653,6 +651,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     case 0:
                         matchBreakdownFieldImageBox.Image = Resources.RecycleRush_2015_No_Items;
                         break;
+
                     case 1:
                         matchBreakdownFieldImageBox.Image = Resources.RecycleRush_2015_With_Items;
                         break;
@@ -698,7 +697,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             matchBreakdownStacksGridView.Rows.Clear();
             for (var i = 0; i < teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks.Count; i++)
-                
             {
                 matchBreakdownStacksGridView.Rows.Add((i + 1).ToString(),
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Stack_Height,
@@ -864,7 +862,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         cmd.Parameters.AddWithValue("@Left_Isometric_Picture", pitScout.Left_Isometric_Picture);
                         cmd.Parameters.AddWithValue("@Other_Picture", pitScout.Other_Picture);
                         con.Open();
-                        cmd.ExecuteNonQuery(); 
+                        cmd.ExecuteNonQuery();
                         con.Close();
                     }
                 }
@@ -881,7 +879,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private void pitScoutingEditorFrontPictureFileSelectorButton_Click(object sender, EventArgs e)
         {
-            if(pictureOpenFileDialog.ShowDialog() == DialogResult.OK)
+            if (pictureOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fileLoc = pictureOpenFileDialog.FileName;
                 pitScoutingEditaorFrontPictureLabel.Text = fileLoc;
@@ -945,7 +943,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 string mySqlConnectionString = snippets.MakeMySqlConnectionString();
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
-                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM RecycleRush_Northbay_Pits WHERE Team_Number={0}",teamNumber);
+                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM RecycleRush_Northbay_Pits WHERE Team_Number={0}", teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))
                 {
                     conn.Open();
@@ -1020,7 +1018,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             importationOpenFileDialog.InitialDirectory = assemblyPath + "\\Saves\\Pits";
             if (Home.internetAvailable)
             {
-                if (MessageBox.Show("The importation of these files can take a long time, are you sure you want to continue?","Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) ==DialogResult.Yes)
+                if (MessageBox.Show("The importation of these files can take a long time, are you sure you want to continue?", "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
                 {
                     if (importationOpenFileDialog.ShowDialog() == DialogResult.OK)
                     {
@@ -1060,21 +1058,21 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                         cmd.Parameters.AddWithValue("@Team_Name", pitScout.Team_Name);
                                         cmd.Parameters.AddWithValue("@Drive_Train", pitScout.Drive_Train);
                                         cmd.Parameters.AddWithValue("@Number_Of_Robots", pitScout.Number_Of_Robots);
-                                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Totes",pitScout.Can_It_Manipulate_Totes);
-                                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Bins",pitScout.Can_It_Manipulate_Bins);
-                                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Litter",pitScout.Can_It_Manipulate_Litter);
-                                        cmd.Parameters.AddWithValue("@Needs_Special_Starting_Position",pitScout.Needs_Special_Starting_Position);
-                                        cmd.Parameters.AddWithValue("@Special_Starting_Position",pitScout.Special_Starting_Position);
+                                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Totes", pitScout.Can_It_Manipulate_Totes);
+                                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Bins", pitScout.Can_It_Manipulate_Bins);
+                                        cmd.Parameters.AddWithValue("@Can_It_Manipulate_Litter", pitScout.Can_It_Manipulate_Litter);
+                                        cmd.Parameters.AddWithValue("@Needs_Special_Starting_Position", pitScout.Needs_Special_Starting_Position);
+                                        cmd.Parameters.AddWithValue("@Special_Starting_Position", pitScout.Special_Starting_Position);
                                         cmd.Parameters.AddWithValue("@Max_Stack_Height", pitScout.Max_Stack_Height);
-                                        cmd.Parameters.AddWithValue("@Max_Bin_On_Stack_Height",pitScout.Max_Bin_On_Stack_Height);
+                                        cmd.Parameters.AddWithValue("@Max_Bin_On_Stack_Height", pitScout.Max_Bin_On_Stack_Height);
                                         cmd.Parameters.AddWithValue("@Human_Tote_Loading", pitScout.Human_Tote_Loading);
-                                        cmd.Parameters.AddWithValue("@Human_Litter_Loading",pitScout.Human_Litter_Loading);
-                                        cmd.Parameters.AddWithValue("@Human_Litter_Throwing",pitScout.Human_Litter_Throwing);
+                                        cmd.Parameters.AddWithValue("@Human_Litter_Loading", pitScout.Human_Litter_Loading);
+                                        cmd.Parameters.AddWithValue("@Human_Litter_Throwing", pitScout.Human_Litter_Throwing);
                                         cmd.Parameters.AddWithValue("@Does_It_have_A_Ramp", pitScout.Does_It_have_A_Ramp);
                                         cmd.Parameters.AddWithValue("@Comments", pitScout.Comments);
                                         cmd.Parameters.AddWithValue("@Front_Picture", pitScout.Front_Picture);
                                         cmd.Parameters.AddWithValue("@Left_Side_Picture", pitScout.Left_Side_Picture);
-                                        cmd.Parameters.AddWithValue("@Left_Isometric_Picture",pitScout.Left_Isometric_Picture);
+                                        cmd.Parameters.AddWithValue("@Left_Isometric_Picture", pitScout.Left_Isometric_Picture);
                                         cmd.Parameters.AddWithValue("@Other_Picture", pitScout.Other_Picture);
                                         con.Open();
                                         cmd.ExecuteNonQuery();

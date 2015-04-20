@@ -14,6 +14,8 @@
 //The above copyright notice and this permission notice shall be included in all
 //copies or substantial portions of the Software.
 
+using FRC_Scouting_V2.Properties;
+
 //THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,7 +26,6 @@
 //===============================================================================
 using System;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
@@ -51,7 +52,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private int randomNum = 100;
         private string sponsorLevel;
         private string sponsorName;
-
 
         public void UpdateSponsor()
         {

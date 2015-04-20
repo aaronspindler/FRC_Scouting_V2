@@ -23,6 +23,9 @@
 //SOFTWARE.
 //===============================================================================
 
+using FRC_Scouting_V2.Events._2015_RecycleRush;
+using FRC_Scouting_V2.Information_Forms;
+using FRC_Scouting_V2.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -31,9 +34,6 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Events._2015_RecycleRush;
-using FRC_Scouting_V2.Information_Forms;
-using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -42,6 +42,7 @@ namespace FRC_Scouting_V2
     {
         //Variables
         public static Boolean internetAvailable;
+
         private readonly Thread internetTestTH = new Thread(checkInternet);
         private readonly UsefulSnippets us = new UsefulSnippets();
 
@@ -160,7 +161,6 @@ namespace FRC_Scouting_V2
                     var settingsPage = new MainSettings();
                     settingsPage.Show();
                     WindowState = FormWindowState.Minimized;
-
                 }
                 Settings.Default.firstTimeLoad = false;
                 Settings.Default.Save();
@@ -246,7 +246,6 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
