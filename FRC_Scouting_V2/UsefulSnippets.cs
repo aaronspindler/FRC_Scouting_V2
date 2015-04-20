@@ -28,6 +28,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -390,6 +391,20 @@ namespace FRC_Scouting_V2
             //Put it all together
             ret = Math.Sqrt((sum)/enumerable.Count() - 1);
             return ret;
+        }
+
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
+
+        public byte[] imageToByteArray(Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
         }
     }
 }

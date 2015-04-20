@@ -158,7 +158,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.Write("Error Occured: " + exception.Message);
+                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                 UsefulSnippets.ReportCrash(exception);
             }
@@ -175,7 +175,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.Write("Error Occured: " + exception.Message);
+                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                 UsefulSnippets.ReportCrash(exception);
             }
@@ -345,7 +345,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.Write("Error Occured: " + exception.Message);
+                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
             }
 
@@ -438,7 +438,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 }
                 catch (MySqlException exception)
                 {
-                    Console.Write("Error Occured: " + exception.Message);
+                    Console.WriteLine("Error Occured: " + exception.Message);
                     ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                 }
 
@@ -483,27 +483,35 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     }
                     conn.Close();
 
-                    pitScoutingViewerEntryInformationAuthorDisplay.Text = currentTeamPit.Author;
-                    pitScoutingViewerEntryInformationTimeCreatedDisplay.Text = currentTeamPit.Time_Created;
-                    pitScoutingViewerManipulationTotesDisplay.Text = currentTeamPit.Can_It_Manipulate_Totes.ToString();
-                    pitScoutingViewerManipulationBinsDisplay.Text = currentTeamPit.Can_It_Manipulate_Bins.ToString();
-                    pitScoutingViewerManipulationLitterDisplay.Text = currentTeamPit.Can_It_Manipulate_Litter.ToString();
-                    pitScoutingViewerRobotSpecsNumRobotsDisplay.Text = currentTeamPit.Number_Of_Robots.ToString();
-                    pitScoutingViewerRobotSpecsDriveTrainTextBox.Text = "Drive Train: " + currentTeamPit.Drive_Train;
-                    pitScoutingViewerRobotSpecsDoesItHaveARampDisplay.Text = currentTeamPit.Does_It_have_A_Ramp.ToString();
-                    pitScoutingViewerStartingLocationDoesItNeedSpecificStartingLocationDisplay.Text = currentTeamPit.Needs_Special_Starting_Position.ToString();
-                    pitScoutingViewerStartingLocationSpecificStartingLocationTextBox.Text = "If so where? " + currentTeamPit.Special_Starting_Position;
-                    pitScoutingViewerStackInformationMaxStackHeightDisplay.Text = currentTeamPit.Max_Stack_Height.ToString();
-                    pitScoutingViewerStackInformationMaxHeightWithBinDisplay.Text = currentTeamPit.Max_Bin_On_Stack_Height.ToString();
-                    pitScoutingViewerPictureBox.Image = null;
-                    pitScoutingViewerHumanInteractionToteLoadingDisplay.Text = currentTeamPit.Human_Tote_Loading.ToString();
-                    pitScoutingViewerHumanInteractionLitterLoadingDisplay.Text = currentTeamPit.Human_Litter_Loading.ToString();
-                    pitScoutingViewerHumanInteractionLitterThrowingDisplay.Text = currentTeamPit.Human_Litter_Throwing.ToString();
-                    pitScoutingViewerCommentsBox.Text = "Comments: " + currentTeamPit.Comments;
+                    try
+                    {
+                        pitScoutingViewerEntryInformationAuthorDisplay.Text = currentTeamPit.Author;
+                        pitScoutingViewerEntryInformationTimeCreatedDisplay.Text = currentTeamPit.Time_Created;
+                        pitScoutingViewerManipulationTotesDisplay.Text = currentTeamPit.Can_It_Manipulate_Totes.ToString();
+                        pitScoutingViewerManipulationBinsDisplay.Text = currentTeamPit.Can_It_Manipulate_Bins.ToString();
+                        pitScoutingViewerManipulationLitterDisplay.Text = currentTeamPit.Can_It_Manipulate_Litter.ToString();
+                        pitScoutingViewerRobotSpecsNumRobotsDisplay.Text = currentTeamPit.Number_Of_Robots.ToString();
+                        pitScoutingViewerRobotSpecsDriveTrainTextBox.Text = "Drive Train: " + currentTeamPit.Drive_Train;
+                        pitScoutingViewerRobotSpecsDoesItHaveARampDisplay.Text = currentTeamPit.Does_It_have_A_Ramp.ToString();
+                        pitScoutingViewerStartingLocationDoesItNeedSpecificStartingLocationDisplay.Text = currentTeamPit.Needs_Special_Starting_Position.ToString();
+                        pitScoutingViewerStartingLocationSpecificStartingLocationTextBox.Text = "If so where? " + currentTeamPit.Special_Starting_Position;
+                        pitScoutingViewerStackInformationMaxStackHeightDisplay.Text = currentTeamPit.Max_Stack_Height.ToString();
+                        pitScoutingViewerStackInformationMaxHeightWithBinDisplay.Text = currentTeamPit.Max_Bin_On_Stack_Height.ToString();
+                        pitScoutingViewerPictureBox.Image = null;
+                        pitScoutingViewerHumanInteractionToteLoadingDisplay.Text = currentTeamPit.Human_Tote_Loading.ToString();
+                        pitScoutingViewerHumanInteractionLitterLoadingDisplay.Text = currentTeamPit.Human_Litter_Loading.ToString();
+                        pitScoutingViewerHumanInteractionLitterThrowingDisplay.Text = currentTeamPit.Human_Litter_Throwing.ToString();
+                        pitScoutingViewerCommentsBox.Text = "Comments: " + currentTeamPit.Comments;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                        ConsoleWindow.AddItem("Error: " + ex.Message);
+                    }
                 }
                 catch (MySqlException exception)
                 {
-                    Console.Write("Error Occured: " + exception.Message);
+                    Console.WriteLine("Error Occured: " + exception.Message);
                     ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                 }
             }
@@ -748,7 +756,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             }
                             catch (MySqlException exception)
                             {
-                                Console.Write(exception.ToString());
+                                Console.WriteLine(exception.ToString());
                                 ConsoleWindow.AddItem(exception.ToString());
                             }
                         }
@@ -800,7 +808,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.Write("Error Occured: " + exception.Message);
+                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                 UsefulSnippets.ReportCrash(exception);
             }
@@ -821,7 +829,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     }
                     catch (Exception exception)
                     {
-                        Console.Write("Error Occured: " + exception.Message);
+                        Console.WriteLine("Error Occured: " + exception.Message);
                         ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                         UsefulSnippets.ReportCrash(exception);
                     }
@@ -836,7 +844,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.Write("Error Occured: " + exception.Message);
+                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                 UsefulSnippets.ReportCrash(exception);
             }
@@ -958,7 +966,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Front_Picture);
+                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Front_Picture);
             }
             catch (Exception ex)
             {
@@ -971,7 +979,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Left_Side_Picture);
+                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Left_Side_Picture);
             }
             catch (Exception ex)
             {
@@ -984,7 +992,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Left_Isometric_Picture);
+                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Left_Isometric_Picture);
             }
             catch (Exception ex)
             {
@@ -997,20 +1005,13 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = byteArrayToImage(currentTeamPit.Other_Picture);
+                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Other_Picture);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 ConsoleWindow.AddItem(ex.Message);
             }
-        }
-
-        public Image byteArrayToImage(byte[] byteArrayIn)
-        {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
         }
     }
 }
