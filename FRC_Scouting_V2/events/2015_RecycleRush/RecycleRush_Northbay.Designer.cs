@@ -282,7 +282,7 @@
             this.pitScoutingEditorSubmitButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.pitScoutingEditaorFrontPictureLabel = new System.Windows.Forms.Label();
+            this.pitScoutingEditorFrontPictureLabel = new System.Windows.Forms.Label();
             this.pitScoutingEditorSidePictureLabel = new System.Windows.Forms.Label();
             this.pitScoutingEditorSideIsometricPictureLabel = new System.Windows.Forms.Label();
             this.pitScoutingEditorOtherPictureLabel = new System.Windows.Forms.Label();
@@ -3815,7 +3815,7 @@
             this.tableLayoutPanel21.ColumnCount = 2;
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel21.Controls.Add(this.pitScoutingEditaorFrontPictureLabel, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.pitScoutingEditorFrontPictureLabel, 0, 0);
             this.tableLayoutPanel21.Controls.Add(this.pitScoutingEditorSidePictureLabel, 0, 1);
             this.tableLayoutPanel21.Controls.Add(this.pitScoutingEditorSideIsometricPictureLabel, 0, 2);
             this.tableLayoutPanel21.Controls.Add(this.pitScoutingEditorOtherPictureLabel, 0, 3);
@@ -3835,17 +3835,17 @@
             this.tableLayoutPanel21.Size = new System.Drawing.Size(396, 119);
             this.tableLayoutPanel21.TabIndex = 0;
             // 
-            // pitScoutingEditaorFrontPictureLabel
+            // pitScoutingEditorFrontPictureLabel
             // 
-            this.pitScoutingEditaorFrontPictureLabel.AutoSize = true;
-            this.pitScoutingEditaorFrontPictureLabel.BackColor = System.Drawing.Color.Gainsboro;
-            this.pitScoutingEditaorFrontPictureLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pitScoutingEditaorFrontPictureLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pitScoutingEditaorFrontPictureLabel.Location = new System.Drawing.Point(3, 0);
-            this.pitScoutingEditaorFrontPictureLabel.Name = "pitScoutingEditaorFrontPictureLabel";
-            this.pitScoutingEditaorFrontPictureLabel.Size = new System.Drawing.Size(271, 30);
-            this.pitScoutingEditaorFrontPictureLabel.TabIndex = 0;
-            this.pitScoutingEditaorFrontPictureLabel.Text = "Front Picture:";
+            this.pitScoutingEditorFrontPictureLabel.AutoSize = true;
+            this.pitScoutingEditorFrontPictureLabel.BackColor = System.Drawing.Color.Gainsboro;
+            this.pitScoutingEditorFrontPictureLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pitScoutingEditorFrontPictureLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pitScoutingEditorFrontPictureLabel.Location = new System.Drawing.Point(3, 0);
+            this.pitScoutingEditorFrontPictureLabel.Name = "pitScoutingEditorFrontPictureLabel";
+            this.pitScoutingEditorFrontPictureLabel.Size = new System.Drawing.Size(271, 30);
+            this.pitScoutingEditorFrontPictureLabel.TabIndex = 0;
+            this.pitScoutingEditorFrontPictureLabel.Text = "Front Picture:";
             // 
             // pitScoutingEditorSidePictureLabel
             // 
@@ -4126,7 +4126,7 @@
             this.matchScoutingDataToolStripMenuItem,
             this.pitScoutingDataToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // matchScoutingDataToolStripMenuItem
@@ -4146,12 +4146,12 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(107, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // gameManualToolStripMenuItem
@@ -4568,7 +4568,7 @@
         private System.Windows.Forms.Button pitScoutingViewerFrontPictureButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
-        private System.Windows.Forms.Label pitScoutingEditaorFrontPictureLabel;
+        private System.Windows.Forms.Label pitScoutingEditorFrontPictureLabel;
         private System.Windows.Forms.Label pitScoutingEditorSidePictureLabel;
         private System.Windows.Forms.Label pitScoutingEditorSideIsometricPictureLabel;
         private System.Windows.Forms.Label pitScoutingEditorOtherPictureLabel;

@@ -335,7 +335,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             Left_Isometric_Picture = null;
             Other_Picture = null;
 
-            pitScoutingEditaorFrontPictureLabel.Text = "Front Picture:";
+            pitScoutingEditorFrontPictureLabel.Text = "Front Picture:";
             pitScoutingEditorSidePictureLabel.Text = "Side Picture:";
             pitScoutingEditorSideIsometricPictureLabel.Text = "Side Isometric Picture:";
             pitScoutingEditorOtherPictureLabel.Text = "Other Picture:";
@@ -446,6 +446,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 try
                 {
                     ResetPitScoutingViewerInterface();
+                    ResetPitScoutingEditorInterface();
                     var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
                     MySqlCommand cmd = conn.CreateCommand();
                     MySqlDataReader reader;
@@ -617,6 +618,24 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         public void ResetPitScoutingEditorInterface()
         {
+            pitScoutingEditorManipulationTotesCheckBox.Checked = false;
+            pitScoutingEditorManipulationBinsCheckBox.Checked = false;
+            pitScoutingEditorManipulationLitterCheckBox.Checked = false;
+            pitScoutingEditorRobotSpecsNumberOfRobotsNumUpDown.Value = 1;
+            pitScoutingEditorRobotSpecsDriveTrainTextBox.Text = "Drive Train";
+            pitScoutingEditorRobotSpecsDoTheyHaveARampCheckBox.Checked = false;
+            pitScoutingEditorStartingLocationSpecificLocationCheckBox.Checked = false;
+            pitScoutingEditorStartingLocationSpecificStartingLocationTextBox.Text = "if so where";
+            pitScoutingEditorStackInformationMaxStackHeightNumUpDown.Value = 0;
+            pitScoutingEditorStackInformationMaxStackWithBinNumUpDown.Value = 0;
+            pitScoutingEditorHumanInteractionToteLoadingCheckBox.Checked = false;
+            pitScoutingEditorHumanInteractionLitterLoadingCheckBox.Checked = false;
+            pitScoutingEditorHumanInteractionLitterThrowingCheckBox.Checked = false;
+            pitScoutingEditorCommentsTextBox.Text = "Comments";
+            pitScoutingEditorFrontPictureLabel.Text = "Front Picture:";
+            pitScoutingEditorSidePictureLabel.Text = "Side Picture:";
+            pitScoutingEditorSideIsometricPictureLabel.Text = "Side Isometric Picture:";
+            pitScoutingEditorOtherPictureLabel.Text = "Other Picture:";
         }
 
         private void gameManualToolStripMenuItem_Click(object sender, EventArgs e)
@@ -874,6 +893,79 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
                 UsefulSnippets.ReportCrash(exception);
             }
+
+            try
+            {
+                ResetPitScoutingViewerInterface();
+                var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                MySqlCommand cmd = conn.CreateCommand();
+                MySqlDataReader reader;
+                cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Northbay_Pits WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
+                conn.Open();
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    var currentPitScout = new RecycleRush_Pit_Scouting_Team
+                    {
+                        Author = reader["Author"].ToString(),
+                        Time_Created = reader["Time_Created"].ToString(),
+                        UniqueID = reader["UniqueID"].ToString(),
+                        Team_Number = Convert.ToInt32(reader["Team_Number"]),
+                        Team_Name = reader["Team_Name"].ToString(),
+                        Drive_Train = reader["Drive_Train"].ToString(),
+                        Number_Of_Robots = Convert.ToInt32(reader["Number_Of_Robots"]),
+                        Does_It_have_A_Ramp = Convert.ToBoolean(reader["Does_It_have_A_Ramp"]),
+                        Can_It_Manipulate_Totes = Convert.ToBoolean(reader["Can_It_Manipulate_Totes"]),
+                        Can_It_Manipulate_Bins = Convert.ToBoolean(reader["Can_It_Manipulate_Bins"]),
+                        Can_It_Manipulate_Litter = Convert.ToBoolean(reader["Can_It_Manipulate_Litter"]),
+                        Needs_Special_Starting_Position = Convert.ToBoolean(reader["Needs_Special_Starting_Position"]),
+                        Special_Starting_Position = reader["Special_Starting_Position"].ToString(),
+                        Max_Stack_Height = Convert.ToInt32(reader["Max_Stack_Height"]),
+                        Max_Bin_On_Stack_Height = Convert.ToInt32(reader["Max_Bin_On_Stack_Height"]),
+                        Human_Tote_Loading = Convert.ToBoolean(reader["Human_Tote_Loading"]),
+                        Human_Litter_Loading = Convert.ToBoolean(reader["Human_Litter_Loading"]),
+                        Human_Litter_Throwing = Convert.ToBoolean(reader["Human_Litter_Throwing"]),
+                        Comments = reader["Comments"].ToString(),
+                        Front_Picture = reader["Front_Picture"] as byte[],
+                        Left_Side_Picture = reader["Left_Side_Picture"] as byte[],
+                        Left_Isometric_Picture = reader["Left_Isometric_Picture"] as byte[],
+                        Other_Picture = reader["Other_Picture"] as byte[],
+                    };
+                    currentTeamPit = currentPitScout;
+                }
+                conn.Close();
+
+                try
+                {
+                    pitScoutingViewerEntryInformationAuthorDisplay.Text = currentTeamPit.Author;
+                    pitScoutingViewerEntryInformationTimeCreatedDisplay.Text = currentTeamPit.Time_Created;
+                    pitScoutingViewerManipulationTotesDisplay.Text = currentTeamPit.Can_It_Manipulate_Totes.ToString();
+                    pitScoutingViewerManipulationBinsDisplay.Text = currentTeamPit.Can_It_Manipulate_Bins.ToString();
+                    pitScoutingViewerManipulationLitterDisplay.Text = currentTeamPit.Can_It_Manipulate_Litter.ToString();
+                    pitScoutingViewerRobotSpecsNumRobotsDisplay.Text = currentTeamPit.Number_Of_Robots.ToString();
+                    pitScoutingViewerRobotSpecsDriveTrainTextBox.Text = "Drive Train: " + currentTeamPit.Drive_Train;
+                    pitScoutingViewerRobotSpecsDoesItHaveARampDisplay.Text = currentTeamPit.Does_It_have_A_Ramp.ToString();
+                    pitScoutingViewerStartingLocationDoesItNeedSpecificStartingLocationDisplay.Text = currentTeamPit.Needs_Special_Starting_Position.ToString();
+                    pitScoutingViewerStartingLocationSpecificStartingLocationTextBox.Text = "If so where? " + currentTeamPit.Special_Starting_Position;
+                    pitScoutingViewerStackInformationMaxStackHeightDisplay.Text = currentTeamPit.Max_Stack_Height.ToString();
+                    pitScoutingViewerStackInformationMaxHeightWithBinDisplay.Text = currentTeamPit.Max_Bin_On_Stack_Height.ToString();
+                    pitScoutingViewerPictureBox.Image = null;
+                    pitScoutingViewerHumanInteractionToteLoadingDisplay.Text = currentTeamPit.Human_Tote_Loading.ToString();
+                    pitScoutingViewerHumanInteractionLitterLoadingDisplay.Text = currentTeamPit.Human_Litter_Loading.ToString();
+                    pitScoutingViewerHumanInteractionLitterThrowingDisplay.Text = currentTeamPit.Human_Litter_Throwing.ToString();
+                    pitScoutingViewerCommentsBox.Text = "Comments: " + currentTeamPit.Comments;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                    ConsoleWindow.AddItem("Error: " + ex.Message);
+                }
+            }
+            catch (MySqlException exception)
+            {
+                Console.WriteLine("Error Occured: " + exception.Message);
+                ConsoleWindow.AddItem("Error Occured: " + exception.Message);
+            }
             pitScoutingEditorSubmitButton.Enabled = true;
         }
 
@@ -882,7 +974,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             if (pictureOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fileLoc = pictureOpenFileDialog.FileName;
-                pitScoutingEditaorFrontPictureLabel.Text = fileLoc;
+                pitScoutingEditorFrontPictureLabel.Text = fileLoc;
 
                 FileStream fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
