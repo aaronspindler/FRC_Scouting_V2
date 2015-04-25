@@ -1,7 +1,7 @@
 FRC_Scouting_V2
 ===============
 
-![](http://i.gyazo.com/ad5d5bd28bd4936933b16fc2ee722e05.png)
+![](http://xnovax.net/wp-content/uploads/2015/04/RecycleRush_Scouting_UI.png)
 
   This is the second iteration of the FRC_Scouting program. The original version can be found at
   
