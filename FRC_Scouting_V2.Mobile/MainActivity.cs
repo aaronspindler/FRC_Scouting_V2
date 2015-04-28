@@ -1,30 +1,17 @@
-﻿using System;
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
 
 namespace FRC_Scouting_V2.Mobile
 {
-    [Activity(Label = "FRC_Scouting_V2.Mobile", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "FRC Scouting V2", MainLauncher = true, Icon = "@drawable/FRC_LOGO")]
     public class MainActivity : Activity
     {
-        int count = 1;
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
-
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
         }
     }
 }

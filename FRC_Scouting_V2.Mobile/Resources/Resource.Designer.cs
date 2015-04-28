@@ -45,7 +45,10 @@ namespace FRC_Scouting_V2.Mobile
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int FRC_LOGO = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
 			
 			static Drawable()
 			{
@@ -61,7 +64,10 @@ namespace FRC_Scouting_V2.Mobile
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int MyButton = 2131034112;
+			public const int linearLayout1 = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int spinner1 = 2131034113;
 			
 			static Id()
 			{
