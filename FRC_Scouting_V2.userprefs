@@ -1,0 +1,9 @@
+﻿<Properties StartupItem="FRC_Scouting_V2\FRC_Scouting_V2_Desktop.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FRC__Scouting__V2__Mobile AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
