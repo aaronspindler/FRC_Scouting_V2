@@ -285,7 +285,8 @@ namespace FRC_Scouting_V2
 
         private void resetAllSettingsButton_Click(object sender, EventArgs e)
         {
-            us.ClearSettings();
+            Settings.Default.Reset();
+            Settings.Default.Save();
         }
 
         private void showQuestionButtonsCheckBox_CheckedChanged(object sender, EventArgs e)
