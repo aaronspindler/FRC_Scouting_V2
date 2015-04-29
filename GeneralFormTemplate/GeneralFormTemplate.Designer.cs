@@ -52,7 +52,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 28);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(670, 28);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // currentTimeDisplay
@@ -60,9 +60,9 @@
             this.currentTimeDisplay.AutoSize = true;
             this.currentTimeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentTimeDisplay.ForeColor = System.Drawing.Color.Black;
-            this.currentTimeDisplay.Location = new System.Drawing.Point(203, 0);
+            this.currentTimeDisplay.Location = new System.Drawing.Point(338, 0);
             this.currentTimeDisplay.Name = "currentTimeDisplay";
-            this.currentTimeDisplay.Size = new System.Drawing.Size(194, 28);
+            this.currentTimeDisplay.Size = new System.Drawing.Size(329, 28);
             this.currentTimeDisplay.TabIndex = 1;
             this.currentTimeDisplay.Text = "Current Time: ";
             this.currentTimeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,7 +74,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(200, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(335, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 346);
+            this.ClientSize = new System.Drawing.Size(670, 443);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -44,7 +44,6 @@ namespace FRC_Scouting_V2
         public static Boolean internetAvailable;
 
         private readonly Thread internetTestTH = new Thread(checkInternet);
-        private readonly UsefulSnippets us = new UsefulSnippets();
 
         public Home()
         {
@@ -175,11 +174,6 @@ namespace FRC_Scouting_V2
             programInfo.Show();
         }
 
-        private void resetAllSavedSettingsToDefaultToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            us.ClearSettings();
-        }
-
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var mainSettings = new MainSettings();
@@ -235,7 +229,7 @@ namespace FRC_Scouting_V2
 
         private void initializeDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.InitializeDatabases();
+            MySQLMethods.InitializeDatabases();
         }
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)

@@ -11,7 +11,6 @@ namespace FRC_Scouting_V2
         private static readonly List<string> TimeStampList = new List<string>();
         private static readonly List<string> MessageList = new List<string>();
         private static Boolean itemAdded;
-        private UsefulSnippets us = new UsefulSnippets();
 
         public ConsoleWindow()
         {

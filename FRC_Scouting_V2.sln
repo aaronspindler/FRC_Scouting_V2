@@ -4,12 +4,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralFormTemplate", "GeneralFormTemplate\GeneralFormTemplate.csproj", "{92FB0185-6785-47E4-9A2D-73CF9BFD2F7D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{660EC2BD-0DEA-4DC8-A9FA-1867BA3C9EB1} = {660EC2BD-0DEA-4DC8-A9FA-1867BA3C9EB1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Scouting_V2.Mobile", "FRC_Scouting_V2.Mobile\FRC_Scouting_V2.Mobile.csproj", "{FDED2A45-6769-44CE-A3E8-46B4FAB6DCFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsefulSnippets", "UsefulSnippets\UsefulSnippets.csproj", "{660EC2BD-0DEA-4DC8-A9FA-1867BA3C9EB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Scouting_V2.Desktop", "FRC_Scouting_V2.Desktop\FRC_Scouting_V2.Desktop.csproj", "{EE59E6C2-0471-4B4C-A72C-A4CB4640180F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92FB0185-6785-47E4-9A2D-73CF9BFD2F7D} = {92FB0185-6785-47E4-9A2D-73CF9BFD2F7D}
+		{660EC2BD-0DEA-4DC8-A9FA-1867BA3C9EB1} = {660EC2BD-0DEA-4DC8-A9FA-1867BA3C9EB1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

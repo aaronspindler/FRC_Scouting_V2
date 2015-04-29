@@ -45,8 +45,6 @@
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.initializeDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventSelector = new System.Windows.Forms.ToolStripComboBox();
@@ -193,8 +191,6 @@
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showConsoleWindowToolStripMenuItem,
             this.toolStripSeparator3,
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem,
-            this.toolStripSeparator4,
             this.initializeDatabaseToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
@@ -203,31 +199,19 @@
             // showConsoleWindowToolStripMenuItem
             // 
             this.showConsoleWindowToolStripMenuItem.Name = "showConsoleWindowToolStripMenuItem";
-            this.showConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.showConsoleWindowToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.showConsoleWindowToolStripMenuItem.Text = "Console Window";
             this.showConsoleWindowToolStripMenuItem.Click += new System.EventHandler(this.showConsoleWindowToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(250, 6);
-            // 
-            // resetAllSavedSettingsToDefaultToolStripMenuItem
-            // 
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Name = "resetAllSavedSettingsToDefaultToolStripMenuItem";
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Text = "Reset All Saved Settings to Default";
-            this.resetAllSavedSettingsToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetAllSavedSettingsToDefaultToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(250, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(165, 6);
             // 
             // initializeDatabaseToolStripMenuItem
             // 
             this.initializeDatabaseToolStripMenuItem.Name = "initializeDatabaseToolStripMenuItem";
-            this.initializeDatabaseToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.initializeDatabaseToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.initializeDatabaseToolStripMenuItem.Text = "Initialize Database";
             this.initializeDatabaseToolStripMenuItem.Click += new System.EventHandler(this.initializeDatabaseToolStripMenuItem_Click);
             // 
@@ -311,7 +295,6 @@
         private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.PictureBox frcLogoPictureBox;
-        private System.Windows.Forms.ToolStripMenuItem resetAllSavedSettingsToDefaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem licenseInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teamInformationLookupToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -323,7 +306,6 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripMenuItem initializeDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
 

@@ -124,7 +124,6 @@ namespace FRC_Scouting_V2
         private readonly List<int> matchSummaryUnSuccessfulTruss = new List<int>();
         private readonly List<int> matchSummaryX = new List<int>();
         private readonly List<int> matchSummaryY = new List<int>();
-        private readonly UsefulSnippets us = new UsefulSnippets();
         private int rookieYear;
         private int selectedTeam1;
         private int selectedTeam2;
@@ -143,7 +142,7 @@ namespace FRC_Scouting_V2
 
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var conn = new MySqlConnection(us.MakeMySqlConnectionString());
+            var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
             var cmd = new MySqlCommand { Connection = conn };
 
             int numberOfFilesImported = 0;
@@ -222,7 +221,7 @@ namespace FRC_Scouting_V2
                             cmd.CommandText =
                                 String.Format(
                                     "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
-                                    Program.selectedEventName, (us.GetNumberOfRowsInATable() + 1),
+                                    Program.selectedEventName, (MySQLMethods.GetNumberOfRowsInATable() + 1),
                                     teamNumberImport, teamNameImport, teamColour,
                                     matchNumber,
                                     autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal,
@@ -250,11 +249,11 @@ namespace FRC_Scouting_V2
                     {
                         if (!testIfFileIsGood.Equals("END OF FILE"))
                         {
-                            us.ErrorOccured("The file does not seem to be in the correct format.");
+                            UsefulSnippets.Notifications.ErrorOccured("The file does not seem to be in the correct format.");
                         }
                     }
                 }
-                us.ShowInformationMessage("Successfully imported: " + numberOfFilesImported +
+                UsefulSnippets.Notifications.ShowInformationMessage("Successfully imported: " + numberOfFilesImported +
                                           " File(s) Into the Database.");
             }
         }
@@ -310,7 +309,7 @@ namespace FRC_Scouting_V2
 
             try
             {
-                var conn = new MySqlConnection(us.MakeMySqlConnectionString());
+                var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
                 cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",
@@ -368,7 +367,7 @@ namespace FRC_Scouting_V2
                 Console.WriteLine("Error Message: " + e.Message);
                 ConsoleWindow.AddItem("Error Code: " + e.ErrorCode);
                 ConsoleWindow.AddItem("Error Message: " + e.Message);
-                us.ErrorOccured("Looks like something went wrong. Check console for the error message");
+                UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
             }
 
             if (selection == 1)
@@ -435,7 +434,7 @@ namespace FRC_Scouting_V2
                 {
                     dataGridViewTeam1.Rows.Clear();
                     team1Selected = false;
-                    us.ErrorOccured("Looks like something went wrong. Check console for the error message");
+                    UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                     Console.WriteLine("Error Message: " + e.Message);
                     ConsoleWindow.AddItem("Error Message: " + e.Message);
                 }
@@ -507,7 +506,7 @@ namespace FRC_Scouting_V2
                     {
                         dataGridViewTeam2.Rows.Clear();
                         team2Selected = false;
-                        us.ErrorOccured("Looks like something went wrong. Check console for the error message");
+                        UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                         Console.WriteLine("Error Message: " + e.Message);
                         ConsoleWindow.AddItem("Error Message: " + e.Message);
                     }
@@ -517,7 +516,7 @@ namespace FRC_Scouting_V2
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
+            UsefulSnippets.Notifications.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
         }
 
         private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
@@ -552,17 +551,17 @@ namespace FRC_Scouting_V2
 
         private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            us.ShowInformationMessage(
+            UsefulSnippets.Notifications.ShowInformationMessage(
                 "This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
-            int numberOfRows = us.GetNumberOfRowsInATable();
+            int numberOfRows = MySQLMethods.GetNumberOfRowsInATable();
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    string mySqlConnectionString = us.MakeMySqlConnectionString();
+                    string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
                     var conn = new MySqlConnection(mySqlConnectionString);
                     MySqlCommand cmd = conn.CreateCommand();
                     var writer = new StreamWriter(sfd.FileName);
@@ -570,7 +569,7 @@ namespace FRC_Scouting_V2
                     writer.WriteLine(
                         "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
                     conn.Open();
-                    for (int i = 0; i < us.GetNumberOfRowsInATable() + 1; i++)
+                    for (int i = 0; i < MySQLMethods.GetNumberOfRowsInATable() + 1; i++)
                     {
                         cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}",
                             Program.selectedEventName, i);
@@ -609,14 +608,14 @@ namespace FRC_Scouting_V2
                     ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
                     ConsoleWindow.AddItem(ex.Message);
                 }
-                us.ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
+                UsefulSnippets.Notifications.ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
             }
-            us.ShowInformationMessage("Your data has been successfully exported to CSV.");
+            UsefulSnippets.Notifications.ShowInformationMessage("Your data has been successfully exported to CSV.");
         }
 
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage(
+            UsefulSnippets.Notifications.ShowInformationMessage(
                 "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
         }
 
@@ -1342,7 +1341,7 @@ namespace FRC_Scouting_V2
 
             try
             {
-                var conn = new MySqlConnection(us.MakeMySqlConnectionString());
+                var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
                 cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",

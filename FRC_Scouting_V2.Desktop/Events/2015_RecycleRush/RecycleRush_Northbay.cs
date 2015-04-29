@@ -41,9 +41,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
     public partial class RecycleRush_Northbay : Form
     {
-        //Variables
-        private UsefulSnippets snippets = new UsefulSnippets();
-
         private List<RecycleRush_Stack> matchStacks = new List<RecycleRush_Stack>();
 
         private readonly string[] teamNameArray =
@@ -161,15 +158,15 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                UsefulSnippets.ReportCrash(exception);
+                UsefulSnippets.Notifications.ReportCrash(exception);
             }
 
             try
             {
-                MySqlConnection conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                MySqlConnection conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 conn.Open();
                 MySqlCommand cmd = conn.CreateCommand();
-                string commandText = String.Format("Insert into RecycleRush_Northbay_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (snippets.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
+                string commandText = String.Format("Insert into RecycleRush_Northbay_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
                 cmd.CommandText = commandText;
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -178,7 +175,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                UsefulSnippets.ReportCrash(exception);
+                UsefulSnippets.Notifications.ReportCrash(exception);
             }
 
             ResetScoutingInterface();
@@ -385,7 +382,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 try
                 {
-                    var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                    var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                     MySqlCommand cmd = conn.CreateCommand();
                     MySqlDataReader reader;
                     cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Northbay_Matches WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
@@ -447,7 +444,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 {
                     ResetPitScoutingViewerInterface();
                     ResetPitScoutingEditorInterface();
-                    var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                    var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                     MySqlCommand cmd = conn.CreateCommand();
                     MySqlDataReader reader;
                     cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Northbay_Pits WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
@@ -763,10 +760,10 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             var match = JsonConvert.DeserializeObject<RecycleRush_Scout_Match>(File.ReadAllText(t));
                             try
                             {
-                                var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                                var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                                 conn.Open();
                                 var cmd = conn.CreateCommand();
-                                var commandText = String.Format("Insert into RecycleRush_Northbay_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (snippets.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
+                                var commandText = String.Format("Insert into RecycleRush_Northbay_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
                                 cmd.CommandText = commandText;
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
@@ -827,7 +824,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                UsefulSnippets.ReportCrash(exception);
+                UsefulSnippets.Notifications.ReportCrash(exception);
             }
 
             try
@@ -837,7 +834,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 {
                     try
                     {
-                        MySqlConnection conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                        MySqlConnection conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                         conn.Open();
                         string commandText = string.Format("DELETE FROM RecycleRush_Northbay_Pits WHERE `Team_Number`='{0}';", currentTeamNumber);
                         MySqlCommand cmd = new MySqlCommand(commandText, conn);
@@ -848,11 +845,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     {
                         Console.WriteLine("Error Occured: " + exception.Message);
                         ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                        UsefulSnippets.ReportCrash(exception);
+                        UsefulSnippets.Notifications.ReportCrash(exception);
                     }
                 }
 
-                using (MySqlConnection con = new MySqlConnection(snippets.MakeMySqlConnectionString()))
+                using (MySqlConnection con = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString()))
                 {
                     string query = "INSERT INTO `RecycleRush_Northbay_Pits`(`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@UniqueID,@Author,@Time_Created,@Team_Number,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
@@ -885,19 +882,19 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         con.Close();
                     }
                 }
-                snippets.ShowInformationMessage("Successfully submitted pit scouting data!");
+                UsefulSnippets.Notifications.ShowInformationMessage("Successfully submitted pit scouting data!");
             }
             catch (Exception exception)
             {
                 Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                UsefulSnippets.ReportCrash(exception);
+                UsefulSnippets.Notifications.ReportCrash(exception);
             }
 
             try
             {
                 ResetPitScoutingViewerInterface();
-                var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
                 cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Northbay_Pits WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
@@ -1032,7 +1029,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             int numberOfRows = 0;
             try
             {
-                string mySqlConnectionString = snippets.MakeMySqlConnectionString();
+                string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 string mySQLCommantText = String.Format("SELECT COUNT(*) FROM RecycleRush_Northbay_Pits WHERE Team_Number={0}", teamNumber);
@@ -1057,7 +1054,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Front_Picture);
+                pitScoutingViewerPictureBox.Image = UsefulSnippets.Images.byteArrayToImage(currentTeamPit.Front_Picture);
             }
             catch (Exception ex)
             {
@@ -1070,7 +1067,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Left_Side_Picture);
+                pitScoutingViewerPictureBox.Image = UsefulSnippets.Images.byteArrayToImage(currentTeamPit.Left_Side_Picture);
             }
             catch (Exception ex)
             {
@@ -1083,7 +1080,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Left_Isometric_Picture);
+                pitScoutingViewerPictureBox.Image = UsefulSnippets.Images.byteArrayToImage(currentTeamPit.Left_Isometric_Picture);
             }
             catch (Exception ex)
             {
@@ -1096,7 +1093,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             try
             {
-                pitScoutingViewerPictureBox.Image = snippets.byteArrayToImage(currentTeamPit.Other_Picture);
+                pitScoutingViewerPictureBox.Image = UsefulSnippets.Images.byteArrayToImage(currentTeamPit.Other_Picture);
             }
             catch (Exception ex)
             {
@@ -1122,7 +1119,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             {
                                 try
                                 {
-                                    var conn = new MySqlConnection(snippets.MakeMySqlConnectionString());
+                                    var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                                     conn.Open();
                                     string commandText = string.Format("DELETE FROM RecycleRush_Northbay_Pits WHERE `Team_Number`='{0}';", pitScout.Team_Number);
                                     var cmd = new MySqlCommand(commandText, conn);
@@ -1133,12 +1130,12 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 {
                                     Console.WriteLine("Error Occured: " + exception.Message);
                                     ConsoleWindow.AddItem("Error Occured: " + exception.Message);
-                                    UsefulSnippets.ReportCrash(exception);
+                                    UsefulSnippets.Notifications.ReportCrash(exception);
                                 }
                             }
                             try
                             {
-                                using (var con = new MySqlConnection(snippets.MakeMySqlConnectionString()))
+                                using (var con = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString()))
                                 {
                                     string query = "INSERT INTO `RecycleRush_Northbay_Pits`(`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@UniqueID,@Author,@Time_Created,@Team_Number,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
                                     using (var cmd = new MySqlCommand(query, con))
@@ -1178,7 +1175,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 ConsoleWindow.AddItem(exception.ToString());
                             }
                         }
-                        snippets.ShowInformationMessage("Successfully imported pit scouting data!");
+                        UsefulSnippets.Notifications.ShowInformationMessage("Successfully imported pit scouting data!");
                     }
                 }
             }

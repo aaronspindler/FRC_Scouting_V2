@@ -35,9 +35,6 @@ namespace FRC_Scouting_V2
     //@author xNovax
     public partial class MainSettings : Form
     {
-        //Variables
-        private readonly UsefulSnippets us = new UsefulSnippets();
-
         public MainSettings()
         {
             InitializeComponent();
@@ -141,7 +138,7 @@ namespace FRC_Scouting_V2
 
         private void howComeICannotConnectToMyDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            us.ShowInformationMessage(
+            UsefulSnippets.Notifications.ShowInformationMessage(
                 "The issue is probably because your computer's IP is not whitelisted in your database.");
         }
 
@@ -231,12 +228,12 @@ namespace FRC_Scouting_V2
             databaseIPTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
             databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
-            databasePasswordTextBox.Text = us.DeCryptString(Settings.Default.databasePassword);
+            databasePasswordTextBox.Text = UsefulSnippets.Security.DeCryptString(Settings.Default.databasePassword);
             databaseNameTextBox.Text = Settings.Default.databaseName;
 
             try
             {
-                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 conn.Open();
@@ -312,7 +309,7 @@ namespace FRC_Scouting_V2
         {
             try
             {
-                string mySqlConnectionString = us.MakeMySqlConnectionString();
+                string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 conn.Open();
@@ -323,10 +320,9 @@ namespace FRC_Scouting_V2
                     ConsoleWindow.AddItem("You have successfully connected to your database!");
                     connectionDisplay.BackColor = Color.Chartreuse;
                     connectionDisplay.Text = ("Successfully Connected to Database.");
-                    UsefulSnippets snippets = new UsefulSnippets();
                     try
                     {
-                        snippets.InitializeDatabases();
+                        MySQLMethods.InitializeDatabases();
                     }
                     catch (Exception exception)
                     {
@@ -427,7 +423,7 @@ namespace FRC_Scouting_V2
                     databasePasswordTextBox.Text = Settings.Default.databasePassword;
                     databaseNameTextBox.Text = Settings.Default.databaseName;
 
-                    us.ShowInformationMessage(
+                    UsefulSnippets.Notifications.ShowInformationMessage(
                         "You have successfully imported your connection details. Please test the connection");
                 }
                 catch (Exception exception)
@@ -444,9 +440,9 @@ namespace FRC_Scouting_V2
             Settings.Default.databasePort = databasePortTextBox.Text;
             Settings.Default.databaseName = databaseNameTextBox.Text;
             Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
-            Settings.Default.databasePassword = us.EncryptString(databasePasswordTextBox.Text);
+            Settings.Default.databasePassword = UsefulSnippets.Security.EncryptString(databasePasswordTextBox.Text);
             Settings.Default.Save();
-            us.ShowInformationMessage("Successfully Saved Database Settings");
+            UsefulSnippets.Notifications.ShowInformationMessage("Successfully Saved Database Settings");
         }
     }
 }

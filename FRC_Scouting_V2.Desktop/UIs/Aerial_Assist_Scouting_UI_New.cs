@@ -36,8 +36,6 @@ namespace FRC_Scouting_V2.UIs
     public partial class Aerial_Assist_Scouting_UI_New : UserControl
     {
         //Variables
-        private readonly UsefulSnippets snippets = new UsefulSnippets();
-
         private int autoBallPickup;
         private int autoBallPickupMiss;
         private int autoHighGoal;
@@ -191,8 +189,7 @@ namespace FRC_Scouting_V2.UIs
 
             if (commentsTextBox.Text.Contains(";"))
             {
-                snippets.ErrorOccured(
-                    "You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
+                UsefulSnippets.Notifications.ErrorOccured("You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
             }
         }
 
@@ -328,7 +325,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("==========================================================");
                     writer.WriteLine("-===============+ Human Readable Portion +===============-");
                     writer.WriteLine("==========================================================");
-                    writer.WriteLine("Time Created: " + snippets.GetCurrentTime());
+                    writer.WriteLine("Time Created: " + UsefulSnippets.Time.GetCurrentTime());
                     writer.WriteLine("Scouted By: " + Settings.Default.username);
                     writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
@@ -405,7 +402,7 @@ namespace FRC_Scouting_V2.UIs
 
             //MySQL Database
             //MySQL Database Connection Info
-            string mySqlConnectionString = snippets.MakeMySqlConnectionString();
+            string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
             try
             {
                 //Creating the connection to the database and opening the connection
@@ -454,7 +451,7 @@ namespace FRC_Scouting_V2.UIs
                 string insertDataString =
                     String.Format(
                         "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, DriverRating, AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
-                        Program.selectedEventName, (snippets.GetNumberOfRowsInATable() + 1),
+                        Program.selectedEventName, (MySQLMethods.GetNumberOfRowsInATable() + 1),
                         Program.selectedTeamNumber, Program.selectedTeamName, teamColour, matchNumber,
                         autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal, controlledHighMiss,
                         controlledLowGoal, controlledLowMiss, hotGoal, hotMiss, tripleAssistGoal, tripleAssistMiss,
@@ -479,7 +476,7 @@ namespace FRC_Scouting_V2.UIs
                 ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.AddItem(ex.Message);
             }
-            snippets.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " +
+            UsefulSnippets.Notifications.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " +
                                             matchNumber);
 
             //Clearing the values after you submit the data

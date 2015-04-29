@@ -217,7 +217,7 @@
             this.generalSettingsPage.Controls.Add(this.tableLayoutPanel2);
             this.generalSettingsPage.Location = new System.Drawing.Point(4, 22);
             this.generalSettingsPage.Name = "generalSettingsPage";
-            this.generalSettingsPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.generalSettingsPage.Padding = new System.Windows.Forms.Padding(3);
             this.generalSettingsPage.Size = new System.Drawing.Size(652, 314);
             this.generalSettingsPage.TabIndex = 0;
             this.generalSettingsPage.Text = "General Settings";
@@ -510,7 +510,7 @@
             this.databaseSettingsTab.Controls.Add(this.tableLayoutPanel3);
             this.databaseSettingsTab.Location = new System.Drawing.Point(4, 22);
             this.databaseSettingsTab.Name = "databaseSettingsTab";
-            this.databaseSettingsTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.databaseSettingsTab.Padding = new System.Windows.Forms.Padding(3);
             this.databaseSettingsTab.Size = new System.Drawing.Size(652, 314);
             this.databaseSettingsTab.TabIndex = 1;
             this.databaseSettingsTab.Text = "Database Settings";
