@@ -63,11 +63,11 @@ namespace FRC_Scouting_V2.Mobile
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050001
+			public const int button1 = 2131034113;
+			
 			// aapt resource value: 0x7f050000
 			public const int linearLayout1 = 2131034112;
-			
-			// aapt resource value: 0x7f050001
-			public const int spinner1 = 2131034113;
 			
 			static Id()
 			{
@@ -98,11 +98,8 @@ namespace FRC_Scouting_V2.Mobile
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ApplicationName = 2130968576;
 			
 			static String()
 			{
