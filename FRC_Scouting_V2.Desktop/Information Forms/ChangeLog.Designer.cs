@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeLog));
             this.SuspendLayout();
             // 
             // ChangeLog
@@ -35,8 +36,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 454);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangeLog";
-            this.Text = "FRC_Scouting_V2 | Change Log";
+            this.Text = "FRC_Scouting_V2 | Changelog";
             this.ResumeLayout(false);
 
         }

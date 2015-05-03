@@ -51,6 +51,8 @@
             this.myWebsiteRichTextBox = new System.Windows.Forms.RichTextBox();
             this.isInternetConnectedLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.changeLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -141,7 +143,9 @@
             this.licenseInformationToolStripMenuItem,
             this.toolStripSeparator2,
             this.teamInformationLookupToolStripMenuItem,
-            this.eventInformationLookupToolStripMenuItem});
+            this.eventInformationLookupToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.changeLogToolStripMenuItem});
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
             this.informationToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
             this.informationToolStripMenuItem.Text = "Information";
@@ -260,6 +264,18 @@
             this.timer.Interval = 15000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // changeLogToolStripMenuItem
+            // 
+            this.changeLogToolStripMenuItem.Name = "changeLogToolStripMenuItem";
+            this.changeLogToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.changeLogToolStripMenuItem.Text = "Changelog";
+            this.changeLogToolStripMenuItem.Click += new System.EventHandler(this.changeLogToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(218, 6);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +322,8 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripMenuItem initializeDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem changeLogToolStripMenuItem;
     }
 }
 

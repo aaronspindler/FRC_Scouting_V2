@@ -236,5 +236,11 @@ namespace FRC_Scouting_V2
         {
 
         }
+
+        private void changeLogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var cl = new ChangeLog();
+            cl.Show();
+        }
     }
 }
