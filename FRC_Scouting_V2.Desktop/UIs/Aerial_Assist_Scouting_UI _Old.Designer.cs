@@ -1376,6 +1376,7 @@
             this.label7.TabIndex = 179;
             this.label7.Text = "0";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Visible = false;
             // 
             // label8
             // 
@@ -1388,6 +1389,7 @@
             this.label8.TabIndex = 180;
             this.label8.Text = "0";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Visible = false;
             // 
             // button13
             // 
@@ -1398,6 +1400,7 @@
             this.button13.TabIndex = 181;
             this.button13.Text = "-";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Visible = false;
             // 
             // button14
             // 
@@ -1408,6 +1411,7 @@
             this.button14.TabIndex = 182;
             this.button14.Text = "-";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Visible = false;
             // 
             // button15
             // 
@@ -1418,6 +1422,7 @@
             this.button15.TabIndex = 183;
             this.button15.Text = "+";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Visible = false;
             // 
             // button16
             // 
@@ -1428,6 +1433,7 @@
             this.button16.TabIndex = 184;
             this.button16.Text = "+";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Visible = false;
             // 
             // saveFileDialog
             // 
