@@ -33,7 +33,7 @@
     <PublisherName>xNovax</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -182,6 +182,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Information Forms\ChangeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information Forms\ChangeLog.Designer.cs">
+      <DependentUpon>ChangeLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Information Forms\EventInformationLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information Forms\ChangeLog.resx">
+      <DependentUpon>ChangeLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\EventInformationLookup.resx">
       <DependentUpon>EventInformationLookup.cs</DependentUpon>

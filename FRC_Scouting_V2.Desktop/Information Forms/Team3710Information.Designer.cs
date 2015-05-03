@@ -51,7 +51,7 @@
             this.tableLayoutPanel2.Controls.Add(this.team3710InfoPictureBox, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.team3710InfoLabel, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 31);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -62,7 +62,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 315);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(556, 315);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // team3710InfoPictureBox
@@ -74,7 +74,7 @@
             this.team3710InfoPictureBox.Location = new System.Drawing.Point(3, 3);
             this.team3710InfoPictureBox.Name = "team3710InfoPictureBox";
             this.tableLayoutPanel2.SetRowSpan(this.team3710InfoPictureBox, 4);
-            this.team3710InfoPictureBox.Size = new System.Drawing.Size(394, 150);
+            this.team3710InfoPictureBox.Size = new System.Drawing.Size(550, 150);
             this.team3710InfoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.team3710InfoPictureBox.TabIndex = 2;
             this.team3710InfoPictureBox.TabStop = false;
@@ -89,7 +89,7 @@
             this.team3710InfoLabel.Location = new System.Drawing.Point(3, 156);
             this.team3710InfoLabel.Name = "team3710InfoLabel";
             this.tableLayoutPanel2.SetRowSpan(this.team3710InfoLabel, 4);
-            this.team3710InfoLabel.Size = new System.Drawing.Size(394, 159);
+            this.team3710InfoLabel.Size = new System.Drawing.Size(550, 159);
             this.team3710InfoLabel.TabIndex = 2;
             this.team3710InfoLabel.Text = resources.GetString("team3710InfoLabel.Text");
             this.team3710InfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,10 +98,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(400, 346);
+            this.ClientSize = new System.Drawing.Size(556, 340);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "Team3710Information";
-            this.Text = "Team 3710 Information";
+            this.Text = "FRC_Scouting_V2 | Team 3710 Information";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

@@ -245,7 +245,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "EventInformationLookup";
-            this.Text = "Event Information Lookup";
+            this.Text = "FRC_Scouting_V2 | Event Information Lookup";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
