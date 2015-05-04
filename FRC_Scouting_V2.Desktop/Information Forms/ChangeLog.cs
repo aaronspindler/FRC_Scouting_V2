@@ -23,7 +23,7 @@ namespace FRC_Scouting_V2.Information_Forms
 
                 var github = new GitHubClient(new ProductHeaderValue("FRC_Scouting_V2"));
                 var project = await github.Repository.Commits.GetAll("xNovax", "FRC_Scouting_V2");
-                Console.WriteLine(project[0].ToString());
+                Console.WriteLine(project[0].Author.Login);
 
 
                 ConsoleWindow.AddItem("FINISHED~!");
