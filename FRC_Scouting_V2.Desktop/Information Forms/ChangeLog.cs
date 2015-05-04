@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Windows.Forms;
+using System.Net.Configuration;
 using FRC_Scouting_V2.Models;
 using Newtonsoft.Json;
 using Octokit;
+using System.Net;
+using System.Windows.Forms;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
@@ -17,21 +15,23 @@ namespace FRC_Scouting_V2.Information_Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private async void button1_Click(object sender, System.EventArgs e)
         {
-            ConsoleWindow.AddItem("STARTED!");
             try
             {
-                var wc = new WebClient();
-                string downloadedData = (wc.DownloadString("https://api.github.com/repos/xNovax/FRC_Scouting_V2/commits"));
-                var deserializedData = JsonConvert.DeserializeObject<Github_Repo_Commits.Rootobject>(downloadedData);
-                ConsoleWindow.AddItem(deserializedData.Property1[0].commit.message);
+                ConsoleWindow.AddItem("STARTED!");
+
+                var github = new GitHubClient(new ProductHeaderValue("FRC_Scouting_V2"));
+                var project = await github.Repository.Commits.GetAll("xNovax", "FRC_Scouting_V2");
+                Console.WriteLine(project[0].ToString());
+
+
+                ConsoleWindow.AddItem("FINISHED~!");
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine("ERROR: " + ex.Message);
             }
-            ConsoleWindow.AddItem("FINISHED~!");
         }
     }
 }

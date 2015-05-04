@@ -217,8 +217,6 @@
     <Compile Include="MainSettings.Designer.cs">
       <DependentUpon>MainSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Github_Repo.cs" />
-    <Compile Include="Models\Github_Repo_Commits.cs" />
     <Compile Include="Models\RecycleRush_Stack.cs" />
     <Compile Include="MySQLMethods.cs" />
     <Compile Include="Program.cs" />
