@@ -38,7 +38,7 @@ namespace UsefulSnippets.TheBlueAlliance
            +-------------------------+----------------+---------+--------------------+---------+
            | GetTeamInformation      | true           | true    | true               | false   |
            +-------------------------+----------------+---------+--------------------+---------+
-           | GetTeamMediaLocations   | false          | false   | false              |         |
+           | GetTeamMediaLocations   | false          | false   | false              | true    |
            +-------------------------+----------------+---------+--------------------+---------+
          */
 
