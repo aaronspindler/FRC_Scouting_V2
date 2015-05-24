@@ -53,6 +53,8 @@
             this.myWebsiteRichTextBox = new System.Windows.Forms.RichTextBox();
             this.isInternetConnectedLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.contributeToFRCScoutingV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -101,7 +103,6 @@
             this.frcLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.frcLogoPictureBox.TabIndex = 1;
             this.frcLogoPictureBox.TabStop = false;
-            this.frcLogoPictureBox.Click += new System.EventHandler(this.frcLogoPictureBox_Click);
             // 
             // menuStrip1
             // 
@@ -145,7 +146,9 @@
             this.teamInformationLookupToolStripMenuItem,
             this.eventInformationLookupToolStripMenuItem,
             this.toolStripSeparator1,
-            this.changeLogToolStripMenuItem});
+            this.changeLogToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.contributeToFRCScoutingV2ToolStripMenuItem});
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
             this.informationToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
             this.informationToolStripMenuItem.Text = "Information";
@@ -153,52 +156,52 @@
             // fRC3710TeamInformationToolStripMenuItem
             // 
             this.fRC3710TeamInformationToolStripMenuItem.Name = "fRC3710TeamInformationToolStripMenuItem";
-            this.fRC3710TeamInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.fRC3710TeamInformationToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.fRC3710TeamInformationToolStripMenuItem.Text = "FRC 3710 Team Information";
             this.fRC3710TeamInformationToolStripMenuItem.Click += new System.EventHandler(this.fRC3710TeamInformationToolStripMenuItem_Click);
             // 
             // programInformationToolStripMenuItem
             // 
             this.programInformationToolStripMenuItem.Name = "programInformationToolStripMenuItem";
-            this.programInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.programInformationToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.programInformationToolStripMenuItem.Text = "Program Information";
             this.programInformationToolStripMenuItem.Click += new System.EventHandler(this.programInformationToolStripMenuItem_Click);
             // 
             // licenseInformationToolStripMenuItem
             // 
             this.licenseInformationToolStripMenuItem.Name = "licenseInformationToolStripMenuItem";
-            this.licenseInformationToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.licenseInformationToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.licenseInformationToolStripMenuItem.Text = "License Information";
             this.licenseInformationToolStripMenuItem.Click += new System.EventHandler(this.licenseInformationToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(218, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(236, 6);
             // 
             // teamInformationLookupToolStripMenuItem
             // 
             this.teamInformationLookupToolStripMenuItem.Name = "teamInformationLookupToolStripMenuItem";
-            this.teamInformationLookupToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.teamInformationLookupToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.teamInformationLookupToolStripMenuItem.Text = "Team Information Lookup";
             this.teamInformationLookupToolStripMenuItem.Click += new System.EventHandler(this.teamInformationLookupToolStripMenuItem_Click);
             // 
             // eventInformationLookupToolStripMenuItem
             // 
             this.eventInformationLookupToolStripMenuItem.Name = "eventInformationLookupToolStripMenuItem";
-            this.eventInformationLookupToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.eventInformationLookupToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.eventInformationLookupToolStripMenuItem.Text = "Event Information Lookup";
             this.eventInformationLookupToolStripMenuItem.Click += new System.EventHandler(this.eventInformationLookupToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(218, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(236, 6);
             // 
             // changeLogToolStripMenuItem
             // 
             this.changeLogToolStripMenuItem.Name = "changeLogToolStripMenuItem";
-            this.changeLogToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.changeLogToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.changeLogToolStripMenuItem.Text = "Changelog";
             this.changeLogToolStripMenuItem.Click += new System.EventHandler(this.changeLogToolStripMenuItem_Click);
             // 
@@ -276,6 +279,18 @@
             this.timer.Interval = 15000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(236, 6);
+            // 
+            // contributeToFRCScoutingV2ToolStripMenuItem
+            // 
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Name = "contributeToFRCScoutingV2ToolStripMenuItem";
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Text = "Contribute to FRC_Scouting_V2";
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Click += new System.EventHandler(this.contributeToFRCScoutingV2ToolStripMenuItem_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +340,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem changeLogToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem contributeToFRCScoutingV2ToolStripMenuItem;
     }
 }
 

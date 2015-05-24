@@ -172,6 +172,12 @@
     <Compile Include="Information Forms\ChangeLog.Designer.cs">
       <DependentUpon>ChangeLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Information Forms\Contribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information Forms\Contribute.Designer.cs">
+      <DependentUpon>Contribute.cs</DependentUpon>
+    </Compile>
     <Compile Include="Information Forms\EventInformationLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\ChangeLog.resx">
       <DependentUpon>ChangeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information Forms\Contribute.resx">
+      <DependentUpon>Contribute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Information Forms\EventInformationLookup.resx">
       <DependentUpon>EventInformationLookup.cs</DependentUpon>
