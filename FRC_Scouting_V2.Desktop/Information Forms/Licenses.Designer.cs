@@ -67,6 +67,7 @@
             this.ClientSize = new System.Drawing.Size(587, 341);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "License";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRC_Scouting_V2 | Licenses";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.tableLayoutPanel2.ResumeLayout(false);

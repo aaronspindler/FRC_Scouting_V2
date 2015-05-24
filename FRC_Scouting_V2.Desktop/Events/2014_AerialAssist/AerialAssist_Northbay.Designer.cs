@@ -339,6 +339,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "AerialAssist_Northbay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aerial Assist | Northbay | 2014";
             this.Load += new System.EventHandler(this.AerialAssist_Northbay_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

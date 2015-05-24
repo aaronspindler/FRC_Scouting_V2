@@ -226,6 +226,7 @@
             this.ClientSize = new System.Drawing.Size(456, 346);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "AerialAssist_RahChaCha_Information";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aerial Assist | Rah Cha Cha | 2014 | Information";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.tableLayoutPanel2.ResumeLayout(false);

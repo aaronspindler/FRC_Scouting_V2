@@ -248,6 +248,7 @@
             this.ClientSize = new System.Drawing.Size(456, 346);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "AerialAssist_Northbay_Information";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aerial Assist | Northbay | 2014 | Information";
             this.Load += new System.EventHandler(this.AerialAssist_Northbay_Information_Load);
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);

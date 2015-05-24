@@ -109,6 +109,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "GeneralFormTemplate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "renameMe";
             this.Load += new System.EventHandler(this.GeneralFormTemplate_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

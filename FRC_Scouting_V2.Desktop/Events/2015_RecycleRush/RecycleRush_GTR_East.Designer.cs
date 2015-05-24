@@ -2748,6 +2748,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "RecycleRush_GTR_East";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RecycleRush | GTR East | 2015";
             this.Load += new System.EventHandler(this.RecycleRush_GTR_East_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

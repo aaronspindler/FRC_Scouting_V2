@@ -780,6 +780,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Settings";
             this.Load += new System.EventHandler(this.MainSettings_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

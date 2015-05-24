@@ -86,6 +86,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.team3710InfoLabel, 8);
             this.team3710InfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.team3710InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.team3710InfoLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.team3710InfoLabel.Location = new System.Drawing.Point(3, 156);
             this.team3710InfoLabel.Name = "team3710InfoLabel";
             this.tableLayoutPanel2.SetRowSpan(this.team3710InfoLabel, 4);
@@ -101,6 +102,7 @@
             this.ClientSize = new System.Drawing.Size(556, 340);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "Team3710Information";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRC_Scouting_V2 | Team 3710 Information";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.tableLayoutPanel2.ResumeLayout(false);
