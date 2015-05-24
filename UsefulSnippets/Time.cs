@@ -27,8 +27,15 @@ using System.Globalization;
 
 namespace UsefulSnippets
 {
+    /// <summary>
+    /// Provides functionality related to time.
+    /// </summary>
     public class Time
     {
+        /// <summary>
+        /// Returns the current clock time in a day date format
+        /// </summary>
+        /// <returns></returns>
         public static string GetCurrentTime()
         {
             string time = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);

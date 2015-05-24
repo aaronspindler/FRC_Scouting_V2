@@ -30,6 +30,11 @@ namespace UsefulSnippets
 {
     public class Mathematics
     {
+        /// <summary>
+        /// Calculates The Standard Deviation between the data passed to it
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
         public static double CalculateStdDev(IEnumerable<double> values)
         {
             double ret = 0;

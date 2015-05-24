@@ -29,8 +29,16 @@ using System.Text;
 
 namespace UsefulSnippets
 {
+    /// <summary>
+    /// Methods to inact security measures
+    /// </summary>
     public class Security
     {
+        /// <summary>
+        /// Encrypts a string with AES256 encryption
+        /// </summary>
+        /// <param name="plainText"></param>
+        /// <returns></returns>
         public static string EncryptString(string plainText)
         {
             string encryptedText;
@@ -52,6 +60,11 @@ namespace UsefulSnippets
             return encryptedText;
         }
 
+        /// <summary>
+        /// Decrypts a cipher-text that has been encrypted with AES256 Encryption
+        /// </summary>
+        /// <param name="encryptedText"></param>
+        /// <returns></returns>
         public static string DeCryptString(string encryptedText)
         {
             string plainText;
@@ -73,6 +86,12 @@ namespace UsefulSnippets
             return plainText;
         }
 
+        /// <summary>
+        /// Returns a pseudo random number between a range
+        /// </summary>
+        /// <param name="startingNum"></param>
+        /// <param name="endingNum"></param>
+        /// <returns></returns>
         public static int GetSecureRandomNum(int startingNum, int endingNum)
         {
             int difference = endingNum - startingNum;
@@ -85,6 +104,12 @@ namespace UsefulSnippets
             return number;
         }
 
+        /// <summary>
+        /// Returns a random password based on the password type selected and the password length selected
+        /// </summary>
+        /// <param name="passwordType"></param>
+        /// <param name="passwordLength"></param>
+        /// <returns></returns>
         public static string MakeRandomPassword(int passwordType, int passwordLength)
         {
             //Password Types

@@ -28,18 +28,33 @@ using CrashReporterDotNET;
 
 namespace UsefulSnippets
 {
+    /// <summary>
+    /// Provides an abstraction layer to easily prompt a user with a message
+    /// </summary>
     public class Notifications
     {
+        /// <summary>
+        /// Prompts the user with a message that has error characteristics
+        /// </summary>
+        /// <param name="error"></param>
         public static void ErrorOccured(string error)
         {
             MessageBox.Show(error, "FRC_Scouting_V2 | Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        /// <summary>
+        /// Prompts the user with a message with information characteristics
+        /// </summary>
+        /// <param name="informationText"></param>
         public static void ShowInformationMessage(string informationText)
         {
             MessageBox.Show(informationText, "FRC_Scouting_V2 | Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Prompts the user with a crash report and submits the report to an email address
+        /// </summary>
+        /// <param name="exception"></param>
         public static void ReportCrash(Exception exception)
         {
             var reportCrash = new ReportCrash

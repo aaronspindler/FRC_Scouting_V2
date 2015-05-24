@@ -52,11 +52,17 @@ namespace FRC_Scouting_V2
         private int xStarting;
         private int yStarting;
 
+        /// <summary>
+        /// Old Version of Match Scouting UI for Aerial Assist
+        /// </summary>
         public Aerial_Assist_Scouting_UI()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Removes Any Drawings On Field, then Repaints The Field Markers
+        /// </summary>
         public void BlankPanel()
         {
             Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();

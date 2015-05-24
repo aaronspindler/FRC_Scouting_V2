@@ -6,6 +6,9 @@ using UsefulSnippets.TheBlueAlliance.Models;
 
 namespace UsefulSnippets.TheBlueAlliance
 {
+    /// <summary>
+    /// An abstraction layer between FRC_Scouting_V2 and TheBlueAlliance API
+    /// </summary>
     public class Getters
     {
         /*
@@ -48,6 +51,11 @@ namespace UsefulSnippets.TheBlueAlliance
          *   Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetTeamInformation("frc3710").name);
          */
 
+        /// <summary>
+        /// Provides information for an event
+        /// </summary>
+        /// <param name="eventCode"></param>
+        /// <returns></returns>
         public static Event.EventInformation GetEventInformation(string eventCode)
         {
             var eventToReturn = new Event.EventInformation();
@@ -107,6 +115,11 @@ namespace UsefulSnippets.TheBlueAlliance
             return eventTeamListToReturn;
         }
 
+        /// <summary>
+        /// Provides match information for a specific match
+        /// </summary>
+        /// <param name="matchCode"></param>
+        /// <returns></returns>
         public static MatchInformation.Match GetMatchInformation(string matchCode)
         {
             var matchToReturn = new MatchInformation.Match();
@@ -164,6 +177,11 @@ namespace UsefulSnippets.TheBlueAlliance
             return teamHistoricalEventsToReturn;
         }
 
+        /// <summary>
+        /// Provides information for any FRC team
+        /// </summary>
+        /// <param name="teamKey"></param>
+        /// <returns></returns>
         public static TeamInformation GetTeamInformation(string teamKey)
         {
             var teamInformationToReturn = new TeamInformation();

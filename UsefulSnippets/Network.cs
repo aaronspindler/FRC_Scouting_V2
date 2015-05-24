@@ -29,6 +29,10 @@ namespace UsefulSnippets
 {
     public class Network
     {
+        /// <summary>
+        /// Checks for an available internet connection by pinging google.com
+        /// </summary>
+        /// <returns></returns>
         public static bool CheckForInternetConnection()
         {
             try

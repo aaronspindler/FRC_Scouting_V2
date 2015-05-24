@@ -29,8 +29,14 @@ using System.Windows.Forms;
 namespace GeneralFormTemplate
 {
     //@author xNovax
+    /// <summary>
+    /// Template for a form that has a tool strip and current time at the top
+    /// </summary>
     public partial class GeneralFormTemplate : Form
     {
+        /// <summary>
+        /// Constructer for GeneralFormTemplate
+        /// </summary>
         public GeneralFormTemplate()
         {
             InitializeComponent();

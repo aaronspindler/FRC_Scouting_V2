@@ -29,6 +29,11 @@ namespace UsefulSnippets
 {
     public class Images
     {
+        /// <summary>
+        /// Converts a Byte Array into a Useable Image Object
+        /// </summary>
+        /// <param name="byteArrayIn"></param>
+        /// <returns></returns>
         public static Image byteArrayToImage(byte[] byteArrayIn)
         {
             MemoryStream ms = new MemoryStream(byteArrayIn);
@@ -36,6 +41,11 @@ namespace UsefulSnippets
             return returnImage;
         }
 
+        /// <summary>
+        /// Converts an Image Object into a Byte Array (For Storing Image in Database)
+        /// </summary>
+        /// <param name="imageIn"></param>
+        /// <returns></returns>
         public static byte[] imageToByteArray(Image imageIn)
         {
             MemoryStream ms = new MemoryStream();
