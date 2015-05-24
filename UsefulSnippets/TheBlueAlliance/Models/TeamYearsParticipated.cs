@@ -2,6 +2,6 @@
 {
     public class TeamYearsParticipated
     {
-        public int[] YearsParticipated { get; set; }
+
     }
 }

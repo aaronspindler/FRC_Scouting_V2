@@ -1,6 +1,6 @@
 ﻿namespace UsefulSnippets.TheBlueAlliance.Models
 {
-    internal class MatchInformation
+    public class MatchInformation
     {
         public class Match
         {
