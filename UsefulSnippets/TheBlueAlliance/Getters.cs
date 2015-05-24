@@ -42,6 +42,12 @@ namespace UsefulSnippets.TheBlueAlliance
            +-------------------------+----------------+---------+--------------------+---------+
          */
 
+        /* Examples
+         *   Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetEventInformation("2015onto").name);
+         *   Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetMatchInformation("2015onnb_qm64").match_number);
+         *   Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetTeamInformation("frc3710").name);
+         */
+
         public static Event.EventInformation GetEventInformation(string eventCode)
         {
             var eventToReturn = new Event.EventInformation();

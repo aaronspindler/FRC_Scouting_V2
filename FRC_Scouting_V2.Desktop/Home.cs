@@ -234,9 +234,7 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
-            //Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetEventInformation("2015onto").name);
-            //Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetMatchInformation("2015onnb_qm64").match_number);
-            //Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetTeamInformation("frc3710").name);
+
         }
 
         private void changeLogToolStripMenuItem_Click(object sender, EventArgs e)
