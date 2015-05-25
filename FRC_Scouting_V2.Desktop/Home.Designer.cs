@@ -44,6 +44,8 @@
             this.eventInformationLookupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.changeLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.contributeToFRCScoutingV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showConsoleWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,8 +55,6 @@
             this.myWebsiteRichTextBox = new System.Windows.Forms.RichTextBox();
             this.isInternetConnectedLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.contributeToFRCScoutingV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -103,6 +103,7 @@
             this.frcLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.frcLogoPictureBox.TabIndex = 1;
             this.frcLogoPictureBox.TabStop = false;
+            this.frcLogoPictureBox.Click += new System.EventHandler(this.frcLogoPictureBox_Click);
             // 
             // menuStrip1
             // 
@@ -205,6 +206,18 @@
             this.changeLogToolStripMenuItem.Text = "Changelog";
             this.changeLogToolStripMenuItem.Click += new System.EventHandler(this.changeLogToolStripMenuItem_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(236, 6);
+            // 
+            // contributeToFRCScoutingV2ToolStripMenuItem
+            // 
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Name = "contributeToFRCScoutingV2ToolStripMenuItem";
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Text = "Contribute to FRC_Scouting_V2";
+            this.contributeToFRCScoutingV2ToolStripMenuItem.Click += new System.EventHandler(this.contributeToFRCScoutingV2ToolStripMenuItem_Click);
+            // 
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -278,18 +291,6 @@
             // 
             this.timer.Interval = 15000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(236, 6);
-            // 
-            // contributeToFRCScoutingV2ToolStripMenuItem
-            // 
-            this.contributeToFRCScoutingV2ToolStripMenuItem.Name = "contributeToFRCScoutingV2ToolStripMenuItem";
-            this.contributeToFRCScoutingV2ToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.contributeToFRCScoutingV2ToolStripMenuItem.Text = "Contribute to FRC_Scouting_V2";
-            this.contributeToFRCScoutingV2ToolStripMenuItem.Click += new System.EventHandler(this.contributeToFRCScoutingV2ToolStripMenuItem_Click);
             // 
             // Home
             // 

@@ -23,6 +23,7 @@
 //SOFTWARE.
 //===============================================================================
 
+using System.Runtime.CompilerServices;
 using FRC_Scouting_V2.Events._2015_RecycleRush;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
@@ -239,6 +240,11 @@ namespace FRC_Scouting_V2
         {
             var contribute = new Contribute();
             contribute.Show();
+        }
+
+        private void frcLogoPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
