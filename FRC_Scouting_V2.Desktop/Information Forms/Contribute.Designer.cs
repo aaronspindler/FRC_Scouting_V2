@@ -33,7 +33,7 @@
             // Contribute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(485, 390);
+            this.ClientSize = new System.Drawing.Size(603, 447);
             this.Name = "Contribute";
             this.Text = "FRC_Scouting_V2 | Contribute";
             this.ResumeLayout(false);
