@@ -1,18 +1,21 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using UsefulSnippets.TheBlueAlliance.Models;
 
 namespace UsefulSnippets.TheBlueAlliance
 {
     /// <summary>
-    /// An abstraction layer between FRC_Scouting_V2 and TheBlueAlliance API
+    ///     An abstraction layer between FRC_Scouting_V2 and TheBlueAlliance API
     /// </summary>
     public class Getters
     {
-        /* Examples
+        /* 
+         * Examples
          *   Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetEventInformation("2015onto").name);
          *   Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetMatchInformation("2015onnb_qm64").match_number);
          *   Console.WriteLine(UsefulSnippets.TheBlueAlliance.Getters.GetTeamInformation("frc3710").name);
@@ -31,7 +34,7 @@ namespace UsefulSnippets.TheBlueAlliance
          */
 
         /// <summary>
-        /// Provides information for an event
+        ///     Provides information for an event
         /// </summary>
         /// <param name="eventCode"></param>
         /// <returns></returns>
@@ -40,29 +43,29 @@ namespace UsefulSnippets.TheBlueAlliance
             var eventToReturn = new Event.EventInformation();
 
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/event/" + eventCode);
+                string url = ("http://www.thebluealliance.com/api/v2/event/" + eventCode);
                 eventToReturn = JsonConvert.DeserializeObject<Event.EventInformation>(wc.DownloadString(url));
             }
             catch (Exception webError)
             {
                 Console.WriteLine("Error Message: " + webError.Message);
             }
-
             return eventToReturn;
         }
 
         public static EventAwards.Award[] GetEventAwards(string eventKey)
         {
             var dataList = new List<EventAwards.Award>();
-            var eventAwardsToReturn = dataList.ToArray();
+            EventAwards.Award[] eventAwardsToReturn = dataList.ToArray();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/awards");
+                string url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/awards");
                 dataList = JsonConvert.DeserializeObject<List<EventAwards.Award>>(wc.DownloadString(url));
                 eventAwardsToReturn = dataList.ToArray();
             }
@@ -76,12 +79,13 @@ namespace UsefulSnippets.TheBlueAlliance
         public static EventMatches.Match[] GetEventMatches(string eventKey)
         {
             var dataList = new List<EventMatches.Match>();
-            var eventMatchesToReturn = dataList.ToArray();
+            EventMatches.Match[] eventMatchesToReturn = dataList.ToArray();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/matches");
+                string url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/matches");
                 dataList = JsonConvert.DeserializeObject<List<EventMatches.Match>>(wc.DownloadString(url));
                 eventMatchesToReturn = dataList.ToArray();
             }
@@ -92,16 +96,16 @@ namespace UsefulSnippets.TheBlueAlliance
             return eventMatchesToReturn;
         }
 
-        
         public static EventRankings.Team[] GetEventRankings(string eventKey)
         {
             var teamList = new List<EventRankings.Team>();
 
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/rankings");
+                string url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/rankings");
                 var dataList = JsonConvert.DeserializeObject<List<List<object>>>(wc.DownloadString(url));
 
                 for (int i = 1; i < dataList.Count; i++)
@@ -125,19 +129,19 @@ namespace UsefulSnippets.TheBlueAlliance
             {
                 Console.WriteLine("Error Message: " + webError.Message);
             }
-
             return teamList.ToArray();
         }
 
         public static Events.Event[] GetEvents(int year)
         {
             var dataList = new List<Events.Event>();
-            var eventListToReturn = dataList.ToArray();
+            Events.Event[] eventListToReturn = dataList.ToArray();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/events/" + year);
+                string url = ("http://www.thebluealliance.com/api/v2/events/" + year);
                 dataList = JsonConvert.DeserializeObject<List<Events.Event>>(wc.DownloadString(url));
                 eventListToReturn = dataList.ToArray();
             }
@@ -152,10 +156,11 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var teamList = new List<EventTeams.Team>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/teams");
+                string url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/teams");
                 teamList = JsonConvert.DeserializeObject<List<EventTeams.Team>>(wc.DownloadString(url));
             }
             catch (Exception webError)
@@ -166,7 +171,7 @@ namespace UsefulSnippets.TheBlueAlliance
         }
 
         /// <summary>
-        /// Provides match information for a specific match
+        ///     Provides match information for a specific match
         /// </summary>
         /// <param name="matchKey"></param>
         /// <returns></returns>
@@ -174,10 +179,11 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var matchToReturn = new MatchInformation.Match();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/match/" + matchKey);
+                string url = ("http://www.thebluealliance.com/api/v2/match/" + matchKey);
                 matchToReturn = JsonConvert.DeserializeObject<MatchInformation.Match>(wc.DownloadString(url));
             }
             catch (Exception webError)
@@ -191,11 +197,13 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var teamEventAwardsToReturn = new List<TeamEventAwards.Award>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey + "/awards");
-                teamEventAwardsToReturn = JsonConvert.DeserializeObject<List<TeamEventAwards.Award>>(wc.DownloadString(url));
+                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey + "/awards");
+                teamEventAwardsToReturn =
+                    JsonConvert.DeserializeObject<List<TeamEventAwards.Award>>(wc.DownloadString(url));
             }
             catch (Exception webError)
             {
@@ -208,27 +216,31 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var teamEventMatchesToReturn = new List<TeamEventMatches.Match>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey + "/matches");
-                teamEventMatchesToReturn = JsonConvert.DeserializeObject<List<TeamEventMatches.Match>>(wc.DownloadString(url));
+                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey +
+                              "/matches");
+                teamEventMatchesToReturn =
+                    JsonConvert.DeserializeObject<List<TeamEventMatches.Match>>(wc.DownloadString(url));
             }
             catch (Exception webError)
             {
                 Console.WriteLine("Error Message: " + webError.Message);
             }
             return teamEventMatchesToReturn.ToArray();
-        }   
+        }
 
         public static TeamEvents.Event[] GetTeamEvents(string teamKey, int year)
         {
             var teamEventsToReturn = new List<TeamEvents.Event>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey +"/" + year + "/events");
+                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/" + year + "/events");
                 teamEventsToReturn = JsonConvert.DeserializeObject<List<TeamEvents.Event>>(wc.DownloadString(url));
             }
             catch (Exception webError)
@@ -242,11 +254,13 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var teamHistoricalAwardsToReturn = new List<TeamHistoryAwards.Award>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/awards");
-                teamHistoricalAwardsToReturn = JsonConvert.DeserializeObject<List<TeamHistoryAwards.Award>>(wc.DownloadString(url));
+                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/awards");
+                teamHistoricalAwardsToReturn =
+                    JsonConvert.DeserializeObject<List<TeamHistoryAwards.Award>>(wc.DownloadString(url));
             }
             catch (Exception webError)
             {
@@ -259,11 +273,13 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var teamHistoricalEventsToReturn = new List<TeamHistoryEvents.Event>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/events");
-                teamHistoricalEventsToReturn = JsonConvert.DeserializeObject<List<TeamHistoryEvents.Event>>(wc.DownloadString(url));
+                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/events");
+                teamHistoricalEventsToReturn =
+                    JsonConvert.DeserializeObject<List<TeamHistoryEvents.Event>>(wc.DownloadString(url));
             }
             catch (Exception webError)
             {
@@ -273,7 +289,8 @@ namespace UsefulSnippets.TheBlueAlliance
         }
 
         /// <summary>
-        /// Provides information for any FRC team
+        ///     Provides general information for any FRC team
+        ///     teamKey Format Example : "frc3710"
         /// </summary>
         /// <param name="teamKey"></param>
         /// <returns></returns>
@@ -281,10 +298,11 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var teamInformationToReturn = new TeamInformation();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey);
+                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey);
                 teamInformationToReturn = JsonConvert.DeserializeObject<TeamInformation>(wc.DownloadString(url));
             }
             catch (Exception webError)
@@ -298,11 +316,13 @@ namespace UsefulSnippets.TheBlueAlliance
         {
             var teamMediaLocationsToReturn = new List<TeamMedia.MediaLocation>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id",
+                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/" + year + "/media");
-                teamMediaLocationsToReturn = JsonConvert.DeserializeObject<List<TeamMedia.MediaLocation>>(wc.DownloadString(url));
+                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/" + year + "/media");
+                teamMediaLocationsToReturn =
+                    JsonConvert.DeserializeObject<List<TeamMedia.MediaLocation>>(wc.DownloadString(url));
             }
             catch (Exception webError)
             {
