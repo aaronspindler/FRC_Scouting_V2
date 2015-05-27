@@ -15,15 +15,14 @@ FRC_Scouting_V2
 ### Features
 - Ability to look at individual match performance for a team
 - Ability to look at the overall performance of a team for a single event
-- Integration with TheBlueAlliance.com to pull up team information
+- Integration with TheBlueAlliance.com
 - Retrieval of information from TheBlueAlliance.com to pull event information
 - MySQL for network collaboration or export to text file for future importation
 - Custom console output that works with Linux
-- And many new features for this years game!
   
 ### Events Supported
 - [x] Aerial Assist
-- [ ] Recycle Rush (Work in Progress)
+- [x] Recycle Rush
 
 ### To-Do
 - 2015 RecycleRush
