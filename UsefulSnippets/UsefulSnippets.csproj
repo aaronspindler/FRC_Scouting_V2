@@ -63,7 +63,9 @@
     <Compile Include="Notifications.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security.cs" />
-    <Compile Include="TheBlueAlliance\Getters.cs" />
+    <Compile Include="TheBlueAlliance\Getters\Events.cs" />
+    <Compile Include="TheBlueAlliance\Getters\Matches.cs" />
+    <Compile Include="TheBlueAlliance\Getters\Teams.cs" />
     <Compile Include="TheBlueAlliance\Models\Event.cs" />
     <Compile Include="TheBlueAlliance\Models\EventAwards.cs" />
     <Compile Include="TheBlueAlliance\Models\EventDistrictPoints.cs" />
