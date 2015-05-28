@@ -215,7 +215,7 @@ namespace FRC_Scouting_V2
                             }
                         }
                         Console.WriteLine("Actual Team Number: " + teamNumberImport);
-                        ConsoleWindow.AddItem("Actual Team Number Found: " + teamNumberImport);
+                        ConsoleWindow.WriteLine("Actual Team Number Found: " + teamNumberImport);
                         try
                         {
                             cmd.CommandText =
@@ -240,8 +240,8 @@ namespace FRC_Scouting_V2
                         {
                             Console.WriteLine("Error Code: " + ex.ErrorCode);
                             Console.WriteLine("Error Message: " + ex.Message);
-                            ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
-                            ConsoleWindow.AddItem("Error Message: " + ex.Message);
+                            ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
+                            ConsoleWindow.WriteLine("Error Message: " + ex.Message);
                         }
                         conn.Close();
                     }
@@ -318,7 +318,7 @@ namespace FRC_Scouting_V2
                 if (conn.Ping())
                 {
                     Console.WriteLine("Connected to the databse. Collecting and generating statistics now!");
-                    ConsoleWindow.AddItem("Connected to the databse. Collecting and generating statistics now!");
+                    ConsoleWindow.WriteLine("Connected to the databse. Collecting and generating statistics now!");
                 }
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -365,8 +365,8 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + e.ErrorCode);
                 Console.WriteLine("Error Message: " + e.Message);
-                ConsoleWindow.AddItem("Error Code: " + e.ErrorCode);
-                ConsoleWindow.AddItem("Error Message: " + e.Message);
+                ConsoleWindow.WriteLine("Error Code: " + e.ErrorCode);
+                ConsoleWindow.WriteLine("Error Message: " + e.Message);
                 UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
             }
 
@@ -436,7 +436,7 @@ namespace FRC_Scouting_V2
                     team1Selected = false;
                     UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                     Console.WriteLine("Error Message: " + e.Message);
-                    ConsoleWindow.AddItem("Error Message: " + e.Message);
+                    ConsoleWindow.WriteLine("Error Message: " + e.Message);
                 }
             }
             else
@@ -508,7 +508,7 @@ namespace FRC_Scouting_V2
                         team2Selected = false;
                         UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                         Console.WriteLine("Error Message: " + e.Message);
-                        ConsoleWindow.AddItem("Error Message: " + e.Message);
+                        ConsoleWindow.WriteLine("Error Message: " + e.Message);
                     }
                 }
             }
@@ -595,7 +595,7 @@ namespace FRC_Scouting_V2
                         }
                         reader.Close();
                         Console.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
-                        ConsoleWindow.AddItem("Row: " + i + " of: " + numberOfRows + " has been exported!");
+                        ConsoleWindow.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
                     }
                     Console.WriteLine("Your data has been successfully exported!");
                     writer.Close();
@@ -605,8 +605,8 @@ namespace FRC_Scouting_V2
                 {
                     Console.WriteLine("Error Code: " + ex.ErrorCode);
                     Console.WriteLine(ex.Message);
-                    ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
-                    ConsoleWindow.AddItem(ex.Message);
+                    ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
+                    ConsoleWindow.WriteLine(ex.Message);
                 }
                 UsefulSnippets.Notifications.ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
             }
@@ -1287,7 +1287,7 @@ namespace FRC_Scouting_V2
             catch (Exception webError)
             {
                 Console.WriteLine("Error Message: " + webError.Message);
-                ConsoleWindow.AddItem("Error Message: " + webError.Message);
+                ConsoleWindow.WriteLine("Error Message: " + webError.Message);
             }
 
             teamNameDisplay.Text = teamName;
@@ -1395,8 +1395,8 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + exception.ErrorCode);
                 Console.WriteLine("Error Message: " + exception.Message);
-                ConsoleWindow.AddItem("Error Code: " + exception.ErrorCode);
-                ConsoleWindow.AddItem("Error Message: " + exception.Message);
+                ConsoleWindow.WriteLine("Error Code: " + exception.ErrorCode);
+                ConsoleWindow.WriteLine("Error Message: " + exception.Message);
             }
         }
 

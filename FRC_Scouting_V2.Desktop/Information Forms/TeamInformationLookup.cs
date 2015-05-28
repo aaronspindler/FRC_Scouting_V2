@@ -67,13 +67,13 @@ namespace FRC_Scouting_V2.Information_Forms
 
                 Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
                                   " has been found successfully.");
-                ConsoleWindow.AddItem("The information for team: " + Convert.ToString(teamNumber) +
+                ConsoleWindow.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
                                       " has been found successfully.");
             }
             catch (Exception webError)
             {
                 Console.WriteLine("Error Message: " + webError.Message);
-                ConsoleWindow.AddItem("Error Message: " + webError.Message);
+                ConsoleWindow.WriteLine("Error Message: " + webError.Message);
             }
 
             teamNameDisplay.Text = teamName;

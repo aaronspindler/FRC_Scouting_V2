@@ -93,8 +93,8 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
-                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
-                ConsoleWindow.AddItem(ex.Message);
+                ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.WriteLine(ex.Message);
             }
 
             return numberOfRows;
@@ -517,7 +517,7 @@ namespace FRC_Scouting_V2
                 if (conn.Ping())
                 {
                     Console.WriteLine("The connection to your database has been made successfully.");
-                    ConsoleWindow.AddItem("The connection to your database has been made successfully.");
+                    ConsoleWindow.WriteLine("The connection to your database has been made successfully.");
                 }
 
                 //Creating the MySQLCommand object
@@ -533,7 +533,7 @@ namespace FRC_Scouting_V2
                     cmd.CommandText = createTable;
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("The table: " + Program.selectedEventName + " has been created.");
-                    ConsoleWindow.AddItem("The table: " + Program.selectedEventName + " has been created.");
+                    ConsoleWindow.WriteLine("The table: " + Program.selectedEventName + " has been created.");
                     //end of creating the table
                 }
                 catch (MySqlException createException)
@@ -541,9 +541,9 @@ namespace FRC_Scouting_V2
                     Console.WriteLine("If there is an error it is most likely because the table is already made.");
                     Console.WriteLine("Errorcode: " + createException.ErrorCode);
                     Console.WriteLine(createException.Message);
-                    ConsoleWindow.AddItem("If there is an error it is most likely because the table is already made.");
-                    ConsoleWindow.AddItem("Errorcode: " + createException.ErrorCode);
-                    ConsoleWindow.AddItem(createException.Message);
+                    ConsoleWindow.WriteLine("If there is an error it is most likely because the table is already made.");
+                    ConsoleWindow.WriteLine("Errorcode: " + createException.ErrorCode);
+                    ConsoleWindow.WriteLine(createException.Message);
                 }
 
                 //Submit data into the database
@@ -560,7 +560,7 @@ namespace FRC_Scouting_V2
                 cmd.ExecuteNonQuery();
 
                 Console.WriteLine("Data has been inserted into the database!");
-                ConsoleWindow.AddItem("Data has been inserted into the database!");
+                ConsoleWindow.WriteLine("Data has been inserted into the database!");
                 contextDisplayLabel.Text = ("Your data has been inserted into the database!");
 
                 //Closing the connection
@@ -572,8 +572,8 @@ namespace FRC_Scouting_V2
                 contextDisplayLabel.Text = ("An error has occured!");
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
-                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
-                ConsoleWindow.AddItem(ex.Message);
+                ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.WriteLine(ex.Message);
             }
         }
 

@@ -36,7 +36,7 @@ namespace FRC_Scouting_V2
             return logStrings;
         }
 
-        public static void AddItem(string message)
+        public static void WriteLine(string message)
         {
             itemAdded = true;
             string currentTime = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
@@ -64,7 +64,7 @@ namespace FRC_Scouting_V2
             catch (Exception exception)
             {
                 Console.WriteLine("Error Message: " + exception.Message);
-                AddItem("Error Message: " + exception.Message);
+                WriteLine("Error Message: " + exception.Message);
             }
         }
 

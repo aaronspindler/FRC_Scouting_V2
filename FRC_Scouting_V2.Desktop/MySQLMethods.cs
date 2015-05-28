@@ -54,8 +54,8 @@ namespace FRC_Scouting_V2
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
-                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
-                ConsoleWindow.AddItem(ex.Message);
+                ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.WriteLine(ex.Message);
             }
             return numberOfRows;
         }
@@ -122,14 +122,14 @@ namespace FRC_Scouting_V2
                         cmd.ExecuteNonQuery();
                         int numDone = i + 1;
                         Console.WriteLine("Successfully initialized: " + numDone + " of " + commands.Count);
-                        ConsoleWindow.AddItem("Successfully initialized: " + numDone + " of " + commands.Count);
+                        ConsoleWindow.WriteLine("Successfully initialized: " + numDone + " of " + commands.Count);
                     }
                     catch (MySqlException error)
                     {
                         Console.WriteLine("Error Code: " + error.ErrorCode);
                         Console.WriteLine(error.Message);
-                        ConsoleWindow.AddItem("Error Code: " + error.ErrorCode);
-                        ConsoleWindow.AddItem(error.Message);
+                        ConsoleWindow.WriteLine("Error Code: " + error.ErrorCode);
+                        ConsoleWindow.WriteLine(error.Message);
                     }
                 }
                 conn.Close();
@@ -142,14 +142,14 @@ namespace FRC_Scouting_V2
                 command.ExecuteNonQuery();
                 m_dbConnection.Close();
                 Console.WriteLine("Team List Database Successfully Initialized");
-                ConsoleWindow.AddItem("Team List Database Successfully Initialized");
+                ConsoleWindow.WriteLine("Team List Database Successfully Initialized");
             }
             catch (MySqlException ex)
             {
                 Console.WriteLine("Error Code: " + ex.ErrorCode);
                 Console.WriteLine(ex.Message);
-                ConsoleWindow.AddItem("Error Code: " + ex.ErrorCode);
-                ConsoleWindow.AddItem(ex.Message);
+                ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.WriteLine(ex.Message);
             }
         }
     }

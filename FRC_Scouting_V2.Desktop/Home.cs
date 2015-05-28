@@ -136,7 +136,7 @@ namespace FRC_Scouting_V2
 
         private void Home_Load(object sender, EventArgs e)
         {
-            ConsoleWindow.AddItem("Started FRC_Scouting_V2_" + Assembly.GetExecutingAssembly().GetName().Version);
+            ConsoleWindow.WriteLine("Started FRC_Scouting_V2_" + Assembly.GetExecutingAssembly().GetName().Version);
             internetTestTH.Start();
             timer.Start();
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
@@ -211,7 +211,7 @@ namespace FRC_Scouting_V2
             {
                 isInternetConnectedLabel.Text = ("Internet Connected");
                 isInternetConnectedLabel.ForeColor = Color.DarkGreen;
-                ConsoleWindow.AddItem("Internet Connected");
+                ConsoleWindow.WriteLine("Internet Connected");
             }
             else
             {
@@ -219,7 +219,7 @@ namespace FRC_Scouting_V2
                 {
                     isInternetConnectedLabel.Text = ("Internet Not Connected");
                     isInternetConnectedLabel.ForeColor = Color.Red;
-                    ConsoleWindow.AddItem("Internet Disconnected");
+                    ConsoleWindow.WriteLine("Internet Disconnected");
                 }
             }
         }
