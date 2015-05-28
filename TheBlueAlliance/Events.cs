@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
-using Newtonsoft.Json;
-using UsefulSnippets.TheBlueAlliance.Models;
+using TheBlueAlliance.Models;
 
-namespace UsefulSnippets.TheBlueAlliance.Getters
+namespace TheBlueAlliance
 {
-    class Events
+    public class Events
     {
         /// <summary>
         ///     Provides information for an event
@@ -145,6 +145,5 @@ namespace UsefulSnippets.TheBlueAlliance.Getters
             }
             return teamList.ToArray();
         }
-
     }
 }

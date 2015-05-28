@@ -1,4 +1,4 @@
-﻿namespace UsefulSnippets.TheBlueAlliance.Models
+﻿namespace TheBlueAlliance.Models
 {
     public class TeamMedia
     {

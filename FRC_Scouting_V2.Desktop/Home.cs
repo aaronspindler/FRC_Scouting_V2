@@ -34,6 +34,7 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
+using TheBlueAlliance;
 
 namespace FRC_Scouting_V2
 {
@@ -243,7 +244,7 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
-            
+            Console.WriteLine(TheBlueAlliance.Events.GetEventAwards("2015onto")[0].name);
         }
     }
 }

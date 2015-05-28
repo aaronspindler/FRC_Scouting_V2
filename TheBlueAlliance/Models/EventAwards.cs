@@ -1,6 +1,6 @@
-﻿namespace UsefulSnippets.TheBlueAlliance.Models
+﻿namespace TheBlueAlliance.Models
 {
-    public class TeamHistoryAwards
+    public class EventAwards
     {
         public class Award
         {
@@ -19,7 +19,7 @@
         {
             public int team_number { get; set; }
 
-            public object awardee { get; set; }
+            public string awardee { get; set; }
         }
     }
 }

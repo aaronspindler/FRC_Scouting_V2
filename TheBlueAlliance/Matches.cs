@@ -2,9 +2,9 @@
 using System;
 using System.Net;
 using System.Reflection;
-using UsefulSnippets.TheBlueAlliance.Models;
+using TheBlueAlliance.Models;
 
-namespace UsefulSnippets.TheBlueAlliance.Getters
+namespace TheBlueAlliance
 {
     public class Matches
     {

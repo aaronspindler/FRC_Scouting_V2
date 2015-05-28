@@ -1,4 +1,4 @@
-﻿namespace UsefulSnippets.TheBlueAlliance.Models
+﻿namespace TheBlueAlliance.Models
 {
     /// <summary>
     /// Model for information regarding an FRC event

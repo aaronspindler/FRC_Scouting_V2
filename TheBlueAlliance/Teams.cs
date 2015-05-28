@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
-using UsefulSnippets.TheBlueAlliance.Models;
+using TheBlueAlliance.Models;
 
-namespace UsefulSnippets.TheBlueAlliance.Getters
+namespace TheBlueAlliance
 {
-    internal class Teams
+    public class Teams
     {
         public static TeamEventAwards.Award[] GetTeamEventAwards(string teamKey, string eventKey)
         {

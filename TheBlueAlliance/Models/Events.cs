@@ -1,6 +1,6 @@
-﻿namespace UsefulSnippets.TheBlueAlliance.Models
+﻿namespace TheBlueAlliance.Models
 {
-    public class TeamHistoryEvents
+    public class Events
     {
         public class Event
         {
@@ -10,8 +10,8 @@
             public string end_date { get; set; }
             public string name { get; set; }
             public string short_name { get; set; }
-            public object facebook_eid { get; set; }
-            public object event_district_string { get; set; }
+            public string facebook_eid { get; set; }
+            public string event_district_string { get; set; }
             public string venue_address { get; set; }
             public int? event_district { get; set; }
             public string location { get; set; }
