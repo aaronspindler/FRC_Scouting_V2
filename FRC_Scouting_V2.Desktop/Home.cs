@@ -23,9 +23,6 @@
 //SOFTWARE.
 //===============================================================================
 
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using FRC_Scouting_V2.Events._2015_RecycleRush;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
