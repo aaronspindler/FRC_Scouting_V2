@@ -25,32 +25,10 @@ FRC_Scouting_V2
 - [x] Recycle Rush
 
 ### To-Do
-- 2015 RecycleRush
-  - [x] Pit Scouting
-    - [x] Data Editor
-        - [x] UI
-        - [x] Backend
-    - [x] Data Viewer
-        - [x] UI
-        - [x] Backend
-  - [x] Scouting
-    - [x] UI
-    - [x] Backend
-  - [ ] Statistics
-    - [ ] Calculating OPR
-  - [ ] Team Comparison
-    - [x] UI
-    - [ ] Backend
-  - [x] Match Breakdown
-    - [x] UI
-    - [x] Backend
-  - [x] Team Information
-    - [x] UI
-    - [x] Backend
-  - [ ] Team List
-    - [ ] Addition of Team
-    - [ ] Removal of Team
-  - [ ] Overhall Settings
+  - [ ] Overhall Settings Form
+  - [ ] Finish Contribution Form
+  - [ ] Update Event Information Form
+  - [ ] Add Event Schedule Form
 
 ### Releases
 For the most up to date release visit
