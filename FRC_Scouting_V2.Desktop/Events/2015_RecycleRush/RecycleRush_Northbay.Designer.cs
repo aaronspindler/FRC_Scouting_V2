@@ -202,7 +202,7 @@
             this.team2SelectorLabel = new System.Windows.Forms.Label();
             this.pitScoutingTabPage = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pitScoutingViewerTabPage = new System.Windows.Forms.TabPage();
             this.pitScoutingViewerTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.pitScoutingViewerEntryInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -250,7 +250,7 @@
             this.pitScoutingViewerIsometricPictureButton = new System.Windows.Forms.Button();
             this.pitScoutingViewerSidePictureButton = new System.Windows.Forms.Button();
             this.pitScoutingViewerFrontPictureButton = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pitScoutingEditorTabPage = new System.Windows.Forms.TabPage();
             this.pitScoutingEditorTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.pitScoutingEditorManipulationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -352,7 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).BeginInit();
             this.pitScoutingTabPage.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.pitScoutingViewerTabPage.SuspendLayout();
             this.pitScoutingViewerTableLayout.SuspendLayout();
             this.pitScoutingViewerEntryInformationGroupBox.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -367,7 +367,7 @@
             this.pitScoutingViewerHumanInteractionGroupBox.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pitScoutingViewerPictureBox)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.pitScoutingEditorTabPage.SuspendLayout();
             this.pitScoutingEditorTableLayout.SuspendLayout();
             this.pitScoutingEditorManipulationGroupBox.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -2415,7 +2415,7 @@
             this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.teamComparisonTabPage.Size = new System.Drawing.Size(1421, 726);
             this.teamComparisonTabPage.TabIndex = 5;
-            this.teamComparisonTabPage.Text = "Team Comparison - Work in Progress";
+            this.teamComparisonTabPage.Text = "Team Comparison - Did Not Use";
             this.teamComparisonTabPage.UseVisualStyleBackColor = true;
             // 
             // teamComparisonTableLayoutPanel
@@ -2641,8 +2641,8 @@
             // 
             // tabControl2
             // 
-            this.tabControl2.Controls.Add(this.tabPage1);
-            this.tabControl2.Controls.Add(this.tabPage2);
+            this.tabControl2.Controls.Add(this.pitScoutingViewerTabPage);
+            this.tabControl2.Controls.Add(this.pitScoutingEditorTabPage);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(2, 2);
             this.tabControl2.Multiline = true;
@@ -2652,16 +2652,16 @@
             this.tabControl2.Size = new System.Drawing.Size(1417, 722);
             this.tabControl2.TabIndex = 0;
             // 
-            // tabPage1
+            // pitScoutingViewerTabPage
             // 
-            this.tabPage1.Controls.Add(this.pitScoutingViewerTableLayout);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1409, 696);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Viewer";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.pitScoutingViewerTabPage.Controls.Add(this.pitScoutingViewerTableLayout);
+            this.pitScoutingViewerTabPage.Location = new System.Drawing.Point(4, 22);
+            this.pitScoutingViewerTabPage.Name = "pitScoutingViewerTabPage";
+            this.pitScoutingViewerTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.pitScoutingViewerTabPage.Size = new System.Drawing.Size(1409, 696);
+            this.pitScoutingViewerTabPage.TabIndex = 0;
+            this.pitScoutingViewerTabPage.Text = "Viewer";
+            this.pitScoutingViewerTabPage.UseVisualStyleBackColor = true;
             // 
             // pitScoutingViewerTableLayout
             // 
@@ -3324,16 +3324,16 @@
             this.pitScoutingViewerFrontPictureButton.UseVisualStyleBackColor = true;
             this.pitScoutingViewerFrontPictureButton.Click += new System.EventHandler(this.pitScoutingViewerFrontPictureButton_Click);
             // 
-            // tabPage2
+            // pitScoutingEditorTabPage
             // 
-            this.tabPage2.Controls.Add(this.pitScoutingEditorTableLayout);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1409, 696);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Editor";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.pitScoutingEditorTabPage.Controls.Add(this.pitScoutingEditorTableLayout);
+            this.pitScoutingEditorTabPage.Location = new System.Drawing.Point(4, 22);
+            this.pitScoutingEditorTabPage.Name = "pitScoutingEditorTabPage";
+            this.pitScoutingEditorTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.pitScoutingEditorTabPage.Size = new System.Drawing.Size(1409, 696);
+            this.pitScoutingEditorTabPage.TabIndex = 1;
+            this.pitScoutingEditorTabPage.Text = "Editor";
+            this.pitScoutingEditorTabPage.UseVisualStyleBackColor = true;
             // 
             // pitScoutingEditorTableLayout
             // 
@@ -4250,7 +4250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).EndInit();
             this.pitScoutingTabPage.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.pitScoutingViewerTabPage.ResumeLayout(false);
             this.pitScoutingViewerTableLayout.ResumeLayout(false);
             this.pitScoutingViewerEntryInformationGroupBox.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
@@ -4271,7 +4271,7 @@
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pitScoutingViewerPictureBox)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.pitScoutingEditorTabPage.ResumeLayout(false);
             this.pitScoutingEditorTableLayout.ResumeLayout(false);
             this.pitScoutingEditorManipulationGroupBox.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
@@ -4321,8 +4321,8 @@
         private System.Windows.Forms.TabPage teamComparisonTabPage;
         private System.Windows.Forms.TableLayoutPanel teamComparisonTableLayoutPanel;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage pitScoutingViewerTabPage;
+        private System.Windows.Forms.TabPage pitScoutingEditorTabPage;
         private System.Windows.Forms.TableLayoutPanel teamInformationTableLayoutPanel;
         private System.Windows.Forms.ComboBox teamComparisonTeam1Selector;
         private System.Windows.Forms.ToolStripMenuItem eventInformationToolStripMenuItem;
