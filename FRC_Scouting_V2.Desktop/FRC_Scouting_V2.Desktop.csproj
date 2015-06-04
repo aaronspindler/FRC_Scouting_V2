@@ -35,7 +35,7 @@
     <PublisherName>xNovax</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -412,6 +412,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FRC_Events_API\FRC_Events_API.csproj">
+      <Project>{40a4e62e-c04c-433b-8295-c7873c726903}</Project>
+      <Name>FRC_Events_API</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TheBlueAlliance\TheBlueAlliance.csproj">
       <Project>{8e17112c-ae09-4e64-bd69-948740528d54}</Project>
       <Name>TheBlueAlliance</Name>
