@@ -22,7 +22,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 
 namespace UsefulSnippets
@@ -30,26 +32,26 @@ namespace UsefulSnippets
     public class Images
     {
         /// <summary>
-        /// Converts a Byte Array into a Useable Image Object
+        ///     Converts a Byte Array into a Useable Image Object
         /// </summary>
         /// <param name="byteArrayIn"></param>
         /// <returns></returns>
         public static Image byteArrayToImage(byte[] byteArrayIn)
         {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
+            var ms = new MemoryStream(byteArrayIn);
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
 
         /// <summary>
-        /// Converts an Image Object into a Byte Array (For Storing Image in Database)
+        ///     Converts an Image Object into a Byte Array (For Storing Image in Database)
         /// </summary>
         /// <param name="imageIn"></param>
         /// <returns></returns>
         public static byte[] imageToByteArray(Image imageIn)
         {
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            var ms = new MemoryStream();
+            imageIn.Save(ms, ImageFormat.Gif);
             return ms.ToArray();
         }
     }

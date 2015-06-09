@@ -23,15 +23,21 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-
 using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
     public partial class RecycleRush_Northbay_Information : Form
     {
+        private readonly Random gen = new Random();
+
+        private int previousNum;
+        private int randomNum = 100;
+        private string sponsorLevel;
+        private string sponsorName;
+
         public RecycleRush_Northbay_Information()
         {
             InitializeComponent();
@@ -46,13 +52,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             timer1.Tick += timer_Tick;
             timer1.Start();
         }
-
-        private readonly Random gen = new Random();
-
-        private int previousNum;
-        private int randomNum = 100;
-        private string sponsorLevel;
-        private string sponsorName;
 
         public void UpdateSponsor()
         {

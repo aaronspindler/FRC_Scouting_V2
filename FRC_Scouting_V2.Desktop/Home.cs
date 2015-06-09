@@ -23,9 +23,6 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Events._2015_RecycleRush;
-using FRC_Scouting_V2.Information_Forms;
-using FRC_Scouting_V2.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -34,7 +31,9 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
-using TheBlueAlliance;
+using FRC_Scouting_V2.Events._2015_RecycleRush;
+using FRC_Scouting_V2.Information_Forms;
+using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
@@ -147,7 +146,7 @@ namespace FRC_Scouting_V2
 
             if (Settings.Default.firstTimeLoad)
             {
-                if (MessageBox.Show("Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?","Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Since this is the first time you have used this program please take a look at the settings page. This will prevent any headaches when trying to use the program. Do you want to be taken to the settings page now?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     var settingsPage = new MainSettings();
                     settingsPage.Show();
@@ -244,7 +243,6 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

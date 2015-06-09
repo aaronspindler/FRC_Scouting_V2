@@ -22,6 +22,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Windows.Forms;
 using CrashReporterDotNET;
@@ -29,12 +30,12 @@ using CrashReporterDotNET;
 namespace UsefulSnippets
 {
     /// <summary>
-    /// Provides an abstraction layer to easily prompt a user with a message
+    ///     Provides an abstraction layer to easily prompt a user with a message
     /// </summary>
     public class Notifications
     {
         /// <summary>
-        /// Prompts the user with a message that has error characteristics
+        ///     Prompts the user with a message that has error characteristics
         /// </summary>
         /// <param name="error"></param>
         public static void ErrorOccured(string error)
@@ -43,7 +44,7 @@ namespace UsefulSnippets
         }
 
         /// <summary>
-        /// Prompts the user with a message with information characteristics
+        ///     Prompts the user with a message with information characteristics
         /// </summary>
         /// <param name="informationText"></param>
         public static void ShowInformationMessage(string informationText)
@@ -52,7 +53,7 @@ namespace UsefulSnippets
         }
 
         /// <summary>
-        /// Prompts the user with a crash report and submits the report to an email address
+        ///     Prompts the user with a crash report and submits the report to an email address
         /// </summary>
         /// <param name="exception"></param>
         public static void ReportCrash(Exception exception)

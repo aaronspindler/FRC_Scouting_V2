@@ -22,6 +22,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace UsefulSnippets
     public class Mathematics
     {
         /// <summary>
-        /// Calculates The Standard Deviation between the data passed to it
+        ///     Calculates The Standard Deviation between the data passed to it
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
@@ -47,7 +48,7 @@ namespace UsefulSnippets
             double sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
 
             //Put it all together
-            ret = Math.Sqrt((sum) / enumerable.Count() - 1);
+            ret = Math.Sqrt((sum)/enumerable.Count() - 1);
             return ret;
         }
     }

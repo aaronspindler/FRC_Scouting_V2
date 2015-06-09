@@ -1,7 +1,6 @@
 ﻿namespace TheBlueAlliance.Models
 {
-    class EventStats
+    internal class EventStats
     {
-
     }
 }

@@ -2,6 +2,20 @@
 {
     public class MatchInformation
     {
+        public class Alliances
+        {
+            public Blue blue { get; set; }
+
+            public Red red { get; set; }
+        }
+
+        public class Blue
+        {
+            public int score { get; set; }
+
+            public string[] teams { get; set; }
+        }
+
         public class Match
         {
             public string comp_level { get; set; }
@@ -23,20 +37,6 @@
             public Alliances alliances { get; set; }
 
             public string event_key { get; set; }
-        }
-
-        public class Alliances
-        {
-            public Blue blue { get; set; }
-
-            public Red red { get; set; }
-        }
-
-        public class Blue
-        {
-            public int score { get; set; }
-
-            public string[] teams { get; set; }
         }
 
         public class Red

@@ -23,9 +23,6 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -35,6 +32,10 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using UsefulSnippets;
 
 namespace FRC_Scouting_V2
 {
@@ -143,7 +144,7 @@ namespace FRC_Scouting_V2
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
-            var cmd = new MySqlCommand { Connection = conn };
+            var cmd = new MySqlCommand {Connection = conn};
 
             int numberOfFilesImported = 0;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -249,12 +250,12 @@ namespace FRC_Scouting_V2
                     {
                         if (!testIfFileIsGood.Equals("END OF FILE"))
                         {
-                            UsefulSnippets.Notifications.ErrorOccured("The file does not seem to be in the correct format.");
+                            Notifications.ErrorOccured("The file does not seem to be in the correct format.");
                         }
                     }
                 }
-                UsefulSnippets.Notifications.ShowInformationMessage("Successfully imported: " + numberOfFilesImported +
-                                          " File(s) Into the Database.");
+                Notifications.ShowInformationMessage("Successfully imported: " + numberOfFilesImported +
+                                                     " File(s) Into the Database.");
             }
         }
 
@@ -272,7 +273,7 @@ namespace FRC_Scouting_V2
             double sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
 
             //Put it all together
-            ret = Math.Sqrt((sum) / enumerable.Count() - 1);
+            ret = Math.Sqrt((sum)/enumerable.Count() - 1);
             return ret;
         }
 
@@ -367,7 +368,7 @@ namespace FRC_Scouting_V2
                 Console.WriteLine("Error Message: " + e.Message);
                 ConsoleWindow.WriteLine("Error Code: " + e.ErrorCode);
                 ConsoleWindow.WriteLine("Error Message: " + e.Message);
-                UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
+                Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
             }
 
             if (selection == 1)
@@ -376,35 +377,35 @@ namespace FRC_Scouting_V2
                 {
                     _autoHighMean[0] = AutoHighGoal.Average();
                     _autoHighStandardDeviation[0] = CalculateStdDev(AutoHighGoal);
-                    _autoHighGoalSuccessRate[0] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
+                    _autoHighGoalSuccessRate[0] = AutoHighGoal.Sum()/(AutoHighGoal.Sum() + AutoHighMiss.Sum());
                     _autoLowMean[0] = AutoLowGoal.Average();
                     _autoLowStandardDeviation[0] = CalculateStdDev(AutoLowGoal);
-                    _autolowGoalSuccessRate[0] = AutoLowGoal.Sum() / (AutoLowGoal.Sum() + AutoLowMiss.Sum());
-                    _autoMobilitySuccessRate[0] = AutoMovementGood.Sum() / (numberOfMatches);
+                    _autolowGoalSuccessRate[0] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
+                    _autoMobilitySuccessRate[0] = AutoMovementGood.Sum()/(numberOfMatches);
                     _driverRatingMean[0] = DriverRating.Average();
                     _driverRatingStandardDeviation[0] = CalculateStdDev(DriverRating);
                     _controlledHighMean[0] = ControlledHighGoal.Average();
                     _controlledHighStandardDeviation[0] = CalculateStdDev(ControlledHighGoal);
-                    _controlledHighSuccessRate[0] = ControlledHighGoal.Sum() /
+                    _controlledHighSuccessRate[0] = ControlledHighGoal.Sum()/
                                                     (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
                     _controlledLowMean[0] = ControlledLowGoal.Average();
                     _controlledLowStandardDeviation[0] = CalculateStdDev(ControlledLowGoal);
-                    _controlledLowSuccessRate[0] = ControlledLowGoal.Sum() /
+                    _controlledLowSuccessRate[0] = ControlledLowGoal.Sum()/
                                                    (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
                     _hotGoalMean[0] = HotGoal.Average();
                     _hotGoalStandardDeviation[0] = CalculateStdDev(HotGoal);
-                    _hotGoalSuccessRate[0] = HotGoal.Sum() / (HotGoal.Sum() + HotMiss.Sum());
+                    _hotGoalSuccessRate[0] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
                     _pickupsMean[0] = (AutoPickup.Average()) + (ControlledPickup.Average()) +
                                       (PickupFromHuman.Average());
                     _pickupStandardDeviation[0] = CalculateStdDev(ControlledPickup);
-                    _pickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum()) /
+                    _pickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
                                             (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
                                              AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() +
                                              MissedPickupFromHuman.Sum());
                     _successfulTrussMean[0] = SuccessfulTruss.Average();
                     _trussStandardDeviation[0] = CalculateStdDev(SuccessfulTruss);
-                    _trussSuccessRate[0] = SuccessfulTruss.Sum() / (SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
-                    _survivability[0] = numberOfMatches / (numberOfMatches + RobotDied.Sum());
+                    _trussSuccessRate[0] = SuccessfulTruss.Sum()/(SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
+                    _survivability[0] = numberOfMatches/(numberOfMatches + RobotDied.Sum());
 
                     dataGridViewTeam1.Rows.Clear();
 
@@ -434,7 +435,7 @@ namespace FRC_Scouting_V2
                 {
                     dataGridViewTeam1.Rows.Clear();
                     team1Selected = false;
-                    UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
+                    Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                     Console.WriteLine("Error Message: " + e.Message);
                     ConsoleWindow.WriteLine("Error Message: " + e.Message);
                 }
@@ -447,35 +448,35 @@ namespace FRC_Scouting_V2
                     {
                         _autoHighMean[1] = AutoHighGoal.Average();
                         _autoHighStandardDeviation[1] = CalculateStdDev(AutoHighGoal);
-                        _autoHighGoalSuccessRate[1] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
+                        _autoHighGoalSuccessRate[1] = AutoHighGoal.Sum()/(AutoHighGoal.Sum() + AutoHighMiss.Sum());
                         _autoLowMean[1] = AutoLowGoal.Average();
                         _autoLowStandardDeviation[1] = CalculateStdDev(AutoLowGoal);
-                        _autolowGoalSuccessRate[1] = AutoLowGoal.Sum() / (AutoLowGoal.Sum() + AutoLowMiss.Sum());
-                        _autoMobilitySuccessRate[1] = AutoMovementGood.Sum() / (numberOfMatches);
+                        _autolowGoalSuccessRate[1] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
+                        _autoMobilitySuccessRate[1] = AutoMovementGood.Sum()/(numberOfMatches);
                         _driverRatingMean[1] = DriverRating.Average();
                         _driverRatingStandardDeviation[1] = CalculateStdDev(DriverRating);
                         _controlledHighMean[1] = ControlledHighGoal.Average();
                         _controlledHighStandardDeviation[1] = CalculateStdDev(ControlledHighGoal);
-                        _controlledHighSuccessRate[1] = ControlledHighGoal.Sum() /
+                        _controlledHighSuccessRate[1] = ControlledHighGoal.Sum()/
                                                         (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
                         _controlledLowMean[1] = ControlledLowGoal.Average();
                         _controlledLowStandardDeviation[1] = CalculateStdDev(ControlledLowGoal);
-                        _controlledLowSuccessRate[1] = ControlledLowGoal.Sum() /
+                        _controlledLowSuccessRate[1] = ControlledLowGoal.Sum()/
                                                        (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
                         _hotGoalMean[1] = HotGoal.Average();
                         _hotGoalStandardDeviation[1] = CalculateStdDev(HotGoal);
-                        _hotGoalSuccessRate[1] = HotGoal.Sum() / (HotGoal.Sum() + HotMiss.Sum());
+                        _hotGoalSuccessRate[1] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
                         _pickupsMean[1] = (AutoPickup.Average()) + (ControlledPickup.Average()) +
                                           (PickupFromHuman.Average());
                         _pickupStandardDeviation[1] = CalculateStdDev(ControlledPickup);
-                        _pickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum()) /
+                        _pickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
                                                 (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
                                                  AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() +
                                                  MissedPickupFromHuman.Sum());
                         _successfulTrussMean[1] = SuccessfulTruss.Average();
                         _trussStandardDeviation[1] = CalculateStdDev(SuccessfulTruss);
-                        _trussSuccessRate[1] = SuccessfulTruss.Sum() / (SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
-                        _survivability[1] = numberOfMatches / (numberOfMatches + RobotDied.Sum());
+                        _trussSuccessRate[1] = SuccessfulTruss.Sum()/(SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
+                        _survivability[1] = numberOfMatches/(numberOfMatches + RobotDied.Sum());
 
                         dataGridViewTeam2.Rows.Clear();
 
@@ -506,7 +507,7 @@ namespace FRC_Scouting_V2
                     {
                         dataGridViewTeam2.Rows.Clear();
                         team2Selected = false;
-                        UsefulSnippets.Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
+                        Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                         Console.WriteLine("Error Message: " + e.Message);
                         ConsoleWindow.WriteLine("Error Message: " + e.Message);
                     }
@@ -516,7 +517,7 @@ namespace FRC_Scouting_V2
 
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UsefulSnippets.Notifications.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
+            Notifications.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
         }
 
         private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
@@ -551,7 +552,7 @@ namespace FRC_Scouting_V2
 
         private void exportToCSVToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            UsefulSnippets.Notifications.ShowInformationMessage(
+            Notifications.ShowInformationMessage(
                 "This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
@@ -608,14 +609,14 @@ namespace FRC_Scouting_V2
                     ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                     ConsoleWindow.WriteLine(ex.Message);
                 }
-                UsefulSnippets.Notifications.ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
+                Notifications.ShowInformationMessage("Export of " + numberOfRows + " rows has successfully finished.");
             }
-            UsefulSnippets.Notifications.ShowInformationMessage("Your data has been successfully exported to CSV.");
+            Notifications.ShowInformationMessage("Your data has been successfully exported to CSV.");
         }
 
         private void howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UsefulSnippets.Notifications.ShowInformationMessage(
+            Notifications.ShowInformationMessage(
                 "The team information is pulled from TheBluAlliance's API, this means that you need to have an internet connection to get the data.");
         }
 
@@ -1297,7 +1298,7 @@ namespace FRC_Scouting_V2
             teamURLDisplay.Text = teamURL;
 
             object teamImage = Resources.ResourceManager.GetObject("FRC" + _teamNumberArray[teamSelector.SelectedIndex]);
-            teamLogoPictureBox.Image = (Image)teamImage;
+            teamLogoPictureBox.Image = (Image) teamImage;
 
             Program.selectedTeamName = _teamNameArray[teamSelector.SelectedIndex];
             Program.selectedTeamNumber = _teamNumberArray[teamSelector.SelectedIndex];

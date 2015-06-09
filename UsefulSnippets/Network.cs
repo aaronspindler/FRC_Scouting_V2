@@ -22,6 +22,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System.IO;
 using System.Net;
 
@@ -30,7 +31,7 @@ namespace UsefulSnippets
     public class Network
     {
         /// <summary>
-        /// Checks for an available internet connection by pinging google.com
+        ///     Checks for an available internet connection by pinging google.com
         /// </summary>
         /// <returns></returns>
         public static bool CheckForInternetConnection()

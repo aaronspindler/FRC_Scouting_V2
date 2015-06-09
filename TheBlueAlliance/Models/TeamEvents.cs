@@ -2,6 +2,12 @@
 {
     public class TeamEvents
     {
+        public class Alliance
+        {
+            public object[] declines { get; set; }
+            public string[] picks { get; set; }
+        }
+
         public class Event
         {
             public string key { get; set; }
@@ -30,12 +36,5 @@
             public string channel { get; set; }
             public string file { get; set; }
         }
-
-        public class Alliance
-        {
-            public object[] declines { get; set; }
-            public string[] picks { get; set; }
-        }
-
     }
 }

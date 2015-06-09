@@ -2,20 +2,6 @@
 {
     public class EventMatches
     {
-        public class Match
-        {
-            public string comp_level { get; set; }
-            public int match_number { get; set; }
-            public Video[] videos { get; set; }
-            public object time_string { get; set; }
-            public int set_number { get; set; }
-            public string key { get; set; }
-            public int time { get; set; }
-            public Score_Breakdown score_breakdown { get; set; }
-            public Alliances alliances { get; set; }
-            public string event_key { get; set; }
-        }
-
         public class Alliances
         {
             public Blue1 blue { get; set; }
@@ -32,6 +18,20 @@
         {
             public int score { get; set; }
             public string[] teams { get; set; }
+        }
+
+        public class Match
+        {
+            public string comp_level { get; set; }
+            public int match_number { get; set; }
+            public Video[] videos { get; set; }
+            public object time_string { get; set; }
+            public int set_number { get; set; }
+            public string key { get; set; }
+            public int time { get; set; }
+            public Score_Breakdown score_breakdown { get; set; }
+            public Alliances alliances { get; set; }
+            public string event_key { get; set; }
         }
 
         public class Red

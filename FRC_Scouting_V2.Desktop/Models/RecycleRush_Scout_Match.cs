@@ -14,8 +14,6 @@
 //The above copyright notice and this permission notice shall be included in all
 //copies or substantial portions of the Software.
 
-using FRC_Scouting_V2.Models;
-
 //THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,14 +22,17 @@ using FRC_Scouting_V2.Models;
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Collections.Generic;
+using FRC_Scouting_V2.Models;
 
 namespace FRC_Scouting_V2
 {
     public class RecycleRush_Scout_Match
     {
         //General Information
+        public List<RecycleRush_Stack> Stacks = new List<RecycleRush_Stack>();
         public string Author { get; set; }
 
         public string TimeCreated { get; set; }
@@ -95,8 +96,6 @@ namespace FRC_Scouting_V2
         public int Tele_Fouls { get; set; }
 
         public string Comments { get; set; }
-
-        public List<RecycleRush_Stack> Stacks = new List<RecycleRush_Stack>();
 
         //Coopertition
         public Boolean Coopertition_Set { get; set; }

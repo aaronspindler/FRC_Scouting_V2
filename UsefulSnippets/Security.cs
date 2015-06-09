@@ -22,6 +22,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -30,12 +31,12 @@ using System.Text;
 namespace UsefulSnippets
 {
     /// <summary>
-    /// Methods to inact security measures
+    ///     Methods to inact security measures
     /// </summary>
     public class Security
     {
         /// <summary>
-        /// Encrypts a string with AES256 encryption
+        ///     Encrypts a string with AES256 encryption
         /// </summary>
         /// <param name="plainText"></param>
         /// <returns></returns>
@@ -61,7 +62,7 @@ namespace UsefulSnippets
         }
 
         /// <summary>
-        /// Decrypts a cipher-text that has been encrypted with AES256 Encryption
+        ///     Decrypts a cipher-text that has been encrypted with AES256 Encryption
         /// </summary>
         /// <param name="encryptedText"></param>
         /// <returns></returns>
@@ -87,7 +88,7 @@ namespace UsefulSnippets
         }
 
         /// <summary>
-        /// Returns a pseudo random number between a range
+        ///     Returns a pseudo random number between a range
         /// </summary>
         /// <param name="startingNum"></param>
         /// <param name="endingNum"></param>
@@ -99,13 +100,13 @@ namespace UsefulSnippets
             var r = new RNGCryptoServiceProvider();
 
             r.GetBytes(bytes);
-            int number = (int)((decimal)bytes[0] / 256 * difference) + startingNum;
+            int number = (int) ((decimal) bytes[0]/256*difference) + startingNum;
 
             return number;
         }
 
         /// <summary>
-        /// Returns a random password based on the password type selected and the password length selected
+        ///     Returns a random password based on the password type selected and the password length selected
         /// </summary>
         /// <param name="passwordType"></param>
         /// <param name="passwordLength"></param>
@@ -122,7 +123,7 @@ namespace UsefulSnippets
             //Variables
             var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
             char[] letters =
             {
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',

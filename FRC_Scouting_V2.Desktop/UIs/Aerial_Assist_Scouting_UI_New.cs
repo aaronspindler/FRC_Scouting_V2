@@ -23,12 +23,13 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using UsefulSnippets;
 
 namespace FRC_Scouting_V2.UIs
 {
@@ -189,7 +190,7 @@ namespace FRC_Scouting_V2.UIs
 
             if (commentsTextBox.Text.Contains(";"))
             {
-                UsefulSnippets.Notifications.ErrorOccured("You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
+                Notifications.ErrorOccured("You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
             }
         }
 
@@ -325,7 +326,7 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("==========================================================");
                     writer.WriteLine("-===============+ Human Readable Portion +===============-");
                     writer.WriteLine("==========================================================");
-                    writer.WriteLine("Time Created: " + UsefulSnippets.Time.GetCurrentTime());
+                    writer.WriteLine("Time Created: " + Time.GetCurrentTime());
                     writer.WriteLine("Scouted By: " + Settings.Default.username);
                     writer.WriteLine("Match #: " + Convert.ToString(matchNumber));
                     writer.WriteLine("Did the robot die?: " + Convert.ToBoolean(didRobotDie));
@@ -406,7 +407,7 @@ namespace FRC_Scouting_V2.UIs
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
                 //Checking if the connection is successful
@@ -476,8 +477,8 @@ namespace FRC_Scouting_V2.UIs
                 ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.WriteLine(ex.Message);
             }
-            UsefulSnippets.Notifications.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " +
-                                            matchNumber);
+            Notifications.ShowInformationMessage("You have successfully inserted your scouting data for Match #: " +
+                                                 matchNumber);
 
             //Clearing the values after you submit the data
             autoHighGoal = 0;

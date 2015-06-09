@@ -16,6 +16,5 @@
             public int team_number { get; set; }
             public object awardee { get; set; }
         }
-
     }
 }

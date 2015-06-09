@@ -23,12 +23,12 @@
 //SOFTWARE.
 //===============================================================================
 
-using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using Newtonsoft.Json;
 
 //@author xNovax
 
@@ -52,7 +52,7 @@ namespace FRC_Scouting_V2.Information_Forms
         {
             string downloadedData;
             var wc = new MyWebClient();
-            wc.Headers.Add("X-TBA-App-Id","3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 url = ("http://www.thebluealliance.com/api/v2/team/frc" + Convert.ToString(teamNumber));
@@ -68,7 +68,7 @@ namespace FRC_Scouting_V2.Information_Forms
                 Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
                                   " has been found successfully.");
                 ConsoleWindow.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
-                                      " has been found successfully.");
+                                        " has been found successfully.");
             }
             catch (Exception webError)
             {

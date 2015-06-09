@@ -2,6 +2,24 @@
 {
     public class TeamEventMatches
     {
+        public class Alliances
+        {
+            public Blue1 blue { get; set; }
+            public Red1 red { get; set; }
+        }
+
+        public class Blue
+        {
+            public int auto { get; set; }
+            public int foul { get; set; }
+        }
+
+        public class Blue1
+        {
+            public int score { get; set; }
+            public string[] teams { get; set; }
+        }
+
         public class Match
         {
             public string comp_level { get; set; }
@@ -16,34 +34,10 @@
             public string event_key { get; set; }
         }
 
-        public class Score_Breakdown
-        {
-            public Blue blue { get; set; }
-            public Red red { get; set; }
-        }
-
-        public class Blue
-        {
-            public int auto { get; set; }
-            public int foul { get; set; }
-        }
-
         public class Red
         {
             public int auto { get; set; }
             public int foul { get; set; }
-        }
-
-        public class Alliances
-        {
-            public Blue1 blue { get; set; }
-            public Red1 red { get; set; }
-        }
-
-        public class Blue1
-        {
-            public int score { get; set; }
-            public string[] teams { get; set; }
         }
 
         public class Red1
@@ -52,11 +46,16 @@
             public string[] teams { get; set; }
         }
 
+        public class Score_Breakdown
+        {
+            public Blue blue { get; set; }
+            public Red red { get; set; }
+        }
+
         public class Video
         {
             public string type { get; set; }
             public string key { get; set; }
         }
-
     }
 }

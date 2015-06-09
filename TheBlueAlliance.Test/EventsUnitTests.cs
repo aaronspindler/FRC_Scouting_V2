@@ -37,15 +37,15 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedName, actualEventInformation.name, "Event Names Are Not As Expected");
             Assert.AreEqual(expectedShortName, actualEventInformation.short_name, "Short Names Are Not As Expected");
             Assert.AreEqual(expectedFaceBookEid, actualEventInformation.facebook_eid, "Facebook EID Are Not As Expected");
-            Assert.AreEqual(expectedEventDistrictString, actualEventInformation.event_district_string,"Event District Strings Are Not As Expected");
-            Assert.AreEqual(expectedVenueAddress, actualEventInformation.venue_address,"Venue Addresses Are Not As Expected");
-            Assert.AreEqual(expectedEventDistrict, actualEventInformation.event_district,"Event Districts Are Not As Expected");
+            Assert.AreEqual(expectedEventDistrictString, actualEventInformation.event_district_string, "Event District Strings Are Not As Expected");
+            Assert.AreEqual(expectedVenueAddress, actualEventInformation.venue_address, "Venue Addresses Are Not As Expected");
+            Assert.AreEqual(expectedEventDistrict, actualEventInformation.event_district, "Event Districts Are Not As Expected");
             Assert.AreEqual(expectedLocation, actualEventInformation.location, "Locations Are Not As Expected");
             Assert.AreEqual(expectedEventCode, actualEventInformation.event_code, "Event Codes Are Not As Expected");
             Assert.AreEqual(expectedYear, actualEventInformation.year, "Years Are Not As Expected");
             Assert.AreEqual(expectedWebcasts, actualEventInformation.webcast[0].type, "Webcasts Are Not As Expected");
-            Assert.AreEqual(expectedAlliances, actualEventInformation.alliances[0].picks[0],"Alliances Are Not As Expected");
-            Assert.AreEqual(expectedEventTypeString, actualEventInformation.event_type_string,"Event Type Strings Are Not As Expected");
+            Assert.AreEqual(expectedAlliances, actualEventInformation.alliances[0].picks[0], "Alliances Are Not As Expected");
+            Assert.AreEqual(expectedEventTypeString, actualEventInformation.event_type_string, "Event Type Strings Are Not As Expected");
             Assert.AreEqual(expectedStartDate, actualEventInformation.start_date, "Start Dates Are Not As Expected");
             Assert.AreEqual(expectedEventType, actualEventInformation.event_type, "Event Types Are Not As Expected");
         }

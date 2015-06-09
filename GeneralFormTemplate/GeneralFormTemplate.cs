@@ -25,17 +25,18 @@
 
 using System;
 using System.Windows.Forms;
+using UsefulSnippets;
 
 namespace GeneralFormTemplate
 {
     //@author xNovax
     /// <summary>
-    /// Template for a form that has a tool strip and current time at the top
+    ///     Template for a form that has a tool strip and current time at the top
     /// </summary>
     public partial class GeneralFormTemplate : Form
     {
         /// <summary>
-        /// Constructer for GeneralFormTemplate
+        ///     Constructer for GeneralFormTemplate
         /// </summary>
         public GeneralFormTemplate()
         {
@@ -49,14 +50,14 @@ namespace GeneralFormTemplate
 
         private void GeneralFormTemplate_Load(object sender, EventArgs e)
         {
-            currentTimeDisplay.Text = ("Current Time: " + UsefulSnippets.Time.GetCurrentTime());
+            currentTimeDisplay.Text = ("Current Time: " + Time.GetCurrentTime());
             timer.Tick += timer_Tick;
             timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            currentTimeDisplay.Text = ("Current Time: " + UsefulSnippets.Time.GetCurrentTime());
+            currentTimeDisplay.Text = ("Current Time: " + Time.GetCurrentTime());
         }
     }
 }

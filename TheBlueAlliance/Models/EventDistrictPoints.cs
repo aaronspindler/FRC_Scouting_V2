@@ -1,7 +1,6 @@
 ﻿namespace TheBlueAlliance.Models
 {
-    class EventDistrictPoints
+    internal class EventDistrictPoints
     {
-
     }
 }

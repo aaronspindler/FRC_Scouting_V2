@@ -1,12 +1,21 @@
 ﻿namespace TheBlueAlliance.Models
 {
     /// <summary>
-    /// Model for information regarding an FRC event
+    ///     Model for information regarding an FRC event
     /// </summary>
     public class Event
     {
         /// <summary>
-        /// Main model to store information regarding an event
+        ///     Information regarding the picks and declines of an alliance at an FRC event
+        /// </summary>
+        public class Alliance
+        {
+            public object[] declines { get; set; }
+            public string[] picks { get; set; }
+        }
+
+        /// <summary>
+        ///     Main model to store information regarding an event
         /// </summary>
         public class EventInformation
         {
@@ -31,7 +40,7 @@
         }
 
         /// <summary>
-        /// Information regarding the location and type of a webcast for an event
+        ///     Information regarding the location and type of a webcast for an event
         /// </summary>
         public class Webcast
         {
@@ -39,15 +48,5 @@
             public string channel { get; set; }
             public string file { get; set; }
         }
-
-        /// <summary>
-        /// Information regarding the picks and declines of an alliance at an FRC event
-        /// </summary>
-        public class Alliance
-        {
-            public object[] declines { get; set; }
-            public string[] picks { get; set; }
-        }
-
     }
 }

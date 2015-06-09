@@ -1,12 +1,13 @@
-﻿using Octokit;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using Octokit;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
     public partial class ChangeLog : Form
     {
-        private GitHubClient github = new GitHubClient(new ProductHeaderValue("FRC_Scouting_V2"));
+        private readonly GitHubClient github = new GitHubClient(new ProductHeaderValue("FRC_Scouting_V2"));
 
         public ChangeLog()
         {
@@ -34,7 +35,7 @@ namespace FRC_Scouting_V2.Information_Forms
             commitListBox.Items.Clear();
             try
             {
-                var projectCommits = await github.Repository.Commits.GetAll("xNovax", "FRC_Scouting_V2");
+                IReadOnlyList<GitHubCommit> projectCommits = await github.Repository.Commits.GetAll("xNovax", "FRC_Scouting_V2");
                 for (int i = 0; i < projectCommits.Count - 1; i++)
                 {
                     commitListBox.Items.Add(projectCommits[i].Commit.Author.Date + " | " + projectCommits[i].Commit.Message + " by: " + projectCommits[i].Commit.Author.Name);
