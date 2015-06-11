@@ -37,8 +37,7 @@ namespace TheBlueAlliance
             var dataList = new List<EventAwards.Award>();
             EventAwards.Award[] eventAwardsToReturn = dataList.ToArray();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 string url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/awards");
@@ -57,8 +56,7 @@ namespace TheBlueAlliance
             var dataList = new List<EventMatches.Match>();
             EventMatches.Match[] eventMatchesToReturn = dataList.ToArray();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 string url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/matches");
@@ -112,8 +110,7 @@ namespace TheBlueAlliance
         {
             var dataList = new List<Models.Events.Event>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 string url = ("http://www.thebluealliance.com/api/v2/events/" + year);
@@ -130,8 +127,7 @@ namespace TheBlueAlliance
         {
             var teamList = new List<EventTeams.Team>();
             var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
                 string url = ("http://www.thebluealliance.com/api/v2/event/" + eventKey + "/teams");

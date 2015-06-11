@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheBlueAlliance.Models;
 
 namespace TheBlueAlliance.Test
@@ -10,7 +9,7 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void GetEventInformation_TestMethod()
         {
-            var actualEventInformation = Events.GetEventInformation("2015onto");
+            Event.EventInformation actualEventInformation = Events.GetEventInformation("2015onto");
 
             const string expectedKey = "2015onto";
             const string expectedWebsite = "http://www.firstroboticscanada.org";
@@ -54,7 +53,7 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void GetEventAwards_TestMethod()
         {
-            var actualAwardsInformation = Events.GetEventAwards("2015onto");
+            EventAwards.Award[] actualAwardsInformation = Events.GetEventAwards("2015onto");
 
             string actualEventKey = actualAwardsInformation[0].event_key;
             int actualAwardType = actualAwardsInformation[0].award_type;
@@ -81,7 +80,7 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void GetEventMatches_TestMethod()
         {
-            var actualEventMatches = Events.GetEventMatches("2015onto");
+            EventMatches.Match[] actualEventMatches = Events.GetEventMatches("2015onto");
 
             const string expectedCompLevel = "f";
             const int expectedMatchNumber = 1;
@@ -107,7 +106,7 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void GetEventRankings_TestMethod()
         {
-            var actualEventRankings = Events.GetEventRankings("2015onto");
+            EventRankings.Team[] actualEventRankings = Events.GetEventRankings("2015onto");
 
             const int expectedRank = 1;
             const int expectedTeam = 2056;
@@ -133,7 +132,7 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void GetEvents_TestMethod()
         {
-            var actualEvents = Events.GetEvents(2015);
+            Models.Events.Event[] actualEvents = Events.GetEvents(2015);
 
             const string expectedKey = "2015abca";
             const string expectedWebsite = "http://frcwest.com/";
@@ -175,7 +174,7 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void GetEventTeamsList_TestMethod()
         {
-            var actualTeamList = Events.GetEventTeamsList("2015onto");
+            EventTeams.Team[] actualTeamList = Events.GetEventTeamsList("2015onto");
         }
     }
 }
