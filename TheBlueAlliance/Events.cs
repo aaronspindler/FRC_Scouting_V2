@@ -88,15 +88,15 @@ namespace TheBlueAlliance
                 {
                     var teamToAdd = new EventRankings.Team
                     {
-                        Rank = dataList.ToArray()[i][0],
-                        Team_Number = dataList.ToArray()[i][1],
-                        Qual_Average = dataList.ToArray()[i][2],
-                        Auto = dataList.ToArray()[i][3],
-                        Container = dataList.ToArray()[i][4],
-                        Coopertition = dataList.ToArray()[i][5],
-                        Litter = dataList.ToArray()[i][6],
-                        Tote = dataList.ToArray()[i][7],
-                        Played = dataList.ToArray()[i][8]
+                        Rank = Convert.ToInt32(dataList.ToArray()[i][0]),
+                        Team_Number = Convert.ToInt32(dataList.ToArray()[i][1]),
+                        Qual_Average = Convert.ToDouble(dataList.ToArray()[i][2]),
+                        Auto = Convert.ToInt32(dataList.ToArray()[i][3]),
+                        Container = Convert.ToInt32(dataList.ToArray()[i][4]),
+                        Coopertition = Convert.ToInt32(dataList.ToArray()[i][5]),
+                        Litter = Convert.ToInt32(dataList.ToArray()[i][6]),
+                        Tote = Convert.ToInt32(dataList.ToArray()[i][7]),
+                        Played = Convert.ToInt32(dataList.ToArray()[i][8])
                     };
                     teamList.Add(teamToAdd);
                 }
@@ -111,7 +111,6 @@ namespace TheBlueAlliance
         public static Models.Events.Event[] GetEvents(int year)
         {
             var dataList = new List<Models.Events.Event>();
-            Models.Events.Event[] eventListToReturn = dataList.ToArray();
             var wc = new WebClient();
             wc.Headers.Add("X-TBA-App-Id",
                 "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
@@ -119,13 +118,12 @@ namespace TheBlueAlliance
             {
                 string url = ("http://www.thebluealliance.com/api/v2/events/" + year);
                 dataList = JsonConvert.DeserializeObject<List<Models.Events.Event>>(wc.DownloadString(url));
-                eventListToReturn = dataList.ToArray();
             }
             catch (Exception webError)
             {
                 Console.WriteLine("Error Message: " + webError.Message);
             }
-            return eventListToReturn;
+            return dataList.ToArray();
         }
 
         public static EventTeams.Team[] GetEventTeamsList(string eventKey)
