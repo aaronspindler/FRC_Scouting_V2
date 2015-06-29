@@ -133,7 +133,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -262,6 +262,7 @@
             this.eventSelector.Name = "eventSelector";
             this.eventSelector.Size = new System.Drawing.Size(248, 21);
             this.eventSelector.SelectedIndexChanged += new System.EventHandler(this.eventSelector_SelectedIndexChanged_1);
+            this.eventSelector.Click += new System.EventHandler(this.eventSelector_Click);
             // 
             // myWebsiteRichTextBox
             // 

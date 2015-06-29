@@ -74,8 +74,8 @@ namespace FRC_Scouting_V2
         {
             if (eventSelector.SelectedIndex == 0)
             {
-                var aaNorthbay2014 = new AerialAssist_Northbay();
-                aaNorthbay2014.Show();
+                var iri = new RecycleRush_IRI();
+                iri.Show();
 
                 if (Settings.Default.minimizeHomeWentEventLoads)
                 {
@@ -84,42 +84,7 @@ namespace FRC_Scouting_V2
             }
             else
             {
-                if (eventSelector.SelectedIndex == 1)
-                {
-                    var aaRahChaCha2014 = new AerialAssist_RahChaCha();
-                    aaRahChaCha2014.Show();
-
-                    if (Settings.Default.minimizeHomeWentEventLoads)
-                    {
-                        WindowState = FormWindowState.Minimized;
-                    }
-                }
-                else
-                {
-                    if (eventSelector.SelectedIndex == 2)
-                    {
-                        var rrgtre = new RecycleRush_GTR_East();
-                        rrgtre.Show();
-
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
-                    }
-                    else
-                    {
-                        if (eventSelector.SelectedIndex == 3)
-                        {
-                            var rrnb = new RecycleRush_Northbay();
-                            rrnb.Show();
-
-                            if (Settings.Default.minimizeHomeWentEventLoads)
-                            {
-                                WindowState = FormWindowState.Minimized;
-                            }
-                        }
-                    }
-                }
+                //nothing there
             }
         }
 
@@ -139,10 +104,7 @@ namespace FRC_Scouting_V2
             ConsoleWindow.WriteLine("Started FRC_Scouting_V2_" + Assembly.GetExecutingAssembly().GetName().Version);
             internetTestTH.Start();
             timer.Start();
-            eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
-            eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
-            eventSelector.Items.Add("RecycleRush | GTR-East | 2015");
-            eventSelector.Items.Add("RecycleRush | Northbay | 2015");
+            eventSelector.Items.Add("RecycleRush | IRI | 2015");
 
             if (Settings.Default.firstTimeLoad)
             {
@@ -243,6 +205,11 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
+        }
+
+        private void eventSelector_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

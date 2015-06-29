@@ -1,14 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
-              GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FRC_Scouting_V2.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="clickToEmptyTextBoxes" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Anonymous</Value>
     </Setting>
     <Setting Name="minimizeHomeWentEventLoads" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -16,20 +11,8 @@
     <Setting Name="firstTimeLoad" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="databaseIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">50.87.144.85</Value>
-    </Setting>
     <Setting Name="databasePort" Type="System.String" Scope="User">
       <Value Profile="(Default)">3306</Value>
-    </Setting>
-    <Setting Name="databaseUsername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">xnovax_testers</Value>
-    </Setting>
-    <Setting Name="databasePassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ZxwghMRiBbD5LsxHavQp/A==</Value>
-    </Setting>
-    <Setting Name="databaseName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">xnovax_robotics_test</Value>
     </Setting>
     <Setting Name="clearConsoleOnToggle" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -45,6 +28,21 @@
     </Setting>
     <Setting Name="teamComparisonEqualValueColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Blue</Value>
+    </Setting>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(Your Name Here)</Value>
+    </Setting>
+    <Setting Name="databaseIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="databaseUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FRC226Scouting</Value>
+    </Setting>
+    <Setting Name="databasePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HammerheadsTeam226</Value>
+    </Setting>
+    <Setting Name="databaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FRC226Scouting</Value>
     </Setting>
   </Settings>
 </SettingsFile>

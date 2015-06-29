@@ -11,29 +11,27 @@
     <AssemblyName>FRC_Scouting_V2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>76bd4933</NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <PublishUrl>C:\Users\xNovax\Desktop\FRC_Scouting_v2\</PublishUrl>
+    <PublishUrl>C:\Users\Adi\Desktop\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://xnovax.net/program_releases/frc_scouting_v2/latest/</InstallUrl>
     <UpdateUrl>http://xnovax.net/program_releases/frc_scouting_v2/latest/</UpdateUrl>
     <SupportUrl>http://www.xnovax.net/</SupportUrl>
     <ErrorReportUrl>http://www.xnovax.net/</ErrorReportUrl>
     <TargetCulture>en-CA</TargetCulture>
     <ProductName>FRC_Scouting_V2</ProductName>
     <PublisherName>xNovax</PublisherName>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
@@ -130,48 +128,28 @@
     <Compile Include="ConsoleWindow.Designer.cs">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_IRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_IRI.Designer.cs">
+      <DependentUpon>RecycleRush_IRI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay.Designer.cs">
-      <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay.Designer.cs" />
     <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.Designer.cs">
-      <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.Designer.cs" />
     <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.Designer.cs">
-      <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.Designer.cs" />
     <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.Designer.cs">
-      <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_GTR_East.Designer.cs">
-      <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay.Designer.cs">
-      <DependentUpon>RecycleRush_Northbay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay_Information.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\RecycleRush_Northbay_Information.Designer.cs">
-      <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.Designer.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,27 +230,13 @@
     <EmbeddedResource Include="ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_Northbay.resx">
-      <DependentUpon>AerialAssist_Northbay.cs</DependentUpon>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_IRI.resx">
+      <DependentUpon>RecycleRush_IRI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.resx">
-      <DependentUpon>AerialAssist_Northbay_Information.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.resx">
-      <DependentUpon>AerialAssist_RahChaCha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.resx">
-      <DependentUpon>AerialAssist_RahChaCha_Information.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_GTR_East.resx">
-      <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Northbay.resx">
-      <DependentUpon>RecycleRush_Northbay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_Northbay_Information.resx">
-      <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_Northbay.resx" />
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_Northbay_Information.resx" />
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha.resx" />
+    <EmbeddedResource Include="Events\2014_AerialAssist\AerialAssist_RahChaCha_Information.resx" />
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
