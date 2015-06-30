@@ -3,6 +3,7 @@ using System.Net;
 using System.Reflection;
 using Newtonsoft.Json;
 using TheBlueAlliance.Models;
+using TheBlueAllianceOffline;
 
 namespace TheBlueAlliance
 {
@@ -16,16 +17,30 @@ namespace TheBlueAlliance
         public static MatchInformation.Match GetMatchInformation(string matchKey)
         {
             var matchToReturn = new MatchInformation.Match();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/match/" + matchKey);
-                matchToReturn = JsonConvert.DeserializeObject<MatchInformation.Match>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/match/" + matchKey);
+                    matchToReturn = JsonConvert.DeserializeObject<MatchInformation.Match>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                try
+                {
+                    matchToReturn = (MatchInformation.Match)Convert.ChangeType(TheBlueAllianceOffline.Matches.GetMatchInformation(matchKey), typeof(MatchInformation.Match));
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }
             }
             return matchToReturn;
         }

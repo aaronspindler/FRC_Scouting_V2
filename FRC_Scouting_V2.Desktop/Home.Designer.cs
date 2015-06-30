@@ -37,6 +37,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cacheDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cacheAnEventsTBADataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cacheATeamsTBADataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reCacheDefaultTBADataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fRC3710TeamInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,7 @@
             this.myWebsiteRichTextBox = new System.Windows.Forms.RichTextBox();
             this.isInternetConnectedLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.cacheATeamsTBADataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cacheOneEventsMatchTBADataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frcLogoPictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -146,6 +147,7 @@
             // 
             this.cacheDataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cacheAnEventsTBADataToolStripMenuItem,
+            this.cacheOneEventsMatchTBADataToolStripMenuItem,
             this.cacheATeamsTBADataToolStripMenuItem,
             this.reCacheDefaultTBADataToolStripMenuItem});
             this.cacheDataToolStripMenuItem.Name = "cacheDataToolStripMenuItem";
@@ -155,14 +157,21 @@
             // cacheAnEventsTBADataToolStripMenuItem
             // 
             this.cacheAnEventsTBADataToolStripMenuItem.Name = "cacheAnEventsTBADataToolStripMenuItem";
-            this.cacheAnEventsTBADataToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.cacheAnEventsTBADataToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
             this.cacheAnEventsTBADataToolStripMenuItem.Text = "Cache an Event\'s TBA Data";
             this.cacheAnEventsTBADataToolStripMenuItem.Click += new System.EventHandler(this.cacheTBAEventData);
+            // 
+            // cacheATeamsTBADataToolStripMenuItem
+            // 
+            this.cacheATeamsTBADataToolStripMenuItem.Name = "cacheATeamsTBADataToolStripMenuItem";
+            this.cacheATeamsTBADataToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.cacheATeamsTBADataToolStripMenuItem.Text = "Cache a Team\'s TBA Data";
+            this.cacheATeamsTBADataToolStripMenuItem.Click += new System.EventHandler(this.cacheATeamsTBADataToolStripMenuItem_Click);
             // 
             // reCacheDefaultTBADataToolStripMenuItem
             // 
             this.reCacheDefaultTBADataToolStripMenuItem.Name = "reCacheDefaultTBADataToolStripMenuItem";
-            this.reCacheDefaultTBADataToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.reCacheDefaultTBADataToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
             this.reCacheDefaultTBADataToolStripMenuItem.Text = "ReCache Default TBA Data";
             this.reCacheDefaultTBADataToolStripMenuItem.Click += new System.EventHandler(this.reCacheDefaultTBADataToolStripMenuItem_Click);
             // 
@@ -322,12 +331,12 @@
             this.timer.Interval = 15000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // cacheATeamsTBADataToolStripMenuItem
+            // cacheOneEventsMatchTBADataToolStripMenuItem
             // 
-            this.cacheATeamsTBADataToolStripMenuItem.Name = "cacheATeamsTBADataToolStripMenuItem";
-            this.cacheATeamsTBADataToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.cacheATeamsTBADataToolStripMenuItem.Text = "Cache a Team\'s TBA Data";
-            this.cacheATeamsTBADataToolStripMenuItem.Click += new System.EventHandler(this.cacheATeamsTBADataToolStripMenuItem_Click);
+            this.cacheOneEventsMatchTBADataToolStripMenuItem.Name = "cacheOneEventsMatchTBADataToolStripMenuItem";
+            this.cacheOneEventsMatchTBADataToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.cacheOneEventsMatchTBADataToolStripMenuItem.Text = "Cache one Event\'s Match TBA Data";
+            this.cacheOneEventsMatchTBADataToolStripMenuItem.Click += new System.EventHandler(this.cacheOneEventsMatchTBADataToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -384,6 +393,7 @@
         private System.Windows.Forms.ToolStripMenuItem cacheAnEventsTBADataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reCacheDefaultTBADataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cacheATeamsTBADataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cacheOneEventsMatchTBADataToolStripMenuItem;
     }
 }
 

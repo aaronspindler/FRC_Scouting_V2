@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TheBlueAllianceOffline</RootNamespace>
     <AssemblyName>TheBlueAllianceOffline</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,21 +47,28 @@
   <ItemGroup>
     <Compile Include="Events.cs" />
     <Compile Include="Matches.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventAwards.cs" />
+    <Compile Include="Models\EventDistrictPoints.cs" />
+    <Compile Include="Models\EventMatches.cs" />
+    <Compile Include="Models\EventRankings.cs" />
+    <Compile Include="Models\Events.cs" />
+    <Compile Include="Models\EventStats.cs" />
+    <Compile Include="Models\EventTeams.cs" />
+    <Compile Include="Models\MatchInformation.cs" />
+    <Compile Include="Models\TeamEventAwards.cs" />
+    <Compile Include="Models\TeamEventMatches.cs" />
+    <Compile Include="Models\TeamEvents.cs" />
+    <Compile Include="Models\TeamHistoryAwards.cs" />
+    <Compile Include="Models\TeamHistoryEvents.cs" />
+    <Compile Include="Models\TeamInformation.cs" />
+    <Compile Include="Models\TeamMedia.cs" />
+    <Compile Include="Models\TeamYearsParticipated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Teams.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TheBlueAlliance\TheBlueAlliance.csproj">
-      <Project>{8e17112c-ae09-4e64-bd69-948740528d54}</Project>
-      <Name>TheBlueAlliance</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsefulSnippets\UsefulSnippets.csproj">
-      <Project>{660ec2bd-0dea-4dc8-a9fa-1867ba3c9eb1}</Project>
-      <Name>UsefulSnippets</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

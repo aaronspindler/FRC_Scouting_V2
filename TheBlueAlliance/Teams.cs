@@ -4,6 +4,7 @@ using System.Net;
 using System.Reflection;
 using Newtonsoft.Json;
 using TheBlueAlliance.Models;
+using TheBlueAllianceOffline;
 
 namespace TheBlueAlliance
 {
@@ -12,18 +13,25 @@ namespace TheBlueAlliance
         public static TeamEventAwards.Award[] GetTeamEventAwards(string teamKey, string eventKey)
         {
             var teamEventAwardsToReturn = new List<TeamEventAwards.Award>();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey + "/awards");
-                teamEventAwardsToReturn =
-                    JsonConvert.DeserializeObject<List<TeamEventAwards.Award>>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id",
+                    "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey + "/awards");
+                    teamEventAwardsToReturn =
+                        JsonConvert.DeserializeObject<List<TeamEventAwards.Award>>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                teamEventAwardsToReturn = (List<TeamEventAwards.Award>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamEventAwards(teamKey, eventKey)), typeof(List<TeamEventAwards.Award>));
             }
             return teamEventAwardsToReturn.ToArray();
         }
@@ -31,37 +39,52 @@ namespace TheBlueAlliance
         public static TeamEventMatches.Match[] GetTeamEventMatches(string teamKey, string eventKey)
         {
             var teamEventMatchesToReturn = new List<TeamEventMatches.Match>();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey +
-                              "/matches");
-                teamEventMatchesToReturn =
-                    JsonConvert.DeserializeObject<List<TeamEventMatches.Match>>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id",
+                    "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventKey +
+                                  "/matches");
+                    teamEventMatchesToReturn =
+                        JsonConvert.DeserializeObject<List<TeamEventMatches.Match>>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                teamEventMatchesToReturn = (List<TeamEventMatches.Match>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamEventMatches(teamKey, eventKey)), typeof(List<TeamEventMatches.Match>));
             }
+            
             return teamEventMatchesToReturn.ToArray();
         }
 
         public static TeamEvents.Event[] GetTeamEvents(string teamKey, int year)
         {
             var teamEventsToReturn = new List<TeamEvents.Event>();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/" + year + "/events");
-                teamEventsToReturn = JsonConvert.DeserializeObject<List<TeamEvents.Event>>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id",
+                    "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/" + year + "/events");
+                    teamEventsToReturn = JsonConvert.DeserializeObject<List<TeamEvents.Event>>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                teamEventsToReturn = (List<TeamEvents.Event>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamEvents(teamKey, year)), typeof(List<TeamEvents.Event>));
             }
             return teamEventsToReturn.ToArray();
         }
@@ -69,18 +92,25 @@ namespace TheBlueAlliance
         public static TeamHistoryAwards.Award[] GetTeamHistoricalAwards(string teamKey)
         {
             var teamHistoricalAwardsToReturn = new List<TeamHistoryAwards.Award>();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/awards");
-                teamHistoricalAwardsToReturn =
-                    JsonConvert.DeserializeObject<List<TeamHistoryAwards.Award>>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id",
+                    "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/awards");
+                    teamHistoricalAwardsToReturn =
+                        JsonConvert.DeserializeObject<List<TeamHistoryAwards.Award>>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                teamHistoricalAwardsToReturn = (List<TeamHistoryAwards.Award>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamHistoricalAwards(teamKey)), typeof(List<TeamHistoryAwards.Award>));
             }
             return teamHistoricalAwardsToReturn.ToArray();
         }
@@ -88,18 +118,25 @@ namespace TheBlueAlliance
         public static TeamHistoryEvents.Event[] GetTeamHistoryEvents(string teamKey)
         {
             var teamHistoricalEventsToReturn = new List<TeamHistoryEvents.Event>();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/events");
-                teamHistoricalEventsToReturn =
-                    JsonConvert.DeserializeObject<List<TeamHistoryEvents.Event>>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id",
+                    "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/history/events");
+                    teamHistoricalEventsToReturn =
+                        JsonConvert.DeserializeObject<List<TeamHistoryEvents.Event>>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                teamHistoricalEventsToReturn = (List<TeamHistoryEvents.Event>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamHistoryEvents((teamKey))), typeof(List<TeamHistoryEvents.Event>));
             }
             return teamHistoricalEventsToReturn.ToArray();
         }
@@ -113,17 +150,24 @@ namespace TheBlueAlliance
         public static TeamInformation GetTeamInformation(string teamKey)
         {
             var teamInformationToReturn = new TeamInformation();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey);
-                teamInformationToReturn = JsonConvert.DeserializeObject<TeamInformation>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id",
+                    "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey);
+                    teamInformationToReturn = JsonConvert.DeserializeObject<TeamInformation>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                teamInformationToReturn = (TeamInformation)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamInformation(teamKey)), typeof(TeamInformation));
             }
             return teamInformationToReturn;
         }
@@ -131,18 +175,25 @@ namespace TheBlueAlliance
         public static TeamMedia.MediaLocation[] GetTeamMediaLocations(string teamKey, int year)
         {
             var teamMediaLocationsToReturn = new List<TeamMedia.MediaLocation>();
-            var wc = new WebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            if (InternetTest.internetAvailable)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/" + year + "/media");
-                teamMediaLocationsToReturn =
-                    JsonConvert.DeserializeObject<List<TeamMedia.MediaLocation>>(wc.DownloadString(url));
+                var wc = new WebClient();
+                wc.Headers.Add("X-TBA-App-Id",
+                    "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                try
+                {
+                    string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/" + year + "/media");
+                    teamMediaLocationsToReturn =
+                        JsonConvert.DeserializeObject<List<TeamMedia.MediaLocation>>(wc.DownloadString(url));
+                }
+                catch (Exception webError)
+                {
+                    Console.WriteLine("Error Message: " + webError.Message);
+                }
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
+                teamMediaLocationsToReturn = (List<TeamMedia.MediaLocation>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamMediaLocations(teamKey, year)), typeof(List<TeamMedia.MediaLocation>));
             }
             return teamMediaLocationsToReturn.ToArray();
         }

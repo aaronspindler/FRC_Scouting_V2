@@ -24,6 +24,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4174AD
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBlueAlliance", "TheBlueAlliance\TheBlueAlliance.csproj", "{8E17112C-AE09-4E64-BD69-948740528D54}"
+	ProjectSection(ProjectDependencies) = postProject
+		{214BC837-C9F8-4B56-B45E-35E082F70C94} = {214BC837-C9F8-4B56-B45E-35E082F70C94}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Events_API", "FRC_Events_API\FRC_Events_API.csproj", "{40A4E62E-C04C-433B-8295-C7873C726903}"
 EndProject
