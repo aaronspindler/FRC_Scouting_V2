@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralFormTemplate", "GeneralFormTemplate\GeneralFormTemplate.csproj", "{92FB0185-6785-47E4-9A2D-73CF9BFD2F7D}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Events_API", "FRC_Events_API\FRC_Events_API.csproj", "{40A4E62E-C04C-433B-8295-C7873C726903}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBlueAlliance.Test", "TheBlueAlliance.Test\TheBlueAlliance.Test.csproj", "{BC838A61-F83B-4452-9865-8A74542083C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBlueAllianceOffline", "TheBlueAllianceOffline\TheBlueAllianceOffline.csproj", "{214BC837-C9F8-4B56-B45E-35E082F70C94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,16 @@ Global
 		{BC838A61-F83B-4452-9865-8A74542083C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC838A61-F83B-4452-9865-8A74542083C2}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{BC838A61-F83B-4452-9865-8A74542083C2}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{214BC837-C9F8-4B56-B45E-35E082F70C94}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

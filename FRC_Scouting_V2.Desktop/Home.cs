@@ -312,9 +312,13 @@ namespace FRC_Scouting_V2
                 Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\DefaultData\\");
                 string teamListPath = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\DefaultData\\" + "TeamList.html");
                 WebClient client = new WebClient();
+                int[] thousands = { 1, 2, 3, 4, 5 };
                 try
                 {
-                    cacheAllTeamsListOffline(client, teamListPath);
+                    for (int i = 0; i < thousands.Length; i++)
+                    {
+                        cacheAllTeamsListOffline(client, teamListPath, thousands[i]);
+                    }
                 }
                 catch (Exception exception)
                 {
@@ -325,9 +329,9 @@ namespace FRC_Scouting_V2
             }
         }
 
-        private void cacheAllTeamsListOffline(WebClient client, string path)
+        private void cacheAllTeamsListOffline(WebClient client, string path, int whichSetOfThousands)
         {
-            string UriString = "http://www.thebluealliance.com/teams";
+            string UriString = "http://www.thebluealliance.com/teams/" + whichSetOfThousands;
             Uri siteUri = new Uri(UriString);
             byte[] siteData = client.DownloadData(siteUri);
             string siteDataEncoded = Encoding.ASCII.GetString(siteData);
