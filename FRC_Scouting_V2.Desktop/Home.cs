@@ -34,6 +34,10 @@ using System.Windows.Forms;
 using FRC_Scouting_V2.Events._2015_RecycleRush;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
+using UsefulSnippets;
+using Microsoft.VisualBasic;
+using System.Text;
+//using System.Web.Caching;
 
 namespace FRC_Scouting_V2
 {
@@ -84,7 +88,20 @@ namespace FRC_Scouting_V2
             }
             else
             {
-                //nothing there
+                if (eventSelector.SelectedIndex == 1)
+                {
+                    var tahs = new RecycleRush_TroyAthens();
+                    tahs.Show();
+
+                    if (Settings.Default.minimizeHomeWentEventLoads)
+                    {
+                        WindowState = FormWindowState.Minimized;
+                    }
+                }
+                else
+                {
+                    //nothing there
+                }
             }
         }
 
@@ -105,6 +122,7 @@ namespace FRC_Scouting_V2
             internetTestTH.Start();
             timer.Start();
             eventSelector.Items.Add("RecycleRush | IRI | 2015");
+            eventSelector.Items.Add("RecycleRush | Troy Athens | 2015 (Old/Debug)");
 
             if (Settings.Default.firstTimeLoad)
             {
@@ -210,6 +228,111 @@ namespace FRC_Scouting_V2
         private void eventSelector_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cacheTBAEventData(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This downloads the file(s) for ONE FRC event from TBA. The downloading of these file(s) may take a long time, and these files may take up a lot of storage space. Are you sure you want to continue?", "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+            {
+                try
+                {
+                    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves");
+                    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\");
+                    getEvent:  string eventCode = Interaction.InputBox("What is the event code for the event that you want to cache?", "Get Event Info to Cache", "", -1, -1);
+                    if (!(eventCode.Length > 4)) { goto getEvent;  }
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + ".html");
+                    string appendedUriString = "http://www.thebluealliance.com/event/" + eventCode;
+                    TheBlueAlliance.Models.Event.EventInformation eventInfo = TheBlueAlliance.Events.GetEventInformation(eventCode);
+                    string tmp = eventInfo.short_name;
+                    if (System.String.IsNullOrWhiteSpace(tmp)) { tmp = eventCode.ToUpper().Substring(4);  }
+                    if (MessageBox.Show(("Is the event: " + tmp + " (" + eventCode + "), correct?"), "Correct event?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+                    {
+                        Uri siteUri = new Uri(appendedUriString);
+                        WebClient client = new WebClient();
+                        byte[] siteData = client.DownloadData(siteUri);
+                        string siteDataEncoded = Encoding.ASCII.GetString(siteData);
+                        File.WriteAllText(path, siteDataEncoded);
+                        MessageBox.Show(("Completed saving the data of: " + appendedUriString + " to " + path + "."), "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
+                    else
+                    {
+                        goto getEvent;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    Console.Write("Error Occured: " + exception.Message);
+                    ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
+                    Notifications.ReportCrash(exception);
+                } 
+            }
+        }
+
+        private void cacheATeamsTBADataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This downloads the file(s) for ONE FRC team from TBA. The downloading of these file(s) may take a long time, and these files may take up a lot of storage space. Are you sure you want to continue?", "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+            {
+                try
+                {
+                    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves");
+                    Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\");
+                getTeamNum: string teamNum = Interaction.InputBox("What is the team number for the team's info that you want to cache?", "Get Team Num's Info to Cache", "", -1, -1);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "Info.html");
+                    string appendedUriString = "http://www.thebluealliance.com/team/" + (Convert.ToInt32(teamNum));
+                    TheBlueAlliance.Models.TeamInformation teamInfo = TheBlueAlliance.Teams.GetTeamInformation("frc" + (Convert.ToInt32(teamNum)));
+                    string tmp = teamInfo.nickname;
+                    if (MessageBox.Show(("Is the team: " + tmp + " (Team " + (Convert.ToInt32(teamNum)) + "), correct?"), "Correct event?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+                    {
+                        Uri siteUri = new Uri(appendedUriString);
+                        WebClient client = new WebClient();
+                        byte[] siteData = client.DownloadData(siteUri);
+                        string siteDataEncoded = Encoding.ASCII.GetString(siteData);
+                        File.WriteAllText(path, siteDataEncoded);
+                        MessageBox.Show(("Completed saving the data of: " + appendedUriString + " to " + path + "."), "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
+                    else
+                    {
+                        goto getTeamNum;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    Console.Write("Error Occured: " + exception.Message);
+                    ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
+                    Notifications.ReportCrash(exception);
+                }
+            }
+        }
+
+        private void reCacheDefaultTBADataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This downloads the default files needed for Offline scouting. The downloading of these files may take a long time, and these files may take up a lot of storage space. Are you sure you want to continue?", "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves");
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\DefaultData\\");
+                string teamListPath = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\DefaultData\\" + "TeamList.html");
+                WebClient client = new WebClient();
+                try
+                {
+                    cacheAllTeamsListOffline(client, teamListPath);
+                }
+                catch (Exception exception)
+                {
+                    Console.Write("Error Occured: " + exception.Message);
+                    ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
+                    Notifications.ReportCrash(exception);
+                }
+            }
+        }
+
+        private void cacheAllTeamsListOffline(WebClient client, string path)
+        {
+            string UriString = "http://www.thebluealliance.com/teams";
+            Uri siteUri = new Uri(UriString);
+            byte[] siteData = client.DownloadData(siteUri);
+            string siteDataEncoded = Encoding.ASCII.GetString(siteData);
+            File.WriteAllText(path, siteDataEncoded);
+            MessageBox.Show(("Completed saving the data of: " + UriString + " to " + path + "."), "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
     }
 }

@@ -60,7 +60,7 @@ namespace UsefulSnippets
         {
             var reportCrash = new ReportCrash
             {
-                ToEmail = "aaron@xnovax.net"
+                ToEmail = "adithya.sairam1@gmail.com" //Prev: aaron@xnovax.net
             };
 
             reportCrash.Send(exception);

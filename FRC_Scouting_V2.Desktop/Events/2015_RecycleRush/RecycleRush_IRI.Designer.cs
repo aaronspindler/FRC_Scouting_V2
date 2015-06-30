@@ -43,7 +43,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleRush_IRI));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tab1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
             this.scoutingTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.scoutingFieldPictureBox = new System.Windows.Forms.PictureBox();
@@ -126,6 +126,11 @@
             this.scoutingAllianceColourRedCheckBox = new System.Windows.Forms.CheckBox();
             this.scoutingAllianceColourBlueCheckBox = new System.Windows.Forms.CheckBox();
             this.matchInfoTabPage = new System.Windows.Forms.TabPage();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.previousMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.currentMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nextMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matchBreakdownTabPage = new System.Windows.Forms.TabPage();
             this.matchBreakdownTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.matchBreakdownFieldImageBox = new System.Windows.Forms.PictureBox();
@@ -228,7 +233,7 @@
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tab1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
             this.scoutingTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingFieldPictureBox)).BeginInit();
@@ -252,6 +257,8 @@
             this.scoutingOtherGroupBox.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingPositionNumericUpDown)).BeginInit();
+            this.matchInfoTabPage.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.matchBreakdownTabPage.SuspendLayout();
             this.matchBreakdownTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.matchBreakdownFieldImageBox)).BeginInit();
@@ -283,7 +290,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tab1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.teamSelector, 4, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -298,22 +305,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1354, 733);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tabControl1
+            // tab1
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 8);
-            this.tabControl1.Controls.Add(this.scoutingTabPage);
-            this.tabControl1.Controls.Add(this.matchInfoTabPage);
-            this.tabControl1.Controls.Add(this.matchBreakdownTabPage);
-            this.tabControl1.Controls.Add(this.teamComparisonTabPage);
-            this.tabControl1.Controls.Add(this.teamInformationTabPage);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(2, 27);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl1.Name = "tabControl1";
-            this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 4);
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1350, 704);
-            this.tabControl1.TabIndex = 3;
+            this.tableLayoutPanel1.SetColumnSpan(this.tab1, 8);
+            this.tab1.Controls.Add(this.scoutingTabPage);
+            this.tab1.Controls.Add(this.matchInfoTabPage);
+            this.tab1.Controls.Add(this.matchBreakdownTabPage);
+            this.tab1.Controls.Add(this.teamComparisonTabPage);
+            this.tab1.Controls.Add(this.teamInformationTabPage);
+            this.tab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab1.Location = new System.Drawing.Point(2, 27);
+            this.tab1.Margin = new System.Windows.Forms.Padding(2);
+            this.tab1.Name = "tab1";
+            this.tableLayoutPanel1.SetRowSpan(this.tab1, 4);
+            this.tab1.SelectedIndex = 0;
+            this.tab1.Size = new System.Drawing.Size(1350, 704);
+            this.tab1.TabIndex = 3;
             // 
             // scoutingTabPage
             // 
@@ -614,6 +621,7 @@
             this.numCansGrabbedNumbericUpDown.Size = new System.Drawing.Size(166, 20);
             this.numCansGrabbedNumbericUpDown.TabIndex = 22;
             this.numCansGrabbedNumbericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numCansGrabbedNumbericUpDown.Visible = false;
             // 
             // numCansGrabbedLabel
             // 
@@ -626,6 +634,7 @@
             this.numCansGrabbedLabel.TabIndex = 21;
             this.numCansGrabbedLabel.Text = "# of Cans Acquired:";
             this.numCansGrabbedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.numCansGrabbedLabel.Visible = false;
             // 
             // scoutingRobotSetLabel
             // 
@@ -684,6 +693,7 @@
             this.scoutingCanBurgeledCheckbox.Size = new System.Drawing.Size(166, 19);
             this.scoutingCanBurgeledCheckbox.TabIndex = 5;
             this.scoutingCanBurgeledCheckbox.UseVisualStyleBackColor = true;
+            this.scoutingCanBurgeledCheckbox.CheckedChanged += new System.EventHandler(this.scoutingCanBurgeledCheckbox_CheckedChanged);
             // 
             // scoutingDidNothingCheckBox
             // 
@@ -1517,12 +1527,54 @@
             // 
             // matchInfoTabPage
             // 
+            this.matchInfoTabPage.Controls.Add(this.menuStrip2);
             this.matchInfoTabPage.Location = new System.Drawing.Point(4, 22);
             this.matchInfoTabPage.Name = "matchInfoTabPage";
             this.matchInfoTabPage.Size = new System.Drawing.Size(1342, 678);
             this.matchInfoTabPage.TabIndex = 6;
-            this.matchInfoTabPage.Text = "Match Info";
+            this.matchInfoTabPage.Text = "Event Info";
             this.matchInfoTabPage.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.previousMatchToolStripMenuItem,
+            this.currentMatchToolStripMenuItem,
+            this.nextMatchToolStripMenuItem,
+            this.matchToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1342, 24);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // previousMatchToolStripMenuItem
+            // 
+            this.previousMatchToolStripMenuItem.Name = "previousMatchToolStripMenuItem";
+            this.previousMatchToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.previousMatchToolStripMenuItem.Text = "Previous Match";
+            this.previousMatchToolStripMenuItem.Click += new System.EventHandler(this.previousMatchToolStripMenuItem_Click);
+            // 
+            // currentMatchToolStripMenuItem
+            // 
+            this.currentMatchToolStripMenuItem.Name = "currentMatchToolStripMenuItem";
+            this.currentMatchToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.currentMatchToolStripMenuItem.Text = "Current Match";
+            this.currentMatchToolStripMenuItem.Click += new System.EventHandler(this.currentMatchToolStripMenuItem_Click);
+            // 
+            // nextMatchToolStripMenuItem
+            // 
+            this.nextMatchToolStripMenuItem.Name = "nextMatchToolStripMenuItem";
+            this.nextMatchToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.nextMatchToolStripMenuItem.Text = "Next Match";
+            this.nextMatchToolStripMenuItem.Click += new System.EventHandler(this.nextMatchToolStripMenuItem_Click);
+            // 
+            // matchToolStripMenuItem
+            // 
+            this.matchToolStripMenuItem.Name = "matchToolStripMenuItem";
+            this.matchToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.matchToolStripMenuItem.Text = "Match #";
+            this.matchToolStripMenuItem.Click += new System.EventHandler(this.matchToolStripMenuItem_Click);
             // 
             // matchBreakdownTabPage
             // 
@@ -2817,7 +2869,7 @@
             this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.matchScoutingDataToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // matchScoutingDataToolStripMenuItem
@@ -2830,7 +2882,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(107, 6);
             // 
             // gameManualToolStripMenuItem
             // 
@@ -2875,7 +2927,7 @@
             this.Load += new System.EventHandler(this.RecycleRush_IRI_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tab1.ResumeLayout(false);
             this.scoutingTabPage.ResumeLayout(false);
             this.scoutingTableLayoutPanel.ResumeLayout(false);
             this.scoutingTableLayoutPanel.PerformLayout();
@@ -2905,6 +2957,10 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scoutingPositionNumericUpDown)).EndInit();
+            this.matchInfoTabPage.ResumeLayout(false);
+            this.matchInfoTabPage.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.matchBreakdownTabPage.ResumeLayout(false);
             this.matchBreakdownTableLayoutPanel.ResumeLayout(false);
             this.matchBreakdownTableLayoutPanel.PerformLayout();
@@ -2937,7 +2993,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tab1;
         private System.Windows.Forms.TabPage scoutingTabPage;
         private System.Windows.Forms.TabPage matchBreakdownTabPage;
         private System.Windows.Forms.TabPage teamInformationTabPage;
@@ -3121,5 +3177,10 @@
         private System.Windows.Forms.TabPage matchInfoTabPage;
         private System.Windows.Forms.NumericUpDown litterPushedToLandFillNumUpDown;
         private System.Windows.Forms.NumericUpDown litterThrownNumUpDown;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem previousMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem currentMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nextMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matchToolStripMenuItem;
     }
 }

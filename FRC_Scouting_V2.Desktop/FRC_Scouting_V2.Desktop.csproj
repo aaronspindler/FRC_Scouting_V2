@@ -95,6 +95,7 @@
     <Reference Include="GeneralFormTemplate">
       <HintPath>..\GeneralFormTemplate\bin\Debug\GeneralFormTemplate.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.9.6\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
@@ -115,6 +116,7 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="UsefulSnippets">
@@ -127,6 +129,36 @@
     </Compile>
     <Compile Include="ConsoleWindow.Designer.cs">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\currMatchInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\currMatchInfo.Designer.cs">
+      <DependentUpon>currMatchInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\matchInfoByNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\matchInfoByNumber.Designer.cs">
+      <DependentUpon>matchInfoByNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\nextMatchInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\nextMatchInfo.Designer.cs">
+      <DependentUpon>nextMatchInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\previousMatchInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\Common\previousMatchInfo.Designer.cs">
+      <DependentUpon>previousMatchInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_TroyAthens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\RecycleRush_TroyAthens.Designer.cs">
+      <DependentUpon>RecycleRush_TroyAthens.cs</DependentUpon>
     </Compile>
     <Compile Include="Events\2015_RecycleRush\RecycleRush_IRI.cs">
       <SubType>Form</SubType>
@@ -229,6 +261,21 @@
     </Compile>
     <EmbeddedResource Include="ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\Common\currMatchInfo.resx">
+      <DependentUpon>currMatchInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\Common\matchInfoByNumber.resx">
+      <DependentUpon>matchInfoByNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\Common\nextMatchInfo.resx">
+      <DependentUpon>nextMatchInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\Common\previousMatchInfo.resx">
+      <DependentUpon>previousMatchInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_TroyAthens.resx">
+      <DependentUpon>RecycleRush_TroyAthens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\RecycleRush_IRI.resx">
       <DependentUpon>RecycleRush_IRI.cs</DependentUpon>
@@ -385,6 +432,9 @@
       <Project>{8e17112c-ae09-4e64-bd69-948740528d54}</Project>
       <Name>TheBlueAlliance</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -457,7 +457,8 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             scoutingDriveToAutoZoneCheckBox.Checked = false;
             scoutingCanBurgeledCheckbox.Checked = false;
-            numCansGrabbedNumbericUpDown.Value = Convert.ToDecimal(0);
+            numCansGrabbedLabel.Visible = false;
+            numCansGrabbedNumbericUpDown.Visible = false;
             scoutingRobotSetCheckBox.Checked = false;
             scoutingToteSetCheckBox.Checked = false;
             scoutingBinSetCheckBox.Checked = false;
@@ -723,6 +724,37 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private int calculateThisRobotsTotalScore()
         {
             return calcuateThisRobotsAutonScore() + calcuateThisRobotsTeleopScore() + calculateThisRobotsCoopertitionScore();
+        }
+
+        private void previousMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            previousMatchInfo form = new previousMatchInfo(OfficialEventName, (Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value)) - 1);
+            form.Show();
+        }
+
+        private void currentMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            currMatchInfo form = new currMatchInfo(OfficialEventName, (Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value)));
+            form.Show();
+        }
+
+        private void nextMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nextMatchInfo form = new nextMatchInfo(OfficialEventName, (Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value)) + 1);
+            form.Show();
+        }
+
+        private void matchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            matchInfoByNumber form = new matchInfoByNumber(OfficialEventName);
+            form.Show();
+        }
+
+        private void scoutingCanBurgeledCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            numCansGrabbedLabel.Visible = true;
+            numCansGrabbedNumbericUpDown.Visible = true;
+            numCansGrabbedNumbericUpDown.Value = 0;
         }
     }
 }
