@@ -1,10 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
 using Newtonsoft.Json;
 using TheBlueAlliance.Models;
-using TheBlueAllianceOffline;
 
 namespace TheBlueAlliance
 {
@@ -36,7 +36,10 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    eventToReturn = (Event.EventInformation)Convert.ChangeType((TheBlueAllianceOffline.Events.GetEventInformation(eventCode)), typeof(Event.EventInformation));
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + ".html");
+                    String fileLines = File.ReadAllText(path);
+                    eventToReturn = JsonConvert.DeserializeObject<Event.EventInformation>(fileLines);
+                    return eventToReturn;
                 }
                 catch (Exception exception)
                 {
@@ -70,7 +73,11 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    eventAwardsToReturn = (EventAwards.Award[])Convert.ChangeType((TheBlueAllianceOffline.Events.GetEventAwards(eventKey)), typeof(EventAwards.Award[]));
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventKey + "Awards.html");
+                    String fileLines = File.ReadAllText(path);
+                    dataList = JsonConvert.DeserializeObject<List<EventAwards.Award>>(fileLines);
+                    eventAwardsToReturn = dataList.ToArray();
+                    return eventAwardsToReturn;
                 }
                 catch (Exception exception)
                 {
@@ -103,7 +110,11 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    eventMatchesToReturn = (EventMatches.Match[])Convert.ChangeType((TheBlueAllianceOffline.Events.GetEventMatches(eventKey)), typeof(EventMatches.Match[]));
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventKey + "Matches.html");
+                    String fileLines = File.ReadAllText(path);
+                    dataList = JsonConvert.DeserializeObject<List<EventMatches.Match>>(fileLines);
+                    eventMatchesToReturn = dataList.ToArray();
+                    return eventMatchesToReturn;
                 }
                 catch (Exception exception)
                 {
@@ -151,7 +162,25 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    teamList = (List<EventRankings.Team>)Convert.ChangeType((TheBlueAllianceOffline.Events.GetEventMatches(eventKey)), typeof(List<EventRankings.Team>));
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventKey + "Rankings.html");
+            String fileLines = File.ReadAllText(path);
+            var dataList = JsonConvert.DeserializeObject<List<List<object>>>(fileLines);
+            for (int i = 1; i < dataList.Count; i++)
+            {
+                var teamToAdd = new EventRankings.Team
+                {
+                    Rank = Convert.ToInt32(dataList.ToArray()[i][0]),
+                    Team_Number = Convert.ToInt32(dataList.ToArray()[i][1]),
+                    Qual_Average = Convert.ToDouble(dataList.ToArray()[i][2]),
+                    Auto = Convert.ToInt32(dataList.ToArray()[i][3]),
+                    Container = Convert.ToInt32(dataList.ToArray()[i][4]),
+                    Coopertition = Convert.ToInt32(dataList.ToArray()[i][5]),
+                    Litter = Convert.ToInt32(dataList.ToArray()[i][6]),
+                    Tote = Convert.ToInt32(dataList.ToArray()[i][7]),
+                    Played = Convert.ToInt32(dataList.ToArray()[i][8])
+                };
+                teamList.Add(teamToAdd);
+            }
                 }
                 catch (Exception exception)
                 {
@@ -182,7 +211,10 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    dataList = (List<Models.Events.Event>)Convert.ChangeType((TheBlueAllianceOffline.Events.GetEvents(year)), typeof(List<Models.Events.Event>));
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\DefaultData\\" + year + "YearEvents.html");
+                    string fileLines = File.ReadAllText(path);
+                    dataList = JsonConvert.DeserializeObject<List<TheBlueAlliance.Models.Events.Event>>(fileLines);
+                    return dataList.ToArray();
                 }
                 catch (Exception exception)
                 {
@@ -214,7 +246,9 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    teamList = (List<EventTeams.Team>)Convert.ChangeType((TheBlueAllianceOffline.Events.GetEventTeamsList(eventKey)), typeof(List<EventTeams.Team>));
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventKey + "Teamlist.html");
+                    String fileLines = File.ReadAllText(path);
+                    teamList = JsonConvert.DeserializeObject<List<EventTeams.Team>>(fileLines);
                 }
                 catch (Exception exception)
                 {

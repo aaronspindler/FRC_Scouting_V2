@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net;
+using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
 using TheBlueAlliance.Models;
-using TheBlueAllianceOffline;
 
 namespace TheBlueAlliance
 {
@@ -35,7 +35,9 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    matchToReturn = (MatchInformation.Match)Convert.ChangeType(TheBlueAllianceOffline.Matches.GetMatchInformation(matchKey), typeof(MatchInformation.Match));
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + matchKey + "MatchInfo.html");
+                    string fileLines = File.ReadAllText(path);
+                    matchToReturn = JsonConvert.DeserializeObject<MatchInformation.Match>(fileLines);
                 }
                 catch (Exception exception)
                 {

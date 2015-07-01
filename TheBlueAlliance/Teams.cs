@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
 using TheBlueAlliance.Models;
-using TheBlueAllianceOffline;
 
 namespace TheBlueAlliance
 {
@@ -31,7 +31,18 @@ namespace TheBlueAlliance
             }
             else
             {
-                teamEventAwardsToReturn = (List<TeamEventAwards.Award>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamEventAwards(teamKey, eventKey)), typeof(List<TeamEventAwards.Award>));
+                try
+                {
+                    string teamNum = teamKey.Substring(4);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "AwardsAt" + eventKey + ".html");
+                    string fileLines = File.ReadAllText(path);
+                    teamEventAwardsToReturn =
+                            JsonConvert.DeserializeObject<List<TeamEventAwards.Award>>(path);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }   
             }
             return teamEventAwardsToReturn.ToArray();
         }
@@ -58,7 +69,18 @@ namespace TheBlueAlliance
             }
             else
             {
-                teamEventMatchesToReturn = (List<TeamEventMatches.Match>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamEventMatches(teamKey, eventKey)), typeof(List<TeamEventMatches.Match>));
+                try
+                {
+                    string teamNum = teamKey.Substring(4);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MatchesAt");
+                    string fileLines = File.ReadAllText(path);
+                    teamEventMatchesToReturn =
+                            JsonConvert.DeserializeObject<List<TeamEventMatches.Match>>(path);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }
             }
             
             return teamEventMatchesToReturn.ToArray();
@@ -84,7 +106,17 @@ namespace TheBlueAlliance
             }
             else
             {
-                teamEventsToReturn = (List<TeamEvents.Event>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamEvents(teamKey, year)), typeof(List<TeamEvents.Event>));
+                try
+                {
+                    string teamNum = teamKey.Substring(4);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "EventsDuring.html");
+                    string fileLines = File.ReadAllText(path);
+                    teamEventsToReturn = JsonConvert.DeserializeObject<List<TeamEvents.Event>>(path);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }
             }
             return teamEventsToReturn.ToArray();
         }
@@ -110,7 +142,18 @@ namespace TheBlueAlliance
             }
             else
             {
-                teamHistoricalAwardsToReturn = (List<TeamHistoryAwards.Award>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamHistoricalAwards(teamKey)), typeof(List<TeamHistoryAwards.Award>));
+                try
+                {
+                    string teamNum = teamKey.Substring(4);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalAwards.html");
+                    string fileLines = File.ReadAllText(path);
+                    teamHistoricalAwardsToReturn =
+                            JsonConvert.DeserializeObject<List<TeamHistoryAwards.Award>>(path);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }
             }
             return teamHistoricalAwardsToReturn.ToArray();
         }
@@ -136,7 +179,18 @@ namespace TheBlueAlliance
             }
             else
             {
-                teamHistoricalEventsToReturn = (List<TeamHistoryEvents.Event>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamHistoryEvents((teamKey))), typeof(List<TeamHistoryEvents.Event>));
+                try
+                {
+                    string teamNum = teamKey.Substring(4);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalEvents.html");
+                    string fileLines = File.ReadAllText(path);
+                    teamHistoricalEventsToReturn =
+                           JsonConvert.DeserializeObject<List<TeamHistoryEvents.Event>>(fileLines);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }
             }
             return teamHistoricalEventsToReturn.ToArray();
         }
@@ -167,7 +221,16 @@ namespace TheBlueAlliance
             }
             else
             {
-                teamInformationToReturn = (TeamInformation)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamInformation(teamKey)), typeof(TeamInformation));
+                try
+                {
+                    string teamNum = teamKey.Substring(4);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "Info.html");
+                    teamInformationToReturn = JsonConvert.DeserializeObject<TeamInformation>(path);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }
             }
             return teamInformationToReturn;
         }
@@ -193,7 +256,18 @@ namespace TheBlueAlliance
             }
             else
             {
-                teamMediaLocationsToReturn = (List<TeamMedia.MediaLocation>)Convert.ChangeType((TheBlueAllianceOffline.Teams.GetTeamMediaLocations(teamKey, year)), typeof(List<TeamMedia.MediaLocation>));
+                try
+                {
+                    string teamNum = teamKey.Substring(4);
+                    string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MediaLocationsDuring");
+                    string fileLines = File.ReadAllText(path);
+                    teamMediaLocationsToReturn =
+                            JsonConvert.DeserializeObject<List<TeamMedia.MediaLocation>>(fileLines);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error Message: " + exception.Message);
+                }
             }
             return teamMediaLocationsToReturn.ToArray();
         }
