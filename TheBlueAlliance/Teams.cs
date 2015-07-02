@@ -33,7 +33,7 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    string teamNum = teamKey.Substring(4);
+                    string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "AwardsAt" + eventKey + ".html");
                     string fileLines = File.ReadAllText(path);
                     teamEventAwardsToReturn =
@@ -71,7 +71,7 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    string teamNum = teamKey.Substring(4);
+                    string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MatchesAt");
                     string fileLines = File.ReadAllText(path);
                     teamEventMatchesToReturn =
@@ -108,7 +108,7 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    string teamNum = teamKey.Substring(4);
+                    string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "EventsDuring.html");
                     string fileLines = File.ReadAllText(path);
                     teamEventsToReturn = JsonConvert.DeserializeObject<List<TeamEvents.Event>>(path);
@@ -144,7 +144,7 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    string teamNum = teamKey.Substring(4);
+                    string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalAwards.html");
                     string fileLines = File.ReadAllText(path);
                     teamHistoricalAwardsToReturn =
@@ -181,7 +181,7 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    string teamNum = teamKey.Substring(4);
+                    string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalEvents.html");
                     string fileLines = File.ReadAllText(path);
                     teamHistoricalEventsToReturn =
@@ -223,7 +223,7 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    string teamNum = teamKey.Substring(4);
+                    string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "Info.html");
                     teamInformationToReturn = JsonConvert.DeserializeObject<TeamInformation>(path);
                 }
@@ -258,7 +258,7 @@ namespace TheBlueAlliance
             {
                 try
                 {
-                    string teamNum = teamKey.Substring(4);
+                    string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MediaLocationsDuring");
                     string fileLines = File.ReadAllText(path);
                     teamMediaLocationsToReturn =
