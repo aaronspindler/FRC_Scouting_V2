@@ -1,7 +1,7 @@
 FRC_Scouting_V2
 ===============
 
-![](http://xnovax.net/wp-content/uploads/2015/04/RecycleRush_Scouting_UI.png)
+![](https://github.com/AdiSai/FRC_Scouting_V2/blob/master/Screenshot.PNG)
 
 [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/powered-by-oxygen.svg)](http://forthebadge.com)
