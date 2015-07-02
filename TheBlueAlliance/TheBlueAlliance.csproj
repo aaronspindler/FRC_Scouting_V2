@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InternetTest.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Matches.cs" />
     <Compile Include="Models\Event.cs" />

@@ -25,6 +25,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using FRC_Scouting_V2.Models;
 
 namespace FRC_Scouting_V2
@@ -45,7 +46,7 @@ namespace FRC_Scouting_V2
 
         public int Match_Number { get; set; }
 
-        public String Alliance_Colour { get; set; }
+        public string scoutingPosition { get; set; }
 
         public Boolean Robot_Dead { get; set; }
 
@@ -55,6 +56,10 @@ namespace FRC_Scouting_V2
         public int Auto_Starting_Y { get; set; }
 
         public Boolean Auto_Drive_To_Autozone { get; set; }
+
+        public Boolean Auto_Can_Burgeled { get; set; }
+
+        public int Auto_Cans_Grabbed { get; set; }
 
         public Boolean Auto_Robot_Set { get; set; }
 
@@ -89,9 +94,9 @@ namespace FRC_Scouting_V2
 
         public Boolean Tele_Human_Station_Insert_Litter { get; set; }
 
-        public Boolean Tele_Human_Throwing_Litter { get; set; }
+        public int Tele_Human_Throwing_Litter { get; set; }
 
-        public Boolean Tele_Pushed_Litter_To_Landfill { get; set; }
+        public int Tele_Pushed_Litter_To_Landfill { get; set; }
 
         public int Tele_Fouls { get; set; }
 
@@ -102,11 +107,16 @@ namespace FRC_Scouting_V2
 
         public Boolean Coopertition_Stack { get; set; }
 
+        //Scoring
+        public int Aprox_Robots_Auton_Score { get; set; }
+
+        public int Aprox_Robots_Teleop_Score { get; set; }
+
+        public int Aprox_Robots_Coopertition_Score { get; set; }
+
+        public int Aprox_Robots_Total_Score { get; set; }
+
         //Other
-        public int Final_Score_Red { get; set; }
-
-        public int Final_Score_Blue { get; set; }
-
         public int Driver_Rating { get; set; }
     }
 }

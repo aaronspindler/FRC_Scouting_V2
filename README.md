@@ -1,10 +1,11 @@
 FRC_Scouting_V2
 ===============
 
-![](http://xnovax.net/wp-content/uploads/2015/04/RecycleRush_Scouting_UI.png)
+![](https://github.com/AdiSai/FRC_Scouting_V2/blob/master/Screenshot.PNG)
 
 [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/powered-by-oxygen.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-swag.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/designed-in-ms-paint.svg)](http://forthebadge.com)
 
   This is the second iteration of the FRC_Scouting program. The original version can be found at

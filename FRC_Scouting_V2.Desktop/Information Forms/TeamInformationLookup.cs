@@ -25,10 +25,8 @@
 
 using System;
 using System.Net;
-using System.Reflection;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
 
 //@author xNovax
 
@@ -50,38 +48,21 @@ namespace FRC_Scouting_V2.Information_Forms
 
         private void findTeamButton_Click(object sender, EventArgs e)
         {
-            string downloadedData;
-            var wc = new MyWebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
-            {
-                url = ("http://www.thebluealliance.com/api/v2/team/frc" + Convert.ToString(teamNumber));
-                downloadedData = (wc.DownloadString(url));
-                var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
-
-                teamName = Convert.ToString(deserializedData.nickname);
-                teamNumber = Convert.ToInt16(deserializedData.team_number);
-                teamLocation = Convert.ToString(deserializedData.location);
-                rookieYear = Convert.ToInt32(deserializedData.rookie_year);
-                teamWebsite = Convert.ToString(deserializedData.website);
-
-                Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
-                                  " has been found successfully.");
-                ConsoleWindow.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
-                                        " has been found successfully.");
-            }
-            catch (Exception webError)
-            {
-                Console.WriteLine("Error Message: " + webError.Message);
-                ConsoleWindow.WriteLine("Error Message: " + webError.Message);
-            }
-
+            TheBlueAlliance.Models.TeamInformation ti = TheBlueAlliance.Teams.GetTeamInformation("frc" + teamNumber);
+            teamName = Convert.ToString(ti.nickname);
+            teamNumber = Convert.ToInt16(ti.team_number);
+            teamLocation = Convert.ToString(ti.location);
+            rookieYear = Convert.ToInt32(ti.rookie_year);
+            teamWebsite = Convert.ToString(ti.website);
+            Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
+                              " has been found successfully.");
+            ConsoleWindow.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
+                                    " has been found successfully.");
             teamNameDisplay.Text = teamName;
             teamNumberDisplay.Text = Convert.ToString(teamNumber);
             teamLocationDisplay.Text = teamLocation;
             teamWebsiteDisplay.Text = teamWebsite;
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
-
             if (teamNumber == 3710)
             {
                 MessageBox.Show("BEST TEAM EVER! Please invite to your alliance!");
@@ -112,29 +93,6 @@ namespace FRC_Scouting_V2.Information_Forms
                 w.Timeout = 3000;
                 return w;
             }
-        }
-
-        public class TeamInformationJSONData
-        {
-            public string country_name { get; set; }
-
-            public string key { get; set; }
-
-            public string locality { get; set; }
-
-            public string location { get; set; }
-
-            public string name { get; set; }
-
-            public string nickname { get; set; }
-
-            public string region { get; set; }
-
-            public int rookie_year { get; set; }
-
-            public int team_number { get; set; }
-
-            public string website { get; set; }
         }
     }
 }

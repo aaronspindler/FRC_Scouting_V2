@@ -27,9 +27,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net;
-using System.Reflection;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
@@ -48,87 +46,26 @@ namespace FRC_Scouting_V2.Information_Forms
 
         private void findEventButton_Click(object sender, EventArgs e)
         {
-            var wc = new MyWebClient();
-            wc.Headers.Add("X-TBA-App-Id",
-                "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
+            TheBlueAlliance.Models.Event.EventInformation ei = TheBlueAlliance.Events.GetEventInformation(Convert.ToString(eventCodeEntryTextBox.Text));
+            locationTextBox.Text = ei.location;
+            eventNameLabel.Text = ("Event Name: " + ei.name);
+            eventSpanLabel.Text = string.Format("Event Date(s): {0} to {1}", ei.start_date,
+                ei.end_date);
+            isOfficialLabel.Text = "Is Official?: " + ei.official;
+            if (ei.official)
             {
-                string url = ("http://www.thebluealliance.com/api/v2/event/" +
-                              Convert.ToString(eventCodeEntryTextBox.Text));
-                string downloadedData = (wc.DownloadString(url));
-                var deserializedData = JsonConvert.DeserializeObject<Event>(downloadedData);
-
-                locationTextBox.Text = deserializedData.venue_address;
-                eventNameLabel.Text = ("Event Name: " + deserializedData.name);
-                eventSpanLabel.Text = string.Format("Event Date(s): {0} to {1}", deserializedData.start_date,
-                    deserializedData.end_date);
-                isOfficialLabel.Text = "Is Official?: " + deserializedData.official;
-                if (deserializedData.official)
-                {
-                    isOfficialLabel.ForeColor = Color.Green;
-                }
-                else
-                {
-                    isOfficialLabel.ForeColor = Color.Red;
-                }
-                websiteDisplay.Text = deserializedData.website;
+                isOfficialLabel.ForeColor = Color.Green;
             }
-            catch (Exception webError)
+            else
             {
-                Console.WriteLine("Error Message: " + webError.Message);
-                ConsoleWindow.WriteLine("Error Message: " + webError.Message);
+                isOfficialLabel.ForeColor = Color.Red;
             }
+            websiteDisplay.Text = ei.website;
         }
 
         private void websiteDisplay_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             Process.Start(e.LinkText);
-        }
-
-        public class Alliances
-        {
-            public object[] declines { get; set; }
-
-            public string[] picks { get; set; }
-        }
-
-        public class Event
-        {
-            public string key { get; set; }
-
-            public string website { get; set; }
-
-            public bool official { get; set; }
-
-            public string end_date { get; set; }
-
-            public string name { get; set; }
-
-            public string short_name { get; set; }
-
-            public object facebook_eid { get; set; }
-
-            public object event_district_string { get; set; }
-
-            public string venue_address { get; set; }
-
-            public int event_district { get; set; }
-
-            public string location { get; set; }
-
-            public string event_code { get; set; }
-
-            public int year { get; set; }
-
-            public Webcast[] webcast { get; set; }
-
-            public Alliances[] alliances { get; set; }
-
-            public string event_type_string { get; set; }
-
-            public string start_date { get; set; }
-
-            public int event_type { get; set; }
         }
 
         private class MyWebClient : WebClient
@@ -139,13 +76,6 @@ namespace FRC_Scouting_V2.Information_Forms
                 w.Timeout = 3000;
                 return w;
             }
-        }
-
-        public class Webcast
-        {
-            public string type { get; set; }
-
-            public string channel { get; set; }
         }
     }
 }
