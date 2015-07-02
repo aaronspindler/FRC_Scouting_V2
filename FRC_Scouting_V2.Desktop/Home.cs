@@ -240,6 +240,7 @@ namespace FRC_Scouting_V2
                     getEvent:  string eventCode = Interaction.InputBox("What is the event code for the event that you want to cache?", "Get Event Info to Cache", "(year) + eventName", -1, -1);
                     if (!(eventCode.Length > 4)) { goto getEvent;  }
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + "\\*");
+                    string path0 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + "AllInfo.html");
                     string path1 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + ".html");
                     string path2 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + "Awards.html");
                     string path3 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + "Matches.html");
@@ -256,9 +257,14 @@ namespace FRC_Scouting_V2
                         //Part 1: Cache base (all?) info
                         byte[] siteData = client.DownloadData(siteUri);
                         string siteDataEncoded = Encoding.ASCII.GetString(siteData);
-                        File.WriteAllText(path1, siteDataEncoded);
+                        File.WriteAllText(path0, siteDataEncoded);
                         //Add headers for TBA API calls
                         client.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
+                        //Redo: Cache basic info using the API
+                        siteUri = new Uri("http://www.thebluealliance.com/api/v2/event/" + eventCode);
+                        siteData = client.DownloadData(siteUri);
+                        siteDataEncoded = Encoding.ASCII.GetString(siteData);
+                        File.WriteAllText(path1, siteDataEncoded);
                         //Part 2: Cache event awards
                         siteUri = new Uri("http://www.thebluealliance.com/api/v2/event/" + eventCode + "/awards");
                         siteData = client.DownloadData(siteUri);
@@ -330,6 +336,7 @@ namespace FRC_Scouting_V2
                     Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\");
                 getTeamNum: string teamNum = Interaction.InputBox("What is the team number for the team's info that you want to cache?", "Get Team Num's Info to Cache", "(226)", -1, -1);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "\\*");
+                    string path0 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "AllInfo.html");
                     string path1 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "Info.html");
                     string path2 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "AwardsAt");
                     string path3 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MatchesAt");
@@ -348,10 +355,15 @@ namespace FRC_Scouting_V2
                         WebClient client = new WebClient();
                         byte[] siteData = client.DownloadData(siteUri);
                         string siteDataEncoded = Encoding.ASCII.GetString(siteData);
-                        File.WriteAllText(path1, siteDataEncoded);
+                        File.WriteAllText(path0, siteDataEncoded);
                         //Add headers for TBA API 
                         client.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-                        //Get event name:
+                        //Redo: Cache basic info using the API
+                        string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey);
+                        siteData = client.DownloadData(new Uri(url));
+                        siteDataEncoded = Encoding.ASCII.GetString(siteData);
+                        File.WriteAllText(path1, siteDataEncoded);
+                    //Get event name:
                     getEventName: string eventCode = Interaction.InputBox("What is the event key for the team's info at that event that you want to cache?", "Get Event Key's Event Info to Cache", "(year) + (code)", -1, -1);
                         TheBlueAlliance.Models.Event.EventInformation eventInfo = TheBlueAlliance.Events.GetEventInformation(eventCode);
                         tmp = eventInfo.short_name;
@@ -361,7 +373,7 @@ namespace FRC_Scouting_V2
                             goto getEventName;
                         }
                         //Part 2: Cache a teams awards at one event 
-                        string url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventCode + "/awards");
+                        url = ("http://www.thebluealliance.com/api/v2/team/" + teamKey + "/event/" + eventCode + "/awards");
                         string thisPath = path2 + eventCode + ".html";
                         siteData = client.DownloadData(new Uri(url));
                         siteDataEncoded = Encoding.ASCII.GetString(siteData);
