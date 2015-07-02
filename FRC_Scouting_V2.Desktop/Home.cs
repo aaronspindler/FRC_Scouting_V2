@@ -237,8 +237,8 @@ namespace FRC_Scouting_V2
                 {
                     Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves");
                     Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\");
-                    getEvent:  string eventCode = Interaction.InputBox("What is the event code for the event that you want to cache?", "Get Event Info to Cache", "(year) + eventName", -1, -1);
-                    if (!(eventCode.Length > 4)) { goto getEvent;  }
+                getEvent: string eventCode = Interaction.InputBox("What is the event code for the event that you want to cache?", "Get Event Info to Cache", "(year) + eventName", -1, -1);
+                    if (!(eventCode.Length > 4)) { goto getEvent; }
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + "\\*");
                     string path0 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + "AllInfo.html");
                     string path1 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + eventCode + ".html");
@@ -249,7 +249,7 @@ namespace FRC_Scouting_V2
                     string appendedUriString = "http://www.thebluealliance.com/event/" + eventCode;
                     TheBlueAlliance.Models.Event.EventInformation eventInfo = TheBlueAlliance.Events.GetEventInformation(eventCode);
                     string tmp = eventInfo.short_name;
-                    if (System.String.IsNullOrWhiteSpace(tmp)) { tmp = eventCode.ToUpper().Substring(4);  }
+                    if (System.String.IsNullOrWhiteSpace(tmp)) { tmp = eventCode.ToUpper().Substring(4); }
                     if (MessageBox.Show(("Is the event: " + tmp + " (" + eventCode + "), correct?"), "Correct event?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
                     {
                         Uri siteUri = new Uri(appendedUriString);
@@ -297,7 +297,7 @@ namespace FRC_Scouting_V2
                     Console.Write("Error Occured: " + exception.Message);
                     ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                     Notifications.ReportCrash(exception);
-                } 
+                }
             }
         }
 
@@ -342,7 +342,7 @@ namespace FRC_Scouting_V2
                     string path3 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MatchesAt");
                     string path4 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "EventsDuring.html");
                     string path5 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalAwards.html");
-                    string path6= (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalEvents.html");
+                    string path6 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalEvents.html");
                     string path7 = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MediaLocationsDuring");
                     string appendedUriString = "http://www.thebluealliance.com/team/" + (Convert.ToInt32(teamNum));
                     TheBlueAlliance.Models.TeamInformation teamInfo = TheBlueAlliance.Teams.GetTeamInformation("frc" + (Convert.ToInt32(teamNum)));
@@ -363,7 +363,7 @@ namespace FRC_Scouting_V2
                         siteData = client.DownloadData(new Uri(url));
                         siteDataEncoded = Encoding.ASCII.GetString(siteData);
                         File.WriteAllText(path1, siteDataEncoded);
-                    //Get event name:
+                        //Get event name:
                     getEventName: string eventCode = Interaction.InputBox("What is the event key for the team's info at that event that you want to cache?", "Get Event Key's Event Info to Cache", "(year) + (code)", -1, -1);
                         TheBlueAlliance.Models.Event.EventInformation eventInfo = TheBlueAlliance.Events.GetEventInformation(eventCode);
                         tmp = eventInfo.short_name;
