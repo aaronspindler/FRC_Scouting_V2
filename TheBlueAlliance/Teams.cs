@@ -13,7 +13,7 @@ namespace TheBlueAlliance
         public static TeamEventAwards.Award[] GetTeamEventAwards(string teamKey, string eventKey)
         {
             var teamEventAwardsToReturn = new List<TeamEventAwards.Award>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id",
@@ -37,7 +37,7 @@ namespace TheBlueAlliance
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "AwardsAt" + eventKey + ".html");
                     string fileLines = File.ReadAllText(path);
                     teamEventAwardsToReturn =
-                            JsonConvert.DeserializeObject<List<TeamEventAwards.Award>>(path);
+                            JsonConvert.DeserializeObject<List<TeamEventAwards.Award>>(fileLines);
                 }
                 catch (Exception exception)
                 {
@@ -50,7 +50,7 @@ namespace TheBlueAlliance
         public static TeamEventMatches.Match[] GetTeamEventMatches(string teamKey, string eventKey)
         {
             var teamEventMatchesToReturn = new List<TeamEventMatches.Match>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id",
@@ -75,7 +75,7 @@ namespace TheBlueAlliance
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "MatchesAt");
                     string fileLines = File.ReadAllText(path);
                     teamEventMatchesToReturn =
-                            JsonConvert.DeserializeObject<List<TeamEventMatches.Match>>(path);
+                            JsonConvert.DeserializeObject<List<TeamEventMatches.Match>>(fileLines);
                 }
                 catch (Exception exception)
                 {
@@ -89,7 +89,7 @@ namespace TheBlueAlliance
         public static TeamEvents.Event[] GetTeamEvents(string teamKey, int year)
         {
             var teamEventsToReturn = new List<TeamEvents.Event>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id",
@@ -111,7 +111,7 @@ namespace TheBlueAlliance
                     string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "EventsDuring.html");
                     string fileLines = File.ReadAllText(path);
-                    teamEventsToReturn = JsonConvert.DeserializeObject<List<TeamEvents.Event>>(path);
+                    teamEventsToReturn = JsonConvert.DeserializeObject<List<TeamEvents.Event>>(fileLines);
                 }
                 catch (Exception exception)
                 {
@@ -124,7 +124,7 @@ namespace TheBlueAlliance
         public static TeamHistoryAwards.Award[] GetTeamHistoricalAwards(string teamKey)
         {
             var teamHistoricalAwardsToReturn = new List<TeamHistoryAwards.Award>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id",
@@ -148,7 +148,7 @@ namespace TheBlueAlliance
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "HistoricalAwards.html");
                     string fileLines = File.ReadAllText(path);
                     teamHistoricalAwardsToReturn =
-                            JsonConvert.DeserializeObject<List<TeamHistoryAwards.Award>>(path);
+                            JsonConvert.DeserializeObject<List<TeamHistoryAwards.Award>>(fileLines);
                 }
                 catch (Exception exception)
                 {
@@ -161,7 +161,7 @@ namespace TheBlueAlliance
         public static TeamHistoryEvents.Event[] GetTeamHistoryEvents(string teamKey)
         {
             var teamHistoricalEventsToReturn = new List<TeamHistoryEvents.Event>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id",
@@ -204,7 +204,7 @@ namespace TheBlueAlliance
         public static TeamInformation GetTeamInformation(string teamKey)
         {
             var teamInformationToReturn = new TeamInformation();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id",
@@ -225,7 +225,8 @@ namespace TheBlueAlliance
                 {
                     string teamNum = teamKey.Substring(3);
                     string path = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\TBA\\" + "Team" + (Convert.ToInt32(teamNum)) + "Info.html");
-                    teamInformationToReturn = JsonConvert.DeserializeObject<TeamInformation>(path);
+                    string fileLines = File.ReadAllText(path);
+                    teamInformationToReturn = JsonConvert.DeserializeObject<TeamInformation>(fileLines);
                 }
                 catch (Exception exception)
                 {
@@ -238,7 +239,7 @@ namespace TheBlueAlliance
         public static TeamMedia.MediaLocation[] GetTeamMediaLocations(string teamKey, int year)
         {
             var teamMediaLocationsToReturn = new List<TeamMedia.MediaLocation>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id",

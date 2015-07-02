@@ -11,8 +11,7 @@ namespace TheBlueAlliance
 {
     public class InternetTest
     {
-        public static Boolean internetAvailable;
-        private static void checkInternet()
+        public static Boolean checkInternet()
         {
             while (true)
             {
@@ -21,12 +20,12 @@ namespace TheBlueAlliance
                     using (var client = new WebClient())
                     using (Stream stream = client.OpenRead("http://www.google.com"))
                     {
-                        internetAvailable = true;
+                        return true;
                     }
                 }
                 catch
                 {
-                    internetAvailable = false;
+
                 }
                 System.Threading.Thread.Sleep(5000);
             }

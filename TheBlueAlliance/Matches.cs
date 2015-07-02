@@ -17,7 +17,7 @@ namespace TheBlueAlliance
         public static MatchInformation.Match GetMatchInformation(string matchKey)
         {
             var matchToReturn = new MatchInformation.Match();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);

@@ -18,7 +18,7 @@ namespace TheBlueAlliance
         public static Event.EventInformation GetEventInformation(string eventCode)
         {
             var eventToReturn = new Event.EventInformation();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
@@ -54,7 +54,7 @@ namespace TheBlueAlliance
         {
             var dataList = new List<EventAwards.Award>();
             EventAwards.Award[] eventAwardsToReturn = dataList.ToArray();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
@@ -91,7 +91,7 @@ namespace TheBlueAlliance
         {
             var dataList = new List<EventMatches.Match>();
             EventMatches.Match[] eventMatchesToReturn = dataList.ToArray();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
@@ -127,7 +127,7 @@ namespace TheBlueAlliance
         public static EventRankings.Team[] GetEventRankings(string eventKey)
         {
             var teamList = new List<EventRankings.Team>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
@@ -193,7 +193,7 @@ namespace TheBlueAlliance
         public static Models.Events.Event[] GetEvents(int year)
         {
             var dataList = new List<Models.Events.Event>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
@@ -228,7 +228,7 @@ namespace TheBlueAlliance
         public static EventTeams.Team[] GetEventTeamsList(string eventKey)
         {
             var teamList = new List<EventTeams.Team>();
-            if (InternetTest.internetAvailable)
+            if (InternetTest.checkInternet())
             {
                 var wc = new WebClient();
                 wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
