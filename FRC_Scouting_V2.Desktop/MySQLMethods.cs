@@ -47,7 +47,6 @@ namespace FRC_Scouting_V2
                     conn.Open();
                     numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
                     conn.Close();
-                    cmd.Dispose();
                     return numberOfRows;
                 }
             }
@@ -75,7 +74,6 @@ namespace FRC_Scouting_V2
                     conn.Open();
                     numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
                     conn.Close();
-                    cmd.Dispose();
                     return numberOfRows;
                 }
             }
@@ -99,6 +97,7 @@ namespace FRC_Scouting_V2
             return builder.ConnectionString;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
         public static void InitializeDatabases()
         {
             try

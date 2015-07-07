@@ -244,7 +244,6 @@ namespace FRC_Scouting_V2
                             ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                             ConsoleWindow.WriteLine("Error Message: " + ex.Message);
                         }
-                        conn.Close();
                     }
                     else
                     {
@@ -257,6 +256,7 @@ namespace FRC_Scouting_V2
                 Notifications.ShowInformationMessage("Successfully imported: " + numberOfFilesImported +
                                                      " File(s) Into the Database.");
             }
+            conn.Close();
         }
 
         //From (http://www.developer.com/net/article.php/3794146/Adding-Standard-Deviation-to-LINQ.htm)

@@ -243,6 +243,9 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
+            //Console.WriteLine(TheBlueAlliance.Matches.GetMatchInformation("2015txda_qm6").match_number);
+            var Properties = new PropertiesForm();
+            Properties.Show();
         }
     }
 }

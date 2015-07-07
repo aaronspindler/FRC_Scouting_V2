@@ -86,7 +86,6 @@ namespace FRC_Scouting_V2
                     conn.Open();
                     numberOfRows = int.Parse(cmd.ExecuteScalar().ToString());
                     conn.Close();
-                    cmd.Dispose();
                     return numberOfRows;
                 }
             }

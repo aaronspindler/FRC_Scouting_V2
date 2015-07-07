@@ -27,7 +27,7 @@ using System;
 
 namespace FRC_Scouting_V2
 {
-    internal class RecycleRush_Pit_Scouting_Team
+    public class RecycleRush_Pit_Scouting_Team
     {
         public string Author { get; set; }
 

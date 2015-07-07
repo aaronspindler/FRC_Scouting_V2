@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC838A61-F83B-4452-9865-8A74542083C2}</ProjectGuid>
+    <ProjectGuid>{75B2DB3C-207D-43C2-9A84-CB9A89C7833D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TheBlueAlliance.Test</RootNamespace>
-    <AssemblyName>TheBlueAlliance.Test</AssemblyName>
+    <RootNamespace>UsefulSnippets.Test</RootNamespace>
+    <AssemblyName>UsefulSnippets.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.3</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -20,12 +20,11 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,16 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MatchesUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EventsUnitTests.cs" />
-    <Compile Include="TeamsUnitTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TheBlueAlliance\TheBlueAlliance.csproj">
-      <Project>{8e17112c-ae09-4e64-bd69-948740528d54}</Project>
-      <Name>TheBlueAlliance</Name>
-    </ProjectReference>
+    <Compile Include="ImagesUnitTests.cs" />
+    <Compile Include="MathematicsUnitTests.cs" />
+    <Compile Include="NetworkUnitTests.cs" />
+    <Compile Include="NotificationUnitTests.cs" />
+    <Compile Include="SecurityUnitTests.cs" />
+    <Compile Include="TimeUnitTests.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -20,7 +20,6 @@ namespace FRC_Scouting_V2
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
-            Dispose();
         }
 
         public string[] getLog()
