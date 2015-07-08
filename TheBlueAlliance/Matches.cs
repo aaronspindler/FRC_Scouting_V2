@@ -29,8 +29,9 @@ namespace TheBlueAlliance
                 string downloadedData = wc.DownloadString("http://www.thebluealliance.com/api/v2/match/" + matchKey);
                 if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\" + matchKey + ".json"))
                 {
-                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\" + matchKey + ".json");   
+                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\" + matchKey + ".json");
                 }
+                DirectoryInfo di = Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\");
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\" + matchKey + ".json", downloadedData);
                 return downloadedData;
             }
@@ -47,7 +48,6 @@ namespace TheBlueAlliance
             {
                 return File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\" + matchKey + ".json");
             }
-
             return null;
         }
     }
