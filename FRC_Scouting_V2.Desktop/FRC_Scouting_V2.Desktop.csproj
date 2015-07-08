@@ -118,7 +118,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="UsefulSnippets">
       <HintPath>..\UsefulSnippets\bin\Debug\UsefulSnippets.dll</HintPath>
     </Reference>
@@ -420,16 +419,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FRC_Events_API\FRC_Events_API.csproj">
-      <Project>{40a4e62e-c04c-433b-8295-c7873c726903}</Project>
-      <Name>FRC_Events_API</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TheBlueAlliance\TheBlueAlliance.csproj">
-      <Project>{8e17112c-ae09-4e64-bd69-948740528d54}</Project>
-      <Name>TheBlueAlliance</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
