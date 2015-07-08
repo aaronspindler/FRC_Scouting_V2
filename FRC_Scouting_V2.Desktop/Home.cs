@@ -72,19 +72,20 @@ namespace FRC_Scouting_V2
 
         private void eventSelector_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (eventSelector.SelectedIndex == 0)
+            switch (eventSelector.SelectedIndex)
             {
-                var aaNorthbay2014 = new AerialAssist_Northbay();
-                aaNorthbay2014.Show();
-
-                if (Settings.Default.minimizeHomeWentEventLoads)
+                case 0:
                 {
-                    WindowState = FormWindowState.Minimized;
+                    var aaNorthbay2014 = new AerialAssist_Northbay();
+                    aaNorthbay2014.Show();
+
+                    if (Settings.Default.minimizeHomeWentEventLoads)
+                    {
+                        WindowState = FormWindowState.Minimized;
+                    }
                 }
-            }
-            else
-            {
-                if (eventSelector.SelectedIndex == 1)
+                    break;
+                case 1:
                 {
                     var aaRahChaCha2014 = new AerialAssist_RahChaCha();
                     aaRahChaCha2014.Show();
@@ -94,32 +95,39 @@ namespace FRC_Scouting_V2
                         WindowState = FormWindowState.Minimized;
                     }
                 }
-                else
+                    break;
+                case 2:
                 {
-                    if (eventSelector.SelectedIndex == 2)
-                    {
-                        var rrgtre = new RecycleRush_GTR_East();
-                        rrgtre.Show();
+                    var rrgtre = new RecycleRush_GTR_East();
+                    rrgtre.Show();
 
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
-                    }
-                    else
+                    if (Settings.Default.minimizeHomeWentEventLoads)
                     {
-                        if (eventSelector.SelectedIndex == 3)
-                        {
-                            var rrnb = new RecycleRush_Northbay();
-                            rrnb.Show();
-
-                            if (Settings.Default.minimizeHomeWentEventLoads)
-                            {
-                                WindowState = FormWindowState.Minimized;
-                            }
-                        }
+                        WindowState = FormWindowState.Minimized;
                     }
                 }
+                    break;
+                case 3:
+                {
+                    var rrnb = new RecycleRush_Northbay();
+                    rrnb.Show();
+
+                    if (Settings.Default.minimizeHomeWentEventLoads)
+                    {
+                        WindowState = FormWindowState.Minimized;
+                    }
+                }
+                    break;
+                case 4:
+                {
+                    var rriri = new RecycleRush_IRI();
+                    rriri.Show();
+                    if (Settings.Default.minimizeHomeWentEventLoads)
+                    {
+                        WindowState = FormWindowState.Minimized;
+                    }
+                }
+                    break;
             }
         }
 
@@ -143,6 +151,7 @@ namespace FRC_Scouting_V2
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
             eventSelector.Items.Add("RecycleRush | GTR-East | 2015");
             eventSelector.Items.Add("RecycleRush | Northbay | 2015");
+            eventSelector.Items.Add("RecycleRush | IRI | 2015");
 
             if (Settings.Default.firstTimeLoad)
             {

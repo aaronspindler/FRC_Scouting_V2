@@ -1,6 +1,6 @@
 ﻿namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
-    partial class RecycleRush_Northbay
+    partial class RecycleRush_IRI
     {
         /// <summary>
         /// Required designer variable.
@@ -31,17 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleRush_Northbay));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleRush_IRI));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
@@ -186,20 +176,6 @@
             this.matchBreakDownAllianceColourDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownAuthorDisplay = new System.Windows.Forms.Label();
             this.matchBreakDownTimeCreatedDisplay = new System.Windows.Forms.Label();
-            this.teamComparisonTabPage = new System.Windows.Forms.TabPage();
-            this.teamComparisonTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewTeam2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTeam1 = new System.Windows.Forms.DataGridView();
-            this.dataNameColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meanColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardDeviationColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.team1SelectorLabel = new System.Windows.Forms.Label();
-            this.teamComparisonTeam1Selector = new System.Windows.Forms.ComboBox();
-            this.teamComparisonTeam2Selector = new System.Windows.Forms.ComboBox();
-            this.team2SelectorLabel = new System.Windows.Forms.Label();
             this.pitScoutingTabPage = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.pitScoutingViewerTabPage = new System.Windows.Forms.TabPage();
@@ -302,7 +278,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -346,10 +321,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.matchBreakdownStacksGridView)).BeginInit();
             this.matchBreakDownOtherGroupBox.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            this.teamComparisonTabPage.SuspendLayout();
-            this.teamComparisonTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).BeginInit();
             this.pitScoutingTabPage.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.pitScoutingViewerTabPage.SuspendLayout();
@@ -421,7 +392,6 @@
             this.tableLayoutPanel1.SetColumnSpan(this.tabControl1, 8);
             this.tabControl1.Controls.Add(this.scoutingTabPage);
             this.tabControl1.Controls.Add(this.matchBreakdownTabPage);
-            this.tabControl1.Controls.Add(this.teamComparisonTabPage);
             this.tabControl1.Controls.Add(this.pitScoutingTabPage);
             this.tabControl1.Controls.Add(this.teamInformationTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2407,226 +2377,6 @@
             this.matchBreakDownTimeCreatedDisplay.Text = "Time Created:";
             this.matchBreakDownTimeCreatedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // teamComparisonTabPage
-            // 
-            this.teamComparisonTabPage.Controls.Add(this.teamComparisonTableLayoutPanel);
-            this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
-            this.teamComparisonTabPage.Name = "teamComparisonTabPage";
-            this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.teamComparisonTabPage.Size = new System.Drawing.Size(1421, 726);
-            this.teamComparisonTabPage.TabIndex = 5;
-            this.teamComparisonTabPage.Text = "Team Comparison - Did Not Use";
-            this.teamComparisonTabPage.UseVisualStyleBackColor = true;
-            // 
-            // teamComparisonTableLayoutPanel
-            // 
-            this.teamComparisonTableLayoutPanel.ColumnCount = 4;
-            this.teamComparisonTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75F));
-            this.teamComparisonTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25F));
-            this.teamComparisonTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75F));
-            this.teamComparisonTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.25F));
-            this.teamComparisonTableLayoutPanel.Controls.Add(this.dataGridViewTeam2, 2, 1);
-            this.teamComparisonTableLayoutPanel.Controls.Add(this.dataGridViewTeam1, 0, 1);
-            this.teamComparisonTableLayoutPanel.Controls.Add(this.team1SelectorLabel, 0, 0);
-            this.teamComparisonTableLayoutPanel.Controls.Add(this.teamComparisonTeam1Selector, 1, 0);
-            this.teamComparisonTableLayoutPanel.Controls.Add(this.teamComparisonTeam2Selector, 3, 0);
-            this.teamComparisonTableLayoutPanel.Controls.Add(this.team2SelectorLabel, 2, 0);
-            this.teamComparisonTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamComparisonTableLayoutPanel.Location = new System.Drawing.Point(3, 3);
-            this.teamComparisonTableLayoutPanel.Name = "teamComparisonTableLayoutPanel";
-            this.teamComparisonTableLayoutPanel.RowCount = 3;
-            this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.teamComparisonTableLayoutPanel.Size = new System.Drawing.Size(1415, 720);
-            this.teamComparisonTableLayoutPanel.TabIndex = 1;
-            // 
-            // dataGridViewTeam2
-            // 
-            this.dataGridViewTeam2.AllowUserToAddRows = false;
-            this.dataGridViewTeam2.AllowUserToDeleteRows = false;
-            this.dataGridViewTeam2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewTeam2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTeam2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTeam2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.teamComparisonTableLayoutPanel.SetColumnSpan(this.dataGridViewTeam2, 2);
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTeam2.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewTeam2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTeam2.Location = new System.Drawing.Point(710, 28);
-            this.dataGridViewTeam2.Name = "dataGridViewTeam2";
-            this.dataGridViewTeam2.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewTeam2.RowHeadersVisible = false;
-            this.teamComparisonTableLayoutPanel.SetRowSpan(this.dataGridViewTeam2, 2);
-            this.dataGridViewTeam2.Size = new System.Drawing.Size(702, 689);
-            this.dataGridViewTeam2.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewTextBoxColumn1.FillWeight = 178.3475F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Data Type";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.FillWeight = 131.6061F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Mean (Average Per Match)";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn3.FillWeight = 61.07648F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Standard Deviation";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTeam1
-            // 
-            this.dataGridViewTeam1.AllowUserToAddRows = false;
-            this.dataGridViewTeam1.AllowUserToDeleteRows = false;
-            this.dataGridViewTeam1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewTeam1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewTeam1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTeam1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataNameColumn1,
-            this.meanColumn1,
-            this.standardDeviationColumn1});
-            this.teamComparisonTableLayoutPanel.SetColumnSpan(this.dataGridViewTeam1, 2);
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTeam1.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridViewTeam1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTeam1.Location = new System.Drawing.Point(3, 28);
-            this.dataGridViewTeam1.Name = "dataGridViewTeam1";
-            this.dataGridViewTeam1.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeam1.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridViewTeam1.RowHeadersVisible = false;
-            this.teamComparisonTableLayoutPanel.SetRowSpan(this.dataGridViewTeam1, 2);
-            this.dataGridViewTeam1.Size = new System.Drawing.Size(701, 689);
-            this.dataGridViewTeam1.TabIndex = 7;
-            // 
-            // dataNameColumn1
-            // 
-            this.dataNameColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataNameColumn1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataNameColumn1.FillWeight = 178.3475F;
-            this.dataNameColumn1.HeaderText = "Data Type";
-            this.dataNameColumn1.Name = "dataNameColumn1";
-            this.dataNameColumn1.ReadOnly = true;
-            // 
-            // meanColumn1
-            // 
-            this.meanColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.meanColumn1.FillWeight = 131.6061F;
-            this.meanColumn1.HeaderText = "Mean (Average Per Match)";
-            this.meanColumn1.Name = "meanColumn1";
-            this.meanColumn1.ReadOnly = true;
-            // 
-            // standardDeviationColumn1
-            // 
-            this.standardDeviationColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.standardDeviationColumn1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.standardDeviationColumn1.FillWeight = 61.07648F;
-            this.standardDeviationColumn1.HeaderText = "Standard Deviation";
-            this.standardDeviationColumn1.Name = "standardDeviationColumn1";
-            this.standardDeviationColumn1.ReadOnly = true;
-            // 
-            // team1SelectorLabel
-            // 
-            this.team1SelectorLabel.AutoSize = true;
-            this.team1SelectorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team1SelectorLabel.Location = new System.Drawing.Point(3, 0);
-            this.team1SelectorLabel.Name = "team1SelectorLabel";
-            this.team1SelectorLabel.Size = new System.Drawing.Size(259, 25);
-            this.team1SelectorLabel.TabIndex = 2;
-            this.team1SelectorLabel.Text = "Team 1:";
-            this.team1SelectorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // teamComparisonTeam1Selector
-            // 
-            this.teamComparisonTeam1Selector.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamComparisonTeam1Selector.FormattingEnabled = true;
-            this.teamComparisonTeam1Selector.Location = new System.Drawing.Point(268, 3);
-            this.teamComparisonTeam1Selector.Name = "teamComparisonTeam1Selector";
-            this.teamComparisonTeam1Selector.Size = new System.Drawing.Size(436, 21);
-            this.teamComparisonTeam1Selector.TabIndex = 2;
-            // 
-            // teamComparisonTeam2Selector
-            // 
-            this.teamComparisonTeam2Selector.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamComparisonTeam2Selector.FormattingEnabled = true;
-            this.teamComparisonTeam2Selector.Location = new System.Drawing.Point(975, 3);
-            this.teamComparisonTeam2Selector.Name = "teamComparisonTeam2Selector";
-            this.teamComparisonTeam2Selector.Size = new System.Drawing.Size(437, 21);
-            this.teamComparisonTeam2Selector.TabIndex = 3;
-            // 
-            // team2SelectorLabel
-            // 
-            this.team2SelectorLabel.AutoSize = true;
-            this.team2SelectorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team2SelectorLabel.Location = new System.Drawing.Point(710, 0);
-            this.team2SelectorLabel.Name = "team2SelectorLabel";
-            this.team2SelectorLabel.Size = new System.Drawing.Size(259, 25);
-            this.team2SelectorLabel.TabIndex = 4;
-            this.team2SelectorLabel.Text = "Team 2:";
-            this.team2SelectorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pitScoutingTabPage
             // 
             this.pitScoutingTabPage.Controls.Add(this.tabControl2);
@@ -4079,7 +3829,6 @@
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.eventInformationToolStripMenuItem,
             this.importExportToolStripMenuItem,
             this.gameManualToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -4103,13 +3852,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
-            // eventInformationToolStripMenuItem
-            // 
-            this.eventInformationToolStripMenuItem.Name = "eventInformationToolStripMenuItem";
-            this.eventInformationToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.eventInformationToolStripMenuItem.Text = "Event Information";
-            this.eventInformationToolStripMenuItem.Click += new System.EventHandler(this.eventInformationToolStripMenuItem_Click);
-            // 
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -4126,7 +3868,7 @@
             this.matchScoutingDataToolStripMenuItem,
             this.pitScoutingDataToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // matchScoutingDataToolStripMenuItem
@@ -4146,12 +3888,12 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(107, 6);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // gameManualToolStripMenuItem
@@ -4188,7 +3930,7 @@
             this.pictureOpenFileDialog.FileName = "openFileDialog1";
             this.pictureOpenFileDialog.Filter = "Image files | *.jpg";
             // 
-            // RecycleRush_Northbay
+            // RecycleRush_IRI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -4196,10 +3938,10 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "RecycleRush_Northbay";
+            this.Name = "RecycleRush_IRI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RecycleRush | Northbay | 2015";
-            this.Load += new System.EventHandler(this.RecycleRush_Northbay_Load);
+            this.Text = "RecycleRush | IRI | 2015";
+            this.Load += new System.EventHandler(this.RecycleRush_IRI_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -4243,11 +3985,6 @@
             this.matchBreakDownOtherGroupBox.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            this.teamComparisonTabPage.ResumeLayout(false);
-            this.teamComparisonTableLayoutPanel.ResumeLayout(false);
-            this.teamComparisonTableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeam1)).EndInit();
             this.pitScoutingTabPage.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.pitScoutingViewerTabPage.ResumeLayout(false);
@@ -4318,28 +4055,13 @@
         private System.Windows.Forms.ComboBox teamSelector;
         private System.Windows.Forms.TableLayoutPanel scoutingTableLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel matchBreakdownTableLayoutPanel;
-        private System.Windows.Forms.TabPage teamComparisonTabPage;
-        private System.Windows.Forms.TableLayoutPanel teamComparisonTableLayoutPanel;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage pitScoutingViewerTabPage;
         private System.Windows.Forms.TabPage pitScoutingEditorTabPage;
         private System.Windows.Forms.TableLayoutPanel teamInformationTableLayoutPanel;
-        private System.Windows.Forms.ComboBox teamComparisonTeam1Selector;
-        private System.Windows.Forms.ToolStripMenuItem eventInformationToolStripMenuItem;
-        private System.Windows.Forms.ComboBox teamComparisonTeam2Selector;
-        private System.Windows.Forms.Label team1SelectorLabel;
-        private System.Windows.Forms.Label team2SelectorLabel;
         private System.Windows.Forms.PictureBox scoutingFieldPictureBox;
         private System.Windows.Forms.Label scoutingFieldTypeLabel;
         private System.Windows.Forms.ComboBox scoutingFieldTypeSelectorComboBox;
-        private System.Windows.Forms.DataGridView dataGridViewTeam2;
-        private System.Windows.Forms.DataGridView dataGridViewTeam1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataNameColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn meanColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn standardDeviationColumn1;
         private System.Windows.Forms.Label scoutingDriverRatingLabel;
         private System.Windows.Forms.ToolStripMenuItem importExportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
