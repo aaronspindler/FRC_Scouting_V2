@@ -235,12 +235,6 @@ namespace FRC_Scouting_V2
             cl.Show();
         }
 
-        private void contributeToFRCScoutingV2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var contribute = new Contribute();
-            contribute.Show();
-        }
-
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
             var Properties = new PropertiesForm();

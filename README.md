@@ -26,7 +26,6 @@ FRC_Scouting_V2
 
 ### To-Do
   - [ ] Overhall Settings Form
-  - [ ] Finish Contribution Form
   - [ ] Update Event Information Form
   - [ ] Add Event Schedule Form
   - [ ] Write Unit Tests for TheBlueAlliance API
