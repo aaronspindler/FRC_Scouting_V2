@@ -25,7 +25,7 @@ FRC_Scouting_V2
 - [x] Recycle Rush
 
 ### To-Do
-  - [ ] Overhall Settings Form
+  - [ ] Overhaul Settings Form
   - [ ] Update Event Information Form
   - [ ] Add Event Schedule Form
   - [ ] Write Unit Tests for TheBlueAlliance API
@@ -46,11 +46,8 @@ https://github.com/xNovax/FRC_Scouting_V2/issues
 
 ### Would you like to contribute?
 
-If you would like to help out with the project give me a shout at 
+If you would like to help out with the project give me an email at AaroN@xNovax.net, or take a look at this issues marked "help wanted"
 
-```
-Aaron@xNovax.net
-```
 
 ### Contributors
 ```
