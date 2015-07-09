@@ -9,7 +9,6 @@ namespace TheBlueAlliance
 {
     public class Matches
     {
-        
         public static MatchInformation.Match GetMatchInformation(string matchKey)
         {
             if (GetMatchInformationJsonData(matchKey) != null)

@@ -22,9 +22,8 @@ namespace FRC_Scouting_V2
         }
     }
 
-    class PropertieSettings
+    internal class PropertieSettings
     {
         private string Username { get; set; }
-
     }
 }

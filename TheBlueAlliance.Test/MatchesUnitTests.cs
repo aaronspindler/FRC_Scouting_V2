@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TheBlueAlliance.Models;
 
 namespace TheBlueAlliance.Test
 {
@@ -8,30 +9,30 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void GetMatchInformation_TestMethod()
         {
-            var actualMatchInformation = Matches.GetMatchInformation("2015onnb_f1m3");
+            MatchInformation.Match actualMatchInformation = Matches.GetMatchInformation("2015onnb_f1m3");
 
-            var expectedCompLevel = "f";
-            var expectedMatchNumber = 3;
+            string expectedCompLevel = "f";
+            int expectedMatchNumber = 3;
             string expectedTimeString = null;
-            var expectedSetNumber = 1;
-            var expectedKey = "2015onnb_f1m3";
-            var expectedTime = 1427569680;
-            var expectedScoreBreakdownBlueAuto = 0;
-            var expectedScoreBreakdownBlueFoul = 0;
-            var expectedScoreBreakdownRedAuto = 20;
-            var expectedScoreBreakdownRedFoul = 0;
-            var expectedAlliancesBlueScore = 100;
-            var expectedAlliancesBlueTeam0 = "frc4917";
-            var expectedAlliancesBlueTeam1 = "frc4001";
-            var expectedAlliancesBlueTeam2 = "frc3710";
-            var expectedAllianceRedScore = 167;
-            var expectedAllianceRedTeam0 = "frc1310";
-            var expectedAllianceRedTeam1 = "frc4678";
-            var expectedAllianceRedTeam2 = "frc2013";
-            var expectedEventKey = "2015onnb";
+            int expectedSetNumber = 1;
+            string expectedKey = "2015onnb_f1m3";
+            int expectedTime = 1427569680;
+            int expectedScoreBreakdownBlueAuto = 0;
+            int expectedScoreBreakdownBlueFoul = 0;
+            int expectedScoreBreakdownRedAuto = 20;
+            int expectedScoreBreakdownRedFoul = 0;
+            int expectedAlliancesBlueScore = 100;
+            string expectedAlliancesBlueTeam0 = "frc4917";
+            string expectedAlliancesBlueTeam1 = "frc4001";
+            string expectedAlliancesBlueTeam2 = "frc3710";
+            int expectedAllianceRedScore = 167;
+            string expectedAllianceRedTeam0 = "frc1310";
+            string expectedAllianceRedTeam1 = "frc4678";
+            string expectedAllianceRedTeam2 = "frc2013";
+            string expectedEventKey = "2015onnb";
 
             Assert.AreEqual(expectedCompLevel, actualMatchInformation.comp_level, "Comp levels are not as expected");
-            Assert.AreEqual(expectedMatchNumber, actualMatchInformation.match_number,"Match numbers are not as expected");
+            Assert.AreEqual(expectedMatchNumber, actualMatchInformation.match_number, "Match numbers are not as expected");
             Assert.AreEqual(expectedTimeString, actualMatchInformation.time_string, "Time strings are not as expected");
             Assert.AreEqual(expectedSetNumber, actualMatchInformation.set_number, "Set numbers are not as expected");
             Assert.AreEqual(expectedKey, actualMatchInformation.key, "Keys are not as expected");
@@ -49,8 +50,6 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedAllianceRedTeam1, actualMatchInformation.alliances.red.teams[1], "Red alliance teams are not as expected");
             Assert.AreEqual(expectedAllianceRedTeam2, actualMatchInformation.alliances.red.teams[2], "Red alliance teams are not as expected");
             Assert.AreEqual(expectedEventKey, actualMatchInformation.event_key, "Event keys are not as expected");
-
-
         }
     }
 }

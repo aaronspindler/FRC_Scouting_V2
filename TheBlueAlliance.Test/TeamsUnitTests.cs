@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TheBlueAlliance.Test
 {
@@ -9,7 +8,6 @@ namespace TheBlueAlliance.Test
         [TestMethod]
         public void TestMethod1()
         {
-
         }
     }
 }

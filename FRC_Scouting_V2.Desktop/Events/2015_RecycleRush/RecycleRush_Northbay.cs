@@ -1163,7 +1163,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                         cmd.Parameters.AddWithValue("@Other_Picture", pitScout.Other_Picture);
                                         con.Open();
                                         cmd.ExecuteNonQuery();
-
                                     }
                                 }
                             }

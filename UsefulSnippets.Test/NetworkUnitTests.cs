@@ -12,7 +12,7 @@ namespace UsefulSnippets.Test
             Boolean actualData = Network.CheckForInternetConnection();
             const bool expectedData = true;
 
-            Assert.AreEqual(expectedData,actualData,"Internet connectivity check is not as expected");
+            Assert.AreEqual(expectedData, actualData, "Internet connectivity check is not as expected");
         }
     }
 }

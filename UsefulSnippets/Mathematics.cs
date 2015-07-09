@@ -39,8 +39,8 @@ namespace UsefulSnippets
         public static double CalculateStdDev(List<double> values)
         {
             double average = values.Average();
-            double sumOfSquaresOfDifferences = values.Select(val => (val - average) * (val - average)).Sum();
-            double sd = Math.Sqrt(sumOfSquaresOfDifferences / (values.Count - 1));
+            double sumOfSquaresOfDifferences = values.Select(val => (val - average)*(val - average)).Sum();
+            double sd = Math.Sqrt(sumOfSquaresOfDifferences/(values.Count - 1));
             return sd;
         }
     }
