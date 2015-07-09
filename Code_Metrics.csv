@@ -1,0 +1,1248 @@
+Scope,Project,Namespace,Type,Member,Maintainability Index,Cyclomatic Complexity,Depth of Inheritance,Class Coupling,Lines of Code
+Project,FRC_Scouting_V2.Desktop (Debug), , , ,63,1060,8,199,17870
+Namespace,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush, , ,33,289,7,115,10392
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East, ,30,57,7,104,2458
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,InitializeComponent() : void,0,1,,58,2174
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"teamSelector_SelectedIndexChanged(object, EventArgs) : void",39,7,,30,42
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingSubmitButton_Click(object, EventArgs) : void",43,4,,26,26
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"matchBreakdownMatchList_SelectedIndexChanged(object, EventArgs) : void",43,2,,10,31
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,ResetScoutingInterface() : void,47,1,,6,34
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,ResetMatchBreakdownInterface() : void,48,1,,8,31
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"matchScoutingDataToolStripMenuItem1_Click(object, EventArgs) : void",49,6,,19,17
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,RecycleRush_GTR_East(),60,1,,7,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingStacksSubmitButton_Click(object, EventArgs) : void",63,1,,8,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingDriverRatingButton1_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingDriverRatingButton2_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingDriverRatingButton3_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"RecycleRush_GTR_East_Load(object, EventArgs) : void",65,2,,4,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingDriverRatingButton4_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"matchBreakdownFieldTypeComboBox_SelectedIndexChanged(object, EventArgs) : void",66,4,,7,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,PlotInitialImage() : void,68,4,,5,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"teamInformationWebsiteLinkLabel_LinkClicked(object, LinkLabelLinkClickedEventArgs) : void",71,2,,6,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingFieldPictureBox_MouseClick(object, MouseEventArgs) : void",73,2,,1,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingAllianceColourRedCheckBox_CheckedChanged(object, EventArgs) : void",73,2,,3,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingAllianceColourBlueCheckBox_CheckedChanged(object, EventArgs) : void",73,2,,3,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"gameManualToolStripMenuItem_Click(object, EventArgs) : void",76,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingFieldPictureBox_Paint(object, PaintEventArgs) : void",77,2,,4,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_GTR_East,"scoutingFieldTypeSelectorComboBox_SelectedIndexChanged(object, EventArgs) : void",100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI, ,30,107,7,111,3746
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,InitializeComponent() : void,0,1,,59,3169
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingEditorSubmitButton_Click(object, EventArgs) : void",29,10,,29,89
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"teamSelector_SelectedIndexChanged(object, EventArgs) : void",30,10,,33,84
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingDataToolStripMenuItem_Click_1(object, EventArgs) : void",38,10,,20,50
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingSubmitButton_Click(object, EventArgs) : void",43,4,,26,26
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"matchBreakdownMatchList_SelectedIndexChanged(object, EventArgs) : void",43,2,,10,31
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,ResetScoutingInterface() : void,47,1,,6,34
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,ResetMatchBreakdownInterface() : void,48,1,,8,31
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"matchScoutingDataToolStripMenuItem_Click_1(object, EventArgs) : void",49,6,,19,17
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"matchScoutingDataToolStripMenuItem_Click(object, EventArgs) : void",49,6,,19,17
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,ResetPitScoutingEditorInterface() : void,55,1,,5,18
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,RecycleRush_IRI(),55,1,,7,12
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,ResetPitScoutingViewerInterface() : void,56,1,,3,17
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,GetNumberOfPitEntriesForATeam(int) : int,57,3,,8,14
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingStacksSubmitButton_Click(object, EventArgs) : void",63,1,,8,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingDriverRatingButton3_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingDriverRatingButton2_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingDriverRatingButton1_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingDriverRatingButton4_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"matchBreakdownFieldTypeComboBox_SelectedIndexChanged(object, EventArgs) : void",66,4,,7,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingEditorFrontPictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingEditorOtherPictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,PlotInitialImage() : void,68,4,,5,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingEditorSideIsometricPictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingEditorSidePictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"RecycleRush_IRI_Load(object, EventArgs) : void",70,2,,4,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"teamInformationWebsiteLinkLabel_LinkClicked(object, LinkLabelLinkClickedEventArgs) : void",71,2,,6,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingViewerFrontPictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingViewerSidePictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingViewerIsometricPictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"pitScoutingViewerOtherPictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingFieldPictureBox_MouseClick(object, MouseEventArgs) : void",73,2,,1,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingAllianceColourBlueCheckBox_CheckedChanged(object, EventArgs) : void",73,2,,3,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingAllianceColourRedCheckBox_CheckedChanged(object, EventArgs) : void",73,2,,3,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"gameManualToolStripMenuItem_Click(object, EventArgs) : void",76,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingFieldPictureBox_Paint(object, PaintEventArgs) : void",77,2,,4,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_IRI,"scoutingFieldTypeSelectorComboBox_SelectedIndexChanged(object, EventArgs) : void",100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay, ,30,102,7,112,3944
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,InitializeComponent() : void,0,1,,59,3380
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingEditorSubmitButton_Click(object, EventArgs) : void",29,10,,29,89
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"teamSelector_SelectedIndexChanged(object, EventArgs) : void",30,10,,33,84
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingDataToolStripMenuItem1_Click(object, EventArgs) : void",38,10,,20,50
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingSubmitButton_Click(object, EventArgs) : void",43,4,,26,26
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"matchBreakdownMatchList_SelectedIndexChanged(object, EventArgs) : void",43,2,,10,31
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,ResetScoutingInterface() : void,47,1,,6,34
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,ResetMatchBreakdownInterface() : void,48,1,,8,31
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"matchScoutingDataToolStripMenuItem1_Click(object, EventArgs) : void",49,6,,19,17
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,ResetPitScoutingEditorInterface() : void,55,1,,5,18
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,ResetPitScoutingViewerInterface() : void,56,1,,3,17
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,RecycleRush_Northbay(),56,1,,7,12
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,GetNumberOfPitEntriesForATeam(int) : int,57,3,,8,14
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingStacksSubmitButton_Click(object, EventArgs) : void",63,1,,8,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingDriverRatingButton3_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingDriverRatingButton2_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingDriverRatingButton1_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"RecycleRush_Northbay_Load(object, EventArgs) : void",65,2,,4,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingDriverRatingButton4_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"matchBreakdownFieldTypeComboBox_SelectedIndexChanged(object, EventArgs) : void",66,4,,7,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingEditorOtherPictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingEditorSideIsometricPictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingEditorSidePictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingEditorFrontPictureFileSelectorButton_Click(object, EventArgs) : void",68,2,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,PlotInitialImage() : void,68,4,,5,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"teamInformationWebsiteLinkLabel_LinkClicked(object, LinkLabelLinkClickedEventArgs) : void",71,2,,6,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingViewerFrontPictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingViewerSidePictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingViewerIsometricPictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"pitScoutingViewerOtherPictureButton_Click(object, EventArgs) : void",72,2,,7,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingAllianceColourBlueCheckBox_CheckedChanged(object, EventArgs) : void",73,2,,3,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingAllianceColourRedCheckBox_CheckedChanged(object, EventArgs) : void",73,2,,3,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingFieldPictureBox_MouseClick(object, MouseEventArgs) : void",73,2,,1,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"gameManualToolStripMenuItem_Click(object, EventArgs) : void",76,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingFieldPictureBox_Paint(object, PaintEventArgs) : void",77,2,,4,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"eventInformationToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay,"scoutingFieldTypeSelectorComboBox_SelectedIndexChanged(object, EventArgs) : void",100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay_Information, ,43,23,7,32,244
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay_Information,InitializeComponent() : void,25,1,,29,168
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay_Information,UpdateSponsor() : void,39,15,,3,58
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay_Information,"timer_Tick(object, EventArgs) : void",70,2,,2,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay_Information,"RecycleRush_Northbay_Information_Load(object, EventArgs) : void",72,1,,4,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay_Information,RecycleRush_Northbay_Information(),77,1,,2,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Events._2015_RecycleRush,RecycleRush_Northbay_Information,Dispose(bool) : void,82,3,,3,3
+Namespace,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs, , ,46,61,7,58,1224
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New, ,46,61,7,58,1224
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,InitializeComponent() : void,4,1,,33,900
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"submitDataButton_Click(object, EventArgs) : void",25,7,,26,150
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,UpdateLabels() : void,49,1,,2,26
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,PlotInitialLines() : void,59,1,,5,11
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"startingLocationPanel_MouseClick(object, MouseEventArgs) : void",64,1,,11,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"driverRatingButton4_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"driverRatingButton3_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"driverRatingButton2_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"driverRatingButton1_CheckedChanged(object, EventArgs) : void",65,2,,3,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,BlankPanel() : void,74,1,,4,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"commentsTextBox_TextChanged(object, EventArgs) : void",74,3,,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"teamColourSelector_SelectedIndexChanged(object, EventArgs) : void",75,3,,2,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"autonomousMovementCheckBox_CheckedChanged(object, EventArgs) : void",76,3,,2,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"didRobotDieCheckBox_CheckedChanged(object, EventArgs) : void",76,3,,2,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"pickupFromHumanButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"pickupFromHumanMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"tripleAssistMisses_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"tripleAssistGoals_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"passToOtherBotMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"unsuccessfulTrussButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"successfulTrussButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"passToOtherBotButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"hotMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"controlledBallPickupButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"hotGoalButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"controlledLowMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"controlledLowGoalButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"autoBallPickupButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"controlledHighMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"controlledHighGoalButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"controlledBallPickupMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"autoBallPickupMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"autoLowMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"autoLowGoalButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"autoHighMissButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"autoHighGoalButton_Click(object, EventArgs) : void",79,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,Aerial_Assist_Scouting_UI_New(),82,1,,1,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"matchNumberUpDown_ValueChanged(object, EventArgs) : void",91,1,,3,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"startingLocationPanel_Paint(object, PaintEventArgs) : void",100,1,,1,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.UIs,Aerial_Assist_Scouting_UI_New,"Aerial_Assist_Scouting_UI_Load(object, EventArgs) : void",100,1,,1,0
+Namespace,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2, , ,61,598,8,170,5643
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha, ,33,136,7,104,1625
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,InitializeComponent() : void,4,1,,51,881
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,ColourStats() : void,8,79,,8,227
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"GetDataForTeam(int, int) : void",22,10,,16,161
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"teamSelector_SelectedIndexChanged(object, EventArgs) : void",30,4,,31,109
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"importFromTextFileToolStripMenuItem_Click(object, EventArgs) : void",34,11,,17,67
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,AerialAssist_RahChaCha(),37,1,,3,67
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"exportToCSVToolStripMenuItem_Click_1(object, EventArgs) : void",43,5,,17,29
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"teamMatchBox_SelectedIndexChanged(object, EventArgs) : void",45,1,,14,26
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,PlotInitialLines() : void,59,1,,5,11
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,CalculateStdDev(IEnumerable<double>) : double,62,4,,5,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"AerialAssist_RahChaCha_Load(object, EventArgs) : void",63,2,,7,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,ClearColourStats() : void,65,5,,7,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"teamCompSelector2_SelectedIndexChanged(object, EventArgs) : void",73,1,,2,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"teamCompSelector1_SelectedIndexChanged(object, EventArgs) : void",73,1,,2,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,BlankPanel() : void,74,1,,4,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"eventInformationToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"teamURLDisplay_LinkClicked(object, LinkClickedEventArgs) : void",92,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"howComeICannotSeeAnyTeamInformationToolStripMenuItem_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha,"startingLocationPanel_Paint(object, PaintEventArgs) : void",100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha_Information, ,37,5,8,27,186
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha_Information,InitializeComponent() : void,24,1,,24,181
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha_Information,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha_Information,AerialAssist_RahChaCha_Information(),91,1,,1,2
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay, ,38,46,7,41,453
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,InitializeComponent() : void,19,1,,31,257
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,"teamSelector_SelectedIndexChanged(object, EventArgs) : void",24,37,,5,149
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,"AerialAssist_Northbay_Load(object, EventArgs) : void",44,1,,6,38
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,"eventInformationToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,AerialAssist_Northbay(),91,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,"doesThisHaveAnyDataViewingToolStripMenuItem_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay_Information, ,41,23,8,32,272
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay_Information,InitializeComponent() : void,23,1,,28,196
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay_Information,UpdateSponsor() : void,39,15,,3,58
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay_Information,"timer_Tick(object, EventArgs) : void",70,2,,2,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay_Information,"AerialAssist_Northbay_Information_Load(object, EventArgs) : void",72,1,,4,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay_Information,AerialAssist_Northbay_Information(),77,1,,2,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_Northbay_Information,Dispose(bool) : void,82,3,,3,3
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings, ,46,67,7,59,771
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,InitializeComponent() : void,9,1,,39,602
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"MainSettings_Load(object, EventArgs) : void",39,15,,15,52
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"testConnectionToDatabaseButton_Click(object, EventArgs) : void",50,4,,11,25
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"importDatabaseConnectionSettingsToolStripMenuItem_Click(object, EventArgs) : void",52,3,,13,19
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"saveDatabaseSettingsButton_Click(object, EventArgs) : void",66,1,,6,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"clearConsoleOnToggleCheckBox_CheckedChanged(object, EventArgs) : void",70,3,,4,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"colourTeamComparisonStatisticsCheckBox_CheckedChanged(object, EventArgs) : void",70,3,,4,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"showQuestionButtonsCheckBox_CheckedChanged(object, EventArgs) : void",70,3,,4,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"allowExportToTextFileCheckBox_CheckedChanged(object, EventArgs) : void",70,3,,4,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"minimizeHomeCheckbox_CheckedChanged(object, EventArgs) : void",70,3,,4,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"clickEmptyTextBoxChecker_CheckedChanged(object, EventArgs) : void",70,3,,4,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"teamComparisonEqualColourButton_Click(object, EventArgs) : void",74,2,,7,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"usernameTextBox_TextChanged(object, EventArgs) : void",77,2,,4,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"databaseUsernameTextBox_MouseClick(object, MouseEventArgs) : void",84,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"databasePortTextBox_MouseClick(object, MouseEventArgs) : void",84,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"databasePasswordTextBox_MouseClick(object, MouseEventArgs) : void",84,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"usernameTextBox_MouseClick(object, MouseEventArgs) : void",84,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"databaseNameTextBox_MouseClick(object, MouseEventArgs) : void",84,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"databaseIPTextBox_MouseClick(object, MouseEventArgs) : void",84,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"resetAllSettingsButton_Click(object, EventArgs) : void",86,1,,4,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,MainSettings(),91,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"howDoISaveMySettingsToolStripMenuItem_Click(object, EventArgs) : void",92,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"whatIsTheUsernameFieldUsedForToolStripMenuItem_Click(object, EventArgs) : void",92,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"howComeICannotConnectToMyDatabaseToolStripMenuItem_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MainSettings,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI, ,48,67,7,63,1365
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,InitializeComponent() : void,1,1,,37,1117
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"submitDataButton_Click(object, EventArgs) : void",35,6,,19,68
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"Aerial_Assist_UI_Layout_Load(object, EventArgs) : void",43,3,,10,45
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"clearAndAdvanceButton_Click(object, EventArgs) : void",54,1,,6,20
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,CountRowsInDatabase() : int,56,3,,10,15
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,PlotInitialLines() : void,59,1,,5,11
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,UpdateLabels() : void,65,1,,2,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"startingLocationPanel_MouseClick(object, MouseEventArgs) : void",67,1,,10,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"didRobotDieCheckBox_CheckedChanged(object, EventArgs) : void",70,3,,2,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,BlankPanel() : void,74,1,,4,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,Aerial_Assist_Scouting_UI(),77,1,,1,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"teamColourComboBox_SelectedIndexChanged(object, EventArgs) : void",79,3,,2,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"commentsRichTextBox_TextChanged(object, EventArgs) : void",83,2,,2,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoLowPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoHighMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedPickupsPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedPickupsMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoLowMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"hotGoalMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoHighPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controllPickupPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controlledLowPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"hotGoalPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controllPickupMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controlledHighPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controlledHighMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoPickupMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoPickupPlusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controlledLowMinusButton_Click(object, EventArgs) : void",85,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"timer_Tick(object, EventArgs) : void",91,1,,3,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"matchNumberNumericUpDown_ValueChanged(object, EventArgs) : void",91,1,,3,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"teamColourHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoLowPointsHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoBallPickupHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"startingLocationHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"ballReceivedFromHumanHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedPickupHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedControlledLowHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedControlledHighHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedAutoLowHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedAutoHighHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"matchNumberHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"hotGoalsHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"autoHighPointsHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controlledBallPickupHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"didRobotDieHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controlledHighPointsHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"missedHotGoalHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"controlledLowPointsHelpButton_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI,"startingLocationPanel_Paint(object, PaintEventArgs) : void",100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Team3710Information, ,49,5,8,26,74
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Team3710Information,InitializeComponent() : void,36,1,,23,69
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Team3710Information,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Team3710Information,Team3710Information(),91,1,,1,2
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation, ,55,18,7,35,150
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,InitializeComponent() : void,30,1,,23,115
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,ProgramInformation(),65,1,,3,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,AssemblyTitle.get() : string,68,3,,4,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,AssemblyCompany.get() : string,74,2,,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,AssemblyCopyright.get() : string,74,2,,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,AssemblyDescription.get() : string,74,2,,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,AssemblyProduct.get() : string,74,2,,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,AssemblyVersion.get() : string,90,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ProgramInformation,"okButton_Click(object, EventArgs) : void",100,1,,2,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertiesForm, ,55,7,7,30,81
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertiesForm,InitializeComponent() : void,35,1,,26,73
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertiesForm,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertiesForm,"PropertiesForm_Load(object, EventArgs) : void",84,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertiesForm,PropertiesForm(),91,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertiesForm,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MySQLMethods, ,57,12,1,16,69
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MySQLMethods,InitializeDatabases() : void,46,4,,10,31
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MySQLMethods,GetNumberOfRowsInATable() : int,56,3,,9,15
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MySQLMethods,GetNumberOfRowsThatContainAValue(int) : int,57,3,,8,14
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MySQLMethods,MakeMySqlConnectionString() : string,64,1,,4,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,MySQLMethods,MySQLMethods(),100,1,,0,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow, ,57,22,7,50,146
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,InitializeComponent() : void,31,1,,35,106
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,ExportToCSV() : void,58,4,,8,12
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,"ConsoleWindow_Load(object, EventArgs) : void",66,4,,9,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,"timer1_Tick(object, EventArgs) : void",69,3,,4,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,getLog() : string[],72,2,,1,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,WriteLine(string) : void,74,1,,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,ConsoleWindow(),84,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,ConsoleWindow(),91,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,ConsoleWindow,"exportToCSVToolStripMenuItem_Click(object, EventArgs) : void",100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home, ,58,39,7,71,259
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,InitializeComponent() : void,24,1,,38,180
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"eventSelector_SelectedIndexChanged_1(object, EventArgs) : void",52,11,,10,21
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"Home_Load(object, EventArgs) : void",55,3,,15,16
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,checkInternet() : void,67,4,,4,7
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"timer_Tick(object, EventArgs) : void",67,3,,5,8
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,Home(),79,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"licenseInformationToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"programInformationToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"settingsToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"showConsoleWindowToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"eventInformationLookupToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"changeLogToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"fRC3710TeamInformationToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"teamInformationLookupToolStripMenuItem_Click(object, EventArgs) : void",85,1,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"myWebsiteRichTextBox_LinkClicked(object, LinkClickedEventArgs) : void",92,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"Home_FormClosing(object, FormClosingEventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"frcLogoPictureBox_Click(object, EventArgs) : void",98,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Home,"initializeDatabaseToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,License, ,58,5,8,21,40
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,License,InitializeComponent() : void,45,1,,18,35
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,License,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,License,License(),91,1,,1,2
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Program, ,80,2,1,3,6
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Program,Program(),80,1,,0,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Program,Main() : void,81,1,,3,3
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.MyWebClient, ,85,2,4,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.MyWebClient,GetWebRequest(Uri) : WebRequest,79,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.MyWebClient,MyWebClient(),100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match, ,91,73,1,2,73
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,RecycleRush_Scout_Match(),92,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Fouls.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Tote_Set.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Bin_Set.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Pushed_Litter_To_Landfill.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Stacked_Tote_Set.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Acquired_Step_Bins.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Throwing_Litter.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Fouls.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Did_Nothing.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Driver_Rating.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Tote_Pickup_Upright.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Station_Insert_Litter.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Tote_Pickup_Upside_Down.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Tote_Pickup_Sideways.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Station_Stack_Totes.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Bin_Pickup_Upright.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Bin_Pickup_Upside_Down.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Station_Load_Totes.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Drive_To_Autozone.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Robot_Set.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Starting_Y.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Author.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,TimeCreated.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Final_Score_Blue.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,UniqueID.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Team_Number.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Final_Score_Red.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Team_Name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Comments.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Match_Number.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Bin_Pickup_Sideways.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Alliance_Colour.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Robot_Dead.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Coopertition_Set.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Starting_X.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Coopertition_Stack.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Pushed_Litter_To_Landfill.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Final_Score_Red.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Coopertition_Stack.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Fouls.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Final_Score_Blue.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Station_Insert_Litter.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Coopertition_Set.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Driver_Rating.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Station_Stack_Totes.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Comments.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Throwing_Litter.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Tote_Pickup_Upright.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Bin_Pickup_Sideways.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,TimeCreated.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,UniqueID.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Team_Number.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Team_Name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Match_Number.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Alliance_Colour.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Robot_Dead.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Starting_X.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Starting_Y.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Drive_To_Autozone.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Robot_Set.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Tote_Set.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Bin_Set.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Stacked_Tote_Set.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Acquired_Step_Bins.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Fouls.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Auto_Did_Nothing.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Tote_Pickup_Upside_Down.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Tote_Pickup_Sideways.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Bin_Pickup_Upright.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Bin_Pickup_Upside_Down.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Tele_Human_Station_Load_Totes.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Scout_Match,Author.get() : string,98,1,,0,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team, ,92,47,1,0,47
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Needs_Special_Starting_Position.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Max_Stack_Height.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Special_Starting_Position.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Human_Litter_Loading.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Other_Picture.set(byte[]) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Can_It_Manipulate_Litter.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Human_Litter_Throwing.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Can_It_Manipulate_Bins.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Can_It_Manipulate_Totes.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Comments.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Does_It_have_A_Ramp.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Human_Tote_Loading.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Number_Of_Robots.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Max_Bin_On_Stack_Height.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Drive_Train.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Team_Name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Left_Side_Picture.set(byte[]) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Team_Number.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,UniqueID.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Left_Isometric_Picture.set(byte[]) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Time_Created.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Author.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Front_Picture.set(byte[]) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Left_Side_Picture.get() : byte[],98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Comments.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Left_Isometric_Picture.get() : byte[],98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Human_Litter_Throwing.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Other_Picture.get() : byte[],98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Human_Litter_Loading.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Front_Picture.get() : byte[],98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Author.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Max_Bin_On_Stack_Height.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Max_Stack_Height.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Special_Starting_Position.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Needs_Special_Starting_Position.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Can_It_Manipulate_Litter.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Can_It_Manipulate_Bins.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Can_It_Manipulate_Totes.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Does_It_have_A_Ramp.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Number_Of_Robots.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Drive_Train.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Team_Name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Team_Number.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,UniqueID.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Time_Created.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,Human_Tote_Loading.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,RecycleRush_Pit_Scouting_Team,RecycleRush_Pit_Scouting_Team(),100,1,,0,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData, ,93,19,1,0,19
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,nickname.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,country_name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,locality.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,team_number.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,location.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,rookie_year.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,website.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,region.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,website.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,team_number.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,rookie_year.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,country_name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,nickname.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,location.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,locality.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,region.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,AerialAssist_RahChaCha.TeamInformationJSONData,TeamInformationJSONData(),100,1,,0,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertieSettings, ,95,3,1,0,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertieSettings,Username.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertieSettings,Username.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,PropertieSettings,PropertieSettings(),100,1,,0,1
+Namespace,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms, , ,76,103,8,70,602
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup, ,44,12,8,39,220
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup,InitializeComponent() : void,24,1,,21,189
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup,"findTeamButton_Click(object, EventArgs) : void",50,3,,14,22
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup,"teamNumberTextBox_TextChanged(object, EventArgs) : void",82,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup,"teamNumberTextBox_MouseClick(object, MouseEventArgs) : void",84,2,,3,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup,TeamInformationLookup(),91,1,,1,2
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup, ,45,10,7,51,205
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup,InitializeComponent() : void,24,1,,34,181
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup,"findEventButton_Click(object, EventArgs) : void",53,3,,17,17
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup,EventInformationLookup(),91,1,,1,2
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup,"websiteDisplay_LinkClicked(object, LinkClickedEventArgs) : void",92,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog, ,56,9,7,36,101
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog,InitializeComponent() : void,33,1,,27,89
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog,LoadAndDisplayCommits() : void,78,1,,4,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog,ChangeLog(),79,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog,Dispose(bool) : void,82,3,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog,"ChangeLog_Load(object, EventArgs) : void",100,1,,1,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,ChangeLog,"updateToolStripMenuItem_Click(object, EventArgs) : void",100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.MyWebClient, ,85,2,4,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.MyWebClient,GetWebRequest(Uri) : WebRequest,79,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.MyWebClient,MyWebClient(),100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.MyWebClient, ,85,2,4,3,4
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.MyWebClient,GetWebRequest(Uri) : WebRequest,79,1,,3,3
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.MyWebClient,MyWebClient(),100,1,,1,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event, ,92,37,1,2,37
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,short_name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,location.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_district.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_type.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,venue_address.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,webcast.set(EventInformationLookup.Webcast[]) : void,95,1,,1,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_district_string.set(object) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,facebook_eid.set(object) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,alliances.set(EventInformationLookup.Alliances[]) : void,95,1,,1,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,year.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_code.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_type_string.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,end_date.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,official.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,start_date.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,website.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,key.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,alliances.get() : EventInformationLookup.Alliances[],98,1,,1,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,start_date.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_type.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,webcast.get() : EventInformationLookup.Webcast[],98,1,,1,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_type_string.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,key.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_district.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_code.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,location.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,venue_address.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,event_district_string.get() : object,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,facebook_eid.get() : object,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,short_name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,end_date.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,official.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,website.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,year.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Event,Event(),100,1,,0,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData, ,93,21,1,0,21
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,country_name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,key.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,team_number.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,locality.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,location.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,rookie_year.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,name.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,website.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,nickname.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,region.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,country_name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,website.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,team_number.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,rookie_year.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,nickname.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,name.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,location.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,locality.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,key.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,region.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,TeamInformationLookup.TeamInformationJSONData,TeamInformationJSONData(),100,1,,0,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Alliances, ,94,5,1,0,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Alliances,declines.set(object[]) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Alliances,picks.set(string[]) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Alliances,declines.get() : object[],98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Alliances,picks.get() : string[],98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Alliances,Alliances(),100,1,,0,1
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Webcast, ,94,5,1,0,5
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Webcast,type.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Webcast,channel.set(string) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Webcast,type.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Webcast,channel.get() : string,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Information_Forms,EventInformationLookup.Webcast,Webcast(),100,1,,0,1
+Namespace,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models, , ,94,9,1,0,9
+Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack, ,94,9,1,0,9
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Stack_Height.set(int) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Bin_On_Top.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Litter_In_Bin.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Did_They_Make_The_Stack.set(bool) : void,95,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Stack_Height.get() : int,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Bin_On_Top.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Litter_In_Bin.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,Did_They_Make_The_Stack.get() : bool,98,1,,0,1
+Member,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2.Models,RecycleRush_Stack,RecycleRush_Stack(),100,1,,0,1
+Project,GeneralFormTemplate (Debug), , , ,70,9,7,35,80
+Namespace,GeneralFormTemplate (Debug),GeneralFormTemplate, , ,70,9,7,35,80
+Type,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate, ,59,8,7,32,77
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,InitializeComponent() : void,37,1,,29,66
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,"GeneralFormTemplate_Load(object, EventArgs) : void",78,1,,5,3
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,Dispose(bool) : void,80,3,,3,3
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,GeneralFormTemplate(),82,1,,2,3
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,"timer_Tick(object, EventArgs) : void",91,1,,3,1
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,"exitToolStripMenuItem_Click(object, EventArgs) : void",100,1,,2,1
+Type,GeneralFormTemplate (Debug),GeneralFormTemplate,Program, ,81,1,1,3,3
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,Program,Main() : void,81,1,,3,3
+Project,TheBlueAlliance.Test (Debug), , , ,70,11,1,26,113
+Namespace,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test, , ,70,11,1,26,113
+Type,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,MatchesUnitTests, ,51,2,1,11,40
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,MatchesUnitTests,GetMatchInformation_TestMethod() : void,43,1,,10,39
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,MatchesUnitTests,MatchesUnitTests(),100,1,,0,1
+Type,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests, ,59,7,1,18,72
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests,GetEventInformation_TestMethod() : void,51,1,,6,19
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests,GetEvents_TestMethod() : void,52,1,,6,18
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests,GetEventAwards_TestMethod() : void,57,1,,5,13
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests,GetEventMatches_TestMethod() : void,59,1,,8,10
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests,GetEventRankings_TestMethod() : void,60,1,,4,10
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests,GetEventTeamsList_TestMethod() : void,95,1,,2,1
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,EventsUnitTests,EventsUnitTests(),100,1,,0,1
+Type,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,TeamsUnitTests, ,100,2,1,2,1
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,TeamsUnitTests,TestMethod1() : void,100,1,,1,0
+Member,TheBlueAlliance.Test (Debug),TheBlueAlliance.Test,TeamsUnitTests,TeamsUnitTests(),100,1,,0,1
+Project,UsefulSnippets (Debug), , , ,79,31,1,26,79
+Namespace,UsefulSnippets (Debug),UsefulSnippets, , ,79,31,1,26,79
+Type,UsefulSnippets (Debug),UsefulSnippets,Security, ,59,14,1,11,50
+Member,UsefulSnippets (Debug),UsefulSnippets,Security,"MakeRandomPassword(int, int) : string",46,10,,4,31
+Member,UsefulSnippets (Debug),UsefulSnippets,Security,EncryptString(string) : string,65,1,,5,6
+Member,UsefulSnippets (Debug),UsefulSnippets,Security,DeCryptString(string) : string,65,1,,5,6
+Member,UsefulSnippets (Debug),UsefulSnippets,Security,"GetSecureRandomNum(int, int) : int",67,1,,2,6
+Member,UsefulSnippets (Debug),UsefulSnippets,Security,Security(),100,1,,0,1
+Type,UsefulSnippets (Debug),UsefulSnippets,Mathematics, ,76,3,1,5,7
+Member,UsefulSnippets (Debug),UsefulSnippets,Mathematics,CalculateStdDev(List<double>) : double,67,2,,5,6
+Member,UsefulSnippets (Debug),UsefulSnippets,Mathematics,Mathematics(),100,1,,0,1
+Type,UsefulSnippets (Debug),UsefulSnippets,Network, ,78,5,1,3,7
+Member,UsefulSnippets (Debug),UsefulSnippets,Network,CheckForInternetConnection() : bool,70,4,,3,6
+Member,UsefulSnippets (Debug),UsefulSnippets,Network,Network(),100,1,,0,1
+Type,UsefulSnippets (Debug),UsefulSnippets,Images, ,82,3,1,3,7
+Member,UsefulSnippets (Debug),UsefulSnippets,Images,byteArrayToImage(byte[]) : Image,78,1,,2,3
+Member,UsefulSnippets (Debug),UsefulSnippets,Images,imageToByteArray(Image) : byte[],78,1,,3,3
+Member,UsefulSnippets (Debug),UsefulSnippets,Images,Images(),100,1,,0,1
+Type,UsefulSnippets (Debug),UsefulSnippets,Notifications, ,90,4,1,3,5
+Member,UsefulSnippets (Debug),UsefulSnippets,Notifications,ReportCrash(Exception) : void,82,1,,2,2
+Member,UsefulSnippets (Debug),UsefulSnippets,Notifications,ErrorOccured(string) : void,92,1,,1,1
+Member,UsefulSnippets (Debug),UsefulSnippets,Notifications,ShowInformationMessage(string) : void,92,1,,1,1
+Member,UsefulSnippets (Debug),UsefulSnippets,Notifications,Notifications(),100,1,,0,1
+Type,UsefulSnippets (Debug),UsefulSnippets,Time, ,91,2,1,2,3
+Member,UsefulSnippets (Debug),UsefulSnippets,Time,GetCurrentTime() : string,82,1,,2,2
+Member,UsefulSnippets (Debug),UsefulSnippets,Time,Time(),100,1,,0,1
+Project,UsefulSnippets.Test (Debug), , , ,85,7,1,9,15
+Namespace,UsefulSnippets.Test (Debug),UsefulSnippets.Test, , ,85,7,1,9,15
+Type,UsefulSnippets.Test (Debug),UsefulSnippets.Test,MathematicsUnitTests, ,82,2,1,7,5
+Member,UsefulSnippets.Test (Debug),UsefulSnippets.Test,MathematicsUnitTests,CalculateStdDevTestMethod() : void,73,1,,6,4
+Member,UsefulSnippets.Test (Debug),UsefulSnippets.Test,MathematicsUnitTests,MathematicsUnitTests(),100,1,,0,1
+Type,UsefulSnippets.Test (Debug),UsefulSnippets.Test,SecurityUnitTests, ,82,3,1,4,7
+Member,UsefulSnippets.Test (Debug),UsefulSnippets.Test,SecurityUnitTests,EncryptStringTestMethod() : void,78,1,,3,3
+Member,UsefulSnippets.Test (Debug),UsefulSnippets.Test,SecurityUnitTests,DecryptStringTestMethod() : void,78,1,,3,3
+Member,UsefulSnippets.Test (Debug),UsefulSnippets.Test,SecurityUnitTests,SecurityUnitTests(),100,1,,0,1
+Type,UsefulSnippets.Test (Debug),UsefulSnippets.Test,NetworkUnitTests, ,91,2,1,4,3
+Member,UsefulSnippets.Test (Debug),UsefulSnippets.Test,NetworkUnitTests,CheckForInternetConnectionTestMethod() : void,83,1,,3,2
+Member,UsefulSnippets.Test (Debug),UsefulSnippets.Test,NetworkUnitTests,NetworkUnitTests(),100,1,,0,1
+Project,TheBlueAlliance (Debug), , , ,94,526,1,58,621
+Namespace,TheBlueAlliance (Debug),TheBlueAlliance, , ,65,37,1,26,132
+Type,TheBlueAlliance (Debug),TheBlueAlliance,Events, ,61,14,1,15,56
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Events,GetEventRankings(string) : EventRankings.Team[],56,3,,10,11
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Events,GetEventAwards(string) : EventAwards.Award[],60,2,,9,10
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Events,GetEventMatches(string) : EventMatches.Match[],60,2,,9,10
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Events,GetEventInformation(string) : Event.EventInformation,63,2,,8,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Events,GetEvents(int) : Events.Event[],63,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Events,GetEventTeamsList(string) : EventTeams.Team[],63,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Events,Events(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance,Teams, ,64,15,1,15,57
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,"GetTeamEventAwards(string, string) : TeamEventAwards.Award[]",62,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,"GetTeamEventMatches(string, string) : TeamEventMatches.Match[]",62,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,"GetTeamEvents(string, int) : TeamEvents.Event[]",62,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,"GetTeamMediaLocations(string, int) : TeamMedia.MediaLocation[]",62,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,GetTeamHistoricalAwards(string) : TeamHistoryAwards.Award[],63,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,GetTeamHistoryEvents(string) : TeamHistoryEvents.Event[],63,2,,9,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,GetTeamInformation(string) : TeamInformation,63,2,,8,8
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Teams,Teams(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance,Matches, ,71,8,1,11,19
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Matches,GetMatchInformationJsonData(string) : string,57,3,,9,12
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Matches,GetCachedMatchInformationJson(string) : string,75,2,,2,3
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Matches,GetMatchInformation(string) : MatchInformation.Match,78,2,,2,3
+Member,TheBlueAlliance (Debug),TheBlueAlliance,Matches,Matches(),100,1,,0,1
+Namespace,TheBlueAlliance (Debug),TheBlueAlliance.Models, , ,95,489,1,32,489
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event, ,92,37,1,2,37
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,short_name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,location.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_district.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_type.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,venue_address.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,webcast.set(TeamEvents.Webcast[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_district_string.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,facebook_eid.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,alliances.set(TeamEvents.Alliance[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_code.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_type_string.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,end_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,official.set(bool) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,start_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,website.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,alliances.get() : TeamEvents.Alliance[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,start_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_type.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,webcast.get() : TeamEvents.Webcast[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_type_string.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_district.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_code.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,location.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,venue_address.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,event_district_string.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,facebook_eid.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,short_name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,end_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,official.get() : bool,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,website.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Event,Event(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation, ,92,37,1,2,37
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,short_name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,location.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_district.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_type.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,venue_address.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,webcast.set(Event.Webcast[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_district_string.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,facebook_eid.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,alliances.set(Event.Alliance[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_code.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_type_string.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,end_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,official.set(bool) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,start_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,website.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,alliances.get() : Event.Alliance[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,start_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_type.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,webcast.get() : Event.Webcast[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_type_string.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_district.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_code.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,location.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,venue_address.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,event_district_string.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,facebook_eid.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,short_name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,end_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,official.get() : bool,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,website.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.EventInformation,EventInformation(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event, ,92,37,1,3,37
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,short_name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,location.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_district.set(int?) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_type.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,venue_address.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,webcast.set(Events.Webcast[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_district_string.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,facebook_eid.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,alliances.set(Events.Alliance[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_code.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_type_string.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,end_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,official.set(bool) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,start_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,website.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,alliances.get() : Events.Alliance[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,start_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_type.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,webcast.get() : Events.Webcast[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_type_string.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_district.get() : int?,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_code.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,location.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,venue_address.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,event_district_string.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,facebook_eid.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,short_name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,end_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,official.get() : bool,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,website.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Event,Event(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event, ,92,37,1,3,37
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,short_name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,location.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_district.set(int?) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_type.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,venue_address.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,webcast.set(TeamHistoryEvents.Webcast[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_district_string.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,facebook_eid.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,alliances.set(TeamHistoryEvents.Alliance[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_code.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_type_string.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,end_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,official.set(bool) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,start_date.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,website.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,alliances.get() : TeamHistoryEvents.Alliance[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,start_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_type.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,webcast.get() : TeamHistoryEvents.Webcast[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_type_string.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_district.get() : int?,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_code.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,location.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,venue_address.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,event_district_string.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,facebook_eid.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,short_name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,end_date.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,official.get() : bool,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,website.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Event,Event(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team, ,93,21,1,0,21
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,website.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,country_name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,locality.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,rookie_year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,region.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,nickname.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,team_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,location.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,website.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,nickname.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,country_name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,team_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,region.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,rookie_year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,locality.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,location.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams.Team,Team(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match, ,93,21,1,2,21
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,comp_level.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,match_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,alliances.set(MatchInformation.Alliances) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,videos.set(object[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,time_string.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,score_breakdown.set(MatchInformation.Score_Breakdown) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,set_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,event_key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,time.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,comp_level.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,event_key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,alliances.get() : MatchInformation.Alliances,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,score_breakdown.get() : MatchInformation.Score_Breakdown,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,set_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,time_string.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,videos.get() : object[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,match_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,time.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Match,Match(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award, ,93,11,1,1,11
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,event_key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,award_type.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,recipient_list.set(EventAwards.Recipient_List[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,event_key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,award_type.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,recipient_list.get() : EventAwards.Recipient_List[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Award,Award(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation, ,93,21,1,0,21
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,website.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,country_name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,locality.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,rookie_year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,region.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,nickname.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,team_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,location.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,website.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,nickname.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,country_name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,team_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,region.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,rookie_year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,locality.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,location.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamInformation,TeamInformation(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match, ,93,21,1,3,21
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,comp_level.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,match_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,alliances.set(TeamEventMatches.Alliances) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,videos.set(TeamEventMatches.Video[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,time_string.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,score_breakdown.set(TeamEventMatches.Score_Breakdown) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,set_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,event_key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,time.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,comp_level.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,event_key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,alliances.get() : TeamEventMatches.Alliances,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,score_breakdown.get() : TeamEventMatches.Score_Breakdown,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,set_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,time_string.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,videos.get() : TeamEventMatches.Video[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,match_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,time.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Match,Match(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match, ,93,21,1,2,21
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,comp_level.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,match_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,alliances.set(EventMatches.Alliances) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,videos.set(object[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,time_string.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,score_breakdown.set(EventMatches.Score_Breakdown) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,set_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,event_key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,time.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,comp_level.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,event_key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,alliances.get() : EventMatches.Alliances,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,score_breakdown.get() : EventMatches.Score_Breakdown,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,set_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,time_string.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,videos.get() : object[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,match_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,time.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Match,Match(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team, ,93,19,1,0,19
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Container.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Rank.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Team_Number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Tote.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Qual_Average.set(double) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Auto.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Litter.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Played.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Coopertition.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Played.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Tote.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Litter.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Rank.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Container.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Auto.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Qual_Average.get() : double,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Team_Number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Coopertition.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings.Team,Team(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award, ,93,11,1,1,11
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,event_key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,award_type.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,recipient_list.set(TeamHistoryAwards.Recipient_List[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,event_key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,award_type.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,recipient_list.get() : TeamHistoryAwards.Recipient_List[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Award,Award(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award, ,93,11,1,1,11
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,event_key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,award_type.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,name.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,recipient_list.set(TeamEventAwards.Recipient_List[]) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,year.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,event_key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,award_type.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,name.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,recipient_list.get() : TeamEventAwards.Recipient_List[],98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,year.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Award,Award(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation, ,94,7,1,1,7
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation,type.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation,details.set(TeamMedia.Details) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation,foreign_key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation,type.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation,details.get() : TeamMedia.Details,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation,foreign_key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.MediaLocation,MediaLocation(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red1, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red1,score.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red1,teams.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red1,score.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red1,teams.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red1,Red1(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Score_Breakdown, ,94,5,1,2,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Score_Breakdown,blue.set(MatchInformation.Blue) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Score_Breakdown,red.set(MatchInformation.Red) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Score_Breakdown,blue.get() : MatchInformation.Blue,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Score_Breakdown,red.get() : MatchInformation.Red,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Score_Breakdown,Score_Breakdown(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Alliances, ,94,5,1,2,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Alliances,blue.set(TeamEventMatches.Blue1) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Alliances,red.set(TeamEventMatches.Red1) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Alliances,blue.get() : TeamEventMatches.Blue1,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Alliances,red.get() : TeamEventMatches.Red1,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Alliances,Alliances(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue1, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue1,score.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue1,teams.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue1,score.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue1,teams.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue1,Blue1(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue,auto.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue,foul.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue,auto.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue,foul.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue,Blue(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue1, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue1,score.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue1,teams.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue1,score.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue1,teams.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Blue1,Blue1(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red,auto.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red,foul.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red,auto.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red,foul.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red,Red(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red1, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red1,score.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red1,teams.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red1,score.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red1,teams.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Red1,Red1(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Score_Breakdown, ,94,5,1,2,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Score_Breakdown,blue.set(TeamEventMatches.Blue) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Score_Breakdown,red.set(TeamEventMatches.Red) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Score_Breakdown,blue.get() : TeamEventMatches.Blue,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Score_Breakdown,red.get() : TeamEventMatches.Red,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Score_Breakdown,Score_Breakdown(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Video, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Video,type.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Video,key.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Video,type.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Video,key.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches.Video,Video(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast, ,94,7,1,0,7
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast,type.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast,channel.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast,file.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast,type.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast,channel.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast,file.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Webcast,Webcast(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Recipient_List, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Recipient_List,team_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Recipient_List,awardee.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Recipient_List,team_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Recipient_List,awardee.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards.Recipient_List,Recipient_List(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue,auto.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue,foul.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue,auto.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue,foul.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Blue,Blue(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red,auto.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red,foul.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red,auto.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red,foul.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Red,Red(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Recipient_List, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Recipient_List,team_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Recipient_List,awardee.set(object) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Recipient_List,team_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Recipient_List,awardee.get() : object,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards.Recipient_List,Recipient_List(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Alliance, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Alliance,declines.set(object[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Alliance,picks.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Alliance,declines.get() : object[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Alliance,picks.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Alliance,Alliance(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast, ,94,7,1,0,7
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast,type.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast,channel.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast,file.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast,type.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast,channel.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast,file.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event.Webcast,Webcast(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Recipient_List, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Recipient_List,team_number.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Recipient_List,awardee.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Recipient_List,team_number.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Recipient_List,awardee.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards.Recipient_List,Recipient_List(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Alliances, ,94,5,1,2,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Alliances,blue.set(EventMatches.Blue1) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Alliances,red.set(EventMatches.Red1) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Alliances,blue.get() : EventMatches.Blue1,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Alliances,red.get() : EventMatches.Red1,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Alliances,Alliances(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue,auto.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue,foul.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue,auto.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue,foul.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue,Blue(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue1, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue1,score.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue1,teams.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue1,score.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue1,teams.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Blue1,Blue1(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Alliances, ,94,5,1,2,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Alliances,blue.set(MatchInformation.Blue1) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Alliances,red.set(MatchInformation.Red1) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Alliances,blue.get() : MatchInformation.Blue1,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Alliances,red.get() : MatchInformation.Red1,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation.Alliances,Alliances(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red,auto.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red,foul.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red,auto.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red,foul.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red,Red(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red1, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red1,score.set(int) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red1,teams.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red1,score.get() : int,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red1,teams.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Red1,Red1(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Score_Breakdown, ,94,5,1,2,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Score_Breakdown,blue.set(EventMatches.Blue) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Score_Breakdown,red.set(EventMatches.Red) : void,95,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Score_Breakdown,blue.get() : EventMatches.Blue,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Score_Breakdown,red.get() : EventMatches.Red,98,1,,1,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches.Score_Breakdown,Score_Breakdown(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast, ,94,7,1,0,7
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast,type.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast,channel.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast,file.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast,type.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast,channel.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast,file.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Webcast,Webcast(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Alliance, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Alliance,declines.set(object[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Alliance,picks.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Alliance,declines.get() : object[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Alliance,picks.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Alliance,Alliance(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast, ,94,7,1,0,7
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast,type.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast,channel.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast,file.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast,type.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast,channel.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast,file.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events.Webcast,Webcast(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Alliance, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Alliance,declines.set(object[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Alliance,picks.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Alliance,declines.get() : object[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Alliance,picks.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents.Alliance,Alliance(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Alliance, ,94,5,1,0,5
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Alliance,declines.set(object[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Alliance,picks.set(string[]) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Alliance,declines.get() : object[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Alliance,picks.get() : string[],98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents.Alliance,Alliance(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.Details, ,95,3,1,0,3
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.Details,image_partial.set(string) : void,95,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.Details,image_partial.get() : string,98,1,,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia.Details,Details(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamMedia,TeamMedia(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryAwards,TeamHistoryAwards(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamHistoryEvents,TeamHistoryEvents(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Event,Event(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventMatches,TeamEventMatches(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEventAwards,TeamEventAwards(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,MatchInformation,MatchInformation(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventTeams,EventTeams(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventStats, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventStats,EventStats(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,Events,Events(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventRankings,EventRankings(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventMatches,EventMatches(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventDistrictPoints, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventDistrictPoints,EventDistrictPoints(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,EventAwards,EventAwards(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamEvents,TeamEvents(),100,1,,0,1
+Type,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamYearsParticipated, ,100,1,1,0,1
+Member,TheBlueAlliance (Debug),TheBlueAlliance.Models,TeamYearsParticipated,TeamYearsParticipated(),100,1,,0,1
+Project,FRC_Events_API (Debug), , , ,100,0,0,0,0
