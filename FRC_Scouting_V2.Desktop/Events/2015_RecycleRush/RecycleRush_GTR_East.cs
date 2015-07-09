@@ -616,7 +616,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
         }
 
-        private void matchScoutingDataToolStripMenuItem_Click(object sender, EventArgs e)
+        private void matchScoutingDataToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             openFileDialog.InitialDirectory = assemblyPath + "\\Saves\\";
             if (Home.internetAvailable)

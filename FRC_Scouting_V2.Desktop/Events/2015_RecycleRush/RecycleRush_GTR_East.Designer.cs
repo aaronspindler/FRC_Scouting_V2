@@ -213,10 +213,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchScoutingDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gameManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamSelector = new System.Windows.Forms.ComboBox();
@@ -2677,38 +2674,17 @@
             // importExportToolStripMenuItem
             // 
             this.importExportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.exportToolStripMenuItem});
+            this.matchScoutingDataToolStripMenuItem1});
             this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.importExportToolStripMenuItem.Text = "Import / Export";
+            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.importExportToolStripMenuItem.Text = "Import Data";
             // 
-            // importToolStripMenuItem
+            // matchScoutingDataToolStripMenuItem1
             // 
-            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.matchScoutingDataToolStripMenuItem});
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.importToolStripMenuItem.Text = "Import";
-            // 
-            // matchScoutingDataToolStripMenuItem
-            // 
-            this.matchScoutingDataToolStripMenuItem.Name = "matchScoutingDataToolStripMenuItem";
-            this.matchScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
-            this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(107, 6);
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.exportToolStripMenuItem.Text = "Export";
+            this.matchScoutingDataToolStripMenuItem1.Name = "matchScoutingDataToolStripMenuItem1";
+            this.matchScoutingDataToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.matchScoutingDataToolStripMenuItem1.Text = "Match Scouting Data";
+            this.matchScoutingDataToolStripMenuItem1.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem1_Click);
             // 
             // gameManualToolStripMenuItem
             // 
@@ -2843,9 +2819,6 @@
         private System.Windows.Forms.Label scoutingDriverRatingLabel;
         private System.Windows.Forms.ToolStripMenuItem importExportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.RichTextBox scoutingCommentsRichTextBox;
         private System.Windows.Forms.Label scoutingMatchNumberLabel;
         private System.Windows.Forms.CheckBox scoutingDidTheRobotDieCheckBox;
@@ -2988,7 +2961,7 @@
         private System.Windows.Forms.Label scoutingAllianceColourLabel;
         private System.Windows.Forms.CheckBox scoutingAllianceColourRedCheckBox;
         private System.Windows.Forms.CheckBox scoutingAllianceColourBlueCheckBox;
-        private System.Windows.Forms.ToolStripMenuItem matchScoutingDataToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.ToolStripMenuItem matchScoutingDataToolStripMenuItem1;
     }
 }

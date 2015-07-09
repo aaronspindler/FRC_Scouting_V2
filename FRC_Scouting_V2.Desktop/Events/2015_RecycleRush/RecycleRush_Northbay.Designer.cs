@@ -303,17 +303,14 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pitScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchScoutingDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gameManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.importationOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pictureOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.pitScoutingDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -4080,7 +4077,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.eventInformationToolStripMenuItem,
-            this.importExportToolStripMenuItem,
+            this.importDataToolStripMenuItem,
             this.gameManualToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -4110,49 +4107,21 @@
             this.eventInformationToolStripMenuItem.Text = "Event Information";
             this.eventInformationToolStripMenuItem.Click += new System.EventHandler(this.eventInformationToolStripMenuItem_Click);
             // 
-            // importExportToolStripMenuItem
+            // importDataToolStripMenuItem
             // 
-            this.importExportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.exportToolStripMenuItem});
-            this.importExportToolStripMenuItem.Name = "importExportToolStripMenuItem";
-            this.importExportToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.importExportToolStripMenuItem.Text = "Import / Export";
+            this.importDataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.matchScoutingDataToolStripMenuItem1,
+            this.pitScoutingDataToolStripMenuItem1});
+            this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
+            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.importDataToolStripMenuItem.Text = "Import Data";
             // 
-            // importToolStripMenuItem
+            // matchScoutingDataToolStripMenuItem1
             // 
-            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.matchScoutingDataToolStripMenuItem,
-            this.pitScoutingDataToolStripMenuItem});
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.importToolStripMenuItem.Text = "Import";
-            // 
-            // matchScoutingDataToolStripMenuItem
-            // 
-            this.matchScoutingDataToolStripMenuItem.Name = "matchScoutingDataToolStripMenuItem";
-            this.matchScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
-            this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click);
-            // 
-            // pitScoutingDataToolStripMenuItem
-            // 
-            this.pitScoutingDataToolStripMenuItem.Name = "pitScoutingDataToolStripMenuItem";
-            this.pitScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.pitScoutingDataToolStripMenuItem.Text = "Pit Scouting Data";
-            this.pitScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exportToolStripMenuItem.Text = "Export";
+            this.matchScoutingDataToolStripMenuItem1.Name = "matchScoutingDataToolStripMenuItem1";
+            this.matchScoutingDataToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.matchScoutingDataToolStripMenuItem1.Text = "Match Scouting Data";
+            this.matchScoutingDataToolStripMenuItem1.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem1_Click);
             // 
             // gameManualToolStripMenuItem
             // 
@@ -4187,6 +4156,13 @@
             // 
             this.pictureOpenFileDialog.FileName = "openFileDialog1";
             this.pictureOpenFileDialog.Filter = "Image files | *.jpg";
+            // 
+            // pitScoutingDataToolStripMenuItem1
+            // 
+            this.pitScoutingDataToolStripMenuItem1.Name = "pitScoutingDataToolStripMenuItem1";
+            this.pitScoutingDataToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.pitScoutingDataToolStripMenuItem1.Text = "Pit Scouting Data";
+            this.pitScoutingDataToolStripMenuItem1.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem1_Click);
             // 
             // RecycleRush_Northbay
             // 
@@ -4341,11 +4317,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn meanColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn standardDeviationColumn1;
         private System.Windows.Forms.Label scoutingDriverRatingLabel;
-        private System.Windows.Forms.ToolStripMenuItem importExportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.RichTextBox scoutingCommentsRichTextBox;
         private System.Windows.Forms.Label scoutingMatchNumberLabel;
         private System.Windows.Forms.CheckBox scoutingDidTheRobotDieCheckBox;
@@ -4490,7 +4463,6 @@
         private System.Windows.Forms.Label scoutingAllianceColourLabel;
         private System.Windows.Forms.CheckBox scoutingAllianceColourRedCheckBox;
         private System.Windows.Forms.CheckBox scoutingAllianceColourBlueCheckBox;
-        private System.Windows.Forms.ToolStripMenuItem matchScoutingDataToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog importationOpenFileDialog;
         private System.Windows.Forms.GroupBox pitScoutingEditorManipulationGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -4577,6 +4549,7 @@
         private System.Windows.Forms.Button pitScoutingEditorSideIsometricPictureFileSelectorButton;
         private System.Windows.Forms.Button pitScoutingEditorOtherPictureFileSelectorButton;
         private System.Windows.Forms.OpenFileDialog pictureOpenFileDialog;
-        private System.Windows.Forms.ToolStripMenuItem pitScoutingDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matchScoutingDataToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pitScoutingDataToolStripMenuItem1;
     }
 }
