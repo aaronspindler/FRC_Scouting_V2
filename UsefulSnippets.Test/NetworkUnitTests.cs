@@ -7,8 +7,12 @@ namespace UsefulSnippets.Test
     public class NetworkUnitTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckForInternetConnectionTestMethod()
         {
+            Boolean actualData = Network.CheckForInternetConnection();
+            const bool expectedData = true;
+
+            Assert.AreEqual(expectedData,actualData,"Internet connectivity check is not as expected");
         }
     }
 }
