@@ -54,7 +54,6 @@
     <Compile Include="ImagesUnitTests.cs" />
     <Compile Include="MathematicsUnitTests.cs" />
     <Compile Include="NetworkUnitTests.cs" />
-    <Compile Include="NotificationUnitTests.cs" />
     <Compile Include="SecurityUnitTests.cs" />
     <Compile Include="TimeUnitTests.cs" />
   </ItemGroup>
