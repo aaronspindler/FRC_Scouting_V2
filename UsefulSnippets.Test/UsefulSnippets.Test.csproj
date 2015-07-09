@@ -55,7 +55,6 @@
     <Compile Include="MathematicsUnitTests.cs" />
     <Compile Include="NetworkUnitTests.cs" />
     <Compile Include="SecurityUnitTests.cs" />
-    <Compile Include="TimeUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UsefulSnippets\UsefulSnippets.csproj">
