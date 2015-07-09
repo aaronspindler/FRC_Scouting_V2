@@ -29,7 +29,7 @@ FRC_Scouting_V2
   - [ ] Update Event Information Form
   - [ ] Add Event Schedule Form
   - [ ] Write Unit Tests for TheBlueAlliance API
-  - [ ] Write Unit Tests for UsefulSnippets
+  - [x] Write Unit Tests for UsefulSnippets
 
 ### Releases
 For the most up to date release visit
