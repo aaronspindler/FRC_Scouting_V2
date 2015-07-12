@@ -30,7 +30,7 @@ namespace TheBlueAlliance
                 {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\" + matchKey + ".json");
                 }
-                DirectoryInfo di = Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\");
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\");
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Cache\\TBA\\Matches\\" + matchKey + ".json", downloadedData);
                 return downloadedData;
             }
