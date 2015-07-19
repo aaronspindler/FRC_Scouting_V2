@@ -10,8 +10,30 @@
 
         public class Blue
         {
-            public int auto { get; set; }
-            public int foul { get; set; }
+            public int tote_count_far { get; set; }
+            public int tote_count_near { get; set; }
+            public int container_count_level1 { get; set; }
+            public int container_count_level2 { get; set; }
+            public int container_count_level3 { get; set; }
+            public int container_count_level4 { get; set; }
+            public int container_count_level5 { get; set; }
+            public int container_count_level6 { get; set; }
+            public int teleop_points { get; set; }
+            public int auto_points { get; set; }
+            public int total_points { get; set; }
+            public bool tote_set { get; set; }
+            public bool container_set { get; set; }
+            public int foul_count { get; set; }
+            public int container_points { get; set; }
+            public int adjust_points { get; set; }
+            public int litter_count_unprocessed { get; set; }
+            public bool robot_set { get; set; }
+            public int litter_count_container { get; set; }
+            public int tote_points { get; set; }
+            public int foul_points { get; set; }
+            public bool tote_stack { get; set; }
+            public int litter_count_landfill { get; set; }
+            public int litter_points { get; set; }
         }
 
         public class Blue1
@@ -36,8 +58,30 @@
 
         public class Red
         {
-            public int auto { get; set; }
-            public int foul { get; set; }
+            public int tote_count_far { get; set; }
+            public int tote_count_near { get; set; }
+            public int container_count_level1 { get; set; }
+            public int container_count_level2 { get; set; }
+            public int container_count_level3 { get; set; }
+            public int container_count_level4 { get; set; }
+            public int container_count_level5 { get; set; }
+            public int container_count_level6 { get; set; }
+            public int teleop_points { get; set; }
+            public int auto_points { get; set; }
+            public int total_points { get; set; }
+            public bool tote_set { get; set; }
+            public bool container_set { get; set; }
+            public int foul_count { get; set; }
+            public int container_points { get; set; }
+            public int adjust_points { get; set; }
+            public int litter_count_unprocessed { get; set; }
+            public bool robot_set { get; set; }
+            public int litter_count_container { get; set; }
+            public int tote_points { get; set; }
+            public int foul_points { get; set; }
+            public bool tote_stack { get; set; }
+            public int litter_count_landfill { get; set; }
+            public int litter_points { get; set; }
         }
 
         public class Red1
@@ -49,7 +93,9 @@
         public class Score_Breakdown
         {
             public Blue blue { get; set; }
+            public string coopertition { get; set; }
             public Red red { get; set; }
+            public int coopertition_points { get; set; }
         }
     }
 }
