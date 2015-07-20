@@ -20,9 +20,9 @@ FRC_Scouting_V2
 - MySQL for network collaboration or export to text file for future importation
 - Custom console output that works with Linux
   
-### Events Supported
-- [x] Aerial Assist
-- [x] Recycle Rush
+### Games Supported
+- [x] Aerial Assist | 2014
+- [x] Recycle Rush | 2015
 
 ### To-Do
   - [ ] Overhaul Settings Form
