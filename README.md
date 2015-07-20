@@ -39,7 +39,7 @@ http://xnovax.net/program_releases/frc_scouting_v2/latest/publish.htm
 
 ### Bug / Issue Reporting
 
-If there is a bug / issue with the software please make a bug at:
+If there is a bug / issue with the software please make a bug report at:
 ```
 https://github.com/xNovax/FRC_Scouting_V2/issues
 ```
