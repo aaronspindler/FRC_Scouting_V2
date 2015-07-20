@@ -9,11 +9,11 @@ namespace TheBlueAlliance
 {
     public class Matches
     {
-        public static MatchInformation.Match GetMatchInformation(string matchKey)
+        public static MatchInformation_2015.Match GetMatchInformation2015(string matchKey)
         {
             if (GetMatchInformationJsonData(matchKey) != null)
             {
-                return JsonConvert.DeserializeObject<MatchInformation.Match>(GetMatchInformationJsonData(matchKey));
+                return JsonConvert.DeserializeObject<MatchInformation_2015.Match>(GetMatchInformationJsonData(matchKey));
             }
 
             return null;

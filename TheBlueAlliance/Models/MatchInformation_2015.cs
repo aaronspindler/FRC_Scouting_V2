@@ -1,6 +1,6 @@
 ﻿namespace TheBlueAlliance.Models
 {
-    public class MatchInformation
+    public class MatchInformation_2015
     {
         public class Alliances
         {
