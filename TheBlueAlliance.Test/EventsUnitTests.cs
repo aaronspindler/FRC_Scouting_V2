@@ -186,16 +186,16 @@ namespace TheBlueAlliance.Test
             string expectedKey = "frc3710";
             string expectedCountryName = "Canada";
             string expectedNickName = "FSS Cyber Falcons";
-            Assert.AreEqual(expectedWebsite, actualTeamList[20].website,"Team websites are not as expected!");
-            Assert.AreEqual(expectedTeamName,actualTeamList[20].name, "Team names are not as expected!");
-            Assert.AreEqual(expectedLocality,actualTeamList[20].locality, "Localities are not as expected!");
-            Assert.AreEqual(expectedRookieYear,actualTeamList[20].rookie_year, "Rookie years are not as expected!");
-            Assert.AreEqual(expectedRegion,actualTeamList[20].region, "Regions are not as expected!");
-            Assert.AreEqual(expectedTeamNumber,actualTeamList[20].team_number, "Team numbers are not as expected!");
-            Assert.AreEqual(expectedLocation,actualTeamList[20].location,"Locations are not as expected!");
-            Assert.AreEqual(expectedKey,actualTeamList[20].key, "Keys are not as expected!");
-            Assert.AreEqual(expectedCountryName,actualTeamList[20].country_name, "Country names are not as expected!");
-            Assert.AreEqual(expectedNickName,actualTeamList[20].nickname, "Nicknames are not as expected!");
+            Assert.AreEqual(expectedWebsite, actualTeamList[20].website, "Team websites are not as expected!");
+            Assert.AreEqual(expectedTeamName, actualTeamList[20].name, "Team names are not as expected!");
+            Assert.AreEqual(expectedLocality, actualTeamList[20].locality, "Localities are not as expected!");
+            Assert.AreEqual(expectedRookieYear, actualTeamList[20].rookie_year, "Rookie years are not as expected!");
+            Assert.AreEqual(expectedRegion, actualTeamList[20].region, "Regions are not as expected!");
+            Assert.AreEqual(expectedTeamNumber, actualTeamList[20].team_number, "Team numbers are not as expected!");
+            Assert.AreEqual(expectedLocation, actualTeamList[20].location, "Locations are not as expected!");
+            Assert.AreEqual(expectedKey, actualTeamList[20].key, "Keys are not as expected!");
+            Assert.AreEqual(expectedCountryName, actualTeamList[20].country_name, "Country names are not as expected!");
+            Assert.AreEqual(expectedNickName, actualTeamList[20].nickname, "Nicknames are not as expected!");
         }
     }
 }

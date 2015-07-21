@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,6 +24,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
 
 //Copyright (c) 2014 FRC_Scouting_V2
