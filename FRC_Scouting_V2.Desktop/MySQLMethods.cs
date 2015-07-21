@@ -29,7 +29,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Diagnostics.CodeAnalysis;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -141,15 +140,15 @@ namespace FRC_Scouting_V2
                 }
                 conn.Close();
 
-                SQLiteConnection.CreateFile("database.sqlite");
-                var m_dbConnection = new SQLiteConnection("Data Source=database.sqlite;Version=3;");
-                m_dbConnection.Open();
-                string sql = "CREATE TABLE RecycleRush_NorthBay_Teams (name VARCHAR(300), teamNumber INT)";
-                var command = new SQLiteCommand(sql, m_dbConnection);
-                command.ExecuteNonQuery();
-                m_dbConnection.Close();
-                Console.WriteLine("Team List Database Successfully Initialized");
-                ConsoleWindow.WriteLine("Team List Database Successfully Initialized");
+                //SQLiteConnection.CreateFile("database.sqlite");
+                //var m_dbConnection = new SQLiteConnection("Data Source=database.sqlite;Version=3;");
+                //m_dbConnection.Open();
+                //string sql = "CREATE TABLE RecycleRush_NorthBay_Teams (name VARCHAR(300), teamNumber INT)";
+                //var command = new SQLiteCommand(sql, m_dbConnection);
+                //command.ExecuteNonQuery();
+                //m_dbConnection.Close();
+                //Console.WriteLine("Team List Database Successfully Initialized");
+                //ConsoleWindow.WriteLine("Team List Database Successfully Initialized");
             }
             catch (MySqlException ex)
             {
