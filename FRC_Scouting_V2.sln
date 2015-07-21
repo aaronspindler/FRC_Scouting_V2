@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralFormTemplate", "GeneralFormTemplate\GeneralFormTemplate.csproj", "{92FB0185-6785-47E4-9A2D-73CF9BFD2F7D}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -16,13 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Scouting_V2.Desktop", "
 		{660EC2BD-0DEA-4DC8-A9FA-1867BA3C9EB1} = {660EC2BD-0DEA-4DC8-A9FA-1867BA3C9EB1}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4174AD86-105C-4125-8110-0E27E6DA25B6}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBlueAlliance", "TheBlueAlliance\TheBlueAlliance.csproj", "{8E17112C-AE09-4E64-BD69-948740528D54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Events_API", "FRC_Events_API\FRC_Events_API.csproj", "{40A4E62E-C04C-433B-8295-C7873C726903}"
@@ -30,6 +23,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBlueAlliance.Test", "TheBlueAlliance.Test\TheBlueAlliance.Test.csproj", "{BC838A61-F83B-4452-9865-8A74542083C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsefulSnippets.Test", "UsefulSnippets.Test\UsefulSnippets.Test.csproj", "{75B2DB3C-207D-43C2-9A84-CB9A89C7833D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D0FEE56D-9506-4544-8EE7-54523D165960}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
