@@ -319,6 +319,7 @@
     <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI_New.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="FRC_Scouting_V2.Desktop.licenseheader" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

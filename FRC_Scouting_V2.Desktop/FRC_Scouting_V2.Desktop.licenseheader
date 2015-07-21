@@ -1,4 +1,6 @@
-﻿#region License
+extensions: designer.cs generated.cs
+extensions: .cs
+#region License
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -24,14 +26,3 @@
 //SOFTWARE.
 //===============================================================================
 #endregion
-namespace FRC_Scouting_V2
-{
-    //@author xNovax
-    public partial class AerialAssist_RahChaCha_Information : GeneralFormTemplate.GeneralFormTemplate
-    {
-        public AerialAssist_RahChaCha_Information()
-        {
-            InitializeComponent();
-        }
-    }
-}
