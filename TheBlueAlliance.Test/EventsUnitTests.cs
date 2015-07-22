@@ -1,13 +1,13 @@
 ﻿using System;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheBlueAlliance.Models;
 
 namespace TheBlueAlliance.Test
 {
-    [TestFixture]
+    [TestClass]
     public class EventsUnitTests
     {
-        [Test]
+        [TestMethod]
         public void GetEventInformation_TestMethod()
         {
             Event.EventInformation actualEventInformation = Events.GetEventInformation("2015onto");
@@ -51,7 +51,7 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedEventType, actualEventInformation.event_type, "Event Types are not as expected");
         }
 
-        [Test]
+        [TestMethod]
         public void GetEventAwards_TestMethod()
         {
             EventAwards.Award[] actualAwardsInformation = Events.GetEventAwards("2015onto");
@@ -78,7 +78,7 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedYear, actualYear, "Years are not as expected");
         }
 
-        [Test]
+        [TestMethod]
         public void GetEventMatches_TestMethod()
         {
             EventMatches.Match[] actualEventMatches = Events.GetEventMatches("2015onto");
@@ -104,7 +104,7 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedAllianceBlueTeam1, actualEventMatches[0].alliances.blue.teams[0], "Alliance Teams are not as expected");
         }
 
-        [Test]
+        [TestMethod]
         public void GetEventRankings_TestMethod()
         {
             EventRankings.Team[] actualEventRankings = Events.GetEventRankings("2015onto");
@@ -130,7 +130,7 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedPlayed, actualEventRankings[0].Played, "Matches Played are not as expected");
         }
 
-        [Test]
+        [TestMethod]
         public void GetEvents_TestMethod()
         {
             Models.Events.Event[] actualEvents = Events.GetEvents(2015);
@@ -172,7 +172,7 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedEventType, actualEvents[0].event_type, "Event Types are not as expected");
         }
 
-        [Test]
+        [TestMethod]
         public void GetEventTeamsList_TestMethod()
         {
             EventTeams.Team[] actualTeamList = Events.GetEventTeamsList("2015onto");
