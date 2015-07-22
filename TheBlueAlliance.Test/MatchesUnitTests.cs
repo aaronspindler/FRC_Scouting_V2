@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using TheBlueAlliance.Models;
 
 namespace TheBlueAlliance.Test
 {
-    [TestClass]
+    [TestFixture]
     public class MatchesUnitTests
     {
-        [TestMethod]
+        [Test]
         public void GetMatchInformation2015Test()
         {
             MatchInformation_2015.Match actualMatchInformation = Matches.GetMatchInformation2015("2015iri_qm43");
