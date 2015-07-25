@@ -30,6 +30,7 @@ FRC_Scouting_V2
   - [ ] Add Event Schedule Form
   - [ ] Write Unit Tests for TheBlueAlliance API
   - [x] Write Unit Tests for UsefulSnippets
+  - [ ] Convert Winforms Program into WPF Program
 
 ### Releases
 For the most up to date release visit
