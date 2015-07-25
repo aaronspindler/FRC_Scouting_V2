@@ -1,0 +1,39 @@
+﻿<Window x:Class="FRC_Scouting_V2.WPF.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FRC_Scouting_V2 | Home" Height="375" Width="530" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Menu Height="22">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" HorizontalAlignment="Left" Width="140" />
+            </MenuItem>
+            <MenuItem Header="Information">
+                <MenuItem Header="FRC3710 | Information" HorizontalAlignment="Left" Width="210" />
+                <MenuItem Header="Program Information" HorizontalAlignment="Left" Width="210" />
+                <MenuItem Header="License Information" HorizontalAlignment="Left" Width="210" />
+                <Separator HorizontalAlignment="Left" Height="3" Width="210" />
+                <MenuItem Header="Team Information" HorizontalAlignment="Left" Width="210" />
+                <MenuItem Header="Event Information" HorizontalAlignment="Left" Width="210" />
+                <Separator HorizontalAlignment="Left" Height="3" Width="210" />
+                <MenuItem Header="Changelog" HorizontalAlignment="Left" Width="210" />
+
+            </MenuItem>
+            <MenuItem Header="Debug">
+                <MenuItem Header="Console" HorizontalAlignment="Left" Width="210" />
+                <Separator HorizontalAlignment="Left" Height="3" Width="210" />
+                <MenuItem Header="Initialize Database" HorizontalAlignment="Left" Width="210" />
+            </MenuItem>
+            <MenuItem Header="Settings">
+                <MenuItem Header="Exit" HorizontalAlignment="Left" Width="140" />
+            </MenuItem>
+        </Menu>
+        <ComboBox x:Name="eventSelector" Height="21" SelectionChanged="eventSelector_SelectionChanged">
+            <ComboBoxItem Content="Aerial Assist | Northbay | 2014" HorizontalAlignment="Left" Width="520" />
+            <ComboBoxItem Content="Aerial Assist | Rah Cha Cha | 2014" HorizontalAlignment="Left" Width="520" />
+            <ComboBoxItem Content="RecycleRush | GTR-East | 2015" HorizontalAlignment="Left" Width="520" />
+            <ComboBoxItem Content="RecycleRush | Northbay | 2015" HorizontalAlignment="Left" Width="520" />
+            <ComboBoxItem Content="RecycleRush | IRI | 2015" HorizontalAlignment="Left" Width="520" />
+        </ComboBox>
+        <Frame Content="" Height="300" Source="/FRC_Scouting_V2.WPF;component/Pages/FRC_Logo.xaml"/>
+    </StackPanel>
+</Window>
