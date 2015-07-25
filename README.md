@@ -55,3 +55,6 @@ If you would like to help out with the project give me an email at AaroN@xNovax.
   xNovax (Aaron @ FRC3710)
   Mattuw (Matt @ FRC3710)
 ```
+
+This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
+[code-of-conduct]: http://todogroup.org/opencodeofconduct/#FRC_Scouting_V2/aaron@xnovax.net
