@@ -24,5 +24,10 @@ namespace FRC_Scouting_V2.WPF.Pages
         {
             InitializeComponent();
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new System.Uri("Pages/FRC_Logo.xaml", UriKind.Relative));
+        }
     }
 }

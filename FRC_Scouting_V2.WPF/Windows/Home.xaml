@@ -5,11 +5,11 @@
     <StackPanel>
         <Menu Height="22">
             <MenuItem Header="File">
-                <MenuItem Header="Exit" HorizontalAlignment="Left" Width="140" />
+                <MenuItem Header="Exit" HorizontalAlignment="Left" Width="140" x:Name="ExitMenuItem" Click="ExitMenuItem_OnClick" />
             </MenuItem>
             <MenuItem Header="Information">
                 <MenuItem Header="FRC3710 | Information" HorizontalAlignment="Left" Width="210" />
-                <MenuItem Header="Program Information" HorizontalAlignment="Left" Width="210" />
+                <MenuItem Header="Program Information" HorizontalAlignment="Left" Width="210" x:Name="ProgramInformationMenuItem" Click="ProgramInformationMenuItem_OnClick"/>
                 <MenuItem Header="License Information" HorizontalAlignment="Left" Width="210" />
                 <Separator HorizontalAlignment="Left" Height="3" Width="210" />
                 <MenuItem Header="Team Information" HorizontalAlignment="Left" Width="210" />
@@ -34,6 +34,6 @@
             <ComboBoxItem Content="RecycleRush | Northbay | 2015" HorizontalAlignment="Left" Width="520" />
             <ComboBoxItem Content="RecycleRush | IRI | 2015" HorizontalAlignment="Left" Width="520" />
         </ComboBox>
-        <Frame Content="" Height="300" Source="/FRC_Scouting_V2.WPF;component/Pages/FRC_Logo.xaml"/>
+        <Frame Content="" Height="300" x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="/FRC_Scouting_V2.WPF;component/Pages/FRC_Logo.xaml"/>
     </StackPanel>
 </Window>

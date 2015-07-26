@@ -8,6 +8,7 @@
 	Title="ProgramInformation">
 
     <StackPanel>
-        
+        <Button Content="Back" x:Name="BackButton" Click="BackButton_Click"/>
+
     </StackPanel>
 </Page>

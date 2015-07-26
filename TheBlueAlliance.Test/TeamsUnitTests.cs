@@ -26,5 +26,43 @@ namespace TheBlueAlliance.Test
             Assert.AreEqual(expectedRecipientNumber2, actualInformation[0].recipient_list[2].team_number);
             Assert.AreEqual(expectedYear, actualInformation[0].year);
         }
+
+        [TestMethod]
+        public void GetTeamEventMatchesTest()
+        {
+            
+        }
+
+        [TestMethod]
+        public void GetTeamEventsTest()
+        {
+            
+        }
+
+        [TestMethod]
+        public void GetTeamHistoricalAwardsTest()
+        {
+            
+        }
+
+        [TestMethod]
+        public void GetTeamHistoryEventsTest()
+        {
+            
+        }
+
+        [TestMethod]
+        public void GetTeamInformationTest()
+        {
+            
+        }
+
+        [TestMethod]
+        public void GetTeamMediaLocationsTest()
+        {
+            
+        }
+
+
     }
 }

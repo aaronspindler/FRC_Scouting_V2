@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Navigation;
 
 namespace FRC_Scouting_V2.WPF
 {
@@ -24,6 +26,16 @@ namespace FRC_Scouting_V2.WPF
                     MessageBox.Show("1");
                     break;
             }
+        }
+
+        private void ExitMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ProgramInformationMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Source = new Uri("/Pages/ProgramInformation.xaml", UriKind.Relative);
         }
     }
 }
