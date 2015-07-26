@@ -30,6 +30,7 @@ FRC_Scouting_V2
   - [ ] Add Event Schedule Form
   - [ ] Write Unit Tests for TheBlueAlliance API
   - [x] Write Unit Tests for UsefulSnippets
+  - [ ] Convert Winforms Program into WPF Program
 
 ### Releases
 For the most up to date release visit
@@ -54,3 +55,6 @@ If you would like to help out with the project give me an email at AaroN@xNovax.
   xNovax (Aaron @ FRC3710)
   Mattuw (Matt @ FRC3710)
 ```
+
+This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
+[code-of-conduct]: http://todogroup.org/opencodeofconduct/#FRC_Scouting_V2/aaron@xnovax.net
