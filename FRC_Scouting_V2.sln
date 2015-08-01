@@ -31,8 +31,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D0FEE5
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FRC_Scouting_V2.WPF", "FRC_Scouting_V2.WPF\FRC_Scouting_V2.WPF.csproj", "{86FEBD50-1138-47A1-9C40-09DC3ED78005}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -112,16 +110,6 @@ Global
 		{75B2DB3C-207D-43C2-9A84-CB9A89C7833D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75B2DB3C-207D-43C2-9A84-CB9A89C7833D}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{75B2DB3C-207D-43C2-9A84-CB9A89C7833D}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
-		{86FEBD50-1138-47A1-9C40-09DC3ED78005}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
