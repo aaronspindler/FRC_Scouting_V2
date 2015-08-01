@@ -129,10 +129,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleWindow.cs">
+    <Compile Include="Forms\ConsoleWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsoleWindow.Designer.cs">
+    <Compile Include="Forms\ConsoleWindow.Designer.cs">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Events\2014_AerialAssist\Northbay\AerialAssist_Northbay.cs">
@@ -183,55 +183,55 @@
     <Compile Include="Events\2015_RecycleRush\RegularSeason\Northbay\RecycleRush_Northbay_Information.Designer.cs">
       <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Forms\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Information Forms\ChangeLog.cs">
+    <Compile Include="Forms\ChangeLog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information Forms\ChangeLog.Designer.cs">
+    <Compile Include="Forms\ChangeLog.Designer.cs">
       <DependentUpon>ChangeLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Information Forms\EventInformationLookup.cs">
+    <Compile Include="Forms\EventInformationLookup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information Forms\EventInformationLookup.Designer.cs">
+    <Compile Include="Forms\EventInformationLookup.Designer.cs">
       <DependentUpon>EventInformationLookup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Information Forms\Licenses.cs">
+    <Compile Include="Forms\Licenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information Forms\Licenses.Designer.cs">
+    <Compile Include="Forms\Licenses.Designer.cs">
       <DependentUpon>Licenses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Information Forms\TeamInformationLookup.cs">
+    <Compile Include="Forms\TeamInformationLookup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information Forms\TeamInformationLookup.Designer.cs">
+    <Compile Include="Forms\TeamInformationLookup.Designer.cs">
       <DependentUpon>TeamInformationLookup.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainSettings.cs">
+    <Compile Include="Forms\MainSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainSettings.Designer.cs">
+    <Compile Include="Forms\MainSettings.Designer.cs">
       <DependentUpon>MainSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\RecycleRush_Stack.cs" />
-    <Compile Include="MySQLMethods.cs" />
+    <Compile Include="Models\RecycleRush\RecycleRush_Stack.cs" />
+    <Compile Include="Misc\MySQLMethods.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Information Forms\ProgramInformation.cs">
+    <Compile Include="Forms\ProgramInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information Forms\ProgramInformation.Designer.cs">
+    <Compile Include="Forms\ProgramInformation.Designer.cs">
       <DependentUpon>ProgramInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="PropertiesForm.cs">
+    <Compile Include="Forms\PropertiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PropertiesForm.Designer.cs">
+    <Compile Include="Forms\PropertiesForm.Designer.cs">
       <DependentUpon>PropertiesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -240,27 +240,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Information Forms\Team3710Information.cs">
+    <Compile Include="Forms\Team3710Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information Forms\Team3710Information.Designer.cs">
+    <Compile Include="Forms\Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\RecycleRush_Pit_Scouting_Team.cs" />
-    <Compile Include="Models\RecycleRush_Scout_Match.cs" />
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI _Old.cs">
+    <Compile Include="Models\RecycleRush\RecycleRush_Pit_Scouting_Team.cs" />
+    <Compile Include="Models\RecycleRush\RecycleRush_Scout_Match.cs" />
+    <Compile Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI _Old.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI _Old.Designer.cs">
+    <Compile Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI _Old.Designer.cs">
       <DependentUpon>Aerial_Assist_Scouting_UI _Old.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI_New.cs">
+    <Compile Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI_New.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIs\Aerial_Assist_Scouting_UI_New.Designer.cs">
+    <Compile Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI_New.Designer.cs">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ConsoleWindow.resx">
+    <EmbeddedResource Include="Forms\ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2014_AerialAssist\Northbay\AerialAssist_Northbay.resx">
@@ -287,28 +287,28 @@
     <EmbeddedResource Include="Events\2015_RecycleRush\RegularSeason\Northbay\RecycleRush_Northbay_Information.resx">
       <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Information Forms\ChangeLog.resx">
+    <EmbeddedResource Include="Forms\ChangeLog.resx">
       <DependentUpon>ChangeLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Information Forms\EventInformationLookup.resx">
+    <EmbeddedResource Include="Forms\EventInformationLookup.resx">
       <DependentUpon>EventInformationLookup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Information Forms\Licenses.resx">
+    <EmbeddedResource Include="Forms\Licenses.resx">
       <DependentUpon>Licenses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Information Forms\TeamInformationLookup.resx">
+    <EmbeddedResource Include="Forms\TeamInformationLookup.resx">
       <DependentUpon>TeamInformationLookup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainSettings.resx">
+    <EmbeddedResource Include="Forms\MainSettings.resx">
       <DependentUpon>MainSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Information Forms\ProgramInformation.resx">
+    <EmbeddedResource Include="Forms\ProgramInformation.resx">
       <DependentUpon>ProgramInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PropertiesForm.resx">
+    <EmbeddedResource Include="Forms\PropertiesForm.resx">
       <DependentUpon>PropertiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -316,13 +316,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Information Forms\Team3710Information.resx">
+    <EmbeddedResource Include="Forms\Team3710Information.resx">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI _Old.resx">
+    <EmbeddedResource Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI _Old.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI _Old.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIs\Aerial_Assist_Scouting_UI_New.resx">
+    <EmbeddedResource Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI_New.resx">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FRC_Scouting_V2.Desktop.licenseheader" />
@@ -427,6 +427,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
