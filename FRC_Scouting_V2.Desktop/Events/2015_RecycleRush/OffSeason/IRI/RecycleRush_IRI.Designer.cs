@@ -279,13 +279,13 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pitScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.importationOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pictureOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.matchScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pitScoutingDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -2191,6 +2191,7 @@
             this.matchBreakDownCommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownCommentsTextBox.Location = new System.Drawing.Point(252, 626);
             this.matchBreakDownCommentsTextBox.Name = "matchBreakDownCommentsTextBox";
+            this.matchBreakDownCommentsTextBox.ReadOnly = true;
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakDownCommentsTextBox, 3);
             this.matchBreakDownCommentsTextBox.Size = new System.Drawing.Size(492, 93);
             this.matchBreakDownCommentsTextBox.TabIndex = 9;
@@ -3858,6 +3859,20 @@
             this.importDataToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.importDataToolStripMenuItem.Text = "Import Data";
             // 
+            // matchScoutingDataToolStripMenuItem
+            // 
+            this.matchScoutingDataToolStripMenuItem.Name = "matchScoutingDataToolStripMenuItem";
+            this.matchScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
+            this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click_1);
+            // 
+            // pitScoutingDataToolStripMenuItem
+            // 
+            this.pitScoutingDataToolStripMenuItem.Name = "pitScoutingDataToolStripMenuItem";
+            this.pitScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.pitScoutingDataToolStripMenuItem.Text = "Pit Scouting Data";
+            this.pitScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem_Click_1);
+            // 
             // gameManualToolStripMenuItem
             // 
             this.gameManualToolStripMenuItem.Name = "gameManualToolStripMenuItem";
@@ -3891,20 +3906,6 @@
             // 
             this.pictureOpenFileDialog.FileName = "openFileDialog1";
             this.pictureOpenFileDialog.Filter = "Image files | *.jpg";
-            // 
-            // matchScoutingDataToolStripMenuItem
-            // 
-            this.matchScoutingDataToolStripMenuItem.Name = "matchScoutingDataToolStripMenuItem";
-            this.matchScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.matchScoutingDataToolStripMenuItem.Text = "Match Scouting Data";
-            this.matchScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem_Click_1);
-            // 
-            // pitScoutingDataToolStripMenuItem
-            // 
-            this.pitScoutingDataToolStripMenuItem.Name = "pitScoutingDataToolStripMenuItem";
-            this.pitScoutingDataToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.pitScoutingDataToolStripMenuItem.Text = "Pit Scouting Data";
-            this.pitScoutingDataToolStripMenuItem.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem_Click_1);
             // 
             // RecycleRush_IRI
             // 

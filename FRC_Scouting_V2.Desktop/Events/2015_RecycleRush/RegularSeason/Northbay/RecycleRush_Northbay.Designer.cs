@@ -305,12 +305,12 @@
             this.eventInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matchScoutingDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pitScoutingDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gameManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamSelector = new System.Windows.Forms.ComboBox();
             this.importationOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pictureOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.pitScoutingDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.scoutingTabPage.SuspendLayout();
@@ -2221,6 +2221,7 @@
             this.matchBreakDownCommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownCommentsTextBox.Location = new System.Drawing.Point(252, 626);
             this.matchBreakDownCommentsTextBox.Name = "matchBreakDownCommentsTextBox";
+            this.matchBreakDownCommentsTextBox.ReadOnly = true;
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakDownCommentsTextBox, 3);
             this.matchBreakDownCommentsTextBox.Size = new System.Drawing.Size(492, 93);
             this.matchBreakDownCommentsTextBox.TabIndex = 9;
@@ -4123,6 +4124,13 @@
             this.matchScoutingDataToolStripMenuItem1.Text = "Match Scouting Data";
             this.matchScoutingDataToolStripMenuItem1.Click += new System.EventHandler(this.matchScoutingDataToolStripMenuItem1_Click);
             // 
+            // pitScoutingDataToolStripMenuItem1
+            // 
+            this.pitScoutingDataToolStripMenuItem1.Name = "pitScoutingDataToolStripMenuItem1";
+            this.pitScoutingDataToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.pitScoutingDataToolStripMenuItem1.Text = "Pit Scouting Data";
+            this.pitScoutingDataToolStripMenuItem1.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem1_Click);
+            // 
             // gameManualToolStripMenuItem
             // 
             this.gameManualToolStripMenuItem.Name = "gameManualToolStripMenuItem";
@@ -4156,13 +4164,6 @@
             // 
             this.pictureOpenFileDialog.FileName = "openFileDialog1";
             this.pictureOpenFileDialog.Filter = "Image files | *.jpg";
-            // 
-            // pitScoutingDataToolStripMenuItem1
-            // 
-            this.pitScoutingDataToolStripMenuItem1.Name = "pitScoutingDataToolStripMenuItem1";
-            this.pitScoutingDataToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
-            this.pitScoutingDataToolStripMenuItem1.Text = "Pit Scouting Data";
-            this.pitScoutingDataToolStripMenuItem1.Click += new System.EventHandler(this.pitScoutingDataToolStripMenuItem1_Click);
             // 
             // RecycleRush_Northbay
             // 

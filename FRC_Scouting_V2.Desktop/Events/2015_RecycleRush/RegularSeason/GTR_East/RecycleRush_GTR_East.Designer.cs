@@ -2093,6 +2093,7 @@
             this.matchBreakDownCommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownCommentsTextBox.Location = new System.Drawing.Point(249, 587);
             this.matchBreakDownCommentsTextBox.Name = "matchBreakDownCommentsTextBox";
+            this.matchBreakDownCommentsTextBox.ReadOnly = true;
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakDownCommentsTextBox, 3);
             this.matchBreakDownCommentsTextBox.Size = new System.Drawing.Size(486, 95);
             this.matchBreakDownCommentsTextBox.TabIndex = 9;
