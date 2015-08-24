@@ -40,13 +40,6 @@ namespace FRC_Scouting_V2.Information_Forms
 {
     public partial class TeamInformationLookup : GeneralFormTemplate.GeneralFormTemplate
     {
-        private int rookieYear;
-        private string teamLocation;
-        private string teamName;
-        private int teamNumber;
-        private string teamWebsite;
-        private string url;
-
         public TeamInformationLookup()
         {
             InitializeComponent();
@@ -54,39 +47,15 @@ namespace FRC_Scouting_V2.Information_Forms
 
         private void findTeamButton_Click(object sender, EventArgs e)
         {
-            string downloadedData;
-            var wc = new MyWebClient();
-            wc.Headers.Add("X-TBA-App-Id", "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
-            try
-            {
-                url = ("http://www.thebluealliance.com/api/v2/team/frc" + Convert.ToString(teamNumber));
-                downloadedData = (wc.DownloadString(url));
-                var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
+            var teamInformation = TheBlueAlliance.Teams.GetTeamInformation("frc" + teamNumberTextBox.Text);
 
-                teamName = Convert.ToString(deserializedData.nickname);
-                teamNumber = Convert.ToInt16(deserializedData.team_number);
-                teamLocation = Convert.ToString(deserializedData.location);
-                rookieYear = Convert.ToInt32(deserializedData.rookie_year);
-                teamWebsite = Convert.ToString(deserializedData.website);
+            teamNameDisplay.Text = teamInformation.nickname;
+            teamNumberDisplay.Text = Convert.ToString(teamInformation.team_number);
+            teamLocationDisplay.Text = teamInformation.location;
+            teamWebsiteDisplay.Text = teamInformation.website;
+            rookieYearDisplay.Text = Convert.ToString(teamInformation.rookie_year);
 
-                Console.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
-                                  " has been found successfully.");
-                ConsoleWindow.WriteLine("The information for team: " + Convert.ToString(teamNumber) +
-                                        " has been found successfully.");
-            }
-            catch (Exception webError)
-            {
-                Console.WriteLine("Error Message: " + webError.Message);
-                ConsoleWindow.WriteLine("Error Message: " + webError.Message);
-            }
-
-            teamNameDisplay.Text = teamName;
-            teamNumberDisplay.Text = Convert.ToString(teamNumber);
-            teamLocationDisplay.Text = teamLocation;
-            teamWebsiteDisplay.Text = teamWebsite;
-            rookieYearDisplay.Text = Convert.ToString(rookieYear);
-
-            if (teamNumber == 3710)
+            if (teamInformation.team_number == 3710)
             {
                 MessageBox.Show("BEST TEAM EVER! Please invite to your alliance!");
             }
@@ -98,47 +67,6 @@ namespace FRC_Scouting_V2.Information_Forms
             {
                 teamNumberTextBox.Text = ("");
             }
-        }
-
-        private void teamNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (teamNumberTextBox.Text != (""))
-            {
-                teamNumber = Convert.ToInt32(teamNumberTextBox.Text);
-            }
-        }
-
-        private class MyWebClient : WebClient
-        {
-            protected override WebRequest GetWebRequest(Uri uri)
-            {
-                WebRequest w = base.GetWebRequest(uri);
-                w.Timeout = 3000;
-                return w;
-            }
-        }
-
-        public class TeamInformationJSONData
-        {
-            public string country_name { get; set; }
-
-            public string key { get; set; }
-
-            public string locality { get; set; }
-
-            public string location { get; set; }
-
-            public string name { get; set; }
-
-            public string nickname { get; set; }
-
-            public string region { get; set; }
-
-            public int rookie_year { get; set; }
-
-            public int team_number { get; set; }
-
-            public string website { get; set; }
         }
     }
 }

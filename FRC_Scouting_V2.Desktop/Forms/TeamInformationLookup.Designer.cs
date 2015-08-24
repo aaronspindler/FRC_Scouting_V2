@@ -222,7 +222,6 @@
             this.teamNumberTextBox.TabIndex = 15;
             this.teamNumberTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.teamNumberTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.teamNumberTextBox_MouseClick);
-            this.teamNumberTextBox.TextChanged += new System.EventHandler(this.teamNumberTextBox_TextChanged);
             // 
             // findTeamButton
             // 
