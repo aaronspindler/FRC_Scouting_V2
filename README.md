@@ -28,9 +28,9 @@ FRC_Scouting_V2
   - [ ] Overhaul Settings Form
   - [ ] Update Event Information Form
   - [ ] Add Event Schedule Form
-  - [ ] Write Unit Tests for TheBlueAlliance API
+  - [x] Write Unit Tests for TheBlueAlliance API
   - [x] Write Unit Tests for UsefulSnippets
-  - [ ] Convert Winforms Program into WPF Program
+  - [ ] Convert Winforms Program into WPF Program (On Hold)
 
 ### Releases
 For the most up to date release visit
