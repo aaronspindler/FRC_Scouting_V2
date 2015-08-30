@@ -128,8 +128,9 @@
       <HintPath>..\packages\TheBlueAlliance_API.1.0.0\lib\TheBlueAlliance.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UsefulSnippets">
-      <HintPath>..\UsefulSnippets\bin\Debug\UsefulSnippets.dll</HintPath>
+    <Reference Include="UsefulSnippets, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UsefulSnippets.1.0.0\lib\UsefulSnippets.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
