@@ -1,6 +1,6 @@
 language: csharp
 solution: FRC_Scouting_V2.sln
 install:
-  - nuget restore solution-name.sln
+  - nuget restore FRC_Scouting_V2.sln
 mono:
   - latest
