@@ -1,8 +1,6 @@
--language: csharp
--mono:
--  - latest
--solution: FRC_Scouting_V2.sln
--install:
--  - nuget restore FRC_Scouting_V2.sln
--script: 
--  - xbuild /p:Configuration=Release FRC_Scouting.sln
+language: csharp
+solution: FRC_Scouting_V2.sln
+install:
+  - nuget restore solution-name.sln
+mono:
+  - latest
