@@ -1,5 +1,4 @@
 Scope,Project,Namespace,Type,Member,Maintainability Index,Cyclomatic Complexity,Depth of Inheritance,Class Coupling,Lines of Code
-Project,FRC_Events_API (Debug), , , ,100,0,0,0,0
 Project,FRC_Scouting_V2.Desktop (Debug), , , ,61,1034,8,197,17879
 Namespace,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2, , ,62,598,8,169,5691
 Type,FRC_Scouting_V2.Desktop (Debug),FRC_Scouting_V2,Aerial_Assist_Scouting_UI, ,48,67,7,64,1365
@@ -590,6 +589,7 @@ Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,"Gene
 Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,InitializeComponent() : void,37,1,,29,66
 Member,GeneralFormTemplate (Debug),GeneralFormTemplate,GeneralFormTemplate,"timer_Tick(object, EventArgs) : void",91,1,,3,1
 Type,GeneralFormTemplate (Debug),GeneralFormTemplate,Program, ,81,1,1,3,3
+Member,GeneralFormTemplate (Debug),GeneralFormTemplate,Program,Main() : void,81,1,,3,3
 Member,GeneralFormTemplate (Debug),GeneralFormTemplate,Program,Main() : void,81,1,,3,3
 Project,UsefulSnippets (Debug), , , ,80,31,1,27,77
 Namespace,UsefulSnippets (Debug),UsefulSnippets, , ,80,31,1,27,77
