@@ -339,7 +339,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
             }
 
-            if (Home.internetAvailable)
+            if (Network.CheckForInternetConnection())
             {
                 string url = ("http://www.thebluealliance.com/api/v2/team/frc");
                 url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
@@ -369,7 +369,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 teamInformationWebsiteLinkLabel.Text = "";
             }
 
-            if (Home.internetAvailable)
+            if (Network.CheckForInternetConnection())
             {
                 try
                 {
@@ -623,7 +623,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private void matchScoutingDataToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             openFileDialog.InitialDirectory = assemblyPath + "\\Saves\\";
-            if (Home.internetAvailable)
+            if (Network.CheckForInternetConnection())
             {
                 if (MessageBox.Show("The importation of these files can take a long time, are you sure you want to continue?", "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
                 {

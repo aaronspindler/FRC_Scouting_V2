@@ -44,34 +44,9 @@ namespace FRC_Scouting_V2
     //@author xNovax
     public partial class Home : Form
     {
-        //Variables
-        public static Boolean internetAvailable;
-
-        private readonly Thread internetTestTH = new Thread(checkInternet);
-
         public Home()
         {
             InitializeComponent();
-        }
-
-        private static void checkInternet()
-        {
-            while (true)
-            {
-                try
-                {
-                    using (var client = new WebClient())
-                    using (client.OpenRead("http://www.google.com"))
-                    {
-                        internetAvailable = true;
-                    }
-                }
-                catch
-                {
-                    internetAvailable = false;
-                }
-                Thread.Sleep(5000);
-            }
         }
 
         private void eventSelector_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -149,7 +124,6 @@ namespace FRC_Scouting_V2
         private void Home_Load(object sender, EventArgs e)
         {
             ConsoleWindow.WriteLine("Started FRC_Scouting_V2_" + Assembly.GetExecutingAssembly().GetName().Version);
-            internetTestTH.Start();
             timer.Start();
             eventSelector.Items.Add("Aerial Assist | Northbay | 2014");
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
@@ -215,12 +189,12 @@ namespace FRC_Scouting_V2
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
-            internetTestTH.Abort();
+
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (internetAvailable)
+            if (UsefulSnippets.Network.CheckForInternetConnection())
             {
                 isInternetConnectedLabel.Text = ("Internet Connected");
                 isInternetConnectedLabel.ForeColor = Color.DarkGreen;
@@ -228,7 +202,7 @@ namespace FRC_Scouting_V2
             }
             else
             {
-                if (internetAvailable == false)
+                if (UsefulSnippets.Network.CheckForInternetConnection() == false)
                 {
                     isInternetConnectedLabel.Text = ("Internet Not Connected");
                     isInternetConnectedLabel.ForeColor = Color.Red;
