@@ -25,8 +25,12 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
+using FRC_Scouting_V2.Models;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -36,10 +40,6 @@ using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Models;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 using UsefulSnippets;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
@@ -331,7 +331,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             try
             {
                 object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumberArray[teamSelector.SelectedIndex]);
-                teamInformationLogo.Image = (Image) teamImage;
+                teamInformationLogo.Image = (Image)teamImage;
             }
             catch (Exception exception)
             {

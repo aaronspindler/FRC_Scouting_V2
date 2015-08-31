@@ -25,11 +25,11 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
+using FRC_Scouting_V2.Models;
 using System;
 using System.Collections.Generic;
-using FRC_Scouting_V2.Models;
 
 namespace FRC_Scouting_V2
 {
@@ -37,6 +37,7 @@ namespace FRC_Scouting_V2
     {
         //General Information
         public List<RecycleRush_Stack> Stacks = new List<RecycleRush_Stack>();
+
         public string Author { get; set; }
 
         public string TimeCreated { get; set; }

@@ -25,14 +25,11 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
-using System;
-using System.Net;
-using System.Reflection;
-using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
-using Newtonsoft.Json;
+using System;
+using System.Windows.Forms;
 
 //@author xNovax
 

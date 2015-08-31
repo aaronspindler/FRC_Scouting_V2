@@ -25,7 +25,7 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
 using System;
 using System.Collections.Generic;

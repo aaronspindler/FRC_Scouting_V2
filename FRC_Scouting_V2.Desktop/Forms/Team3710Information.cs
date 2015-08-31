@@ -25,7 +25,7 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
 namespace FRC_Scouting_V2
 {

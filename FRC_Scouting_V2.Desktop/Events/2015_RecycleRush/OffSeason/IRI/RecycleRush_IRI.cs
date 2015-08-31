@@ -25,8 +25,12 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
+using FRC_Scouting_V2.Models;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -36,10 +40,6 @@ using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Models;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 using UsefulSnippets;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
@@ -60,10 +60,10 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         };
 
         private readonly List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>();
-        private byte[] Front_Picture = {};
-        private byte[] Left_Isometric_Picture = {};
-        private byte[] Left_Side_Picture = {};
-        private byte[] Other_Picture = {};
+        private byte[] Front_Picture = { };
+        private byte[] Left_Isometric_Picture = { };
+        private byte[] Left_Side_Picture = { };
+        private byte[] Other_Picture = { };
         private string allianceColour = "Unset";
 
         private string currentTeamName;
@@ -323,7 +323,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             try
             {
                 object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumberArray[teamSelector.SelectedIndex]);
-                teamInformationLogo.Image = (Image) teamImage;
+                teamInformationLogo.Image = (Image)teamImage;
             }
             catch (Exception exception)
             {
@@ -958,7 +958,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Front_Picture = br.ReadBytes((int) fs.Length);
+                Front_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -971,7 +971,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Left_Side_Picture = br.ReadBytes((int) fs.Length);
+                Left_Side_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -984,7 +984,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Left_Isometric_Picture = br.ReadBytes((int) fs.Length);
+                Left_Isometric_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -997,7 +997,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Other_Picture = br.ReadBytes((int) fs.Length);
+                Other_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -1007,7 +1007,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             try
             {
                 string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 string mySQLCommantText = String.Format("SELECT COUNT(*) FROM RecycleRush_IRI_Pits WHERE Team_Number={0}", teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))

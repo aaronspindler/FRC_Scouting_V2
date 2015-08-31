@@ -25,29 +25,12 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
-//Copyright (c) 2014 FRC_Scouting_V2
-
-//Permission is hereby granted, free of charge, to any person obtaining a copy
-//of this software and associated documentation files (the "Software"), to deal
-//in the Software without restriction, including without limitation the rights
-//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//copies of the Software, and to permit persons to whom the Software is
-//furnished to do so, subject to the following conditions:
-
-//The above copyright notice and this permission notice shall be included in all
-//copies or substantial portions of the Software.
-
-//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//SOFTWARE.
-//===============================================================================
-
+using FRC_Scouting_V2.Models;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -57,10 +40,6 @@ using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Models;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 using UsefulSnippets;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
@@ -87,10 +66,10 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         };
 
         private readonly List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>();
-        private byte[] Front_Picture = {};
-        private byte[] Left_Isometric_Picture = {};
-        private byte[] Left_Side_Picture = {};
-        private byte[] Other_Picture = {};
+        private byte[] Front_Picture = { };
+        private byte[] Left_Isometric_Picture = { };
+        private byte[] Left_Side_Picture = { };
+        private byte[] Other_Picture = { };
         private string allianceColour = "Unset";
 
         private string currentTeamName;
@@ -364,7 +343,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             try
             {
                 object teamImage = Resources.ResourceManager.GetObject("FRC" + teamNumberArray[teamSelector.SelectedIndex]);
-                teamInformationLogo.Image = (Image) teamImage;
+                teamInformationLogo.Image = (Image)teamImage;
             }
             catch (Exception exception)
             {
@@ -962,7 +941,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Front_Picture = br.ReadBytes((int) fs.Length);
+                Front_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -975,7 +954,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Left_Side_Picture = br.ReadBytes((int) fs.Length);
+                Left_Side_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -988,7 +967,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Left_Isometric_Picture = br.ReadBytes((int) fs.Length);
+                Left_Isometric_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -1001,7 +980,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 var fs = new FileStream(fileLoc, FileMode.Open, FileAccess.Read);
                 var br = new BinaryReader(fs);
-                Other_Picture = br.ReadBytes((int) fs.Length);
+                Other_Picture = br.ReadBytes((int)fs.Length);
             }
         }
 
@@ -1017,7 +996,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             try
             {
                 string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
                 string mySQLCommantText = String.Format("SELECT COUNT(*) FROM RecycleRush_Northbay_Pits WHERE Team_Number={0}", teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))

@@ -25,15 +25,15 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
+using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Information_Forms
 {

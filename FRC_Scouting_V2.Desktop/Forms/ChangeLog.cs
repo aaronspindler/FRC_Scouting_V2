@@ -25,12 +25,12 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
+using Octokit;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Octokit;
 
 namespace FRC_Scouting_V2.Information_Forms
 {

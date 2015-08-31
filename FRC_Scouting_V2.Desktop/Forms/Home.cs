@@ -25,19 +25,16 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
-using System;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Net;
-using System.Reflection;
-using System.Threading;
-using System.Windows.Forms;
 using FRC_Scouting_V2.Events._2015_RecycleRush;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
+using System;
+using System.Diagnostics;
+using System.Drawing;
+using System.Reflection;
+using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
 {
@@ -54,58 +51,62 @@ namespace FRC_Scouting_V2
             switch (eventSelector.SelectedIndex)
             {
                 case 0:
-                {
-                    var aaNorthbay2014 = new AerialAssist_Northbay();
-                    aaNorthbay2014.Show();
-
-                    if (Settings.Default.minimizeHomeWentEventLoads)
                     {
-                        WindowState = FormWindowState.Minimized;
+                        var aaNorthbay2014 = new AerialAssist_Northbay();
+                        aaNorthbay2014.Show();
+
+                        if (Settings.Default.minimizeHomeWentEventLoads)
+                        {
+                            WindowState = FormWindowState.Minimized;
+                        }
                     }
-                }
                     break;
+
                 case 1:
-                {
-                    var aaRahChaCha2014 = new AerialAssist_RahChaCha();
-                    aaRahChaCha2014.Show();
-
-                    if (Settings.Default.minimizeHomeWentEventLoads)
                     {
-                        WindowState = FormWindowState.Minimized;
+                        var aaRahChaCha2014 = new AerialAssist_RahChaCha();
+                        aaRahChaCha2014.Show();
+
+                        if (Settings.Default.minimizeHomeWentEventLoads)
+                        {
+                            WindowState = FormWindowState.Minimized;
+                        }
                     }
-                }
                     break;
+
                 case 2:
-                {
-                    var rrgtre = new RecycleRush_GTR_East();
-                    rrgtre.Show();
-
-                    if (Settings.Default.minimizeHomeWentEventLoads)
                     {
-                        WindowState = FormWindowState.Minimized;
+                        var rrgtre = new RecycleRush_GTR_East();
+                        rrgtre.Show();
+
+                        if (Settings.Default.minimizeHomeWentEventLoads)
+                        {
+                            WindowState = FormWindowState.Minimized;
+                        }
                     }
-                }
                     break;
+
                 case 3:
-                {
-                    var rrnb = new RecycleRush_Northbay();
-                    rrnb.Show();
+                    {
+                        var rrnb = new RecycleRush_Northbay();
+                        rrnb.Show();
 
-                    if (Settings.Default.minimizeHomeWentEventLoads)
-                    {
-                        WindowState = FormWindowState.Minimized;
+                        if (Settings.Default.minimizeHomeWentEventLoads)
+                        {
+                            WindowState = FormWindowState.Minimized;
+                        }
                     }
-                }
                     break;
+
                 case 4:
-                {
-                    var rriri = new RecycleRush_IRI();
-                    rriri.Show();
-                    if (Settings.Default.minimizeHomeWentEventLoads)
                     {
-                        WindowState = FormWindowState.Minimized;
+                        var rriri = new RecycleRush_IRI();
+                        rriri.Show();
+                        if (Settings.Default.minimizeHomeWentEventLoads)
+                        {
+                            WindowState = FormWindowState.Minimized;
+                        }
                     }
-                }
                     break;
             }
         }
@@ -189,7 +190,6 @@ namespace FRC_Scouting_V2
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
-
         }
 
         private void timer_Tick(object sender, EventArgs e)

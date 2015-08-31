@@ -25,14 +25,14 @@
 //SOFTWARE.
 //===============================================================================
 
-#endregion
+#endregion License
 
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using UsefulSnippets;
 
 namespace FRC_Scouting_V2.UIs
@@ -42,6 +42,7 @@ namespace FRC_Scouting_V2.UIs
     {
         //Variables
         private int autoBallPickup;
+
         private int autoBallPickupMiss;
         private int autoHighGoal;
         private int autoHighMiss;
@@ -411,7 +412,7 @@ namespace FRC_Scouting_V2.UIs
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
+                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
                 conn.Open();
 
                 //Checking if the connection is successful
