@@ -224,8 +224,7 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
-            var Properties = new PropertiesForm();
-            //Properties.Show();
+
         }
     }
 }
