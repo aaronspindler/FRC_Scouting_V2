@@ -1,6 +1,6 @@
 ﻿namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
-    partial class RecycleRush_Fall_Fiesta
+    partial class RecycleRush_Fall_Fiesta_Senior
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleRush_Fall_Fiesta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecycleRush_Fall_Fiesta_Senior));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.scoutingTabPage = new System.Windows.Forms.TabPage();
@@ -3907,7 +3907,7 @@
             this.pictureOpenFileDialog.FileName = "openFileDialog1";
             this.pictureOpenFileDialog.Filter = "Image files | *.jpg";
             // 
-            // RecycleRush_Fall_Fiesta
+            // RecycleRush_Fall_Fiesta_Senior
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -3915,10 +3915,10 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "RecycleRush_Fall_Fiesta";
+            this.Name = "RecycleRush_Fall_Fiesta_Senior";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RecycleRush | Fall Fiesta | 2015";
-            this.Load += new System.EventHandler(this.RecycleRush_Fall_Fiesta_Load);
+            this.Text = "RecycleRush | Fall Fiesta - Senior | 2015";
+            this.Load += new System.EventHandler(this.RecycleRush_Fall_Fiesta_Senior_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

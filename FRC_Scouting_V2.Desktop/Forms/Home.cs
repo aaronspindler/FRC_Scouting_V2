@@ -110,8 +110,18 @@ namespace FRC_Scouting_V2
                     break;
                 case 5:
                     {
-                        var rrff = new RecycleRush_Fall_Fiesta();
-                        rrff.Show();
+                        var rrffs = new RecycleRush_Fall_Fiesta_Senior();
+                        rrffs.Show();
+                        if (Settings.Default.minimizeHomeWentEventLoads)
+                        {
+                            WindowState = FormWindowState.Minimized;
+                        }
+                    }
+                    break;
+                case 6:
+                    {
+                        var rrffj = new RecycleRush_Fall_Fiesta_Junior();
+                        rrffj.Show();
                         if (Settings.Default.minimizeHomeWentEventLoads)
                         {
                             WindowState = FormWindowState.Minimized;
@@ -141,7 +151,8 @@ namespace FRC_Scouting_V2
             eventSelector.Items.Add("RecycleRush | GTR-East | 2015");
             eventSelector.Items.Add("RecycleRush | Northbay | 2015");
             eventSelector.Items.Add("RecycleRush | IRI | 2015");
-            eventSelector.Items.Add("RecycleRush | Fall Fiesta | 2015");
+            eventSelector.Items.Add("RecycleRush | Fall Fiesta - Senior | 2015");
+            eventSelector.Items.Add("RecycleRush | Fall Fiesta - Junior | 2015");
 
             if (Settings.Default.firstTimeLoad)
             {

@@ -44,7 +44,7 @@ using UsefulSnippets;
 
 namespace FRC_Scouting_V2.Events._2015_RecycleRush
 {
-    public partial class RecycleRush_Fall_Fiesta : Form
+    public partial class RecycleRush_Fall_Fiesta_Junior : Form
     {
         private readonly string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
         private readonly List<RecycleRush_Stack> matchStacks = new List<RecycleRush_Stack>();
@@ -74,7 +74,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private int startingX;
         private int startingY;
 
-        public RecycleRush_Fall_Fiesta()
+        public RecycleRush_Fall_Fiesta_Junior()
         {
             InitializeComponent();
         }
@@ -82,7 +82,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         private void scoutingSubmitButton_Click(object sender, EventArgs e)
         {
             scoutingSubmitButton.Enabled = false;
-            Program.selectedEventName = "RecycleRush_Fall_Fiesta";
+            Program.selectedEventName = "RecycleRush_Fall_Fiesta_Junior";
 
             var match = new RecycleRush_Scout_Match
             {
@@ -134,7 +134,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Matches");
                 string jsonText = JsonConvert.SerializeObject(match, Formatting.Indented);
-                string matchLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Matches\\RecycleRush_Fall_Fiesta_" + Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value) + "_" + currentTeamName + ".json");
+                string matchLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Matches\\RecycleRush_Fall_Fiesta_Junior_" + Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value) + "_" + currentTeamName + ".json");
                 File.WriteAllText(matchLocation, jsonText);
             }
             catch (Exception exception)
@@ -149,7 +149,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 conn.Open();
                 MySqlCommand cmd = conn.CreateCommand();
-                string commandText = String.Format("Insert into RecycleRush_Fall_Fiesta_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
+                string commandText = String.Format("Insert into RecycleRush_Fall_Fiesta_Junior_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
                 cmd.CommandText = commandText;
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -368,7 +368,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                     MySqlCommand cmd = conn.CreateCommand();
                     MySqlDataReader reader;
-                    cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Fall_Fiesta_Matches WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
+                    cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Fall_Fiesta_Junior_Matches WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
                     conn.Open();
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
@@ -430,7 +430,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                     MySqlCommand cmd = conn.CreateCommand();
                     MySqlDataReader reader;
-                    cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Fall_Fiesta_Pits WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
+                    cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Fall_Fiesta_Junior_Pits WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
                     conn.Open();
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
@@ -746,7 +746,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                                 conn.Open();
                                 MySqlCommand cmd = conn.CreateCommand();
-                                string commandText = String.Format("Insert into RecycleRush_Fall_Fiesta_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
+                                string commandText = String.Format("Insert into RecycleRush_Fall_Fiesta_Junior_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
                                 cmd.CommandText = commandText;
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
@@ -800,7 +800,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Pits");
                 string jsonText = JsonConvert.SerializeObject(pitScout, Formatting.Indented);
-                string pitLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Pits\\RecycleRush_Fall_Fiesta_" + currentTeamName + ".json");
+                string pitLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Pits\\RecycleRush_Fall_Fiesta_Junior_" + currentTeamName + ".json");
                 File.WriteAllText(pitLocation, jsonText);
             }
             catch (Exception exception)
@@ -819,7 +819,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     {
                         var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                         conn.Open();
-                        string commandText = string.Format("DELETE FROM RecycleRush_Fall_Fiesta_Pits WHERE `Team_Number`='{0}';", currentTeamNumber);
+                        string commandText = string.Format("DELETE FROM RecycleRush_Fall_Fiesta_Junior_Pits WHERE `Team_Number`='{0}';", currentTeamNumber);
                         var cmd = new MySqlCommand(commandText, conn);
                         cmd.ExecuteNonQuery();
                         conn.Close();
@@ -834,7 +834,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 using (var con = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString()))
                 {
-                    string query = "INSERT INTO `RecycleRush_Fall_Fiesta_Pits`(`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@UniqueID,@Author,@Time_Created,@Team_Number,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
+                    string query = "INSERT INTO `RecycleRush_Fall_Fiesta_Junior_Pits`(`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@UniqueID,@Author,@Time_Created,@Team_Number,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
                     using (var cmd = new MySqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@UniqueID", pitScout.UniqueID);
@@ -880,7 +880,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 MySqlCommand cmd = conn.CreateCommand();
                 MySqlDataReader reader;
-                cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Fall_Fiesta_Pits WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
+                cmd.CommandText = String.Format("SELECT * FROM RecycleRush_Fall_Fiesta_Junior_Pits WHERE Team_Number = '{0}'", Program.selectedTeamNumber);
                 conn.Open();
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -1009,7 +1009,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
                 var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
 
-                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM RecycleRush_Fall_Fiesta_Pits WHERE Team_Number={0}", teamNumber);
+                string mySQLCommantText = String.Format("SELECT COUNT(*) FROM RecycleRush_Fall_Fiesta_Junior_Pits WHERE Team_Number={0}", teamNumber);
                 using (var cmd = new MySqlCommand(mySQLCommantText, conn))
                 {
                     conn.Open();
@@ -1078,9 +1078,9 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
         }
 
-        private void RecycleRush_Fall_Fiesta_Load(object sender, EventArgs e)
+        private void RecycleRush_Fall_Fiesta_Junior_Load(object sender, EventArgs e)
         {
-            Program.selectedEventName = "RecycleRush_Fall_Fiesta";
+            Program.selectedEventName = "RecycleRush_Fall_Fiesta_Junior";
             scoutingFieldTypeSelectorComboBox.SelectedIndex = 0;
             matchBreakdownFieldTypeComboBox.SelectedIndex = 0;
 
@@ -1107,7 +1107,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                                 conn.Open();
                                 MySqlCommand cmd = conn.CreateCommand();
-                                string commandText = String.Format("Insert into RecycleRush_Fall_Fiesta_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
+                                string commandText = String.Format("Insert into RecycleRush_Fall_Fiesta_Junior_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');", (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set), Convert.ToInt16(match.Auto_Tote_Set), Convert.ToInt16(match.Auto_Bin_Set), Convert.ToInt16(match.Auto_Stacked_Tote_Set), match.Auto_Acquired_Step_Bins, match.Auto_Fouls, Convert.ToInt16(match.Auto_Did_Nothing), Convert.ToInt16(match.Tele_Tote_Pickup_Upright), Convert.ToInt16(match.Tele_Tote_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Tote_Pickup_Sideways), Convert.ToInt16(match.Tele_Bin_Pickup_Upright), Convert.ToInt16(match.Tele_Bin_Pickup_Upside_Down), Convert.ToInt16(match.Tele_Bin_Pickup_Sideways), Convert.ToInt16(match.Tele_Human_Station_Load_Totes), Convert.ToInt16(match.Tele_Human_Station_Stack_Totes), Convert.ToInt16(match.Tele_Human_Station_Insert_Litter), Convert.ToInt16(match.Tele_Human_Throwing_Litter), Convert.ToInt16(match.Tele_Pushed_Litter_To_Landfill), match.Tele_Fouls, match.Comments, JsonConvert.SerializeObject(match.Stacks), Convert.ToInt16(match.Coopertition_Set), Convert.ToInt16(match.Coopertition_Stack), match.Final_Score_Red, match.Final_Score_Blue, match.Driver_Rating);
                                 cmd.CommandText = commandText;
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
@@ -1146,7 +1146,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 {
                                     var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                                     conn.Open();
-                                    string commandText = string.Format("DELETE FROM RecycleRush_Fall_Fiesta_Pits WHERE `Team_Number`='{0}';", pitScout.Team_Number);
+                                    string commandText = string.Format("DELETE FROM RecycleRush_Fall_Fiesta_Junior_Pits WHERE `Team_Number`='{0}';", pitScout.Team_Number);
                                     var cmd = new MySqlCommand(commandText, conn);
                                     cmd.ExecuteNonQuery();
                                     conn.Close();
@@ -1162,7 +1162,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             {
                                 using (var con = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString()))
                                 {
-                                    string query = "INSERT INTO `RecycleRush_Fall_Fiesta_Pits`(`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@UniqueID,@Author,@Time_Created,@Team_Number,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
+                                    string query = "INSERT INTO `RecycleRush_Fall_Fiesta_Junior_Pits`(`UniqueID`,`Author`,`Time_Created`,`Team_Number`,`Team_Name`,`Drive_Train`,`Number_Of_Robots`,`Can_It_Manipulate_Totes`,`Can_It_Manipulate_Bins`,`Can_It_Manipulate_Litter`,`Needs_Special_Starting_Position`,`Special_Starting_Position`,`Max_Stack_Height`,`Max_Bin_On_Stack_Height`,`Human_Tote_Loading`,`Human_Litter_Loading`,`Human_Litter_Throwing`,`Does_It_have_A_Ramp`,`Comments`,`Front_Picture`,`Left_Side_Picture`,`Left_Isometric_Picture`,`Other_Picture`)VALUES(@UniqueID,@Author,@Time_Created,@Team_Number,@Team_Name,@Drive_Train,@Number_Of_Robots,@Can_It_Manipulate_Totes,@Can_It_Manipulate_Bins,@Can_It_Manipulate_Litter,@Needs_Special_Starting_Position,@Special_Starting_Position,@Max_Stack_Height,@Max_Bin_On_Stack_Height,@Human_Tote_Loading,@Human_Litter_Loading,@Human_Litter_Throwing,@Does_It_have_A_Ramp,@Comments,@Front_Picture,@Left_Side_Picture,@Left_Isometric_Picture,@Other_Picture);";
                                     using (var cmd = new MySqlCommand(query, con))
                                     {
                                         cmd.Parameters.AddWithValue("@UniqueID", pitScout.UniqueID);

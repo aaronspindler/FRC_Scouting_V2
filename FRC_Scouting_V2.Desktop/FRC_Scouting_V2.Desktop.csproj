@@ -134,11 +134,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta.cs">
+    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Junior.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta.Designer.cs">
-      <DependentUpon>RecycleRush_Fall_Fiesta.cs</DependentUpon>
+    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Junior.Designer.cs">
+      <DependentUpon>RecycleRush_Fall_Fiesta_Junior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Senior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Senior.Designer.cs">
+      <DependentUpon>RecycleRush_Fall_Fiesta_Senior.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ConsoleWindow.cs">
       <SubType>Form</SubType>
@@ -265,8 +271,11 @@
     <Compile Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI_New.Designer.cs">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta.resx">
-      <DependentUpon>RecycleRush_Fall_Fiesta.cs</DependentUpon>
+    <EmbeddedResource Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Junior.resx">
+      <DependentUpon>RecycleRush_Fall_Fiesta_Junior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Senior.resx">
+      <DependentUpon>RecycleRush_Fall_Fiesta_Senior.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
