@@ -3917,7 +3917,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "RecycleRush_Fall_Fiesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RecycleRush | IRI | 2015";
+            this.Text = "RecycleRush | Fall Fiesta | 2015";
             this.Load += new System.EventHandler(this.RecycleRush_Fall_Fiesta_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
