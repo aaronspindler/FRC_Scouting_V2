@@ -134,6 +134,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta.Designer.cs">
+      <DependentUpon>RecycleRush_Fall_Fiesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ConsoleWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     <Compile Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI_New.Designer.cs">
       <DependentUpon>Aerial_Assist_Scouting_UI_New.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta.resx">
+      <DependentUpon>RecycleRush_Fall_Fiesta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
     </EmbeddedResource>
