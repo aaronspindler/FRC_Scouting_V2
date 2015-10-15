@@ -51,12 +51,12 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
         private readonly string[] teamNameArray =
         {
-            "Bomb Squad", "The Rocketeers", "Team RUSH", "Killer Bees", "Delphi E.L.I.T.E.", "The HOT Team", "Truck Town Thunder", "Team R.O.B.O.T.I.C.S.", "WildStang", "Robonauts", "NUTRONS", "Penn Robotics", "Robowranglers", "The Children of the Swamp", "Cyber Knights", "ThunderChickens", "TechFire", "Hammerheads", "The Pink Team", "Cyber Blue", "Adambots", "LuNaTeCs", "The Beach Bots", "G.R.R. (Greater Rochester Robotics)", "Hawaiian Kids", "RoboCats", "Sparky 384", "Las Guerrillas", "Frog Force", "Robostangs", "CRyptonite", "Shark Attack", "Digital Goats", "Bedford Express", "Kil-A-Bytes", "Simbotics", "Vulcan Robotics", "RUNNYMEDE ROBOTICS", "Inverse Paradox", "Up-A-Creek Robotics", "Winnovation", "Sab-BOT-age", "Hamosad", "Raptors", "PhyXTGears", "Team Driven", "Red Alert", "Argos", "S.W.A.T.", "Llano Estacado RoboRaiders", "The MidKnight Inventors", "OP Robotics", "Team Tators", "EngiNERDs", "Gear It Forward", "Team Appreciate", "Talon Robotics", "Duluth East Daredevils", "Nemesis", "MARS", "Wave Robotics", "DM High Voltage", "ElkLogics", "Ranger Robotics", "The Captains", "The East Ridge Robotic Ominous RaptorS - the ERRORS", "The Flying Toasters", "HVA RoHAWKtics", "MakeShift Robotics", "MARS/ WARS", "CyberCavs", "Classified Robotics", "Robot Raiders", "Stellar Robotics"
+            "Woburn Robotics", "The Coyotes", "SWAT","Kinetic Knights","Warp7","Wildcats","East York Cybernetics","Theory 6","Runnymede Robotics","Inverse Paradox","Black Scots","Cybergnomes","OP Robotics","RAMAZOIDZ","DM High Voltage","NACI Robotics","Cyber Falcons","Retro-Rams","MaxTech Robotics","W.A.F.F.L.E.S.","Cybercavs"
         };
 
         private readonly int[] teamNumberArray =
         {
-            16, 20, 27, 33, 48, 67, 68, 107, 111, 118, 125, 135, 148, 179, 195, 217, 225, 226, 233, 234, 245, 316, 330, 340, 359, 379, 384, 469, 503, 548, 624, 744, 829, 1023, 1024, 1114, 1218, 1310, 1325, 1619, 1625, 1640, 1657, 1711, 1720, 1730, 1741, 1756, 1806, 1817, 1923, 2056, 2122, 2337, 2338, 2468, 2502, 2512, 2590, 2614, 2826, 2852, 2867, 3015, 3098, 3130, 3641, 3824, 4039, 4143, 4678, 5188, 5254, 5413
+            188,610,771,781,865,886,907,1241,1310,1325,1815,2013,2056,2185,2852,2935,3710,4001,4343,4476,4678
         };
 
         private readonly List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>();
