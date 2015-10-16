@@ -12,7 +12,7 @@ namespace FRC_Scouting_V2.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -109,7 +109,7 @@ namespace FRC_Scouting_V2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ZxwghMRiBbD5LsxHavQp/A==")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ErcM2zrlEHkcxMd5e6G2hA==")]
         public string databasePassword {
             get {
                 return ((string)(this["databasePassword"]));
@@ -121,7 +121,7 @@ namespace FRC_Scouting_V2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("xnovax_robotics_test")]
+        [global::System.Configuration.DefaultSettingValueAttribute("xnovax_robotics")]
         public string databaseName {
             get {
                 return ((string)(this["databaseName"]));
