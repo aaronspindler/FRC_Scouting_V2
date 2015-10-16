@@ -54,11 +54,6 @@ namespace FRC_Scouting_V2
                     {
                         var aaNorthbay2014 = new AerialAssist_Northbay();
                         aaNorthbay2014.Show();
-
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
                     }
                     break;
 
@@ -66,11 +61,6 @@ namespace FRC_Scouting_V2
                     {
                         var aaRahChaCha2014 = new AerialAssist_RahChaCha();
                         aaRahChaCha2014.Show();
-
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
                     }
                     break;
 
@@ -78,11 +68,6 @@ namespace FRC_Scouting_V2
                     {
                         var rrgtre = new RecycleRush_GTR_East();
                         rrgtre.Show();
-
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
                     }
                     break;
 
@@ -90,11 +75,6 @@ namespace FRC_Scouting_V2
                     {
                         var rrnb = new RecycleRush_Northbay();
                         rrnb.Show();
-
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
                     }
                     break;
 
@@ -102,32 +82,25 @@ namespace FRC_Scouting_V2
                     {
                         var rriri = new RecycleRush_IRI();
                         rriri.Show();
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
                     }
                     break;
                 case 5:
                     {
-                        var rrffs = new RecycleRush_Fall_Fiesta_Senior();
-                        rrffs.Show();
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
+                        var rrffj = new RecycleRush_Fall_Fiesta_Junior();
+                        rrffj.Show();
                     }
                     break;
                 case 6:
                     {
-                        var rrffj = new RecycleRush_Fall_Fiesta_Junior();
-                        rrffj.Show();
-                        if (Settings.Default.minimizeHomeWentEventLoads)
-                        {
-                            WindowState = FormWindowState.Minimized;
-                        }
+                        var rrffs = new RecycleRush_Fall_Fiesta_Senior();
+                        rrffs.Show();
                     }
                     break;
+            }
+
+            if (Settings.Default.minimizeHomeWentEventLoads)
+            {
+                WindowState = FormWindowState.Minimized;
             }
         }
 
@@ -151,8 +124,8 @@ namespace FRC_Scouting_V2
             eventSelector.Items.Add("RecycleRush | GTR-East | 2015");
             eventSelector.Items.Add("RecycleRush | Northbay | 2015");
             eventSelector.Items.Add("RecycleRush | IRI | 2015");
-            eventSelector.Items.Add("RecycleRush | Fall Fiesta - Senior | 2015");
             eventSelector.Items.Add("RecycleRush | Fall Fiesta - Junior | 2015");
+            eventSelector.Items.Add("RecycleRush | Fall Fiesta - Senior | 2015");
 
             if (Settings.Default.firstTimeLoad)
             {
