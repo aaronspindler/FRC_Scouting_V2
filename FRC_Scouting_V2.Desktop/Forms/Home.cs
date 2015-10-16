@@ -27,14 +27,15 @@
 
 #endregion License
 
-using FRC_Scouting_V2.Events._2015_RecycleRush;
-using FRC_Scouting_V2.Information_Forms;
-using FRC_Scouting_V2.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Events._2015_RecycleRush;
+using FRC_Scouting_V2.Information_Forms;
+using FRC_Scouting_V2.Properties;
+using UsefulSnippets;
 
 namespace FRC_Scouting_V2
 {
@@ -51,50 +52,50 @@ namespace FRC_Scouting_V2
             switch (eventSelector.SelectedIndex)
             {
                 case 0:
-                    {
-                        var aaNorthbay2014 = new AerialAssist_Northbay();
-                        aaNorthbay2014.Show();
-                    }
+                {
+                    var aaNorthbay2014 = new AerialAssist_Northbay();
+                    aaNorthbay2014.Show();
+                }
                     break;
 
                 case 1:
-                    {
-                        var aaRahChaCha2014 = new AerialAssist_RahChaCha();
-                        aaRahChaCha2014.Show();
-                    }
+                {
+                    var aaRahChaCha2014 = new AerialAssist_RahChaCha();
+                    aaRahChaCha2014.Show();
+                }
                     break;
 
                 case 2:
-                    {
-                        var rrgtre = new RecycleRush_GTR_East();
-                        rrgtre.Show();
-                    }
+                {
+                    var rrgtre = new RecycleRush_GTR_East();
+                    rrgtre.Show();
+                }
                     break;
 
                 case 3:
-                    {
-                        var rrnb = new RecycleRush_Northbay();
-                        rrnb.Show();
-                    }
+                {
+                    var rrnb = new RecycleRush_Northbay();
+                    rrnb.Show();
+                }
                     break;
 
                 case 4:
-                    {
-                        var rriri = new RecycleRush_IRI();
-                        rriri.Show();
-                    }
+                {
+                    var rriri = new RecycleRush_IRI();
+                    rriri.Show();
+                }
                     break;
                 case 5:
-                    {
-                        var rrffj = new RecycleRush_Fall_Fiesta_Junior();
-                        rrffj.Show();
-                    }
+                {
+                    var rrffj = new RecycleRush_Fall_Fiesta_Junior();
+                    rrffj.Show();
+                }
                     break;
                 case 6:
-                    {
-                        var rrffs = new RecycleRush_Fall_Fiesta_Senior();
-                        rrffs.Show();
-                    }
+                {
+                    var rrffs = new RecycleRush_Fall_Fiesta_Senior();
+                    rrffs.Show();
+                }
                     break;
             }
 
@@ -129,7 +130,9 @@ namespace FRC_Scouting_V2
 
             if (Settings.Default.firstTimeLoad)
             {
-                if (MessageBox.Show("Do you want to modify your database settings right now?", "Database Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (
+                    MessageBox.Show("Do you want to modify your database settings right now?", "Database Settings",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     var settingsPage = new MainSettings();
                     settingsPage.Show();
@@ -191,7 +194,7 @@ namespace FRC_Scouting_V2
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (UsefulSnippets.Network.CheckForInternetConnection())
+            if (Network.CheckForInternetConnection())
             {
                 isInternetConnectedLabel.Text = ("Internet Connected");
                 isInternetConnectedLabel.ForeColor = Color.DarkGreen;
@@ -199,7 +202,7 @@ namespace FRC_Scouting_V2
             }
             else
             {
-                if (UsefulSnippets.Network.CheckForInternetConnection() == false)
+                if (Network.CheckForInternetConnection() == false)
                 {
                     isInternetConnectedLabel.Text = ("Internet Not Connected");
                     isInternetConnectedLabel.ForeColor = Color.Red;
@@ -221,7 +224,6 @@ namespace FRC_Scouting_V2
 
         private void frcLogoPictureBox_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

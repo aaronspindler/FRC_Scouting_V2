@@ -27,12 +27,12 @@
 
 #endregion License
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using UsefulSnippets;
 
 namespace FRC_Scouting_V2.UIs
@@ -48,7 +48,7 @@ namespace FRC_Scouting_V2.UIs
         private int autoHighMiss;
         private int autoLowGoal;
         private int autoLowMiss;
-        private Boolean autoMovement;
+        private bool autoMovement;
         private string comments;
         private int controlledBallPickup;
         private int controlledBallPickupMiss;
@@ -66,7 +66,7 @@ namespace FRC_Scouting_V2.UIs
         private int pickupFromHuman;
         private int pickupFromHumanMiss;
         private int successfulTruss;
-        private Boolean tableCreated;
+        private bool tableCreated;
         private string teamColour;
         private int totalGoal;
         private int totalGoodControl;
@@ -85,7 +85,7 @@ namespace FRC_Scouting_V2.UIs
 
         public void BlankPanel()
         {
-            Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();
+            var clearPanelGraphics = startingLocationPanel.CreateGraphics();
             clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 370, 252);
             clearPanelGraphics.Dispose();
             PlotInitialLines();
@@ -97,7 +97,7 @@ namespace FRC_Scouting_V2.UIs
             var fineBluePen = new Pen(Color.Blue, 2);
             var fineWhitePen = new Pen(Color.White, 2);
             var fineRedPen = new Pen(Color.Red, 2);
-            Graphics initGraphics = startingLocationPanel.CreateGraphics();
+            var initGraphics = startingLocationPanel.CreateGraphics();
 
             //Drawing square around the outside edge
             initGraphics.DrawRectangle(blackpen, 0, 0, 330, 231);
@@ -195,7 +195,8 @@ namespace FRC_Scouting_V2.UIs
 
             if (commentsTextBox.Text.Contains(";"))
             {
-                Notifications.ErrorOccured("You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
+                Notifications.ErrorOccured(
+                    "You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
             }
         }
 
@@ -307,7 +308,7 @@ namespace FRC_Scouting_V2.UIs
         {
             BlankPanel();
             PlotInitialLines();
-            Graphics g = startingLocationPanel.CreateGraphics();
+            var g = startingLocationPanel.CreateGraphics();
             xStarting = Convert.ToInt32(e.X) - 3;
             yStarting = Convert.ToInt32(e.Y) - 3;
             g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
@@ -408,11 +409,11 @@ namespace FRC_Scouting_V2.UIs
 
             //MySQL Database
             //MySQL Database Connection Info
-            string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
+            var mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
                 //Checking if the connection is successful
@@ -423,15 +424,15 @@ namespace FRC_Scouting_V2.UIs
                 }
 
                 //Creating the MySQLCommand object
-                MySqlCommand cmd = conn.CreateCommand();
+                var cmd = conn.CreateCommand();
 
                 if (tableCreated == false)
                 {
                     //Trying to create the table
                     try
                     {
-                        string createTable =
-                            String.Format(
+                        var createTable =
+                            string.Format(
                                 "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL DEFAULT '0',`TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamName` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Default',`TeamColour` varchar(45) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Not Selected',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighGoal` int(11) NOT NULL DEFAULT '0',`AutoHighMiss` int(11) NOT NULL DEFAULT '0',`AutoLowGoal` int(11) NOT NULL DEFAULT '0',`AutoLowMiss` int(11) NOT NULL DEFAULT '0',`ControlledHighGoal` int(11) NOT NULL DEFAULT '0',`ControlledHighMiss` int(11) NOT NULL DEFAULT '0',`ControlledLowGoal` int(11) NOT NULL DEFAULT '0',`ControlledLowMiss` int(11) NOT NULL DEFAULT '0',`HotGoals` int(11) NOT NULL DEFAULT '0',`HotGoalMiss` int(11) NOT NULL DEFAULT '0',`3AssistGoal` int(11) NOT NULL DEFAULT '0',`3AssistMiss` int(11) NOT NULL DEFAULT '0',`AutoBallPickup` int(11) NOT NULL DEFAULT '0',`AutoBallPickupMiss` int(11) NOT NULL DEFAULT '0',`ControlledBallPickup` int(11) NOT NULL DEFAULT '0',`ControlledBallPickupMiss` int(11) NOT NULL DEFAULT '0',`PickupFromHuman` int(11) NOT NULL DEFAULT '0',`MissedPickupFromHuman` int(11) NOT NULL DEFAULT '0',`PassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`MissedPassToAnotherRobot` int(11) NOT NULL DEFAULT '0',`SuccessfulTruss` int(11) NOT NULL DEFAULT '0',`UnsuccessfulTruss` int(11) NOT NULL DEFAULT '0',`StartingX` int(11) NOT NULL DEFAULT '0',`StartingY` int(11) NOT NULL DEFAULT '0',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',`DriverRating` int(11) NOT NULL DEFAULT '0',`AutoMovement` tinyint(4) NOT NULL DEFAULT '0',`Comments` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
                                 Program.selectedEventName);
                         cmd.CommandText = createTable;
@@ -454,8 +455,8 @@ namespace FRC_Scouting_V2.UIs
                 }
 
                 //Submit data into the database
-                string insertDataString =
-                    String.Format(
+                var insertDataString =
+                    string.Format(
                         "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, DriverRating, AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
                         Program.selectedEventName, (MySQLMethods.GetNumberOfRowsInATable() + 1),
                         Program.selectedTeamNumber, Program.selectedTeamName, teamColour, matchNumber,

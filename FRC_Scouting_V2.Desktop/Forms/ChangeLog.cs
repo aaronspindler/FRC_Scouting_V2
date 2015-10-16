@@ -27,10 +27,9 @@
 
 #endregion License
 
-using Octokit;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
+using Octokit;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
@@ -64,10 +63,12 @@ namespace FRC_Scouting_V2.Information_Forms
             commitListBox.Items.Clear();
             try
             {
-                IReadOnlyList<GitHubCommit> projectCommits = await github.Repository.Commits.GetAll("xNovax", "FRC_Scouting_V2");
-                for (int i = 0; i < projectCommits.Count - 1; i++)
+                var projectCommits = await github.Repository.Commits.GetAll("xNovax", "FRC_Scouting_V2");
+                for (var i = 0; i < projectCommits.Count - 1; i++)
                 {
-                    commitListBox.Items.Add(projectCommits[i].Commit.Author.Date + " | " + projectCommits[i].Commit.Message + " by: " + projectCommits[i].Commit.Author.Name);
+                    commitListBox.Items.Add(projectCommits[i].Commit.Author.Date + " | " +
+                                            projectCommits[i].Commit.Message + " by: " +
+                                            projectCommits[i].Commit.Author.Name);
                 }
                 statusLabel.Text = "Load complete!";
             }

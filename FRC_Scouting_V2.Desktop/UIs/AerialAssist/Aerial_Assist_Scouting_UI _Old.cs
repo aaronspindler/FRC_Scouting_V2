@@ -27,12 +27,12 @@
 
 #endregion License
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
 using UsefulSnippets;
 
 namespace FRC_Scouting_V2
@@ -49,7 +49,7 @@ namespace FRC_Scouting_V2
         private int controlledHighTally;
         private int controlledLowTally;
         private int controlledPickupTally;
-        private Boolean didRobotDie;
+        private bool didRobotDie;
         private int didRobotDieINT;
         private int hotGoalTally;
         private int matchNumber = 1;
@@ -71,7 +71,7 @@ namespace FRC_Scouting_V2
         /// </summary>
         public void BlankPanel()
         {
-            Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();
+            var clearPanelGraphics = startingLocationPanel.CreateGraphics();
             clearPanelGraphics.FillRectangle(Brushes.Silver, 0, 0, 258, 191);
             clearPanelGraphics.Dispose();
             PlotInitialLines();
@@ -80,11 +80,11 @@ namespace FRC_Scouting_V2
         //Getting the number of rows in the table
         public int CountRowsInDatabase()
         {
-            int numberOfRows = 0;
+            var numberOfRows = 0;
             try
             {
-                string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
 
                 using (var cmd = new MySqlCommand("SELECT COUNT(*) FROM " + Program.selectedEventName, conn))
                 {
@@ -111,7 +111,7 @@ namespace FRC_Scouting_V2
             var fineBluePen = new Pen(Color.Blue, 2);
             var fineWhitePen = new Pen(Color.White, 2);
             var fineRedPen = new Pen(Color.Red, 2);
-            Graphics initGraphics = startingLocationPanel.CreateGraphics();
+            var initGraphics = startingLocationPanel.CreateGraphics();
 
             //Drawing square around the outside edge
             initGraphics.DrawRectangle(blackpen, 0, 0, 258, 191);
@@ -455,7 +455,7 @@ namespace FRC_Scouting_V2
         {
             startingLocationPanel.Refresh();
             BlankPanel();
-            Graphics g = startingLocationPanel.CreateGraphics();
+            var g = startingLocationPanel.CreateGraphics();
             xStarting = Convert.ToInt32(e.X) - 3;
             yStarting = Convert.ToInt32(e.Y) - 3;
             g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
@@ -511,11 +511,11 @@ namespace FRC_Scouting_V2
 
             //MySQL Database
             //MySQL Database Connection Info
-            string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
+            var mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
             try
             {
                 //Creating the connection to the database and opening the connection
-                var conn = new MySqlConnection { ConnectionString = mySqlConnectionString };
+                var conn = new MySqlConnection {ConnectionString = mySqlConnectionString};
                 conn.Open();
 
                 //Checking if the connection is successful
@@ -526,13 +526,13 @@ namespace FRC_Scouting_V2
                 }
 
                 //Creating the MySQLCommand object
-                MySqlCommand cmd = conn.CreateCommand();
+                var cmd = conn.CreateCommand();
 
                 //Trying to create the table
                 try
                 {
-                    string createTable =
-                        String.Format(
+                    var createTable =
+                        string.Format(
                             "CREATE TABLE `{0}` (`EntryID` int(11) NOT NULL,`TeamName` varchar(45) NOT NULL DEFAULT 'Default', `TeamNumber` int(11) NOT NULL DEFAULT '0',`TeamColour` varchar(45) NOT NULL DEFAULT 'Default',`MatchNumber` int(11) NOT NULL DEFAULT '0',`AutoHighTally` int(11) NOT NULL DEFAULT '0',`AutoLowTally` int(11) NOT NULL DEFAULT '0',`ControlledHighTally` int(11) NOT NULL DEFAULT '0',`ControlledLowTally` int(11) NOT NULL DEFAULT '0',`HotGoalTally` int(11) NOT NULL DEFAULT '0',`AutoPickup` int(11) NOT NULL DEFAULT '0',`ControlledPickup` int(11) NOT NULL DEFAULT '0',`MissedPickups` int(11) NOT NULL DEFAULT '0',`StartingLocationX` int(11) NOT NULL DEFAULT '0',`StartingLocationY` int(11) NOT NULL DEFAULT '0',`Comments` varchar(45) DEFAULT 'No Comment',`DidRobotDie` tinyint(4) NOT NULL DEFAULT '0',PRIMARY KEY (`EntryID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8",
                             Program.selectedEventName);
                     cmd.CommandText = createTable;
@@ -552,8 +552,8 @@ namespace FRC_Scouting_V2
                 }
 
                 //Submit data into the database
-                string insertDataString =
-                    String.Format(
+                var insertDataString =
+                    string.Format(
                         "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",
                         Program.selectedEventName, (CountRowsInDatabase() + 1),
                         Program.selectedTeamName,

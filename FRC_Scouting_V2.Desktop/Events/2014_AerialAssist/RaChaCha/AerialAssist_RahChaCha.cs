@@ -27,9 +27,6 @@
 
 #endregion License
 
-using FRC_Scouting_V2.Properties;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -39,6 +36,9 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using UsefulSnippets;
 
 namespace FRC_Scouting_V2
@@ -51,10 +51,10 @@ namespace FRC_Scouting_V2
         private readonly double[] _autoHighGoalSuccessRate = new double[2];
         private readonly double[] _autoHighMean = new double[2];
         private readonly double[] _autoHighStandardDeviation = new double[2];
+        private readonly double[] _autolowGoalSuccessRate = new double[2];
         private readonly double[] _autoLowMean = new double[2];
         private readonly double[] _autoLowStandardDeviation = new double[2];
         private readonly double[] _autoMobilitySuccessRate = new double[2];
-        private readonly double[] _autolowGoalSuccessRate = new double[2];
         private readonly double[] _controlledHighMean = new double[2];
         private readonly double[] _controlledHighStandardDeviation = new double[2];
         private readonly double[] _controlledHighSuccessRate = new double[2];
@@ -66,9 +66,9 @@ namespace FRC_Scouting_V2
         private readonly double[] _hotGoalMean = new double[2];
         private readonly double[] _hotGoalStandardDeviation = new double[2];
         private readonly double[] _hotGoalSuccessRate = new double[2];
+        private readonly double[] _pickupsMean = new double[2];
         private readonly double[] _pickupStandardDeviation = new double[2];
         private readonly double[] _pickupSuccessRate = new double[2];
-        private readonly double[] _pickupsMean = new double[2];
         private readonly double[] _successfulTrussMean = new double[2];
         private readonly double[] _survivability = new double[2];
 
@@ -132,8 +132,8 @@ namespace FRC_Scouting_V2
         private int rookieYear;
         private int selectedTeam1;
         private int selectedTeam2;
-        private Boolean team1Selected;
-        private Boolean team2Selected;
+        private bool team1Selected;
+        private bool team2Selected;
         private string teamLocation = ("");
         private string teamName = ("");
         private int teamNumber;
@@ -148,66 +148,66 @@ namespace FRC_Scouting_V2
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
-            var cmd = new MySqlCommand { Connection = conn };
+            var cmd = new MySqlCommand {Connection = conn};
 
-            int numberOfFilesImported = 0;
+            var numberOfFilesImported = 0;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                foreach (string t in openFileDialog.FileNames)
+                foreach (var t in openFileDialog.FileNames)
                 {
                     numberOfFilesImported++;
                     var reader = new StreamReader(t);
 
                     //Bypassing the human readable variables to get to the computer readable portion of the text file
-                    for (int i = 0; i < 30; i++)
+                    for (var i = 0; i < 30; i++)
                     {
                         reader.ReadLine();
                     }
                     int teamNumberImport = Convert.ToInt16(reader.ReadLine());
-                    string teamNameImport = reader.ReadLine();
-                    string teamColour = reader.ReadLine();
-                    int matchNumber = Convert.ToInt32(reader.ReadLine());
-                    int autoHighGoal = Convert.ToInt32(reader.ReadLine());
-                    int autoHighMiss = Convert.ToInt32(reader.ReadLine());
-                    int autoLowGoal = Convert.ToInt32(reader.ReadLine());
-                    int autoLowMiss = Convert.ToInt32(reader.ReadLine());
-                    int controlledHighGoal = Convert.ToInt32(reader.ReadLine());
-                    int controlledHighMiss = Convert.ToInt32(reader.ReadLine());
-                    int controlledLowGoal = Convert.ToInt32(reader.ReadLine());
-                    int controlledLowMiss = Convert.ToInt32(reader.ReadLine());
-                    int hotGoal = Convert.ToInt32(reader.ReadLine());
-                    int missedHotGoal = Convert.ToInt32(reader.ReadLine());
-                    int tripleGoal = Convert.ToInt32(reader.ReadLine());
-                    int tripleMiss = Convert.ToInt32(reader.ReadLine());
-                    int autoBallPickup = Convert.ToInt32(reader.ReadLine());
-                    int autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
-                    int controlledPickup = Convert.ToInt32(reader.ReadLine());
-                    int controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
-                    int pickupFromHuman = Convert.ToInt32(reader.ReadLine());
-                    int missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
-                    int passToOtherBot = Convert.ToInt32(reader.ReadLine());
-                    int missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
-                    int successfulTruss = Convert.ToInt32(reader.ReadLine());
-                    int unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
-                    int startingX = Convert.ToInt32(reader.ReadLine());
-                    int startingY = Convert.ToInt32(reader.ReadLine());
-                    bool didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
+                    var teamNameImport = reader.ReadLine();
+                    var teamColour = reader.ReadLine();
+                    var matchNumber = Convert.ToInt32(reader.ReadLine());
+                    var autoHighGoal = Convert.ToInt32(reader.ReadLine());
+                    var autoHighMiss = Convert.ToInt32(reader.ReadLine());
+                    var autoLowGoal = Convert.ToInt32(reader.ReadLine());
+                    var autoLowMiss = Convert.ToInt32(reader.ReadLine());
+                    var controlledHighGoal = Convert.ToInt32(reader.ReadLine());
+                    var controlledHighMiss = Convert.ToInt32(reader.ReadLine());
+                    var controlledLowGoal = Convert.ToInt32(reader.ReadLine());
+                    var controlledLowMiss = Convert.ToInt32(reader.ReadLine());
+                    var hotGoal = Convert.ToInt32(reader.ReadLine());
+                    var missedHotGoal = Convert.ToInt32(reader.ReadLine());
+                    var tripleGoal = Convert.ToInt32(reader.ReadLine());
+                    var tripleMiss = Convert.ToInt32(reader.ReadLine());
+                    var autoBallPickup = Convert.ToInt32(reader.ReadLine());
+                    var autoBallPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    var controlledPickup = Convert.ToInt32(reader.ReadLine());
+                    var controlledPickupMiss = Convert.ToInt32(reader.ReadLine());
+                    var pickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    var missedPickupFromHuman = Convert.ToInt32(reader.ReadLine());
+                    var passToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    var missedPassToOtherBot = Convert.ToInt32(reader.ReadLine());
+                    var successfulTruss = Convert.ToInt32(reader.ReadLine());
+                    var unsuccessfulTruss = Convert.ToInt32(reader.ReadLine());
+                    var startingX = Convert.ToInt32(reader.ReadLine());
+                    var startingY = Convert.ToInt32(reader.ReadLine());
+                    var didTheRobotDie = Convert.ToBoolean(reader.ReadLine());
                     int driverRating = Convert.ToInt16(reader.ReadLine());
-                    Boolean autoMovement = Convert.ToBoolean(reader.ReadLine());
-                    string comments = Convert.ToString(reader.ReadLine());
+                    var autoMovement = Convert.ToBoolean(reader.ReadLine());
+                    var comments = Convert.ToString(reader.ReadLine());
 
                     if (comments.Contains(";"))
                     {
                         comments = ("");
                     }
 
-                    string testIfFileIsGood = reader.ReadLine();
+                    var testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
                     {
                         if (teamNumberImport == 0)
                         {
-                            int slot = 0;
-                            bool sameTeam = false;
+                            var slot = 0;
+                            var sameTeam = false;
 
                             while (sameTeam == false)
                             {
@@ -224,7 +224,7 @@ namespace FRC_Scouting_V2
                         try
                         {
                             cmd.CommandText =
-                                String.Format(
+                                string.Format(
                                     "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
                                     Program.selectedEventName, (MySQLMethods.GetNumberOfRowsInATable() + 1),
                                     teamNumberImport, teamNameImport, teamColour,
@@ -268,22 +268,22 @@ namespace FRC_Scouting_V2
         private double CalculateStdDev(IEnumerable<double> values)
         {
             double ret = 0;
-            double[] enumerable = values as double[] ?? values.ToArray();
+            var enumerable = values as double[] ?? values.ToArray();
             if (!enumerable.Any()) return ret;
             //Compute the Average
-            double avg = enumerable.Average();
+            var avg = enumerable.Average();
 
             //Perform the Sum of (value-avg)^2
-            double sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
+            var sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
 
             //Put it all together
-            ret = Math.Sqrt((sum) / enumerable.Count() - 1);
+            ret = Math.Sqrt((sum)/enumerable.Count() - 1);
             return ret;
         }
 
         public void GetDataForTeam(int teamNumberLocal, int selection)
         {
-            int numberOfMatches = 0;
+            var numberOfMatches = 0;
             var AutoHighGoal = new List<double>();
             var AutoHighMiss = new List<double>();
             var AutoLowGoal = new List<double>();
@@ -315,9 +315,9 @@ namespace FRC_Scouting_V2
             try
             {
                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
-                MySqlCommand cmd = conn.CreateCommand();
+                var cmd = conn.CreateCommand();
                 MySqlDataReader reader;
-                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",
+                cmd.CommandText = string.Format("SELECT * From {0} where TeamNumber={1}",
                     Program.selectedEventName, teamNumberLocal);
                 conn.Open();
                 if (conn.Ping())
@@ -381,35 +381,35 @@ namespace FRC_Scouting_V2
                 {
                     _autoHighMean[0] = AutoHighGoal.Average();
                     _autoHighStandardDeviation[0] = CalculateStdDev(AutoHighGoal);
-                    _autoHighGoalSuccessRate[0] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
+                    _autoHighGoalSuccessRate[0] = AutoHighGoal.Sum()/(AutoHighGoal.Sum() + AutoHighMiss.Sum());
                     _autoLowMean[0] = AutoLowGoal.Average();
                     _autoLowStandardDeviation[0] = CalculateStdDev(AutoLowGoal);
-                    _autolowGoalSuccessRate[0] = AutoLowGoal.Sum() / (AutoLowGoal.Sum() + AutoLowMiss.Sum());
-                    _autoMobilitySuccessRate[0] = AutoMovementGood.Sum() / (numberOfMatches);
+                    _autolowGoalSuccessRate[0] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
+                    _autoMobilitySuccessRate[0] = AutoMovementGood.Sum()/(numberOfMatches);
                     _driverRatingMean[0] = DriverRating.Average();
                     _driverRatingStandardDeviation[0] = CalculateStdDev(DriverRating);
                     _controlledHighMean[0] = ControlledHighGoal.Average();
                     _controlledHighStandardDeviation[0] = CalculateStdDev(ControlledHighGoal);
-                    _controlledHighSuccessRate[0] = ControlledHighGoal.Sum() /
+                    _controlledHighSuccessRate[0] = ControlledHighGoal.Sum()/
                                                     (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
                     _controlledLowMean[0] = ControlledLowGoal.Average();
                     _controlledLowStandardDeviation[0] = CalculateStdDev(ControlledLowGoal);
-                    _controlledLowSuccessRate[0] = ControlledLowGoal.Sum() /
+                    _controlledLowSuccessRate[0] = ControlledLowGoal.Sum()/
                                                    (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
                     _hotGoalMean[0] = HotGoal.Average();
                     _hotGoalStandardDeviation[0] = CalculateStdDev(HotGoal);
-                    _hotGoalSuccessRate[0] = HotGoal.Sum() / (HotGoal.Sum() + HotMiss.Sum());
+                    _hotGoalSuccessRate[0] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
                     _pickupsMean[0] = (AutoPickup.Average()) + (ControlledPickup.Average()) +
                                       (PickupFromHuman.Average());
                     _pickupStandardDeviation[0] = CalculateStdDev(ControlledPickup);
-                    _pickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum()) /
+                    _pickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
                                             (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
                                              AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() +
                                              MissedPickupFromHuman.Sum());
                     _successfulTrussMean[0] = SuccessfulTruss.Average();
                     _trussStandardDeviation[0] = CalculateStdDev(SuccessfulTruss);
-                    _trussSuccessRate[0] = SuccessfulTruss.Sum() / (SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
-                    _survivability[0] = numberOfMatches / (numberOfMatches + RobotDied.Sum());
+                    _trussSuccessRate[0] = SuccessfulTruss.Sum()/(SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
+                    _survivability[0] = numberOfMatches/(numberOfMatches + RobotDied.Sum());
 
                     dataGridViewTeam1.Rows.Clear();
 
@@ -452,35 +452,35 @@ namespace FRC_Scouting_V2
                     {
                         _autoHighMean[1] = AutoHighGoal.Average();
                         _autoHighStandardDeviation[1] = CalculateStdDev(AutoHighGoal);
-                        _autoHighGoalSuccessRate[1] = AutoHighGoal.Sum() / (AutoHighGoal.Sum() + AutoHighMiss.Sum());
+                        _autoHighGoalSuccessRate[1] = AutoHighGoal.Sum()/(AutoHighGoal.Sum() + AutoHighMiss.Sum());
                         _autoLowMean[1] = AutoLowGoal.Average();
                         _autoLowStandardDeviation[1] = CalculateStdDev(AutoLowGoal);
-                        _autolowGoalSuccessRate[1] = AutoLowGoal.Sum() / (AutoLowGoal.Sum() + AutoLowMiss.Sum());
-                        _autoMobilitySuccessRate[1] = AutoMovementGood.Sum() / (numberOfMatches);
+                        _autolowGoalSuccessRate[1] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
+                        _autoMobilitySuccessRate[1] = AutoMovementGood.Sum()/(numberOfMatches);
                         _driverRatingMean[1] = DriverRating.Average();
                         _driverRatingStandardDeviation[1] = CalculateStdDev(DriverRating);
                         _controlledHighMean[1] = ControlledHighGoal.Average();
                         _controlledHighStandardDeviation[1] = CalculateStdDev(ControlledHighGoal);
-                        _controlledHighSuccessRate[1] = ControlledHighGoal.Sum() /
+                        _controlledHighSuccessRate[1] = ControlledHighGoal.Sum()/
                                                         (ControlledHighGoal.Sum() + ControlledHighMiss.Sum());
                         _controlledLowMean[1] = ControlledLowGoal.Average();
                         _controlledLowStandardDeviation[1] = CalculateStdDev(ControlledLowGoal);
-                        _controlledLowSuccessRate[1] = ControlledLowGoal.Sum() /
+                        _controlledLowSuccessRate[1] = ControlledLowGoal.Sum()/
                                                        (ControlledLowGoal.Sum() + ControlledLowMiss.Sum());
                         _hotGoalMean[1] = HotGoal.Average();
                         _hotGoalStandardDeviation[1] = CalculateStdDev(HotGoal);
-                        _hotGoalSuccessRate[1] = HotGoal.Sum() / (HotGoal.Sum() + HotMiss.Sum());
+                        _hotGoalSuccessRate[1] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
                         _pickupsMean[1] = (AutoPickup.Average()) + (ControlledPickup.Average()) +
                                           (PickupFromHuman.Average());
                         _pickupStandardDeviation[1] = CalculateStdDev(ControlledPickup);
-                        _pickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum()) /
+                        _pickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
                                                 (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
                                                  AutoPickupMiss.Sum() + ControlledPickupMiss.Sum() +
                                                  MissedPickupFromHuman.Sum());
                         _successfulTrussMean[1] = SuccessfulTruss.Average();
                         _trussStandardDeviation[1] = CalculateStdDev(SuccessfulTruss);
-                        _trussSuccessRate[1] = SuccessfulTruss.Sum() / (SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
-                        _survivability[1] = numberOfMatches / (numberOfMatches + RobotDied.Sum());
+                        _trussSuccessRate[1] = SuccessfulTruss.Sum()/(SuccessfulTruss.Sum() + UnSuccessfulTruss.Sum());
+                        _survivability[1] = numberOfMatches/(numberOfMatches + RobotDied.Sum());
 
                         dataGridViewTeam2.Rows.Clear();
 
@@ -511,7 +511,8 @@ namespace FRC_Scouting_V2
                     {
                         dataGridViewTeam2.Rows.Clear();
                         team2Selected = false;
-                        Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
+                        Notifications.ErrorOccured(
+                            "Looks like something went wrong. Check console for the error message");
                         Console.WriteLine("Error Message: " + e.Message);
                         ConsoleWindow.WriteLine("Error Message: " + e.Message);
                     }
@@ -535,7 +536,7 @@ namespace FRC_Scouting_V2
                 "Use this to select the team that you want to enter data / look at data for!");
 
             //Adding teams to team selector and teamListBox
-            for (int i = 0; i < _teamNumberArray.Length; i++)
+            for (var i = 0; i < _teamNumberArray.Length; i++)
             {
                 teamSelector.Items.Add(_teamNumberArray[i] + " | " + _teamNameArray[i]);
                 teamCompSelector1.Items.Add(_teamNumberArray[i] + " | " + _teamNameArray[i]);
@@ -560,23 +561,23 @@ namespace FRC_Scouting_V2
                 "This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
-            int numberOfRows = MySQLMethods.GetNumberOfRowsInATable();
+            var numberOfRows = MySQLMethods.GetNumberOfRowsInATable();
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    string mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
+                    var mySqlConnectionString = MySQLMethods.MakeMySqlConnectionString();
                     var conn = new MySqlConnection(mySqlConnectionString);
-                    MySqlCommand cmd = conn.CreateCommand();
+                    var cmd = conn.CreateCommand();
                     var writer = new StreamWriter(sfd.FileName);
                     MySqlDataReader reader;
                     writer.WriteLine(
                         "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
                     conn.Open();
-                    for (int i = 0; i < MySQLMethods.GetNumberOfRowsInATable() + 1; i++)
+                    for (var i = 0; i < MySQLMethods.GetNumberOfRowsInATable() + 1; i++)
                     {
-                        cmd.CommandText = String.Format("SELECT * from {0} where EntryID={1}",
+                        cmd.CommandText = string.Format("SELECT * from {0} where EntryID={1}",
                             Program.selectedEventName, i);
                         reader = cmd.ExecuteReader();
                         while (reader.Read())
@@ -1253,9 +1254,9 @@ namespace FRC_Scouting_V2
 
         public void ClearColourStats()
         {
-            for (int i = 0; i < dataGridViewTeam1.RowCount; i++)
+            for (var i = 0; i < dataGridViewTeam1.RowCount; i++)
             {
-                for (int j = 0; j < dataGridViewTeam1.ColumnCount; j++)
+                for (var j = 0; j < dataGridViewTeam1.ColumnCount; j++)
                 {
                     if (team1Selected)
                     {
@@ -1301,8 +1302,8 @@ namespace FRC_Scouting_V2
             rookieYearDisplay.Text = Convert.ToString(rookieYear);
             teamURLDisplay.Text = teamURL;
 
-            object teamImage = Resources.ResourceManager.GetObject("FRC" + _teamNumberArray[teamSelector.SelectedIndex]);
-            teamLogoPictureBox.Image = (Image)teamImage;
+            var teamImage = Resources.ResourceManager.GetObject("FRC" + _teamNumberArray[teamSelector.SelectedIndex]);
+            teamLogoPictureBox.Image = (Image) teamImage;
 
             Program.selectedTeamName = _teamNameArray[teamSelector.SelectedIndex];
             Program.selectedTeamNumber = _teamNumberArray[teamSelector.SelectedIndex];
@@ -1347,9 +1348,9 @@ namespace FRC_Scouting_V2
             try
             {
                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
-                MySqlCommand cmd = conn.CreateCommand();
+                var cmd = conn.CreateCommand();
                 MySqlDataReader reader;
-                cmd.CommandText = String.Format("SELECT * From {0} where TeamNumber={1}",
+                cmd.CommandText = string.Format("SELECT * From {0} where TeamNumber={1}",
                     Program.selectedEventName, Program.selectedTeamNumber);
                 conn.Open();
                 reader = cmd.ExecuteReader();
@@ -1416,7 +1417,7 @@ namespace FRC_Scouting_V2
             var fineBluePen = new Pen(Color.Blue, 2);
             var fineWhitePen = new Pen(Color.White, 2);
             var fineRedPen = new Pen(Color.Red, 2);
-            Graphics initGraphics = startingLocationPanel.CreateGraphics();
+            var initGraphics = startingLocationPanel.CreateGraphics();
 
             //Drawing square around the outside edge
             initGraphics.DrawRectangle(blackpen, 0, 0, 330, 231);
@@ -1431,7 +1432,7 @@ namespace FRC_Scouting_V2
 
         public void BlankPanel()
         {
-            Graphics clearPanelGraphics = startingLocationPanel.CreateGraphics();
+            var clearPanelGraphics = startingLocationPanel.CreateGraphics();
             clearPanelGraphics.FillRectangle(Brushes.White, 0, 0, 370, 252);
             clearPanelGraphics.Dispose();
             PlotInitialLines();
@@ -1506,9 +1507,9 @@ namespace FRC_Scouting_V2
             //Draw the starting location on the starting location panel
             BlankPanel();
             PlotInitialLines();
-            Graphics g = startingLocationPanel.CreateGraphics();
-            int xStarting = Convert.ToInt32(matchSummaryX[teamMatchBox.SelectedIndex]) - 3;
-            int yStarting = Convert.ToInt32(matchSummaryY[teamMatchBox.SelectedIndex]) - 3;
+            var g = startingLocationPanel.CreateGraphics();
+            var xStarting = Convert.ToInt32(matchSummaryX[teamMatchBox.SelectedIndex]) - 3;
+            var yStarting = Convert.ToInt32(matchSummaryY[teamMatchBox.SelectedIndex]) - 3;
             g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
             teamMatchSummaryXYDisplay.Text = ("X: " + xStarting + " Y: " + yStarting);
         }
@@ -1517,7 +1518,7 @@ namespace FRC_Scouting_V2
         {
             protected override WebRequest GetWebRequest(Uri uri)
             {
-                WebRequest w = base.GetWebRequest(uri);
+                var w = base.GetWebRequest(uri);
                 w.Timeout = 4000;
                 return w;
             }

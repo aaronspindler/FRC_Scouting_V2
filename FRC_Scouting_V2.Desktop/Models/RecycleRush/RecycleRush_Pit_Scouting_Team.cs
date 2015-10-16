@@ -27,8 +27,6 @@
 
 #endregion License
 
-using System;
-
 namespace FRC_Scouting_V2
 {
     public class RecycleRush_Pit_Scouting_Team
@@ -47,15 +45,15 @@ namespace FRC_Scouting_V2
 
         public int Number_Of_Robots { get; set; }
 
-        public Boolean Does_It_have_A_Ramp { get; set; }
+        public bool Does_It_have_A_Ramp { get; set; }
 
-        public Boolean Can_It_Manipulate_Totes { get; set; }
+        public bool Can_It_Manipulate_Totes { get; set; }
 
-        public Boolean Can_It_Manipulate_Bins { get; set; }
+        public bool Can_It_Manipulate_Bins { get; set; }
 
-        public Boolean Can_It_Manipulate_Litter { get; set; }
+        public bool Can_It_Manipulate_Litter { get; set; }
 
-        public Boolean Needs_Special_Starting_Position { get; set; }
+        public bool Needs_Special_Starting_Position { get; set; }
 
         public string Special_Starting_Position { get; set; }
 
@@ -63,11 +61,11 @@ namespace FRC_Scouting_V2
 
         public int Max_Bin_On_Stack_Height { get; set; }
 
-        public Boolean Human_Tote_Loading { get; set; }
+        public bool Human_Tote_Loading { get; set; }
 
-        public Boolean Human_Litter_Loading { get; set; }
+        public bool Human_Litter_Loading { get; set; }
 
-        public Boolean Human_Litter_Throwing { get; set; }
+        public bool Human_Litter_Throwing { get; set; }
 
         public string Comments { get; set; }
 

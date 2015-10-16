@@ -39,7 +39,7 @@ namespace FRC_Scouting_V2
     {
         private static readonly List<string> TimeStampList = new List<string>();
         private static readonly List<string> MessageList = new List<string>();
-        private static Boolean itemAdded;
+        private static bool itemAdded;
 
         public ConsoleWindow()
         {
@@ -55,7 +55,7 @@ namespace FRC_Scouting_V2
         {
             var logStrings = new string[TimeStampList.Count];
 
-            for (int i = 0; i < TimeStampList.Count; i++)
+            for (var i = 0; i < TimeStampList.Count; i++)
             {
                 logStrings[i] = (TimeStampList[i] + " : " + MessageList[i]);
             }
@@ -66,7 +66,7 @@ namespace FRC_Scouting_V2
         public static void WriteLine(string message)
         {
             itemAdded = true;
-            string currentTime = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
+            var currentTime = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
             TimeStampList.Add(currentTime);
             MessageList.Add(message);
         }
@@ -81,7 +81,7 @@ namespace FRC_Scouting_V2
                 {
                     var writer = new StreamWriter(sfd.FileName);
                     writer.WriteLine("Timestamp,Message");
-                    for (int i = 0; i < TimeStampList.Count; i++)
+                    for (var i = 0; i < TimeStampList.Count; i++)
                     {
                         writer.WriteLine(TimeStampList[i] + "," + MessageList[i]);
                     }
@@ -103,7 +103,7 @@ namespace FRC_Scouting_V2
             }
 
             consoleDataGridView.Rows.Clear();
-            for (int i = 0; i < TimeStampList.Count; i++)
+            for (var i = 0; i < TimeStampList.Count; i++)
             {
                 consoleDataGridView.Rows.Add(TimeStampList[i], MessageList[i]);
             }
@@ -115,7 +115,7 @@ namespace FRC_Scouting_V2
             if (itemAdded)
             {
                 consoleDataGridView.Rows.Clear();
-                for (int i = 0; i < TimeStampList.Count; i++)
+                for (var i = 0; i < TimeStampList.Count; i++)
                 {
                     consoleDataGridView.Rows.Add(TimeStampList[i], MessageList[i]);
                 }

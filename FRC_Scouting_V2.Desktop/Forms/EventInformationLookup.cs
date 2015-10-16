@@ -27,13 +27,13 @@
 
 #endregion License
 
-using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace FRC_Scouting_V2.Information_Forms
 {
@@ -57,9 +57,9 @@ namespace FRC_Scouting_V2.Information_Forms
                 "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                string url = ("http://www.thebluealliance.com/api/v2/event/" +
-                              Convert.ToString(eventCodeEntryTextBox.Text));
-                string downloadedData = (wc.DownloadString(url));
+                var url = ("http://www.thebluealliance.com/api/v2/event/" +
+                           Convert.ToString(eventCodeEntryTextBox.Text));
+                var downloadedData = (wc.DownloadString(url));
                 var deserializedData = JsonConvert.DeserializeObject<Event>(downloadedData);
 
                 locationTextBox.Text = deserializedData.venue_address;
@@ -139,7 +139,7 @@ namespace FRC_Scouting_V2.Information_Forms
         {
             protected override WebRequest GetWebRequest(Uri uri)
             {
-                WebRequest w = base.GetWebRequest(uri);
+                var w = base.GetWebRequest(uri);
                 w.Timeout = 3000;
                 return w;
             }

@@ -27,9 +27,10 @@
 
 #endregion License
 
-using FRC_Scouting_V2.Properties;
 using System;
 using System.Windows.Forms;
+using FRC_Scouting_V2.Properties;
+using TheBlueAlliance;
 
 //@author xNovax
 
@@ -44,7 +45,7 @@ namespace FRC_Scouting_V2.Information_Forms
 
         private void findTeamButton_Click(object sender, EventArgs e)
         {
-            var teamInformation = TheBlueAlliance.Teams.GetTeamInformation("frc" + teamNumberTextBox.Text);
+            var teamInformation = Teams.GetTeamInformation("frc" + teamNumberTextBox.Text);
 
             teamNameDisplay.Text = teamInformation.nickname;
             teamNumberDisplay.Text = Convert.ToString(teamInformation.team_number);
