@@ -966,8 +966,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         cmd.Parameters.AddWithValue("@Can_It_Manipulate_Totes", pitScout.Can_It_Manipulate_Totes);
                         cmd.Parameters.AddWithValue("@Can_It_Manipulate_Bins", pitScout.Can_It_Manipulate_Bins);
                         cmd.Parameters.AddWithValue("@Can_It_Manipulate_Litter", pitScout.Can_It_Manipulate_Litter);
-                        cmd.Parameters.AddWithValue("@Needs_Special_Starting_Position",
-                            pitScout.Needs_Special_Starting_Position);
+                        cmd.Parameters.AddWithValue("@Needs_Special_Starting_Position",pitScout.Needs_Special_Starting_Position);
                         cmd.Parameters.AddWithValue("@Special_Starting_Position", pitScout.Special_Starting_Position);
                         cmd.Parameters.AddWithValue("@Max_Stack_Height", pitScout.Max_Stack_Height);
                         cmd.Parameters.AddWithValue("@Max_Bin_On_Stack_Height", pitScout.Max_Bin_On_Stack_Height);
