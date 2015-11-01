@@ -28,19 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsoleWindow));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.consoleDataGridView = new System.Windows.Forms.DataGridView();
-            this.timestampColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.messageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToCSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consoleDataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -68,9 +64,6 @@
             this.consoleDataGridView.AllowUserToAddRows = false;
             this.consoleDataGridView.AllowUserToDeleteRows = false;
             this.consoleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.consoleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.timestampColumn,
-            this.messageColumn});
             this.tableLayoutPanel1.SetColumnSpan(this.consoleDataGridView, 2);
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -89,22 +82,6 @@
             this.tableLayoutPanel1.SetRowSpan(this.consoleDataGridView, 2);
             this.consoleDataGridView.Size = new System.Drawing.Size(761, 348);
             this.consoleDataGridView.TabIndex = 0;
-            // 
-            // timestampColumn
-            // 
-            this.timestampColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.timestampColumn.FillWeight = 57.33928F;
-            this.timestampColumn.HeaderText = "Timestamp:";
-            this.timestampColumn.Name = "timestampColumn";
-            this.timestampColumn.ReadOnly = true;
-            // 
-            // messageColumn
-            // 
-            this.messageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.messageColumn.FillWeight = 140.8333F;
-            this.messageColumn.HeaderText = "Message:";
-            this.messageColumn.Name = "messageColumn";
-            this.messageColumn.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -146,14 +123,9 @@
             // exportToCSVToolStripMenuItem
             // 
             this.exportToCSVToolStripMenuItem.Name = "exportToCSVToolStripMenuItem";
-            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exportToCSVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportToCSVToolStripMenuItem.Text = "Export to CSV";
             this.exportToCSVToolStripMenuItem.Click += new System.EventHandler(this.exportToCSVToolStripMenuItem_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ConsoleWindow
             // 
@@ -183,9 +155,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timestampColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageColumn;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToCSVToolStripMenuItem;
     }

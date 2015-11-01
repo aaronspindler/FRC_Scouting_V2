@@ -28,7 +28,7 @@
 #endregion License
 
 using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
@@ -37,13 +37,18 @@ namespace FRC_Scouting_V2
 {
     public partial class ConsoleWindow : Form
     {
-        private static readonly List<string> TimeStampList = new List<string>();
-        private static readonly List<string> MessageList = new List<string>();
-        private static bool itemAdded;
+        static BindingList<ConsoleEntry> logCollection = new BindingList<ConsoleEntry>();
 
         public ConsoleWindow()
         {
             InitializeComponent();
+            consoleDataGridView.DataSource = logCollection;
+            consoleDataGridView.Columns[0].Width = 219;
+            consoleDataGridView.Columns[0].FillWeight = (float) 57.33928;
+            consoleDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            consoleDataGridView.Columns[1].Width = 539;
+            consoleDataGridView.Columns[1].FillWeight = (float) 140.8333;
+            consoleDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,24 +56,10 @@ namespace FRC_Scouting_V2
             Close();
         }
 
-        public string[] getLog()
-        {
-            var logStrings = new string[TimeStampList.Count];
-
-            for (var i = 0; i < TimeStampList.Count; i++)
-            {
-                logStrings[i] = (TimeStampList[i] + " : " + MessageList[i]);
-            }
-
-            return logStrings;
-        }
-
         public static void WriteLine(string message)
         {
-            itemAdded = true;
             var currentTime = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
-            TimeStampList.Add(currentTime);
-            MessageList.Add(message);
+            logCollection.Add(new ConsoleEntry(currentTime, message));
         }
 
         public static void ExportToCSV()
@@ -81,9 +72,9 @@ namespace FRC_Scouting_V2
                 {
                     var writer = new StreamWriter(sfd.FileName);
                     writer.WriteLine("Timestamp,Message");
-                    for (var i = 0; i < TimeStampList.Count; i++)
+                    for (var i = 0; i < logCollection.Count; i++)
                     {
-                        writer.WriteLine(TimeStampList[i] + "," + MessageList[i]);
+                        writer.WriteLine(logCollection[i].TimeStamp + "," + logCollection[i].Message);
                     }
                     writer.Close();
                 }
@@ -102,30 +93,31 @@ namespace FRC_Scouting_V2
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-            consoleDataGridView.Rows.Clear();
-            for (var i = 0; i < TimeStampList.Count; i++)
+            foreach (ConsoleEntry ce in logCollection)
             {
-                consoleDataGridView.Rows.Add(TimeStampList[i], MessageList[i]);
-            }
-            timer1.Start();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (itemAdded)
-            {
-                consoleDataGridView.Rows.Clear();
-                for (var i = 0; i < TimeStampList.Count; i++)
-                {
-                    consoleDataGridView.Rows.Add(TimeStampList[i], MessageList[i]);
-                }
-                itemAdded = false;
+                //consoleDataGridView.Rows.Add(ce.TimeStamp, ce.Message);
             }
         }
 
         private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportToCSV();
+        }
+
+        public class ConsoleEntry
+        {
+            public ConsoleEntry() { }
+
+            public ConsoleEntry(string timeIn, string messageIn)
+            {
+                TimeStamp = timeIn;
+                Message = messageIn;
+            }
+
+            // Properties.
+            public string TimeStamp { get; set; }
+            public string Message { get; set; }
+
         }
     }
 }
