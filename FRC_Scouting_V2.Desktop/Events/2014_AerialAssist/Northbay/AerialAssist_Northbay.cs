@@ -93,8 +93,7 @@ namespace FRC_Scouting_V2
 
         private void doesThisHaveAnyDataViewingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Notifications.ShowInformationMessage(
-                "This event was built as a tester event so there is no way in the program to view the data. You can use a SQL Workbench program to look at your data for this event if you want.");
+            Notifications.ShowInformationMessage("This event was built as a tester event so there is no way in the program to view the data. You can use a SQL Workbench program to look at your data for this event if you want.");
         }
 
         private void eventInformationToolStripMenuItem_Click(object sender, EventArgs e)
