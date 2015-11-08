@@ -74,7 +74,7 @@ namespace FRC_Scouting_V2.Information_Forms
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERROR: " + ex.Message);
+                ConsoleWindow.WriteLine("ERROR: " + ex.Message);
                 statusLabel.Text = "Error: " + ex.Message;
             }
         }

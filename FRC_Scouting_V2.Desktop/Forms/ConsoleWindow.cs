@@ -60,6 +60,7 @@ namespace FRC_Scouting_V2
         {
             var currentTime = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
             logCollection.Add(new ConsoleEntry(currentTime, message));
+            Console.WriteLine(message);
         }
 
         public static void ExportToCSV()
@@ -81,7 +82,6 @@ namespace FRC_Scouting_V2
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Message: " + exception.Message);
                 WriteLine("Error Message: " + exception.Message);
             }
         }

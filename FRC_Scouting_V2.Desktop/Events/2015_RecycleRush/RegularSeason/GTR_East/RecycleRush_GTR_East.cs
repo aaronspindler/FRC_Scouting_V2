@@ -250,7 +250,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.ToString());
+                ConsoleWindow.WriteLine(exception.ToString());
             }
         }
 
@@ -383,7 +383,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 }
                 catch (Exception webError)
                 {
-                    Console.WriteLine("Error Message: " + webError.Message);
                     ConsoleWindow.WriteLine("Error Message: " + webError.Message);
                 }
             }
@@ -555,7 +554,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Message: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Message: " + exception.Message);
             }
         }
@@ -577,7 +575,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.ToString());
                 ConsoleWindow.WriteLine(exception.ToString());
             }
         }

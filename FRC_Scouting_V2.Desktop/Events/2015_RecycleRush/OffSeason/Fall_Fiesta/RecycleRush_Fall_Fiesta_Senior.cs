@@ -143,7 +143,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 Notifications.ReportCrash(exception);
             }
@@ -181,7 +180,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 Notifications.ReportCrash(exception);
             }
@@ -234,7 +232,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.ToString());
+                ConsoleWindow.WriteLine(exception.ToString());
             }
         }
 
@@ -352,7 +350,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
             }
 
@@ -377,7 +374,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 }
                 catch (Exception webError)
                 {
-                    Console.WriteLine("Error Message: " + webError.Message);
                     ConsoleWindow.WriteLine("Error Message: " + webError.Message);
                 }
             }
@@ -449,7 +445,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 }
                 catch (MySqlException exception)
                 {
-                    Console.WriteLine("Error Occured: " + exception.Message);
                     ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 }
 
@@ -531,13 +526,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("Error: " + ex.Message);
                         ConsoleWindow.WriteLine("Error: " + ex.Message);
                     }
                 }
                 catch (MySqlException exception)
                 {
-                    Console.WriteLine("Error Occured: " + exception.Message);
                     ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 }
             }
@@ -680,7 +673,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Message: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Message: " + exception.Message);
             }
         }
@@ -702,7 +694,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.ToString());
                 ConsoleWindow.WriteLine(exception.ToString());
             }
         }
@@ -864,7 +855,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             }
                             catch (MySqlException exception)
                             {
-                                Console.WriteLine(exception.ToString());
                                 ConsoleWindow.WriteLine(exception.ToString());
                             }
                         }
@@ -918,7 +908,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 Notifications.ReportCrash(exception);
             }
@@ -941,7 +930,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     }
                     catch (Exception exception)
                     {
-                        Console.WriteLine("Error Occured: " + exception.Message);
                         ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                         Notifications.ReportCrash(exception);
                     }
@@ -985,7 +973,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 Notifications.ReportCrash(exception);
             }
@@ -1064,13 +1051,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error: " + ex.Message);
                     ConsoleWindow.WriteLine("Error: " + ex.Message);
                 }
             }
             catch (MySqlException exception)
             {
-                Console.WriteLine("Error Occured: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
             }
             pitScoutingEditorSubmitButton.Enabled = true;
@@ -1149,8 +1134,8 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
+                ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
+                ConsoleWindow.WriteLine(ex.Message);
             }
             return numberOfRows;
         }
@@ -1163,7 +1148,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 ConsoleWindow.WriteLine(ex.Message);
             }
         }
@@ -1176,7 +1160,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 ConsoleWindow.WriteLine(ex.Message);
             }
         }
@@ -1189,7 +1172,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 ConsoleWindow.WriteLine(ex.Message);
             }
         }
@@ -1202,7 +1184,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 ConsoleWindow.WriteLine(ex.Message);
             }
         }
@@ -1272,7 +1253,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             }
                             catch (MySqlException exception)
                             {
-                                Console.WriteLine(exception.ToString());
                                 ConsoleWindow.WriteLine(exception.ToString());
                             }
                         }
@@ -1319,7 +1299,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 }
                                 catch (Exception exception)
                                 {
-                                    Console.WriteLine("Error Occured: " + exception.Message);
                                     ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                                     Notifications.ReportCrash(exception);
                                 }
@@ -1371,7 +1350,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             }
                             catch (MySqlException exception)
                             {
-                                Console.WriteLine(exception.ToString());
                                 ConsoleWindow.WriteLine(exception.ToString());
                             }
                         }

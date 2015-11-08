@@ -219,7 +219,6 @@ namespace FRC_Scouting_V2
                                 slot++;
                             }
                         }
-                        Console.WriteLine("Actual Team Number: " + teamNumberImport);
                         ConsoleWindow.WriteLine("Actual Team Number Found: " + teamNumberImport);
                         try
                         {
@@ -243,8 +242,6 @@ namespace FRC_Scouting_V2
                         }
                         catch (MySqlException ex)
                         {
-                            Console.WriteLine("Error Code: " + ex.ErrorCode);
-                            Console.WriteLine("Error Message: " + ex.Message);
                             ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                             ConsoleWindow.WriteLine("Error Message: " + ex.Message);
                         }
@@ -322,7 +319,6 @@ namespace FRC_Scouting_V2
                 conn.Open();
                 if (conn.Ping())
                 {
-                    Console.WriteLine("Connected to the databse. Collecting and generating statistics now!");
                     ConsoleWindow.WriteLine("Connected to the databse. Collecting and generating statistics now!");
                 }
                 reader = cmd.ExecuteReader();
@@ -368,8 +364,6 @@ namespace FRC_Scouting_V2
             }
             catch (MySqlException e)
             {
-                Console.WriteLine("Error Code: " + e.ErrorCode);
-                Console.WriteLine("Error Message: " + e.Message);
                 ConsoleWindow.WriteLine("Error Code: " + e.ErrorCode);
                 ConsoleWindow.WriteLine("Error Message: " + e.Message);
                 Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
@@ -440,7 +434,6 @@ namespace FRC_Scouting_V2
                     dataGridViewTeam1.Rows.Clear();
                     team1Selected = false;
                     Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
-                    Console.WriteLine("Error Message: " + e.Message);
                     ConsoleWindow.WriteLine("Error Message: " + e.Message);
                 }
             }
@@ -511,9 +504,7 @@ namespace FRC_Scouting_V2
                     {
                         dataGridViewTeam2.Rows.Clear();
                         team2Selected = false;
-                        Notifications.ErrorOccured(
-                            "Looks like something went wrong. Check console for the error message");
-                        Console.WriteLine("Error Message: " + e.Message);
+                        Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                         ConsoleWindow.WriteLine("Error Message: " + e.Message);
                     }
                 }
@@ -600,17 +591,14 @@ namespace FRC_Scouting_V2
                                              reader["Comments"]);
                         }
                         reader.Close();
-                        Console.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
                         ConsoleWindow.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
                     }
-                    Console.WriteLine("Your data has been successfully exported!");
+                    ConsoleWindow.WriteLine("Your data has been successfully exported!");
                     writer.Close();
                     conn.Close();
                 }
                 catch (MySqlException ex)
                 {
-                    Console.WriteLine("Error Code: " + ex.ErrorCode);
-                    Console.WriteLine(ex.Message);
                     ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                     ConsoleWindow.WriteLine(ex.Message);
                 }
@@ -1292,7 +1280,6 @@ namespace FRC_Scouting_V2
             }
             catch (Exception webError)
             {
-                Console.WriteLine("Error Message: " + webError.Message);
                 ConsoleWindow.WriteLine("Error Message: " + webError.Message);
             }
 
@@ -1399,8 +1386,6 @@ namespace FRC_Scouting_V2
             }
             catch (MySqlException exception)
             {
-                Console.WriteLine("Error Code: " + exception.ErrorCode);
-                Console.WriteLine("Error Message: " + exception.Message);
                 ConsoleWindow.WriteLine("Error Code: " + exception.ErrorCode);
                 ConsoleWindow.WriteLine("Error Message: " + exception.Message);
             }

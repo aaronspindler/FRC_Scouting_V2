@@ -79,7 +79,6 @@ namespace FRC_Scouting_V2.Information_Forms
             }
             catch (Exception webError)
             {
-                Console.WriteLine("Error Message: " + webError.Message);
                 ConsoleWindow.WriteLine("Error Message: " + webError.Message);
             }
         }

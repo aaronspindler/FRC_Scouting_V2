@@ -419,7 +419,6 @@ namespace FRC_Scouting_V2.UIs
                 //Checking if the connection is successful
                 if (conn.Ping())
                 {
-                    Console.WriteLine("The connection to your database has been made successfully.");
                     ConsoleWindow.WriteLine("The connection to your database has been made successfully.");
                 }
 
@@ -437,17 +436,12 @@ namespace FRC_Scouting_V2.UIs
                                 Program.selectedEventName);
                         cmd.CommandText = createTable;
                         cmd.ExecuteNonQuery();
-                        Console.WriteLine("The table: " + Program.selectedEventName + " has been created.");
                         ConsoleWindow.WriteLine("The table: " + Program.selectedEventName + " has been created.");
                         //end of creating the table
                     }
                     catch (MySqlException createException)
                     {
-                        Console.WriteLine("If there is an error it is most likely because the table is already made.");
-                        Console.WriteLine("Errorcode: " + createException.ErrorCode);
-                        Console.WriteLine(createException.Message);
-                        ConsoleWindow.WriteLine(
-                            "If there is an error it is most likely because the table is already made.");
+                        ConsoleWindow.WriteLine("If there is an error it is most likely because the table is already made.");
                         ConsoleWindow.WriteLine("Errorcode: " + createException.ErrorCode);
                         ConsoleWindow.WriteLine(createException.Message);
                     }
@@ -469,7 +463,6 @@ namespace FRC_Scouting_V2.UIs
                 cmd.CommandText = insertDataString;
                 cmd.ExecuteNonQuery();
 
-                Console.WriteLine("Data has been inserted into the database!");
                 ConsoleWindow.WriteLine("Data has been inserted into the database!");
 
                 //Closing the connection
@@ -478,8 +471,6 @@ namespace FRC_Scouting_V2.UIs
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine(ex.Message);
                 ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.WriteLine(ex.Message);
             }

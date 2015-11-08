@@ -245,14 +245,12 @@ namespace FRC_Scouting_V2
 
                 if (conn.Ping())
                 {
-                    Console.WriteLine("You have successfully connected to your database!");
                     ConsoleWindow.WriteLine("You have successfully connected to your database!");
                     connectionDisplay.BackColor = Color.Chartreuse;
                     connectionDisplay.Text = ("Successfully Connected to Database.");
                 }
                 else
                 {
-                    Console.WriteLine("You have unsuccessfully connected to your database!");
                     ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
                     connectionDisplay.BackColor = Color.Red;
                     connectionDisplay.Text = ("Connection to Database Failed.");
@@ -264,8 +262,6 @@ namespace FRC_Scouting_V2
             {
                 connectionDisplay.BackColor = Color.Red;
                 connectionDisplay.Text = ("Connection to Database Failed.");
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine("Error Message " + ex.Message);
                 ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.WriteLine("Error Message " + ex.Message);
             }
@@ -322,7 +318,6 @@ namespace FRC_Scouting_V2
 
                 if (conn.Ping())
                 {
-                    Console.WriteLine("You have successfully connected to your database!");
                     ConsoleWindow.WriteLine("You have successfully connected to your database!");
                     connectionDisplay.BackColor = Color.Chartreuse;
                     connectionDisplay.Text = ("Successfully Connected to Database.");
@@ -332,13 +327,11 @@ namespace FRC_Scouting_V2
                     }
                     catch (Exception exception)
                     {
-                        Console.WriteLine("Error Message: " + exception.Message);
                         ConsoleWindow.WriteLine("Error Message: " + exception.Message);
                     }
                 }
                 else
                 {
-                    Console.WriteLine("You have unsuccessfully connected to your database!");
                     ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
                     connectionDisplay.BackColor = Color.Red;
                     connectionDisplay.Text = ("Connection to Database Failed.");
@@ -350,8 +343,6 @@ namespace FRC_Scouting_V2
             {
                 connectionDisplay.BackColor = Color.Red;
                 connectionDisplay.Text = ("Connection to Database Failed.");
-                Console.WriteLine("Error Code: " + ex.ErrorCode);
-                Console.WriteLine("Error Message " + ex.Message);
                 ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.WriteLine("Error Message " + ex.Message);
             }
@@ -434,7 +425,6 @@ namespace FRC_Scouting_V2
                 }
                 catch (Exception exception)
                 {
-                    Console.WriteLine("Error Occured: " + exception.Message);
                     ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 }
             }
