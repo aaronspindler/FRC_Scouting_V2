@@ -38,9 +38,9 @@ using UsefulSnippets;
 namespace FRC_Scouting_V2
 {
     //@author xNovax
-    public partial class MainSettings : Form
+    public partial class MainSettings_dep : Form
     {
-        public MainSettings()
+        public MainSettings_dep()
         {
             InitializeComponent();
         }

@@ -124,6 +124,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="TheBlueAlliance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TheBlueAlliance_API.1.0.1\lib\TheBlueAlliance.dll</HintPath>
       <Private>True</Private>
@@ -200,6 +201,12 @@
     <Compile Include="Events\2015_RecycleRush\RegularSeason\Northbay\RecycleRush_Northbay_Information.Designer.cs">
       <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GeneralSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralSettings.Designer.cs">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,11 +237,11 @@
     <Compile Include="Forms\TeamInformationLookup.Designer.cs">
       <DependentUpon>TeamInformationLookup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainSettings.cs">
+    <Compile Include="Forms\MainSettings_dep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainSettings.Designer.cs">
-      <DependentUpon>MainSettings.cs</DependentUpon>
+    <Compile Include="Forms\MainSettings_dep.Designer.cs">
+      <DependentUpon>MainSettings_dep.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\RecycleRush\RecycleRush_Stack.cs" />
     <Compile Include="Misc\MySQLMethods.cs" />
@@ -304,6 +311,9 @@
     <EmbeddedResource Include="Events\2015_RecycleRush\RegularSeason\Northbay\RecycleRush_Northbay_Information.resx">
       <DependentUpon>RecycleRush_Northbay_Information.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralSettings.resx">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,8 +329,8 @@
     <EmbeddedResource Include="Forms\TeamInformationLookup.resx">
       <DependentUpon>TeamInformationLookup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainSettings.resx">
-      <DependentUpon>MainSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainSettings_dep.resx">
+      <DependentUpon>MainSettings_dep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProgramInformation.resx">
       <DependentUpon>ProgramInformation.cs</DependentUpon>

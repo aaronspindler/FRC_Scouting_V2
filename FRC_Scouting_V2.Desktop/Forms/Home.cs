@@ -33,6 +33,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Events._2015_RecycleRush;
+using FRC_Scouting_V2.Forms;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
 using UsefulSnippets;
@@ -134,7 +135,7 @@ namespace FRC_Scouting_V2
                     MessageBox.Show("Do you want to modify your database settings right now?", "Database Settings",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    var settingsPage = new MainSettings();
+                    var settingsPage = new MainSettings_dep();
                     settingsPage.Show();
                     WindowState = FormWindowState.Minimized;
                 }
@@ -160,8 +161,8 @@ namespace FRC_Scouting_V2
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             settingsToolStripMenuItem.Enabled = false;
-            var mainSettings = new MainSettings();
-            mainSettings.Show();
+            var settings = new GeneralSettings();
+            settings.Show();
             settingsToolStripMenuItem.Enabled = true;
         }
 
