@@ -52,9 +52,11 @@
             this.databasePasswordTextBox = new System.Windows.Forms.TextBox();
             this.databaseConnectionDisplay = new System.Windows.Forms.Label();
             this.databaseSaveTestButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
+            this.generalSettingsTabPage.SuspendLayout();
             this.databaseSettingsTabPage.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +138,7 @@
             // 
             // generalSettingsTabPage
             // 
+            this.generalSettingsTabPage.Controls.Add(this.tableLayoutPanel3);
             this.generalSettingsTabPage.Location = new System.Drawing.Point(4, 22);
             this.generalSettingsTabPage.Name = "generalSettingsTabPage";
             this.generalSettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -302,6 +305,20 @@
             this.databaseSaveTestButton.Text = "Save and Test";
             this.databaseSaveTestButton.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(606, 402);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
             // GeneralSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +335,7 @@
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.settingsTabControl.ResumeLayout(false);
+            this.generalSettingsTabPage.ResumeLayout(false);
             this.databaseSettingsTabPage.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -350,5 +368,6 @@
         private System.Windows.Forms.TextBox databasePasswordTextBox;
         private System.Windows.Forms.Label databaseConnectionDisplay;
         private System.Windows.Forms.Button databaseSaveTestButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
