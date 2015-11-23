@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneralSettings));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -38,6 +39,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsTabControl = new System.Windows.Forms.TabControl();
             this.generalSettingsTabPage = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.databaseSettingsTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.serverAddressLabel = new System.Windows.Forms.Label();
@@ -52,7 +54,7 @@
             this.databasePasswordTextBox = new System.Windows.Forms.TextBox();
             this.databaseConnectionDisplay = new System.Windows.Forms.Label();
             this.databaseSaveTestButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
@@ -101,7 +103,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -146,6 +148,20 @@
             this.generalSettingsTabPage.TabIndex = 0;
             this.generalSettingsTabPage.Text = "General Settings";
             this.generalSettingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(606, 402);
+            this.tableLayoutPanel3.TabIndex = 0;
             // 
             // databaseSettingsTabPage
             // 
@@ -288,12 +304,13 @@
             // databaseConnectionDisplay
             // 
             this.databaseConnectionDisplay.AutoSize = true;
+            this.databaseConnectionDisplay.BackColor = System.Drawing.Color.Yellow;
             this.databaseConnectionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.databaseConnectionDisplay.Location = new System.Drawing.Point(3, 125);
             this.databaseConnectionDisplay.Name = "databaseConnectionDisplay";
             this.databaseConnectionDisplay.Size = new System.Drawing.Size(175, 30);
             this.databaseConnectionDisplay.TabIndex = 10;
-            this.databaseConnectionDisplay.Text = "Connection: N/A";
+            this.databaseConnectionDisplay.Text = "Connection: Testing";
             this.databaseConnectionDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // databaseSaveTestButton
@@ -304,20 +321,12 @@
             this.databaseSaveTestButton.TabIndex = 11;
             this.databaseSaveTestButton.Text = "Save and Test";
             this.databaseSaveTestButton.UseVisualStyleBackColor = true;
+            this.databaseSaveTestButton.Click += new System.EventHandler(this.databaseSaveTestButton_Click);
             // 
-            // tableLayoutPanel3
+            // timer
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(606, 402);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.timer.Interval = 1500;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // GeneralSettings
             // 
@@ -330,6 +339,7 @@
             this.Name = "GeneralSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRC_Scouting_V2 | Settings";
+            this.Load += new System.EventHandler(this.GeneralSettings_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.menuStrip.ResumeLayout(false);
@@ -369,5 +379,6 @@
         private System.Windows.Forms.Label databaseConnectionDisplay;
         private System.Windows.Forms.Button databaseSaveTestButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Timer timer;
     }
 }
