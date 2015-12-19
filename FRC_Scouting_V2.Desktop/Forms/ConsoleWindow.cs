@@ -63,7 +63,7 @@ namespace FRC_Scouting_V2
             Console.WriteLine(message);
         }
 
-        public static void ExportToCSV()
+        public static void ExportToCSV_Dialog()
         {
             var sfd = new SaveFileDialog();
             sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
@@ -86,6 +86,27 @@ namespace FRC_Scouting_V2
             }
         }
 
+        public static void ExportToCSV_Timestamp()
+        { 
+            try
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\");
+                var fileLoc = (AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\" + DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss-tt") + ".csv");
+
+                var writer = new StreamWriter(fileLoc);
+                    writer.WriteLine("Timestamp,Message");
+                    for (var i = 0; i < logCollection.Count; i++)
+                    {
+                        writer.WriteLine(logCollection[i].TimeStamp + "," + logCollection[i].Message);
+                    }
+                    writer.Close();
+            }
+            catch (Exception exception)
+            {
+                WriteLine("Error Message: " + exception.Message);
+            }
+        }
+
         private void ConsoleWindow_Load(object sender, EventArgs e)
         {
             foreach (DataGridViewColumn column in consoleDataGridView.Columns)
@@ -101,7 +122,7 @@ namespace FRC_Scouting_V2
 
         private void exportToCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExportToCSV();
+            ExportToCSV_Dialog();
         }
 
         public class ConsoleEntry

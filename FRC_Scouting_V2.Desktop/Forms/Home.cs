@@ -191,6 +191,7 @@ namespace FRC_Scouting_V2
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
+            ConsoleWindow.ExportToCSV_Timestamp();
         }
 
         private void timer_Tick(object sender, EventArgs e)

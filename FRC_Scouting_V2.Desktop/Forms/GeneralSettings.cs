@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -32,8 +31,6 @@ namespace FRC_Scouting_V2.Forms
             databaseNameTextBox.Text = Settings.Default.databaseName;
 
             timer.Start();
-
-
         }
 
         private void databaseSaveTestButton_Click(object sender, EventArgs e)
