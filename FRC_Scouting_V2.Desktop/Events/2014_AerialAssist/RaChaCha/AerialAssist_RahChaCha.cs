@@ -313,7 +313,6 @@ namespace FRC_Scouting_V2
             {
                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 var cmd = conn.CreateCommand();
-                MySqlDataReader reader;
                 cmd.CommandText = string.Format("SELECT * From {0} where TeamNumber={1}",
                     Program.selectedEventName, teamNumberLocal);
                 conn.Open();
@@ -321,7 +320,7 @@ namespace FRC_Scouting_V2
                 {
                     ConsoleWindow.WriteLine("Connected to the databse. Collecting and generating statistics now!");
                 }
-                reader = cmd.ExecuteReader();
+                var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     numberOfMatches++;
@@ -562,7 +561,6 @@ namespace FRC_Scouting_V2
                     var conn = new MySqlConnection(mySqlConnectionString);
                     var cmd = conn.CreateCommand();
                     var writer = new StreamWriter(sfd.FileName);
-                    MySqlDataReader reader;
                     writer.WriteLine(
                         "EntryID, TeamNumber, TeamName, TeamColour, MatchNumber, AutoHighGoal, AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, Comments");
                     conn.Open();
@@ -570,7 +568,7 @@ namespace FRC_Scouting_V2
                     {
                         cmd.CommandText = string.Format("SELECT * from {0} where EntryID={1}",
                             Program.selectedEventName, i);
-                        reader = cmd.ExecuteReader();
+                        var reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
                             writer.WriteLine(reader["EntryID"] + "," + reader["TeamNumber"] + "," + reader["TeamName"] +
@@ -1262,14 +1260,13 @@ namespace FRC_Scouting_V2
         {
             url = ("http://www.thebluealliance.com/api/v2/team/frc");
             url = url + Convert.ToString(_teamNumberArray[teamSelector.SelectedIndex]);
-            string downloadedData;
             var wc = new MyWebClient();
             wc.Headers.Add("X-TBA-App-Id",
                 "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
 
             try
             {
-                downloadedData = (wc.DownloadString(url));
+                var downloadedData = (wc.DownloadString(url));
                 var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
                 teamName = Convert.ToString(deserializedData.nickname);
@@ -1336,11 +1333,10 @@ namespace FRC_Scouting_V2
             {
                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
                 var cmd = conn.CreateCommand();
-                MySqlDataReader reader;
                 cmd.CommandText = string.Format("SELECT * From {0} where TeamNumber={1}",
                     Program.selectedEventName, Program.selectedTeamNumber);
                 conn.Open();
-                reader = cmd.ExecuteReader();
+                var reader = cmd.ExecuteReader();
                 teamMatchBox.Items.Clear();
                 while (reader.Read())
                 {
