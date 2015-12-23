@@ -25,7 +25,7 @@ namespace FRC_Scouting_V2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool clickToEmptyTextBoxes {
             get {
                 return ((bool)(this["clickToEmptyTextBoxes"]));

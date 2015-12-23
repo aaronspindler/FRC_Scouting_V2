@@ -23,7 +23,8 @@ namespace FRC_Scouting_V2.Forms
 
         private void GeneralSettings_Load(object sender, EventArgs e)
         {
-            databaseUsernameTextBox.Text = Settings.Default.username;
+            usernameTextBox.Text = Settings.Default.username;
+            databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
             databaseServerAddressTextBox.Text = Settings.Default.databaseIP;
             databasePortTextBox.Text = Settings.Default.databasePort;
             databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
@@ -105,6 +106,18 @@ namespace FRC_Scouting_V2.Forms
             {
                 timer.Stop();
             }
+        }
+
+        private void resetToDefaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Reset();
+            Settings.Default.Save();
+        }
+
+        private void saveGeneralSettingsButton_Click(object sender, EventArgs e)
+        {
+            Settings.Default.username = usernameTextBox.Text;
+            Settings.Default.Save();
         }
     }
 }

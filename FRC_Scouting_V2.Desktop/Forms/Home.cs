@@ -131,11 +131,9 @@ namespace FRC_Scouting_V2
 
             if (Settings.Default.firstTimeLoad)
             {
-                if (
-                    MessageBox.Show("Do you want to modify your database settings right now?", "Database Settings",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to modify your database settings right now?", "Database Settings",MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    var settingsPage = new MainSettings_dep();
+                    var settingsPage = new GeneralSettings();
                     settingsPage.Show();
                     WindowState = FormWindowState.Minimized;
                 }
