@@ -13,12 +13,12 @@ FRC_Scouting_V2
   https://github.com/xNovax/FRC_Scouting
   ```
 ### Features
-- Ability to look at individual match performance for a team
-- Ability to look at the overall performance of a team for a single event
-- Integration with TheBlueAlliance.com
-- Retrieval of information from TheBlueAlliance.com to pull event information
-- MySQL for network collaboration or export to text file for future importation
-- Custom console output that works with Linux
+- Team comparison based on standard deviation and average of actions exibited throught match history by event
+- Team information displayed alongside team logo
+- Pit Scouting
+- MySQL Integration for data storage
+- Tracking of the starting location for robots in autonomous mode
+- Single match breakdown
   
 ### Games Supported
 - [x] Aerial Assist | 2014
@@ -28,9 +28,9 @@ FRC_Scouting_V2
   - [ ] Overhaul Settings Form
   - [ ] Update Event Information Form
   - [ ] Add Event Schedule Form
-  - [x] Write Unit Tests for TheBlueAlliance API
-  - [x] Write Unit Tests for UsefulSnippets
-  - [ ] Convert Winforms Program into WPF Program (On Hold)
+  - [ ] Create events dynamically based on a game template
+  - [x] ~~Write Unit Tests for TheBlueAlliance API~~ Moved to another project
+  - [x] ~~Write Unit Tests for UsefulSnippets~~ Moved to another project
 
 ### Releases
 For the most up to date release visit
