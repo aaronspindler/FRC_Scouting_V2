@@ -256,7 +256,7 @@
             this.myWebsiteRichTextBox.ReadOnly = true;
             this.myWebsiteRichTextBox.Size = new System.Drawing.Size(242, 19);
             this.myWebsiteRichTextBox.TabIndex = 2;
-            this.myWebsiteRichTextBox.Text = "Visit my website at www.xNovax.net";
+            this.myWebsiteRichTextBox.Text = "See my other projects at www.xNovax.net";
             this.myWebsiteRichTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.myWebsiteRichTextBox_LinkClicked);
             // 
             // isInternetConnectedLabel
