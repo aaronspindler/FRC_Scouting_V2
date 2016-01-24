@@ -34,9 +34,14 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsTabControl = new System.Windows.Forms.TabControl();
             this.generalSettingsTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.saveGeneralSettingsButton = new System.Windows.Forms.Button();
             this.databaseSettingsTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.serverAddressLabel = new System.Windows.Forms.Label();
@@ -52,11 +57,6 @@
             this.databaseConnectionDisplay = new System.Windows.Forms.Label();
             this.databaseSaveTestButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.saveGeneralSettingsButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
@@ -105,9 +105,24 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetToDefaultToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // resetToDefaultToolStripMenuItem
+            // 
+            this.resetToDefaultToolStripMenuItem.Name = "resetToDefaultToolStripMenuItem";
+            this.resetToDefaultToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.resetToDefaultToolStripMenuItem.Text = "Reset To Default";
+            this.resetToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetToDefaultToolStripMenuItem_Click);
             // 
             // settingsTabControl
             // 
@@ -150,6 +165,39 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(606, 402);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.usernameLabel, 2);
+            this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usernameLabel.Location = new System.Drawing.Point(3, 0);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(296, 25);
+            this.usernameLabel.TabIndex = 0;
+            this.usernameLabel.Text = "Username:";
+            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // usernameTextBox
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.usernameTextBox, 2);
+            this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usernameTextBox.Location = new System.Drawing.Point(305, 3);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(298, 20);
+            this.usernameTextBox.TabIndex = 8;
+            // 
+            // saveGeneralSettingsButton
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.saveGeneralSettingsButton, 2);
+            this.saveGeneralSettingsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saveGeneralSettingsButton.Location = new System.Drawing.Point(154, 28);
+            this.saveGeneralSettingsButton.Name = "saveGeneralSettingsButton";
+            this.saveGeneralSettingsButton.Size = new System.Drawing.Size(296, 24);
+            this.saveGeneralSettingsButton.TabIndex = 9;
+            this.saveGeneralSettingsButton.Text = "Save";
+            this.saveGeneralSettingsButton.UseVisualStyleBackColor = true;
+            this.saveGeneralSettingsButton.Click += new System.EventHandler(this.saveGeneralSettingsButton_Click);
             // 
             // databaseSettingsTabPage
             // 
@@ -315,54 +363,6 @@
             // 
             this.timer.Interval = 1500;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetToDefaultToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // resetToDefaultToolStripMenuItem
-            // 
-            this.resetToDefaultToolStripMenuItem.Name = "resetToDefaultToolStripMenuItem";
-            this.resetToDefaultToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.resetToDefaultToolStripMenuItem.Text = "Reset To Default";
-            this.resetToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetToDefaultToolStripMenuItem_Click);
-            // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.usernameLabel, 2);
-            this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameLabel.Location = new System.Drawing.Point(3, 0);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(296, 25);
-            this.usernameLabel.TabIndex = 0;
-            this.usernameLabel.Text = "Username:";
-            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // usernameTextBox
-            // 
-            this.tableLayoutPanel3.SetColumnSpan(this.usernameTextBox, 2);
-            this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameTextBox.Location = new System.Drawing.Point(305, 3);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(298, 20);
-            this.usernameTextBox.TabIndex = 8;
-            // 
-            // saveGeneralSettingsButton
-            // 
-            this.tableLayoutPanel3.SetColumnSpan(this.saveGeneralSettingsButton, 2);
-            this.saveGeneralSettingsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.saveGeneralSettingsButton.Location = new System.Drawing.Point(154, 28);
-            this.saveGeneralSettingsButton.Name = "saveGeneralSettingsButton";
-            this.saveGeneralSettingsButton.Size = new System.Drawing.Size(296, 24);
-            this.saveGeneralSettingsButton.TabIndex = 9;
-            this.saveGeneralSettingsButton.Text = "Save";
-            this.saveGeneralSettingsButton.UseVisualStyleBackColor = true;
-            this.saveGeneralSettingsButton.Click += new System.EventHandler(this.saveGeneralSettingsButton_Click);
             // 
             // GeneralSettings
             // 
