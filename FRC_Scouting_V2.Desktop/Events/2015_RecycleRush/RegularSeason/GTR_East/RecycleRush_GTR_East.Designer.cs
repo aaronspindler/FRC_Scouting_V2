@@ -1422,7 +1422,7 @@
             this.matchBreakdownTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.matchBreakdownTabPage.Name = "matchBreakdownTabPage";
             this.matchBreakdownTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.matchBreakdownTabPage.Size = new System.Drawing.Size(1405, 689);
+            this.matchBreakdownTabPage.Size = new System.Drawing.Size(1350, 686);
             this.matchBreakdownTabPage.TabIndex = 1;
             this.matchBreakdownTabPage.Text = "Match Breakdown";
             this.matchBreakdownTabPage.UseVisualStyleBackColor = true;
@@ -1479,7 +1479,7 @@
             this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
             this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.matchBreakdownTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.matchBreakdownTableLayoutPanel.Size = new System.Drawing.Size(1401, 685);
+            this.matchBreakdownTableLayoutPanel.Size = new System.Drawing.Size(1346, 682);
             this.matchBreakdownTableLayoutPanel.TabIndex = 1;
             // 
             // matchBreakdownFieldImageBox
@@ -1488,10 +1488,10 @@
             this.matchBreakdownFieldImageBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakdownFieldImageBox.Image = global::FRC_Scouting_V2.Properties.Resources.RecycleRush_2015_No_Items;
             this.matchBreakdownFieldImageBox.InitialImage = null;
-            this.matchBreakdownFieldImageBox.Location = new System.Drawing.Point(741, 3);
+            this.matchBreakdownFieldImageBox.Location = new System.Drawing.Point(714, 3);
             this.matchBreakdownFieldImageBox.Name = "matchBreakdownFieldImageBox";
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownFieldImageBox, 9);
-            this.matchBreakdownFieldImageBox.Size = new System.Drawing.Size(657, 381);
+            this.matchBreakdownFieldImageBox.Size = new System.Drawing.Size(629, 381);
             this.matchBreakdownFieldImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.matchBreakdownFieldImageBox.TabIndex = 2;
             this.matchBreakdownFieldImageBox.TabStop = false;
@@ -1504,7 +1504,7 @@
             this.matchBreakdownMatchList.Location = new System.Drawing.Point(3, 3);
             this.matchBreakdownMatchList.Name = "matchBreakdownMatchList";
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownMatchList, 15);
-            this.matchBreakdownMatchList.Size = new System.Drawing.Size(240, 621);
+            this.matchBreakdownMatchList.Size = new System.Drawing.Size(231, 621);
             this.matchBreakdownMatchList.TabIndex = 0;
             this.matchBreakdownMatchList.SelectedIndexChanged += new System.EventHandler(this.matchBreakdownMatchList_SelectedIndexChanged);
             // 
@@ -1513,9 +1513,9 @@
             this.matchBreakdownFieldTypeLabel.AutoSize = true;
             this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakdownFieldTypeLabel, 4);
             this.matchBreakdownFieldTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakdownFieldTypeLabel.Location = new System.Drawing.Point(741, 387);
+            this.matchBreakdownFieldTypeLabel.Location = new System.Drawing.Point(714, 387);
             this.matchBreakdownFieldTypeLabel.Name = "matchBreakdownFieldTypeLabel";
-            this.matchBreakdownFieldTypeLabel.Size = new System.Drawing.Size(322, 25);
+            this.matchBreakdownFieldTypeLabel.Size = new System.Drawing.Size(310, 25);
             this.matchBreakdownFieldTypeLabel.TabIndex = 3;
             this.matchBreakdownFieldTypeLabel.Text = "Field Type:";
             this.matchBreakdownFieldTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1529,9 +1529,9 @@
             this.matchBreakdownFieldTypeComboBox.Items.AddRange(new object[] {
             "Field With No Game Pieces",
             "Field With Game Pieces"});
-            this.matchBreakdownFieldTypeComboBox.Location = new System.Drawing.Point(1069, 390);
+            this.matchBreakdownFieldTypeComboBox.Location = new System.Drawing.Point(1030, 390);
             this.matchBreakdownFieldTypeComboBox.Name = "matchBreakdownFieldTypeComboBox";
-            this.matchBreakdownFieldTypeComboBox.Size = new System.Drawing.Size(329, 21);
+            this.matchBreakdownFieldTypeComboBox.Size = new System.Drawing.Size(313, 21);
             this.matchBreakdownFieldTypeComboBox.TabIndex = 4;
             this.matchBreakdownFieldTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.matchBreakdownFieldTypeComboBox_SelectedIndexChanged);
             // 
@@ -1540,10 +1540,10 @@
             this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakdownAutoGroupBox, 6);
             this.matchBreakdownAutoGroupBox.Controls.Add(this.tableLayoutPanel4);
             this.matchBreakdownAutoGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakdownAutoGroupBox.Location = new System.Drawing.Point(249, 3);
+            this.matchBreakdownAutoGroupBox.Location = new System.Drawing.Point(240, 3);
             this.matchBreakdownAutoGroupBox.Name = "matchBreakdownAutoGroupBox";
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownAutoGroupBox, 6);
-            this.matchBreakdownAutoGroupBox.Size = new System.Drawing.Size(486, 252);
+            this.matchBreakdownAutoGroupBox.Size = new System.Drawing.Size(468, 252);
             this.matchBreakdownAutoGroupBox.TabIndex = 5;
             this.matchBreakdownAutoGroupBox.TabStop = false;
             this.matchBreakdownAutoGroupBox.Text = "Autonomous";
@@ -1582,7 +1582,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(480, 233);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(462, 233);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // matchBreakDownDriveToAutozoneLabel
@@ -1591,7 +1591,7 @@
             this.matchBreakDownDriveToAutozoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownDriveToAutozoneLabel.Location = new System.Drawing.Point(3, 0);
             this.matchBreakDownDriveToAutozoneLabel.Name = "matchBreakDownDriveToAutozoneLabel";
-            this.matchBreakDownDriveToAutozoneLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownDriveToAutozoneLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownDriveToAutozoneLabel.TabIndex = 1;
             this.matchBreakDownDriveToAutozoneLabel.Text = "Drive to Autozone:";
             this.matchBreakDownDriveToAutozoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1602,7 +1602,7 @@
             this.matchBreakDownRobotSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownRobotSetLabel.Location = new System.Drawing.Point(3, 25);
             this.matchBreakDownRobotSetLabel.Name = "matchBreakDownRobotSetLabel";
-            this.matchBreakDownRobotSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownRobotSetLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownRobotSetLabel.TabIndex = 2;
             this.matchBreakDownRobotSetLabel.Text = "Robot Set:";
             this.matchBreakDownRobotSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1613,7 +1613,7 @@
             this.matchBreakDownToteSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownToteSetLabel.Location = new System.Drawing.Point(3, 50);
             this.matchBreakDownToteSetLabel.Name = "matchBreakDownToteSetLabel";
-            this.matchBreakDownToteSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownToteSetLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownToteSetLabel.TabIndex = 3;
             this.matchBreakDownToteSetLabel.Text = "Tote Set:";
             this.matchBreakDownToteSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1624,7 +1624,7 @@
             this.matchBreakDownStackedToteSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownStackedToteSetLabel.Location = new System.Drawing.Point(3, 75);
             this.matchBreakDownStackedToteSetLabel.Name = "matchBreakDownStackedToteSetLabel";
-            this.matchBreakDownStackedToteSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownStackedToteSetLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownStackedToteSetLabel.TabIndex = 4;
             this.matchBreakDownStackedToteSetLabel.Text = "Stacked Tote Set:";
             this.matchBreakDownStackedToteSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1635,7 +1635,7 @@
             this.matchBreakDownBinSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownBinSetLabel.Location = new System.Drawing.Point(3, 100);
             this.matchBreakDownBinSetLabel.Name = "matchBreakDownBinSetLabel";
-            this.matchBreakDownBinSetLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinSetLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownBinSetLabel.TabIndex = 5;
             this.matchBreakDownBinSetLabel.Text = "Bin Set:";
             this.matchBreakDownBinSetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1646,7 +1646,7 @@
             this.matchBreakDownBinsOffStepLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownBinsOffStepLabel.Location = new System.Drawing.Point(3, 125);
             this.matchBreakDownBinsOffStepLabel.Name = "matchBreakDownBinsOffStepLabel";
-            this.matchBreakDownBinsOffStepLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinsOffStepLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownBinsOffStepLabel.TabIndex = 6;
             this.matchBreakDownBinsOffStepLabel.Text = "Bins Off Step:";
             this.matchBreakDownBinsOffStepLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1655,9 +1655,9 @@
             // 
             this.matchBreakDownDriveToAutozoneDisplay.AutoSize = true;
             this.matchBreakDownDriveToAutozoneDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownDriveToAutozoneDisplay.Location = new System.Drawing.Point(243, 0);
+            this.matchBreakDownDriveToAutozoneDisplay.Location = new System.Drawing.Point(234, 0);
             this.matchBreakDownDriveToAutozoneDisplay.Name = "matchBreakDownDriveToAutozoneDisplay";
-            this.matchBreakDownDriveToAutozoneDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownDriveToAutozoneDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownDriveToAutozoneDisplay.TabIndex = 7;
             this.matchBreakDownDriveToAutozoneDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1665,9 +1665,9 @@
             // 
             this.matchBreakDownRobotSetDisplay.AutoSize = true;
             this.matchBreakDownRobotSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownRobotSetDisplay.Location = new System.Drawing.Point(243, 25);
+            this.matchBreakDownRobotSetDisplay.Location = new System.Drawing.Point(234, 25);
             this.matchBreakDownRobotSetDisplay.Name = "matchBreakDownRobotSetDisplay";
-            this.matchBreakDownRobotSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownRobotSetDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownRobotSetDisplay.TabIndex = 8;
             this.matchBreakDownRobotSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1675,9 +1675,9 @@
             // 
             this.matchBreakDownToteSetDisplay.AutoSize = true;
             this.matchBreakDownToteSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownToteSetDisplay.Location = new System.Drawing.Point(243, 50);
+            this.matchBreakDownToteSetDisplay.Location = new System.Drawing.Point(234, 50);
             this.matchBreakDownToteSetDisplay.Name = "matchBreakDownToteSetDisplay";
-            this.matchBreakDownToteSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownToteSetDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownToteSetDisplay.TabIndex = 9;
             this.matchBreakDownToteSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1685,9 +1685,9 @@
             // 
             this.matchBreakDownStackedToteSetDisplay.AutoSize = true;
             this.matchBreakDownStackedToteSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownStackedToteSetDisplay.Location = new System.Drawing.Point(243, 75);
+            this.matchBreakDownStackedToteSetDisplay.Location = new System.Drawing.Point(234, 75);
             this.matchBreakDownStackedToteSetDisplay.Name = "matchBreakDownStackedToteSetDisplay";
-            this.matchBreakDownStackedToteSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownStackedToteSetDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownStackedToteSetDisplay.TabIndex = 10;
             this.matchBreakDownStackedToteSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1695,9 +1695,9 @@
             // 
             this.matchBreakDownBinSetDisplay.AutoSize = true;
             this.matchBreakDownBinSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownBinSetDisplay.Location = new System.Drawing.Point(243, 100);
+            this.matchBreakDownBinSetDisplay.Location = new System.Drawing.Point(234, 100);
             this.matchBreakDownBinSetDisplay.Name = "matchBreakDownBinSetDisplay";
-            this.matchBreakDownBinSetDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinSetDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownBinSetDisplay.TabIndex = 11;
             this.matchBreakDownBinSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1705,9 +1705,9 @@
             // 
             this.matchBreakDownBinsOffStepDisplay.AutoSize = true;
             this.matchBreakDownBinsOffStepDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownBinsOffStepDisplay.Location = new System.Drawing.Point(243, 125);
+            this.matchBreakDownBinsOffStepDisplay.Location = new System.Drawing.Point(234, 125);
             this.matchBreakDownBinsOffStepDisplay.Name = "matchBreakDownBinsOffStepDisplay";
-            this.matchBreakDownBinsOffStepDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownBinsOffStepDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownBinsOffStepDisplay.TabIndex = 12;
             this.matchBreakDownBinsOffStepDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1717,7 +1717,7 @@
             this.matchBreakDownAutoFoulsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownAutoFoulsLabel.Location = new System.Drawing.Point(3, 150);
             this.matchBreakDownAutoFoulsLabel.Name = "matchBreakDownAutoFoulsLabel";
-            this.matchBreakDownAutoFoulsLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoFoulsLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownAutoFoulsLabel.TabIndex = 13;
             this.matchBreakDownAutoFoulsLabel.Text = "Fouls:";
             this.matchBreakDownAutoFoulsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1726,9 +1726,9 @@
             // 
             this.matchBreakDownAutoFoulsDisplay.AutoSize = true;
             this.matchBreakDownAutoFoulsDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownAutoFoulsDisplay.Location = new System.Drawing.Point(243, 150);
+            this.matchBreakDownAutoFoulsDisplay.Location = new System.Drawing.Point(234, 150);
             this.matchBreakDownAutoFoulsDisplay.Name = "matchBreakDownAutoFoulsDisplay";
-            this.matchBreakDownAutoFoulsDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoFoulsDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownAutoFoulsDisplay.TabIndex = 14;
             this.matchBreakDownAutoFoulsDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1738,7 +1738,7 @@
             this.matchBreakDownAutoDidNothingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownAutoDidNothingLabel.Location = new System.Drawing.Point(3, 175);
             this.matchBreakDownAutoDidNothingLabel.Name = "matchBreakDownAutoDidNothingLabel";
-            this.matchBreakDownAutoDidNothingLabel.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoDidNothingLabel.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownAutoDidNothingLabel.TabIndex = 15;
             this.matchBreakDownAutoDidNothingLabel.Text = "Did Nothing:";
             this.matchBreakDownAutoDidNothingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1747,9 +1747,9 @@
             // 
             this.matchBreakDownAutoDidNothingDisplay.AutoSize = true;
             this.matchBreakDownAutoDidNothingDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownAutoDidNothingDisplay.Location = new System.Drawing.Point(243, 175);
+            this.matchBreakDownAutoDidNothingDisplay.Location = new System.Drawing.Point(234, 175);
             this.matchBreakDownAutoDidNothingDisplay.Name = "matchBreakDownAutoDidNothingDisplay";
-            this.matchBreakDownAutoDidNothingDisplay.Size = new System.Drawing.Size(234, 25);
+            this.matchBreakDownAutoDidNothingDisplay.Size = new System.Drawing.Size(225, 25);
             this.matchBreakDownAutoDidNothingDisplay.TabIndex = 16;
             this.matchBreakDownAutoDidNothingDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1758,10 +1758,10 @@
             this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakdownTeleGroupBox, 6);
             this.matchBreakdownTeleGroupBox.Controls.Add(this.tableLayoutPanel5);
             this.matchBreakdownTeleGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakdownTeleGroupBox.Location = new System.Drawing.Point(249, 261);
+            this.matchBreakdownTeleGroupBox.Location = new System.Drawing.Point(240, 261);
             this.matchBreakdownTeleGroupBox.Name = "matchBreakdownTeleGroupBox";
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownTeleGroupBox, 5);
-            this.matchBreakdownTeleGroupBox.Size = new System.Drawing.Size(486, 191);
+            this.matchBreakdownTeleGroupBox.Size = new System.Drawing.Size(468, 191);
             this.matchBreakdownTeleGroupBox.TabIndex = 6;
             this.matchBreakdownTeleGroupBox.TabStop = false;
             this.matchBreakdownTeleGroupBox.Text = "Tele-Operated";
@@ -1803,7 +1803,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(480, 172);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(462, 172);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // matchBreakDownTeleTotePickupLabel
@@ -1812,7 +1812,7 @@
             this.matchBreakDownTeleTotePickupLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownTeleTotePickupLabel.Location = new System.Drawing.Point(3, 0);
             this.matchBreakDownTeleTotePickupLabel.Name = "matchBreakDownTeleTotePickupLabel";
-            this.matchBreakDownTeleTotePickupLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupLabel.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleTotePickupLabel.TabIndex = 0;
             this.matchBreakDownTeleTotePickupLabel.Text = "Tote Pickup:";
             this.matchBreakDownTeleTotePickupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1821,9 +1821,9 @@
             // 
             this.matchBreakDownTeleTotePickupUprightDisplay.AutoSize = true;
             this.matchBreakDownTeleTotePickupUprightDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleTotePickupUprightDisplay.Location = new System.Drawing.Point(123, 0);
+            this.matchBreakDownTeleTotePickupUprightDisplay.Location = new System.Drawing.Point(118, 0);
             this.matchBreakDownTeleTotePickupUprightDisplay.Name = "matchBreakDownTeleTotePickupUprightDisplay";
-            this.matchBreakDownTeleTotePickupUprightDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupUprightDisplay.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleTotePickupUprightDisplay.TabIndex = 1;
             this.matchBreakDownTeleTotePickupUprightDisplay.Text = "Upright:";
             this.matchBreakDownTeleTotePickupUprightDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1832,9 +1832,9 @@
             // 
             this.matchBreakDownTeleTotePickupUpsideDownDisplay.AutoSize = true;
             this.matchBreakDownTeleTotePickupUpsideDownDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Location = new System.Drawing.Point(243, 0);
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Location = new System.Drawing.Point(233, 0);
             this.matchBreakDownTeleTotePickupUpsideDownDisplay.Name = "matchBreakDownTeleTotePickupUpsideDownDisplay";
-            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupUpsideDownDisplay.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleTotePickupUpsideDownDisplay.TabIndex = 2;
             this.matchBreakDownTeleTotePickupUpsideDownDisplay.Text = "Upside Down:";
             this.matchBreakDownTeleTotePickupUpsideDownDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1843,9 +1843,9 @@
             // 
             this.matchBreakDownTeleTotePickupSidewaysDisplay.AutoSize = true;
             this.matchBreakDownTeleTotePickupSidewaysDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleTotePickupSidewaysDisplay.Location = new System.Drawing.Point(363, 0);
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.Location = new System.Drawing.Point(348, 0);
             this.matchBreakDownTeleTotePickupSidewaysDisplay.Name = "matchBreakDownTeleTotePickupSidewaysDisplay";
-            this.matchBreakDownTeleTotePickupSidewaysDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleTotePickupSidewaysDisplay.Size = new System.Drawing.Size(111, 25);
             this.matchBreakDownTeleTotePickupSidewaysDisplay.TabIndex = 3;
             this.matchBreakDownTeleTotePickupSidewaysDisplay.Text = "Sideways:";
             this.matchBreakDownTeleTotePickupSidewaysDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1856,7 +1856,7 @@
             this.matchBreakDownTeleBinPickup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownTeleBinPickup.Location = new System.Drawing.Point(3, 25);
             this.matchBreakDownTeleBinPickup.Name = "matchBreakDownTeleBinPickup";
-            this.matchBreakDownTeleBinPickup.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickup.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleBinPickup.TabIndex = 4;
             this.matchBreakDownTeleBinPickup.Text = "Bin Pickup:";
             this.matchBreakDownTeleBinPickup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1865,9 +1865,9 @@
             // 
             this.matchBreakDownTeleBinPickupUprightDisplay.AutoSize = true;
             this.matchBreakDownTeleBinPickupUprightDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleBinPickupUprightDisplay.Location = new System.Drawing.Point(123, 25);
+            this.matchBreakDownTeleBinPickupUprightDisplay.Location = new System.Drawing.Point(118, 25);
             this.matchBreakDownTeleBinPickupUprightDisplay.Name = "matchBreakDownTeleBinPickupUprightDisplay";
-            this.matchBreakDownTeleBinPickupUprightDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickupUprightDisplay.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleBinPickupUprightDisplay.TabIndex = 5;
             this.matchBreakDownTeleBinPickupUprightDisplay.Text = "Upright:";
             this.matchBreakDownTeleBinPickupUprightDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1876,9 +1876,9 @@
             // 
             this.matchBreakDownTeleBinPickupUpsideDownDisplay.AutoSize = true;
             this.matchBreakDownTeleBinPickupUpsideDownDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Location = new System.Drawing.Point(243, 25);
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Location = new System.Drawing.Point(233, 25);
             this.matchBreakDownTeleBinPickupUpsideDownDisplay.Name = "matchBreakDownTeleBinPickupUpsideDownDisplay";
-            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickupUpsideDownDisplay.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleBinPickupUpsideDownDisplay.TabIndex = 6;
             this.matchBreakDownTeleBinPickupUpsideDownDisplay.Text = "Upside Down:";
             this.matchBreakDownTeleBinPickupUpsideDownDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1887,9 +1887,9 @@
             // 
             this.matchBreakDownTeleBinPickupSidewaysDisplay.AutoSize = true;
             this.matchBreakDownTeleBinPickupSidewaysDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleBinPickupSidewaysDisplay.Location = new System.Drawing.Point(363, 25);
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.Location = new System.Drawing.Point(348, 25);
             this.matchBreakDownTeleBinPickupSidewaysDisplay.Name = "matchBreakDownTeleBinPickupSidewaysDisplay";
-            this.matchBreakDownTeleBinPickupSidewaysDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleBinPickupSidewaysDisplay.Size = new System.Drawing.Size(111, 25);
             this.matchBreakDownTeleBinPickupSidewaysDisplay.TabIndex = 7;
             this.matchBreakDownTeleBinPickupSidewaysDisplay.Text = "Sideways:";
             this.matchBreakDownTeleBinPickupSidewaysDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1900,7 +1900,7 @@
             this.matchBreakDownTeleHumanStation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownTeleHumanStation.Location = new System.Drawing.Point(3, 50);
             this.matchBreakDownTeleHumanStation.Name = "matchBreakDownTeleHumanStation";
-            this.matchBreakDownTeleHumanStation.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStation.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleHumanStation.TabIndex = 8;
             this.matchBreakDownTeleHumanStation.Text = "Human Station:";
             this.matchBreakDownTeleHumanStation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1909,9 +1909,9 @@
             // 
             this.matchBreakDownTeleHumanStationLoadingTotesDisplay.AutoSize = true;
             this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Location = new System.Drawing.Point(123, 50);
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Location = new System.Drawing.Point(118, 50);
             this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Name = "matchBreakDownTeleHumanStationLoadingTotesDisplay";
-            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleHumanStationLoadingTotesDisplay.TabIndex = 9;
             this.matchBreakDownTeleHumanStationLoadingTotesDisplay.Text = "Loading Totes:";
             this.matchBreakDownTeleHumanStationLoadingTotesDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1920,9 +1920,9 @@
             // 
             this.matchBreakDownTeleHumanStationStackTotesDisplay.AutoSize = true;
             this.matchBreakDownTeleHumanStationStackTotesDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleHumanStationStackTotesDisplay.Location = new System.Drawing.Point(243, 50);
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.Location = new System.Drawing.Point(233, 50);
             this.matchBreakDownTeleHumanStationStackTotesDisplay.Name = "matchBreakDownTeleHumanStationStackTotesDisplay";
-            this.matchBreakDownTeleHumanStationStackTotesDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStationStackTotesDisplay.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleHumanStationStackTotesDisplay.TabIndex = 10;
             this.matchBreakDownTeleHumanStationStackTotesDisplay.Text = "Stack Totes:";
             this.matchBreakDownTeleHumanStationStackTotesDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1931,9 +1931,9 @@
             // 
             this.matchBreakDownTeleHumanStationInsertLitterDisplay.AutoSize = true;
             this.matchBreakDownTeleHumanStationInsertLitterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Location = new System.Drawing.Point(363, 50);
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Location = new System.Drawing.Point(348, 50);
             this.matchBreakDownTeleHumanStationInsertLitterDisplay.Name = "matchBreakDownTeleHumanStationInsertLitterDisplay";
-            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleHumanStationInsertLitterDisplay.Size = new System.Drawing.Size(111, 25);
             this.matchBreakDownTeleHumanStationInsertLitterDisplay.TabIndex = 11;
             this.matchBreakDownTeleHumanStationInsertLitterDisplay.Text = "Inserting Litter:";
             this.matchBreakDownTeleHumanStationInsertLitterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1944,7 +1944,7 @@
             this.matchBreakDownTeleThrowingLitterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownTeleThrowingLitterLabel.Location = new System.Drawing.Point(3, 75);
             this.matchBreakDownTeleThrowingLitterLabel.Name = "matchBreakDownTeleThrowingLitterLabel";
-            this.matchBreakDownTeleThrowingLitterLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleThrowingLitterLabel.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleThrowingLitterLabel.TabIndex = 12;
             this.matchBreakDownTeleThrowingLitterLabel.Text = "Throwing Litter:";
             this.matchBreakDownTeleThrowingLitterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1955,7 +1955,7 @@
             this.matchBreakDownTelePushingLitterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownTelePushingLitterLabel.Location = new System.Drawing.Point(3, 100);
             this.matchBreakDownTelePushingLitterLabel.Name = "matchBreakDownTelePushingLitterLabel";
-            this.matchBreakDownTelePushingLitterLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTelePushingLitterLabel.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTelePushingLitterLabel.TabIndex = 16;
             this.matchBreakDownTelePushingLitterLabel.Text = "Pushing Litter:";
             this.matchBreakDownTelePushingLitterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1965,9 +1965,9 @@
             this.matchBreakDownTelePushingLitterDisplay.AutoSize = true;
             this.tableLayoutPanel5.SetColumnSpan(this.matchBreakDownTelePushingLitterDisplay, 3);
             this.matchBreakDownTelePushingLitterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTelePushingLitterDisplay.Location = new System.Drawing.Point(123, 100);
+            this.matchBreakDownTelePushingLitterDisplay.Location = new System.Drawing.Point(118, 100);
             this.matchBreakDownTelePushingLitterDisplay.Name = "matchBreakDownTelePushingLitterDisplay";
-            this.matchBreakDownTelePushingLitterDisplay.Size = new System.Drawing.Size(354, 25);
+            this.matchBreakDownTelePushingLitterDisplay.Size = new System.Drawing.Size(341, 25);
             this.matchBreakDownTelePushingLitterDisplay.TabIndex = 17;
             this.matchBreakDownTelePushingLitterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1977,7 +1977,7 @@
             this.matchBreakDownTeleFoulsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownTeleFoulsLabel.Location = new System.Drawing.Point(3, 125);
             this.matchBreakDownTeleFoulsLabel.Name = "matchBreakDownTeleFoulsLabel";
-            this.matchBreakDownTeleFoulsLabel.Size = new System.Drawing.Size(114, 25);
+            this.matchBreakDownTeleFoulsLabel.Size = new System.Drawing.Size(109, 25);
             this.matchBreakDownTeleFoulsLabel.TabIndex = 20;
             this.matchBreakDownTeleFoulsLabel.Text = "Fouls:";
             this.matchBreakDownTeleFoulsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1987,9 +1987,9 @@
             this.matchBreakDownTeleFoulsDisplay.AutoSize = true;
             this.tableLayoutPanel5.SetColumnSpan(this.matchBreakDownTeleFoulsDisplay, 3);
             this.matchBreakDownTeleFoulsDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleFoulsDisplay.Location = new System.Drawing.Point(123, 125);
+            this.matchBreakDownTeleFoulsDisplay.Location = new System.Drawing.Point(118, 125);
             this.matchBreakDownTeleFoulsDisplay.Name = "matchBreakDownTeleFoulsDisplay";
-            this.matchBreakDownTeleFoulsDisplay.Size = new System.Drawing.Size(354, 25);
+            this.matchBreakDownTeleFoulsDisplay.Size = new System.Drawing.Size(341, 25);
             this.matchBreakDownTeleFoulsDisplay.TabIndex = 21;
             this.matchBreakDownTeleFoulsDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1998,9 +1998,9 @@
             this.matchBreakDownTeleThrowingLitterDisplay.AutoSize = true;
             this.tableLayoutPanel5.SetColumnSpan(this.matchBreakDownTeleThrowingLitterDisplay, 3);
             this.matchBreakDownTeleThrowingLitterDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownTeleThrowingLitterDisplay.Location = new System.Drawing.Point(123, 75);
+            this.matchBreakDownTeleThrowingLitterDisplay.Location = new System.Drawing.Point(118, 75);
             this.matchBreakDownTeleThrowingLitterDisplay.Name = "matchBreakDownTeleThrowingLitterDisplay";
-            this.matchBreakDownTeleThrowingLitterDisplay.Size = new System.Drawing.Size(354, 25);
+            this.matchBreakDownTeleThrowingLitterDisplay.Size = new System.Drawing.Size(341, 25);
             this.matchBreakDownTeleThrowingLitterDisplay.TabIndex = 18;
             this.matchBreakDownTeleThrowingLitterDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2035,7 +2035,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.matchBreakdownStacksGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.matchBreakdownStacksGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakdownStacksGridView.Location = new System.Drawing.Point(741, 415);
+            this.matchBreakdownStacksGridView.Location = new System.Drawing.Point(714, 415);
             this.matchBreakdownStacksGridView.Name = "matchBreakdownStacksGridView";
             this.matchBreakdownStacksGridView.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2048,7 +2048,7 @@
             this.matchBreakdownStacksGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.matchBreakdownStacksGridView.RowHeadersVisible = false;
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakdownStacksGridView, 7);
-            this.matchBreakdownStacksGridView.Size = new System.Drawing.Size(657, 267);
+            this.matchBreakdownStacksGridView.Size = new System.Drawing.Size(629, 264);
             this.matchBreakdownStacksGridView.TabIndex = 8;
             // 
             // StackNumber
@@ -2091,11 +2091,11 @@
             // 
             this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakDownCommentsTextBox, 6);
             this.matchBreakDownCommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownCommentsTextBox.Location = new System.Drawing.Point(249, 587);
+            this.matchBreakDownCommentsTextBox.Location = new System.Drawing.Point(240, 587);
             this.matchBreakDownCommentsTextBox.Name = "matchBreakDownCommentsTextBox";
             this.matchBreakDownCommentsTextBox.ReadOnly = true;
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakDownCommentsTextBox, 3);
-            this.matchBreakDownCommentsTextBox.Size = new System.Drawing.Size(486, 95);
+            this.matchBreakDownCommentsTextBox.Size = new System.Drawing.Size(468, 92);
             this.matchBreakDownCommentsTextBox.TabIndex = 9;
             this.matchBreakDownCommentsTextBox.Text = "Comments:";
             // 
@@ -2104,10 +2104,10 @@
             this.matchBreakdownTableLayoutPanel.SetColumnSpan(this.matchBreakDownOtherGroupBox, 6);
             this.matchBreakDownOtherGroupBox.Controls.Add(this.tableLayoutPanel8);
             this.matchBreakDownOtherGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownOtherGroupBox.Location = new System.Drawing.Point(249, 458);
+            this.matchBreakDownOtherGroupBox.Location = new System.Drawing.Point(240, 458);
             this.matchBreakDownOtherGroupBox.Name = "matchBreakDownOtherGroupBox";
             this.matchBreakdownTableLayoutPanel.SetRowSpan(this.matchBreakDownOtherGroupBox, 3);
-            this.matchBreakDownOtherGroupBox.Size = new System.Drawing.Size(486, 123);
+            this.matchBreakDownOtherGroupBox.Size = new System.Drawing.Size(468, 123);
             this.matchBreakDownOtherGroupBox.TabIndex = 10;
             this.matchBreakDownOtherGroupBox.TabStop = false;
             this.matchBreakDownOtherGroupBox.Text = "Other";
@@ -2137,7 +2137,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(480, 104);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(462, 104);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // matchBreakDownDriveRatingLabel
@@ -2146,7 +2146,7 @@
             this.matchBreakDownDriveRatingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownDriveRatingLabel.Location = new System.Drawing.Point(3, 0);
             this.matchBreakDownDriveRatingLabel.Name = "matchBreakDownDriveRatingLabel";
-            this.matchBreakDownDriveRatingLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownDriveRatingLabel.Size = new System.Drawing.Size(148, 25);
             this.matchBreakDownDriveRatingLabel.TabIndex = 0;
             this.matchBreakDownDriveRatingLabel.Text = "Drive Rating:";
             this.matchBreakDownDriveRatingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2157,7 +2157,7 @@
             this.matchBreakDownCoopertitionLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownCoopertitionLabel.Location = new System.Drawing.Point(3, 25);
             this.matchBreakDownCoopertitionLabel.Name = "matchBreakDownCoopertitionLabel";
-            this.matchBreakDownCoopertitionLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownCoopertitionLabel.Size = new System.Drawing.Size(148, 25);
             this.matchBreakDownCoopertitionLabel.TabIndex = 2;
             this.matchBreakDownCoopertitionLabel.Text = "Coopertition:";
             this.matchBreakDownCoopertitionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2168,7 +2168,7 @@
             this.matchBreakDownFinalScoresLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownFinalScoresLabel.Location = new System.Drawing.Point(3, 50);
             this.matchBreakDownFinalScoresLabel.Name = "matchBreakDownFinalScoresLabel";
-            this.matchBreakDownFinalScoresLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownFinalScoresLabel.Size = new System.Drawing.Size(148, 25);
             this.matchBreakDownFinalScoresLabel.TabIndex = 4;
             this.matchBreakDownFinalScoresLabel.Text = "Final Scores:";
             this.matchBreakDownFinalScoresLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2177,9 +2177,9 @@
             // 
             this.matchBreakDownCoopertitionSetDisplay.AutoSize = true;
             this.matchBreakDownCoopertitionSetDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownCoopertitionSetDisplay.Location = new System.Drawing.Point(163, 25);
+            this.matchBreakDownCoopertitionSetDisplay.Location = new System.Drawing.Point(157, 25);
             this.matchBreakDownCoopertitionSetDisplay.Name = "matchBreakDownCoopertitionSetDisplay";
-            this.matchBreakDownCoopertitionSetDisplay.Size = new System.Drawing.Size(153, 25);
+            this.matchBreakDownCoopertitionSetDisplay.Size = new System.Drawing.Size(147, 25);
             this.matchBreakDownCoopertitionSetDisplay.TabIndex = 3;
             this.matchBreakDownCoopertitionSetDisplay.Text = "Set:";
             this.matchBreakDownCoopertitionSetDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2189,9 +2189,9 @@
             this.matchBreakDownFinalScoresRedDisplay.AutoSize = true;
             this.matchBreakDownFinalScoresRedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownFinalScoresRedDisplay.ForeColor = System.Drawing.Color.Red;
-            this.matchBreakDownFinalScoresRedDisplay.Location = new System.Drawing.Point(163, 50);
+            this.matchBreakDownFinalScoresRedDisplay.Location = new System.Drawing.Point(157, 50);
             this.matchBreakDownFinalScoresRedDisplay.Name = "matchBreakDownFinalScoresRedDisplay";
-            this.matchBreakDownFinalScoresRedDisplay.Size = new System.Drawing.Size(153, 25);
+            this.matchBreakDownFinalScoresRedDisplay.Size = new System.Drawing.Size(147, 25);
             this.matchBreakDownFinalScoresRedDisplay.TabIndex = 5;
             this.matchBreakDownFinalScoresRedDisplay.Text = "Red: 0";
             this.matchBreakDownFinalScoresRedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2201,9 +2201,9 @@
             this.matchBreakDownDriverRatingDisplay.AutoSize = true;
             this.tableLayoutPanel8.SetColumnSpan(this.matchBreakDownDriverRatingDisplay, 2);
             this.matchBreakDownDriverRatingDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownDriverRatingDisplay.Location = new System.Drawing.Point(163, 0);
+            this.matchBreakDownDriverRatingDisplay.Location = new System.Drawing.Point(157, 0);
             this.matchBreakDownDriverRatingDisplay.Name = "matchBreakDownDriverRatingDisplay";
-            this.matchBreakDownDriverRatingDisplay.Size = new System.Drawing.Size(314, 25);
+            this.matchBreakDownDriverRatingDisplay.Size = new System.Drawing.Size(302, 25);
             this.matchBreakDownDriverRatingDisplay.TabIndex = 1;
             this.matchBreakDownDriverRatingDisplay.Text = "0";
             this.matchBreakDownDriverRatingDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2212,9 +2212,9 @@
             // 
             this.matchBreakDownCoopertitionStackDisplay.AutoSize = true;
             this.matchBreakDownCoopertitionStackDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownCoopertitionStackDisplay.Location = new System.Drawing.Point(322, 25);
+            this.matchBreakDownCoopertitionStackDisplay.Location = new System.Drawing.Point(310, 25);
             this.matchBreakDownCoopertitionStackDisplay.Name = "matchBreakDownCoopertitionStackDisplay";
-            this.matchBreakDownCoopertitionStackDisplay.Size = new System.Drawing.Size(155, 25);
+            this.matchBreakDownCoopertitionStackDisplay.Size = new System.Drawing.Size(149, 25);
             this.matchBreakDownCoopertitionStackDisplay.TabIndex = 7;
             this.matchBreakDownCoopertitionStackDisplay.Text = "Stack:";
             this.matchBreakDownCoopertitionStackDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2224,9 +2224,9 @@
             this.matchBreakDownFinalScoresBlueDisplay.AutoSize = true;
             this.matchBreakDownFinalScoresBlueDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownFinalScoresBlueDisplay.ForeColor = System.Drawing.Color.Blue;
-            this.matchBreakDownFinalScoresBlueDisplay.Location = new System.Drawing.Point(322, 50);
+            this.matchBreakDownFinalScoresBlueDisplay.Location = new System.Drawing.Point(310, 50);
             this.matchBreakDownFinalScoresBlueDisplay.Name = "matchBreakDownFinalScoresBlueDisplay";
-            this.matchBreakDownFinalScoresBlueDisplay.Size = new System.Drawing.Size(155, 25);
+            this.matchBreakDownFinalScoresBlueDisplay.Size = new System.Drawing.Size(149, 25);
             this.matchBreakDownFinalScoresBlueDisplay.TabIndex = 8;
             this.matchBreakDownFinalScoresBlueDisplay.Text = "Blue: 0";
             this.matchBreakDownFinalScoresBlueDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2237,7 +2237,7 @@
             this.matchBreakDownAllianceColourLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownAllianceColourLabel.Location = new System.Drawing.Point(3, 75);
             this.matchBreakDownAllianceColourLabel.Name = "matchBreakDownAllianceColourLabel";
-            this.matchBreakDownAllianceColourLabel.Size = new System.Drawing.Size(154, 25);
+            this.matchBreakDownAllianceColourLabel.Size = new System.Drawing.Size(148, 25);
             this.matchBreakDownAllianceColourLabel.TabIndex = 9;
             this.matchBreakDownAllianceColourLabel.Text = "Alliance Colour:";
             this.matchBreakDownAllianceColourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2247,9 +2247,9 @@
             this.matchBreakDownAllianceColourDisplay.AutoSize = true;
             this.tableLayoutPanel8.SetColumnSpan(this.matchBreakDownAllianceColourDisplay, 2);
             this.matchBreakDownAllianceColourDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchBreakDownAllianceColourDisplay.Location = new System.Drawing.Point(163, 75);
+            this.matchBreakDownAllianceColourDisplay.Location = new System.Drawing.Point(157, 75);
             this.matchBreakDownAllianceColourDisplay.Name = "matchBreakDownAllianceColourDisplay";
-            this.matchBreakDownAllianceColourDisplay.Size = new System.Drawing.Size(314, 25);
+            this.matchBreakDownAllianceColourDisplay.Size = new System.Drawing.Size(302, 25);
             this.matchBreakDownAllianceColourDisplay.TabIndex = 10;
             this.matchBreakDownAllianceColourDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2260,7 +2260,7 @@
             this.matchBreakDownAuthorDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownAuthorDisplay.Location = new System.Drawing.Point(3, 627);
             this.matchBreakDownAuthorDisplay.Name = "matchBreakDownAuthorDisplay";
-            this.matchBreakDownAuthorDisplay.Size = new System.Drawing.Size(240, 25);
+            this.matchBreakDownAuthorDisplay.Size = new System.Drawing.Size(231, 25);
             this.matchBreakDownAuthorDisplay.TabIndex = 11;
             this.matchBreakDownAuthorDisplay.Text = "Author:";
             this.matchBreakDownAuthorDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2272,7 +2272,7 @@
             this.matchBreakDownTimeCreatedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchBreakDownTimeCreatedDisplay.Location = new System.Drawing.Point(3, 652);
             this.matchBreakDownTimeCreatedDisplay.Name = "matchBreakDownTimeCreatedDisplay";
-            this.matchBreakDownTimeCreatedDisplay.Size = new System.Drawing.Size(240, 33);
+            this.matchBreakDownTimeCreatedDisplay.Size = new System.Drawing.Size(231, 30);
             this.matchBreakDownTimeCreatedDisplay.TabIndex = 12;
             this.matchBreakDownTimeCreatedDisplay.Text = "Time Created:";
             this.matchBreakDownTimeCreatedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2283,7 +2283,7 @@
             this.teamComparisonTabPage.Location = new System.Drawing.Point(4, 22);
             this.teamComparisonTabPage.Name = "teamComparisonTabPage";
             this.teamComparisonTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.teamComparisonTabPage.Size = new System.Drawing.Size(1405, 689);
+            this.teamComparisonTabPage.Size = new System.Drawing.Size(1350, 686);
             this.teamComparisonTabPage.TabIndex = 5;
             this.teamComparisonTabPage.Text = "Team Comparison";
             this.teamComparisonTabPage.UseVisualStyleBackColor = true;
@@ -2308,7 +2308,7 @@
             this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.teamComparisonTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.teamComparisonTableLayoutPanel.Size = new System.Drawing.Size(1399, 683);
+            this.teamComparisonTableLayoutPanel.Size = new System.Drawing.Size(1344, 680);
             this.teamComparisonTableLayoutPanel.TabIndex = 1;
             // 
             // dataGridViewTeam2
@@ -2340,7 +2340,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTeam2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTeam2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewTeam2.Location = new System.Drawing.Point(702, 28);
+            this.dataGridViewTeam2.Location = new System.Drawing.Point(675, 28);
             this.dataGridViewTeam2.Name = "dataGridViewTeam2";
             this.dataGridViewTeam2.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2353,7 +2353,7 @@
             this.dataGridViewTeam2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewTeam2.RowHeadersVisible = false;
             this.teamComparisonTableLayoutPanel.SetRowSpan(this.dataGridViewTeam2, 2);
-            this.dataGridViewTeam2.Size = new System.Drawing.Size(694, 652);
+            this.dataGridViewTeam2.Size = new System.Drawing.Size(666, 649);
             this.dataGridViewTeam2.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
@@ -2426,7 +2426,7 @@
             this.dataGridViewTeam1.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTeam1.RowHeadersVisible = false;
             this.teamComparisonTableLayoutPanel.SetRowSpan(this.dataGridViewTeam1, 2);
-            this.dataGridViewTeam1.Size = new System.Drawing.Size(693, 652);
+            this.dataGridViewTeam1.Size = new System.Drawing.Size(666, 649);
             this.dataGridViewTeam1.TabIndex = 7;
             // 
             // dataNameColumn1
@@ -2463,7 +2463,7 @@
             this.team1SelectorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.team1SelectorLabel.Location = new System.Drawing.Point(3, 0);
             this.team1SelectorLabel.Name = "team1SelectorLabel";
-            this.team1SelectorLabel.Size = new System.Drawing.Size(256, 25);
+            this.team1SelectorLabel.Size = new System.Drawing.Size(246, 25);
             this.team1SelectorLabel.TabIndex = 2;
             this.team1SelectorLabel.Text = "Team 1:";
             this.team1SelectorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2472,27 +2472,27 @@
             // 
             this.teamComparisonTeam1Selector.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamComparisonTeam1Selector.FormattingEnabled = true;
-            this.teamComparisonTeam1Selector.Location = new System.Drawing.Point(265, 3);
+            this.teamComparisonTeam1Selector.Location = new System.Drawing.Point(255, 3);
             this.teamComparisonTeam1Selector.Name = "teamComparisonTeam1Selector";
-            this.teamComparisonTeam1Selector.Size = new System.Drawing.Size(431, 21);
+            this.teamComparisonTeam1Selector.Size = new System.Drawing.Size(414, 21);
             this.teamComparisonTeam1Selector.TabIndex = 2;
             // 
             // teamComparisonTeam2Selector
             // 
             this.teamComparisonTeam2Selector.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamComparisonTeam2Selector.FormattingEnabled = true;
-            this.teamComparisonTeam2Selector.Location = new System.Drawing.Point(964, 3);
+            this.teamComparisonTeam2Selector.Location = new System.Drawing.Point(927, 3);
             this.teamComparisonTeam2Selector.Name = "teamComparisonTeam2Selector";
-            this.teamComparisonTeam2Selector.Size = new System.Drawing.Size(432, 21);
+            this.teamComparisonTeam2Selector.Size = new System.Drawing.Size(414, 21);
             this.teamComparisonTeam2Selector.TabIndex = 3;
             // 
             // team2SelectorLabel
             // 
             this.team2SelectorLabel.AutoSize = true;
             this.team2SelectorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.team2SelectorLabel.Location = new System.Drawing.Point(702, 0);
+            this.team2SelectorLabel.Location = new System.Drawing.Point(675, 0);
             this.team2SelectorLabel.Name = "team2SelectorLabel";
-            this.team2SelectorLabel.Size = new System.Drawing.Size(256, 25);
+            this.team2SelectorLabel.Size = new System.Drawing.Size(246, 25);
             this.team2SelectorLabel.TabIndex = 4;
             this.team2SelectorLabel.Text = "Team 2:";
             this.team2SelectorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2504,7 +2504,7 @@
             this.teamInformationTabPage.Margin = new System.Windows.Forms.Padding(2);
             this.teamInformationTabPage.Name = "teamInformationTabPage";
             this.teamInformationTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.teamInformationTabPage.Size = new System.Drawing.Size(1405, 689);
+            this.teamInformationTabPage.Size = new System.Drawing.Size(1350, 686);
             this.teamInformationTabPage.TabIndex = 4;
             this.teamInformationTabPage.Text = "Team Information";
             this.teamInformationTabPage.UseVisualStyleBackColor = true;
@@ -2556,17 +2556,17 @@
             this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
             this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
             this.teamInformationTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
-            this.teamInformationTableLayoutPanel.Size = new System.Drawing.Size(1401, 685);
+            this.teamInformationTableLayoutPanel.Size = new System.Drawing.Size(1346, 682);
             this.teamInformationTableLayoutPanel.TabIndex = 1;
             // 
             // teamInformationLogo
             // 
             this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationLogo, 12);
             this.teamInformationLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationLogo.Location = new System.Drawing.Point(177, 3);
+            this.teamInformationLogo.Location = new System.Drawing.Point(171, 3);
             this.teamInformationLogo.Name = "teamInformationLogo";
             this.teamInformationTableLayoutPanel.SetRowSpan(this.teamInformationLogo, 12);
-            this.teamInformationLogo.Size = new System.Drawing.Size(1038, 474);
+            this.teamInformationLogo.Size = new System.Drawing.Size(1002, 474);
             this.teamInformationLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.teamInformationLogo.TabIndex = 0;
             this.teamInformationLogo.TabStop = false;
@@ -2578,7 +2578,7 @@
             this.teamInformationTeamName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamInformationTeamName.Location = new System.Drawing.Point(3, 480);
             this.teamInformationTeamName.Name = "teamInformationTeamName";
-            this.teamInformationTeamName.Size = new System.Drawing.Size(1395, 40);
+            this.teamInformationTeamName.Size = new System.Drawing.Size(1340, 40);
             this.teamInformationTeamName.TabIndex = 1;
             this.teamInformationTeamName.Text = "Team Name:";
             this.teamInformationTeamName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2590,7 +2590,7 @@
             this.teamInformationTeamNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamInformationTeamNumber.Location = new System.Drawing.Point(3, 520);
             this.teamInformationTeamNumber.Name = "teamInformationTeamNumber";
-            this.teamInformationTeamNumber.Size = new System.Drawing.Size(1395, 40);
+            this.teamInformationTeamNumber.Size = new System.Drawing.Size(1340, 40);
             this.teamInformationTeamNumber.TabIndex = 2;
             this.teamInformationTeamNumber.Text = "Team Number:";
             this.teamInformationTeamNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2602,7 +2602,7 @@
             this.teamInformationTeamLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamInformationTeamLocation.Location = new System.Drawing.Point(3, 560);
             this.teamInformationTeamLocation.Name = "teamInformationTeamLocation";
-            this.teamInformationTeamLocation.Size = new System.Drawing.Size(1395, 40);
+            this.teamInformationTeamLocation.Size = new System.Drawing.Size(1340, 40);
             this.teamInformationTeamLocation.TabIndex = 3;
             this.teamInformationTeamLocation.Text = "Team Location:";
             this.teamInformationTeamLocation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2612,9 +2612,9 @@
             this.teamInformationWebsiteLinkLabel.AutoSize = true;
             this.teamInformationTableLayoutPanel.SetColumnSpan(this.teamInformationWebsiteLinkLabel, 8);
             this.teamInformationWebsiteLinkLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.teamInformationWebsiteLinkLabel.Location = new System.Drawing.Point(699, 640);
+            this.teamInformationWebsiteLinkLabel.Location = new System.Drawing.Point(675, 640);
             this.teamInformationWebsiteLinkLabel.Name = "teamInformationWebsiteLinkLabel";
-            this.teamInformationWebsiteLinkLabel.Size = new System.Drawing.Size(699, 45);
+            this.teamInformationWebsiteLinkLabel.Size = new System.Drawing.Size(668, 42);
             this.teamInformationWebsiteLinkLabel.TabIndex = 4;
             this.teamInformationWebsiteLinkLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.teamInformationWebsiteLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.teamInformationWebsiteLinkLabel_LinkClicked);
@@ -2626,7 +2626,7 @@
             this.teamInformationTeamWebsite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamInformationTeamWebsite.Location = new System.Drawing.Point(3, 640);
             this.teamInformationTeamWebsite.Name = "teamInformationTeamWebsite";
-            this.teamInformationTeamWebsite.Size = new System.Drawing.Size(690, 45);
+            this.teamInformationTeamWebsite.Size = new System.Drawing.Size(666, 42);
             this.teamInformationTeamWebsite.TabIndex = 8;
             this.teamInformationTeamWebsite.Text = "Team Website:";
             this.teamInformationTeamWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2638,7 +2638,7 @@
             this.teamInformationRookieYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teamInformationRookieYear.Location = new System.Drawing.Point(3, 600);
             this.teamInformationRookieYear.Name = "teamInformationRookieYear";
-            this.teamInformationRookieYear.Size = new System.Drawing.Size(1395, 40);
+            this.teamInformationRookieYear.Size = new System.Drawing.Size(1340, 40);
             this.teamInformationRookieYear.TabIndex = 9;
             this.teamInformationRookieYear.Text = "Rookie Year:";
             this.teamInformationRookieYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
