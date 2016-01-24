@@ -663,6 +663,96 @@ namespace FRC_Scouting_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Chevel_De_Frise {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Chevel_De_Frise", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Drawbridge {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Drawbridge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Lowbar {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Lowbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Moat {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Moat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Portcullis {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Portcullis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Ramparts {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Ramparts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Rock_Wall {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Rock_Wall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Rough_Terrain {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Rough_Terrain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stronghold_Sally_Port {
+            get {
+                object obj = ResourceManager.GetObject("Stronghold_Sally_Port", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap twg_gold_northbay_2014 {
             get {
                 object obj = ResourceManager.GetObject("twg_gold_northbay_2014", resourceCulture);

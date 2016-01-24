@@ -381,6 +381,15 @@
     <Content Include="Resources\FRC2015GameManual.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Stronghold_Rough_Terrain.PNG" />
+    <None Include="Resources\Stronghold_Rock_Wall.PNG" />
+    <None Include="Resources\Stronghold_Ramparts.PNG" />
+    <None Include="Resources\Stronghold_Portcullis.PNG" />
+    <None Include="Resources\Stronghold_Moat.PNG" />
+    <None Include="Resources\Stronghold_Lowbar.PNG" />
+    <None Include="Resources\Stronghold_Drawbridge.PNG" />
+    <None Include="Resources\Stronghold_Chevel_De_Frise.PNG" />
+    <None Include="Resources\Stronghold_Sally_Port.PNG" />
     <None Include="Resources\FRC2016GameManual.pdf" />
     <None Include="Resources\RecycleRush_2015_No_Items.png" />
     <None Include="Resources\RecycleRush_2015_With_Items.png" />

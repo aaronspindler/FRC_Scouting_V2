@@ -301,4 +301,31 @@
   <data name="RecycleRush_2015_With_Items" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RecycleRush_2015_With_Items.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Stronghold_Chevel_De_Frise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Chevel_De_Frise.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Drawbridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Drawbridge.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Lowbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Lowbar.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Moat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Moat.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Portcullis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Portcullis.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Ramparts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Ramparts.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Rock_Wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Rock_Wall.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Rough_Terrain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Rough_Terrain.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stronghold_Sally_Port" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stronghold_Sally_Port.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
