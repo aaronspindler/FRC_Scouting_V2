@@ -74,60 +74,60 @@ namespace FRC_Scouting_V2.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("50.87.144.85")]
-        public string databaseIP {
+        public string mySqlDatabaseIP {
             get {
-                return ((string)(this["databaseIP"]));
+                return ((string)(this["mySqlDatabaseIP"]));
             }
             set {
-                this["databaseIP"] = value;
+                this["mySqlDatabaseIP"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("3306")]
-        public string databasePort {
+        public string mySqlDatabasePort {
             get {
-                return ((string)(this["databasePort"]));
+                return ((string)(this["mySqlDatabasePort"]));
             }
             set {
-                this["databasePort"] = value;
+                this["mySqlDatabasePort"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("xnovax_testers")]
-        public string databaseUsername {
+        public string mySqlDatabaseUsername {
             get {
-                return ((string)(this["databaseUsername"]));
+                return ((string)(this["mySqlDatabaseUsername"]));
             }
             set {
-                this["databaseUsername"] = value;
+                this["mySqlDatabaseUsername"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("ErcM2zrlEHkcxMd5e6G2hA==")]
-        public string databasePassword {
+        public string mySqlDatabasePassword {
             get {
-                return ((string)(this["databasePassword"]));
+                return ((string)(this["mySqlDatabasePassword"]));
             }
             set {
-                this["databasePassword"] = value;
+                this["mySqlDatabasePassword"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("xnovax_robotics")]
-        public string databaseName {
+        public string mySqlDatabaseName {
             get {
-                return ((string)(this["databaseName"]));
+                return ((string)(this["mySqlDatabaseName"]));
             }
             set {
-                this["databaseName"] = value;
+                this["mySqlDatabaseName"] = value;
             }
         }
         
@@ -188,6 +188,66 @@ namespace FRC_Scouting_V2.Properties {
             }
             set {
                 this["teamComparisonEqualValueColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50.87.144.85")]
+        public string sqlDatabaseIP {
+            get {
+                return ((string)(this["sqlDatabaseIP"]));
+            }
+            set {
+                this["sqlDatabaseIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3306")]
+        public string sqlDatabasePort {
+            get {
+                return ((string)(this["sqlDatabasePort"]));
+            }
+            set {
+                this["sqlDatabasePort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("xnovax_testers")]
+        public string sqlDatabaseUsername {
+            get {
+                return ((string)(this["sqlDatabaseUsername"]));
+            }
+            set {
+                this["sqlDatabaseUsername"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ErcM2zrlEHkcxMd5e6G2hA==")]
+        public string sqlDatabasePassword {
+            get {
+                return ((string)(this["sqlDatabasePassword"]));
+            }
+            set {
+                this["sqlDatabasePassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("xnovax_robotics")]
+        public string sqlDatabaseName {
+            get {
+                return ((string)(this["sqlDatabaseName"]));
+            }
+            set {
+                this["sqlDatabaseName"] = value;
             }
         }
     }

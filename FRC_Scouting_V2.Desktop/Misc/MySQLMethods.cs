@@ -91,11 +91,11 @@ namespace FRC_Scouting_V2
         public static string MakeMySqlConnectionString()
         {
             var builder = new MySqlConnectionStringBuilder();
-            builder["Server"] = Settings.Default.databaseIP;
-            builder["Database"] = Settings.Default.databaseName;
-            builder["Port"] = Settings.Default.databasePort;
-            builder["Uid"] = Settings.Default.databaseUsername;
-            builder["Password"] = Security.DeCryptString(Settings.Default.databasePassword);
+            builder["Server"] = Settings.Default.mySqlDatabaseIP;
+            builder["Database"] = Settings.Default.mySqlDatabaseName;
+            builder["Port"] = Settings.Default.mySqlDatabasePort;
+            builder["Uid"] = Settings.Default.mySqlDatabaseUsername;
+            builder["Password"] = Security.DeCryptString(Settings.Default.mySqlDatabasePassword);
             builder.SslMode = MySqlSslMode.Preferred;
             return builder.ConnectionString;
         }

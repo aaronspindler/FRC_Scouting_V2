@@ -24,36 +24,36 @@ namespace FRC_Scouting_V2.Forms
         private void GeneralSettings_Load(object sender, EventArgs e)
         {
             usernameTextBox.Text = Settings.Default.username;
-            databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
-            databaseServerAddressTextBox.Text = Settings.Default.databaseIP;
-            databasePortTextBox.Text = Settings.Default.databasePort;
-            databaseUsernameTextBox.Text = Settings.Default.databaseUsername;
-            databasePasswordTextBox.Text = Security.DeCryptString(Settings.Default.databasePassword);
-            databaseNameTextBox.Text = Settings.Default.databaseName;
+            mySqlDatabaseUsernameTextBox.Text = Settings.Default.mySqlDatabaseUsername;
+            mySqlDatabaseServerAddressTextBox.Text = Settings.Default.mySqlDatabaseIP;
+            mySqlDatabasePortTextBox.Text = Settings.Default.mySqlDatabasePort;
+            mySqlDatabaseUsernameTextBox.Text = Settings.Default.mySqlDatabaseUsername;
+            mySqlDatabasePasswordTextBox.Text = Security.DeCryptString(Settings.Default.mySqlDatabasePassword);
+            mySqlDatabaseNameTextBox.Text = Settings.Default.mySqlDatabaseName;
 
             timer.Start();
         }
 
         private void databaseSaveTestButton_Click(object sender, EventArgs e)
         {
-            Settings.Default.databaseIP = databaseServerAddressTextBox.Text;
-            Settings.Default.databasePort = databasePortTextBox.Text;
-            Settings.Default.databaseName = databaseNameTextBox.Text;
-            Settings.Default.databaseUsername = databaseUsernameTextBox.Text;
-            Settings.Default.databasePassword = Security.EncryptString(databasePasswordTextBox.Text);
+            Settings.Default.mySqlDatabaseIP = mySqlDatabaseServerAddressTextBox.Text;
+            Settings.Default.mySqlDatabasePort = mySqlDatabasePortTextBox.Text;
+            Settings.Default.mySqlDatabaseName = mySqlDatabaseNameTextBox.Text;
+            Settings.Default.mySqlDatabaseUsername = mySqlDatabaseUsernameTextBox.Text;
+            Settings.Default.mySqlDatabasePassword = Security.EncryptString(mySqlDatabasePasswordTextBox.Text);
             Settings.Default.Save();
 
             if (TestMySQLCredentials())
             {
                 ConsoleWindow.WriteLine("You have successfully connected to your database!");
-                databaseConnectionDisplay.BackColor = Color.Chartreuse;
-                databaseConnectionDisplay.Text = ("Connection: Successful");
+                mySqlDatabaseConnectionDisplay.BackColor = Color.Chartreuse;
+                mySqlDatabaseConnectionDisplay.Text = ("Connection: Successful");
             }
             else
             {
                 ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
-                databaseConnectionDisplay.BackColor = Color.Red;
-                databaseConnectionDisplay.Text = ("Connection: Failed");
+                mySqlDatabaseConnectionDisplay.BackColor = Color.Red;
+                mySqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
             }
         }
 
@@ -76,8 +76,8 @@ namespace FRC_Scouting_V2.Forms
             }
             catch (MySqlException ex)
             {
-                databaseConnectionDisplay.BackColor = Color.Red;
-                databaseConnectionDisplay.Text = ("Connection: Failed");
+                mySqlDatabaseConnectionDisplay.BackColor = Color.Red;
+                mySqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
                 ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.WriteLine("Error Message " + ex.Message);
                 return false;
@@ -92,14 +92,14 @@ namespace FRC_Scouting_V2.Forms
                 if (TestMySQLCredentials())
                 {
                     ConsoleWindow.WriteLine("You have successfully connected to your database!");
-                    databaseConnectionDisplay.BackColor = Color.Chartreuse;
-                    databaseConnectionDisplay.Text = ("Connection: Successful");
+                    mySqlDatabaseConnectionDisplay.BackColor = Color.Chartreuse;
+                    mySqlDatabaseConnectionDisplay.Text = ("Connection: Successful");
                 }
                 else
                 {
                     ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
-                    databaseConnectionDisplay.BackColor = Color.Red;
-                    databaseConnectionDisplay.Text = ("Connection: Failed");
+                    mySqlDatabaseConnectionDisplay.BackColor = Color.Red;
+                    mySqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
                 }
             }
             else

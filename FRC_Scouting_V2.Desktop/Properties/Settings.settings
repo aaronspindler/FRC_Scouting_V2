@@ -14,19 +14,19 @@
     <Setting Name="firstTimeLoad" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="databaseIP" Type="System.String" Scope="User">
+    <Setting Name="mySqlDatabaseIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">50.87.144.85</Value>
     </Setting>
-    <Setting Name="databasePort" Type="System.String" Scope="User">
+    <Setting Name="mySqlDatabasePort" Type="System.String" Scope="User">
       <Value Profile="(Default)">3306</Value>
     </Setting>
-    <Setting Name="databaseUsername" Type="System.String" Scope="User">
+    <Setting Name="mySqlDatabaseUsername" Type="System.String" Scope="User">
       <Value Profile="(Default)">xnovax_testers</Value>
     </Setting>
-    <Setting Name="databasePassword" Type="System.String" Scope="User">
+    <Setting Name="mySqlDatabasePassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">ErcM2zrlEHkcxMd5e6G2hA==</Value>
     </Setting>
-    <Setting Name="databaseName" Type="System.String" Scope="User">
+    <Setting Name="mySqlDatabaseName" Type="System.String" Scope="User">
       <Value Profile="(Default)">xnovax_robotics</Value>
     </Setting>
     <Setting Name="clearConsoleOnToggle" Type="System.Boolean" Scope="User">
@@ -43,6 +43,21 @@
     </Setting>
     <Setting Name="teamComparisonEqualValueColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Blue</Value>
+    </Setting>
+    <Setting Name="sqlDatabaseIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">50.87.144.85</Value>
+    </Setting>
+    <Setting Name="sqlDatabasePort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    <Setting Name="sqlDatabaseUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xnovax_testers</Value>
+    </Setting>
+    <Setting Name="sqlDatabasePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ErcM2zrlEHkcxMd5e6G2hA==</Value>
+    </Setting>
+    <Setting Name="sqlDatabaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xnovax_robotics</Value>
     </Setting>
   </Settings>
 </SettingsFile>
