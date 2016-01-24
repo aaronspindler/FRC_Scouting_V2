@@ -42,7 +42,23 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.saveGeneralSettingsButton = new System.Windows.Forms.Button();
+            this.newDatabaseSettingsTabPage = new System.Windows.Forms.TabPage();
+            this.sqlGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.sqlServerAddressLabel = new System.Windows.Forms.Label();
+            this.sqlServerPortLabel = new System.Windows.Forms.Label();
+            this.sqlDatabaseNameLabel = new System.Windows.Forms.Label();
+            this.sqlDatabaseUsernameLabel = new System.Windows.Forms.Label();
+            this.sqlDatabasePasswordLabel = new System.Windows.Forms.Label();
+            this.sqlDatabaseServerAddressTextBox = new System.Windows.Forms.TextBox();
+            this.sqlDatabasePortTextBox = new System.Windows.Forms.TextBox();
+            this.sqlDatabaseNameTextBox = new System.Windows.Forms.TextBox();
+            this.sqlDatabaseUsernameTextBox = new System.Windows.Forms.TextBox();
+            this.sqlDatabasePasswordTextBox = new System.Windows.Forms.TextBox();
+            this.sqlDatabaseConnectionDisplay = new System.Windows.Forms.Label();
+            this.sqlDatabaseSaveTestButton = new System.Windows.Forms.Button();
             this.oldDatabaseSettingsTabPage = new System.Windows.Forms.TabPage();
+            this.mysqlGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.mySqlServerAddressLabel = new System.Windows.Forms.Label();
             this.mySqlServerPortLabel = new System.Windows.Forms.Label();
@@ -57,33 +73,17 @@
             this.mySqlDatabaseConnectionDisplay = new System.Windows.Forms.Label();
             this.mySqlDatabaseSaveTestButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.newDatabaseSettingsTabPage = new System.Windows.Forms.TabPage();
-            this.mysqlGroupBox = new System.Windows.Forms.GroupBox();
-            this.sqlGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.sqlServerAddressLabel = new System.Windows.Forms.Label();
-            this.sqlServerPortLabel = new System.Windows.Forms.Label();
-            this.sqlDatabaseNameLabel = new System.Windows.Forms.Label();
-            this.sqlDatabaseUsernameLabel = new System.Windows.Forms.Label();
-            this.sqlDatabasePasswordLabel = new System.Windows.Forms.Label();
-            this.sqlDatabaseServerAddress = new System.Windows.Forms.TextBox();
-            this.sqlDatabasePortTextBox = new System.Windows.Forms.TextBox();
-            this.sqlDatabaseNameTextBox = new System.Windows.Forms.TextBox();
-            this.sqlDatabaseUsernameTextBox = new System.Windows.Forms.TextBox();
-            this.sqlDatabasePasswordTextBox = new System.Windows.Forms.TextBox();
-            this.sqlDatabaseConnectionDisplay = new System.Windows.Forms.Label();
-            this.sqlDatabaseSaveTestButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
             this.generalSettingsTabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.oldDatabaseSettingsTabPage.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.newDatabaseSettingsTabPage.SuspendLayout();
-            this.mysqlGroupBox.SuspendLayout();
             this.sqlGroupBox.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.oldDatabaseSettingsTabPage.SuspendLayout();
+            this.mysqlGroupBox.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -220,6 +220,177 @@
             this.saveGeneralSettingsButton.UseVisualStyleBackColor = true;
             this.saveGeneralSettingsButton.Click += new System.EventHandler(this.saveGeneralSettingsButton_Click);
             // 
+            // newDatabaseSettingsTabPage
+            // 
+            this.newDatabaseSettingsTabPage.Controls.Add(this.sqlGroupBox);
+            this.newDatabaseSettingsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.newDatabaseSettingsTabPage.Name = "newDatabaseSettingsTabPage";
+            this.newDatabaseSettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.newDatabaseSettingsTabPage.Size = new System.Drawing.Size(612, 408);
+            this.newDatabaseSettingsTabPage.TabIndex = 2;
+            this.newDatabaseSettingsTabPage.Text = "Database Credentials (2016 - Onward)";
+            this.newDatabaseSettingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // sqlGroupBox
+            // 
+            this.sqlGroupBox.Controls.Add(this.tableLayoutPanel4);
+            this.sqlGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.sqlGroupBox.Name = "sqlGroupBox";
+            this.sqlGroupBox.Size = new System.Drawing.Size(606, 402);
+            this.sqlGroupBox.TabIndex = 0;
+            this.sqlGroupBox.TabStop = false;
+            this.sqlGroupBox.Text = "SQL";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel4.Controls.Add(this.sqlServerAddressLabel, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.sqlServerPortLabel, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseNameLabel, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseUsernameLabel, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabasePasswordLabel, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseServerAddressTextBox, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabasePortTextBox, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseNameTextBox, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseUsernameTextBox, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabasePasswordTextBox, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseConnectionDisplay, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseSaveTestButton, 1, 5);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 7;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(600, 383);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // sqlServerAddressLabel
+            // 
+            this.sqlServerAddressLabel.AutoSize = true;
+            this.sqlServerAddressLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlServerAddressLabel.Location = new System.Drawing.Point(3, 0);
+            this.sqlServerAddressLabel.Name = "sqlServerAddressLabel";
+            this.sqlServerAddressLabel.Size = new System.Drawing.Size(174, 25);
+            this.sqlServerAddressLabel.TabIndex = 0;
+            this.sqlServerAddressLabel.Text = "Server Address:";
+            this.sqlServerAddressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // sqlServerPortLabel
+            // 
+            this.sqlServerPortLabel.AutoSize = true;
+            this.sqlServerPortLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlServerPortLabel.Location = new System.Drawing.Point(3, 25);
+            this.sqlServerPortLabel.Name = "sqlServerPortLabel";
+            this.sqlServerPortLabel.Size = new System.Drawing.Size(174, 25);
+            this.sqlServerPortLabel.TabIndex = 1;
+            this.sqlServerPortLabel.Text = "Server Port:";
+            this.sqlServerPortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // sqlDatabaseNameLabel
+            // 
+            this.sqlDatabaseNameLabel.AutoSize = true;
+            this.sqlDatabaseNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabaseNameLabel.Location = new System.Drawing.Point(3, 50);
+            this.sqlDatabaseNameLabel.Name = "sqlDatabaseNameLabel";
+            this.sqlDatabaseNameLabel.Size = new System.Drawing.Size(174, 25);
+            this.sqlDatabaseNameLabel.TabIndex = 2;
+            this.sqlDatabaseNameLabel.Text = "Database Name:";
+            this.sqlDatabaseNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // sqlDatabaseUsernameLabel
+            // 
+            this.sqlDatabaseUsernameLabel.AutoSize = true;
+            this.sqlDatabaseUsernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabaseUsernameLabel.Location = new System.Drawing.Point(3, 75);
+            this.sqlDatabaseUsernameLabel.Name = "sqlDatabaseUsernameLabel";
+            this.sqlDatabaseUsernameLabel.Size = new System.Drawing.Size(174, 25);
+            this.sqlDatabaseUsernameLabel.TabIndex = 3;
+            this.sqlDatabaseUsernameLabel.Text = "Username:";
+            this.sqlDatabaseUsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // sqlDatabasePasswordLabel
+            // 
+            this.sqlDatabasePasswordLabel.AutoSize = true;
+            this.sqlDatabasePasswordLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabasePasswordLabel.Location = new System.Drawing.Point(3, 100);
+            this.sqlDatabasePasswordLabel.Name = "sqlDatabasePasswordLabel";
+            this.sqlDatabasePasswordLabel.Size = new System.Drawing.Size(174, 25);
+            this.sqlDatabasePasswordLabel.TabIndex = 4;
+            this.sqlDatabasePasswordLabel.Text = "Password:";
+            this.sqlDatabasePasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // sqlDatabaseServerAddressTextBox
+            // 
+            this.sqlDatabaseServerAddressTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabaseServerAddressTextBox.Location = new System.Drawing.Point(183, 3);
+            this.sqlDatabaseServerAddressTextBox.Name = "sqlDatabaseServerAddressTextBox";
+            this.sqlDatabaseServerAddressTextBox.Size = new System.Drawing.Size(414, 20);
+            this.sqlDatabaseServerAddressTextBox.TabIndex = 5;
+            // 
+            // sqlDatabasePortTextBox
+            // 
+            this.sqlDatabasePortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabasePortTextBox.Location = new System.Drawing.Point(183, 28);
+            this.sqlDatabasePortTextBox.Name = "sqlDatabasePortTextBox";
+            this.sqlDatabasePortTextBox.Size = new System.Drawing.Size(414, 20);
+            this.sqlDatabasePortTextBox.TabIndex = 6;
+            // 
+            // sqlDatabaseNameTextBox
+            // 
+            this.sqlDatabaseNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabaseNameTextBox.Location = new System.Drawing.Point(183, 53);
+            this.sqlDatabaseNameTextBox.Name = "sqlDatabaseNameTextBox";
+            this.sqlDatabaseNameTextBox.Size = new System.Drawing.Size(414, 20);
+            this.sqlDatabaseNameTextBox.TabIndex = 7;
+            // 
+            // sqlDatabaseUsernameTextBox
+            // 
+            this.sqlDatabaseUsernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabaseUsernameTextBox.Location = new System.Drawing.Point(183, 78);
+            this.sqlDatabaseUsernameTextBox.Name = "sqlDatabaseUsernameTextBox";
+            this.sqlDatabaseUsernameTextBox.Size = new System.Drawing.Size(414, 20);
+            this.sqlDatabaseUsernameTextBox.TabIndex = 8;
+            // 
+            // sqlDatabasePasswordTextBox
+            // 
+            this.sqlDatabasePasswordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabasePasswordTextBox.Location = new System.Drawing.Point(183, 103);
+            this.sqlDatabasePasswordTextBox.Name = "sqlDatabasePasswordTextBox";
+            this.sqlDatabasePasswordTextBox.PasswordChar = '*';
+            this.sqlDatabasePasswordTextBox.Size = new System.Drawing.Size(414, 20);
+            this.sqlDatabasePasswordTextBox.TabIndex = 9;
+            // 
+            // sqlDatabaseConnectionDisplay
+            // 
+            this.sqlDatabaseConnectionDisplay.AutoSize = true;
+            this.sqlDatabaseConnectionDisplay.BackColor = System.Drawing.Color.Yellow;
+            this.sqlDatabaseConnectionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqlDatabaseConnectionDisplay.Location = new System.Drawing.Point(3, 125);
+            this.sqlDatabaseConnectionDisplay.Name = "sqlDatabaseConnectionDisplay";
+            this.sqlDatabaseConnectionDisplay.Size = new System.Drawing.Size(174, 30);
+            this.sqlDatabaseConnectionDisplay.TabIndex = 10;
+            this.sqlDatabaseConnectionDisplay.Text = "Connection: Testing";
+            this.sqlDatabaseConnectionDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sqlDatabaseSaveTestButton
+            // 
+            this.sqlDatabaseSaveTestButton.Location = new System.Drawing.Point(183, 128);
+            this.sqlDatabaseSaveTestButton.Name = "sqlDatabaseSaveTestButton";
+            this.sqlDatabaseSaveTestButton.Size = new System.Drawing.Size(214, 23);
+            this.sqlDatabaseSaveTestButton.TabIndex = 11;
+            this.sqlDatabaseSaveTestButton.Text = "Save and Test";
+            this.sqlDatabaseSaveTestButton.UseVisualStyleBackColor = true;
+            this.sqlDatabaseSaveTestButton.Click += new System.EventHandler(this.sqlDatabaseSaveTestButton_Click);
+            // 
             // oldDatabaseSettingsTabPage
             // 
             this.oldDatabaseSettingsTabPage.Controls.Add(this.mysqlGroupBox);
@@ -230,6 +401,17 @@
             this.oldDatabaseSettingsTabPage.TabIndex = 1;
             this.oldDatabaseSettingsTabPage.Text = "Database Credentials (2014 - 2015)";
             this.oldDatabaseSettingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // mysqlGroupBox
+            // 
+            this.mysqlGroupBox.Controls.Add(this.tableLayoutPanel2);
+            this.mysqlGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mysqlGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.mysqlGroupBox.Name = "mysqlGroupBox";
+            this.mysqlGroupBox.Size = new System.Drawing.Size(606, 402);
+            this.mysqlGroupBox.TabIndex = 1;
+            this.mysqlGroupBox.TabStop = false;
+            this.mysqlGroupBox.Text = "MySQL";
             // 
             // tableLayoutPanel2
             // 
@@ -378,193 +560,12 @@
             this.mySqlDatabaseSaveTestButton.TabIndex = 11;
             this.mySqlDatabaseSaveTestButton.Text = "Save and Test";
             this.mySqlDatabaseSaveTestButton.UseVisualStyleBackColor = true;
-            this.mySqlDatabaseSaveTestButton.Click += new System.EventHandler(this.databaseSaveTestButton_Click);
+            this.mySqlDatabaseSaveTestButton.Click += new System.EventHandler(this.mySqlDatabaseSaveTestButton_Click);
             // 
             // timer
             // 
             this.timer.Interval = 1500;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // newDatabaseSettingsTabPage
-            // 
-            this.newDatabaseSettingsTabPage.Controls.Add(this.sqlGroupBox);
-            this.newDatabaseSettingsTabPage.Location = new System.Drawing.Point(4, 22);
-            this.newDatabaseSettingsTabPage.Name = "newDatabaseSettingsTabPage";
-            this.newDatabaseSettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.newDatabaseSettingsTabPage.Size = new System.Drawing.Size(612, 408);
-            this.newDatabaseSettingsTabPage.TabIndex = 2;
-            this.newDatabaseSettingsTabPage.Text = "Database Credentials (2016 - Onward)";
-            this.newDatabaseSettingsTabPage.UseVisualStyleBackColor = true;
-            // 
-            // mysqlGroupBox
-            // 
-            this.mysqlGroupBox.Controls.Add(this.tableLayoutPanel2);
-            this.mysqlGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mysqlGroupBox.Location = new System.Drawing.Point(3, 3);
-            this.mysqlGroupBox.Name = "mysqlGroupBox";
-            this.mysqlGroupBox.Size = new System.Drawing.Size(606, 402);
-            this.mysqlGroupBox.TabIndex = 1;
-            this.mysqlGroupBox.TabStop = false;
-            this.mysqlGroupBox.Text = "MySQL";
-            // 
-            // sqlGroupBox
-            // 
-            this.sqlGroupBox.Controls.Add(this.tableLayoutPanel4);
-            this.sqlGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlGroupBox.Location = new System.Drawing.Point(3, 3);
-            this.sqlGroupBox.Name = "sqlGroupBox";
-            this.sqlGroupBox.Size = new System.Drawing.Size(606, 402);
-            this.sqlGroupBox.TabIndex = 0;
-            this.sqlGroupBox.TabStop = false;
-            this.sqlGroupBox.Text = "SQL";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel4.Controls.Add(this.sqlServerAddressLabel, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.sqlServerPortLabel, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseNameLabel, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseUsernameLabel, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabasePasswordLabel, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseServerAddress, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabasePortTextBox, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseNameTextBox, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseUsernameTextBox, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabasePasswordTextBox, 1, 4);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseConnectionDisplay, 0, 5);
-            this.tableLayoutPanel4.Controls.Add(this.sqlDatabaseSaveTestButton, 1, 5);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 7;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(600, 383);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // sqlServerAddressLabel
-            // 
-            this.sqlServerAddressLabel.AutoSize = true;
-            this.sqlServerAddressLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlServerAddressLabel.Location = new System.Drawing.Point(3, 0);
-            this.sqlServerAddressLabel.Name = "sqlServerAddressLabel";
-            this.sqlServerAddressLabel.Size = new System.Drawing.Size(174, 25);
-            this.sqlServerAddressLabel.TabIndex = 0;
-            this.sqlServerAddressLabel.Text = "Server Address:";
-            this.sqlServerAddressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // sqlServerPortLabel
-            // 
-            this.sqlServerPortLabel.AutoSize = true;
-            this.sqlServerPortLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlServerPortLabel.Location = new System.Drawing.Point(3, 25);
-            this.sqlServerPortLabel.Name = "sqlServerPortLabel";
-            this.sqlServerPortLabel.Size = new System.Drawing.Size(174, 25);
-            this.sqlServerPortLabel.TabIndex = 1;
-            this.sqlServerPortLabel.Text = "Server Port:";
-            this.sqlServerPortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // sqlDatabaseNameLabel
-            // 
-            this.sqlDatabaseNameLabel.AutoSize = true;
-            this.sqlDatabaseNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabaseNameLabel.Location = new System.Drawing.Point(3, 50);
-            this.sqlDatabaseNameLabel.Name = "sqlDatabaseNameLabel";
-            this.sqlDatabaseNameLabel.Size = new System.Drawing.Size(174, 25);
-            this.sqlDatabaseNameLabel.TabIndex = 2;
-            this.sqlDatabaseNameLabel.Text = "Database Name:";
-            this.sqlDatabaseNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // sqlDatabaseUsernameLabel
-            // 
-            this.sqlDatabaseUsernameLabel.AutoSize = true;
-            this.sqlDatabaseUsernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabaseUsernameLabel.Location = new System.Drawing.Point(3, 75);
-            this.sqlDatabaseUsernameLabel.Name = "sqlDatabaseUsernameLabel";
-            this.sqlDatabaseUsernameLabel.Size = new System.Drawing.Size(174, 25);
-            this.sqlDatabaseUsernameLabel.TabIndex = 3;
-            this.sqlDatabaseUsernameLabel.Text = "Username:";
-            this.sqlDatabaseUsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // sqlDatabasePasswordLabel
-            // 
-            this.sqlDatabasePasswordLabel.AutoSize = true;
-            this.sqlDatabasePasswordLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabasePasswordLabel.Location = new System.Drawing.Point(3, 100);
-            this.sqlDatabasePasswordLabel.Name = "sqlDatabasePasswordLabel";
-            this.sqlDatabasePasswordLabel.Size = new System.Drawing.Size(174, 25);
-            this.sqlDatabasePasswordLabel.TabIndex = 4;
-            this.sqlDatabasePasswordLabel.Text = "Password:";
-            this.sqlDatabasePasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // sqlDatabaseServerAddress
-            // 
-            this.sqlDatabaseServerAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabaseServerAddress.Location = new System.Drawing.Point(183, 3);
-            this.sqlDatabaseServerAddress.Name = "sqlDatabaseServerAddress";
-            this.sqlDatabaseServerAddress.Size = new System.Drawing.Size(414, 20);
-            this.sqlDatabaseServerAddress.TabIndex = 5;
-            // 
-            // sqlDatabasePortTextBox
-            // 
-            this.sqlDatabasePortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabasePortTextBox.Location = new System.Drawing.Point(183, 28);
-            this.sqlDatabasePortTextBox.Name = "sqlDatabasePortTextBox";
-            this.sqlDatabasePortTextBox.Size = new System.Drawing.Size(414, 20);
-            this.sqlDatabasePortTextBox.TabIndex = 6;
-            // 
-            // sqlDatabaseNameTextBox
-            // 
-            this.sqlDatabaseNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabaseNameTextBox.Location = new System.Drawing.Point(183, 53);
-            this.sqlDatabaseNameTextBox.Name = "sqlDatabaseNameTextBox";
-            this.sqlDatabaseNameTextBox.Size = new System.Drawing.Size(414, 20);
-            this.sqlDatabaseNameTextBox.TabIndex = 7;
-            // 
-            // sqlDatabaseUsernameTextBox
-            // 
-            this.sqlDatabaseUsernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabaseUsernameTextBox.Location = new System.Drawing.Point(183, 78);
-            this.sqlDatabaseUsernameTextBox.Name = "sqlDatabaseUsernameTextBox";
-            this.sqlDatabaseUsernameTextBox.Size = new System.Drawing.Size(414, 20);
-            this.sqlDatabaseUsernameTextBox.TabIndex = 8;
-            // 
-            // sqlDatabasePasswordTextBox
-            // 
-            this.sqlDatabasePasswordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabasePasswordTextBox.Location = new System.Drawing.Point(183, 103);
-            this.sqlDatabasePasswordTextBox.Name = "sqlDatabasePasswordTextBox";
-            this.sqlDatabasePasswordTextBox.PasswordChar = '*';
-            this.sqlDatabasePasswordTextBox.Size = new System.Drawing.Size(414, 20);
-            this.sqlDatabasePasswordTextBox.TabIndex = 9;
-            // 
-            // sqlDatabaseConnectionDisplay
-            // 
-            this.sqlDatabaseConnectionDisplay.AutoSize = true;
-            this.sqlDatabaseConnectionDisplay.BackColor = System.Drawing.Color.Yellow;
-            this.sqlDatabaseConnectionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqlDatabaseConnectionDisplay.Location = new System.Drawing.Point(3, 125);
-            this.sqlDatabaseConnectionDisplay.Name = "sqlDatabaseConnectionDisplay";
-            this.sqlDatabaseConnectionDisplay.Size = new System.Drawing.Size(174, 30);
-            this.sqlDatabaseConnectionDisplay.TabIndex = 10;
-            this.sqlDatabaseConnectionDisplay.Text = "Connection: Testing";
-            this.sqlDatabaseConnectionDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // sqlDatabaseSaveTestButton
-            // 
-            this.sqlDatabaseSaveTestButton.Location = new System.Drawing.Point(183, 128);
-            this.sqlDatabaseSaveTestButton.Name = "sqlDatabaseSaveTestButton";
-            this.sqlDatabaseSaveTestButton.Size = new System.Drawing.Size(214, 23);
-            this.sqlDatabaseSaveTestButton.TabIndex = 11;
-            this.sqlDatabaseSaveTestButton.Text = "Save and Test";
-            this.sqlDatabaseSaveTestButton.UseVisualStyleBackColor = true;
             // 
             // GeneralSettings
             // 
@@ -586,14 +587,14 @@
             this.generalSettingsTabPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.oldDatabaseSettingsTabPage.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.newDatabaseSettingsTabPage.ResumeLayout(false);
-            this.mysqlGroupBox.ResumeLayout(false);
             this.sqlGroupBox.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.oldDatabaseSettingsTabPage.ResumeLayout(false);
+            this.mysqlGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -635,7 +636,7 @@
         private System.Windows.Forms.Label sqlDatabaseNameLabel;
         private System.Windows.Forms.Label sqlDatabaseUsernameLabel;
         private System.Windows.Forms.Label sqlDatabasePasswordLabel;
-        private System.Windows.Forms.TextBox sqlDatabaseServerAddress;
+        private System.Windows.Forms.TextBox sqlDatabaseServerAddressTextBox;
         private System.Windows.Forms.TextBox sqlDatabasePortTextBox;
         private System.Windows.Forms.TextBox sqlDatabaseNameTextBox;
         private System.Windows.Forms.TextBox sqlDatabaseUsernameTextBox;
