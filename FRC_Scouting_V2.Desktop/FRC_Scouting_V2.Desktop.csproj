@@ -253,6 +253,8 @@
     </Compile>
     <Compile Include="Models\RecycleRush\RecycleRush_Stack.cs" />
     <Compile Include="Misc\MySQLMethods.cs" />
+    <Compile Include="Models\Stronghold\Stronghold_Match.cs" />
+    <Compile Include="Models\Stronghold\Stronghold_Pit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Forms\ProgramInformation.cs">
       <SubType>Form</SubType>
@@ -471,7 +473,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccess\" />
-    <Folder Include="Models\Stronghold\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
