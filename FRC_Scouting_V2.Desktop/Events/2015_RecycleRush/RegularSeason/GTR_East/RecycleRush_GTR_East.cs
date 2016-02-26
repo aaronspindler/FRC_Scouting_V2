@@ -33,7 +33,7 @@ using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FRC_Scouting_V2.Models;
+using FRC_Scouting_V2.Models.RecycleRush;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
@@ -44,7 +44,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
     public partial class RecycleRush_GTR_East : Form
     {
         private readonly string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
-        private readonly List<RecycleRush_Stack> matchStacks = new List<RecycleRush_Stack>();
+        private readonly List<Stack> matchStacks = new List<Stack>();
 
         private readonly string[] teamNameArray =
         {
@@ -65,7 +65,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             4825, 5031, 5036, 5051, 5076, 5094, 5428, 5596, 5652, 5719
         };
 
-        private readonly List<RecycleRush_Scout_Match> teamsMatches = new List<RecycleRush_Scout_Match>();
+        private readonly List<Models.RecycleRush.Match_Scout> teamsMatches = new List<Models.RecycleRush.Match_Scout>();
         private string allianceColour = "Unset";
 
         private string currentTeamName;
@@ -99,7 +99,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             scoutingSubmitButton.Enabled = false;
             Program.selectedEventName = "RecycleRush_GTR_East";
 
-            var match = new RecycleRush_Scout_Match
+            var match = new Match_Scout
             {
                 Author = Settings.Default.username,
                 TimeCreated = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss"),
@@ -207,7 +207,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
         {
             scoutingStacksSubmitButton.Enabled = false;
 
-            var stackToAdd = new RecycleRush_Stack
+            var stackToAdd = new Stack
             {
                 Stack_Height = Convert.ToInt32(scoutingStacksHeightNumUpDown.Value),
                 Bin_On_Top = scoutingStacksBinOnTopCheckBox.Checked,
@@ -404,7 +404,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        var match = new RecycleRush_Scout_Match
+                        var match = new Match_Scout
                         {
                             Author = reader["Author"].ToString(),
                             TimeCreated = reader["TimeCreated"].ToString(),
@@ -435,7 +435,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                             Tele_Pushed_Litter_To_Landfill = Convert.ToBoolean(reader["Tele_Pushed_Litter_To_Landfill"]),
                             Tele_Fouls = Convert.ToInt32(reader["Tele_Fouls"]),
                             Comments = Convert.ToString(reader["Comments"]),
-                            Stacks = JsonConvert.DeserializeObject<List<RecycleRush_Stack>>(reader["Stacks"].ToString()),
+                            Stacks = JsonConvert.DeserializeObject<List<Stack>>(reader["Stacks"].ToString()),
                             Coopertition_Set = Convert.ToBoolean(reader["Coopertition_Set"]),
                             Coopertition_Stack = Convert.ToBoolean(reader["Coopertition_Stack"]),
                             Final_Score_Red = Convert.ToInt32(reader["Final_Score_Red"]),
@@ -695,7 +695,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     {
                         foreach (var t in openFileDialog.FileNames)
                         {
-                            var match = JsonConvert.DeserializeObject<RecycleRush_Scout_Match>(File.ReadAllText(t));
+                            var match = JsonConvert.DeserializeObject<Match_Scout>(File.ReadAllText(t));
                             try
                             {
                                 var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());

@@ -198,12 +198,6 @@
     <Compile Include="Events\2015_RecycleRush\RegularSeason\GTR_East\RecycleRush_GTR_East.Designer.cs">
       <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\2015_RecycleRush\OffSeason\IRI\RecycleRush_IRI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2015_RecycleRush\OffSeason\IRI\RecycleRush_IRI.Designer.cs">
-      <DependentUpon>RecycleRush_IRI.cs</DependentUpon>
-    </Compile>
     <Compile Include="Events\2015_RecycleRush\RegularSeason\Northbay\RecycleRush_Northbay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,7 +247,7 @@
       <DependentUpon>TeamInformationLookup.cs</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
-    <Compile Include="Models\RecycleRush\RecycleRush_Stack.cs" />
+    <Compile Include="Models\RecycleRush\Stack.cs" />
     <Compile Include="Misc\MySQLMethods.cs" />
     <Compile Include="Models\Stronghold\Field_Element.cs" />
     <Compile Include="Models\Stronghold\Match.cs" />
@@ -277,8 +271,8 @@
     <Compile Include="Forms\Team3710Information.Designer.cs">
       <DependentUpon>Team3710Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\RecycleRush\RecycleRush_Pit_Scouting_Team.cs" />
-    <Compile Include="Models\RecycleRush\RecycleRush_Scout_Match.cs" />
+    <Compile Include="Models\RecycleRush\Pit.cs" />
+    <Compile Include="Models\RecycleRush\Match_Scout.cs" />
     <Compile Include="UIs\AerialAssist\Aerial_Assist_Scouting_UI _Old.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -317,9 +311,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\RegularSeason\GTR_East\RecycleRush_GTR_East.resx">
       <DependentUpon>RecycleRush_GTR_East.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2015_RecycleRush\OffSeason\IRI\RecycleRush_IRI.resx">
-      <DependentUpon>RecycleRush_IRI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\RegularSeason\Northbay\RecycleRush_Northbay.resx">
       <DependentUpon>RecycleRush_Northbay.cs</DependentUpon>

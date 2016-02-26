@@ -25,14 +25,13 @@
 //===============================================================================
 #endregion
 using System.Collections.Generic;
-using FRC_Scouting_V2.Models;
 
-namespace FRC_Scouting_V2
+namespace FRC_Scouting_V2.Models.RecycleRush
 {
-    public class RecycleRush_Scout_Match
+    public class Match_Scout
     {
         //General Information
-        public List<RecycleRush_Stack> Stacks = new List<RecycleRush_Stack>();
+        public List<Stack> Stacks = new List<Stack>();
 
         public string Author { get; set; }
 

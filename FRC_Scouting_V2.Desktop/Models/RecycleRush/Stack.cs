@@ -24,9 +24,9 @@
 //SOFTWARE.
 //===============================================================================
 #endregion
-namespace FRC_Scouting_V2.Models
+namespace FRC_Scouting_V2.Models.RecycleRush
 {
-    public class RecycleRush_Stack
+    public class Stack
     {
         public int Stack_Height { get; set; }
 

@@ -24,9 +24,9 @@
 //SOFTWARE.
 //===============================================================================
 #endregion
-namespace FRC_Scouting_V2
+namespace FRC_Scouting_V2.Models.RecycleRush
 {
-    public class RecycleRush_Pit_Scouting_Team
+    public class Pit
     {
         public string Author { get; set; }
 

@@ -77,26 +77,19 @@ namespace FRC_Scouting_V2
                     rrnb.Show();
                 }
                     break;
-
                 case 4:
-                {
-                    var rriri = new RecycleRush_IRI();
-                    rriri.Show();
-                }
-                    break;
-                case 5:
                 {
                     var rrffj = new RecycleRush_Fall_Fiesta_Junior();
                     rrffj.Show();
                 }
                     break;
-                case 6:
+                case 5:
                 {
                     var rrffs = new RecycleRush_Fall_Fiesta_Senior();
                     rrffs.Show();
                 }
                     break;
-                case 7:
+                case 6:
                 {
                     var shgtre = new Stronghold_GTR_East();
                     shgtre.Show();
@@ -129,7 +122,6 @@ namespace FRC_Scouting_V2
             eventSelector.Items.Add("Aerial Assist | Rah Cha Cha | 2014");
             eventSelector.Items.Add("RecycleRush | GTR-East | 2015");
             eventSelector.Items.Add("RecycleRush | Northbay | 2015");
-            eventSelector.Items.Add("RecycleRush | IRI | 2015");
             eventSelector.Items.Add("RecycleRush | Fall Fiesta - Junior | 2015");
             eventSelector.Items.Add("RecycleRush | Fall Fiesta - Senior | 2015");
             eventSelector.Items.Add("Stronghold | GTR-East | 2016");
