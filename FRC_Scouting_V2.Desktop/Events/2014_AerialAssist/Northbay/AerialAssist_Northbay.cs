@@ -32,6 +32,9 @@ using UsefulSnippets;
 namespace FRC_Scouting_V2
 {
     //@author xNovax
+    /// <summary>
+    /// Event Class for Aerial Assist Game Northbay Regional
+    /// </summary>
     public partial class AerialAssist_Northbay : Form
     {
         private string selectedTeamLocation;
@@ -39,6 +42,10 @@ namespace FRC_Scouting_V2
         private string selectedTeamName;
         private int selectedTeamNumber;
 
+
+        /// <summary>
+        /// Constructor for AerialAssit_Northbay
+        /// </summary>
         public AerialAssist_Northbay()
         {
             InitializeComponent();

@@ -41,6 +41,9 @@ using UsefulSnippets;
 namespace FRC_Scouting_V2
 {
     //@author xNovax
+    /// <summary>
+    /// Event Class for Aerial Assist Game RahChaCha Regional
+    /// </summary>
     public partial class AerialAssist_RahChaCha : Form
     {
         private const string TABLE_NAME = ("AerialAssist_RahChaCha");
@@ -137,11 +140,19 @@ namespace FRC_Scouting_V2
         private string teamURL;
         private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
 
+        /// <summary>
+        /// Constructor for AerialAssist_RahChaCha
+        /// </summary>
         public AerialAssist_RahChaCha()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Imports team scouting information from a text file and inserts it into a MySQL Database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void importFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
@@ -275,6 +286,11 @@ namespace FRC_Scouting_V2
             return ret;
         }
 
+        /// <summary>
+        /// Gets the scouting information from the MySQL database for a specific team and displays it in the team comparison form
+        /// </summary>
+        /// <param name="teamNumberLocal"></param>
+        /// <param name="selection"></param>
         public void GetDataForTeam(int teamNumberLocal, int selection)
         {
             var numberOfMatches = 0;
@@ -507,6 +523,11 @@ namespace FRC_Scouting_V2
             }
         }
 
+        /// <summary>
+        /// An event for giving helpful information in regards to a teams website link not working
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void whyDoesTheLinkForATeamWebsiteNotWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Notifications.ShowInformationMessage("Sometime it works and sometimes it doesn't. This is a known bug.");
@@ -626,6 +647,9 @@ namespace FRC_Scouting_V2
             ColourStats();
         }
 
+        /// <summary>
+        /// Compares the stats and scouting information of two different teams and then changes the colour of the text based on which is better
+        /// </summary>
         public void ColourStats()
         {
             if (Settings.Default.colourTeamComparisonStatistics)
@@ -1235,6 +1259,9 @@ namespace FRC_Scouting_V2
             }
         }
 
+        /// <summary>
+        /// Resets the colour of the statistics in team comparison to black (default colour)
+        /// </summary>
         public void ClearColourStats()
         {
             for (var i = 0; i < dataGridViewTeam1.RowCount; i++)
@@ -1389,6 +1416,10 @@ namespace FRC_Scouting_V2
             Process.Start(e.LinkText);
         }
 
+
+        /// <summary>
+        /// Draws the field onto the screen
+        /// </summary>
         public void PlotInitialLines()
         {
             var blackpen = new Pen(Color.Black, 4);
@@ -1408,6 +1439,9 @@ namespace FRC_Scouting_V2
             initGraphics.Dispose();
         }
 
+        /// <summary>
+        /// Clears the starting location panel by painting overtop
+        /// </summary>
         public void BlankPanel()
         {
             var clearPanelGraphics = startingLocationPanel.CreateGraphics();
@@ -1424,18 +1458,11 @@ namespace FRC_Scouting_V2
         private void teamMatchBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             teamMatchSummaryTeamNameDisplay.Text = "Team Name: " + matchSummaryTeamName[teamMatchBox.SelectedIndex];
-            teamMatchSummaryTeamNumberDisplay.Text = "Team Number: " +
-                                                     matchSummaryTeamNumber[teamMatchBox.SelectedIndex];
-            teamMatchSummaryTeamColourDisplay.Text = "Team Colour: " +
-                                                     matchSummaryTeamColour[teamMatchBox.SelectedIndex];
-            teamMatchSummaryMatchNumberDisplay.Text = "Match Number: " +
-                                                      matchSummaryMatchNumber[teamMatchBox.SelectedIndex];
-            teamMatchSummaryAutoHighDisplay.Text = "Auto High Goals: " +
-                                                   matchSummaryAutoHighGoal[teamMatchBox.SelectedIndex] + " Misses: " +
-                                                   matchSummaryAutoHighMiss[teamMatchBox.SelectedIndex];
-            teamMatchSummaryAutoLowDisplay.Text = "Auto Low Goals: " +
-                                                  matchSummaryAutoLowGoal[teamMatchBox.SelectedIndex] + " Misses: " +
-                                                  matchSummaryAutoLowMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryTeamNumberDisplay.Text = "Team Number: " + matchSummaryTeamNumber[teamMatchBox.SelectedIndex];
+            teamMatchSummaryTeamColourDisplay.Text = "Team Colour: " + matchSummaryTeamColour[teamMatchBox.SelectedIndex];
+            teamMatchSummaryMatchNumberDisplay.Text = "Match Number: " + matchSummaryMatchNumber[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoHighDisplay.Text = "Auto High Goals: " + matchSummaryAutoHighGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryAutoHighMiss[teamMatchBox.SelectedIndex];
+            teamMatchSummaryAutoLowDisplay.Text = "Auto Low Goals: " + matchSummaryAutoLowGoal[teamMatchBox.SelectedIndex] + " Misses: " + matchSummaryAutoLowMiss[teamMatchBox.SelectedIndex];
             teamMatchSummaryControlledHighDisplay.Text = "Controlled High Goals: " +
                                                          matchSummaryControlledHighGoal[teamMatchBox.SelectedIndex] +
                                                          " Misses: " +
@@ -1502,6 +1529,9 @@ namespace FRC_Scouting_V2
             }
         }
 
+        /// <summary>
+        /// A model for team information data
+        /// </summary>
         public class TeamInformationJSONData
         {
             public string country_name { get; set; }

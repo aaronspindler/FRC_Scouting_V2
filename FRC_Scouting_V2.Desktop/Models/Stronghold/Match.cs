@@ -24,9 +24,50 @@
 //SOFTWARE.
 //===============================================================================
 #endregion
+
+using System;
+
 namespace FRC_Scouting_V2.Models.Stronghold
 {
-    class Stronghold_Pit
+    class Match
     {
+        public string author { get; set; }
+        public string time_created { get; set; }
+        public string uniqueid { get; set; }
+
+        public Field_Element[] field_setup { get; set; }
+
+        public int team_number { get; set; }
+        public string team_name { get; set; }
+
+        public int match_number { get; set; }
+        public int alliance_colour { get; set; }
+
+        public int[] high_goal { get; set; }
+        public int[] low_goal { get; set; }
+
+        public Boolean reach_defence { get; set; }
+
+        public Boolean is_spy { get; set; }
+
+        public Boolean cross_Chevel_de_frise { get; set; }
+        public Boolean cross_Drawbridge { get; set; }
+        public Boolean cross_Lowbar { get; set; }
+        public Boolean cross_Moat { get; set; }
+        public Boolean cross_Portcullis { get; set; }
+        public Boolean cross_Ramparts { get; set; }
+        public Boolean cross_Rock_wall { get; set; }
+        public Boolean cross_Rough_terrain { get; set; }
+
+        public Boolean challenge { get; set; }
+        public Boolean scale { get; set; }
+
+        public int blue_score { get; set; }
+        public int red_score { get; set; }
+        public int[] fouls { get; set; }
+        public int driver_rating { get; set; }
+        public Boolean robot_dead { get; set; }
+
+        public string comments { get; set; }
     }
 }

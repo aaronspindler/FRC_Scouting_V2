@@ -29,6 +29,9 @@ using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
+    /// <summary>
+    /// Information form for Aerial Assist Northbay Regional
+    /// </summary>
     public partial class AerialAssist_Northbay_Information : GeneralFormTemplate.GeneralFormTemplate
     {
         //@author xNovax
@@ -41,11 +44,17 @@ namespace FRC_Scouting_V2
         private string sponsorLevel;
         private string sponsorName;
 
+        /// <summary>
+        /// Constructor for AerialAssist_Northbay_Information
+        /// </summary>
         public AerialAssist_Northbay_Information()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// A function that updates the current sponsor in the image box along with its name and sponsor level
+        /// </summary>
         public void UpdateSponsor()
         {
             switch (randomNum)

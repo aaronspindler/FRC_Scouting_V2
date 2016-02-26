@@ -53,7 +53,8 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>bin\Debug\FRC_Scouting_V2.XML</DocumentationFile>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -251,10 +252,12 @@
     <Compile Include="Forms\TeamInformationLookup.Designer.cs">
       <DependentUpon>TeamInformationLookup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="Models\RecycleRush\RecycleRush_Stack.cs" />
     <Compile Include="Misc\MySQLMethods.cs" />
-    <Compile Include="Models\Stronghold\Stronghold_Match.cs" />
-    <Compile Include="Models\Stronghold\Stronghold_Pit.cs" />
+    <Compile Include="Models\Stronghold\Field_Element.cs" />
+    <Compile Include="Models\Stronghold\Match.cs" />
+    <Compile Include="Models\Stronghold\Pit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Forms\ProgramInformation.cs">
       <SubType>Form</SubType>
