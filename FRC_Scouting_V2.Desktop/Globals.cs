@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,13 +24,14 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
 
 namespace FRC_Scouting_V2
 {
-    class Globals
+    internal class Globals
     {
-        const int AUTO = 0;
-        const int TELE = 1;
+        private const int AUTO = 0;
+        private const int TELE = 1;
     }
 }

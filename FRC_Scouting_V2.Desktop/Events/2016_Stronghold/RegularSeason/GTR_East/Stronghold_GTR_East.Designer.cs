@@ -136,6 +136,7 @@
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "Stronghold_GTR_East";
             this.Text = "Stronghold | GTR East | 2016";
+            this.Load += new System.EventHandler(this.Stronghold_GTR_East_Load);
             this.mainTableLayout.ResumeLayout(false);
             this.mainTableLayout.PerformLayout();
             this.mainMenuStrip.ResumeLayout(false);

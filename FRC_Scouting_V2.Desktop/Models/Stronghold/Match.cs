@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,13 +24,12 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
-#endregion
 
-using System;
+#endregion
 
 namespace FRC_Scouting_V2.Models.Stronghold
 {
-    class Match
+    internal class Match
     {
         public string author { get; set; }
         public string time_created { get; set; }
@@ -46,27 +46,27 @@ namespace FRC_Scouting_V2.Models.Stronghold
         public int[] high_goal { get; set; }
         public int[] low_goal { get; set; }
 
-        public Boolean reach_defence { get; set; }
+        public bool reach_defence { get; set; }
 
-        public Boolean is_spy { get; set; }
+        public bool is_spy { get; set; }
 
-        public Boolean cross_Chevel_de_frise { get; set; }
-        public Boolean cross_Drawbridge { get; set; }
-        public Boolean cross_Lowbar { get; set; }
-        public Boolean cross_Moat { get; set; }
-        public Boolean cross_Portcullis { get; set; }
-        public Boolean cross_Ramparts { get; set; }
-        public Boolean cross_Rock_wall { get; set; }
-        public Boolean cross_Rough_terrain { get; set; }
+        public bool cross_Chevel_de_frise { get; set; }
+        public bool cross_Drawbridge { get; set; }
+        public bool cross_Lowbar { get; set; }
+        public bool cross_Moat { get; set; }
+        public bool cross_Portcullis { get; set; }
+        public bool cross_Ramparts { get; set; }
+        public bool cross_Rock_wall { get; set; }
+        public bool cross_Rough_terrain { get; set; }
 
-        public Boolean challenge { get; set; }
-        public Boolean scale { get; set; }
+        public bool challenge { get; set; }
+        public bool scale { get; set; }
 
         public int blue_score { get; set; }
         public int red_score { get; set; }
         public int[] fouls { get; set; }
         public int driver_rating { get; set; }
-        public Boolean robot_dead { get; set; }
+        public bool robot_dead { get; set; }
 
         public string comments { get; set; }
     }

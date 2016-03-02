@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Drawing;
 using System.IO;
@@ -185,7 +188,7 @@ namespace FRC_Scouting_V2.UIs
 
         private void commentsTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (commentsTextBox.Text != (""))
+            if (commentsTextBox.Text != "")
             {
                 comments = commentsTextBox.Text;
             }
@@ -309,7 +312,7 @@ namespace FRC_Scouting_V2.UIs
             xStarting = Convert.ToInt32(e.X) - 3;
             yStarting = Convert.ToInt32(e.Y) - 3;
             g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
-            startingLocationXYDisplay.Text = ("X: " + xStarting + " Y: " + yStarting);
+            startingLocationXYDisplay.Text = "X: " + xStarting + " Y: " + yStarting;
         }
 
         private void startingLocationPanel_Paint(object sender, PaintEventArgs e)
@@ -449,7 +452,7 @@ namespace FRC_Scouting_V2.UIs
                 var insertDataString =
                     string.Format(
                         "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie, DriverRating, AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
-                        Program.selectedEventName, (MySQLMethods.GetNumberOfRowsInATable() + 1),
+                        Program.selectedEventName, MySQLMethods.GetNumberOfRowsInATable() + 1,
                         Program.selectedTeamNumber, Program.selectedTeamName, teamColour, matchNumber,
                         autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal, controlledHighMiss,
                         controlledLowGoal, controlledLowMiss, hotGoal, hotMiss, tripleAssistGoal, tripleAssistMiss,
@@ -507,9 +510,9 @@ namespace FRC_Scouting_V2.UIs
             totalMissControl = 0;
             xStarting = 0;
             yStarting = 0;
-            startingLocationXYDisplay.Text = ("X: 0 Y: 0");
-            comments = ("");
-            commentsTextBox.Text = ("Comments: Any other information that may be needed");
+            startingLocationXYDisplay.Text = "X: 0 Y: 0";
+            comments = "";
+            commentsTextBox.Text = "Comments: Any other information that may be needed";
             autoMovement = false;
             autonomousMovementCheckBox.Checked = false;
             driverRating = 0;
@@ -537,13 +540,13 @@ namespace FRC_Scouting_V2.UIs
         {
             if (teamColourSelector.SelectedIndex == 0)
             {
-                teamColour = ("Red");
+                teamColour = "Red";
             }
             else
             {
                 if (teamColourSelector.SelectedIndex == 1)
                 {
-                    teamColour = ("Blue");
+                    teamColour = "Blue";
                 }
             }
         }

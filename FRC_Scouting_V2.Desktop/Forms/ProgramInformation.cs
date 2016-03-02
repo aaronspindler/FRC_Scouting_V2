@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.IO;
 using System.Reflection;
@@ -31,7 +34,7 @@ using System.Windows.Forms;
 
 namespace FRC_Scouting_V2
 {
-    partial class ProgramInformation : Form
+    internal partial class ProgramInformation : Form
     {
         public ProgramInformation()
         {

@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Windows.Forms;
 
@@ -32,8 +35,8 @@ namespace FRC_Scouting_V2
     internal static class Program
     {
         public static int selectedTeamNumber = 0;
-        public static string selectedTeamName = ("");
-        public static string selectedEventName = ("");
+        public static string selectedTeamName = "";
+        public static string selectedEventName = "";
 
         /// <summary>
         ///     The main entry point for the application.

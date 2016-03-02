@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Drawing;
 using System.IO;
@@ -42,7 +45,7 @@ namespace FRC_Scouting_V2
 
         private int autoLowTally;
         private int autoPickupTally;
-        private string comments = ("");
+        private string comments = "";
         private int controlledHighTally;
         private int controlledLowTally;
         private int controlledPickupTally;
@@ -144,7 +147,7 @@ namespace FRC_Scouting_V2
                 "Click this button once you have submitted your data so that it will clear all of the boxes and advance you to the next match.");
             ToolTip1.SetToolTip(submitDataButton, "Click once you have finished scouting a match");
 
-            currentTimeDisplay.Text = ("Current Time: " + Time.GetCurrentTime());
+            currentTimeDisplay.Text = "Current Time: " + Time.GetCurrentTime();
             timer.Start();
 
             if (Settings.Default.showQuestionButtons)
@@ -268,19 +271,19 @@ namespace FRC_Scouting_V2
             missedPickupsTally = 0;
             xStarting = 0;
             yStarting = 0;
-            comments = ("");
-            commentsRichTextBox.Text = ("");
+            comments = "";
+            commentsRichTextBox.Text = "";
             UpdateLabels();
             BlankPanel();
             didRobotDie = false;
             didRobotDieCheckBox.Checked = false;
             didRobotDieINT = 0;
-            contextDisplayLabel.Text = ("");
+            contextDisplayLabel.Text = "";
         }
 
         private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (commentsRichTextBox.Text != (""))
+            if (commentsRichTextBox.Text != "")
             {
                 comments = commentsRichTextBox.Text;
             }
@@ -545,7 +548,7 @@ namespace FRC_Scouting_V2
                 var insertDataString =
                     string.Format(
                         "Insert into {0} (EntryID,TeamName,TeamNumber,TeamColour,MatchNumber,AutoHighTally,AutoLowTally,ControlledHigHTally,ControlledLowTally,HotGoalTally,AutoPickup,ControlledPickup,MissedPickups,StartingLocationX,StartingLocationY,Comments,DidRobotDie) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}');",
-                        Program.selectedEventName, (CountRowsInDatabase() + 1),
+                        Program.selectedEventName, CountRowsInDatabase() + 1,
                         Program.selectedTeamName,
                         Program.selectedTeamNumber, teamColour, matchNumber, autoHighTally, autoLowTally,
                         controlledHighTally, controlledLowTally, hotGoalTally, autoPickupTally, controlledPickupTally,
@@ -555,7 +558,7 @@ namespace FRC_Scouting_V2
                 cmd.ExecuteNonQuery();
 
                 ConsoleWindow.WriteLine("Data has been inserted into the database!");
-                contextDisplayLabel.Text = ("Your data has been inserted into the database!");
+                contextDisplayLabel.Text = "Your data has been inserted into the database!";
 
                 //Closing the connection
                 conn.Close();
@@ -563,7 +566,7 @@ namespace FRC_Scouting_V2
             }
             catch (MySqlException ex)
             {
-                contextDisplayLabel.Text = ("An error has occured!");
+                contextDisplayLabel.Text = "An error has occured!";
                 ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.WriteLine(ex.Message);
             }
@@ -574,11 +577,11 @@ namespace FRC_Scouting_V2
             switch (teamColourComboBox.SelectedIndex)
             {
                 case 0:
-                    teamColour = ("Blue");
+                    teamColour = "Blue";
                     break;
 
                 case 1:
-                    teamColour = ("Red");
+                    teamColour = "Red";
                     break;
             }
         }
@@ -591,7 +594,7 @@ namespace FRC_Scouting_V2
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            currentTimeDisplay.Text = ("Current Time: " + Time.GetCurrentTime());
+            currentTimeDisplay.Text = "Current Time: " + Time.GetCurrentTime();
         }
     }
 }

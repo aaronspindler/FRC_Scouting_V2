@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -54,13 +57,13 @@ namespace FRC_Scouting_V2.Information_Forms
                 "3710-xNovax:FRC_Scouting_V2:" + Assembly.GetExecutingAssembly().GetName().Version);
             try
             {
-                var url = ("http://www.thebluealliance.com/api/v2/event/" +
-                           Convert.ToString(eventCodeEntryTextBox.Text));
-                var downloadedData = (wc.DownloadString(url));
+                var url = "http://www.thebluealliance.com/api/v2/event/" +
+                          Convert.ToString(eventCodeEntryTextBox.Text);
+                var downloadedData = wc.DownloadString(url);
                 var deserializedData = JsonConvert.DeserializeObject<Event>(downloadedData);
 
                 locationTextBox.Text = deserializedData.venue_address;
-                eventNameLabel.Text = ("Event Name: " + deserializedData.name);
+                eventNameLabel.Text = "Event Name: " + deserializedData.name;
                 eventSpanLabel.Text = string.Format("Event Date(s): {0} to {1}", deserializedData.start_date,
                     deserializedData.end_date);
                 isOfficialLabel.Text = "Is Official?: " + deserializedData.official;

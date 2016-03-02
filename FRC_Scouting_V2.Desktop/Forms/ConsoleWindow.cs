@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.ComponentModel;
 using System.Globalization;
@@ -34,7 +37,7 @@ namespace FRC_Scouting_V2
 {
     public partial class ConsoleWindow : Form
     {
-        static BindingList<ConsoleEntry> logCollection = new BindingList<ConsoleEntry>();
+        private static readonly BindingList<ConsoleEntry> logCollection = new BindingList<ConsoleEntry>();
 
         public ConsoleWindow()
         {
@@ -63,7 +66,7 @@ namespace FRC_Scouting_V2
         public static void ExportToCSV_Dialog()
         {
             var sfd = new SaveFileDialog();
-            sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
+            sfd.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
             try
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
@@ -84,19 +87,19 @@ namespace FRC_Scouting_V2
         }
 
         public static void ExportToCSV_Timestamp()
-        { 
+        {
             try
             {
                 Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\");
-                var fileLoc = (AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\" + DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss-tt") + ".csv");
+                var fileLoc = AppDomain.CurrentDomain.BaseDirectory + "\\Logs\\" + DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss-tt") + ".csv";
 
                 var writer = new StreamWriter(fileLoc);
-                    writer.WriteLine("Timestamp,Message");
-                    for (var i = 0; i < logCollection.Count; i++)
-                    {
-                        writer.WriteLine(logCollection[i].TimeStamp + "," + logCollection[i].Message);
-                    }
-                    writer.Close();
+                writer.WriteLine("Timestamp,Message");
+                for (var i = 0; i < logCollection.Count; i++)
+                {
+                    writer.WriteLine(logCollection[i].TimeStamp + "," + logCollection[i].Message);
+                }
+                writer.Close();
             }
             catch (Exception exception)
             {
@@ -111,7 +114,7 @@ namespace FRC_Scouting_V2
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-            foreach (ConsoleEntry ce in logCollection)
+            foreach (var ce in logCollection)
             {
                 //consoleDataGridView.Rows.Add(ce.TimeStamp, ce.Message);
             }
@@ -124,7 +127,9 @@ namespace FRC_Scouting_V2
 
         public class ConsoleEntry
         {
-            public ConsoleEntry() { }
+            public ConsoleEntry()
+            {
+            }
 
             public ConsoleEntry(string timeIn, string messageIn)
             {
@@ -135,7 +140,6 @@ namespace FRC_Scouting_V2
             // Properties.
             public string TimeStamp { get; set; }
             public string Message { get; set; }
-
         }
     }
 }

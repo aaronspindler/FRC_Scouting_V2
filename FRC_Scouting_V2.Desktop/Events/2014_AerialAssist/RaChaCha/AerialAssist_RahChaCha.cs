@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -42,11 +45,11 @@ namespace FRC_Scouting_V2
 {
     //@author xNovax
     /// <summary>
-    /// Event Class for Aerial Assist Game RahChaCha Regional
+    ///     Event Class for Aerial Assist Game RahChaCha Regional
     /// </summary>
     public partial class AerialAssist_RahChaCha : Form
     {
-        private const string TABLE_NAME = ("AerialAssist_RahChaCha");
+        private const string TABLE_NAME = "AerialAssist_RahChaCha";
 
         private readonly double[] _autoHighGoalSuccessRate = new double[2];
         private readonly double[] _autoHighMean = new double[2];
@@ -134,14 +137,14 @@ namespace FRC_Scouting_V2
         private int selectedTeam2;
         private bool team1Selected;
         private bool team2Selected;
-        private string teamLocation = ("");
-        private string teamName = ("");
+        private string teamLocation = "";
+        private string teamName = "";
         private int teamNumber;
         private string teamURL;
-        private string url = ("http://www.thebluealliance.com/api/v2/team/frc");
+        private string url = "http://www.thebluealliance.com/api/v2/team/frc";
 
         /// <summary>
-        /// Constructor for AerialAssist_RahChaCha
+        ///     Constructor for AerialAssist_RahChaCha
         /// </summary>
         public AerialAssist_RahChaCha()
         {
@@ -149,7 +152,7 @@ namespace FRC_Scouting_V2
         }
 
         /// <summary>
-        /// Imports team scouting information from a text file and inserts it into a MySQL Database
+        ///     Imports team scouting information from a text file and inserts it into a MySQL Database
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -206,7 +209,7 @@ namespace FRC_Scouting_V2
 
                     if (comments.Contains(";"))
                     {
-                        comments = ("");
+                        comments = "";
                     }
 
                     var testIfFileIsGood = reader.ReadLine();
@@ -233,7 +236,7 @@ namespace FRC_Scouting_V2
                             cmd.CommandText =
                                 string.Format(
                                     "Insert into {0} (EntryID,TeamNumber,TeamName,TeamColour,MatchNumber,AutoHighGoal,AutoHighMiss, AutoLowGoal, AutoLowMiss, ControlledHighGoal, ControlledHighMiss, ControlledLowGoal, ControlledLowMiss, HotGoals, HotGoalMiss, 3AssistGoal, 3AssistMiss, AutoBallPickup, AutoBallPickupMiss, ControlledBallPickup, ControlledBallPickupMiss, PickupFromHuman, MissedPickupFromHuman, PassToAnotherRobot, MissedPassToAnotherRobot, SuccessfulTruss, UnsuccessfulTruss, StartingX, StartingY, DidRobotDie,DriverRating , AutoMovement, Comments) values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}');",
-                                    Program.selectedEventName, (MySQLMethods.GetNumberOfRowsInATable() + 1),
+                                    Program.selectedEventName, MySQLMethods.GetNumberOfRowsInATable() + 1,
                                     teamNumberImport, teamNameImport, teamColour,
                                     matchNumber,
                                     autoHighGoal, autoHighMiss, autoLowGoal, autoLowMiss, controlledHighGoal,
@@ -282,12 +285,13 @@ namespace FRC_Scouting_V2
             var sum = enumerable.Sum(d => Math.Pow(d - avg, 2));
 
             //Put it all together
-            ret = Math.Sqrt((sum)/enumerable.Count() - 1);
+            ret = Math.Sqrt(sum/enumerable.Count() - 1);
             return ret;
         }
 
         /// <summary>
-        /// Gets the scouting information from the MySQL database for a specific team and displays it in the team comparison form
+        ///     Gets the scouting information from the MySQL database for a specific team and displays it in the team comparison
+        ///     form
         /// </summary>
         /// <param name="teamNumberLocal"></param>
         /// <param name="selection"></param>
@@ -391,7 +395,7 @@ namespace FRC_Scouting_V2
                     _autoLowMean[0] = AutoLowGoal.Average();
                     _autoLowStandardDeviation[0] = CalculateStdDev(AutoLowGoal);
                     _autolowGoalSuccessRate[0] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
-                    _autoMobilitySuccessRate[0] = AutoMovementGood.Sum()/(numberOfMatches);
+                    _autoMobilitySuccessRate[0] = AutoMovementGood.Sum()/numberOfMatches;
                     _driverRatingMean[0] = DriverRating.Average();
                     _driverRatingStandardDeviation[0] = CalculateStdDev(DriverRating);
                     _controlledHighMean[0] = ControlledHighGoal.Average();
@@ -405,8 +409,8 @@ namespace FRC_Scouting_V2
                     _hotGoalMean[0] = HotGoal.Average();
                     _hotGoalStandardDeviation[0] = CalculateStdDev(HotGoal);
                     _hotGoalSuccessRate[0] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
-                    _pickupsMean[0] = (AutoPickup.Average()) + (ControlledPickup.Average()) +
-                                      (PickupFromHuman.Average());
+                    _pickupsMean[0] = AutoPickup.Average() + ControlledPickup.Average() +
+                                      PickupFromHuman.Average();
                     _pickupStandardDeviation[0] = CalculateStdDev(ControlledPickup);
                     _pickupSuccessRate[0] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
                                             (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
@@ -461,7 +465,7 @@ namespace FRC_Scouting_V2
                         _autoLowMean[1] = AutoLowGoal.Average();
                         _autoLowStandardDeviation[1] = CalculateStdDev(AutoLowGoal);
                         _autolowGoalSuccessRate[1] = AutoLowGoal.Sum()/(AutoLowGoal.Sum() + AutoLowMiss.Sum());
-                        _autoMobilitySuccessRate[1] = AutoMovementGood.Sum()/(numberOfMatches);
+                        _autoMobilitySuccessRate[1] = AutoMovementGood.Sum()/numberOfMatches;
                         _driverRatingMean[1] = DriverRating.Average();
                         _driverRatingStandardDeviation[1] = CalculateStdDev(DriverRating);
                         _controlledHighMean[1] = ControlledHighGoal.Average();
@@ -475,8 +479,8 @@ namespace FRC_Scouting_V2
                         _hotGoalMean[1] = HotGoal.Average();
                         _hotGoalStandardDeviation[1] = CalculateStdDev(HotGoal);
                         _hotGoalSuccessRate[1] = HotGoal.Sum()/(HotGoal.Sum() + HotMiss.Sum());
-                        _pickupsMean[1] = (AutoPickup.Average()) + (ControlledPickup.Average()) +
-                                          (PickupFromHuman.Average());
+                        _pickupsMean[1] = AutoPickup.Average() + ControlledPickup.Average() +
+                                          PickupFromHuman.Average();
                         _pickupStandardDeviation[1] = CalculateStdDev(ControlledPickup);
                         _pickupSuccessRate[1] = (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum())/
                                                 (AutoPickup.Sum() + ControlledPickup.Sum() + PickupFromHuman.Sum() +
@@ -524,7 +528,7 @@ namespace FRC_Scouting_V2
         }
 
         /// <summary>
-        /// An event for giving helpful information in regards to a teams website link not working
+        ///     An event for giving helpful information in regards to a teams website link not working
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -535,7 +539,7 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_RahChaCha_Load(object sender, EventArgs e)
         {
-            Program.selectedEventName = (TABLE_NAME);
+            Program.selectedEventName = TABLE_NAME;
             Settings.Default.Save();
 
             //Setting toolTips
@@ -568,7 +572,7 @@ namespace FRC_Scouting_V2
             Notifications.ShowInformationMessage(
                 "This can take a long time! Progress will be shown in the console. The program will be unresponsive while is it exporting.");
             var sfd = new SaveFileDialog();
-            sfd.Filter = ("CSV files (*.csv)|*.csv|All files (*.*)|*.*");
+            sfd.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
             var numberOfRows = MySQLMethods.GetNumberOfRowsInATable();
 
             if (sfd.ShowDialog() == DialogResult.OK)
@@ -648,7 +652,8 @@ namespace FRC_Scouting_V2
         }
 
         /// <summary>
-        /// Compares the stats and scouting information of two different teams and then changes the colour of the text based on which is better
+        ///     Compares the stats and scouting information of two different teams and then changes the colour of the text based on
+        ///     which is better
         /// </summary>
         public void ColourStats()
         {
@@ -1260,7 +1265,7 @@ namespace FRC_Scouting_V2
         }
 
         /// <summary>
-        /// Resets the colour of the statistics in team comparison to black (default colour)
+        ///     Resets the colour of the statistics in team comparison to black (default colour)
         /// </summary>
         public void ClearColourStats()
         {
@@ -1282,7 +1287,7 @@ namespace FRC_Scouting_V2
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            url = ("http://www.thebluealliance.com/api/v2/team/frc");
+            url = "http://www.thebluealliance.com/api/v2/team/frc";
             url = url + Convert.ToString(_teamNumberArray[teamSelector.SelectedIndex]);
             var wc = new MyWebClient();
             wc.Headers.Add("X-TBA-App-Id",
@@ -1290,7 +1295,7 @@ namespace FRC_Scouting_V2
 
             try
             {
-                var downloadedData = (wc.DownloadString(url));
+                var downloadedData = wc.DownloadString(url);
                 var deserializedData = JsonConvert.DeserializeObject<TeamInformationJSONData>(downloadedData);
 
                 teamName = Convert.ToString(deserializedData.nickname);
@@ -1418,7 +1423,7 @@ namespace FRC_Scouting_V2
 
 
         /// <summary>
-        /// Draws the field onto the screen
+        ///     Draws the field onto the screen
         /// </summary>
         public void PlotInitialLines()
         {
@@ -1440,7 +1445,7 @@ namespace FRC_Scouting_V2
         }
 
         /// <summary>
-        /// Clears the starting location panel by painting overtop
+        ///     Clears the starting location panel by painting overtop
         /// </summary>
         public void BlankPanel()
         {
@@ -1516,7 +1521,7 @@ namespace FRC_Scouting_V2
             var xStarting = Convert.ToInt32(matchSummaryX[teamMatchBox.SelectedIndex]) - 3;
             var yStarting = Convert.ToInt32(matchSummaryY[teamMatchBox.SelectedIndex]) - 3;
             g.DrawRectangle(new Pen(Brushes.Black, 3), new Rectangle(new Point(xStarting, yStarting), new Size(5, 5)));
-            teamMatchSummaryXYDisplay.Text = ("X: " + xStarting + " Y: " + yStarting);
+            teamMatchSummaryXYDisplay.Text = "X: " + xStarting + " Y: " + yStarting;
         }
 
         private class MyWebClient : WebClient
@@ -1530,7 +1535,7 @@ namespace FRC_Scouting_V2
         }
 
         /// <summary>
-        /// A model for team information data
+        ///     A model for team information data
         /// </summary>
         public class TeamInformationJSONData
         {

@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,14 +24,16 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using FRC_Scouting_V2.Properties;
 
 namespace FRC_Scouting_V2
 {
     /// <summary>
-    /// Information form for Aerial Assist Northbay Regional
+    ///     Information form for Aerial Assist Northbay Regional
     /// </summary>
     public partial class AerialAssist_Northbay_Information : GeneralFormTemplate.GeneralFormTemplate
     {
@@ -45,7 +48,7 @@ namespace FRC_Scouting_V2
         private string sponsorName;
 
         /// <summary>
-        /// Constructor for AerialAssist_Northbay_Information
+        ///     Constructor for AerialAssist_Northbay_Information
         /// </summary>
         public AerialAssist_Northbay_Information()
         {
@@ -53,7 +56,7 @@ namespace FRC_Scouting_V2
         }
 
         /// <summary>
-        /// A function that updates the current sponsor in the image box along with its name and sponsor level
+        ///     A function that updates the current sponsor in the image box along with its name and sponsor level
         /// </summary>
         public void UpdateSponsor()
         {
@@ -61,90 +64,90 @@ namespace FRC_Scouting_V2
             {
                 case 0:
                     sponsorPictureBox.Image = Resources.fednor_platinum_northbay_2014;
-                    sponsorName = ("FedNor");
-                    sponsorLevel = ("Platinum");
+                    sponsorName = "FedNor";
+                    sponsorLevel = "Platinum";
                     break;
 
                 case 1:
                     sponsorPictureBox.Image = Resources.redpath_platinum_northbay_2014;
-                    sponsorName = ("RedPath");
-                    sponsorLevel = ("Platinum");
+                    sponsorName = "RedPath";
+                    sponsorLevel = "Platinum";
                     break;
 
                 case 2:
                     sponsorPictureBox.Image = Resources.nipu_platinum_northbay_2014;
-                    sponsorName = ("Nipissing University");
-                    sponsorLevel = ("Platinum");
+                    sponsorName = "Nipissing University";
+                    sponsorLevel = "Platinum";
                     break;
 
                 case 3:
                     sponsorPictureBox.Image = Resources.atlascopco_gold_northbay_2014;
-                    sponsorName = ("Atlas Copco");
-                    sponsorLevel = ("Gold");
+                    sponsorName = "Atlas Copco";
+                    sponsorLevel = "Gold";
                     break;
 
                 case 4:
                     sponsorPictureBox.Image = Resources.twg_gold_northbay_2014;
-                    sponsorName = ("twg* Communications");
-                    sponsorLevel = ("Gold");
+                    sponsorName = "twg* Communications";
+                    sponsorLevel = "Gold";
                     break;
 
                 case 5:
                     sponsorPictureBox.Image = Resources.ontario_silver_northbay_2014;
-                    sponsorName = ("Ontario | Northern Ontario Heritage Fund Corporation");
-                    sponsorLevel = ("Silver");
+                    sponsorName = "Ontario | Northern Ontario Heritage Fund Corporation";
+                    sponsorLevel = "Silver";
                     break;
 
                 case 6:
                     sponsorPictureBox.Image = Resources.forbetteorforworse_silver_northbay_2014;
-                    sponsorName = ("For Better for Worse");
-                    sponsorLevel = ("Silver");
+                    sponsorName = "For Better for Worse";
+                    sponsorLevel = "Silver";
                     break;
 
                 case 7:
                     sponsorPictureBox.Image = Resources.canadore_silver_northbay_2014;
-                    sponsorName = ("Canadore College");
-                    sponsorLevel = ("Silver");
+                    sponsorName = "Canadore College";
+                    sponsorLevel = "Silver";
                     break;
 
                 case 8:
                     sponsorPictureBox.Image = Resources.stantec_bronze_northbay_2014;
-                    sponsorName = ("Stantec");
-                    sponsorLevel = ("Bronze");
+                    sponsorName = "Stantec";
+                    sponsorLevel = "Bronze";
                     break;
 
                 case 9:
                     sponsorPictureBox.Image = Resources.north_bay_strategicpartner_northbay_2014;
-                    sponsorName = ("North Bay");
-                    sponsorLevel = ("Strategic Partner");
+                    sponsorName = "North Bay";
+                    sponsorLevel = "Strategic Partner";
                     break;
 
                 case 10:
                     sponsorPictureBox.Image = Resources.nearnorth_strategicpartner_northbay_2014;
-                    sponsorName = ("Near North District School Board");
-                    sponsorLevel = ("Strategic Partner");
+                    sponsorName = "Near North District School Board";
+                    sponsorLevel = "Strategic Partner";
                     break;
 
                 case 11:
                     sponsorPictureBox.Image = Resources.metso_inkind_northbay_2014;
-                    sponsorName = ("Metso Minerals");
-                    sponsorLevel = ("In Kind");
+                    sponsorName = "Metso Minerals";
+                    sponsorLevel = "In Kind";
                     break;
 
                 case 12:
                     sponsorPictureBox.Image = Resources.astowing_inkind_northbay_2014;
-                    sponsorName = ("A&S Towing");
-                    sponsorLevel = ("In Kind");
+                    sponsorName = "A&S Towing";
+                    sponsorLevel = "In Kind";
                     break;
 
                 case 13:
                     sponsorPictureBox.Image = Resources.sms_inkind_northbay_2014;
-                    sponsorName = ("SMS Rents");
-                    sponsorLevel = ("In Kind");
+                    sponsorName = "SMS Rents";
+                    sponsorLevel = "In Kind";
                     break;
             }
-            sponsorLevelDisplayLabel.Text = ("Sponsor Level: " + sponsorLevel);
-            sponsorNameDisplayLabel.Text = ("Sponsor Name: " + sponsorName);
+            sponsorLevelDisplayLabel.Text = "Sponsor Level: " + sponsorLevel;
+            sponsorNameDisplayLabel.Text = "Sponsor Name: " + sponsorName;
         }
 
         private void AerialAssist_Northbay_Information_Load(object sender, EventArgs e)

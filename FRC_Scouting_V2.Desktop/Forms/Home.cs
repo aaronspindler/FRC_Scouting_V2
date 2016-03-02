@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -128,7 +131,7 @@ namespace FRC_Scouting_V2
 
             if (Settings.Default.firstTimeLoad)
             {
-                if (MessageBox.Show("Do you want to modify your database settings right now?", "Database Settings",MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to modify your database settings right now?", "Database Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     var settingsPage = new GeneralSettings();
                     settingsPage.Show();
@@ -193,7 +196,7 @@ namespace FRC_Scouting_V2
         {
             if (Network.CheckForInternetConnection())
             {
-                isInternetConnectedLabel.Text = ("Internet Connected");
+                isInternetConnectedLabel.Text = "Internet Connected";
                 isInternetConnectedLabel.ForeColor = Color.DarkGreen;
                 ConsoleWindow.WriteLine("Internet Connected");
             }
@@ -201,7 +204,7 @@ namespace FRC_Scouting_V2
             {
                 if (Network.CheckForInternetConnection() == false)
                 {
-                    isInternetConnectedLabel.Text = ("Internet Not Connected");
+                    isInternetConnectedLabel.Text = "Internet Not Connected";
                     isInternetConnectedLabel.ForeColor = Color.Red;
                     ConsoleWindow.WriteLine("Internet Disconnected");
                 }

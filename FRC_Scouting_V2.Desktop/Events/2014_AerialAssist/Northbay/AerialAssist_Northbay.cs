@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Properties;
@@ -33,7 +36,7 @@ namespace FRC_Scouting_V2
 {
     //@author xNovax
     /// <summary>
-    /// Event Class for Aerial Assist Game Northbay Regional
+    ///     Event Class for Aerial Assist Game Northbay Regional
     /// </summary>
     public partial class AerialAssist_Northbay : Form
     {
@@ -44,7 +47,7 @@ namespace FRC_Scouting_V2
 
 
         /// <summary>
-        /// Constructor for AerialAssit_Northbay
+        ///     Constructor for AerialAssit_Northbay
         /// </summary>
         public AerialAssist_Northbay()
         {
@@ -53,7 +56,7 @@ namespace FRC_Scouting_V2
 
         private void AerialAssist_Northbay_Load(object sender, EventArgs e)
         {
-            Program.selectedEventName = ("AerialAssist_Northbay");
+            Program.selectedEventName = "AerialAssist_Northbay";
             Settings.Default.Save();
             //Loading Team Names
             //36 Teams
@@ -116,219 +119,219 @@ namespace FRC_Scouting_V2
             switch (teamSelector.SelectedIndex)
             {
                 case 0:
-                    selectedTeamName = ("Blizzard");
+                    selectedTeamName = "Blizzard";
                     selectedTeamNumber = 188;
-                    selectedTeamLocation = ("Toronto, ON, Canada");
+                    selectedTeamLocation = "Toronto, ON, Canada";
                     break;
 
                 case 1:
-                    selectedTeamName = ("The Coyotes");
+                    selectedTeamName = "The Coyotes";
                     selectedTeamNumber = 610;
-                    selectedTeamLocation = ("Toronto, ON, Canada");
+                    selectedTeamLocation = "Toronto, ON, Canada";
                     break;
 
                 case 2:
-                    selectedTeamName = ("Sabre Bytes");
+                    selectedTeamName = "Sabre Bytes";
                     selectedTeamNumber = 772;
-                    selectedTeamLocation = ("LaSalle, ON, Canada");
+                    selectedTeamLocation = "LaSalle, ON, Canada";
                     break;
 
                 case 3:
-                    selectedTeamName = ("Ice Cubed");
+                    selectedTeamName = "Ice Cubed";
                     selectedTeamNumber = 1305;
-                    selectedTeamLocation = ("North Bay, ON, Canada");
+                    selectedTeamLocation = "North Bay, ON, Canada";
                     break;
 
                 case 4:
-                    selectedTeamName = ("RUNNYMEDE ROBOTICS");
+                    selectedTeamName = "RUNNYMEDE ROBOTICS";
                     selectedTeamNumber = 1310;
-                    selectedTeamLocation = ("Toronto, ON, Canada");
+                    selectedTeamLocation = "Toronto, ON, Canada";
                     break;
 
                 case 5:
-                    selectedTeamName = ("Inverse Paradox");
+                    selectedTeamName = "Inverse Paradox";
                     selectedTeamNumber = 1325;
-                    selectedTeamLocation = ("Mississauga, ON, Canada");
+                    selectedTeamLocation = "Mississauga, ON, Canada";
                     break;
 
                 case 6:
-                    selectedTeamName = ("Red Devils");
+                    selectedTeamName = "Red Devils";
                     selectedTeamNumber = 1334;
-                    selectedTeamLocation = ("Oakville, ON, Canada");
+                    selectedTeamLocation = "Oakville, ON, Canada";
                     break;
 
                 case 7:
-                    selectedTeamName = ("RoboHawks");
+                    selectedTeamName = "RoboHawks";
                     selectedTeamNumber = 1605;
-                    selectedTeamLocation = ("Toronto, ON, Canada");
+                    selectedTeamLocation = "Toronto, ON, Canada";
                     break;
 
                 case 8:
-                    selectedTeamName = ("Cybergnomes");
+                    selectedTeamName = "Cybergnomes";
                     selectedTeamNumber = 2013;
-                    selectedTeamLocation = ("Stayner, ON, Canada");
+                    selectedTeamLocation = "Stayner, ON, Canada";
                     break;
 
                 case 9:
-                    selectedTeamName = ("MMRambotics");
+                    selectedTeamName = "MMRambotics";
                     selectedTeamNumber = 2200;
-                    selectedTeamLocation = ("Burlington, ON, Canada");
+                    selectedTeamLocation = "Burlington, ON, Canada";
                     break;
 
                 case 10:
-                    selectedTeamName = ("Trojans");
+                    selectedTeamName = "Trojans";
                     selectedTeamNumber = 2386;
-                    selectedTeamLocation = ("Burlington, ON, Canada");
+                    selectedTeamLocation = "Burlington, ON, Canada";
                     break;
 
                 case 11:
-                    selectedTeamName = ("BeaverworX");
+                    selectedTeamName = "BeaverworX";
                     selectedTeamNumber = 2609;
-                    selectedTeamLocation = ("Guelph, ON, Canada");
+                    selectedTeamLocation = "Guelph, ON, Canada";
                     break;
 
                 case 12:
-                    selectedTeamName = ("ASTECHZ");
+                    selectedTeamName = "ASTECHZ";
                     selectedTeamNumber = 2994;
-                    selectedTeamLocation = ("Kanata, ON, Canada");
+                    selectedTeamLocation = "Kanata, ON, Canada";
                     break;
 
                 case 13:
-                    selectedTeamName = ("C4 Robotics");
+                    selectedTeamName = "C4 Robotics";
                     selectedTeamNumber = 3543;
-                    selectedTeamLocation = ("Arnprior, ON, Canada");
+                    selectedTeamLocation = "Arnprior, ON, Canada";
                     break;
 
                 case 14:
-                    selectedTeamName = ("Milton Mustangs");
+                    selectedTeamName = "Milton Mustangs";
                     selectedTeamNumber = 3571;
-                    selectedTeamLocation = ("Milton, ON, Canada");
+                    selectedTeamLocation = "Milton, ON, Canada";
                     break;
 
                 case 15:
-                    selectedTeamName = ("FSS Cyber Falcons");
+                    selectedTeamName = "FSS Cyber Falcons";
                     selectedTeamNumber = 3710;
-                    selectedTeamLocation = ("Kingston, ON, Canada");
+                    selectedTeamLocation = "Kingston, ON, Canada";
                     break;
 
                 case 16:
-                    selectedTeamName = ("Retro-Rams");
+                    selectedTeamName = "Retro-Rams";
                     selectedTeamNumber = 4001;
-                    selectedTeamLocation = ("Thornhill, ON, Canada");
+                    selectedTeamLocation = "Thornhill, ON, Canada";
                     break;
 
                 case 17:
-                    selectedTeamName = ("Lo-Ellen Robotics");
+                    selectedTeamName = "Lo-Ellen Robotics";
                     selectedTeamNumber = 4069;
-                    selectedTeamLocation = ("Sudbury, ON, Canada");
+                    selectedTeamLocation = "Sudbury, ON, Canada";
                     break;
 
                 case 18:
-                    selectedTeamName = ("Hoya Robotics");
+                    selectedTeamName = "Hoya Robotics";
                     selectedTeamNumber = 4152;
-                    selectedTeamLocation = ("Huntsville, ON, Canada");
+                    selectedTeamLocation = "Huntsville, ON, Canada";
                     break;
 
                 case 19:
-                    selectedTeamName = ("MaxTech");
+                    selectedTeamName = "MaxTech";
                     selectedTeamNumber = 4343;
-                    selectedTeamLocation = ("Aurora, ON, Canada");
+                    selectedTeamLocation = "Aurora, ON, Canada";
                     break;
 
                 case 20:
-                    selectedTeamName = ("W.A.F.F.L.E.S.");
+                    selectedTeamName = "W.A.F.F.L.E.S.";
                     selectedTeamNumber = 4476;
-                    selectedTeamLocation = ("Kingston, ON, Canada");
+                    selectedTeamLocation = "Kingston, ON, Canada";
                     break;
 
                 case 21:
-                    selectedTeamName = ("Northern Lights Robotics");
+                    selectedTeamName = "Northern Lights Robotics";
                     selectedTeamNumber = 4704;
-                    selectedTeamLocation = ("Timmins, ON, Canada");
+                    selectedTeamLocation = "Timmins, ON, Canada";
                     break;
 
                 case 22:
-                    selectedTeamName = ("RoBenedicts");
+                    selectedTeamName = "RoBenedicts";
                     selectedTeamNumber = 4754;
-                    selectedTeamLocation = ("Sudbury, ON, Canada");
+                    selectedTeamLocation = "Sudbury, ON, Canada";
                     break;
 
                 case 23:
-                    selectedTeamName = ("The Wildebots");
+                    selectedTeamName = "The Wildebots";
                     selectedTeamNumber = 4902;
-                    selectedTeamLocation = ("Burlington, ON, Canada");
+                    selectedTeamLocation = "Burlington, ON, Canada";
                     break;
 
                 case 24:
-                    selectedTeamName = ("Panthers");
+                    selectedTeamName = "Panthers";
                     selectedTeamNumber = 4914;
-                    selectedTeamLocation = ("Toronto, ON, Canada");
+                    selectedTeamLocation = "Toronto, ON, Canada";
                     break;
 
                 case 25:
-                    selectedTeamName = ("ALPHA DOGS");
+                    selectedTeamName = "ALPHA DOGS";
                     selectedTeamNumber = 4946;
-                    selectedTeamLocation = ("Bolton, ON, Canada");
+                    selectedTeamLocation = "Bolton, ON, Canada";
                     break;
 
                 case 26:
-                    selectedTeamName = ("CDS Cyclones");
+                    selectedTeamName = "CDS Cyclones";
                     selectedTeamNumber = 4951;
-                    selectedTeamLocation = ("King, ON, Canada");
+                    selectedTeamLocation = "King, ON, Canada";
                     break;
 
                 case 27:
-                    selectedTeamName = ("RoboHawks");
+                    selectedTeamName = "RoboHawks";
                     selectedTeamNumber = 4968;
-                    selectedTeamLocation = ("Lively, ON, Canada");
+                    selectedTeamLocation = "Lively, ON, Canada";
                     break;
 
                 case 28:
-                    selectedTeamName = ("Rebels");
+                    selectedTeamName = "Rebels";
                     selectedTeamNumber = 4976;
-                    selectedTeamLocation = ("Georgetown, ON, Canada");
+                    selectedTeamLocation = "Georgetown, ON, Canada";
                     break;
 
                 case 29:
-                    selectedTeamName = ("Spartans");
+                    selectedTeamName = "Spartans";
                     selectedTeamNumber = 4992;
-                    selectedTeamLocation = ("Milton, ON, Canada");
+                    selectedTeamLocation = "Milton, ON, Canada";
                     break;
 
                 case 30:
-                    selectedTeamName = ("eNimkii");
+                    selectedTeamName = "eNimkii";
                     selectedTeamNumber = 5035;
-                    selectedTeamLocation = ("North Bay, ON, Canada");
+                    selectedTeamLocation = "North Bay, ON, Canada";
                     break;
 
                 case 31:
-                    selectedTeamName = ("Stormbots");
+                    selectedTeamName = "Stormbots";
                     selectedTeamNumber = 5076;
-                    selectedTeamLocation = ("Ajax, ON, Canada");
+                    selectedTeamLocation = "Ajax, ON, Canada";
                     break;
 
                 case 32:
-                    selectedTeamName = ("Roboprime Cardinals");
+                    selectedTeamName = "Roboprime Cardinals";
                     selectedTeamNumber = 5157;
-                    selectedTeamLocation = ("Sudbury, ON, Canada");
+                    selectedTeamLocation = "Sudbury, ON, Canada";
                     break;
 
                 case 33:
-                    selectedTeamName = ("Gators");
+                    selectedTeamName = "Gators";
                     selectedTeamNumber = 5164;
-                    selectedTeamLocation = ("Sudbury, ON, Canada");
+                    selectedTeamLocation = "Sudbury, ON, Canada";
                     break;
 
                 case 34:
-                    selectedTeamName = ("LANCERobotics");
+                    selectedTeamName = "LANCERobotics";
                     selectedTeamNumber = 5191;
-                    selectedTeamLocation = ("Sudbury, ON, Canada");
+                    selectedTeamLocation = "Sudbury, ON, Canada";
                     break;
 
                 case 35:
-                    selectedTeamName = ("Hawks");
+                    selectedTeamName = "Hawks";
                     selectedTeamNumber = 5324;
-                    selectedTeamLocation = ("Haliburton, ON, Canada");
+                    selectedTeamLocation = "Haliburton, ON, Canada";
                     break;
             }
 

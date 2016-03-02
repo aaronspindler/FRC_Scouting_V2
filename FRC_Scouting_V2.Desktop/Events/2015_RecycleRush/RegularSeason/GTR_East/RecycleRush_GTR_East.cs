@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -65,7 +68,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             4825, 5031, 5036, 5051, 5076, 5094, 5428, 5596, 5652, 5719
         };
 
-        private readonly List<Models.RecycleRush.Match_Scout> teamsMatches = new List<Models.RecycleRush.Match_Scout>();
+        private readonly List<Match_Scout> teamsMatches = new List<Match_Scout>();
         private string allianceColour = "Unset";
 
         private string currentTeamName;
@@ -149,9 +152,9 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "\\Saves");
                 var jsonText = JsonConvert.SerializeObject(match, Formatting.Indented);
-                var matchLocation = (AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\RecycleRush_GTR_East_" +
-                                     Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value) + "_" + currentTeamName +
-                                     ".json");
+                var matchLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\RecycleRush_GTR_East_" +
+                                    Convert.ToInt32(scoutingMatchNumberNumericUpDown.Value) + "_" + currentTeamName +
+                                    ".json";
                 File.WriteAllText(matchLocation, jsonText);
             }
             catch (Exception exception)
@@ -169,7 +172,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                 var commandText =
                     string.Format(
                         "Insert into RecycleRush_GTR_East_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');",
-                        (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author, match.TimeCreated,
+                        MySQLMethods.GetNumberOfRowsInATable() + 1, match.UniqueID, match.Author, match.TimeCreated,
                         match.Team_Number, match.Team_Name, match.Match_Number, match.Alliance_Colour,
                         Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X, match.Auto_Starting_Y,
                         Convert.ToInt16(match.Auto_Drive_To_Autozone), Convert.ToInt16(match.Auto_Robot_Set),
@@ -343,8 +346,8 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             currentTeamNumber = teamNumberArray[teamSelector.SelectedIndex];
             Program.selectedTeamNumber = currentTeamNumber;
 
-            teamInformationTeamName.Text = ("Team Name: " + teamNameArray[teamSelector.SelectedIndex]);
-            teamInformationTeamNumber.Text = ("Team Number: " + teamNumberArray[teamSelector.SelectedIndex]);
+            teamInformationTeamName.Text = "Team Name: " + teamNameArray[teamSelector.SelectedIndex];
+            teamInformationTeamNumber.Text = "Team Number: " + teamNumberArray[teamSelector.SelectedIndex];
 
             ResetMatchBreakdownInterface();
 
@@ -361,7 +364,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             if (Network.CheckForInternetConnection())
             {
-                var url = ("http://www.thebluealliance.com/api/v2/team/frc");
+                var url = "http://www.thebluealliance.com/api/v2/team/frc";
                 url = url + Convert.ToString(teamNumberArray[teamSelector.SelectedIndex]);
                 string downloadedData;
                 var wc = new WebClient();
@@ -370,7 +373,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
                 try
                 {
-                    downloadedData = (wc.DownloadString(url));
+                    downloadedData = wc.DownloadString(url);
                     var deserializedData =
                         JsonConvert.DeserializeObject<AerialAssist_RahChaCha.TeamInformationJSONData>(downloadedData);
 
@@ -704,7 +707,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 var commandText =
                                     string.Format(
                                         "Insert into RecycleRush_GTR_East_Matches (EntryID,UniqueID,Author,TimeCreated,Team_Number,Team_Name,Match_Number,Alliance_Colour,Robot_Dead,Auto_Starting_X,Auto_Starting_Y,Auto_Drive_To_Autozone,Auto_Robot_Set,Auto_Tote_Set,Auto_Bin_Set,Auto_Stacked_Tote_Set,Auto_Acquired_Step_Bins,Auto_Fouls,Auto_Did_Nothing,Tele_Tote_Pickup_Upright,Tele_Tote_Pickup_Upside_Down,Tele_Tote_Pickup_Sideways,Tele_Bin_Pickup_Upright,Tele_Bin_Pickup_Upside_Down,Tele_Bin_Pickup_Sideways,Tele_Human_Station_Load_Totes,Tele_Human_Station_Stack_Totes,Tele_Human_Station_Insert_Litter,Tele_Human_Throwing_Litter,Tele_Pushed_Litter_To_Landfill,Tele_Fouls,Comments,Stacks,Coopertition_Set,Coopertition_Stack,Final_Score_Red,Final_Score_Blue,Driver_Rating) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}','{31}','{32}','{33}','{34}','{35}','{36}','{37}');",
-                                        (MySQLMethods.GetNumberOfRowsInATable() + 1), match.UniqueID, match.Author,
+                                        MySQLMethods.GetNumberOfRowsInATable() + 1, match.UniqueID, match.Author,
                                         match.TimeCreated, match.Team_Number, match.Team_Name, match.Match_Number,
                                         match.Alliance_Colour, Convert.ToInt16(match.Robot_Dead), match.Auto_Starting_X,
                                         match.Auto_Starting_Y, Convert.ToInt16(match.Auto_Drive_To_Autozone),

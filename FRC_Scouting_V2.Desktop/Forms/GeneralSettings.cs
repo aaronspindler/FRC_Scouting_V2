@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,7 +24,9 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -88,7 +91,7 @@ namespace FRC_Scouting_V2.Forms
             catch (MySqlException ex)
             {
                 mySqlDatabaseConnectionDisplay.BackColor = Color.Red;
-                mySqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
+                mySqlDatabaseConnectionDisplay.Text = "Connection: Failed";
                 ConsoleWindow.WriteLine("Error Code: " + ex.ErrorCode);
                 ConsoleWindow.WriteLine("Error Message " + ex.Message);
                 return false;
@@ -109,26 +112,26 @@ namespace FRC_Scouting_V2.Forms
                 {
                     ConsoleWindow.WriteLine("You have successfully connected to your database!");
                     mySqlDatabaseConnectionDisplay.BackColor = Color.Chartreuse;
-                    mySqlDatabaseConnectionDisplay.Text = ("Connection: Successful");
+                    mySqlDatabaseConnectionDisplay.Text = "Connection: Successful";
                 }
                 else
                 {
                     ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
                     mySqlDatabaseConnectionDisplay.BackColor = Color.Red;
-                    mySqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
+                    mySqlDatabaseConnectionDisplay.Text = "Connection: Failed";
                 }
 
                 if (TestSQLCredentials())
                 {
                     ConsoleWindow.WriteLine("You have successfully connected to your database!");
                     sqlDatabaseConnectionDisplay.BackColor = Color.Chartreuse;
-                    sqlDatabaseConnectionDisplay.Text = ("Connection: Successful");
+                    sqlDatabaseConnectionDisplay.Text = "Connection: Successful";
                 }
                 else
                 {
                     ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
                     sqlDatabaseConnectionDisplay.BackColor = Color.Red;
-                    sqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
+                    sqlDatabaseConnectionDisplay.Text = "Connection: Failed";
                 }
             }
             else
@@ -162,13 +165,13 @@ namespace FRC_Scouting_V2.Forms
             {
                 ConsoleWindow.WriteLine("You have successfully connected to your database!");
                 mySqlDatabaseConnectionDisplay.BackColor = Color.Chartreuse;
-                mySqlDatabaseConnectionDisplay.Text = ("Connection: Successful");
+                mySqlDatabaseConnectionDisplay.Text = "Connection: Successful";
             }
             else
             {
                 ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
                 mySqlDatabaseConnectionDisplay.BackColor = Color.Red;
-                mySqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
+                mySqlDatabaseConnectionDisplay.Text = "Connection: Failed";
             }
         }
 
@@ -185,13 +188,13 @@ namespace FRC_Scouting_V2.Forms
             {
                 ConsoleWindow.WriteLine("You have successfully connected to your database!");
                 sqlDatabaseConnectionDisplay.BackColor = Color.Chartreuse;
-                sqlDatabaseConnectionDisplay.Text = ("Connection: Successful");
+                sqlDatabaseConnectionDisplay.Text = "Connection: Successful";
             }
             else
             {
                 ConsoleWindow.WriteLine("You have unsuccessfully connected to your database!");
                 sqlDatabaseConnectionDisplay.BackColor = Color.Red;
-                sqlDatabaseConnectionDisplay.Text = ("Connection: Failed");
+                sqlDatabaseConnectionDisplay.Text = "Connection: Failed";
             }
         }
     }

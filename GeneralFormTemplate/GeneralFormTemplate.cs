@@ -54,14 +54,14 @@ namespace GeneralFormTemplate
 
         private void GeneralFormTemplate_Load(object sender, EventArgs e)
         {
-            currentTimeDisplay.Text = ("Current Time: " + Time.GetCurrentTime());
+            currentTimeDisplay.Text = "Current Time: " + Time.GetCurrentTime();
             timer.Tick += timer_Tick;
             timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            currentTimeDisplay.Text = ("Current Time: " + Time.GetCurrentTime());
+            currentTimeDisplay.Text = "Current Time: " + Time.GetCurrentTime();
         }
     }
 }

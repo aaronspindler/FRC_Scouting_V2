@@ -1,4 +1,5 @@
 ﻿#region License
+
 //*********************************License***************************************
 //===============================================================================
 //The MIT License (MIT)
@@ -23,15 +24,10 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 //===============================================================================
+
 #endregion
+
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FRC_Scouting_V2.Events._2016_Stronghold.RegularSeason.GTR_East
@@ -41,6 +37,10 @@ namespace FRC_Scouting_V2.Events._2016_Stronghold.RegularSeason.GTR_East
         public Stronghold_GTR_East()
         {
             InitializeComponent();
+        }
+
+        private void Stronghold_GTR_East_Load(object sender, EventArgs e)
+        {
         }
     }
 }
