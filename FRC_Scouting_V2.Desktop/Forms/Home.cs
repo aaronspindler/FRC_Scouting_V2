@@ -33,7 +33,6 @@ using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 using FRC_Scouting_V2.Events._2015_RecycleRush;
-using FRC_Scouting_V2.Events._2016_Stronghold.RegularSeason.GTR_East;
 using FRC_Scouting_V2.Forms;
 using FRC_Scouting_V2.Information_Forms;
 using FRC_Scouting_V2.Properties;
@@ -92,12 +91,6 @@ namespace FRC_Scouting_V2
                     rrffs.Show();
                 }
                     break;
-                case 6:
-                {
-                    var shgtre = new Stronghold_GTR_East();
-                    shgtre.Show();
-                }
-                    break;
             }
 
             if (Settings.Default.minimizeHomeWentEventLoads)
@@ -127,7 +120,6 @@ namespace FRC_Scouting_V2
             eventSelector.Items.Add("RecycleRush | Northbay | 2015");
             eventSelector.Items.Add("RecycleRush | Fall Fiesta - Junior | 2015");
             eventSelector.Items.Add("RecycleRush | Fall Fiesta - Senior | 2015");
-            eventSelector.Items.Add("Stronghold | GTR-East | 2016");
 
             if (Settings.Default.firstTimeLoad)
             {

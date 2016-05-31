@@ -154,6 +154,9 @@ namespace FRC_Scouting_V2.Forms
 
         private void mySqlDatabaseSaveTestButton_Click(object sender, EventArgs e)
         {
+            mySqlDatabaseConnectionDisplay.Text = "Connection: Testing";
+            mySqlDatabaseConnectionDisplay.BackColor = Color.Yellow;
+
             Settings.Default.mySqlDatabaseIP = mySqlDatabaseServerAddressTextBox.Text;
             Settings.Default.mySqlDatabasePort = mySqlDatabasePortTextBox.Text;
             Settings.Default.mySqlDatabaseName = mySqlDatabaseNameTextBox.Text;
@@ -177,6 +180,9 @@ namespace FRC_Scouting_V2.Forms
 
         private void sqlDatabaseSaveTestButton_Click(object sender, EventArgs e)
         {
+            sqlDatabaseConnectionDisplay.Text = "Connection: Testing";
+            sqlDatabaseConnectionDisplay.BackColor = Color.Yellow;
+
             Settings.Default.sqlDatabaseIP = sqlDatabaseServerAddressTextBox.Text;
             Settings.Default.sqlDatabasePort = sqlDatabasePortTextBox.Text;
             Settings.Default.sqlDatabaseName = sqlDatabaseNameTextBox.Text;

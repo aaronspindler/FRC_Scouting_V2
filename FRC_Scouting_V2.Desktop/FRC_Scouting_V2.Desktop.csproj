@@ -156,12 +156,6 @@
     <Compile Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Senior.Designer.cs">
       <DependentUpon>RecycleRush_Fall_Fiesta_Senior.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events\2016_Stronghold\RegularSeason\GTR_East\Stronghold_GTR_East.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Events\2016_Stronghold\RegularSeason\GTR_East\Stronghold_GTR_East.Designer.cs">
-      <DependentUpon>Stronghold_GTR_East.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ConsoleWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,9 +284,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Events\2015_RecycleRush\OffSeason\Fall_Fiesta\RecycleRush_Fall_Fiesta_Senior.resx">
       <DependentUpon>RecycleRush_Fall_Fiesta_Senior.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Events\2016_Stronghold\RegularSeason\GTR_East\Stronghold_GTR_East.resx">
-      <DependentUpon>Stronghold_GTR_East.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConsoleWindow.resx">
       <DependentUpon>ConsoleWindow.cs</DependentUpon>
@@ -467,6 +458,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccess\" />
+    <Folder Include="Events\2016_Stronghold\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

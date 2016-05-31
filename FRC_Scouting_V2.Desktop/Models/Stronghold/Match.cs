@@ -31,9 +31,9 @@ namespace FRC_Scouting_V2.Models.Stronghold
 {
     internal class Match
     {
+        public string uniqueid { get; set; }
         public string author { get; set; }
         public string time_created { get; set; }
-        public string uniqueid { get; set; }
 
         public Field_Element[] field_setup { get; set; }
 
