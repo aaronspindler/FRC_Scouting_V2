@@ -52,11 +52,6 @@ namespace FRC_Scouting_V2.Information_Forms
             teamLocationDisplay.Text = teamInformation.location;
             teamWebsiteDisplay.Text = teamInformation.website;
             rookieYearDisplay.Text = Convert.ToString(teamInformation.rookie_year);
-
-            if (teamInformation.team_number == 3710)
-            {
-                MessageBox.Show("BEST TEAM EVER! Please invite to your alliance!");
-            }
         }
 
         private void teamNumberTextBox_MouseClick(object sender, MouseEventArgs e)
