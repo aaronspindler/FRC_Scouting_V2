@@ -29,6 +29,8 @@ FRC_Scouting_V2
   - [ ] Update Event Information Form
   - [ ] Add Event Schedule Form
   - [ ] Create events dynamically based on a game template
+  - [ ] Create event form for 2017 game
+  - [ ] Add events for 2017 game
   - [x] ~~Write Unit Tests for TheBlueAlliance API~~ Moved to another project
   - [x] ~~Write Unit Tests for UsefulSnippets~~ Moved to another project
 
