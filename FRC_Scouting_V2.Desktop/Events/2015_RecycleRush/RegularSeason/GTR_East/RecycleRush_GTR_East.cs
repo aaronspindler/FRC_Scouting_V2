@@ -144,9 +144,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             };
 
             if (match.Comments.Contains(";"))
-            {
                 match.Comments = Regex.Replace(match.Comments, "[;]", string.Empty);
-            }
 
             try
             {
@@ -271,9 +269,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             var blackpen = new Pen(Color.Black, 2);
 
             if (leftClick)
-            {
                 e.Graphics.DrawRectangle(blackpen, startingX, startingY, 8, 8);
-            }
         }
 
         private void scoutingDriverRatingButton1_CheckedChanged(object sender, EventArgs e)
@@ -394,7 +390,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             }
 
             if (Network.CheckForInternetConnection())
-            {
                 try
                 {
                     var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
@@ -457,7 +452,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                     Console.Write("Error Occured: " + exception.Message);
                     ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                 }
-            }
         }
 
         private void ResetScoutingInterface()
@@ -650,13 +644,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             matchBreakdownStacksGridView.Rows.Clear();
             for (var i = 0; i < teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks.Count; i++)
-            {
                 matchBreakdownStacksGridView.Rows.Add((i + 1).ToString(),
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Stack_Height,
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Bin_On_Top,
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Litter_In_Bin,
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Did_They_Make_The_Stack);
-            }
         }
 
         private void scoutingAllianceColourRedCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -693,9 +685,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         "The importation of these files can take a long time, are you sure you want to continue?",
                         "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) ==
                     DialogResult.Yes)
-                {
                     if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
                         foreach (var t in openFileDialog.FileNames)
                         {
                             var match = JsonConvert.DeserializeObject<Match_Scout>(File.ReadAllText(t));
@@ -740,8 +730,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 ConsoleWindow.WriteLine(exception.ToString());
                             }
                         }
-                    }
-                }
             }
             else
             {

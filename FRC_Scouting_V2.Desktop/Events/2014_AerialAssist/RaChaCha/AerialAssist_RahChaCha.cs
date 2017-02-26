@@ -171,9 +171,7 @@ namespace FRC_Scouting_V2
 
                     //Bypassing the human readable variables to get to the computer readable portion of the text file
                     for (var i = 0; i < 30; i++)
-                    {
                         reader.ReadLine();
-                    }
                     int teamNumberImport = Convert.ToInt16(reader.ReadLine());
                     var teamNameImport = reader.ReadLine();
                     var teamColour = reader.ReadLine();
@@ -208,9 +206,7 @@ namespace FRC_Scouting_V2
                     var comments = Convert.ToString(reader.ReadLine());
 
                     if (comments.Contains(";"))
-                    {
                         comments = "";
-                    }
 
                     var testIfFileIsGood = reader.ReadLine();
                     if (testIfFileIsGood.Equals("END OF FILE"))
@@ -260,9 +256,7 @@ namespace FRC_Scouting_V2
                     else
                     {
                         if (!testIfFileIsGood.Equals("END OF FILE"))
-                        {
                             Notifications.ErrorOccured("The file does not seem to be in the correct format.");
-                        }
                     }
                 }
                 Notifications.ShowInformationMessage("Successfully imported: " + numberOfFilesImported +
@@ -334,9 +328,7 @@ namespace FRC_Scouting_V2
                     Program.selectedEventName, teamNumberLocal);
                 conn.Open();
                 if (conn.Ping())
-                {
                     ConsoleWindow.WriteLine("Connected to the databse. Collecting and generating statistics now!");
-                }
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -365,14 +357,10 @@ namespace FRC_Scouting_V2
                     UnSuccessfulTruss.Add(Convert.ToDouble(reader["UnsuccessfulTruss"]));
                     DriverRating.Add(Convert.ToDouble(reader["DriverRating"]));
                     if (Convert.ToInt32(reader["DidRobotDie"]) == 1)
-                    {
                         RobotDied.Add(1);
-                    }
 
                     if (Convert.ToInt32(reader["AutoMovement"].ToString()) == 1)
-                    {
                         AutoMovementGood.Add(Convert.ToDouble(reader["AutoMovement"]));
-                    }
                     StartingX.Add(Convert.ToDouble(reader["StartingX"]));
                     StartingY.Add(Convert.ToDouble(reader["StartingY"]));
                 }
@@ -456,7 +444,6 @@ namespace FRC_Scouting_V2
             else
             {
                 if (selection == 2)
-                {
                     try
                     {
                         _autoHighMean[1] = AutoHighGoal.Average();
@@ -523,7 +510,6 @@ namespace FRC_Scouting_V2
                         Notifications.ErrorOccured("Looks like something went wrong. Check console for the error message");
                         ConsoleWindow.WriteLine("Error Message: " + e.Message);
                     }
-                }
             }
         }
 
@@ -592,7 +578,6 @@ namespace FRC_Scouting_V2
                             Program.selectedEventName, i);
                         var reader = cmd.ExecuteReader();
                         while (reader.Read())
-                        {
                             writer.WriteLine(reader["EntryID"] + "," + reader["TeamNumber"] + "," + reader["TeamName"] +
                                              "," + reader["TeamColour"] + "," + reader["MatchNumber"] + "," +
                                              reader["AutoHighGoal"] + "," + reader["AutoHighMiss"] + "," +
@@ -609,7 +594,6 @@ namespace FRC_Scouting_V2
                                              reader["UnsuccessfulTruss"] + "," + reader["StartingX"] + "," +
                                              reader["StartingY"] + "," + reader["DidRobotDie"] + "," +
                                              reader["Comments"]);
-                        }
                         reader.Close();
                         ConsoleWindow.WriteLine("Row: " + i + " of: " + numberOfRows + " has been exported!");
                     }
@@ -658,7 +642,6 @@ namespace FRC_Scouting_V2
         public void ColourStats()
         {
             if (Settings.Default.colourTeamComparisonStatistics)
-            {
                 if (team1Selected && team2Selected)
                 {
                     if (_autoHighMean[0] > _autoHighMean[1])
@@ -1261,7 +1244,6 @@ namespace FRC_Scouting_V2
                         }
                     }
                 }
-            }
         }
 
         /// <summary>
@@ -1270,19 +1252,13 @@ namespace FRC_Scouting_V2
         public void ClearColourStats()
         {
             for (var i = 0; i < dataGridViewTeam1.RowCount; i++)
-            {
                 for (var j = 0; j < dataGridViewTeam1.ColumnCount; j++)
                 {
                     if (team1Selected)
-                    {
                         dataGridViewTeam1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
-                    }
                     if (team2Selected)
-                    {
                         dataGridViewTeam2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
-                    }
                 }
-            }
         }
 
         private void teamSelector_SelectedIndexChanged(object sender, EventArgs e)

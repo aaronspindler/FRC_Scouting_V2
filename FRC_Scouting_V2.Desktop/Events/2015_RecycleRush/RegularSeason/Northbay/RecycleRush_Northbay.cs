@@ -146,9 +146,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             };
 
             if (match.Comments.Contains(";"))
-            {
                 match.Comments = Regex.Replace(match.Comments, "[;]", string.Empty);
-            }
 
             try
             {
@@ -271,9 +269,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             var blackpen = new Pen(Color.Black, 2);
 
             if (leftClick)
-            {
                 e.Graphics.DrawRectangle(blackpen, startingX, startingY, 8, 8);
-            }
         }
 
         private void scoutingDriverRatingButton1_CheckedChanged(object sender, EventArgs e)
@@ -786,13 +782,11 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
 
             matchBreakdownStacksGridView.Rows.Clear();
             for (var i = 0; i < teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks.Count; i++)
-            {
                 matchBreakdownStacksGridView.Rows.Add((i + 1).ToString(),
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Stack_Height,
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Bin_On_Top,
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Litter_In_Bin,
                     teamsMatches[matchBreakdownMatchList.SelectedIndex].Stacks[i].Did_They_Make_The_Stack);
-            }
         }
 
         private void scoutingAllianceColourRedCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -868,7 +862,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
             {
                 //Removes entries for a team before adding new info!
                 if (GetNumberOfPitEntriesForATeam(currentTeamNumber) == 1)
-                {
                     try
                     {
                         var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
@@ -885,7 +878,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                         Notifications.ReportCrash(exception);
                     }
-                }
 
                 using (var con = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString()))
                 {
@@ -1155,9 +1147,7 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         "The importation of these files can take a long time, are you sure you want to continue?",
                         "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) ==
                     DialogResult.Yes)
-                {
                     if (importationOpenFileDialog.ShowDialog() == DialogResult.OK)
-                    {
                         foreach (var t in importationOpenFileDialog.FileNames)
                         {
                             var match = JsonConvert.DeserializeObject<Match_Scout>(File.ReadAllText(t));
@@ -1201,8 +1191,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 ConsoleWindow.WriteLine(exception.ToString());
                             }
                         }
-                    }
-                }
             }
             else
             {
@@ -1220,7 +1208,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         "The importation of these files can take a long time, are you sure you want to continue?",
                         "Are you sure you want to continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) ==
                     DialogResult.Yes)
-                {
                     if (importationOpenFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         foreach (var t in importationOpenFileDialog.FileNames)
@@ -1229,7 +1216,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                 JsonConvert.DeserializeObject<Pit>(File.ReadAllText(t));
                             //Removes entries for a team before adding new info!
                             if (GetNumberOfPitEntriesForATeam(currentTeamNumber) > 0)
-                            {
                                 try
                                 {
                                     var conn = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString());
@@ -1247,7 +1233,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                                     ConsoleWindow.WriteLine("Error Occured: " + exception.Message);
                                     Notifications.ReportCrash(exception);
                                 }
-                            }
                             try
                             {
                                 using (var con = new MySqlConnection(MySQLMethods.MakeMySqlConnectionString()))
@@ -1300,7 +1285,6 @@ namespace FRC_Scouting_V2.Events._2015_RecycleRush
                         }
                         Notifications.ShowInformationMessage("Successfully imported pit scouting data!");
                     }
-                }
             }
             else
             {

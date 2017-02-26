@@ -94,9 +94,7 @@ namespace FRC_Scouting_V2
             }
 
             if (Settings.Default.minimizeHomeWentEventLoads)
-            {
                 WindowState = FormWindowState.Minimized;
-            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

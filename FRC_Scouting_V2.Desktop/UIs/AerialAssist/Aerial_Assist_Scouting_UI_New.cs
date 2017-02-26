@@ -189,15 +189,11 @@ namespace FRC_Scouting_V2.UIs
         private void commentsTextBox_TextChanged(object sender, EventArgs e)
         {
             if (commentsTextBox.Text != "")
-            {
                 comments = commentsTextBox.Text;
-            }
 
             if (commentsTextBox.Text.Contains(";"))
-            {
                 Notifications.ErrorOccured(
                     "You cannot use semi-colons in the comments. If used the export will be unsuccessful.");
-            }
         }
 
         private void controlledBallPickupButton_Click(object sender, EventArgs e)
@@ -251,9 +247,7 @@ namespace FRC_Scouting_V2.UIs
             else
             {
                 if (didRobotDieCheckBox.Checked == false)
-                {
                     didRobotDie = 0;
-                }
             }
         }
 
@@ -324,8 +318,6 @@ namespace FRC_Scouting_V2.UIs
         {
             submitDataButton.Enabled = false;
             if (Settings.Default.allowExportToTextFile)
-            {
-                //Write to TextFile
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     var writer = new StreamWriter(saveFileDialog.FileName);
@@ -405,7 +397,6 @@ namespace FRC_Scouting_V2.UIs
                     writer.WriteLine("END OF FILE");
                     writer.Close();
                 }
-            }
 
             //MySQL Database
             //MySQL Database Connection Info
@@ -418,9 +409,7 @@ namespace FRC_Scouting_V2.UIs
 
                 //Checking if the connection is successful
                 if (conn.Ping())
-                {
                     ConsoleWindow.WriteLine("The connection to your database has been made successfully.");
-                }
 
                 //Creating the MySQLCommand object
                 var cmd = conn.CreateCommand();
@@ -545,9 +534,7 @@ namespace FRC_Scouting_V2.UIs
             else
             {
                 if (teamColourSelector.SelectedIndex == 1)
-                {
                     teamColour = "Blue";
-                }
             }
         }
 
@@ -581,9 +568,7 @@ namespace FRC_Scouting_V2.UIs
             else
             {
                 if (autonomousMovementCheckBox.Checked == false)
-                {
                     autoMovement = false;
-                }
             }
         }
 

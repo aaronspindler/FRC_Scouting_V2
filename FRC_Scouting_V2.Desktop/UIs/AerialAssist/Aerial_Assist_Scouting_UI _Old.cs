@@ -284,9 +284,7 @@ namespace FRC_Scouting_V2
         private void commentsRichTextBox_TextChanged(object sender, EventArgs e)
         {
             if (commentsRichTextBox.Text != "")
-            {
                 comments = commentsRichTextBox.Text;
-            }
         }
 
         private void controlledBallPickupHelpButton_Click(object sender, EventArgs e)
@@ -469,8 +467,6 @@ namespace FRC_Scouting_V2
             UpdateLabels();
 
             if (Settings.Default.allowExportToTextFile)
-            {
-                //Write to TextFile
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     var writer = new StreamWriter(saveFileDialog.FileName);
@@ -505,7 +501,6 @@ namespace FRC_Scouting_V2
                     writer.WriteLine("END OF FILE");
                     writer.Close();
                 }
-            }
 
             //MySQL Database
             //MySQL Database Connection Info
@@ -518,9 +513,7 @@ namespace FRC_Scouting_V2
 
                 //Checking if the connection is successful
                 if (conn.Ping())
-                {
                     ConsoleWindow.WriteLine("The connection to your database has been made successfully.");
-                }
 
                 //Creating the MySQLCommand object
                 var cmd = conn.CreateCommand();

@@ -27,7 +27,6 @@
 
 #endregion
 
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using FRC_Scouting_V2.Properties;
 using MySql.Data.MySqlClient;
@@ -110,7 +109,6 @@ namespace FRC_Scouting_V2
                 var commands = Globals.mySQLTableCreationCommands;
 
                 for (var i = 0; i < commands.Count; i++)
-                {
                     try
                     {
                         cmd.CommandText = commands[i];
@@ -123,7 +121,6 @@ namespace FRC_Scouting_V2
                         ConsoleWindow.WriteLine("Error Code: " + error.ErrorCode);
                         ConsoleWindow.WriteLine(error.Message);
                     }
-                }
                 conn.Close();
 
                 //SQLiteConnection.CreateFile("database.sqlite");

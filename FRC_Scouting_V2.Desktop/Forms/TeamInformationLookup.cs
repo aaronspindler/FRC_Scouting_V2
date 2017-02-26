@@ -57,9 +57,7 @@ namespace FRC_Scouting_V2.Information_Forms
         private void teamNumberTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             if (Settings.Default.clickToEmptyTextBoxes)
-            {
                 teamNumberTextBox.Text = "";
-            }
         }
     }
 }

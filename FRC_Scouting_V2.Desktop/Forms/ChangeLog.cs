@@ -65,11 +65,9 @@ namespace FRC_Scouting_V2.Information_Forms
             {
                 var projectCommits = await github.Repository.Commits.GetAll("xNovax", "FRC_Scouting_V2");
                 for (var i = 0; i < projectCommits.Count - 1; i++)
-                {
                     commitListBox.Items.Add(projectCommits[i].Commit.Author.Date + " | " +
                                             projectCommits[i].Commit.Message + " by: " +
                                             projectCommits[i].Commit.Author.Name);
-                }
                 statusLabel.Text = "Load complete!";
             }
             catch (Exception ex)

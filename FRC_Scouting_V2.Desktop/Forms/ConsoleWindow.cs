@@ -74,9 +74,7 @@ namespace FRC_Scouting_V2
                     var writer = new StreamWriter(sfd.FileName);
                     writer.WriteLine("Timestamp,Message");
                     for (var i = 0; i < logCollection.Count; i++)
-                    {
                         writer.WriteLine(logCollection[i].TimeStamp + "," + logCollection[i].Message);
-                    }
                     writer.Close();
                 }
             }
@@ -96,9 +94,7 @@ namespace FRC_Scouting_V2
                 var writer = new StreamWriter(fileLoc);
                 writer.WriteLine("Timestamp,Message");
                 for (var i = 0; i < logCollection.Count; i++)
-                {
                     writer.WriteLine(logCollection[i].TimeStamp + "," + logCollection[i].Message);
-                }
                 writer.Close();
             }
             catch (Exception exception)
@@ -110,9 +106,7 @@ namespace FRC_Scouting_V2
         private void ConsoleWindow_Load(object sender, EventArgs e)
         {
             foreach (DataGridViewColumn column in consoleDataGridView.Columns)
-            {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
 
             foreach (var ce in logCollection)
             {

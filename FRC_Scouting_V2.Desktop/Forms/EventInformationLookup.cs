@@ -68,13 +68,9 @@ namespace FRC_Scouting_V2.Information_Forms
                     deserializedData.end_date);
                 isOfficialLabel.Text = "Is Official?: " + deserializedData.official;
                 if (deserializedData.official)
-                {
                     isOfficialLabel.ForeColor = Color.Green;
-                }
                 else
-                {
                     isOfficialLabel.ForeColor = Color.Red;
-                }
                 websiteDisplay.Text = deserializedData.website;
             }
             catch (Exception webError)
