@@ -243,6 +243,8 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Models\RecycleRush\Stack.cs" />
     <Compile Include="Misc\MySQLMethods.cs" />
+    <Compile Include="Models\Steamworks\Match.cs" />
+    <Compile Include="Models\Steamworks\Pit.cs" />
     <Compile Include="Models\Stronghold\Field_Element.cs" />
     <Compile Include="Models\Stronghold\Match.cs" />
     <Compile Include="Models\Stronghold\Pit.cs" />
