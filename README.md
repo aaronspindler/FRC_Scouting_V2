@@ -1,5 +1,6 @@
 FRC_Scouting_V2
 ===============
+# This project has been moved to https://github.com/xNovax/FRCScouting.ca/
 
 ![](http://xnovax.net/wp-content/uploads/2015/04/RecycleRush_Scouting_UI.png)
 
